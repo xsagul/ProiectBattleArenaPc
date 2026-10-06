@@ -1,0 +1,280 @@
+{
+ "champion": "Jhin",
+ "spell": "JhinW",
+ "caster": 1073741862,
+ "target": null,
+ "t": 303.7837907714859,
+ "casts": 46,
+ "sequence": [
+  516,
+  49,
+  578
+ ],
+ "sequence_cases": 34,
+ "sequences": 8,
+ "packets": [
+  {
+   "pid": 516,
+   "ch": 1,
+   "who": "caster",
+   "values": {
+    "+0xc": "997cd5c500000000ba2ae4c5",
+    "+0x18": "00000000",
+    "+0x1c": "00"
+   },
+   "raw": null
+  },
+  {
+   "pid": 49,
+   "ch": 1,
+   "who": "caster",
+   "values": {
+    "+0xc": {
+     "+0x4": "00000000",
+     "+0x8": [],
+     "+0x14": "000080bf",
+     "+0x18": "63dcb18a",
+     "+0x1c": "621d0040",
+     "+0x20": "00000000",
+     "+0x24": "0000403f",
+     "+0x28": "36d54c3f00000000608e19bf",
+     "+0x34": "01",
+     "+0x36": "ffff",
+     "+0x38": "00",
+     "+0x3c": "26000040",
+     "+0x40": "0100",
+     "+0x42": "0000",
+     "+0x44": "00000000",
+     "+0x48": "0000803f",
+     "+0x4c": "3b4fc945b5774d4230ea84c5",
+     "+0x58": "0000803f",
+     "+0x5c": "26000040",
+     "+0x60": "ea654f46b5774d4214813e45",
+     "+0x6c": "5fc33f46ee605142f853f744",
+     "+0x78": "4ce49743",
+     "+0x7c": "00",
+     "+0x80": "3a060000",
+     "+0x84": "00004842",
+     "+0x88": "00000000",
+     "+0x8c": {
+      "+0x4": {
+       "text": ""
+      },
+      "+0x10": "4c449843",
+      "+0x14": "57f07000",
+      "+0x18": "0500",
+      "+0x1c": "0c420000",
+      "+0x20": "0500",
+      "+0x22": "0100",
+      "+0x24": {
+       "text": "4a68696e"
+      }
+     },
+     "+0xbc": "57f07000",
+     "+0xc0": "00000000",
+     "+0xc4": "611d0040",
+     "+0xc8": "00004041",
+     "+0xcc": "0000"
+    },
+    "+0xdc": "00",
+    "+0xe0": "00000000"
+   },
+   "raw": null
+  },
+  {
+   "pid": 578,
+   "ch": 1,
+   "who": "caster",
+   "values": {
+    "+0xc": "abaaaa3d",
+    "+0x10": "e4e72ebf00000000dbee3abf",
+    "+0x1c": "00"
+   },
+   "raw": null
+  }
+ ],
+ "fixed": {
+  "0": [
+   "+0x18",
+   "+0x1c"
+  ],
+  "1": [
+   "+0xc+0x14",
+   "+0xc+0x18",
+   "+0xc+0x20",
+   "+0xc+0x24",
+   "+0xc+0x34",
+   "+0xc+0x36",
+   "+0xc+0x38",
+   "+0xc+0x3c",
+   "+0xc+0x4",
+   "+0xc+0x40",
+   "+0xc+0x44",
+   "+0xc+0x48",
+   "+0xc+0x58",
+   "+0xc+0x5c",
+   "+0xc+0x7c",
+   "+0xc+0x8",
+   "+0xc+0x88",
+   "+0xc+0x8c+0x14",
+   "+0xc+0x8c+0x18",
+   "+0xc+0x8c+0x20",
+   "+0xc+0x8c+0x22",
+   "+0xc+0x8c+0x24",
+   "+0xc+0x8c+0x4",
+   "+0xc+0xbc",
+   "+0xc+0xc0",
+   "+0xc+0xcc",
+   "+0xdc",
+   "+0xe0"
+  ],
+  "2": [
+   "+0x1c",
+   "+0xc"
+  ]
+ },
+ "varying": {
+  "0": [
+   "+0xc"
+  ],
+  "1": [
+   "+0xc+0x1c",
+   "+0xc+0x28",
+   "+0xc+0x42",
+   "+0xc+0x4c",
+   "+0xc+0x60",
+   "+0xc+0x6c",
+   "+0xc+0x78",
+   "+0xc+0x80",
+   "+0xc+0x84",
+   "+0xc+0x8c+0x10",
+   "+0xc+0x8c+0x1c",
+   "+0xc+0xc4",
+   "+0xc+0xc8"
+  ],
+  "2": [
+   "+0x10"
+  ]
+ },
+ "damage_delays": [
+  [
+   0.76,
+   67
+  ],
+  [
+   0.33,
+   1
+  ],
+  [
+   0.26,
+   1
+  ],
+  [
+   0.73,
+   1
+  ],
+  [
+   0.66,
+   1
+  ],
+  [
+   0.93,
+   1
+  ],
+  [
+   0.36,
+   1
+  ]
+ ],
+ "damage_types": {
+  "0": 71,
+  "2": 1,
+  "1": 1
+ },
+ "applies": [
+  [
+   "self",
+   "JhinPassiveHaste",
+   15,
+   2.0,
+   14
+  ],
+  [
+   "other",
+   "JhinESpottedDebuff",
+   3,
+   3.5,
+   13
+  ],
+  [
+   "self",
+   "ASSETS/Perks/Styles/Precision/PresenceOfMind/PresenceOfMind_Regen_Buff.lua",
+   2,
+   4.0,
+   13
+  ],
+  [
+   "other",
+   "JhinW",
+   12,
+   1.25,
+   5
+  ],
+  [
+   "other",
+   "JhinW",
+   12,
+   1.5,
+   3
+  ],
+  [
+   "other",
+   "JhinETrapSlow",
+   11,
+   0.5,
+   3
+  ],
+  [
+   "self",
+   "ASSETS/Perks/Styles/Precision/FleetFootwork/FleetFootworkHaste.lua",
+   15,
+   1.0,
+   2
+  ],
+  [
+   "other",
+   "ASSETS/Perks/Styles/Precision/PresenceOfMind/PresenceOfMind_Regen_Buff.lua",
+   2,
+   4.0,
+   2
+  ],
+  [
+   "other",
+   "JhinETrap",
+   6,
+   180.0,
+   2
+  ],
+  [
+   "other",
+   "JhinRSight",
+   3,
+   4.0,
+   2
+  ],
+  [
+   "other",
+   "JhinW",
+   12,
+   1.047,
+   1
+  ],
+  [
+   "self",
+   "CrestoftheAncientGolem",
+   2,
+   120.0,
+   1
+  ]
+ ]
+}

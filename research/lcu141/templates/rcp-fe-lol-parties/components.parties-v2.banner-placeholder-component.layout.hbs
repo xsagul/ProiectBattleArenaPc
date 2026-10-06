@@ -1,0 +1,18 @@
+{{#if isInvitedBanner}}
+  <div class="placeholder-invited-container">
+    {{#if animationsEnabled}}
+      <video class="placeholder-invited-video" autoplay="true" preload="auto" loop="true" src={{invitedVideoSrc}}>
+      </>
+    {{else}}
+      <div class="placeholder-invited-image">
+      </>
+    {{/if}}
+  </>
+{{/if}}
+{{#if partyInvitesAllowed}}
+  <div class="invite-button-container">
+    <div class="invite-button">
+      {{generic-button baseImgPath="/fe/lol-parties/banner-invite.png" overImgPath="/fe/lol-parties/banner-invite-hover.png" downImgPath="/fe/lol-parties/banner-invite-click.png" onClick=(action this "showInviteModal"}}
+    </>
+  </>
+{{/if}}

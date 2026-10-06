@@ -1,0 +1,14 @@
+{{#if member.showGhostedBanner}}
+  <div class="player-not-ready-container">
+    {{#if animationsEnabled}}
+      <video class="player-not-ready-video" autoplay="true" preload="auto" loop="true" src="/fe/lol-parties/parties/banner/invited-banner.webm">
+      </>
+    {{else}}
+      <div class="player-not-ready-image">
+      </>
+    {{/if}}
+  </>
+{{/if}}
+<lol-regalia-parties-element banner-type={{bannerType}} summoner-id={{member.summonerId}} puuid={{member.puuid}} visor-down={{isInQueue}} party-size={{currentPartySize}} show-intro={{showIntro}} hide-crest-border={{member.showGhostedBanner}} hide-banner={{member.showGhostedBanner}} queue={{queueType}} position={{member.firstPositionPreference}}>
+  {{player-party-controls member=member isLeader=isLeader isMe=isMe positionSelectorEmberApp=positionSelectorEmberApp positionSelectorData=positionSelectorData cachePositionSelector=(action this cachePositionSelector}}
+</>

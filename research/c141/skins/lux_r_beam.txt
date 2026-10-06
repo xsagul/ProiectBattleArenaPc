@@ -1,0 +1,3588 @@
+version 3, 9 entries, 0 links
+Characters/Lux/Skins/Skin0/Particles/Lux_Base_R_mis_beam (VfxSystemDefinitionData)
+  complexEmitterDefinitionData: [45]
+    VfxEmitterDefinitionData
+      timeBeforeFirstEmission: 1
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.2
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "Beam_Core1"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      primitive: VfxPrimitiveBeam
+        mBeam: VfxBeamDefinitionData
+          mBirthTilingSize: ValueVector3
+            constantValue: [0, -1, 1]
+          mLocalSpaceSourceOffset: [0, 0, -240]
+          mLocalSpaceTargetOffset: [0, 0, 100]
+      blendMode: 4
+      Color: ValueColor
+        constantValue: [1, 0.469993, 0, 0.629999]
+      pass: 8
+      alphaRef: 0
+      miscRenderFlags: 1
+      birthScale0: ValueVector3
+        constantValue: [250, 1, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.1
+            1
+          values: [3]
+            [0, 1, 1]
+            [1.5, 1, 1]
+            [0, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeamGlow.dds"
+      birthUvScrollRate: ValueVector2
+        constantValue: [5, 0]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam04.dds"
+    VfxEmitterDefinitionData
+      timeBeforeFirstEmission: 1
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.15
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "Beam_Core2"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      primitive: VfxPrimitiveBeam
+        mBeam: VfxBeamDefinitionData
+          mBirthTilingSize: ValueVector3
+            constantValue: [0, -1, 1]
+          mLocalSpaceSourceOffset: [0, 0, -240]
+          mLocalSpaceTargetOffset: [0, 0, 100]
+      blendMode: 1
+      pass: 6
+      alphaRef: 0
+      miscRenderFlags: 1
+      birthScale0: ValueVector3
+        constantValue: [400, 1, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.1
+            1
+          values: [3]
+            [0, 1, 1]
+            [1.5, 1, 1]
+            [0, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam04.dds"
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        birthUvScrollRateMult: ValueVector2
+          constantValue: [5, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [0, 0.01]
+    VfxEmitterDefinitionData
+      timeBeforeFirstEmission: 1
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 1.5
+      particleLinger: [1]
+        1.5
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "Burnt"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [0, -140, 1500]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 1
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.8]
+      Color: ValueColor
+        constantValue: [0.170001, 0.149996, 0.250004, 1]
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.3
+            1
+          values: [3]
+            [0.170001, 0.149996, 0.250004, 0]
+            [0.170001, 0.149996, 0.250004, 1]
+            [0.170001, 0.149996, 0.250004, 0]
+      pass: -5
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [200, 2000, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+    VfxEmitterDefinitionData
+      timeBeforeFirstEmission: 1
+      rate: ValueFloat
+        constantValue: 2
+      particleLifetime: ValueFloat
+        constantValue: 0.3
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "RainbowGlow"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [0, 0, 1500]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      Color: ValueColor
+        constantValue: [1, 1, 1, 0.620005]
+        dynamics: VfxAnimatedColorVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [1, 1, 1, 0.620005]
+            [1, 1, 1, 0]
+      pass: 6
+      alphaRef: 0
+      miscRenderFlags: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [300, 1600, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+      birthUvScrollRate: ValueVector2
+        constantValue: [2, 0]
+      uvScale: ValueVector2
+        constantValue: [0.4, 1]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+    VfxEmitterDefinitionData
+      timeBeforeFirstEmission: 1
+      rate: ValueFloat
+        constantValue: 45
+      particleLifetime: ValueFloat
+        constantValue: 0.4
+        dynamics: VfxAnimatedFloatVariableData
+          probabilityTables: [1]
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                1
+                2
+          times: [1]
+            0
+          values: [1]
+            0.4
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "Streaks_Linger"
+      importance: 2
+      birthVelocity: ValueVector3
+        constantValue: [0, 0, -1300]
+        dynamics: VfxAnimatedVector3fVariableData
+          probabilityTables: [3]
+            VfxProbabilityTableData
+            VfxProbabilityTableData
+            VfxProbabilityTableData
+              keyTimes: [4]
+                0
+                0.5
+                0.7
+                1
+              keyValues: [4]
+                0.1
+                0.2
+                1
+                2
+          times: [1]
+            0
+          values: [1]
+            [0, 0, -1300]
+      birthDrag: ValueVector3
+        constantValue: [0, 0, 3]
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: VfxShapeLegacy
+        emitOffset: ValueVector3
+          constantValue: [-100, 35, 1000]
+          dynamics: VfxAnimatedVector3fVariableData
+            probabilityTables: [3]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  0
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1.3
+                  1.3
+            times: [1]
+              0
+            values: [1]
+              [-100, 35, 1000]
+      EmitterPosition: ValueVector3
+        constantValue: [0, 0, 1600]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      Color: ValueColor
+        constantValue: [1, 0.8, 0.4, 0.390005]
+        dynamics: VfxAnimatedColorVariableData
+          times: [7]
+            0
+            0.5
+            0.6
+            0.7
+            0.8
+            0.9
+            1
+          values: [7]
+            [1, 0.8, 0.4, 0.390005]
+            [1, 0.8, 0.4, 0.390005]
+            [1, 0.8, 0.4, 0.390005]
+            [1, 0.8, 0.4, 0.390005]
+            [1, 0.8, 0.4, 0]
+            [1, 0.8, 0.4, 0.390005]
+            [1, 0.8, 0.4, 0]
+      pass: 9
+      alphaRef: 0
+      alphaErosionDefinition: VfxAlphaErosionDefinitionData
+        erosionDriveCurve: ValueFloat
+          constantValue: 0
+          dynamics: VfxAnimatedFloatVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              0
+              0
+        erosionMapName: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_ErosionShapes01.dds"
+        erosionMapChannelMixer: ValueColor
+          constantValue: [1, 0, 0, 0]
+      miscRenderFlags: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 90, 0]
+      birthScale0: ValueVector3
+        constantValue: [100, 50, 1]
+        dynamics: VfxAnimatedVector3fVariableData
+          probabilityTables: [3]
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                0.5
+                1
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                0.6
+                1
+            VfxProbabilityTableData
+          times: [1]
+            0
+          values: [1]
+            [100, 50, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [1, 1, 1]
+            [0.5, 0, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_Mote.dds"
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [0.5, 0.5]
+        birthUvScrollRateMult: ValueVector2
+          constantValue: [2, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+            times: [1]
+              0
+            values: [1]
+              [1, 0]
+    VfxEmitterDefinitionData
+      timeBeforeFirstEmission: 1
+      rate: ValueFloat
+        constantValue: 2
+      particleLifetime: ValueFloat
+        constantValue: 0.13
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "WOOSH"
+      importance: 2
+      birthVelocity: ValueVector3
+        constantValue: [0, 0, -20000]
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [0, 0, 2800]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      Color: ValueColor
+        constantValue: [1, 0.745098, 0.235294, 1]
+      pass: 60
+      alphaRef: 0
+      miscRenderFlags: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [350, 800, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 1
+      lifetime: [1]
+        0.8
+      isSingleParticle: 1
+      emitterName: "warning_beam_1"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      primitive: VfxPrimitiveBeam
+        mBeam: VfxBeamDefinitionData
+          mBirthTilingSize: ValueVector3
+            constantValue: [0, -1, 1]
+          mLocalSpaceSourceOffset: [0, 0, -150]
+      blendMode: 1
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.698039]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [5]
+            0
+            0.3
+            0.5
+            0.75
+            1
+          values: [5]
+            [0.27451, 0.27451, 0.27451, 0]
+            [1, 0.847059, 0.019608, 0.066697]
+            [0.92549, 0.0941176, 0.0196078, 0.529412]
+            [1, 0, 0.14902, 0.972549]
+            [1, 0, 0, 1]
+      alphaRef: 0
+      miscRenderFlags: 1
+      birthScale0: ValueVector3
+        constantValue: [190, 1, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.6
+            1
+          values: [3]
+            [0.2, 1, 1]
+            [0.1, 1, 1]
+            [0.05, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam02.dds"
+      particleUVScrollRate: IntegratedValueVector2
+        constantValue: [0.453, 0]
+        dynamics: VfxAnimatedVector2fVariableData
+          times: [2]
+            0.3
+            1
+          values: [2]
+            [0, 0]
+            [0.453, 0]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RedBeam_Mask.dds"
+        texAddressModeMult: 2
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 1
+      lifetime: [1]
+        0.8
+      isSingleParticle: 1
+      emitterName: "warning_beam_2"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      primitive: VfxPrimitiveBeam
+        mBeam: VfxBeamDefinitionData
+          mBirthTilingSize: ValueVector3
+            constantValue: [0, -1, 1]
+          mLocalSpaceSourceOffset: [0, 0, -150]
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 0.0431373, 0.0431373, 1]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [5]
+            0
+            0.3
+            0.5
+            0.75
+            1
+          values: [5]
+            [0.27451, 0.27451, 0.27451, 0]
+            [1, 0.372549, 0.00784314, 0.470588]
+            [0.933333, 0.247059, 0.0196078, 1]
+            [1, 0, 0.149996, 1]
+            [1, 0, 0, 1]
+      pass: 1
+      alphaRef: 0
+      miscRenderFlags: 1
+      birthScale0: ValueVector3
+        constantValue: [190, 1, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.6
+            1
+          values: [3]
+            [0.2, 1, 1]
+            [0.1, 1, 1]
+            [0.05, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam02.dds"
+      particleUVScrollRate: IntegratedValueVector2
+        constantValue: [0.453, 0]
+        dynamics: VfxAnimatedVector2fVariableData
+          times: [2]
+            0.3
+            1
+          values: [2]
+            [0, 0]
+            [0.453, 0]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RedBeam_Mask.dds"
+        texAddressModeMult: 2
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 1
+      lifetime: [1]
+        0.9
+      isSingleParticle: 1
+      emitterName: "warning_beam_glow"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      primitive: VfxPrimitiveBeam
+        mBeam: VfxBeamDefinitionData
+          mBirthTilingSize: ValueVector3
+            constantValue: [0, -1, 1]
+          mLocalSpaceSourceOffset: [0, 0, -120]
+      blendMode: 4
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [5]
+            0
+            0.3
+            0.5
+            0.75
+            1
+          values: [5]
+            [0.278431, 0.003922, 0.003922, 0.074495]
+            [1, 0.847059, 0.019608, 0.129397]
+            [0.92549, 0.0941176, 0.0196078, 0.380392]
+            [1, 0.27451, 0.129412, 0.478401]
+            [1, 0, 0, 1]
+      pass: -1
+      alphaRef: 0
+      miscRenderFlags: 1
+      birthScale0: ValueVector3
+        constantValue: [400, 1, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.35
+            1
+          values: [3]
+            [1, 1, 1]
+            [0.5, 1, 1]
+            [0.3, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_Heart_Beam_Glow.dds"
+      birthUvScrollRate: ValueVector2
+        constantValue: [-0.5, 0]
+      texDiv: [1, 0.5]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_beam_core_mult.dds"
+        texDivMult: [1, 2]
+    VfxEmitterDefinitionData
+      timeBeforeFirstEmission: 1
+      rate: ValueFloat
+        constantValue: 2
+      particleLifetime: ValueFloat
+        constantValue: 0.08
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "Beam_Core_FLASH"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      primitive: VfxPrimitiveBeam
+        mBeam: VfxBeamDefinitionData
+          mBirthTilingSize: ValueVector3
+            constantValue: [0, -1, 1]
+          mLocalSpaceSourceOffset: [0, 0, -240]
+          mLocalSpaceTargetOffset: [0, 0, 100]
+      blendMode: 1
+      pass: 8
+      alphaRef: 0
+      miscRenderFlags: 1
+      birthScale0: ValueVector3
+        constantValue: [350, 1, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.1
+            1
+          values: [3]
+            [0, 1, 1]
+            [1.5, 1, 1]
+            [0, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam01.dds"
+      birthUvScrollRate: ValueVector2
+        constantValue: [2, 0]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam04.dds"
+    VfxEmitterDefinitionData
+      timeBeforeFirstEmission: 1
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.2
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "Beam_Core_Glow"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      primitive: VfxPrimitiveBeam
+        mBeam: VfxBeamDefinitionData
+          mBirthTilingSize: ValueVector3
+            constantValue: [0, -1, 1]
+          mLocalSpaceSourceOffset: [0, 0, -240]
+          mLocalSpaceTargetOffset: [0, 0, 100]
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 0.854902, 0.509804, 1]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [4]
+            0
+            0.1
+            0.3
+            1
+          values: [4]
+            [1, 1, 1, 0]
+            [1, 1, 1, 1]
+            [1, 1, 1, 0.170001]
+            [1, 1, 1, 0]
+      pass: 7
+      alphaRef: 0
+      miscRenderFlags: 1
+      birthScale0: ValueVector3
+        constantValue: [450, 1, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.1
+            1
+          values: [3]
+            [0, 1, 1]
+            [1, 1, 1]
+            [1.2, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam02.dds"
+      birthUvScrollRate: ValueVector2
+        constantValue: [0.5, 0]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam04.dds"
+    VfxEmitterDefinitionData
+      timeBeforeFirstEmission: 1
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.6
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "Beam_Core_Glow1"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      primitive: VfxPrimitiveBeam
+        mBeam: VfxBeamDefinitionData
+          mBirthTilingSize: ValueVector3
+            constantValue: [0, -1, 1]
+          mLocalSpaceSourceOffset: [0, 0, -240]
+          mLocalSpaceTargetOffset: [0, 0, 100]
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 0.85098, 0.239216, 1]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [4]
+            0
+            0.1
+            0.3
+            1
+          values: [4]
+            [1, 1, 1, 0]
+            [1, 1, 1, 1]
+            [1, 1, 1, 0.170001]
+            [1, 1, 1, 0]
+      pass: 7
+      alphaRef: 0
+      miscRenderFlags: 1
+      birthScale0: ValueVector3
+        constantValue: [500, 1, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.1
+            1
+          values: [3]
+            [0, 1, 1]
+            [1, 1, 1]
+            [1.1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam02.dds"
+      birthUvScrollRate: ValueVector2
+        constantValue: [0.5, 0]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam04.dds"
+    VfxEmitterDefinitionData
+      timeBeforeFirstEmission: 1
+      rate: ValueFloat
+        constantValue: 45
+      particleLifetime: ValueFloat
+        constantValue: 0.5
+        dynamics: VfxAnimatedFloatVariableData
+          probabilityTables: [1]
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                1
+                2
+          times: [1]
+            0
+          values: [1]
+            0.5
+      particleLinger: [1]
+        2
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "Bokeh"
+      importance: 2
+      birthVelocity: ValueVector3
+        constantValue: [0, 0, -800]
+        dynamics: VfxAnimatedVector3fVariableData
+          probabilityTables: [3]
+            VfxProbabilityTableData
+            VfxProbabilityTableData
+            VfxProbabilityTableData
+              keyTimes: [4]
+                0
+                0.5
+                0.7
+                1
+              keyValues: [4]
+                0.1
+                0.2
+                1
+                2
+          times: [1]
+            0
+          values: [1]
+            [0, 0, -800]
+      birthDrag: ValueVector3
+        constantValue: [0, 0, 4]
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: VfxShapeLegacy
+        emitOffset: ValueVector3
+          constantValue: [-100, 35, 1000]
+          dynamics: VfxAnimatedVector3fVariableData
+            probabilityTables: [3]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  0
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+            times: [1]
+              0
+            values: [1]
+              [-100, 35, 1000]
+      EmitterPosition: ValueVector3
+        constantValue: [0, 0, 1600]
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.0299992]
+        dynamics: VfxAnimatedColorVariableData
+          probabilityTables: [4]
+            VfxProbabilityTableData
+            VfxProbabilityTableData
+            VfxProbabilityTableData
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                0.3
+                1
+          times: [1]
+            0
+          values: [1]
+            [1, 1, 1, 0.0299992]
+      Color: ValueColor
+        constantValue: [1, 0.956863, 0.862745, 1]
+        dynamics: VfxAnimatedColorVariableData
+          times: [7]
+            0
+            0.5
+            0.6
+            0.7
+            0.8
+            0.9
+            1
+          values: [7]
+            [1, 0.956863, 0.862745, 1]
+            [1, 0.956863, 0.862745, 1]
+            [1, 0.956863, 0.862745, 1]
+            [1, 0.956863, 0.862745, 1]
+            [1, 0.956863, 0.862745, 0]
+            [1, 0.956863, 0.862745, 1]
+            [1, 0.956863, 0.862745, 0]
+      pass: 9
+      alphaRef: 0
+      alphaErosionDefinition: VfxAlphaErosionDefinitionData
+        erosionDriveCurve: ValueFloat
+          constantValue: 0
+          dynamics: VfxAnimatedFloatVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              0
+              0
+        erosionMapName: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_ErosionShapes01.dds"
+        erosionMapChannelMixer: ValueColor
+          constantValue: [1, 0, 0, 0]
+      miscRenderFlags: 1
+      isUniformScale: 1
+      isRandomStartFrame: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 90, 0]
+      birthScale0: ValueVector3
+        constantValue: [300, 50, 1]
+        dynamics: VfxAnimatedVector3fVariableData
+          probabilityTables: [3]
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                0.4
+                1
+            VfxProbabilityTableData
+            VfxProbabilityTableData
+          times: [1]
+            0
+          values: [1]
+            [300, 50, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [1, 1, 1]
+            [0.5, 0, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_Z_Bokeh_Dots_4x4.dds"
+      numFrames: 4
+      texDiv: [2, 2]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [0.5, 0.5]
+        birthUvScrollRateMult: ValueVector2
+          constantValue: [2, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+            times: [1]
+              0
+            values: [1]
+              [1, 0]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 55
+        dynamics: VfxAnimatedFloatVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            55
+            11
+      particleLifetime: ValueFloat
+        constantValue: 0.4
+        dynamics: VfxAnimatedFloatVariableData
+          probabilityTables: [1]
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                1
+                2
+          times: [2]
+            0
+            1
+          values: [2]
+            0.8
+            0.2
+      lifetime: [1]
+        0.4
+      emitterName: "CHARGE_GROUND_STREAKS"
+      disabled: 1
+      importance: 2
+      birthVelocity: ValueVector3
+        constantValue: [0, 0, 500]
+        dynamics: VfxAnimatedVector3fVariableData
+          probabilityTables: [3]
+            VfxProbabilityTableData
+            VfxProbabilityTableData
+            VfxProbabilityTableData
+              keyTimes: [4]
+                0
+                0.5
+                0.7
+                1
+              keyValues: [4]
+                0.1
+                0.2
+                1
+                2
+          times: [1]
+            0
+          values: [1]
+            [0, 0, 500]
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: VfxShapeLegacy
+        emitOffset: ValueVector3
+          constantValue: [0, 0, 600]
+          dynamics: VfxAnimatedVector3fVariableData
+            probabilityTables: [3]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  0
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1.3
+                  1.3
+            times: [1]
+              0
+            values: [1]
+              [0, 0, 600]
+      EmitterPosition: ValueVector3
+        constantValue: [0, -160, 1000]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      Color: ValueColor
+        constantValue: [1, 0.25098, 0.152941, 1]
+        dynamics: VfxAnimatedColorVariableData
+          times: [7]
+            0
+            0.5
+            0.6
+            0.7
+            0.8
+            0.9
+            1
+          values: [7]
+            [1, 0.25098, 0.152941, 0]
+            [1, 0.25098, 0.152941, 0.170001]
+            [1, 0.25098, 0.152941, 1]
+            [1, 0.25098, 0.152941, 1]
+            [1, 0.25098, 0.152941, 0]
+            [1, 0.25098, 0.152941, 1]
+            [1, 0.25098, 0.152941, 0]
+      pass: 9
+      alphaRef: 0
+      alphaErosionDefinition: VfxAlphaErosionDefinitionData
+        erosionDriveCurve: ValueFloat
+          constantValue: 0
+          dynamics: VfxAnimatedFloatVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              0
+              0
+        erosionMapName: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_ErosionShapes01.dds"
+        erosionMapChannelMixer: ValueColor
+          constantValue: [1, 0, 0, 0]
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 90, 0]
+      birthScale0: ValueVector3
+        constantValue: [200, 15, 1]
+        dynamics: VfxAnimatedVector3fVariableData
+          probabilityTables: [3]
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                0.5
+                1
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                0.6
+                1
+            VfxProbabilityTableData
+          times: [1]
+            0
+          values: [1]
+            [200, 15, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [1, 1, 1]
+            [0.5, 0, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [0.5, 0.5]
+        birthUvScrollRateMult: ValueVector2
+          constantValue: [2, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+            times: [1]
+              0
+            values: [1]
+              [1, 0]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "CHARGE_GROUND_LIGHT"
+      disabled: 1
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [0, -160, 1550]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 0.796078, 0.560784, 1]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [4]
+            0
+            0.8
+            0.9
+            1
+          values: [4]
+            [1, 1, 1, 0]
+            [1, 1, 1, 0.0899977]
+            [1, 0.686275, 0.933333, 1]
+            [1, 1, 1, 0]
+      pass: 6
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [210, 1800, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam04.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_Z_EinsteinMul_1.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [1, 0.4]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-2, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 1]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+            times: [1]
+              0
+            values: [1]
+              [1, 1]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 2
+      particleLifetime: ValueFloat
+        constantValue: 1
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "CHARGE_GROUND_DARK"
+      disabled: 1
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [0, -160, 1550]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 1
+      birthColor: ValueColor
+        constantValue: [0.119997, 0.0500038, 0.130007, 0.160006]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [4]
+            0
+            0.8
+            0.9
+            1
+          values: [4]
+            [1, 1, 1, 0]
+            [1, 1, 1, 0.340002]
+            [0, 0.835294, 1, 1]
+            [1, 1, 1, 0]
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [210, 1800, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam04.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_Z_EinsteinMul_1.dds"
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-0.5, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 1]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+            times: [1]
+              0
+            values: [1]
+              [1, 1]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 1
+      lifetime: [1]
+        0.8
+      isSingleParticle: 1
+      emitterName: "CHARGE_BEAM_PRETTINESS"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      primitive: VfxPrimitiveBeam
+        mBeam: VfxBeamDefinitionData
+          mBirthTilingSize: ValueVector3
+            constantValue: [0, -0.5, 1]
+          mLocalSpaceSourceOffset: [0, 0, -120]
+      blendMode: 1
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.439994]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [5]
+            0
+            0.3
+            0.5
+            0.75
+            1
+          values: [5]
+            [0.27451, 0.27451, 0.27451, 0]
+            [1, 0.960006, 0.869993, 0.0399939]
+            [0.930007, 0.779995, 0.620005, 0.179995]
+            [1, 0.733333, 0.513726, 0.972549]
+            [1, 0.780392, 0.4, 1]
+      alphaRef: 0
+      miscRenderFlags: 1
+      birthScale0: ValueVector3
+        constantValue: [100, 1, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.5
+            1
+          values: [3]
+            [2, 1, 1]
+            [1, 1, 1]
+            [0.1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_Z_Wisp_2.dds"
+      birthUVOffset: ValueVector2
+        constantValue: [1, 0]
+        dynamics: VfxAnimatedVector2fVariableData
+          probabilityTables: [2]
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                -1
+                1
+            VfxProbabilityTableData
+          times: [1]
+            0
+          values: [1]
+            [1, 0]
+      particleUVScrollRate: IntegratedValueVector2
+        constantValue: [-1, 0]
+        dynamics: VfxAnimatedVector2fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [-0, 0]
+            [-4, 0]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam04.dds"
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "Far_Refraction_L"
+      importance: 2
+      birthVelocity: ValueVector3
+        constantValue: [-75, 0, 0]
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [-200, -160, 1650]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.2]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.9
+            1
+          values: [3]
+            [1, 1, 1, 0]
+            [1, 0.686275, 0.933333, 1]
+            [1, 1, 1, 0]
+      pass: -999
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [100, 2450, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [1, 0.4]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 1]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+            times: [1]
+              0
+            values: [1]
+              [1, 1]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "Far_Refraction_R"
+      importance: 2
+      birthVelocity: ValueVector3
+        constantValue: [75, 0, 0]
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [200, -160, 1650]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.2]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.9
+            1
+          values: [3]
+            [1, 1, 1, 0]
+            [1, 0.686275, 0.933333, 1]
+            [1, 1, 1, 0]
+      pass: -999
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [100, 2450, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [1, 0.4]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 1]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+            times: [1]
+              0
+            values: [1]
+              [1, 1]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "Far_Refraction_L1"
+      importance: 2
+      birthVelocity: ValueVector3
+        constantValue: [-25, 0, 0]
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [-300, -160, 1650]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.110002]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.9
+            1
+          values: [3]
+            [1, 1, 1, 0]
+            [1, 0.686275, 0.933333, 1]
+            [1, 1, 1, 0]
+      pass: -999
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [30, 3050, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [1, 0.4]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 1]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+            times: [1]
+              0
+            values: [1]
+              [1, 1]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "Far_Refraction_R1"
+      importance: 2
+      birthVelocity: ValueVector3
+        constantValue: [25, 0, 0]
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [300, -160, 1650]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.110002]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.9
+            1
+          values: [3]
+            [1, 1, 1, 0]
+            [1, 0.686275, 0.933333, 1]
+            [1, 1, 1, 0]
+      pass: -999
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [30, 3050, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [1, 0.4]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 1]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+            times: [1]
+              0
+            values: [1]
+              [1, 1]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 1
+      lifetime: [1]
+        0.8
+      isSingleParticle: 1
+      emitterName: "CHARGE_BEAM_PRETTINESS1"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      primitive: VfxPrimitiveBeam
+        mBeam: VfxBeamDefinitionData
+          mBirthTilingSize: ValueVector3
+            constantValue: [0, -0.5, 1]
+          mLocalSpaceSourceOffset: [0, 0, -120]
+      blendMode: 1
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.650004]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [5]
+            0
+            0.3
+            0.5
+            0.75
+            1
+          values: [5]
+            [1, 0.976471, 0.847059, 0.156863]
+            [1, 0.960006, 0.869993, 0.0599985]
+            [0.930007, 0.779995, 0.620005, 0.250004]
+            [1, 0.730007, 0.510002, 0.6]
+            [1, 0.780392, 0.4, 1]
+      alphaRef: 0
+      miscRenderFlags: 1
+      birthScale0: ValueVector3
+        constantValue: [200, 1, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.5
+            1
+          values: [3]
+            [2, 1, 1]
+            [0.5, 1, 1]
+            [0.05, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_Z_Wisp_2.dds"
+      birthUVOffset: ValueVector2
+        constantValue: [1, 0]
+        dynamics: VfxAnimatedVector2fVariableData
+          probabilityTables: [2]
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                -1
+                1
+            VfxProbabilityTableData
+          times: [1]
+            0
+          values: [1]
+            [1, 0]
+      particleUVScrollRate: IntegratedValueVector2
+        constantValue: [-0.4, 0]
+        dynamics: VfxAnimatedVector2fVariableData
+          times: [3]
+            0
+            0.5
+            1
+          values: [3]
+            [-0, 0]
+            [-0.4, 0]
+            [-3.2, 0]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam04.dds"
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 1
+      lifetime: [1]
+        0.8
+      isSingleParticle: 1
+      emitterName: "CHARGE_BEAM_PRETTINESS2"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      primitive: VfxPrimitiveBeam
+        mBeam: VfxBeamDefinitionData
+          mBirthTilingSize: ValueVector3
+            constantValue: [0, -1, 1]
+          mLocalSpaceSourceOffset: [0, 0, -120]
+      blendMode: 1
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.280003]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [5]
+            0
+            0.3
+            0.5
+            0.75
+            1
+          values: [5]
+            [0.427451, 1, 0.270588, 0.54902]
+            [1, 0.960006, 0.869993, 0.149996]
+            [0.92549, 0.784314, 0.615686, 0.529412]
+            [1, 0.733333, 0.513726, 0.972549]
+            [1, 0.780392, 0.4, 1]
+      alphaRef: 0
+      miscRenderFlags: 1
+      birthScale0: ValueVector3
+        constantValue: [-160, 1, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.5
+            1
+          values: [3]
+            [2, 1, 1]
+            [0.5, 1, 1]
+            [0.1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_Z_Wisp_2.dds"
+      birthUVOffset: ValueVector2
+        constantValue: [1, 0]
+        dynamics: VfxAnimatedVector2fVariableData
+          probabilityTables: [2]
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                -1
+                1
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                -1
+                1
+          times: [1]
+            0
+          values: [1]
+            [1, 0]
+      particleUVScrollRate: IntegratedValueVector2
+        constantValue: [-0.4, 0]
+        dynamics: VfxAnimatedVector2fVariableData
+          times: [3]
+            0
+            0.5
+            1
+          values: [3]
+            [-0, 0]
+            [-0.4, 0]
+            [-3.2, 0]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam04.dds"
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "WIDTH_Refraction_L"
+      disabled: 1
+      importance: 2
+      birthVelocity: ValueVector3
+        constantValue: [-10, 0, 0]
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [-100, -160, 1650]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.349996]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.9
+            1
+          values: [3]
+            [1, 1, 1, 0]
+            [1, 0.686275, 0.933333, 1]
+            [1, 1, 1, 0]
+      pass: 5
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [10, 2000, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_Width_Indicator_1.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [1, 0.4]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "WIDTH_Refraction_R"
+      disabled: 1
+      importance: 2
+      birthVelocity: ValueVector3
+        constantValue: [10, 0, 0]
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [100, -160, 1650]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.349996]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.9
+            1
+          values: [3]
+            [1, 1, 1, 0]
+            [1, 0.686275, 0.933333, 1]
+            [1, 1, 1, 0]
+      pass: 5
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [10, 2000, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_Width_Indicator_1.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [1, 0.4]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+    VfxEmitterDefinitionData
+      timeBeforeFirstEmission: 1
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 1.3
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "Beam_Post_Prettiness"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      primitive: VfxPrimitiveBeam
+        mBeam: VfxBeamDefinitionData
+          mBirthTilingSize: ValueVector3
+            constantValue: [0, -3, 1]
+          mLocalSpaceSourceOffset: [0, 0, -200]
+          mLocalSpaceTargetOffset: [0, 0, 100]
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 0.850004, 0.239994, 0.100008]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [4]
+            0
+            0.1
+            0.3
+            1
+          values: [4]
+            [1, 1, 1, 0]
+            [1, 1, 1, 1]
+            [1, 1, 1, 0.170001]
+            [1, 1, 1, 0]
+      pass: 12
+      alphaRef: 0
+      alphaErosionDefinition: VfxAlphaErosionDefinitionData
+        erosionDriveCurve: ValueFloat
+          dynamics: VfxAnimatedFloatVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              0
+              1
+        erosionFeatherIn: 0.3
+        erosionFeatherOut: 0.3
+        erosionMapName: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_Z_EinsteinMul_1.dds"
+      miscRenderFlags: 1
+      birthScale0: ValueVector3
+        constantValue: [220, 1, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.1
+            1
+          values: [3]
+            [0, 1, 1]
+            [1, 1, 1]
+            [1.8, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_Z_Wisp_2.dds"
+      birthUVOffset: ValueVector2
+        constantValue: [1, 0]
+        dynamics: VfxAnimatedVector2fVariableData
+          probabilityTables: [2]
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                -1
+                1
+            VfxProbabilityTableData
+          times: [1]
+            0
+          values: [1]
+            [1, 0]
+      particleUVScrollRate: IntegratedValueVector2
+        constantValue: [1, 0]
+        dynamics: VfxAnimatedVector2fVariableData
+          times: [3]
+            0
+            0.3
+            1
+          values: [3]
+            [1, 0]
+            [0.15, 0]
+            [0, 0]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam04.dds"
+    VfxEmitterDefinitionData
+      timeBeforeFirstEmission: 1
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 1
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "Beam_Post_Prettiness1"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      primitive: VfxPrimitiveBeam
+        mBeam: VfxBeamDefinitionData
+          mBirthTilingSize: ValueVector3
+            constantValue: [0, -2, 1]
+          mLocalSpaceSourceOffset: [0, 0, -200]
+          mLocalSpaceTargetOffset: [0, 0, 100]
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [0.310002, 1, 0.480003, 0.100008]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [4]
+            0
+            0.1
+            0.3
+            1
+          values: [4]
+            [1, 1, 1, 0]
+            [1, 1, 1, 1]
+            [1, 1, 1, 0.170001]
+            [1, 1, 1, 0]
+      pass: 12
+      alphaRef: 0
+      alphaErosionDefinition: VfxAlphaErosionDefinitionData
+        erosionDriveCurve: ValueFloat
+          dynamics: VfxAnimatedFloatVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              0
+              1
+        erosionFeatherIn: 0.3
+        erosionFeatherOut: 0.3
+        erosionMapName: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_Z_EinsteinMul_1.dds"
+      miscRenderFlags: 1
+      birthScale0: ValueVector3
+        constantValue: [130, 1, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.1
+            1
+          values: [3]
+            [0, 1, 1]
+            [1, 1, 1]
+            [1.5, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_Z_Wisp_2.dds"
+      birthUVOffset: ValueVector2
+        constantValue: [1, 0]
+        dynamics: VfxAnimatedVector2fVariableData
+          probabilityTables: [2]
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                -1
+                1
+            VfxProbabilityTableData
+          times: [1]
+            0
+          values: [1]
+            [1, 0]
+      particleUVScrollRate: IntegratedValueVector2
+        constantValue: [1, 0]
+        dynamics: VfxAnimatedVector2fVariableData
+          times: [3]
+            0
+            0.3
+            1
+          values: [3]
+            [1, 0]
+            [0.15, 0]
+            [0, 0]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam04.dds"
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "CLOSE_Refraction_L"
+      importance: 2
+      birthVelocity: ValueVector3
+        constantValue: [-10, 0, 0]
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [-180, -160, 1650]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.149996]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.9
+            1
+          values: [3]
+            [1, 1, 1, 0]
+            [1, 0.686275, 0.933333, 1]
+            [1, 1, 1, 0]
+      pass: 5
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [30, 2350, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [1, 0.4]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 1]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+            times: [1]
+              0
+            values: [1]
+              [1, 1]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "CLOSE_Refraction_R"
+      importance: 2
+      birthVelocity: ValueVector3
+        constantValue: [10, 0, 0]
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [180, -160, 1650]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.149996]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.9
+            1
+          values: [3]
+            [1, 1, 1, 0]
+            [1, 0.686275, 0.933333, 1]
+            [1, 1, 1, 0]
+      pass: 5
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [30, 2350, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [1, 0.4]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 1]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+            times: [1]
+              0
+            values: [1]
+              [1, 1]
+    VfxEmitterDefinitionData
+      timeBeforeFirstEmission: 1
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 1
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "Beam_Post_Prettiness2"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      primitive: VfxPrimitiveBeam
+        mBeam: VfxBeamDefinitionData
+          mBirthTilingSize: ValueVector3
+            constantValue: [0, -2, 1]
+          mLocalSpaceSourceOffset: [0, 0, -200]
+          mLocalSpaceTargetOffset: [0, 0, 100]
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [0.310002, 1, 0.480003, 0.100008]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [4]
+            0
+            0.1
+            0.3
+            1
+          values: [4]
+            [1, 1, 1, 0]
+            [1, 1, 1, 1]
+            [1, 1, 1, 0.170001]
+            [1, 1, 1, 0]
+      pass: 12
+      alphaRef: 0
+      alphaErosionDefinition: VfxAlphaErosionDefinitionData
+        erosionDriveCurve: ValueFloat
+          dynamics: VfxAnimatedFloatVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              0
+              1
+        erosionFeatherIn: 0.3
+        erosionFeatherOut: 0.3
+        erosionMapName: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_Z_EinsteinMul_1.dds"
+      miscRenderFlags: 1
+      birthScale0: ValueVector3
+        constantValue: [350, 1, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.1
+            1
+          values: [3]
+            [0, 1, 1]
+            [1, 1, 1]
+            [1.5, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_Z_Wisp_2.dds"
+      birthUVOffset: ValueVector2
+        constantValue: [1, 0]
+        dynamics: VfxAnimatedVector2fVariableData
+          probabilityTables: [2]
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                -1
+                1
+            VfxProbabilityTableData
+          times: [1]
+            0
+          values: [1]
+            [1, 0]
+      particleUVScrollRate: IntegratedValueVector2
+        constantValue: [1, 0]
+        dynamics: VfxAnimatedVector2fVariableData
+          times: [3]
+            0
+            0.3
+            1
+          values: [3]
+            [1, 0]
+            [0.15, 0]
+            [0, 0]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam04.dds"
+    VfxEmitterDefinitionData
+      timeBeforeFirstEmission: 1.06
+      rate: ValueFloat
+        constantValue: 2
+      particleLifetime: ValueFloat
+        constantValue: 0.04
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "Beam_DARK_FLASH1"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      primitive: VfxPrimitiveBeam
+        mBeam: VfxBeamDefinitionData
+          mBirthTilingSize: ValueVector3
+            constantValue: [0, -1, 1]
+          mLocalSpaceSourceOffset: [0, 0, -240]
+          mLocalSpaceTargetOffset: [0, 0, 100]
+      blendMode: 1
+      birthColor: ValueColor
+        constantValue: [0.0800031, 0, 0.100008, 1]
+      pass: 15
+      alphaRef: 0
+      miscRenderFlags: 1
+      birthScale0: ValueVector3
+        constantValue: [400, 1, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [4]
+            0
+            0.1
+            0.6
+            1
+          values: [4]
+            [0, 1, 1]
+            [1.5, 1, 1]
+            [1.4, 1, 1]
+            [0, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam01.dds"
+      birthUvScrollRate: ValueVector2
+        constantValue: [2, 0]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam04.dds"
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 1
+      lifetime: [1]
+        0.8
+      isSingleParticle: 1
+      emitterName: "warning_beam_3"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      primitive: VfxPrimitiveBeam
+        mBeam: VfxBeamDefinitionData
+          mBirthTilingSize: ValueVector3
+            constantValue: [0, -1, 1]
+          mLocalSpaceSourceOffset: [0, 0, -150]
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 0, 0, 1]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [5]
+            0
+            0.3
+            0.5
+            0.75
+            1
+          values: [5]
+            [0.27451, 0.27451, 0.27451, 0]
+            [1, 0.847059, 0.019608, 0.066697]
+            [0.92549, 0.796078, 0.568627, 0.529412]
+            [1, 0.941176, 0.792157, 0.972549]
+            [1, 1, 1, 1]
+      pass: 5
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthScale0: ValueVector3
+        constantValue: [500, 1, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.6
+            1
+          values: [3]
+            [0.2, 1, 1]
+            [0.1, 1, 1]
+            [0.05, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam02.dds"
+      particleUVScrollRate: IntegratedValueVector2
+        constantValue: [0.453, 0]
+        dynamics: VfxAnimatedVector2fVariableData
+          times: [2]
+            0.3
+            1
+          values: [2]
+            [0, 0]
+            [0.453, 0]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RedBeam_Mask.dds"
+        texAddressModeMult: 2
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 50
+        dynamics: VfxAnimatedFloatVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            50
+            10
+      particleLifetime: ValueFloat
+        constantValue: 0.4
+        dynamics: VfxAnimatedFloatVariableData
+          probabilityTables: [1]
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                1
+                2
+          times: [2]
+            0
+            1
+          values: [2]
+            0.8
+            0.2
+      lifetime: [1]
+        0.4
+      emitterName: "CHARGE_GROUND_DIFFUSE"
+      disabled: 1
+      importance: 2
+      birthVelocity: ValueVector3
+        constantValue: [0, 0, 500]
+        dynamics: VfxAnimatedVector3fVariableData
+          probabilityTables: [3]
+            VfxProbabilityTableData
+            VfxProbabilityTableData
+            VfxProbabilityTableData
+              keyTimes: [4]
+                0
+                0.5
+                0.7
+                1
+              keyValues: [4]
+                0.1
+                0.2
+                1
+                2
+          times: [1]
+            0
+          values: [1]
+            [0, 0, 500]
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: VfxShapeLegacy
+        emitOffset: ValueVector3
+          constantValue: [0, 0, 600]
+          dynamics: VfxAnimatedVector3fVariableData
+            probabilityTables: [3]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  0
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1.3
+                  1.3
+            times: [1]
+              0
+            values: [1]
+              [0, 0, 600]
+      EmitterPosition: ValueVector3
+        constantValue: [0, -160, 1000]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.140002]
+      Color: ValueColor
+        constantValue: [1, 0.8, 0.4, 1]
+        dynamics: VfxAnimatedColorVariableData
+          times: [7]
+            0
+            0.5
+            0.6
+            0.7
+            0.8
+            0.9
+            1
+          values: [7]
+            [1, 0.8, 0.4, 1]
+            [1, 0.8, 0.4, 1]
+            [1, 0.8, 0.4, 1]
+            [1, 0.8, 0.4, 1]
+            [1, 0.8, 0.4, 0]
+            [1, 0.8, 0.4, 1]
+            [1, 0.8, 0.4, 0]
+      pass: 9
+      alphaRef: 0
+      alphaErosionDefinition: VfxAlphaErosionDefinitionData
+        erosionDriveCurve: ValueFloat
+          constantValue: 0
+          dynamics: VfxAnimatedFloatVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              0
+              0
+        erosionMapName: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_ErosionShapes01.dds"
+        erosionMapChannelMixer: ValueColor
+          constantValue: [1, 0, 0, 0]
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 90, 0]
+      birthScale0: ValueVector3
+        constantValue: [800, 70, 1]
+        dynamics: VfxAnimatedVector3fVariableData
+          probabilityTables: [3]
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                0.5
+                1
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                0.6
+                1
+            VfxProbabilityTableData
+          times: [1]
+            0
+          values: [1]
+            [800, 70, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [1, 1, 1]
+            [1.5, 0, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [0.5, 0.5]
+        birthUvScrollRateMult: ValueVector2
+          constantValue: [2, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+            times: [1]
+              0
+            values: [1]
+              [1, 0]
+    VfxEmitterDefinitionData
+      timeBeforeFirstEmission: 1
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 1.5
+      particleLinger: [1]
+        1.5
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "Burnt1"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [0, -140, 1500]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 1
+      Color: ValueColor
+        constantValue: [0.170001, 0.149996, 0.250004, 1]
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.3
+            1
+          values: [3]
+            [0.170001, 0.149996, 0.250004, 0]
+            [0.170001, 0.149996, 0.250004, 1]
+            [0.170001, 0.149996, 0.250004, 0]
+      pass: -5
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [50, 2000, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "END_Ground_1"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [0, -160, -120]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.9
+            1
+          values: [3]
+            [1, 1, 1, 0]
+            [1, 0.686275, 0.933333, 1]
+            [1, 1, 1, 0]
+      pass: 5
+      alphaRef: 0
+      miscRenderFlags: 1
+      isUniformScale: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [300, 300, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [0.1, 1]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 1]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+            times: [1]
+              0
+            values: [1]
+              [1, 1]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "END_Ground_2"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [0, -160, -120]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.250004]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.9
+            1
+          values: [3]
+            [1, 1, 1, 0]
+            [1, 0.968627, 0.803922, 1]
+            [1, 1, 1, 0]
+      pass: 5
+      alphaRef: 0
+      miscRenderFlags: 1
+      isUniformScale: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [200, 300, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [0.1, 1]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 1]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+            times: [1]
+              0
+            values: [1]
+              [1, 1]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 3
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "END_Beam_1"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [0, 0, -120]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.9
+            1
+          values: [3]
+            [1, 1, 1, 0]
+            [1, 0.968627, 0.803922, 1]
+            [1, 1, 1, 0]
+      pass: 500
+      alphaRef: 0
+      miscRenderFlags: 1
+      isUniformScale: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [100, 300, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [0.1, 1]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 1]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+            times: [1]
+              0
+            values: [1]
+              [1, 1]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 3
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "END_Beam_Core"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [0, 0, -120]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.9
+            1
+          values: [3]
+            [1, 1, 1, 0]
+            [1, 0.968627, 0.803922, 1]
+            [1, 1, 1, 0]
+      pass: 500
+      alphaRef: 0
+      miscRenderFlags: 1
+      isUniformScale: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [30, 300, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [0.1, 1]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 1]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+            times: [1]
+              0
+            values: [1]
+              [1, 1]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "END_Ground_3"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [0, -160, -120]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.500008]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.9
+            1
+          values: [3]
+            [1, 1, 1, 0]
+            [1, 0.968627, 0.803922, 1]
+            [1, 1, 1, 0]
+      pass: 5
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 90, 0]
+      birthScale0: ValueVector3
+        constantValue: [20, 134, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [0.1, 1]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 1]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+            times: [1]
+              0
+            values: [1]
+              [1, 1]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "END_Ground_Core"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [0, -160, -120]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.500008]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.9
+            1
+          values: [3]
+            [1, 1, 1, 0]
+            [1, 0.968627, 0.803922, 1]
+            [1, 1, 1, 0]
+      pass: 5
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 90, 0]
+      birthScale0: ValueVector3
+        constantValue: [5, 134, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [0.1, 1]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 1]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+            times: [1]
+              0
+            values: [1]
+              [1, 1]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 10
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "END_Beam_ROTATING"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [0, 0, -120]
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.429999]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.9
+            1
+          values: [3]
+            [1, 1, 1, 0]
+            [1, 0.968627, 0.803922, 1]
+            [1, 1, 1, 0]
+      pass: 500
+      alphaRef: 0
+      miscRenderFlags: 1
+      isRotationEnabled: 1
+      birthRotation0: ValueVector3
+        constantValue: [360, 0, 0]
+        dynamics: VfxAnimatedVector3fVariableData
+          probabilityTables: [3]
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                -1
+                1
+            VfxProbabilityTableData
+            VfxProbabilityTableData
+          times: [1]
+            0
+          values: [1]
+            [360, 0, 0]
+      birthRotationalVelocity0: ValueVector3
+        constantValue: [150, 0, 0]
+      rotation0: IntegratedValueVector3
+        constantValue: [1, 0, 0]
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.5
+            0.75
+          values: [3]
+            [0.2, 0, 0]
+            [0.8, 0, 0]
+            [5, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [10, 300, 1]
+        dynamics: VfxAnimatedVector3fVariableData
+          probabilityTables: [3]
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                0.5
+                2
+            VfxProbabilityTableData
+              keyTimes: [2]
+                0
+                1
+              keyValues: [2]
+                0.2
+                1
+            VfxProbabilityTableData
+          times: [1]
+            0
+          values: [1]
+            [10, 300, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.8
+            1
+          values: [3]
+            [0.2, 1, 1]
+            [1, 1, 1]
+            [0.1, 0.1, 0.1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Diana_Skin11_R_Glow.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [0.1, 1]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 1]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+            times: [1]
+              0
+            values: [1]
+              [1, 1]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 1
+      lifetime: [1]
+        0.8
+      isSingleParticle: 1
+      emitterName: "warning_beam_4"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      primitive: VfxPrimitiveBeam
+        mBeam: VfxBeamDefinitionData
+          mBirthTilingSize: ValueVector3
+            constantValue: [0, -1, 1]
+          mLocalSpaceSourceOffset: [0, 0, -150]
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 0.321569, 0.203922, 1]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [5]
+            0
+            0.3
+            0.5
+            0.75
+            1
+          values: [5]
+            [0.27451, 0.27451, 0.27451, 0]
+            [1, 1, 1, 1]
+            [0.92549, 0.796078, 0.568627, 0.529412]
+            [1, 0.941176, 0.792157, 0.972549]
+            [1, 1, 1, 1]
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthScale0: ValueVector3
+        constantValue: [300, 1, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [3]
+            0
+            0.2
+            1
+          values: [3]
+            [0.2, 1, 1]
+            [0.3, 1, 1]
+            [0.05, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_LazurBeam02.dds"
+      particleUVScrollRate: IntegratedValueVector2
+        constantValue: [0.453, 0]
+        dynamics: VfxAnimatedVector2fVariableData
+          times: [2]
+            0.3
+            1
+          values: [2]
+            [0, 0]
+            [0.453, 0]
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RedBeam_Mask.dds"
+        texAddressModeMult: 2
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 2
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "CHARGE_GROUND_LIGHT1"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [0, -160, 1550]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [0.576471, 1, 0.603922, 0.4]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [4]
+            0
+            0.8
+            0.9
+            1
+          values: [4]
+            [1, 1, 1, 0]
+            [1, 1, 1, 0.0899977]
+            [1, 0.686275, 0.933333, 1]
+            [1, 1, 1, 0]
+      pass: 6
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [700, 1800, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_Width_Indicator_1.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_Z_EinsteinMul_1.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [1, 0.4]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-2, 0]
+        birthUVOffsetMult: ValueVector2
+          constantValue: [1, 1]
+          dynamics: VfxAnimatedVector2fVariableData
+            probabilityTables: [2]
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+              VfxProbabilityTableData
+                keyTimes: [2]
+                  0
+                  1
+                keyValues: [2]
+                  -1
+                  1
+            times: [1]
+              0
+            values: [1]
+              [1, 1]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "WIDTH_Refraction_L1"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [-116, -160, 1650]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.349996]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.9
+            1
+          values: [3]
+            [1, 1, 1, 0]
+            [1, 0.686275, 0.933333, 1]
+            [1, 1, 1, 0]
+      pass: 5
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [10, 2000, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_Width_Indicator_1.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [1, 0.4]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+    VfxEmitterDefinitionData
+      rate: ValueFloat
+        constantValue: 1
+      particleLifetime: ValueFloat
+        constantValue: 0.95
+      lifetime: [1]
+        1.8
+      isSingleParticle: 1
+      emitterName: "WIDTH_Refraction_R1"
+      importance: 2
+      bindWeight: ValueFloat
+        constantValue: 1
+      SpawnShape: {ee39916f}
+        emitOffset: [116, -160, 1650]
+      primitive: VfxPrimitiveArbitraryQuad
+      blendMode: 4
+      birthColor: ValueColor
+        constantValue: [1, 1, 1, 0.349996]
+      Color: ValueColor
+        dynamics: VfxAnimatedColorVariableData
+          times: [3]
+            0
+            0.9
+            1
+          values: [3]
+            [1, 1, 1, 0]
+            [1, 0.686275, 0.933333, 1]
+            [1, 1, 1, 0]
+      pass: 5
+      alphaRef: 0
+      miscRenderFlags: 1
+      isGroundLayer: 1
+      birthRotation0: ValueVector3
+        constantValue: [90, 0, 0]
+      birthScale0: ValueVector3
+        constantValue: [10, 2000, 1]
+      scale0: ValueVector3
+        dynamics: VfxAnimatedVector3fVariableData
+          times: [2]
+            0
+            1
+          values: [2]
+            [0.8, 1, 1]
+            [1, 1, 1]
+      texture: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_Width_Indicator_1.dds"
+      uvRotation: ValueFloat
+        constantValue: 90
+      textureMult: VfxTextureMultDefinitionData
+        textureMult: "ASSETS/Characters/Lux/Skins/Base/Particles/Lux_Base_R_RainbowMult.dds"
+        uvScaleMult: ValueVector2
+          constantValue: [1, 0.4]
+        ParticleIntegratedUvScrollMult: IntegratedValueVector2
+          constantValue: [-1, 0]
+          dynamics: VfxAnimatedVector2fVariableData
+            times: [2]
+              0
+              1
+            values: [2]
+              [-0, 0]
+              [-1, 0]
+  visibilityRadius: 5000
+  particleName: "Lux_Base_R_mis_beam"
+  particlePath: "Characters/Lux/Skins/Skin0/Particles/Lux_Base_R_mis_beam"
+  soundOnCreateDefault: "Play_sfx_Lux_LuxRBeam_beamend"
+  flags: 198

@@ -1,0 +1,12 @@
+{{#if isIntro}}
+  <video class="intro{{if isHanging " hanging"}}" src={{srcIntro}} autoplay="true" preload="auto" width={{srcWidth}} height={{srcHeight}}>
+  </>
+{{/if}}
+{{#if isLoop}}
+  <video class="loop{{if isHanging " hanging"}}" src={{srcLoop}} autoplay="true" preload="auto" loop="true" width={{srcWidth}} height={{srcHeight}}>
+  </>
+{{/if}}
+{{#if playOutro}}
+  <video class="outro{{if isHanging " hanging"}}" src={{srcOutro}} autoplay="true" preload="auto" width={{srcWidth}} height={{srcHeight}}>
+  </>
+{{/if}}

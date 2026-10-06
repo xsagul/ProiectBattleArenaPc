@@ -1,0 +1,238 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 000002972FAC32C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 15 constants, 5 functions
+	1	[-]	LOADK    	0 -2	; 0
+	2	[-]	SETGLOBAL	0 -1	; TEAM_UNKNOWN
+	3	[-]	LOADK    	0 -4	; 10
+	4	[-]	SETGLOBAL	0 -3	; EOG_NEXUS_REVIVE_TIME
+	5	[-]	LOADK    	0 -2	; 0
+	6	[-]	SETGLOBAL	0 -5	; EOG_ALIVE_NEXUS_SKIN
+	7	[-]	LOADK    	0 -7	; 1
+	8	[-]	SETGLOBAL	0 -6	; EOG_DESTROYED_NEXUS_SKIN
+	9	[-]	LOADK    	0 -2	; 0
+	10	[-]	SETGLOBAL	0 -8	; EOG_MINION_FADE_AMOUNT
+	11	[-]	LOADK    	0 -10	; 2
+	12	[-]	SETGLOBAL	0 -9	; EOG_MINION_FADE_TIME
+	13	[-]	CLOSURE  	0 0	; 000002972FAC34B0
+	14	[-]	SETGLOBAL	0 -11	; CheatEndOfGameCeremonyServer
+	15	[-]	CLOSURE  	0 1	; 000002972FAC17E0
+	16	[-]	SETGLOBAL	0 -12	; CheatChampionEoGCeremonyServer
+	17	[-]	CLOSURE  	0 2	; 000002972FAC1860
+	18	[-]	SETGLOBAL	0 -13	; CheatDestroyNexusPhaseServer
+	19	[-]	CLOSURE  	0 3	; 000002972FAC3BA0
+	20	[-]	SETGLOBAL	0 -14	; CheatStopRenderingMinionsPhaseServer
+	21	[-]	CLOSURE  	0 4	; 000002972FAC3C20
+	22	[-]	SETGLOBAL	0 -15	; CheatRevertEoGSettingsServer
+	23	[-]	RETURN   	0 1
+constants (15) for 000002972FAC32C0:
+	1	"TEAM_UNKNOWN"
+	2	0
+	3	"EOG_NEXUS_REVIVE_TIME"
+	4	10
+	5	"EOG_ALIVE_NEXUS_SKIN"
+	6	"EOG_DESTROYED_NEXUS_SKIN"
+	7	1
+	8	"EOG_MINION_FADE_AMOUNT"
+	9	"EOG_MINION_FADE_TIME"
+	10	2
+	11	"CheatEndOfGameCeremonyServer"
+	12	"CheatChampionEoGCeremonyServer"
+	13	"CheatDestroyNexusPhaseServer"
+	14	"CheatStopRenderingMinionsPhaseServer"
+	15	"CheatRevertEoGSettingsServer"
+locals (0) for 000002972FAC32C0:
+upvalues (0) for 000002972FAC32C0:
+
+function <?:14,46> (65 instructions, 260 bytes at 000002972FAC34B0)
+2 params, 6 slots, 0 upvalues, 0 locals, 20 constants, 0 functions
+	1	[-]	SETGLOBAL	0 -1	; winningTeam
+	2	[-]	GETGLOBAL	2 -1	; winningTeam
+	3	[-]	GETGLOBAL	3 -2	; TEAM_ORDER
+	4	[-]	EQ       	0 2 3
+	5	[-]	JMP      	3	; to 9
+	6	[-]	GETGLOBAL	2 -4	; TEAM_CHAOS
+	7	[-]	SETGLOBAL	2 -3	; losingTeam
+	8	[-]	JMP      	2	; to 11
+	9	[-]	GETGLOBAL	2 -2	; TEAM_ORDER
+	10	[-]	SETGLOBAL	2 -3	; losingTeam
+	11	[-]	GETGLOBAL	2 -6	; GetPosition
+	12	[-]	MOVE     	3 1
+	13	[-]	CALL     	2 2 2
+	14	[-]	SETGLOBAL	2 -5	; losingHQPosition
+	15	[-]	GETGLOBAL	2 -8	; GetHQ
+	16	[-]	GETGLOBAL	3 -2	; TEAM_ORDER
+	17	[-]	CALL     	2 2 2
+	18	[-]	SETGLOBAL	2 -7	; orderHQ
+	19	[-]	GETGLOBAL	2 -7	; orderHQ
+	20	[-]	EQ       	1 2 -9	; - nil
+	21	[-]	JMP      	12	; to 34
+	22	[-]	GETGLOBAL	2 -10	; SetInvulnerable
+	23	[-]	GETGLOBAL	3 -7	; orderHQ
+	24	[-]	LOADBOOL 	4 1 0
+	25	[-]	CALL     	2 3 1
+	26	[-]	GETGLOBAL	2 -11	; SetTargetable
+	27	[-]	GETGLOBAL	3 -7	; orderHQ
+	28	[-]	LOADBOOL 	4 0 0
+	29	[-]	CALL     	2 3 1
+	30	[-]	GETGLOBAL	2 -12	; SetBuildingHealthRegenEnabled
+	31	[-]	GETGLOBAL	3 -7	; orderHQ
+	32	[-]	LOADBOOL 	4 0 0
+	33	[-]	CALL     	2 3 1
+	34	[-]	GETGLOBAL	2 -8	; GetHQ
+	35	[-]	GETGLOBAL	3 -4	; TEAM_CHAOS
+	36	[-]	CALL     	2 2 2
+	37	[-]	SETGLOBAL	2 -13	; chaosHQ
+	38	[-]	GETGLOBAL	2 -13	; chaosHQ
+	39	[-]	EQ       	1 2 -9	; - nil
+	40	[-]	JMP      	12	; to 53
+	41	[-]	GETGLOBAL	2 -10	; SetInvulnerable
+	42	[-]	GETGLOBAL	3 -13	; chaosHQ
+	43	[-]	LOADBOOL 	4 1 0
+	44	[-]	CALL     	2 3 1
+	45	[-]	GETGLOBAL	2 -11	; SetTargetable
+	46	[-]	GETGLOBAL	3 -13	; chaosHQ
+	47	[-]	LOADBOOL 	4 0 0
+	48	[-]	CALL     	2 3 1
+	49	[-]	GETGLOBAL	2 -12	; SetBuildingHealthRegenEnabled
+	50	[-]	GETGLOBAL	3 -13	; chaosHQ
+	51	[-]	LOADBOOL 	4 0 0
+	52	[-]	CALL     	2 3 1
+	53	[-]	GETGLOBAL	2 -14	; CloseShop
+	54	[-]	CALL     	2 1 1
+	55	[-]	GETGLOBAL	2 -15	; LuaForEachChampion
+	56	[-]	GETGLOBAL	3 -16	; TEAM_UNKNOWN
+	57	[-]	LOADK    	4 -17	; "CheatChampionEoGCeremonyServer"
+	58	[-]	CALL     	2 3 1
+	59	[-]	GETGLOBAL	2 -18	; InitTimer
+	60	[-]	LOADK    	3 -19	; "CheatDestroyNexusPhaseServer"
+	61	[-]	GETGLOBAL	4 -20	; GetEoGNexusChangeSkinTime
+	62	[-]	CALL     	4 1 2
+	63	[-]	LOADBOOL 	5 0 0
+	64	[-]	CALL     	2 4 1
+	65	[-]	RETURN   	0 1
+constants (20) for 000002972FAC34B0:
+	1	"winningTeam"
+	2	"TEAM_ORDER"
+	3	"losingTeam"
+	4	"TEAM_CHAOS"
+	5	"losingHQPosition"
+	6	"GetPosition"
+	7	"orderHQ"
+	8	"GetHQ"
+	9	nil
+	10	"SetInvulnerable"
+	11	"SetTargetable"
+	12	"SetBuildingHealthRegenEnabled"
+	13	"chaosHQ"
+	14	"CloseShop"
+	15	"LuaForEachChampion"
+	16	"TEAM_UNKNOWN"
+	17	"CheatChampionEoGCeremonyServer"
+	18	"InitTimer"
+	19	"CheatDestroyNexusPhaseServer"
+	20	"GetEoGNexusChangeSkinTime"
+locals (0) for 000002972FAC34B0:
+upvalues (0) for 000002972FAC34B0:
+
+function <?:49,54> (12 instructions, 48 bytes at 000002972FAC17E0)
+1 param, 6 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; MoveCameraFromCurrentPositionToPoint
+	2	[-]	MOVE     	2 0
+	3	[-]	GETGLOBAL	3 -2	; losingHQPosition
+	4	[-]	GETGLOBAL	4 -3	; GetEoGPanToHQTime
+	5	[-]	CALL     	4 1 2
+	6	[-]	LOADBOOL 	5 1 0
+	7	[-]	CALL     	1 5 1
+	8	[-]	GETGLOBAL	1 -4	; SetGreyscaleEnabledWhenDead
+	9	[-]	MOVE     	2 0
+	10	[-]	LOADBOOL 	3 0 0
+	11	[-]	CALL     	1 3 1
+	12	[-]	RETURN   	0 1
+constants (4) for 000002972FAC17E0:
+	1	"MoveCameraFromCurrentPositionToPoint"
+	2	"losingHQPosition"
+	3	"GetEoGPanToHQTime"
+	4	"SetGreyscaleEnabledWhenDead"
+locals (0) for 000002972FAC17E0:
+upvalues (0) for 000002972FAC17E0:
+
+function <?:56,65> (24 instructions, 96 bytes at 000002972FAC1860)
+0 params, 4 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetEoGUseNexusDeathAnimation
+	2	[-]	CALL     	0 1 2
+	3	[-]	EQ       	0 0 -2	; - false
+	4	[-]	JMP      	4	; to 9
+	5	[-]	GETGLOBAL	0 -3	; SetHQCurrentSkin
+	6	[-]	GETGLOBAL	1 -4	; losingTeam
+	7	[-]	GETGLOBAL	2 -5	; EOG_DESTROYED_NEXUS_SKIN
+	8	[-]	CALL     	0 3 1
+	9	[-]	GETGLOBAL	0 -6	; FadeMinions
+	10	[-]	GETGLOBAL	1 -4	; losingTeam
+	11	[-]	GETGLOBAL	2 -7	; EOG_MINION_FADE_AMOUNT
+	12	[-]	GETGLOBAL	3 -8	; EOG_MINION_FADE_TIME
+	13	[-]	CALL     	0 4 1
+	14	[-]	GETGLOBAL	0 -9	; InitTimer
+	15	[-]	LOADK    	1 -10	; "CheatStopRenderingMinionsPhaseServer"
+	16	[-]	GETGLOBAL	2 -8	; EOG_MINION_FADE_TIME
+	17	[-]	LOADBOOL 	3 0 0
+	18	[-]	CALL     	0 4 1
+	19	[-]	GETGLOBAL	0 -9	; InitTimer
+	20	[-]	LOADK    	1 -11	; "CheatRevertEoGSettingsServer"
+	21	[-]	GETGLOBAL	2 -12	; EOG_NEXUS_REVIVE_TIME
+	22	[-]	LOADBOOL 	3 0 0
+	23	[-]	CALL     	0 4 1
+	24	[-]	RETURN   	0 1
+constants (12) for 000002972FAC1860:
+	1	"GetEoGUseNexusDeathAnimation"
+	2	false
+	3	"SetHQCurrentSkin"
+	4	"losingTeam"
+	5	"EOG_DESTROYED_NEXUS_SKIN"
+	6	"FadeMinions"
+	7	"EOG_MINION_FADE_AMOUNT"
+	8	"EOG_MINION_FADE_TIME"
+	9	"InitTimer"
+	10	"CheatStopRenderingMinionsPhaseServer"
+	11	"CheatRevertEoGSettingsServer"
+	12	"EOG_NEXUS_REVIVE_TIME"
+locals (0) for 000002972FAC1860:
+upvalues (0) for 000002972FAC1860:
+
+function <?:67,69> (5 instructions, 20 bytes at 000002972FAC3BA0)
+0 params, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SetMinionsNoRender
+	2	[-]	GETGLOBAL	1 -2	; losingTeam
+	3	[-]	LOADBOOL 	2 1 0
+	4	[-]	CALL     	0 3 1
+	5	[-]	RETURN   	0 1
+constants (2) for 000002972FAC3BA0:
+	1	"SetMinionsNoRender"
+	2	"losingTeam"
+locals (0) for 000002972FAC3BA0:
+upvalues (0) for 000002972FAC3BA0:
+
+function <?:71,75> (13 instructions, 52 bytes at 000002972FAC3C20)
+0 params, 4 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SetBarracksSpawnEnabled
+	2	[-]	LOADBOOL 	1 1 0
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -2	; FadeMinions
+	5	[-]	GETGLOBAL	1 -3	; losingTeam
+	6	[-]	LOADK    	2 -4	; 1
+	7	[-]	LOADK    	3 -5	; 0.1
+	8	[-]	CALL     	0 4 1
+	9	[-]	GETGLOBAL	0 -6	; SetHQCurrentSkin
+	10	[-]	GETGLOBAL	1 -3	; losingTeam
+	11	[-]	GETGLOBAL	2 -7	; EOG_ALIVE_NEXUS_SKIN
+	12	[-]	CALL     	0 3 1
+	13	[-]	RETURN   	0 1
+constants (7) for 000002972FAC3C20:
+	1	"SetBarracksSpawnEnabled"
+	2	"FadeMinions"
+	3	"losingTeam"
+	4	1
+	5	0.1
+	6	"SetHQCurrentSkin"
+	7	"EOG_ALIVE_NEXUS_SKIN"
+locals (0) for 000002972FAC3C20:
+upvalues (0) for 000002972FAC3C20:

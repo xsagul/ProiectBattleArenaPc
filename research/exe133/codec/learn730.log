@@ -1,0 +1,11 @@
+struct 0x83fee0
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 1478, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 1149, in learn
+    sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc).learn()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 157, in __init__
+    self.header = curs[0] - self.prefix
+                  ~~~~^^^
+IndexError: list index out of range

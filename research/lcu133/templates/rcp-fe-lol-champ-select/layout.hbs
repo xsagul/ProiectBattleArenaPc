@@ -1,0 +1,95 @@
+<div class="position-assignment-intro-container {{if showPositionAssignmentBackground "visible" "hidden"}}">
+  {{position-assignment-intro map=map mapStaticPath=champSelectBackground isShown=isShown hidePins=isNexusBlitz shouldPlayVideos=uxSettings.largeAreaAnimationsEnabled showPositionAssignment=showPositionAssignment pinDropSummoners=pinDropSummoners mapSide=pinDropNotification.mapSide splashDefocus=splashDefocus}}
+</>
+{{champion-splash-background pickJustLockedIn=pickJustLockedIn splashUnlocked=splashUnlocked splashDefocus=splashDefocus hasBans=sessionActions.hasBans splashPath=splashPath showPositionAssignment=showPositionAssignment sessionActions=sessionActions currentSummoner=currentSummoner champSelectScreen=champSelectScreen isDraftMode=isDraftMode isShowingGrid=isShowingGrid emblems=viewSkin.emblems uxSettings=uxSettings jmxSettings=jmxSettings isShowingVoteReveal=isShowingVoteReveal}}
+<div class="top-darken">
+</>
+{{champion-splash-ring currentActions=sessionActions.currentActions champSelectScreen=champSelectScreen uxSettings=uxSettings isHeaderExpanded=isHeaderExpanded shouldPlayIntroAnimation=shouldPlaySplashRingAnimation}}
+<div class="champion-select-summoner-array-container {{if session.timer.inFinalizationPhase "in-finalization"}}">
+  {{summoner-array summoners=myTeamSummoners sessionActions=sessionActions isUILockedForGameStart=isUILockedForGameStart uxSettings=uxSettings showPositionAssignment=showPositionAssignment isLeft=true showFirstPick=showLeftSideFirstPick timer=session.timer currentSummoner=currentSummoner timerDisabledPickOrderSwap=timerDisabledPickOrderSwap activeSwap=activeSwap activeTrade=activeTrade formattedTime=formattedTime isPlayingSimulBanOutro=isPlayingSimulBanOutro team=session.myTeam viewSkin=viewSkin championChestAvailabilityMap=championChestAvailabilityMap shouldShowChestAvailability=shouldShowChestAvailability showChestAvailabilityHintedPortraits=showChestAvailabilityHintedPortraits boosterSummonerName=boosterSummonerName jmxSettings=jmxSettings PickOrderSwappingTooltipEnabled=PickOrderSwappingTooltipEnabled ChampTradingTooltipEnabled=ChampTradingTooltipEnabled isCustomGame=gameflow.gameData.isCustomGame recordDidRequestSucceed=recordDidRequestSucceed}}
+  {{summoner-array summoners=theirTeamSummoners sessionActions=sessionActions isUILockedForGameStart=isUILockedForGameStart uxSettings=uxSettings showPositionAssignment=showPositionAssignment isLeft=false showFirstPick=showRightSideFirstPick timer=session.timer currentSummoner=currentSummoner timerDisabledPickOrderSwap=timerDisabledPickOrderSwap formattedTime=formattedTime isPlayingSimulBanOutro=isPlayingSimulBanOutro team=session.theirTeam jmxSettings=jmxSettings isCustomGame=gameflow.gameData.isCustomGame recordDidRequestSucceed=recordDidRequestSucceed}}
+</>
+<div class="champion-select-main-container">
+  <div class="{{if showPositionAssignment "hidden" "visible"}}">
+    {{team-bans hasSimultaneousBans=session.hasSimultaneousBans banActions=sessionActions.myTeamBanActions numBans=session.bans.numBans isMyTeam=true}}
+    {{team-bans hasSimultaneousBans=session.hasSimultaneousBans banActions=sessionActions.theirTeamBanActions numBans=session.bans.numBans isMyTeam=false}}
+    {{timer-status timer=session.timer summoner=currentSummoner isDraftMode=isDraftMode activeAction=sessionActions.activeAction enemyActiveAction=sessionActions.enemyActiveAction alliedActiveAction=sessionActions.alliedActiveAction allPlayersActTogether=sessionActions.allPlayersActTogether currentActions=sessionActions.currentActions activeActions=sessionActions.activeActions champSelectScreen=champSelectScreen isShowingPositionAssignment=showPositionAssignment isSpectating=isSpectating isPlayingCeremony=isPlayingCeremony inFinalizationPhase=session.timer.inFinalizationPhase isShowingVoteCeremonies=isShowingVoteCeremonies isTeamBuilderGame=queue.isTeamBuilderManaged formattedTime=formattedTime displayTimeAsMinuteSecond=displayTimeAsMinuteSecond minuteSecondTime=minuteSecondTime isHeaderExpanded=isHeaderExpanded showChampionBench=showChampionBench inventory=inventory benchChampions=benchChampions championChestAvailabilityMap=championChestAvailabilityMap shouldShowChestAvailability=shouldShowChestAvailability showChestAvailabilityHintedPortraits=showChestAvailabilityHintedPortraits allowBattleBoost=session.allowBattleBoost isUILockedForGameStart=isUILockedForGameStart jmxSettings=jmxSettings isShowingPerksModal=isShowingPerksModal boostableSkinCount=boostableSkinCount recordDidRequestSucceed=recordDidRequestSucceed}}
+    <div class="{{if showPickPhaseComponent "visible" "hidden"}}">
+      {{pick-phase summoner=currentSummoner sessionActions=sessionActions actionWasJustCompleted=actionWasJustCompleted waitingForBanAnimation=waitingForBanAnimation waitingForPickAnimation=waitingForPickAnimation map=map isDraftMode=isDraftMode isSpectating=isSpectating isPlayingSimulBanOutro=isPlayingSimulBanOutro isPlayingCeremony=isPlayingCeremony showVoteShowcase=showVoteShowcase champSelectScreen=champSelectScreen splashPath=pickSplashPath splashDefocus=pickSplashDefocus splashUnlocked=pickSplashUnlocked timer=session.timer myTeam=session.myTeam theirTeam=session.theirTeam gameId=session.gameId uxSettings=uxSettings jmxSettings=jmxSettings updateIsShowingGrid=(action this (mut isShowingGrid)) updatePickJustLockedIn=(action this (mut pickJustLockedIn)) shouldShowChestFilter=shouldShowChestFilter isRandomChampionEnabled=isRandomChampionEnabled randomChampionRateLimitConfig=randomChampionRateLimitConfig transitioningToSelectedScreen=transitioningToSelectedScreen recordDidRequestSucceed=recordDidRequestSucceed useIMELocales=useIMELocales UseNewLoyaltyIcon=UseNewLoyaltyIcon}}
+    </>
+    <div class="vote-showcase-visibility-wrapper {{if showVoteShowcase "visible" "hidden"}}">
+      {{champion-showcase-team showcaseActions=sessionActions.myTeamVoteActions introAnimation=localSummonerActionComplete}}
+    </>
+    <div class="vote-reveal-visibility-wrapper {{if isShowingVoteReveal "visible" "hidden"}}">
+      {{vote-reveal visible=isShowingVoteReveal activeAction=sessionActions.activeAction summoner=currentSummoner}}
+    </>
+    {{#if shouldShowChestAvailability}}
+      {{champion-chest-availability championId=currentSummoner.championId championChestAvailabilityMap=championChestAvailabilityMap updateChestAvailabilityHintedPortraits="updateChestAvailabilityHintedPortraits" isShowingPerksModal=isShowingPerksModal myTeamSummoners=myTeamSummoners benchChampions=benchChampions}}
+    {{/if}}
+    <div class="{{if showSkinSelectComponent "visible" "hidden"}}">
+      {{skin-select summoner=currentSummoner map=map rootViewSkin=viewSkin selectViewSkin="selectViewSkin" allActions=sessionActions.allActions rerollsDisabled=rerollsDisabled showRerollButton=showRerollButton tbAllowRerolling=session.allowRerolling tbRerollsRemaining=session.rerollsRemaining uxSettings=uxSettings jmxSettings=jmxSettings rootComponentShown=isShown allowSkinSelection=session.allowSkinSelection ip=ip rp=rp timer=session.timer isSkinSelectVisible=showSkinSelectComponent isShowingGrid=isShowingGrid shouldShowChestAvailability=shouldShowChestAvailability championChestAvailabilityMap=championChestAvailabilityMap entitledFeatureClassName=entitledFeatureClassName entitledFeatureState=session.entitledFeatureState selfEntitledFeatureType=selfEntitledFeatureType isUILockedForGameStart=isUILockedForGameStart recordDidRequestSucceed=recordDidRequestSucceed UseNewLoyaltyIcon=UseNewLoyaltyIcon}}
+    </>
+    <div class="loadouts-edit-wrapper {{if isSpectating "hidden" "visible"}}">
+      {{loadouts-edit localSummonerLevel=localSummoner.summonerLevel currentSummoner=currentSummoner champOrPickIntent=currentSummoner.champion.id isUILockedForGameStart=isUILockedForGameStart showingPerksModalChanged="showingPerksModalChanged" currentPerksPage=currentPerksPage perksPages=perksPages perksSettings=perksSettings perksTutorialSettings=tutorial gameModeSupportsPerks=gameModeSupportsPerks map=map queue=queue timer=session.timer jmxSettings=jmxSettings recordDidRequestSucceed=recordDidRequestSucceed uxSettings=uxSettings showPositionAssignment=showPositionAssignment availableSpells=availableSpells perPositionRequiredSummonerSpells=perPositionRequiredSummonerSpells perPositionDisallowedSummonerSpells=perPositionDisallowedSummonerSpells wardSkins=wardSkins selectedWardSkin=selectedWardSkin accountLoadout=accountLoadout isCompanionsEnabled=isCompanionsEnabled isRuneRecommenderEnabled=runeRecommenderEnabled unlockAllRunePageFunctionality=unlockAllRunePageFunctionality}}
+    </>
+    <div class="game-info-container {{if isSpectating "visible" "hidden"}}">
+      {{game-info teamSize=queue.numPlayersPerTeam mutatorName=queue.gameTypeConfig.name}}
+      {{quit-button disabled=disableSpectatorQuitButton isSpectating=isSpectating recordDidRequestSucceed=recordDidRequestSucceed}}
+    </>
+  </>
+</>
+{{#if showGameEventInfoCard}}
+  <div class="game-event-info-card-container">
+    {{game-event-info-card map=map eventIndex=lockedEventIndex shiftedToSide=shiftGameEventInfoCard}}
+  </>
+{{/if}}
+{{#if showChatRoom}}
+  <div class="pregame-chat-box {{if isSpectating "hidden" "visible"}}">
+    <lol-social-chat-room type="championSelect" summoner-ids-to-name-overrides-json={{myTeamSummonerIdsToNameOverridesJson}}>
+    </>
+  </>
+{{/if}}
+<div class="bottom-right-buttons">
+  {{#if showQuitButton}}
+    {{quit-button isSpectating=isSpectating disabled=disableQuitButton recordDidRequestSucceed=recordDidRequestSucceed}}
+  {{else}}
+    {{#if queueNameText}}
+      <div class="corner-game-info-container">
+        <div class="team-size">
+          {{teamSizeText}}
+        </>
+        <div class="queue-name">
+          {{queueNameText}}
+        </>
+      </>
+    {{/if}}
+  {{/if}}
+  <lol-social-chat-toggle-button position="inside" onclick={{action this "clickChat" on="click"}}>
+  </>
+  {{missions-tracker jmxSettings=jmxSettings entitlements=entitlements}}
+  <div class="champ-select-voice-button-wrapper">
+    {{voiceButton}}
+  </>
+  <lc-toast open={{boostToastOpen}} onHide={{action this "closeBoostNotificationToast"}}>
+    <lc-toast-content>
+      {{boost-notification boostedSkinsMessage=boostToastData.boostedSkinsMessage}}
+    </>
+  </>
+  {{#if activeTrade}}
+    <lc-layer index="0" open={{true}}>
+      <lc-layer-content>
+        {{trade-dialog trade=activeTrade summoners=myTeamSummoners recordDidRequestSucceed=recordDidRequestSucceed}}
+      </>
+    </>
+  {{/if}}
+  {{#if activeSwap}}
+    <lc-layer index="0" open={{true}}>
+      <lc-layer-content>
+        {{swap-dialog swap=activeSwap summoners=myTeamSummoners timeRemaining=session.timer.timeRemaining inPlanningPhase=session.timer.inPlanningPhase pickOrderSwapDisabledConfigurationInSeconds=pickOrderSwapDisabledConfigurationInSeconds recordDidRequestSucceed=recordDidRequestSucceed}}
+      </>
+    </>
+  {{/if}}
+  {{#if shouldShowDisconnectNotification}}
+    {{disconnect-notification}}
+  {{/if}}
+</>

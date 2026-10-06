@@ -1,0 +1,31 @@
+{{#if showEndCountdown}}
+  <div class="countdown-widget">
+    <img class="countdown-widget_background-side" src="{{countdownFrameLeft}}" alt="" role="presentation">
+    </>
+    <div class="countdown-widget_background-center" style="background-image: url('{{countdownFrameCenter}}')">
+      <img class="countdown-widget_icon" src="{{countdownClockIcon}}" alt="" role="presentation">
+      </>
+      <div class="countdown-widget_text">
+        {{remaining-time-text endDateTime=endDate almostEndingText=endingSoonText timeHasExpiredText=endingText longTimeText=endingLongTimeText wrappingText=endingWrappingText useShortLabels=true}}
+      </>
+    </>
+    <img class="countdown-widget_background-side" src="{{countdownFrameRight}}" alt="" role="presentation">
+    </>
+  </>
+{{else}}
+  {{#if showPreCountdown}}
+    <div class="countdown-widget">
+      <img class="countdown-widget_background-side" src="{{countdownFrameLeft}}" alt="" role="presentation">
+      </>
+      <div class="countdown-widget_background-center" style="background-image: url('{{countdownFrameCenter}}')">
+        <img class="countdown-widget_icon" src="{{countdownCalenderIcon}}" alt="" role="presentation">
+        </>
+        <div class="countdown-widget_text">
+          {{remaining-time-text endDateTime=startDate almostEndingText=startingSoonText timeHasExpiredText=startingText longTimeText=startingLongTimeText wrappingText=startingWrappingText useShortLabels=true}}
+        </>
+      </>
+      <img class="countdown-widget_background-side" src="{{countdownFrameRight}}" alt="" role="presentation">
+      </>
+    </>
+  {{/if}}
+{{/if}}

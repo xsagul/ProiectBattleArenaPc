@@ -1,0 +1,5 @@
+<hr>
+</>
+{{#each gameTypes as |gameType|}}
+  {{game-type-card showingState=showingState mapId=gameType.mapId gameMode=gameType.gameMode assetMutator=gameType.assetMutator requiresCustomGameSubCategory=gameType.requiresCustomGameSubCategory queues=queues animationLock=selected.animationLock selectedCategory=selected.category selectedMapId=selected.mapId selectedGameMode=selected.gameMode selectedQueueId=selected.queueId selectedTrainingGameMode=selected.trainingGameMode selectQueue="selectQueue"}}
+{{/each}}

@@ -1,0 +1,47 @@
+{{#lower-section currentPlayer=currentPlayer}}
+  <div class="upper-right-container">
+    {{disband-countdown}}
+  </>
+  {{#if inParty}}
+    <div class="tft-cards-container">
+      <div class="tft-cards-first-row">
+        {{#unless isPair}}
+          <div class="tft-cards-first-row-left">
+            {{#each nonSelfCards.left as |member|}}
+              {{tft-player-card isInvited=member.isInvited isPlaceholder=member.isPlaceholder partyInvitesAllowed=partyInvitesAllowed member=member isInQueue=isInQueue selected=selected showInviteModal="showInviteModal" isFullCard=isPair}}
+            {{/each}}
+          </>
+        {{/unless}}
+        <div class="tft-cards-first-row-middle">
+          {{#if currentPlayer}}
+            {{tft-player-card member=currentPlayer isMe=true isInQueue=isInQueue selected=selected isFullCard=isPair}}
+            <lol-parties-series-button class="tft-missions-button" type="simple" series="TFTBattlepass_Weeklies_Series">
+            </>
+          {{/if}}
+        </>
+        <div class="tft-cards-first-row-right">
+          {{#each nonSelfCards.right as |member|}}
+            {{tft-player-card isPlaceholder=member.isPlaceholder isInvited=member.isInvited partyInvitesAllowed=partyInvitesAllowed member=member isInQueue=isInQueue selected=selected showInviteModal="showInviteModal" isFullCard=isPair}}
+          {{/each}}
+        </>
+      </>
+      {{#unless isPair}}
+        <div class="tft-cards-second-row">
+          {{#each nonSelfCards.bottom as |member|}}
+            {{tft-player-card isPlaceholder=member.isPlaceholder isInvited=member.isInvited partyInvitesAllowed=partyInvitesAllowed member=member isInQueue=isInQueue selected=selected showInviteModal="showInviteModal" isFullCard=isPair}}
+          {{/each}}
+        </>
+      {{/unless}}
+    </>
+  {{/if}}
+  {{parties-footer-notifications positionError=positionError positionWarning=positionWarning readyWarning=readyWarning readyWarningTooltip=readyWarningTooltip autoFillEligible=autoFillEligible autoFillProtectedForStreaking=autoFillProtectedForStreaking autoFillProtectedForPromos=autoFillProtectedForPromos autoFillProtectedForSoloing=autoFillProtectedForSoloing premadeSizeAllowed=premadeSizeAllowed allowablePremadeSizes=allowablePremadeSizes currentPartySize=currentPartySize isCurrentPlayerPartyLeader=isCurrentPlayerPartyLeader shouldShowBetaWatermark=false}}
+  {{tft-footer showingState=showingState selected=selected readyWarning=readyWarning}}
+  {{invite-info-panel showingState=showingState currentPlayerCanInvite=currentPlayerCanInvite isTFT=true}}
+  <div class="parties-chat-room">
+    <lol-social-chat-room type="lobby" disabled-when-connecting="">
+    </>
+  </>
+{{/lower-section}}
+<div style="display: none;">
+  {{invitationsObserver}}
+</>

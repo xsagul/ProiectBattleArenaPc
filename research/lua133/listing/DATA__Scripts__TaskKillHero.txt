@@ -1,0 +1,277 @@
+
+main <?:0,0> (26 instructions, 104 bytes at 000001BE1DFD32C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 15 constants, 5 functions
+	1	[-]	GETGLOBAL	0 -2	; GetAttackRange
+	2	[-]	CALL     	0 1 2
+	3	[-]	SETGLOBAL	0 -1	; HERO_FIGHT_DIST
+	4	[-]	GETGLOBAL	0 -2	; GetAttackRange
+	5	[-]	CALL     	0 1 2
+	6	[-]	ADD      	0 0 -4	; - 500
+	7	[-]	SETGLOBAL	0 -3	; HERO_ENGAGE_DIST
+	8	[-]	LOADK    	0 -6	; 0
+	9	[-]	SETGLOBAL	0 -5	; AI_FOLLOW_HERO
+	10	[-]	LOADK    	0 -8	; 1
+	11	[-]	SETGLOBAL	0 -7	; AI_ATTACK_HERO
+	12	[-]	LOADK    	0 -6	; 0
+	13	[-]	SETGLOBAL	0 -9	; TargetHealth
+	14	[-]	LOADBOOL 	0 0 0
+	15	[-]	SETGLOBAL	0 -10	; ReducePriority
+	16	[-]	CLOSURE  	0 0	; 000001BE1DFD34B0
+	17	[-]	SETGLOBAL	0 -11	; UpdatePriority
+	18	[-]	CLOSURE  	0 1	; 000001BE1DFD17E0
+	19	[-]	SETGLOBAL	0 -12	; BeginTask
+	20	[-]	CLOSURE  	0 2	; 000001BE1DFD19A0
+	21	[-]	SETGLOBAL	0 -13	; Tick
+	22	[-]	CLOSURE  	0 3	; 000001BE1DFD3CC0
+	23	[-]	SETGLOBAL	0 -14	; AntiKiteTimer
+	24	[-]	CLOSURE  	0 4	; 000001BE1DFD3E30
+	25	[-]	SETGLOBAL	0 -15	; OnTargetLost
+	26	[-]	RETURN   	0 1
+constants (15) for 000001BE1DFD32C0:
+	1	"HERO_FIGHT_DIST"
+	2	"GetAttackRange"
+	3	"HERO_ENGAGE_DIST"
+	4	500
+	5	"AI_FOLLOW_HERO"
+	6	0
+	7	"AI_ATTACK_HERO"
+	8	1
+	9	"TargetHealth"
+	10	"ReducePriority"
+	11	"UpdatePriority"
+	12	"BeginTask"
+	13	"Tick"
+	14	"AntiKiteTimer"
+	15	"OnTargetLost"
+locals (0) for 000001BE1DFD32C0:
+upvalues (0) for 000001BE1DFD32C0:
+
+function <?:11,30> (44 instructions, 176 bytes at 000001BE1DFD34B0)
+1 param, 7 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	SETTABLE 	0 -1 -2	; "Priority" 0
+	2	[-]	GETGLOBAL	1 -3	; GetHeroes
+	3	[-]	GETGLOBAL	2 -4	; GetOtherTeam
+	4	[-]	CALL     	2 1 0
+	5	[-]	CALL     	1 0 2
+	6	[-]	LEN      	2 1
+	7	[-]	GETTABLE 	3 0 -5	; "HeroIDIndex"
+	8	[-]	LE       	0 3 2
+	9	[-]	JMP      	34	; to 44
+	10	[-]	GETGLOBAL	2 -6	; math
+	11	[-]	GETTABLE 	2 2 -7	; "max"
+	12	[-]	GETGLOBAL	3 -8	; GetDist
+	13	[-]	GETGLOBAL	4 -9	; GetPos
+	14	[-]	CALL     	4 1 2
+	15	[-]	GETGLOBAL	5 -9	; GetPos
+	16	[-]	GETTABLE 	6 0 -5	; "HeroIDIndex"
+	17	[-]	GETTABLE 	6 1 6
+	18	[-]	CALL     	5 2 0
+	19	[-]	CALL     	3 0 2
+	20	[-]	LOADK    	4 -10	; 1
+	21	[-]	CALL     	2 3 2
+	22	[-]	GETGLOBAL	3 -11	; IsDead
+	23	[-]	GETTABLE 	4 0 -5	; "HeroIDIndex"
+	24	[-]	GETTABLE 	4 1 4
+	25	[-]	CALL     	3 2 2
+	26	[-]	TEST     	3 0 1
+	27	[-]	JMP      	16	; to 44
+	28	[-]	GETGLOBAL	3 -12	; HERO_ENGAGE_DIST
+	29	[-]	LT       	0 2 3
+	30	[-]	JMP      	2	; to 33
+	31	[-]	SETTABLE 	0 -1 -13	; "Priority" 0.5
+	32	[-]	JMP      	11	; to 44
+	33	[-]	GETGLOBAL	3 -12	; HERO_ENGAGE_DIST
+	34	[-]	MUL      	3 3 -14	; - 2
+	35	[-]	LT       	0 2 3
+	36	[-]	JMP      	7	; to 44
+	37	[-]	GETGLOBAL	3 -12	; HERO_ENGAGE_DIST
+	38	[-]	SUB      	3 2 3
+	39	[-]	GETGLOBAL	4 -12	; HERO_ENGAGE_DIST
+	40	[-]	DIV      	3 3 4
+	41	[-]	SUB      	3 -10 3	; 1 -
+	42	[-]	MUL      	3 -13 3	; 0.5 -
+	43	[-]	SETTABLE 	0 -1 3	; "Priority" -
+	44	[-]	RETURN   	0 1
+constants (14) for 000001BE1DFD34B0:
+	1	"Priority"
+	2	0
+	3	"GetHeroes"
+	4	"GetOtherTeam"
+	5	"HeroIDIndex"
+	6	"math"
+	7	"max"
+	8	"GetDist"
+	9	"GetPos"
+	10	1
+	11	"IsDead"
+	12	"HERO_ENGAGE_DIST"
+	13	0.5
+	14	2
+locals (0) for 000001BE1DFD34B0:
+upvalues (0) for 000001BE1DFD34B0:
+
+function <?:32,42> (25 instructions, 100 bytes at 000001BE1DFD17E0)
+1 param, 6 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetHeroes
+	2	[-]	GETGLOBAL	2 -2	; GetOtherTeam
+	3	[-]	CALL     	2 1 0
+	4	[-]	CALL     	1 0 2
+	5	[-]	LEN      	2 1
+	6	[-]	GETTABLE 	3 0 -3	; "HeroIDIndex"
+	7	[-]	LE       	0 3 2
+	8	[-]	JMP      	16	; to 25
+	9	[-]	GETGLOBAL	2 -4	; TurnOffAutoAttack
+	10	[-]	GETGLOBAL	3 -5	; STOPREASON_MOVING
+	11	[-]	CALL     	2 2 1
+	12	[-]	GETGLOBAL	2 -6	; SetStateAndCloseToTarget
+	13	[-]	GETGLOBAL	3 -7	; AI_FOLLOW_HERO
+	14	[-]	GETTABLE 	4 0 -3	; "HeroIDIndex"
+	15	[-]	GETTABLE 	4 1 4
+	16	[-]	CALL     	2 3 1
+	17	[-]	GETGLOBAL	2 -9	; GetTargetHealth
+	18	[-]	CALL     	2 1 2
+	19	[-]	SETGLOBAL	2 -8	; TargetHealth
+	20	[-]	GETGLOBAL	2 -10	; InitTimer
+	21	[-]	LOADK    	3 -11	; "AntiKiteTimer"
+	22	[-]	LOADK    	4 -12	; 2
+	23	[-]	LOADBOOL 	5 1 0
+	24	[-]	CALL     	2 4 1
+	25	[-]	RETURN   	0 1
+constants (12) for 000001BE1DFD17E0:
+	1	"GetHeroes"
+	2	"GetOtherTeam"
+	3	"HeroIDIndex"
+	4	"TurnOffAutoAttack"
+	5	"STOPREASON_MOVING"
+	6	"SetStateAndCloseToTarget"
+	7	"AI_FOLLOW_HERO"
+	8	"TargetHealth"
+	9	"GetTargetHealth"
+	10	"InitTimer"
+	11	"AntiKiteTimer"
+	12	2
+locals (0) for 000001BE1DFD17E0:
+upvalues (0) for 000001BE1DFD17E0:
+
+function <?:44,67> (56 instructions, 224 bytes at 000001BE1DFD19A0)
+1 param, 7 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetState
+	2	[-]	CALL     	1 1 2
+	3	[-]	GETGLOBAL	2 -2	; GetHeroes
+	4	[-]	GETGLOBAL	3 -3	; GetOtherTeam
+	5	[-]	CALL     	3 1 0
+	6	[-]	CALL     	2 0 2
+	7	[-]	LEN      	3 2
+	8	[-]	GETTABLE 	4 0 -4	; "HeroIDIndex"
+	9	[-]	LE       	0 4 3
+	10	[-]	JMP      	45	; to 56
+	11	[-]	GETGLOBAL	3 -5	; GetDist
+	12	[-]	GETGLOBAL	4 -6	; GetPos
+	13	[-]	CALL     	4 1 2
+	14	[-]	GETGLOBAL	5 -6	; GetPos
+	15	[-]	GETTABLE 	6 0 -4	; "HeroIDIndex"
+	16	[-]	GETTABLE 	6 2 6
+	17	[-]	CALL     	5 2 0
+	18	[-]	CALL     	3 0 2
+	19	[-]	GETGLOBAL	4 -7	; AI_FOLLOW_HERO
+	20	[-]	EQ       	0 1 4
+	21	[-]	JMP      	15	; to 37
+	22	[-]	GETGLOBAL	4 -8	; HERO_FIGHT_DIST
+	23	[-]	LT       	0 3 4
+	24	[-]	JMP      	6	; to 31
+	25	[-]	GETGLOBAL	4 -9	; SetStateAndCloseToTarget
+	26	[-]	GETGLOBAL	5 -10	; AI_ATTACK_HERO
+	27	[-]	GETTABLE 	6 0 -4	; "HeroIDIndex"
+	28	[-]	GETTABLE 	6 2 6
+	29	[-]	CALL     	4 3 1
+	30	[-]	JMP      	25	; to 56
+	31	[-]	GETGLOBAL	4 -9	; SetStateAndCloseToTarget
+	32	[-]	GETGLOBAL	5 -7	; AI_FOLLOW_HERO
+	33	[-]	GETTABLE 	6 0 -4	; "HeroIDIndex"
+	34	[-]	GETTABLE 	6 2 6
+	35	[-]	CALL     	4 3 1
+	36	[-]	JMP      	19	; to 56
+	37	[-]	GETGLOBAL	4 -10	; AI_ATTACK_HERO
+	38	[-]	EQ       	0 1 4
+	39	[-]	JMP      	16	; to 56
+	40	[-]	GETGLOBAL	4 -8	; HERO_FIGHT_DIST
+	41	[-]	LT       	0 3 4
+	42	[-]	JMP      	5	; to 48
+	43	[-]	GETGLOBAL	4 -11	; TurnOnAutoAttack
+	44	[-]	GETTABLE 	5 0 -4	; "HeroIDIndex"
+	45	[-]	GETTABLE 	5 2 5
+	46	[-]	CALL     	4 2 1
+	47	[-]	JMP      	8	; to 56
+	48	[-]	GETGLOBAL	4 -12	; TurnOffAutoAttack
+	49	[-]	GETGLOBAL	5 -13	; STOPREASON_MOVING
+	50	[-]	CALL     	4 2 1
+	51	[-]	GETGLOBAL	4 -9	; SetStateAndCloseToTarget
+	52	[-]	GETGLOBAL	5 -7	; AI_FOLLOW_HERO
+	53	[-]	GETTABLE 	6 0 -4	; "HeroIDIndex"
+	54	[-]	GETTABLE 	6 2 6
+	55	[-]	CALL     	4 3 1
+	56	[-]	RETURN   	0 1
+constants (13) for 000001BE1DFD19A0:
+	1	"GetState"
+	2	"GetHeroes"
+	3	"GetOtherTeam"
+	4	"HeroIDIndex"
+	5	"GetDist"
+	6	"GetPos"
+	7	"AI_FOLLOW_HERO"
+	8	"HERO_FIGHT_DIST"
+	9	"SetStateAndCloseToTarget"
+	10	"AI_ATTACK_HERO"
+	11	"TurnOnAutoAttack"
+	12	"TurnOffAutoAttack"
+	13	"STOPREASON_MOVING"
+locals (0) for 000001BE1DFD19A0:
+upvalues (0) for 000001BE1DFD19A0:
+
+function <?:69,85> (29 instructions, 116 bytes at 000001BE1DFD3CC0)
+1 param, 3 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetTargetHealth
+	2	[-]	CALL     	1 1 2
+	3	[-]	GETGLOBAL	2 -2	; TargetHealth
+	4	[-]	SUB      	2 2 -3	; - 10
+	5	[-]	LE       	0 2 1
+	6	[-]	JMP      	10	; to 17
+	7	[-]	GETGLOBAL	1 -4	; IsMoving
+	8	[-]	CALL     	1 1 2
+	9	[-]	TEST     	1 0 0
+	10	[-]	JMP      	6	; to 17
+	11	[-]	LOADBOOL 	1 1 0
+	12	[-]	SETGLOBAL	1 -5	; ReducePriority
+	13	[-]	GETGLOBAL	1 -1	; GetTargetHealth
+	14	[-]	CALL     	1 1 2
+	15	[-]	SETGLOBAL	1 -2	; TargetHealth
+	16	[-]	RETURN   	0 1
+	17	[-]	GETGLOBAL	1 -5	; ReducePriority
+	18	[-]	EQ       	0 1 -6	; - true
+	19	[-]	JMP      	6	; to 26
+	20	[-]	LOADBOOL 	1 0 0
+	21	[-]	SETGLOBAL	1 -5	; ReducePriority
+	22	[-]	GETGLOBAL	1 -1	; GetTargetHealth
+	23	[-]	CALL     	1 1 2
+	24	[-]	SETGLOBAL	1 -2	; TargetHealth
+	25	[-]	RETURN   	0 1
+	26	[-]	GETGLOBAL	1 -1	; GetTargetHealth
+	27	[-]	CALL     	1 1 2
+	28	[-]	SETGLOBAL	1 -2	; TargetHealth
+	29	[-]	RETURN   	0 1
+constants (6) for 000001BE1DFD3CC0:
+	1	"GetTargetHealth"
+	2	"TargetHealth"
+	3	10
+	4	"IsMoving"
+	5	"ReducePriority"
+	6	true
+locals (0) for 000001BE1DFD3CC0:
+upvalues (0) for 000001BE1DFD3CC0:
+
+function <?:87,89> (1 instruction, 4 bytes at 000001BE1DFD3E30)
+1 param, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000001BE1DFD3E30:
+locals (0) for 000001BE1DFD3E30:
+upvalues (0) for 000001BE1DFD3E30:

@@ -1,0 +1,77 @@
+<lol-uikit-video-state-machine>
+  <!-- BUTTON BACKGROUND VIDEO -->
+  <lol-uikit-video-group class="play-button-video">
+    <lol-uikit-video-state state="patcher-intro">
+      <lol-uikit-video class="large-video" type="intro" src={{videoSource.patcherIntro}} preload="">
+      </>
+    </>
+    <lol-uikit-video-state state="default">
+      <lol-uikit-video type="intro" src={{videoSource.enabledIntro}}>
+      </>
+    </>
+    <lol-uikit-video-state state="enabled">
+      <lol-uikit-video type="intro" src={{videoSource.enabledIntro}}>
+      </>
+    </>
+    <lol-uikit-video-state state="disabled">
+      <lol-uikit-video class="large-video" type="intro" src={{videoSource.disabledIntro}}>
+      </>
+    </>
+    <lol-uikit-video-state state="release" wait-for-end="">
+      <lol-uikit-video type="outro" src={{videoSource.releaseIntro}} preload="">
+      </>
+    </>
+    <lol-uikit-video-state state="hover-in">
+      <lol-uikit-video type="intro" src={{videoSource.hoverIntro}}>
+      </>
+    </>
+    <lol-uikit-video-state state="hover-out">
+      <lol-uikit-video type="outro" src={{videoSource.hoverOutro}}>
+      </>
+    </>
+  </>
+  <!-- BUTTON MAGIC VIDEO -->
+  <lol-uikit-video-group class="play-button-hover-magic">
+    <lol-uikit-video-state state="release" wait-for-end="">
+      <lol-uikit-video type="outro" src={{videoSource.magicRelease}} preload="">
+      </>
+    </>
+    <lol-uikit-video-state state="hover-in">
+      <lol-uikit-video type="idle" src={{videoSource.hoverIdle}}>
+      </>
+    </>
+    <lol-uikit-video-state state="patcher-intro">
+    </>
+    <lol-uikit-video-state state="enabled">
+    </>
+    <lol-uikit-video-state state="disabled">
+    </>
+    <lol-uikit-video-state state="hover-out">
+    </>
+    <lol-uikit-video-state state="default">
+    </>
+  </>
+  <!-- LOGO VIDEO -->
+  <lol-uikit-video-group class="league-logo">
+    <lol-uikit-video-state state="default" no-preserve-state="">
+      <lol-uikit-video type="idle" src={{videoSource.leagueLogoIdle}}>
+      </>
+    </>
+    <lol-uikit-video-state state="refresh" no-preserve-state="">
+      <lol-uikit-video type="idle" src={{videoSource.leagueLogoIdle}}>
+      </>
+    </>
+  </>
+  <lol-uikit-video-group class="league-logo">
+    <lol-uikit-video-state state="release">
+      <lol-uikit-video type="intro" src={{videoSource.leagueLogoMagicIntro}} fade-out="400" preload="">
+      </>
+    </>
+    <lol-uikit-video-state state="enabled">
+    </>
+    <lol-uikit-video-state state="hover-in">
+    </>
+    <lol-uikit-video-state state="disabled">
+    </>
+  </>
+</>

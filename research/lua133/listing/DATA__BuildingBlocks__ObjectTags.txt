@@ -1,0 +1,470 @@
+
+main <?:0,0> (180 instructions, 720 bytes at 000001EC7F8632C0)
+0+ params, 51 slots, 0 upvalues, 0 locals, 164 constants, 3 functions
+	1	[-]	NEWTABLE 	0 32 0
+	2	[-]	LOADK    	1 -2	; "Champion"
+	3	[-]	LOADK    	2 -3	; "Champion_Clone"
+	4	[-]	LOADK    	3 -4	; "Minion"
+	5	[-]	LOADK    	4 -5	; "Minion_Lane"
+	6	[-]	LOADK    	5 -6	; "Minion_Lane_Melee"
+	7	[-]	LOADK    	6 -7	; "Minion_Lane_Ranged"
+	8	[-]	LOADK    	7 -8	; "Minion_Lane_Siege"
+	9	[-]	LOADK    	8 -9	; "Minion_Lane_Super"
+	10	[-]	LOADK    	9 -10	; "Minion_Summon"
+	11	[-]	LOADK    	10 -11	; "Minion_Summon_Large"
+	12	[-]	LOADK    	11 -12	; "Monster"
+	13	[-]	LOADK    	12 -13	; "Monster_Epic"
+	14	[-]	LOADK    	13 -14	; "Monster_Large"
+	15	[-]	LOADK    	14 -15	; "Monster_Medium"
+	16	[-]	LOADK    	15 -16	; "Monster_Buff"
+	17	[-]	LOADK    	16 -17	; "Special_TurretIgnores"
+	18	[-]	LOADK    	17 -18	; "Special_LaneMinionIgnores"
+	19	[-]	LOADK    	18 -19	; "Special_AzirW"
+	20	[-]	LOADK    	19 -20	; "Special_AzirR"
+	21	[-]	LOADK    	20 -21	; "Special_CorkiBomb"
+	22	[-]	LOADK    	21 -22	; "Special_YorickW"
+	23	[-]	LOADK    	22 -23	; "Special_MonsterIgnores"
+	24	[-]	LOADK    	23 -24	; "Special_EpicMonsterIgnores"
+	25	[-]	LOADK    	24 -25	; "Special_Peaceful"
+	26	[-]	LOADK    	25 -26	; "Special_AscXerath"
+	27	[-]	LOADK    	26 -27	; "Special_PerksWormhole"
+	28	[-]	LOADK    	27 -28	; "Special_UntargetableBySpells"
+	29	[-]	LOADK    	28 -29	; "Special_SyndraSphere"
+	30	[-]	LOADK    	29 -30	; "Special_TeleportTarget"
+	31	[-]	LOADK    	30 -31	; "Special_TeleportInvalid"
+	32	[-]	LOADK    	31 -32	; "Special_TeleportPad"
+	33	[-]	LOADK    	32 -33	; "Special_Trap"
+	34	[-]	LOADK    	33 -34	; "Special_Tunnel"
+	35	[-]	LOADK    	34 -35	; "Special_KPMinion"
+	36	[-]	LOADK    	35 -36	; "Special_Void"
+	37	[-]	LOADK    	36 -37	; "Structure"
+	38	[-]	LOADK    	37 -38	; "Structure_Inhibitor"
+	39	[-]	LOADK    	38 -39	; "Structure_Nexus"
+	40	[-]	LOADK    	39 -40	; "Structure_Turret"
+	41	[-]	LOADK    	40 -41	; "Structure_Turret_Outer"
+	42	[-]	LOADK    	41 -42	; "Structure_Turret_Inner"
+	43	[-]	LOADK    	42 -43	; "Structure_Turret_Inhib"
+	44	[-]	LOADK    	43 -44	; "Structure_Turret_Nexus"
+	45	[-]	LOADK    	44 -45	; "Structure_Turret_Shrine"
+	46	[-]	LOADK    	45 -46	; "Ward"
+	47	[-]	LOADK    	46 -47	; "Monster_Dragon"
+	48	[-]	LOADK    	47 -48	; "Monster_Blue"
+	49	[-]	LOADK    	48 -49	; "Monster_Red"
+	50	[-]	LOADK    	49 -50	; "Monster_Crab"
+	51	[-]	LOADK    	50 -51	; "Monster_Gromp"
+	52	[-]	SETLIST  	0 50 1	; 1
+	53	[-]	LOADK    	1 -52	; "Monster_Krug"
+	54	[-]	LOADK    	2 -53	; "Monster_Raptor"
+	55	[-]	LOADK    	3 -54	; "Monster_Wolf"
+	56	[-]	LOADK    	4 -55	; "Monster_Baron"
+	57	[-]	LOADK    	5 -56	; "Monster_RiftHerald"
+	58	[-]	LOADK    	6 -57	; "Monster_Camp"
+	59	[-]	LOADK    	7 -58	; "Plant"
+	60	[-]	LOADK    	8 -59	; "IsolationNonImpacting"
+	61	[-]	LOADK    	9 -60	; "KingPoro"
+	62	[-]	LOADK    	10 -61	; "Adventure_ChampionEnemy"
+	63	[-]	LOADK    	11 -62	; "SLIME_WalkingNexus"
+	64	[-]	LOADK    	12 -63	; "NEXUSBLITZ_EventCharacter"
+	65	[-]	LOADK    	13 -64	; "Ribeye_Structure_House"
+	66	[-]	SETLIST  	0 13 2	; 2
+	67	[-]	SETGLOBAL	0 -1	; UnitTags
+	68	[-]	NEWTABLE 	0 32 0
+	69	[-]	LOADK    	1 -66	; "Vfx"
+	70	[-]	LOADK    	2 -67	; "Stone"
+	71	[-]	LOADK    	3 -68	; "Dirt"
+	72	[-]	LOADK    	4 -69	; "Grass"
+	73	[-]	LOADK    	5 -70	; "WaterShallow"
+	74	[-]	LOADK    	6 -71	; "Water"
+	75	[-]	LOADK    	7 -72	; "GameplayArea"
+	76	[-]	LOADK    	8 -73	; "AREA_Platform"
+	77	[-]	LOADK    	9 -74	; "AREA_Base"
+	78	[-]	LOADK    	10 -75	; "AREA_Lane_Top"
+	79	[-]	LOADK    	11 -76	; "AREA_Lane_Mid"
+	80	[-]	LOADK    	12 -77	; "AREA_Lane_Bot"
+	81	[-]	LOADK    	13 -78	; "AREA_Jungle_Top"
+	82	[-]	LOADK    	14 -79	; "AREA_Jungle_Bot"
+	83	[-]	LOADK    	15 -80	; "AREA_River_Top"
+	84	[-]	LOADK    	16 -81	; "AREA_River_Bot"
+	85	[-]	LOADK    	17 -82	; "AREA_Jungle_Order_Inner"
+	86	[-]	LOADK    	18 -83	; "AREA_Jungle_Order_Outer"
+	87	[-]	LOADK    	19 -84	; "AREA_Jungle_Chaos_Inner"
+	88	[-]	LOADK    	20 -85	; "AREA_Jungle_Chaos_Outer"
+	89	[-]	LOADK    	21 -86	; "AREA_BasePerimeter_Top"
+	90	[-]	LOADK    	22 -87	; "AREA_BasePerimeter_Bot"
+	91	[-]	LOADK    	23 -88	; "AREA_Alcove_Top"
+	92	[-]	LOADK    	24 -89	; "AREA_Alcove_Bot"
+	93	[-]	LOADK    	25 -90	; "GameplayLane"
+	94	[-]	LOADK    	26 -91	; "LANE_Top_Order"
+	95	[-]	LOADK    	27 -92	; "LANE_Mid_Order"
+	96	[-]	LOADK    	28 -93	; "LANE_Bot_Order"
+	97	[-]	LOADK    	29 -94	; "LANE_Top_Chaos"
+	98	[-]	LOADK    	30 -95	; "LANE_Mid_Chaos"
+	99	[-]	LOADK    	31 -96	; "LANE_Bot_Chaos"
+	100	[-]	LOADK    	32 -97	; "LANE_Neutral_Top_Order"
+	101	[-]	LOADK    	33 -98	; "LANE_Neutral_Mid_Order"
+	102	[-]	LOADK    	34 -99	; "LANE_Neutral_Bot_Order"
+	103	[-]	LOADK    	35 -100	; "LANE_Neutral_Top_Chaos"
+	104	[-]	LOADK    	36 -101	; "LANE_Neutral_Mid_Chaos"
+	105	[-]	LOADK    	37 -102	; "LANE_Neutral_Bot_Chaos"
+	106	[-]	LOADK    	38 -103	; "GameplayPOI"
+	107	[-]	LOADK    	39 -104	; "POI_Near_Turret"
+	108	[-]	LOADK    	40 -105	; "POI_SRX_Chemtech_Zone"
+	109	[-]	LOADK    	41 -106	; "POI_SRX_Cloud_Zone"
+	110	[-]	LOADK    	42 -107	; "POI_Pit_Dragon"
+	111	[-]	LOADK    	43 -108	; "POI_Camp_Red"
+	112	[-]	LOADK    	44 -109	; "POI_Camp_Blue"
+	113	[-]	LOADK    	45 -110	; "POI_Camp_Gromp"
+	114	[-]	LOADK    	46 -111	; "POI_Camp_Krugs"
+	115	[-]	LOADK    	47 -112	; "POI_Camp_Razorbeaks"
+	116	[-]	LOADK    	48 -113	; "POI_Camp_Murkwolves"
+	117	[-]	LOADK    	49 -114	; "POI_Base_Gates"
+	118	[-]	LOADK    	50 -115	; "POI_Pit_Baron"
+	119	[-]	SETLIST  	0 50 1	; 1
+	120	[-]	LOADK    	1 -116	; "GameplayTurretLines"
+	121	[-]	LOADK    	2 -117	; "Line_Order_Nexus"
+	122	[-]	LOADK    	3 -118	; "Line_Order_Base"
+	123	[-]	LOADK    	4 -119	; "Line_Order_Inner"
+	124	[-]	LOADK    	5 -120	; "Line_Order_Outer"
+	125	[-]	LOADK    	6 -121	; "Line_Order_River"
+	126	[-]	LOADK    	7 -122	; "Line_Chaos_Nexus"
+	127	[-]	LOADK    	8 -123	; "Line_Chaos_Base"
+	128	[-]	LOADK    	9 -124	; "Line_Chaos_Inner"
+	129	[-]	LOADK    	10 -125	; "Line_Chaos_Outer"
+	130	[-]	LOADK    	11 -126	; "Line_Chaos_River"
+	131	[-]	SETLIST  	0 11 2	; 2
+	132	[-]	SETGLOBAL	0 -65	; RegionTags
+	133	[-]	NEWTABLE 	0 24 0
+	134	[-]	LOADK    	1 -128	; "PositiveEffect_MoveBlock"
+	135	[-]	LOADK    	2 -129	; "PositiveEffect_Teleport"
+	136	[-]	LOADK    	3 -130	; "PositiveEffect_EmpowerAttack"
+	137	[-]	LOADK    	4 -131	; "PositiveEffect_Boon"
+	138	[-]	LOADK    	5 -132	; "Trait_ChannelSpell"
+	139	[-]	LOADK    	6 -133	; "Trait_Ultimate"
+	140	[-]	LOADK    	7 -134	; "Trait_AttackReset"
+	141	[-]	LOADK    	8 -135	; "Trait_UltimateReactivation"
+	142	[-]	LOADK    	9 -136	; "Trait_SummonerFlash"
+	143	[-]	LOADK    	10 -137	; "Trait_SummonerGhost"
+	144	[-]	LOADK    	11 -138	; "Trait_SummonerSmite"
+	145	[-]	LOADK    	12 -139	; "Trait_SummonerTeleport"
+	146	[-]	LOADK    	13 -140	; "Trait_SummonerSpell"
+	147	[-]	LOADK    	14 -141	; "Trait_Recall"
+	148	[-]	LOADK    	15 -142	; "Trait_Signature"
+	149	[-]	LOADK    	16 -143	; "Trait_Biscuit"
+	150	[-]	LOADK    	17 -144	; "Trait_Transformation"
+	151	[-]	LOADK    	18 -145	; "Trait_SylasSpecialAttackOverride"
+	152	[-]	LOADK    	19 -146	; "Trait_Upgrade"
+	153	[-]	LOADK    	20 -147	; "Trait_Potion"
+	154	[-]	LOADK    	21 -148	; "Trait_MultiTargetAttack"
+	155	[-]	LOADK    	22 -149	; "Trait_Ammo"
+	156	[-]	LOADK    	23 -150	; "Trait_NonPrimaryAttack"
+	157	[-]	LOADK    	24 -151	; "Trait_ImmobilizingCCSpell"
+	158	[-]	LOADK    	25 -152	; "Trait_SwapsIntoImmobilizingCCSpell"
+	159	[-]	LOADK    	26 -153	; "Trait_Trap"
+	160	[-]	LOADK    	27 -154	; "Trait_Stealth_Ward"
+	161	[-]	LOADK    	28 -155	; "Trait_SignatureSpell"
+	162	[-]	LOADK    	29 -156	; "Trait_Hexflash"
+	163	[-]	LOADK    	30 -157	; "SpecialCase_StasisLocked"
+	164	[-]	LOADK    	31 -158	; "SpecialCase_CastWhileTeleporting"
+	165	[-]	LOADK    	32 -159	; "SpecialCase_CastNotTriggerTear"
+	166	[-]	SETLIST  	0 32 1	; 1
+	167	[-]	SETGLOBAL	0 -127	; SpellTags
+	168	[-]	NEWTABLE 	0 0 0
+	169	[-]	SETGLOBAL	0 -160	; UnitTagFlags
+	170	[-]	NEWTABLE 	0 0 0
+	171	[-]	SETGLOBAL	0 -161	; UnitTagIndicies
+	172	[-]	CLOSURE  	0 0	; 000001EC7F861800
+	173	[-]	SETGLOBAL	0 -162	; _BuildTags
+	174	[-]	GETGLOBAL	0 -162	; _BuildTags
+	175	[-]	CALL     	0 1 1
+	176	[-]	CLOSURE  	0 1	; 000001EC7F866CC0
+	177	[-]	SETGLOBAL	0 -163	; ParseUnitTagFlags
+	178	[-]	CLOSURE  	0 2	; 000001EC7F866E10
+	179	[-]	SETGLOBAL	0 -164	; ParseUnitTagIndicies
+	180	[-]	RETURN   	0 1
+constants (164) for 000001EC7F8632C0:
+	1	"UnitTags"
+	2	"Champion"
+	3	"Champion_Clone"
+	4	"Minion"
+	5	"Minion_Lane"
+	6	"Minion_Lane_Melee"
+	7	"Minion_Lane_Ranged"
+	8	"Minion_Lane_Siege"
+	9	"Minion_Lane_Super"
+	10	"Minion_Summon"
+	11	"Minion_Summon_Large"
+	12	"Monster"
+	13	"Monster_Epic"
+	14	"Monster_Large"
+	15	"Monster_Medium"
+	16	"Monster_Buff"
+	17	"Special_TurretIgnores"
+	18	"Special_LaneMinionIgnores"
+	19	"Special_AzirW"
+	20	"Special_AzirR"
+	21	"Special_CorkiBomb"
+	22	"Special_YorickW"
+	23	"Special_MonsterIgnores"
+	24	"Special_EpicMonsterIgnores"
+	25	"Special_Peaceful"
+	26	"Special_AscXerath"
+	27	"Special_PerksWormhole"
+	28	"Special_UntargetableBySpells"
+	29	"Special_SyndraSphere"
+	30	"Special_TeleportTarget"
+	31	"Special_TeleportInvalid"
+	32	"Special_TeleportPad"
+	33	"Special_Trap"
+	34	"Special_Tunnel"
+	35	"Special_KPMinion"
+	36	"Special_Void"
+	37	"Structure"
+	38	"Structure_Inhibitor"
+	39	"Structure_Nexus"
+	40	"Structure_Turret"
+	41	"Structure_Turret_Outer"
+	42	"Structure_Turret_Inner"
+	43	"Structure_Turret_Inhib"
+	44	"Structure_Turret_Nexus"
+	45	"Structure_Turret_Shrine"
+	46	"Ward"
+	47	"Monster_Dragon"
+	48	"Monster_Blue"
+	49	"Monster_Red"
+	50	"Monster_Crab"
+	51	"Monster_Gromp"
+	52	"Monster_Krug"
+	53	"Monster_Raptor"
+	54	"Monster_Wolf"
+	55	"Monster_Baron"
+	56	"Monster_RiftHerald"
+	57	"Monster_Camp"
+	58	"Plant"
+	59	"IsolationNonImpacting"
+	60	"KingPoro"
+	61	"Adventure_ChampionEnemy"
+	62	"SLIME_WalkingNexus"
+	63	"NEXUSBLITZ_EventCharacter"
+	64	"Ribeye_Structure_House"
+	65	"RegionTags"
+	66	"Vfx"
+	67	"Stone"
+	68	"Dirt"
+	69	"Grass"
+	70	"WaterShallow"
+	71	"Water"
+	72	"GameplayArea"
+	73	"AREA_Platform"
+	74	"AREA_Base"
+	75	"AREA_Lane_Top"
+	76	"AREA_Lane_Mid"
+	77	"AREA_Lane_Bot"
+	78	"AREA_Jungle_Top"
+	79	"AREA_Jungle_Bot"
+	80	"AREA_River_Top"
+	81	"AREA_River_Bot"
+	82	"AREA_Jungle_Order_Inner"
+	83	"AREA_Jungle_Order_Outer"
+	84	"AREA_Jungle_Chaos_Inner"
+	85	"AREA_Jungle_Chaos_Outer"
+	86	"AREA_BasePerimeter_Top"
+	87	"AREA_BasePerimeter_Bot"
+	88	"AREA_Alcove_Top"
+	89	"AREA_Alcove_Bot"
+	90	"GameplayLane"
+	91	"LANE_Top_Order"
+	92	"LANE_Mid_Order"
+	93	"LANE_Bot_Order"
+	94	"LANE_Top_Chaos"
+	95	"LANE_Mid_Chaos"
+	96	"LANE_Bot_Chaos"
+	97	"LANE_Neutral_Top_Order"
+	98	"LANE_Neutral_Mid_Order"
+	99	"LANE_Neutral_Bot_Order"
+	100	"LANE_Neutral_Top_Chaos"
+	101	"LANE_Neutral_Mid_Chaos"
+	102	"LANE_Neutral_Bot_Chaos"
+	103	"GameplayPOI"
+	104	"POI_Near_Turret"
+	105	"POI_SRX_Chemtech_Zone"
+	106	"POI_SRX_Cloud_Zone"
+	107	"POI_Pit_Dragon"
+	108	"POI_Camp_Red"
+	109	"POI_Camp_Blue"
+	110	"POI_Camp_Gromp"
+	111	"POI_Camp_Krugs"
+	112	"POI_Camp_Razorbeaks"
+	113	"POI_Camp_Murkwolves"
+	114	"POI_Base_Gates"
+	115	"POI_Pit_Baron"
+	116	"GameplayTurretLines"
+	117	"Line_Order_Nexus"
+	118	"Line_Order_Base"
+	119	"Line_Order_Inner"
+	120	"Line_Order_Outer"
+	121	"Line_Order_River"
+	122	"Line_Chaos_Nexus"
+	123	"Line_Chaos_Base"
+	124	"Line_Chaos_Inner"
+	125	"Line_Chaos_Outer"
+	126	"Line_Chaos_River"
+	127	"SpellTags"
+	128	"PositiveEffect_MoveBlock"
+	129	"PositiveEffect_Teleport"
+	130	"PositiveEffect_EmpowerAttack"
+	131	"PositiveEffect_Boon"
+	132	"Trait_ChannelSpell"
+	133	"Trait_Ultimate"
+	134	"Trait_AttackReset"
+	135	"Trait_UltimateReactivation"
+	136	"Trait_SummonerFlash"
+	137	"Trait_SummonerGhost"
+	138	"Trait_SummonerSmite"
+	139	"Trait_SummonerTeleport"
+	140	"Trait_SummonerSpell"
+	141	"Trait_Recall"
+	142	"Trait_Signature"
+	143	"Trait_Biscuit"
+	144	"Trait_Transformation"
+	145	"Trait_SylasSpecialAttackOverride"
+	146	"Trait_Upgrade"
+	147	"Trait_Potion"
+	148	"Trait_MultiTargetAttack"
+	149	"Trait_Ammo"
+	150	"Trait_NonPrimaryAttack"
+	151	"Trait_ImmobilizingCCSpell"
+	152	"Trait_SwapsIntoImmobilizingCCSpell"
+	153	"Trait_Trap"
+	154	"Trait_Stealth_Ward"
+	155	"Trait_SignatureSpell"
+	156	"Trait_Hexflash"
+	157	"SpecialCase_StasisLocked"
+	158	"SpecialCase_CastWhileTeleporting"
+	159	"SpecialCase_CastNotTriggerTear"
+	160	"UnitTagFlags"
+	161	"UnitTagIndicies"
+	162	"_BuildTags"
+	163	"ParseUnitTagFlags"
+	164	"ParseUnitTagIndicies"
+locals (0) for 000001EC7F8632C0:
+upvalues (0) for 000001EC7F8632C0:
+
+function <?:198,221> (38 instructions, 152 bytes at 000001EC7F861800)
+0 params, 9 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; UnitTagFlags
+	2	[-]	SETTABLE 	0 -2 -3	; "None" 0
+	3	[-]	LOADK    	0 -4	; 1
+	4	[-]	GETGLOBAL	1 -5	; ipairs
+	5	[-]	GETGLOBAL	2 -6	; UnitTags
+	6	[-]	CALL     	1 2 4
+	7	[-]	JMP      	6	; to 14
+	8	[-]	GETGLOBAL	6 -1	; UnitTagFlags
+	9	[-]	SETTABLE 	6 5 0
+	10	[-]	GETGLOBAL	6 -7	; UnitTagIndicies
+	11	[-]	SUB      	7 4 -4	; - 1
+	12	[-]	SETTABLE 	6 5 7
+	13	[-]	MUL      	0 0 -8	; - 2
+	14	[-]	TFORLOOP 	1 2
+	15	[-]	JMP      	-8	; to 8
+	16	[-]	GETGLOBAL	1 -5	; ipairs
+	17	[-]	GETGLOBAL	2 -9	; RegionTags
+	18	[-]	CALL     	1 2 4
+	19	[-]	JMP      	5	; to 25
+	20	[-]	GETGLOBAL	6 -10	; _G
+	21	[-]	GETGLOBAL	7 -11	; FNVHash
+	22	[-]	MOVE     	8 5
+	23	[-]	CALL     	7 2 2
+	24	[-]	SETTABLE 	6 5 7
+	25	[-]	TFORLOOP 	1 2
+	26	[-]	JMP      	-7	; to 20
+	27	[-]	GETGLOBAL	1 -5	; ipairs
+	28	[-]	GETGLOBAL	2 -12	; SpellTags
+	29	[-]	CALL     	1 2 4
+	30	[-]	JMP      	5	; to 36
+	31	[-]	GETGLOBAL	6 -10	; _G
+	32	[-]	GETGLOBAL	7 -11	; FNVHash
+	33	[-]	MOVE     	8 5
+	34	[-]	CALL     	7 2 2
+	35	[-]	SETTABLE 	6 5 7
+	36	[-]	TFORLOOP 	1 2
+	37	[-]	JMP      	-7	; to 31
+	38	[-]	RETURN   	0 1
+constants (12) for 000001EC7F861800:
+	1	"UnitTagFlags"
+	2	"None"
+	3	0
+	4	1
+	5	"ipairs"
+	6	"UnitTags"
+	7	"UnitTagIndicies"
+	8	2
+	9	"RegionTags"
+	10	"_G"
+	11	"FNVHash"
+	12	"SpellTags"
+locals (0) for 000001EC7F861800:
+upvalues (0) for 000001EC7F861800:
+
+function <?:225,233> (20 instructions, 80 bytes at 000001EC7F866CC0)
+1 param, 8 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	NEWTABLE 	1 0 0
+	2	[-]	GETGLOBAL	2 -1	; string
+	3	[-]	GETTABLE 	2 2 -2	; "gmatch"
+	4	[-]	MOVE     	3 0
+	5	[-]	LOADK    	4 -3	; "[^| ]+"
+	6	[-]	CALL     	2 3 4
+	7	[-]	JMP      	9	; to 17
+	8	[-]	GETGLOBAL	6 -4	; UnitTagFlags
+	9	[-]	GETTABLE 	6 6 5
+	10	[-]	EQ       	1 6 -5	; - nil
+	11	[-]	JMP      	5	; to 17
+	12	[-]	LEN      	6 1
+	13	[-]	ADD      	6 6 -6	; - 1
+	14	[-]	GETGLOBAL	7 -4	; UnitTagFlags
+	15	[-]	GETTABLE 	7 7 5
+	16	[-]	SETTABLE 	1 6 7
+	17	[-]	TFORLOOP 	2 1
+	18	[-]	JMP      	-11	; to 8
+	19	[-]	RETURN   	1 2
+	20	[-]	RETURN   	0 1
+constants (6) for 000001EC7F866CC0:
+	1	"string"
+	2	"gmatch"
+	3	"[^| ]+"
+	4	"UnitTagFlags"
+	5	nil
+	6	1
+locals (0) for 000001EC7F866CC0:
+upvalues (0) for 000001EC7F866CC0:
+
+function <?:235,243> (20 instructions, 80 bytes at 000001EC7F866E10)
+1 param, 8 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	NEWTABLE 	1 0 0
+	2	[-]	GETGLOBAL	2 -1	; string
+	3	[-]	GETTABLE 	2 2 -2	; "gmatch"
+	4	[-]	MOVE     	3 0
+	5	[-]	LOADK    	4 -3	; "[^| ]+"
+	6	[-]	CALL     	2 3 4
+	7	[-]	JMP      	9	; to 17
+	8	[-]	GETGLOBAL	6 -4	; UnitTagIndicies
+	9	[-]	GETTABLE 	6 6 5
+	10	[-]	EQ       	1 6 -5	; - nil
+	11	[-]	JMP      	5	; to 17
+	12	[-]	LEN      	6 1
+	13	[-]	ADD      	6 6 -6	; - 1
+	14	[-]	GETGLOBAL	7 -4	; UnitTagIndicies
+	15	[-]	GETTABLE 	7 7 5
+	16	[-]	SETTABLE 	1 6 7
+	17	[-]	TFORLOOP 	2 1
+	18	[-]	JMP      	-11	; to 8
+	19	[-]	RETURN   	1 2
+	20	[-]	RETURN   	0 1
+constants (6) for 000001EC7F866E10:
+	1	"string"
+	2	"gmatch"
+	3	"[^| ]+"
+	4	"UnitTagIndicies"
+	5	nil
+	6	1
+locals (0) for 000001EC7F866E10:
+upvalues (0) for 000001EC7F866E10:

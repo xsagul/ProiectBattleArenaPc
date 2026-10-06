@@ -1,0 +1,9 @@
+{{#ember-native-scrollable content-size=_contentSize scroll-left=_scrollLeft scroll-top=_scrollTop scrollChange=(action this "scrollChange") clientSizeChange=(action this "clientSizeChange")}}
+  <div>
+    {{#each _cells as |cell|}}
+      <div style={{sanitize cell.style}}>
+        {{yield cell.item cell.index}}
+      </>
+    {{/each}}
+  </>
+{{/ember-native-scrollable}}

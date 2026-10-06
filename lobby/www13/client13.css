@@ -1,0 +1,12 @@
+/* The page around the client: the 1280 x 720 window, centred. Everything inside #rcp-fe-viewport-root is laid out
+   by the client's own style sheets; rules here are only for what the client's host does outside them (marked). */
+html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+#rcp-fe-viewport-root { position: absolute; left: 50%; top: 50%; margin: -360px 0 0 -640px; background: #010a13; }
+/* the host hides a screen root that is not shown (main / sidebar have no .hidden rule of their own in the CSS) */
+#rcp-fe-viewport-root .screen-root.hidden { display: none; }
+/* the ready check stands in the middle of the window over a dimmed client [the host's placement is not in the files] */
+[data-screen-name="rcp-fe-lol-ready-check"]:not(:empty) { position: absolute; inset: 0; display: flex; align-items: center;
+  justify-content: center; background: rgba(1, 10, 19, 0.6); pointer-events: auto; }
+[data-screen-name="rcp-fe-lol-champ-select"].active { position: absolute; left: 0; top: 0; width: 1278px; height: 718px; pointer-events: auto; }
+.cs-start-error { position: absolute; left: 340px; right: 340px; bottom: 120px; padding: 14px; background: #1e2328;
+  color: #f0e6d2; border: 1px solid #c8aa6e; font-family: var(--font-body); text-align: center; }

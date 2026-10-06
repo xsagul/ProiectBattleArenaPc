@@ -1,0 +1,32 @@
+{{#if inParty}}
+  {{#lower-section currentPlayer=currentPlayer partiesV2Enabled=partiesV2Enabled}}
+    <div class="party-members-container">
+      {{#if currentPlayer}}
+        {{v2-banner selected=selected member=currentPlayer puuid=currentPlayer.puuid localPlayerChallengesData=localPlayerChallengesData isLocalPlayer=true summonerId=currentPlayer.summonerId chatConversationId=chatConversationId animationsEnabled=animationsEnabled}}
+      {{/if}}
+      {{#each otherPartyMembers as |member|}}
+        {{v2-banner selected=selected localPlayerChallengesData=localPlayerChallengesData member=member puuid=member.puuid summonerId=member.summonerId chatConversationId=chatConversationId allowPresenceUpdates=true animationsEnabled=animationsEnabled}}
+      {{/each}}
+      {{#each playerPlaceholders as |placeholder|}}
+        {{v2-banner-placeholder placeholder=placeholder isInQueue=isInQueue partyInvitesAllowed=partyInvitesAllowed showInviteModal="showInviteModal"}}
+      {{/each}}
+    </>
+  {{/lower-section}}
+  <div class="footer-container">
+    {{v2-footer showingState=showingState selected=selected currentPlayerCanInvite=currentPlayerCanInvite openOverlay=(action this "openOverlay") closeOverlay=(action this "closeOverlay") inParty=inParty}}
+  </>
+  <div class="navbar-blur">
+  </>
+  <div class="lobby-intro-animation-container">
+    <lol-uikit-lottie id="lottie-intro-anim" src="/fe/lol-parties/lottie/parties-v2/intro-party.json" autoplay="false">
+    </>
+    <lol-uikit-video id="player-banner-gem-intro" fade-in="0" fade-out="0" src="/fe/lol-static-assets/videos/lobby-crystal-intro-player.webm">
+    </>
+  </>
+  {{#if positionSelectorOverlayPrimaryVisible}}
+    {{v2-position-selector-modal animationsEnabled=animationsEnabled childrenPositionStyle=positionSelectorOverlayPrimaryPosition selectingOrdinal="PRIMARY" scarcePositions=scarcePositions primaryPosition=primaryPosition secondaryPosition=secondaryPosition currentPartyIsFull=currentPartyIsFull openOverlay=(action this "openOverlay") closeOverlay=(action this "closeOverlay") setPositionPreferences=(action this "setPositionPreferences"}}
+  {{/if}}
+  {{#if positionSelectorOverlaySecondaryVisible}}
+    {{v2-position-selector-modal animationsEnabled=animationsEnabled childrenPositionStyle=positionSelectorOverlaySecondaryPosition selectingOrdinal="SECONDARY" scarcePositions=scarcePositions primaryPosition=primaryPosition secondaryPosition=secondaryPosition currentPartyIsFull=currentPartyIsFull openOverlay=(action this "openOverlay") closeOverlay=(action this "closeOverlay") setPositionPreferences=(action this "setPositionPreferences"}}
+  {{/if}}
+{{/if}}

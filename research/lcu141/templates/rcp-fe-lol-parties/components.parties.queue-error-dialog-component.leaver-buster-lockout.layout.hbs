@@ -1,0 +1,35 @@
+<lol-uikit-content-block type="dialog-large">
+  <div class="leaver-buster-lockout-modal">
+    <h3>
+      {{tra.parties_queue_error_leaver_buster_lockout_header}}
+    </>
+    <hr class="heading-spacer">
+    </>
+    <div class="lockout-error-body">
+      <p>
+        {{sanitize tra.parties_queue_error_leaver_buster_lockout_general_body}}
+      </>
+    </>
+    <br>
+    </>
+    <div class="lockout-queue-lockout-timer">
+      <p>
+        <h5 class="lockout-timer-label subhead">
+          {{tra.parties_queue_error_leaver_buster_lockout_timer}}
+        </>
+      </>
+      <div class="lockout-player-table">
+        {{#each punishedPlayers as |punishedPlayer|}}
+          <div class="lockout-player-row">
+            <div class="lockout-player-name">
+              {{punishedPlayer.displayName}}
+            </>
+            <div class="lockout-player-punishment-timer">
+              {{punishedPlayer.penaltyTimeRemaining}}
+            </>
+          </>
+        {{/each}}
+      </>
+    </>
+  </>
+</>

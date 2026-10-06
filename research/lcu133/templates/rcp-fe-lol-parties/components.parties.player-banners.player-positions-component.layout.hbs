@@ -1,0 +1,22 @@
+<lol-parties-player-position class="secondary" animations={{animationsEnabled}} current-player={{isCurrentPlayer}} disabled={{isSecondaryDisabled}} position={{secondaryPosition}}>
+  {{#uikit-tooltip tooltipConfig=secondaryTooltipConfig}}
+    <lol-uikit-content-block class="position-tooltip" type="tooltip-system">
+      {{tra.parties_secondary_position}}
+      <br>
+      </>
+      <h5>
+        {{secondaryPositionText}}
+      </>
+    </>
+  {{/uikit-tooltip}}
+</>
+<lol-parties-player-position class="primary" animations={{animationsEnabled}} current-player={{isCurrentPlayer}} disabled={{isPrimaryDisabled}} position={{primaryPosition}}>
+  {{#uikit-tooltip tooltipConfig=primaryTooltipConfig}}
+    <lol-uikit-content-block class="position-tooltip" type="tooltip-system">
+      {{primaryPositionLabelText}}
+      <h5>
+        {{primaryPositionText}}
+      </>
+    </>
+  {{/uikit-tooltip}}
+</>

@@ -1,0 +1,41 @@
+{{#if nextMilestone}}
+  <div class="progression-milestone-container">
+    {{battlepass-milestone milestone=previousMilestone click=(action this "claim" previousMilestone) isSmall=true displayIndex=0 media=media}}
+    {{battlepass-milestone milestone=nextMilestone click=(action this "navigateToTft") isSmall=true displayIndex=1 media=media}}
+    <div class="reward-container" {{action this "navigateToTft"}}>
+      {{#uikit-tooltip tooltipPosition="top" type="small"}}
+        <lol-uikit-content-block type="tooltip-small">
+          <p>
+            {{tra.tft_progression_description}}
+          </>
+        </>
+      {{/uikit-tooltip}}
+      <div class="reward-label">
+        {{tra.tft_progression_next}}
+      </>
+      <div class="reward-title">
+        {{nextMilestone.title}}
+      </>
+      <div class="progress-container">
+        <div class="progress-current">
+          {{nextMilestone.pointsEarnedForMilestone}}
+        </>
+        <div class="progress-divider">
+          /
+        </>
+        <div class="progress-total">
+          {{nextMilestone.pointsNeededForMilestone}}
+        </>
+      </>
+    </>
+  </>
+{{else}}
+  <div class="progression-complete" {{action this "navigateToTft"}}>
+    <div class="progression-complete-title">
+      {{tra.tft_progression_complete_title}}
+    </>
+    <div class="progression-complete-body">
+      {{tra.tft_progression_complete_body}}
+    </>
+  </>
+{{/if}}

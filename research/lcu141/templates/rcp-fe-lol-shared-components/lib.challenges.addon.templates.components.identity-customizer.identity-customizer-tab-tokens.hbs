@@ -1,0 +1,70 @@
+<div class="challenges-identity-customizer-subheader">
+  <div class="challenges-identity-customizer-mini-tokens-container">
+    {{#each previewTokens as |token slotIndex|}}
+      <div class="mini-token" onclick="" {{action this "selectTokenSlot" slotIndex}}>
+        {{challenge-banner-token challengeData=token isLocalPlayer=true}}
+      </>
+    {{/each}}
+  </>
+  <div class="filter-divider">
+  </>
+  <div class="token-filter-header">
+    <div class="search-filter-container">
+      <lol-uikit-flat-input>
+        {{input type="search" maxlength="50" class="search-filter-input" value=searchFilter placeholder=tra.challenges_search_placeholder}}
+      </>
+    </>
+    <lol-uikit-framed-dropdown class="token-grouping-options">
+      <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{isSortedByRarityAsc}} onclick={{action this "sortDropdownSelect" "rarity_asc"}}>
+        {{tra.challenges_filter_sort_option_rarity_asc}}
+      </>
+      <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{isSortedByRarityDesc}} onclick={{action this "sortDropdownSelect" "rarity_desc"}}>
+        {{tra.challenges_filter_sort_option_rarity_desc}}
+      </>
+      <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{isSortedByTierAsc}} onclick={{action this "sortDropdownSelect" "tier_asc"}}>
+        {{tra.challenges_filter_sort_option_level_asc}}
+      </>
+      <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{isSortedByTierDesc}} onclick={{action this "sortDropdownSelect" "tier_desc"}}>
+        {{tra.challenges_filter_sort_option_level_desc}}
+      </>
+      <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{isSortedByAcquiredAsc}} onclick={{action this "sortDropdownSelect" "acquired_asc"}}>
+        {{tra.challenges_filter_sort_option_acquired_asc}}
+      </>
+      <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{isSortedByAcquiredDesc}} onclick={{action this "sortDropdownSelect" "acquired_desc"}}>
+        {{tra.challenges_filter_sort_option_acquired_desc}}
+      </>
+    </>
+    <lol-uikit-framed-dropdown class="token-grouping-options">
+      <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{isGroupByAll}} onclick={{action this "filterDropdownSelect" "ALL"}}>
+        {{tra.challenge_category_ALL}}
+      </>
+      {{#each challengeFilterOptions as |option|}}
+        <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{isGroupByAll}} onclick={{action this "filterDropdownSelect" option.sortKey}}>
+          {{option.locKey}}
+        </>
+      {{/each}}
+      <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{isGroupByAll}} onclick={{action this "filterDropdownSelect" "LEGACY"}}>
+        {{tra.challenge_category_LEGACY}}
+      </>
+    </>
+  </>
+</>
+<div class="challenges-identity-customizer-grid">
+  {{#if emptySearch}}
+    {{identity-customizer-empty-search clearSearch=(action this "clearSearch"}}
+  {{else}}
+    <lol-uikit-scrollable overflow-masks="enabled">
+      {{#each groupedTokens as |token|}}
+        {{#if token.isHeader}}
+          <div class="identity-customizer-token-header">
+            {{token.groupName}}
+          </>
+        {{else}}
+          <div class="challenge-identity-customizer-token-container" id="token-id-{{token.id}}">
+            {{identity-customizer-token challengeData=token selectedTokenId=selectedTokenId selectedTokenIds=selectedTokenIds isTooltipEnabled=true isSelectable=true lastTokensVisitTime=lastTokensVisitTime onClick=(action this "selectToken"}}
+          </>
+        {{/if}}
+      {{/each}}
+    </>
+  {{/if}}
+</>

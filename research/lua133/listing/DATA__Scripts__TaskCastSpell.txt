@@ -1,0 +1,82 @@
+
+main <?:0,0> (11 instructions, 44 bytes at 000001BF4D0432C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 5 constants, 5 functions
+	1	[-]	CLOSURE  	0 0	; 000001BF4D0433A0
+	2	[-]	SETGLOBAL	0 -1	; UpdatePriority
+	3	[-]	CLOSURE  	0 1	; 000001BF4D0434B0
+	4	[-]	SETGLOBAL	0 -2	; BeginTask
+	5	[-]	CLOSURE  	0 2	; 000001BF4D043530
+	6	[-]	SETGLOBAL	0 -3	; Tick
+	7	[-]	CLOSURE  	0 3	; 000001BF4D0435B0
+	8	[-]	SETGLOBAL	0 -4	; OnLevelUp
+	9	[-]	CLOSURE  	0 4	; 000001BF4D043650
+	10	[-]	SETGLOBAL	0 -5	; OnTargetLost
+	11	[-]	RETURN   	0 1
+constants (5) for 000001BF4D0432C0:
+	1	"UpdatePriority"
+	2	"BeginTask"
+	3	"Tick"
+	4	"OnLevelUp"
+	5	"OnTargetLost"
+locals (0) for 000001BF4D0432C0:
+upvalues (0) for 000001BF4D0432C0:
+
+function <?:3,16> (18 instructions, 72 bytes at 000001BF4D0433A0)
+1 param, 4 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	LOADK    	1 -1	; 0.3
+	2	[-]	GETGLOBAL	2 -2	; GetMP
+	3	[-]	CALL     	2 1 2
+	4	[-]	GETGLOBAL	3 -3	; GetTarget
+	5	[-]	CALL     	3 1 2
+	6	[-]	TEST     	3 0 0
+	7	[-]	JMP      	9	; to 17
+	8	[-]	GETGLOBAL	3 -5	; GetMaxMP
+	9	[-]	CALL     	3 1 2
+	10	[-]	DIV      	3 2 3
+	11	[-]	MUL      	3 3 -6	; - 0.8
+	12	[-]	MUL      	3 3 -7	; - 2
+	13	[-]	MUL      	3 3 1
+	14	[-]	SETTABLE 	0 -4 3	; "Priority" -
+	15	[-]	LOADBOOL 	3 1 0
+	16	[-]	RETURN   	3 2
+	17	[-]	SETTABLE 	0 -4 -8	; "Priority" 0
+	18	[-]	RETURN   	0 1
+constants (8) for 000001BF4D0433A0:
+	1	0.3
+	2	"GetMP"
+	3	"GetTarget"
+	4	"Priority"
+	5	"GetMaxMP"
+	6	0.8
+	7	2
+	8	0
+locals (0) for 000001BF4D0433A0:
+upvalues (0) for 000001BF4D0433A0:
+
+function <?:18,20> (1 instruction, 4 bytes at 000001BF4D0434B0)
+1 param, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000001BF4D0434B0:
+locals (0) for 000001BF4D0434B0:
+upvalues (0) for 000001BF4D0434B0:
+
+function <?:22,24> (1 instruction, 4 bytes at 000001BF4D043530)
+1 param, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000001BF4D043530:
+locals (0) for 000001BF4D043530:
+upvalues (0) for 000001BF4D043530:
+
+function <?:26,28> (1 instruction, 4 bytes at 000001BF4D0435B0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000001BF4D0435B0:
+locals (0) for 000001BF4D0435B0:
+upvalues (0) for 000001BF4D0435B0:
+
+function <?:30,32> (1 instruction, 4 bytes at 000001BF4D043650)
+1 param, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000001BF4D043650:
+locals (0) for 000001BF4D043650:
+upvalues (0) for 000001BF4D043650:

@@ -1,0 +1,44 @@
+<div class="parties-point-eligibility-content">
+  <ul class="parties-point-eligibility-list">
+    <li class="parties-point-eligibility-experience {{xpDisabledClass}}">
+    </>
+    <li class="parties-point-eligibility-mastery {{championMasteryDisabledClass}}">
+    </>
+    {{#if platformEternalsEnabled}}
+      <li class="parties-point-eligibility-eternals {{eternalsDisabledClass}}">
+      </>
+    {{/if}}
+  </>
+</>
+{{#uikit-tooltip tooltipConfig=tooltipConfig}}
+  <lol-uikit-content-block padding="medium" class="parties-point-eligibility-tooltip-content">
+    <h6 class="parties-point-eligibility-tooltip-content-title">
+      {{tra.parties_point_eligibility_tooltip_title}}
+    </>
+    <ul class="parties-point-eligibility-tooltip-content-list">
+      <li class="parties-point-eligibility-tooltip-content-experience {{xpDisabledClass}}">
+        <div class="parties-point-eligibility-tooltip-content-experience-icon">
+        </>
+        <div class="parties-point-eligibility-tooltip-content-experience-description">
+          {{tra.parties_point_eligibility_tooltip_experience}}
+        </>
+      </>
+      <li class="parties-point-eligibility-tooltip-content-mastery {{championMasteryDisabledClass}}">
+        <div class="parties-point-eligibility-tooltip-content-mastery-icon">
+        </>
+        <div class="parties-point-eligibility-tooltip-content-mastery-description">
+          {{tra.parties_point_eligibility_tooltip_masteries}}
+        </>
+      </>
+      {{#if platformEternalsEnabled}}
+        <li class="parties-point-eligibility-tooltip-content-eternals {{eternalsDisabledClass}}">
+          <div class="parties-point-eligibility-tooltip-content-eternals-icon">
+          </>
+          <div class="parties-point-eligibility-tooltip-content-eternals-description">
+            {{tra.parties_point_eligibility_tooltip_eternals}}
+          </>
+        </>
+      {{/if}}
+    </>
+  </>
+{{/uikit-tooltip}}

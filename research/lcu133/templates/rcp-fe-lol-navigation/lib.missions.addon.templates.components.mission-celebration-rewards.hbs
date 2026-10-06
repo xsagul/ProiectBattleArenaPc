@@ -1,0 +1,44 @@
+<uikit-state-machine class="mission-celebration-rewards-animation" state="intro-rewards" move-to-hide-rewards="{{moveToHideState}}" is-last-reward="{{isLast}}">
+  <uikit-states>
+    <uikit-state name="intro-rewards">
+      <uikit-transition next-state="show-rewards">
+        <uikit-condition-any>
+          <uikit-condition-delay duration="500">
+          </>
+        </>
+      </>
+    </>
+    <uikit-state name="show-rewards">
+      <uikit-transition next-state="hide-rewards">
+        <uikit-condition-all>
+          <uikit-condition-parameter name="move-to-hide-rewards" value="true">
+          </>
+          <uikit-condition-parameter name="is-last-reward" value="false">
+          </>
+        </>
+      </>
+    </>
+    <uikit-state name="hide-rewards">
+      <uikit-behavior-media selector=".rewards-small-dissipate" playing="">
+      </>
+      <uikit-behavior-media selector=".rewards-medium-dissipate" playing="">
+      </>
+      <uikit-behavior-media selector=".rewards-large-dissipate" playing="">
+      </>
+    </>
+  </>
+  <div class="rewards-wrapper {{if isRewardHideState "hide-rewards" "show-rewards"}} {{if largeAreaAnimationsEnabled "high" "low"}}" visible-state="intro-rewards,show-rewards,hide-rewards">
+    {{#each rewards as |reward index|}}
+      {{mission-celebration-reward reward=reward state=missionCelebrationState isMultiReward=isMultiReward isLargeReward=isLargeVignette index=index length=rewards.length}}
+    {{/each}}
+  </>
+  <user-experience-perf-switch class="rewards-dissipate {{if isLargeVignette "large"}}
+                                       {{if isSmallReward "rewards-small-dissipate"}}
+                                       {{if isMediumReward "rewards-medium-dissipate"}}
+                                       {{if isLargeReward "rewards-large-dissipate"}}" visible-state="show-rewards,hide-rewards" default-visibility="hidden">
+    <uikit-video src="{{dissipateAssetSrc}}" perf-flags="largeAreaAnimationsEnabled" cache-name="rcp-fe-lol-missions">
+    </>
+    <div class="hidden">
+    </>
+  </>
+</>

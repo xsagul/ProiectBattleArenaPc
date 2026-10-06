@@ -1,0 +1,140 @@
+
+main <?:0,0> (20 instructions, 80 bytes at 00000210D64B1B60)
+0+ params, 3 slots, 0 upvalues, 0 locals, 11 constants, 4 functions
+	1	[-]	NEWTABLE 	0 0 3
+	2	[-]	SETTABLE 	0 -1 -2	; "x" 0
+	3	[-]	SETTABLE 	0 -3 -2	; "y" 0
+	4	[-]	SETTABLE 	0 -4 -2	; "z" 0
+	5	[-]	LOADK    	1 -2	; 0
+	6	[-]	LOADK    	2 -2	; 0
+	7	[-]	SETGLOBAL	2 -5	; AI_MOVE
+	8	[-]	LOADK    	2 -7	; 1
+	9	[-]	SETGLOBAL	2 -6	; AI_STOP
+	10	[-]	CLOSURE  	2 0	; 00000210D64B3760
+	11	[-]	SETGLOBAL	2 -8	; UpdatePriority
+	12	[-]	CLOSURE  	2 1	; 00000210D64B37E0
+	13	[-]	SETGLOBAL	2 -9	; BeginTask
+	14	[-]	CLOSURE  	2 2	; 00000210D64B3860
+	15	[-]	MOVE     	0 1
+	16	[-]	MOVE     	0 0
+	17	[-]	SETGLOBAL	2 -10	; Tick
+	18	[-]	CLOSURE  	2 3	; 00000210D64B1C10
+	19	[-]	SETGLOBAL	2 -11	; OnTargetLost
+	20	[-]	RETURN   	0 1
+constants (11) for 00000210D64B1B60:
+	1	"x"
+	2	0
+	3	"y"
+	4	"z"
+	5	"AI_MOVE"
+	6	"AI_STOP"
+	7	1
+	8	"UpdatePriority"
+	9	"BeginTask"
+	10	"Tick"
+	11	"OnTargetLost"
+locals (0) for 00000210D64B1B60:
+upvalues (0) for 00000210D64B1B60:
+
+function <?:7,9> (2 instructions, 8 bytes at 00000210D64B3760)
+1 param, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	SETTABLE 	0 -1 -2	; "Priority" 0.001
+	2	[-]	RETURN   	0 1
+constants (2) for 00000210D64B3760:
+	1	"Priority"
+	2	0.001
+locals (0) for 00000210D64B3760:
+upvalues (0) for 00000210D64B3760:
+
+function <?:11,14> (4 instructions, 16 bytes at 00000210D64B37E0)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; TurnOffAutoAttack
+	2	[-]	GETGLOBAL	2 -2	; STOPREASON_TARGET_LOST
+	3	[-]	CALL     	1 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 00000210D64B37E0:
+	1	"TurnOffAutoAttack"
+	2	"STOPREASON_TARGET_LOST"
+locals (0) for 00000210D64B37E0:
+upvalues (0) for 00000210D64B37E0:
+
+function <?:16,29> (53 instructions, 212 bytes at 00000210D64B3860)
+1 param, 5 slots, 2 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	GETUPVAL 	1 0	; -
+	2	[-]	GETGLOBAL	2 -1	; GetTime
+	3	[-]	CALL     	2 1 2
+	4	[-]	LT       	0 1 2
+	5	[-]	JMP      	14	; to 20
+	6	[-]	GETGLOBAL	1 -1	; GetTime
+	7	[-]	CALL     	1 1 2
+	8	[-]	GETGLOBAL	2 -2	; GetRandomIntInRangeLua
+	9	[-]	LOADK    	3 -3	; 2
+	10	[-]	LOADK    	4 -4	; 4
+	11	[-]	CALL     	2 3 2
+	12	[-]	ADD      	1 1 2
+	13	[-]	SETUPVAL 	1 0	; -
+	14	[-]	GETGLOBAL	1 -5	; MakeWanderPoint
+	15	[-]	GETGLOBAL	2 -6	; GetPos
+	16	[-]	CALL     	2 1 2
+	17	[-]	LOADK    	3 -7	; 250
+	18	[-]	CALL     	1 3 2
+	19	[-]	SETUPVAL 	1 1	; -
+	20	[-]	GETGLOBAL	1 -8	; GetState
+	21	[-]	CALL     	1 1 2
+	22	[-]	GETGLOBAL	2 -9	; AI_MOVE
+	23	[-]	EQ       	0 1 2
+	24	[-]	JMP      	12	; to 37
+	25	[-]	GETGLOBAL	1 -10	; GetDist
+	26	[-]	GETUPVAL 	2 1	; -
+	27	[-]	GETGLOBAL	3 -6	; GetPos
+	28	[-]	CALL     	3 1 0
+	29	[-]	CALL     	1 0 2
+	30	[-]	LT       	0 1 -11	; - 80
+	31	[-]	JMP      	5	; to 37
+	32	[-]	GETGLOBAL	1 -12	; StopMove
+	33	[-]	CALL     	1 1 1
+	34	[-]	GETGLOBAL	1 -13	; SetState
+	35	[-]	GETGLOBAL	2 -14	; AI_STOP
+	36	[-]	CALL     	1 2 1
+	37	[-]	GETGLOBAL	1 -8	; GetState
+	38	[-]	CALL     	1 1 2
+	39	[-]	GETGLOBAL	2 -14	; AI_STOP
+	40	[-]	EQ       	0 1 2
+	41	[-]	JMP      	11	; to 53
+	42	[-]	GETGLOBAL	1 -10	; GetDist
+	43	[-]	GETUPVAL 	2 1	; -
+	44	[-]	GETGLOBAL	3 -6	; GetPos
+	45	[-]	CALL     	3 1 0
+	46	[-]	CALL     	1 0 2
+	47	[-]	LE       	0 -11 1	; 80 -
+	48	[-]	JMP      	4	; to 53
+	49	[-]	GETGLOBAL	1 -15	; SetStateAndMove
+	50	[-]	GETGLOBAL	2 -9	; AI_MOVE
+	51	[-]	GETUPVAL 	3 1	; -
+	52	[-]	CALL     	1 3 1
+	53	[-]	RETURN   	0 1
+constants (15) for 00000210D64B3860:
+	1	"GetTime"
+	2	"GetRandomIntInRangeLua"
+	3	2
+	4	4
+	5	"MakeWanderPoint"
+	6	"GetPos"
+	7	250
+	8	"GetState"
+	9	"AI_MOVE"
+	10	"GetDist"
+	11	80
+	12	"StopMove"
+	13	"SetState"
+	14	"AI_STOP"
+	15	"SetStateAndMove"
+locals (0) for 00000210D64B3860:
+upvalues (0) for 00000210D64B3860:
+
+function <?:31,33> (1 instruction, 4 bytes at 00000210D64B1C10)
+1 param, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 00000210D64B1C10:
+locals (0) for 00000210D64B1C10:
+upvalues (0) for 00000210D64B1C10:

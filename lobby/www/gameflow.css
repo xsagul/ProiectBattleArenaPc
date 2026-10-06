@@ -1,0 +1,17 @@
+/* Adapter for missing navigation/uikit hosts. Riot's parties + shared-component CSS lays out the contents.
+   These host substitutes are local, not a claim of pixel parity with the complete LCU shell. */
+.local-parties-shell { width:1278px; height:718px; background:#010a13; }
+.local-parties-shell > .parties-view { width:1054px; border-right:1px solid #463714; }
+.local-category-nav { display:flex; align-items:center; gap:24px; height:40px; }
+.local-category-nav button { background:none; border:0; padding:0; font-family:var(--font-display); font-size:14px; font-weight:700; text-transform:uppercase; color:#cdbe91; white-space:nowrap; }
+.local-category-nav button.active { color:#f0e6d2; border-bottom:2px solid #c8aa6e; padding-bottom:8px; }
+.local-category-nav button:disabled { color:#5c5b57; }
+.local-category-nav .parties-game-navs-break { margin:0; }
+.local-parties-shell .parties-game-navs > hr { border:0; border-bottom:1px solid #463714; flex:1; height:0; margin:auto 0; }
+.local-custom-lobby { flex:1; display:flex; flex-direction:column; padding-top:80px; }
+.local-custom-lobby .custom-root { display:flex; flex:1; }
+.local-custom-lobby .parties-lower-section { opacity:1; }
+.local-lobby-footer { margin-top:auto; }
+.local-flow-error { position:absolute; left:180px; right:300px; bottom:100px; padding:14px; background:#1e2328; color:#f0e6d2; border:1px solid #c8aa6e; font-family:var(--font-body); }
+.custom-placeholder-buttons button { background:#1e2328; border:1px solid #5b5a56; color:#5b5a56; font-family:var(--font-display); }
+.local-exit-select { position:absolute; left:18px; bottom:20px; z-index:20; background:#1e2328; color:#cdbe91; border:1px solid #785a28; padding:8px 12px; font-family:var(--font-display); }

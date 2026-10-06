@@ -1,0 +1,29 @@
+{{#if showChampionTradeButton}}
+  {{#if summonerHasActiveTrade}}
+    {{#uikit-framed-icon class="champion-trade-button-active-trade" interactive=true borderWidth=2 disabled=disabled}}
+      <div class="icon">
+      </>
+    {{/uikit-framed-icon}}
+    <div class="champion-trade-ring-spinner {{if uxSettings.largeAreaAnimationsEnabled "animated" "not-animated"}}">
+    </>
+  {{else}}
+    {{#if showValidTrade}}
+      {{#uikit-framed-icon onclick=(action this "trade") class="champion-trade-button" interactive=true borderWidth=2 disabled=disabled}}
+        <div class="icon">
+        </>
+        {{#uikit-tooltip tooltipPosition="top" type="system"}}
+          <lol-uikit-content-block type="tooltip-system" class="champ-select-trade-button-tooltip">
+            <p>
+              {{tradeTooltipText}}
+            </>
+            {{#if showChampionChestAvailable}}
+              <div class="tooltip-champion-chest-available">
+                {{tra.tooltip_champion_chest_available}}
+              </>
+            {{/if}}
+          </>
+        {{/uikit-tooltip}}
+      {{/uikit-framed-icon}}
+    {{/if}}
+  {{/if}}
+{{/if}}

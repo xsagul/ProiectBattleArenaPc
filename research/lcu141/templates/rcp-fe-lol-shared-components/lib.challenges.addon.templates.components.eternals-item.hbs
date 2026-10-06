@@ -1,0 +1,37 @@
+{{#uikit-tooltip tooltipPosition="right" type="system" pseudoPartSelector="eternals-item-tooltip"}}
+  {{eternals-item-tooltip eternal=eternal isLevelFiveOrGreater=isLevel5OrGreater leftHeaderValue=headerValue}}
+{{/uikit-tooltip}}
+{{#challenge-card isLegacyStyle=true isEternal=true animationsEnabled=animationsEnabled}}
+  <div class="eternals-item-content {{if isMilestone "is-milestone"}} {{if isNewBest "is-new-best"}}">
+    {{challenge-card-header leftDetailClass=headerStyle leftValue=headerValue showLeftHeaderDetail=true}}
+    <img class="eternals-item-image" src="{{eternal.imageUrl}}">
+    </>
+    <div class="eternals-progress-container">
+      <div class="eternals-progress-detail">
+        {{progressDetailText}}
+      </>
+      <div class="eternals-item-name">
+        {{eternal.statstoneName}}
+      </>
+      {{#if isNewBest}}
+        <div class="eternals-item-personal-best-container">
+          <div class="eternals-item-personal-best-icon">
+          </>
+          <div class="eternals-item-personal-best-value">
+            {{eternal.best}}
+          </>
+        </>
+      {{else}}
+        <div class="eternals-item-value">
+          {{eternal.value}}
+        </>
+      {{/if}}
+    </>
+    <div class="eternals-progress-bar-container">
+      <div class="eternals-earned-progress-bar-fill" style="transform: matrix({{progressBarTotalFill}}, 0, 0, 1, 0, 0)">
+      </>
+      <div class="eternals-progress-bar-fill {{categoryLowercase}}" style="transform: matrix({{progressBarPrevFill}}, 0, 0, 1, 0, 0)">
+      </>
+    </>
+  </>
+{{/challenge-card}}

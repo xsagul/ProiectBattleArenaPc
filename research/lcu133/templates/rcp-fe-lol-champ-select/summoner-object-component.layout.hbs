@@ -1,0 +1,176 @@
+{{#if uxSettings.largeAreaAnimationsEnabled}}
+  <uikit-state-machine state="not-acting" acting-state={{summoner.actingBackgroundAnimationState}} class="video-magic-background-state-machine skin-showcase" style={{skinShowcaseStyle}}>
+    <uikit-states>
+      <uikit-state name="not-acting">
+        <uikit-behavior-media selector=".bg-intro-vid" preloading="">
+        </>
+        <uikit-behavior-media selector=".bg-idle-vid" preloading="">
+        </>
+        <uikit-behavior-media selector=".bg-outro-vid" preloading="">
+        </>
+        <uikit-transition next-state="intro">
+          <uikit-condition-media selector=".bg-intro-vid" can-play="">
+          </>
+          <uikit-condition-media selector=".bg-idle-vid" can-play="">
+          </>
+          <uikit-condition-parameter name="acting-state" value="is-acting-background">
+          </>
+        </>
+      </>
+      <uikit-state name="intro">
+        <uikit-behavior-media selector=".bg-intro-vid" playing="">
+        </>
+        <uikit-transition next-state="idle">
+          <uikit-condition-media selector=".bg-intro-vid" ended="">
+          </>
+        </>
+        <uikit-transition next-state="outro">
+          <uikit-condition-parameter name="acting-state" value="not-acting-background">
+          </>
+        </>
+      </>
+      <uikit-state name="idle">
+        <uikit-behavior-media selector=".bg-idle-vid" playing="">
+        </>
+        <uikit-transition next-state="outro">
+          <uikit-condition-parameter name="acting-state" value="not-acting-background">
+          </>
+        </>
+      </>
+      <uikit-state name="outro">
+        <uikit-behavior-media selector=".bg-idle-vid" playing="">
+        </>
+        <uikit-behavior-media selector=".bg-outro-vid" playing="">
+        </>
+        <uikit-transition next-state="not-acting">
+          <uikit-condition-media selector=".bg-outro-vid" ended="">
+          </>
+        </>
+        <uikit-transition next-state="not-acting">
+          <uikit-condition-parameter name="acting-state" value="not-acting-background">
+          </>
+        </>
+      </>
+    </>
+    <uikit-video class="bg-intro-vid video-magic-background {{unless isLeft "right"}}" visible-state="intro" src="{{banMagicVideo.intro}}" cache-name="rcp-fe-lol-champ-select">
+    </>
+    <uikit-video class="bg-idle-vid video-magic-background {{unless isLeft "right"}}" visible-state="idle" src="{{banMagicVideo.idle}}" loop="loop" cache-name="rcp-fe-lol-champ-select">
+    </>
+    <uikit-video class="bg-outro-vid video-magic-background {{unless isLeft "right"}}" visible-state="outro" src="{{banMagicVideo.outro}}" cache-name="rcp-fe-lol-champ-select">
+    </>
+  </>
+{{else}}
+  <div class="image-magic-background {{summoner.actingBackgroundAnimationState}} skin-showcase" style={{skinShowcaseStyle}}>
+  </>
+{{/if}}
+<div class="active-bar {{if summoner.shouldShowActingBar "" "hidden"}}">
+</>
+<div class="active-bar-spacer">
+</>
+<div class="summoner-spells {{if summoner.shouldShowSpells "" "removed"}} {{unless bright "dim"}}">
+  <img class="spell spell1" src={{summoner.spell1IconPath}}>
+  </>
+  <img class="spell spell2" src={{summoner.spell2IconPath}}>
+  </>
+</>
+<div class="summoner-ban-item {{if summoner.shouldShowBanIntentIcon "visible" "removed"}}">
+  <div class="champ-ban-icon" style="background-image:url({{summoner.banIntentSquarePortratPath}})">
+    <span class="ban-icon-overlay">
+    </>
+  </>
+</>
+<div class="summoner-container-spacer">
+</>
+<div class="summoner-container {{if summoner.shouldShowExpanded "expanded" "collapsed"}}">
+  <lol-parties-comm-halo puuid={{summoner.puuid}} size="medium">
+    <div class="champion-icon-container {{unless bright "dim"}} ">
+      <div class="champion-ring-pop-animation {{if summoner.shouldShowRingAnimations "visible" "removed"}}">
+      </>
+      <div class="champion-ring-shine-animation {{if summoner.shouldShowRingAnimations "visible" "removed"}}">
+      </>
+      <div class="champion-icon-pick-snipe-glow-animation">
+      </>
+      <div class="champion-icon-pick-snipe-magic-animation">
+      </>
+      {{#if showChampionChestAvailable}}
+        <div class="champion-icon-pick-chest-available-glow">
+        </>
+      {{/if}}
+      <div class="champion-icons">
+        <div class="champion-icons-bg">
+        </>
+        {{#if positionIconPath}}
+          <img src={{positionIconPath}} class="svg-icon">
+          </>
+        {{/if}}
+        <div class="portrait-icon fit-icon" style={{sanitize championIconStyle}}>
+        </>
+      </>
+      <div class="champion-ring">
+      </>
+      {{#if showChampionChestAvailable}}
+        <div class="champion-ring-chest-available-glow">
+        </>
+      {{/if}}
+      <div class="champion-icon-pick-snipe-ring-animation">
+      </>
+      <div class="champion-icon-pick-snipe-magic-animation">
+      </>
+      <div class="champion-ring-magic-animation-inner {{if summoner.shouldShowRingAnimations "visible" "removed"}}">
+      </>
+      <div class="champion-ring-magic-animation-outer {{if summoner.shouldShowRingAnimations "visible" "removed"}}">
+      </>
+      <div class="image-ring-spinner  {{if showSummonerActing "visible" "removed"}} {{if isLeft "left-side" "right-side"}} {{if summoner.isSelf "is-self"}} {{if uxSettings.largeAreaAnimationsEnabled "animated" "not-animated"}}">
+      </>
+      {{#if entitledFeaturePortraitPath}}
+        <div class="entitled-feature-portrait" style="background-image:url({{entitledFeaturePortraitPath}});">
+          {{#uikit-tooltip tooltipPosition="top" type="system"}}
+            <lol-uikit-content-block type="tooltip-system">
+              <p>
+                {{entitledFeaturePortraitTooltip}}
+              </>
+            </>
+          {{/uikit-tooltip}}
+        </>
+      {{/if}}
+      <img class="summoner-muted-icon {{unless summoner.showMuted "removed"}}" src="/fe/lol-champ-select/images/summoner-object/button-mute.svg">
+      </>
+      {{#unless isUILockedForGameStart}}
+        {{trade-button tradeId=summoner.tradeId summonerToTradeChampionName=summoner.championName currentSummonerChampionName=currentSummonerChampionName uxSettings=uxSettings displayName=displayName recordDidRequestSucceed=recordDidRequestSucceed summonerHasActiveTrade=summonerHasActiveTrade showChampionTradeButton=showChampionTradeButton showValidTrade=summoner.showTrades showChampionChestAvailable=showChampionChestAvailable}}
+        {{#if showPickOrderSwapButton}}
+          {{swap-button swapId=summoner.swapId uxSettings=uxSettings summonerHasActiveSwap=summonerHasActiveSwap displayName=displayName recordDidRequestSucceed=recordDidRequestSucceed}}
+        {{/if}}
+      {{/unless}}
+    </>
+  </>
+  <div class="player-details-spacer">
+  </>
+  <div class="player-details" style={{playerDetailsStyle}}>
+    <div class="champion-vote-projection {{unless voteProjectionText "no-vote-percent"}}">
+      {{voteProjectionText}}
+    </>
+    <div class="summoner-secondary-text {{unless summonerSecondaryText "removed"}}">
+      <span class="summoner-secondary-text-inner">
+        {{summonerSecondaryText}}
+      </>
+    </>
+    <div class="summoner-primary-text {{unless summonerPrimaryText "hidden"}}">
+      {{summonerPrimaryText}}
+      <div class="summoner-primary-text-glow">
+        {{summonerPrimaryText}}
+      </>
+    </>
+    <div class="summoner-name {{if showTeamBoostIcon "showing-summoner-booster-icon"}}">
+      <span class="name-text">
+        {{displayName}}
+      </>
+      {{#if showTeamBoostIcon}}
+        <div class="summoner-name-booster-icon">
+        </>
+      {{/if}}
+    </>
+  </>
+  {{#if shouldShowOverlay}}
+    {{summoner-overlay displayName=displayName puuid=summoner.puuid summonerId=summoner.summonerId obfuscatedPuuid=summoner.obfuscatedPuuid obfuscatedSummonerId=summoner.obfuscatedSummonerId isMuted=summoner.showMuted isReportingEnabled=isReportingEnabled jmxSettings=jmxSettings recordDidRequestSucceed=recordDidRequestSucceed}}
+  {{/if}}
+</>

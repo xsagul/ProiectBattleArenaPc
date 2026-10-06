@@ -1,0 +1,12 @@
+<div class="status-ticker-list">
+  {{#each sortedIncidents as |incident|}}
+    {{status-ticker-incident incident}}
+  {{/each}}
+</>
+{{#if statusUrl}}
+  <div class="status-ticker-links">
+    <a class="ticker-incident-link" href={{statusUrl}} target="_blank">
+      {{externalLinkText}}
+    </>
+  </>
+{{/if}}

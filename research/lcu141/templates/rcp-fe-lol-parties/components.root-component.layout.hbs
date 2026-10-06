@@ -1,0 +1,38 @@
+{{parties-background selected=selected showingState=showingState isMatchmakingClassName=isMatchmakingClassName}}
+{{parties-ambience selected=selected showingState=showingState}}
+<div class="parties-content">
+  {{#if isShowingParty}}
+    <div class="empty-header-spacer">
+    </>
+  {{/if}}
+  {{#if isCustomUI}}
+    {{#if isShowingParty}}
+      {{parties-header showingState=showingState selected=selected isInQueue=isInQueue queues=queues}}
+    {{/if}}
+    {{custom-game-root selected=selected showingState=showingState showInviteModal="showInviteModal"}}
+  {{else}}
+    {{#if isTFT}}
+      {{tft-lobby showingState=showingState selected=selected showGameSelect="showGameSelect" isInQueue=isInQueue showInviteModal="showInviteModal"}}
+    {{else}}
+      {{#if shouldShowMultiteamLobby}}
+        {{multiteam-lobby-root showingState=showingState selected=selected showInviteModal="showInviteModal"}}
+      {{else}}
+        {{v2-parties-root showingState=showingState selected=selected showGameSelect="showGameSelect" isInQueue=isInQueue showInviteModal="showInviteModal"}}
+      {{/if}}
+    {{/if}}
+    {{#if isShowingParty}}
+      {{v2-header showingState=showingState selected=selected isInQueue=isInQueue queues=queues cancelFlow="showGameSelect"}}
+    {{/if}}
+  {{/if}}
+  {{game-select-root showingState=showingState selected=selected queues=queues}}
+  {{parties-notifications}}
+  {{#if debugToolsEnabled}}
+    {{parties-debug-tools selected=selected showingState=showingState}}
+  {{/if}}
+</>
+<div style="display: none">
+  <!-- here are some computeds we need in a template somewhere, so they update -->
+  {{customGamesService.gameIdObserver}}
+  {{customGamesService.gameflowPhaseObserver}}
+  {{partyViewObserver}}
+</>

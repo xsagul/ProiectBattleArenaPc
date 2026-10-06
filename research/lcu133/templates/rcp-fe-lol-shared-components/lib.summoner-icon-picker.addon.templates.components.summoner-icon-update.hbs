@@ -1,0 +1,92 @@
+<lol-uikit-full-page-backdrop>
+  <lol-uikit-dialog-frame>
+    <div class="update-icon-component-container">
+      <div class="update-icon-close-btn" {{action this "closeWindow"}}>
+      </>
+      <div class="update-icon-title">
+        {{tra.summoner_icon_change_title_border}}
+      </>
+      <div class="border-and-icon-container">
+        <div class="border-list-container">
+          <div class="border-option" {{action this "selectBorder" "prestige"}} {{action this "onBorderHover" "prestige" on="mouseEnter"}} {{action this "onBorderHoverLeave" "prestige" on="mouseLeave"}}>
+            <div class="border-option-title">
+              {{tra.summoner_icon_change_border_prestige}}
+            </>
+            <div class="border-option-subtitle">
+              {{prestigeSubtitleText}}
+            </>
+            <lol-regalia-crest-element class="border-option-crest {{if prestigeSelectedOrHovered "border-full-opacity"}}" animations="false" crest-by-level={{currentSummonerRegalia.summonerLevel}} profile-icon-url={{prestigeProfileIconUrl}} crest-sizing="small" summoner-level={{currentSummonerRegalia.summonerLevel}} crest-type="prestige">
+            </>
+          </>
+          <div class="border-option crest-ranked" {{action this "selectBorder" "ranked"}} {{action this "onBorderHover" "ranked" on="mouseEnter"}} {{action this "onBorderHoverLeave" "ranked" on="mouseLeave"}}>
+            {{#if isRanked}}
+              <div class="border-option-title">
+                {{tra.summoner_icon_change_border_ranked}}
+              </>
+              <div class="border-option-subtitle">
+                {{rankedSubtitleText}}
+              </>
+              <lol-regalia-crest-v2-element class="border-option-crest crest-ranked {{if rankedSelectedOrHovered "border-full-opacity"}}" animations="false" profile-icon-url={{rankedProfileIconUrl}} crest-sizing="small" ranked-tier={{currentSummonerRegalia.highestRankedEntry.tier}} ranked-division={{currentSummonerRegalia.highestRankedEntry.division}} ranked-split-reward={{currentSummonerRegalia.highestRankedEntry.splitRewardLevel}} crest-type="ranked">
+              </>
+            {{else}}
+              <div class="border-option-title border-unavailable">
+                {{tra.summoner_icon_change_border_ranked}}
+              </>
+              <div class="border-option-unranked-label">
+                {{tra.summoner_icon_change_state_border_unlock}}
+              </>
+              <div class="border-option-subtitle border-unavailable">
+                {{rankedSubtitleText}}
+              </>
+              <div class="border-option-ranked-crest-placeholder">
+              </>
+              <div class="border-option-lock">
+              </>
+            {{/if}}
+          </>
+        </>
+        <div class="update-icon-list">
+          <lol-uikit-scrollable overflow-masks="enabled">
+            {{#each icons as |icon|}}
+              <div class="update-icon-list-item  {{if icon.isSelected "selected"}}" data-icon-id="{{icon.id}}">
+                <img src="{{icon.iconPath}}" {{action this "onIconHover" on="mouseEnter"}} {{action this "selectIcon" icon.id}}>
+                </>
+              </>
+            {{/each}}
+          </>
+        </>
+      </>
+      {{#if isSaving}}
+        <lol-uikit-full-page-backdrop>
+        </>
+        <div class="update-icon-saving-spinner">
+          {{uikit-spinner}}
+        </>
+      {{/if}}
+      <div class="bottom-row-container">
+        <div class="empty-bottom-row-spacer">
+        </>
+        <lol-uikit-flat-button-group type="dialog-frame" class="update-icon-save-btn">
+          {{#if saveDisabled}}
+            <lol-uikit-flat-button class="inner-save-btn" disabled="">
+              {{saveButtonText}}
+            </>
+          {{else}}
+            <lol-uikit-flat-button class="inner-save-btn" onclick={{action this "saveIcon"}}>
+              {{saveButtonText}}
+            </>
+          {{/if}}
+        </>
+        <div class="empty-bottom-row-spacer">
+        </>
+      </>
+      {{#if errorSaving}}
+        <div class="update-icon-saving-error-container">
+          <div class="update-icon-saving-error">
+            {{tra.summoner_icon_change_save_error}}
+          </>
+        </>
+      {{/if}}
+    </>
+  </>
+</>

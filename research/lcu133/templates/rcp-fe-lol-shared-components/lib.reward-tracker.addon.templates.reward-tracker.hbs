@@ -1,0 +1,13 @@
+<lol-uikit-scrollable class="reward-tracker-scrollable" direction="horizontal" side-scroll-wheel="">
+  <div class="reward-tracker-reward-track">
+    {{#if showZeroIndicator}}
+      {{reward-zero-indicator progress=rewardTrackProgress}}
+    {{/if}}
+    {{#each rewardTrackItems as |reward index|}}
+      {{reward-item reward=reward startIndex=rewardTrackLevelStartIndex itemIndex=index progress=rewardTrackProgress maxLevel=passMaxLevel itemMouseEnter=itemMouseEnter itemClick=itemClick additionalTooltipData=additionalTooltipData rewardItemTooltipComponent=rewardItemTooltipComponent rewardItemTooltipClassName=rewardItemTooltipClassName isDisabled=isDisabled lowSpecEnabled=lowSpecEnabled}}
+    {{/each}}
+    {{#if isRepeating}}
+      {{reward-bonus-track mainTrackCompleted=isCompleted displayCurrentBonusIteration=displayCurrentBonusIteration rewardTrackBonusItems=rewardTrackBonusItems rewardTrackBonusProgress=rewardTrackBonusProgress bonusMaxLevel=bonusMaxLevel itemMouseEnter=itemMouseEnter itemClick=itemClick bonusItemClick=bonusItemClick additionalTooltipData=additionalTooltipData rewardItemTooltipComponent=rewardItemTooltipComponent rewardItemTooltipClassName=rewardItemTooltipClassName isDisabled=isDisabled}}
+    {{/if}}
+  </>
+</>

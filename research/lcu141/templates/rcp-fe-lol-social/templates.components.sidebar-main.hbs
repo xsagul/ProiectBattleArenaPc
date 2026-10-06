@@ -1,0 +1,35 @@
+{{social-panel}}
+{{#if hf}}
+  {{component hf}}
+{{/if}}
+<div class="alpha-version-panel">
+  {{chat-toggle-button}}
+  {{#if missionsButtonEnabled}}
+    <div class="social-button">
+      {{missions-button}}
+    </>
+  {{/if}}
+  {{#each socialButtons as |socialButton|}}
+    {{social-button buttonPacket=socialButton}}
+  {{/each}}
+  <div class="alpha-tag" draggable="true" onDragStart={{action this "onDragStart"}}>
+    {{#social-text-tooltip direction="top"}}
+      V
+      {{fullVersion}}
+    {{/social-text-tooltip}}
+    V
+    {{versionDisplay}}
+    {{#if patchlineVisibleName}}
+      <span>
+        <br>
+        </>
+        {{patchlineVisibleName}}
+      </>
+    {{/if}}
+  </>
+  <button class="bug-report-button" onClick={{action this "reportBug"}} disabled={{bugReportDisabled}}>
+    {{#social-text-tooltip direction="left"}}
+      {{tra.tooltip_report_bug}}
+    {{/social-text-tooltip}}
+  </>
+</>

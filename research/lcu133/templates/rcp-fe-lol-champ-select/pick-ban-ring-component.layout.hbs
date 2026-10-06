@@ -1,0 +1,77 @@
+<div class="ring-inner-mask">
+  <div class="ring-inner-container">
+    <div class="ring-gear-component-container">
+      {{ring-gear lastCompletedBanAction=sessionActions.lastCompletedBanAction activeAction=animatedActiveAction shouldShowExpandedRing=shouldShowExpandedRing uxSettings=uxSettings}}
+    </>
+    <div style={{slashRingRotation}} class="ban-slash-wrapper {{if isShowingSelectedScreen "removed"}}">
+      <uikit-state-machine class="ban-slash-state-machine" state="unloaded" animation-team={{if isTeamBan "player-team" "enemy-team"}} is-visible={{if banSlashAnimating "visible" "hidden"}} style={{slashRingRotation}}>
+        <uikit-states>
+          <uikit-state name="unloaded">
+            <uikit-behavior-media selector=".slash-video.red" preloading="">
+            </>
+            <uikit-behavior-media selector=".slash-video.blue" preloading="">
+            </>
+            <uikit-transition next-state="blue-ban-video">
+              <uikit-condition-media selector=".blue-ban-video" can-play="">
+              </>
+              <uikit-condition-parameter name="is-visible" value="visible">
+              </>
+              <uikit-condition-parameter name="animation-team" value="player-team">
+              </>
+            </>
+            <uikit-transition next-state="red-ban-video">
+              <uikit-condition-media selector=".red-ban-video" can-play="">
+              </>
+              <uikit-condition-parameter name="is-visible" value="visible">
+              </>
+              <uikit-condition-parameter name="animation-team" value="enemy-team">
+              </>
+            </>
+          </>
+          <uikit-state name="blue-ban-video">
+            <uikit-behavior-media selector=".blue-ban-video" playing="">
+            </>
+            <uikit-transition next-state="done">
+              <uikit-condition-media selector=".blue-ban-video" ended="">
+              </>
+            </>
+            <uikit-transition next-state="unloaded">
+              <uikit-condition-parameter name="is-visible" value="hidden">
+              </>
+            </>
+          </>
+          <uikit-state name="red-ban-video">
+            <uikit-behavior-media selector=".red-ban-video" playing="">
+            </>
+            <uikit-transition next-state="done">
+              <uikit-condition-media selector=".red-ban-video" ended="">
+              </>
+            </>
+            <uikit-transition next-state="unloaded">
+              <uikit-condition-parameter name="is-visible" value="hidden">
+              </>
+            </>
+          </>
+          <uikit-state name="done">
+            <uikit-transition next-state="unloaded">
+              <uikit-condition-parameter name="is-visible" value="hidden">
+              </>
+            </>
+          </>
+        </>
+        <user-experience-perf-switch class="blue-ban-video" visible-state="blue-ban-video" default-visibility="hidden">
+          <uikit-video src="/fe/lol-champ-select/video/champion-ring/ban-circle-slash-blue.webm" cache-name="rcp-fe-lol-champ-select" class="slash-video blue" perf-flags="largeAreaAnimationsEnabled">
+          </>
+          <div class="hidden">
+          </>
+        </>
+        <user-experience-perf-switch visible-state="red-ban-video" default-visibility="hidden" class="red-ban-video">
+          <uikit-video src="/fe/lol-champ-select/video/champion-ring/ban-circle-slash-red.webm" cache-name="rcp-fe-lol-champ-select" class="slash-video red" perf-flags="largeAreaAnimationsEnabled">
+          </>
+          <div class="hidden">
+          </>
+        </>
+      </>
+    </>
+  </>
+</>

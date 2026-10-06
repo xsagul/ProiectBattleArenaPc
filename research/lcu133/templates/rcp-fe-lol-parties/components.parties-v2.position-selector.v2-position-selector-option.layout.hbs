@@ -1,0 +1,11 @@
+<div class="position-selector-option-container">
+  <div class="position-selector-text position">
+    {{positionText}}
+  </>
+  <div class="position-selector-text in-demand {{if inDemand "visible"}}">
+    {{tra.parties_position_in_demand}}
+  </>
+  {{v2-position-icon position=position selected=isPositionAlreadySelected hovered=hovered inDemand=inDemand}}
+</>
+<div class="position-selector-wrapper {{if useGenerousHitbox "visible"}}" {{action this "handlePositionSelected" ordinal position on="mouseUp"}} {{action this "onHoverIn" on="mouseEnter"}} {{action this "onHoverOut" on="mouseLeave"}}>
+</>

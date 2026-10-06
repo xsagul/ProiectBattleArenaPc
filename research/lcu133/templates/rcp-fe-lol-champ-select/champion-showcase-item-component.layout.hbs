@@ -1,0 +1,23 @@
+<div class="ban-champion-shake-container {{type}}">
+  <div class="ban-gradient-background">
+  </>
+  <div class="ban-marching-border-background-container">
+    <div class="ban-marching-border-background">
+    </>
+  </>
+  <div class="ban-champion-thumbnail">
+    {{#if showBanOverlays}}
+      <img class="thumbnail-circle-x-background" src="/fe/lol-champ-select/images/ban-showcase/icon-ban.png">
+      </>
+    {{/if}}
+    <img class="champion-background-image {{unless showcaseAction.champion "hidden"}} {{unless showcaseAction.completed "grayed-out"}}" src={{showcaseAction.champion.squarePortraitPath}}>
+    </>
+  </>
+  {{#if showBanOverlays}}
+    <div class="circle-x-overlay {{if showcaseAction.champion "visible" "hidden"}} {{unless showcaseAction.completed "red"}}">
+    </>
+  {{/if}}
+</>
+<div class="champion-name">
+  {{showcaseAction.champion.name}}
+</>

@@ -1,0 +1,59 @@
+<img class="radial-ticks" src="/fe/lol-static-assets/images/npe-ft-radial-ticks.svg">
+</>
+<div class="first-touch-game-mode-select-container">
+  <div class="first-touch-game-mode-select-header">
+    <div class="first-touch-game-mode-select-header-title">
+      {{sanitize tra.npe_guidance_title}}
+    </>
+    <div class="title-decoration">
+    </>
+    <div class="first-touch-game-mode-select-subheader">
+      {{sanitize tra.npe_guidance_subtitle}}
+    </>
+  </>
+  <div class="first-touch-game-mode-select-wrapper summoners-rift" {{action this "pickedLeague"}}>
+    <div class="summoners-rift-icon-frame">
+      <img class="summoners-rift-icon default" src="{{summonersRiftMapAssets.game-select-icon-default}}">
+      </>
+      <img class="summoners-rift-icon hover" src="{{summonersRiftMapAssets.game-select-icon-active}}">
+      </>
+    </>
+    <div class="game-mode-select-text-wrapper">
+      <div class="game-mode-select-tip">
+        {{sanitize tra.npe_guidance_card1_tip}}
+      </>
+      <div class="game-mode-select-title">
+        {{sanitize tra.npe_guidance_card1_title}}
+      </>
+      <div class="game-mode-select-subtitle">
+        {{sanitize tra.npe_guidance_card1_subtitle}}
+      </>
+      <div class="game-mode-select-info">
+        {{sanitize tra.npe_guidance_card1_body}}
+      </>
+    </>
+    <img class="hover-arrow" src="/fe/lol-static-assets/images/npe-ft-hover-arrow.png">
+    </>
+  </>
+  <div class="first-touch-game-mode-select-wrapper tft" {{action this "pickedTft"}}>
+    <div class="tft-icon-frame">
+      <img class="tft-icon default" src="{{tftMapAssets.game-select-icon-default}}">
+      </>
+      <img class="tft-icon hover" src="{{tftMapAssets.game-select-icon-active}}">
+      </>
+    </>
+    <div class="game-mode-select-text-wrapper">
+      <div class="game-mode-select-title">
+        {{sanitize tra.npe_guidance_card2_title}}
+      </>
+      <div class="game-mode-select-subtitle">
+        {{sanitize tra.npe_guidance_card2_subtitle}}
+      </>
+      <div class="game-mode-select-info">
+        {{sanitize tra.npe_guidance_card2_body}}
+      </>
+    </>
+    <img class="hover-arrow" src="/fe/lol-static-assets/images/npe-ft-hover-arrow.png">
+    </>
+  </>
+</>

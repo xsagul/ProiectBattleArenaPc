@@ -1,0 +1,13 @@
+<div class="unlock-skin-hit-area {{unless purchaseEnabled "disabled" "enabled"}} {{if isSkinUnlocked "hidden"}}" onClick={{action this "showSkinPurchaseModal"}}>
+  <div class="locked-state">
+  </>
+  {{#unless purchaseEnabled}}
+    {{#uikit-tooltip tooltipPosition="top" type="system"}}
+      <lol-uikit-content-block type="tooltip-system" class="quick-play-skin-purchase-unavailable-tooltip">
+        <p>
+          {{tra.skin_purchase_unavailable_tooltip}}
+        </>
+      </>
+    {{/uikit-tooltip}}
+  {{/unless}}
+</>

@@ -1,0 +1,10 @@
+{{#if shouldShowDisplayName}}
+  {{displayName}}
+{{else}}
+  {{player-name format="tooltip" puuid=puuid}}
+  {{#if isNameUnhidden}}
+    (
+    {{hiddenName}}
+    )
+  {{/if}}
+{{/if}}

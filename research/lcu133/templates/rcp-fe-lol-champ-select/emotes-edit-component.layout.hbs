@@ -1,0 +1,9 @@
+<div class="emotes-edit-button {{if disabled "disabled"}} {{if showingEmotes "showing-emotes"}} {{if noWardSkins "no-ward-skins"}}" {{action this "openEmotesPanel"}}>
+</>
+{{#uikit-tooltip tooltipPosition="top" type="system" offsetY=16}}
+  <lol-uikit-content-block type="tooltip-system" class="champ-select-edit-emotes-button-tooltip">
+    <p>
+      {{emotesButtonTooltipString}}
+    </>
+  </>
+{{/uikit-tooltip}}

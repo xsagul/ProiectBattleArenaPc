@@ -1,0 +1,33 @@
+{{#if readyCheck.hasPlayerResponded}}
+  <div class="ready-check-status-title">
+    {{#if readyCheck.isStateMachineStateAccepted}}
+      {{tra.ready_check_response_message_accepted}}
+      <div class="ready-check-status-details">
+        {{tra.ready_check_waiting_players}}
+      </>
+    {{else}}
+      {{#if readyCheck.isStateMachineStateDeclined}}
+        {{tra.ready_check_response_message_declined}}
+      {{/if}}
+    {{/if}}
+  </>
+{{else}}
+  {{#if readyCheck.isStateMachineStateInProgress}}
+    <div class="ready-check-status-title">
+      {{tra.ready_check_match_found}}
+    </>
+    <div class="ready-check-status-details">
+      {{gameflow.map.name}}
+      <span class="ready-check-bullet">
+        •
+      </>
+      {{queueTypeString}}
+      {{#unless isTFT}}
+        <span class="ready-check-bullet">
+          •
+        </>
+        {{versusString}}
+      {{/unless}}
+    </>
+  {{/if}}
+{{/if}}

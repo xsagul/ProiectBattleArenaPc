@@ -1,0 +1,94 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 0159BF88)
+0+ params, 2 slots, 0 upvalues, 0 locals, 8 constants, 8 functions
+	1	[-]	CLOSURE  	0 0	; 01599910
+	2	[-]	SETGLOBAL	0 -1	; OnInit
+	3	[-]	CLOSURE  	0 1	; 01599968
+	4	[-]	SETGLOBAL	0 -2	; OnTargetLost
+	5	[-]	CLOSURE  	0 2	; 015999C0
+	6	[-]	SETGLOBAL	0 -3	; OnCallForHelp
+	7	[-]	CLOSURE  	0 3	; 01599A18
+	8	[-]	SETGLOBAL	0 -4	; OnTauntBegin
+	9	[-]	CLOSURE  	0 4	; 01599A70
+	10	[-]	SETGLOBAL	0 -5	; OnTauntEnd
+	11	[-]	CLOSURE  	0 5	; 01599AC8
+	12	[-]	SETGLOBAL	0 -6	; OnCanMove
+	13	[-]	CLOSURE  	0 6	; 01599B20
+	14	[-]	SETGLOBAL	0 -7	; OnCanAttack
+	15	[-]	CLOSURE  	0 7	; 01599D80
+	16	[-]	SETGLOBAL	0 -8	; HaltAI
+	17	[-]	RETURN   	0 1
+constants (8) for 0159BF88:
+	1	"OnInit"
+	2	"OnTargetLost"
+	3	"OnCallForHelp"
+	4	"OnTauntBegin"
+	5	"OnTauntEnd"
+	6	"OnCanMove"
+	7	"OnCanAttack"
+	8	"HaltAI"
+locals (0) for 0159BF88:
+upvalues (0) for 0159BF88:
+
+function <?:1,4> (6 instructions, 24 bytes at 01599910)
+0 params, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SetState
+	2	[-]	GETGLOBAL	1 -2	; AI_IDLE
+	3	[-]	CALL     	0 2 1
+	4	[-]	LOADBOOL 	0 0 0
+	5	[-]	RETURN   	0 2
+	6	[-]	RETURN   	0 1
+constants (2) for 01599910:
+	1	"SetState"
+	2	"AI_IDLE"
+locals (0) for 01599910:
+upvalues (0) for 01599910:
+
+function <?:6,7> (1 instruction, 4 bytes at 01599968)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 01599968:
+locals (0) for 01599968:
+upvalues (0) for 01599968:
+
+function <?:10,11> (1 instruction, 4 bytes at 015999C0)
+2 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 015999C0:
+locals (0) for 015999C0:
+upvalues (0) for 015999C0:
+
+function <?:13,14> (1 instruction, 4 bytes at 01599A18)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 01599A18:
+locals (0) for 01599A18:
+upvalues (0) for 01599A18:
+
+function <?:16,17> (1 instruction, 4 bytes at 01599A70)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 01599A70:
+locals (0) for 01599A70:
+upvalues (0) for 01599A70:
+
+function <?:19,20> (1 instruction, 4 bytes at 01599AC8)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 01599AC8:
+locals (0) for 01599AC8:
+upvalues (0) for 01599AC8:
+
+function <?:22,23> (1 instruction, 4 bytes at 01599B20)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 01599B20:
+locals (0) for 01599B20:
+upvalues (0) for 01599B20:
+
+function <?:26,27> (1 instruction, 4 bytes at 01599D80)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 01599D80:
+locals (0) for 01599D80:
+upvalues (0) for 01599D80:

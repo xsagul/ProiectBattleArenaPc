@@ -1,0 +1,17 @@
+<lol-uikit-content-block class="uikit-error-page__group">
+  <div class="uikit-error-page__wrench">
+  </>
+  <p class="uikit-error-page__content">
+    {{renderedContent}}
+  </>
+  <div class="uikit-error-page__button-container">
+    {{#if isRetrying}}
+      <div class="uikit-error-page__retry-spinner">
+      </>
+    {{else}}
+      <lol-uikit-flat-button class="uikit-error-page__button" {{action this "buttonCallback"}}>
+        {{renderedButtonText}}
+      </>
+    {{/if}}
+  </>
+</>

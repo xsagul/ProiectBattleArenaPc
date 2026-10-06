@@ -1,0 +1,82 @@
+{{#render-telemetry-sender renderEventName=renderEventName shouldSendTelemetry=shouldSendTelemetry}}
+  <div class="challenges-collection-component">
+    <div class="background">
+    </>
+    {{#if isLoaded}}
+      <div class="content">
+        <div class="control-panel">
+          {{collection-crystal currentPoints=summary.totalChallengeScore nextPointsThreshold=nextCrystalThreshold challengeLevel=summary.overallChallengeLevel positionPercentile=summary.positionPercentile}}
+          {{#if summary.categoryProgress}}
+            {{collection-category-tabs categories=summary.categoryProgress challenges=challenges selectedTab=selectedTab setSelectedTab=(action this "setSelectedTab") categoryChallenges=categoryChallenges}}
+          {{/if}}
+        </>
+        <div class="grid">
+          <div class="header">
+            <div class="filters-container">
+              <div class="search-filter-container">
+                <lol-uikit-flat-input>
+                  {{input type="search" maxlength="50" class="search-filter-input" value=searchFilter placeholder=tra.challenges_search_placeholder}}
+                </>
+              </>
+              <div class="sort-filter-container">
+                <lol-uikit-framed-dropdown>
+                  {{#each sortOptions as |sortOption|}}
+                    <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{sortOption.isSelected}} onclick={{action this "setSortOption" sortOption.value}}>
+                      {{sortOption.name}}
+                    </>
+                  {{/each}}
+                </>
+              </>
+            </>
+            <div class="header-breakdown-container">
+              {{collection-challenges-breakdown challenges=filteredChallenges onBreakdownClick=(action this "onBreakdownClick"}}
+            </>
+          </>
+          <div class="header-divider-line">
+          </>
+          <div class="challenges-grid">
+            {{#if hasChallenges}}
+              {{#ember-collection class="item-grid-scrollable challenges-scroll-container" items=filteredChallenges cell-layout=(mixed-grid-layout itemSizes) as |entry index|}}
+                {{#if entry.isTitle}}
+                  <div class="challenge-group-title-container">
+                    <div class="challenge-group-title">
+                      {{entry.name}}
+                    </>
+                    {{#if entry.description}}
+                      <div class="challenge-group-description">
+                        <div class="challenge-group-description-icon {{entry.description.icon}}">
+                        </>
+                        <div class="challenge-group-description-text">
+                          {{#uikit-tooltip tooltipPosition="top" type="system"}}
+                            <lol-uikit-content-block class="challenge-group-description-tooltip" type="tooltip-large">
+                              <div class="challenge-group-description-tooltip-wrapper">
+                                <h5 class="challenge-group-description-tooltip-title">
+                                  {{entry.description.tooltipTitle}}
+                                </>
+                                <p class="challenge-group-description-tooltip-text">
+                                  {{entry.description.tooltipText}}
+                                </>
+                              </>
+                            </>
+                          {{/uikit-tooltip}}
+                          {{entry.description.text}}
+                        </>
+                      </>
+                    {{/if}}
+                  </>
+                {{else}}
+                  {{challenge-item challengeData=entry apexLadderUpdateTime=summary.apexLadderUpdateTime animationsEnabled=animationsEnabled}}
+                {{/if}}
+              {{/ember-collection}}
+            {{/if}}
+          </>
+        </>
+      </>
+    {{else}}
+      <div class="loading-container">
+        {{hextech-loading-animation}}
+      </>
+    {{/if}}
+  </>
+  {{collection-intro-modal}}
+{{/render-telemetry-sender}}

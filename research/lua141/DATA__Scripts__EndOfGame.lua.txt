@@ -1,0 +1,304 @@
+
+main <?:0,0> (27 instructions, 108 bytes at 00000169C9CB1B60)
+0+ params, 2 slots, 0 upvalues, 0 locals, 17 constants, 6 functions
+	1	[-]	LOADK    	0 -2	; 0
+	2	[-]	SETGLOBAL	0 -1	; TEAM_UNKNOWN
+	3	[-]	LOADK    	0 -4	; 2
+	4	[-]	SETGLOBAL	0 -3	; EOG_SCOREBOARD_PHASE_DELAY_TIME_DEFAULT
+	5	[-]	LOADK    	0 -6	; 10
+	6	[-]	SETGLOBAL	0 -5	; EOG_NEXUS_REVIVE_TIME
+	7	[-]	LOADK    	0 -2	; 0
+	8	[-]	SETGLOBAL	0 -7	; EOG_ALIVE_NEXUS_SKIN
+	9	[-]	LOADK    	0 -9	; 1
+	10	[-]	SETGLOBAL	0 -8	; EOG_DESTROYED_NEXUS_SKIN
+	11	[-]	LOADK    	0 -2	; 0
+	12	[-]	SETGLOBAL	0 -10	; EOG_MINION_FADE_AMOUNT
+	13	[-]	LOADK    	0 -4	; 2
+	14	[-]	SETGLOBAL	0 -11	; EOG_MINION_FADE_TIME
+	15	[-]	CLOSURE  	0 0	; 00000169C9CB37E0
+	16	[-]	SETGLOBAL	0 -12	; EndOfGameCeremony
+	17	[-]	CLOSURE  	0 1	; 00000169C9CB1BE0
+	18	[-]	SETGLOBAL	0 -13	; ChampionEoGCeremony
+	19	[-]	CLOSURE  	0 2	; 00000169C9CB1C60
+	20	[-]	SETGLOBAL	0 -14	; DestroyNexusPhase
+	21	[-]	CLOSURE  	0 3	; 00000169C9CB1D70
+	22	[-]	SETGLOBAL	0 -15	; StopRenderingMinionsPhase
+	23	[-]	CLOSURE  	0 4	; 00000169C9CB5130
+	24	[-]	SETGLOBAL	0 -16	; ScoreboardPhase
+	25	[-]	CLOSURE  	0 5	; 00000169C9CB51B0
+	26	[-]	SETGLOBAL	0 -17	; TestReviveNexus
+	27	[-]	RETURN   	0 1
+constants (17) for 00000169C9CB1B60:
+	1	"TEAM_UNKNOWN"
+	2	0
+	3	"EOG_SCOREBOARD_PHASE_DELAY_TIME_DEFAULT"
+	4	2
+	5	"EOG_NEXUS_REVIVE_TIME"
+	6	10
+	7	"EOG_ALIVE_NEXUS_SKIN"
+	8	"EOG_DESTROYED_NEXUS_SKIN"
+	9	1
+	10	"EOG_MINION_FADE_AMOUNT"
+	11	"EOG_MINION_FADE_TIME"
+	12	"EndOfGameCeremony"
+	13	"ChampionEoGCeremony"
+	14	"DestroyNexusPhase"
+	15	"StopRenderingMinionsPhase"
+	16	"ScoreboardPhase"
+	17	"TestReviveNexus"
+locals (0) for 00000169C9CB1B60:
+upvalues (0) for 00000169C9CB1B60:
+
+function <?:15,58> (99 instructions, 396 bytes at 00000169C9CB37E0)
+2 params, 6 slots, 0 upvalues, 0 locals, 32 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; BeginEndOfGame
+	2	[-]	CALL     	2 1 1
+	3	[-]	SETGLOBAL	0 -2	; winningTeam
+	4	[-]	GETGLOBAL	2 -2	; winningTeam
+	5	[-]	GETGLOBAL	3 -3	; TEAM_ORDER
+	6	[-]	EQ       	0 2 3
+	7	[-]	JMP      	3	; to 11
+	8	[-]	GETGLOBAL	2 -5	; TEAM_CHAOS
+	9	[-]	SETGLOBAL	2 -4	; losingTeam
+	10	[-]	JMP      	2	; to 13
+	11	[-]	GETGLOBAL	2 -3	; TEAM_ORDER
+	12	[-]	SETGLOBAL	2 -4	; losingTeam
+	13	[-]	GETGLOBAL	2 -7	; GetPosition
+	14	[-]	MOVE     	3 1
+	15	[-]	CALL     	2 2 2
+	16	[-]	SETGLOBAL	2 -6	; losingHQPosition
+	17	[-]	GETGLOBAL	2 -9	; GetHQ
+	18	[-]	GETGLOBAL	3 -3	; TEAM_ORDER
+	19	[-]	CALL     	2 2 2
+	20	[-]	SETGLOBAL	2 -8	; orderHQ
+	21	[-]	GETGLOBAL	2 -10	; SetInvulnerable
+	22	[-]	GETGLOBAL	3 -8	; orderHQ
+	23	[-]	LOADBOOL 	4 1 0
+	24	[-]	CALL     	2 3 1
+	25	[-]	GETGLOBAL	2 -11	; SetTargetable
+	26	[-]	GETGLOBAL	3 -8	; orderHQ
+	27	[-]	LOADBOOL 	4 0 0
+	28	[-]	CALL     	2 3 1
+	29	[-]	GETGLOBAL	2 -12	; SetBuildingHealthRegenEnabled
+	30	[-]	GETGLOBAL	3 -8	; orderHQ
+	31	[-]	LOADBOOL 	4 0 0
+	32	[-]	CALL     	2 3 1
+	33	[-]	GETGLOBAL	2 -9	; GetHQ
+	34	[-]	GETGLOBAL	3 -5	; TEAM_CHAOS
+	35	[-]	CALL     	2 2 2
+	36	[-]	SETGLOBAL	2 -13	; chaosHQ
+	37	[-]	GETGLOBAL	2 -10	; SetInvulnerable
+	38	[-]	GETGLOBAL	3 -13	; chaosHQ
+	39	[-]	LOADBOOL 	4 1 0
+	40	[-]	CALL     	2 3 1
+	41	[-]	GETGLOBAL	2 -11	; SetTargetable
+	42	[-]	GETGLOBAL	3 -13	; chaosHQ
+	43	[-]	LOADBOOL 	4 0 0
+	44	[-]	CALL     	2 3 1
+	45	[-]	GETGLOBAL	2 -12	; SetBuildingHealthRegenEnabled
+	46	[-]	GETGLOBAL	3 -13	; chaosHQ
+	47	[-]	LOADBOOL 	4 0 0
+	48	[-]	CALL     	2 3 1
+	49	[-]	GETGLOBAL	2 -14	; SetInputLockForAllClients
+	50	[-]	GETGLOBAL	3 -15	; INPUT_LOCK_CAMERALOCKING
+	51	[-]	LOADBOOL 	4 1 0
+	52	[-]	CALL     	2 3 1
+	53	[-]	GETGLOBAL	2 -14	; SetInputLockForAllClients
+	54	[-]	GETGLOBAL	3 -16	; INPUT_LOCK_CAMERAMOVEMENT
+	55	[-]	LOADBOOL 	4 1 0
+	56	[-]	CALL     	2 3 1
+	57	[-]	GETGLOBAL	2 -14	; SetInputLockForAllClients
+	58	[-]	GETGLOBAL	3 -17	; INPUT_LOCK_ABILITIES
+	59	[-]	LOADBOOL 	4 1 0
+	60	[-]	CALL     	2 3 1
+	61	[-]	GETGLOBAL	2 -14	; SetInputLockForAllClients
+	62	[-]	GETGLOBAL	3 -18	; INPUT_LOCK_SUMMONERSPELLS
+	63	[-]	LOADBOOL 	4 1 0
+	64	[-]	CALL     	2 3 1
+	65	[-]	GETGLOBAL	2 -14	; SetInputLockForAllClients
+	66	[-]	GETGLOBAL	3 -19	; INPUT_LOCK_MOVEMENT
+	67	[-]	LOADBOOL 	4 1 0
+	68	[-]	CALL     	2 3 1
+	69	[-]	GETGLOBAL	2 -14	; SetInputLockForAllClients
+	70	[-]	GETGLOBAL	3 -20	; INPUT_LOCK_SHOP
+	71	[-]	LOADBOOL 	4 1 0
+	72	[-]	CALL     	2 3 1
+	73	[-]	GETGLOBAL	2 -14	; SetInputLockForAllClients
+	74	[-]	GETGLOBAL	3 -21	; INPUT_LOCK_MINIMAPMOVEMENT
+	75	[-]	LOADBOOL 	4 1 0
+	76	[-]	CALL     	2 3 1
+	77	[-]	GETGLOBAL	2 -22	; DisableHUDForEndOfGame
+	78	[-]	CALL     	2 1 1
+	79	[-]	GETGLOBAL	2 -23	; SetBarracksSpawnEnabled
+	80	[-]	LOADBOOL 	3 0 0
+	81	[-]	CALL     	2 2 1
+	82	[-]	GETGLOBAL	2 -24	; CloseShop
+	83	[-]	CALL     	2 1 1
+	84	[-]	GETGLOBAL	2 -25	; HaltAllAI
+	85	[-]	CALL     	2 1 1
+	86	[-]	GETGLOBAL	2 -26	; LuaForEachChampion
+	87	[-]	GETGLOBAL	3 -27	; TEAM_UNKNOWN
+	88	[-]	LOADK    	4 -28	; "ChampionEoGCeremony"
+	89	[-]	CALL     	2 3 1
+	90	[-]	GETGLOBAL	2 -29	; InitTimer
+	91	[-]	LOADK    	3 -30	; "DestroyNexusPhase"
+	92	[-]	GETGLOBAL	4 -31	; GetEoGNexusChangeSkinTime
+	93	[-]	CALL     	4 1 2
+	94	[-]	LOADBOOL 	5 0 0
+	95	[-]	CALL     	2 4 1
+	96	[-]	GETGLOBAL	2 -32	; SetWinningTeam
+	97	[-]	GETGLOBAL	3 -2	; winningTeam
+	98	[-]	CALL     	2 2 1
+	99	[-]	RETURN   	0 1
+constants (32) for 00000169C9CB37E0:
+	1	"BeginEndOfGame"
+	2	"winningTeam"
+	3	"TEAM_ORDER"
+	4	"losingTeam"
+	5	"TEAM_CHAOS"
+	6	"losingHQPosition"
+	7	"GetPosition"
+	8	"orderHQ"
+	9	"GetHQ"
+	10	"SetInvulnerable"
+	11	"SetTargetable"
+	12	"SetBuildingHealthRegenEnabled"
+	13	"chaosHQ"
+	14	"SetInputLockForAllClients"
+	15	"INPUT_LOCK_CAMERALOCKING"
+	16	"INPUT_LOCK_CAMERAMOVEMENT"
+	17	"INPUT_LOCK_ABILITIES"
+	18	"INPUT_LOCK_SUMMONERSPELLS"
+	19	"INPUT_LOCK_MOVEMENT"
+	20	"INPUT_LOCK_SHOP"
+	21	"INPUT_LOCK_MINIMAPMOVEMENT"
+	22	"DisableHUDForEndOfGame"
+	23	"SetBarracksSpawnEnabled"
+	24	"CloseShop"
+	25	"HaltAllAI"
+	26	"LuaForEachChampion"
+	27	"TEAM_UNKNOWN"
+	28	"ChampionEoGCeremony"
+	29	"InitTimer"
+	30	"DestroyNexusPhase"
+	31	"GetEoGNexusChangeSkinTime"
+	32	"SetWinningTeam"
+locals (0) for 00000169C9CB37E0:
+upvalues (0) for 00000169C9CB37E0:
+
+function <?:61,66> (12 instructions, 48 bytes at 00000169C9CB1BE0)
+1 param, 6 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; MoveCameraFromCurrentPositionToPoint
+	2	[-]	MOVE     	2 0
+	3	[-]	GETGLOBAL	3 -2	; losingHQPosition
+	4	[-]	GETGLOBAL	4 -3	; GetEoGPanToHQTime
+	5	[-]	CALL     	4 1 2
+	6	[-]	LOADBOOL 	5 1 0
+	7	[-]	CALL     	1 5 1
+	8	[-]	GETGLOBAL	1 -4	; SetGreyscaleEnabledWhenDead
+	9	[-]	MOVE     	2 0
+	10	[-]	LOADBOOL 	3 0 0
+	11	[-]	CALL     	1 3 1
+	12	[-]	RETURN   	0 1
+constants (4) for 00000169C9CB1BE0:
+	1	"MoveCameraFromCurrentPositionToPoint"
+	2	"losingHQPosition"
+	3	"GetEoGPanToHQTime"
+	4	"SetGreyscaleEnabledWhenDead"
+locals (0) for 00000169C9CB1BE0:
+upvalues (0) for 00000169C9CB1BE0:
+
+function <?:68,86> (31 instructions, 124 bytes at 00000169C9CB1C60)
+0 params, 4 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetEoGUseNexusDeathAnimation
+	2	[-]	CALL     	0 1 2
+	3	[-]	EQ       	0 0 -2	; - false
+	4	[-]	JMP      	4	; to 9
+	5	[-]	GETGLOBAL	0 -3	; SetHQCurrentSkin
+	6	[-]	GETGLOBAL	1 -4	; losingTeam
+	7	[-]	GETGLOBAL	2 -5	; EOG_DESTROYED_NEXUS_SKIN
+	8	[-]	CALL     	0 3 1
+	9	[-]	GETGLOBAL	0 -6	; FadeMinions
+	10	[-]	GETGLOBAL	1 -4	; losingTeam
+	11	[-]	GETGLOBAL	2 -7	; EOG_MINION_FADE_AMOUNT
+	12	[-]	GETGLOBAL	3 -8	; EOG_MINION_FADE_TIME
+	13	[-]	CALL     	0 4 1
+	14	[-]	GETGLOBAL	0 -9	; InitTimer
+	15	[-]	LOADK    	1 -10	; "StopRenderingMinionsPhase"
+	16	[-]	GETGLOBAL	2 -8	; EOG_MINION_FADE_TIME
+	17	[-]	LOADBOOL 	3 0 0
+	18	[-]	CALL     	0 4 1
+	19	[-]	GETGLOBAL	0 -12	; EOG_SCOREBOARD_PHASE_DELAY_TIME_DEFAULT
+	20	[-]	SETGLOBAL	0 -11	; scoreboardPhaseDelay
+	21	[-]	GETGLOBAL	0 -13	; EOG_SCOREBOARD_PHASE_DELAY_TIME
+	22	[-]	EQ       	1 0 -14	; - nil
+	23	[-]	JMP      	2	; to 26
+	24	[-]	GETGLOBAL	0 -13	; EOG_SCOREBOARD_PHASE_DELAY_TIME
+	25	[-]	SETGLOBAL	0 -11	; scoreboardPhaseDelay
+	26	[-]	GETGLOBAL	0 -9	; InitTimer
+	27	[-]	LOADK    	1 -15	; "ScoreboardPhase"
+	28	[-]	GETGLOBAL	2 -11	; scoreboardPhaseDelay
+	29	[-]	LOADBOOL 	3 0 0
+	30	[-]	CALL     	0 4 1
+	31	[-]	RETURN   	0 1
+constants (15) for 00000169C9CB1C60:
+	1	"GetEoGUseNexusDeathAnimation"
+	2	false
+	3	"SetHQCurrentSkin"
+	4	"losingTeam"
+	5	"EOG_DESTROYED_NEXUS_SKIN"
+	6	"FadeMinions"
+	7	"EOG_MINION_FADE_AMOUNT"
+	8	"EOG_MINION_FADE_TIME"
+	9	"InitTimer"
+	10	"StopRenderingMinionsPhase"
+	11	"scoreboardPhaseDelay"
+	12	"EOG_SCOREBOARD_PHASE_DELAY_TIME_DEFAULT"
+	13	"EOG_SCOREBOARD_PHASE_DELAY_TIME"
+	14	nil
+	15	"ScoreboardPhase"
+locals (0) for 00000169C9CB1C60:
+upvalues (0) for 00000169C9CB1C60:
+
+function <?:88,90> (5 instructions, 20 bytes at 00000169C9CB1D70)
+0 params, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SetMinionsNoRender
+	2	[-]	GETGLOBAL	1 -2	; losingTeam
+	3	[-]	LOADBOOL 	2 1 0
+	4	[-]	CALL     	0 3 1
+	5	[-]	RETURN   	0 1
+constants (2) for 00000169C9CB1D70:
+	1	"SetMinionsNoRender"
+	2	"losingTeam"
+locals (0) for 00000169C9CB1D70:
+upvalues (0) for 00000169C9CB1D70:
+
+function <?:92,95> (7 instructions, 28 bytes at 00000169C9CB5130)
+0 params, 3 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SetInputLockForAllClients
+	2	[-]	GETGLOBAL	1 -2	; INPUT_LOCK_CHAT
+	3	[-]	LOADBOOL 	2 1 0
+	4	[-]	CALL     	0 3 1
+	5	[-]	GETGLOBAL	0 -3	; EndGame
+	6	[-]	CALL     	0 1 1
+	7	[-]	RETURN   	0 1
+constants (3) for 00000169C9CB5130:
+	1	"SetInputLockForAllClients"
+	2	"INPUT_LOCK_CHAT"
+	3	"EndGame"
+locals (0) for 00000169C9CB5130:
+upvalues (0) for 00000169C9CB5130:
+
+function <?:97,100> (5 instructions, 20 bytes at 00000169C9CB51B0)
+0 params, 3 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SetHQCurrentSkin
+	2	[-]	GETGLOBAL	1 -2	; losingTeam
+	3	[-]	GETGLOBAL	2 -3	; EOG_ALIVE_NEXUS_SKIN
+	4	[-]	CALL     	0 3 1
+	5	[-]	RETURN   	0 1
+constants (3) for 00000169C9CB51B0:
+	1	"SetHQCurrentSkin"
+	2	"losingTeam"
+	3	"EOG_ALIVE_NEXUS_SKIN"
+locals (0) for 00000169C9CB51B0:
+upvalues (0) for 00000169C9CB51B0:

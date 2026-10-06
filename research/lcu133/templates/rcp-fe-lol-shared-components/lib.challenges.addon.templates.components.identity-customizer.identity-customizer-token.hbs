@@ -1,0 +1,20 @@
+{{#if isTooltipEnabled}}
+  {{#uikit-tooltip tooltipPosition="right" type="system"}}
+    {{challenge-item-tooltip challengeData=challengeData animationsEnabled=false}}
+  {{/uikit-tooltip}}
+{{/if}}
+{{#if isAssigned}}
+  <div class="identity-customizer-token-border">
+  </>
+{{/if}}
+{{#if isSelectedToken}}
+  <div class="identity-customizer-token-border-current">
+  </>
+{{/if}}
+{{#if showNotificationPip}}
+  <div class="notification-pip">
+    {{call-to-action-pip}}
+  </>
+{{/if}}
+<img class="identity-customizer-token {{if isCapstone "capstone"}}" src="{{iconPath}}">
+</>

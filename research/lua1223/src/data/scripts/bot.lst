@@ -1,0 +1,473 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 009ABF88)
+0+ params, 2 slots, 0 upvalues, 0 locals, 9 constants, 9 functions
+	1	[-]	CLOSURE  	0 0	; 009A9948
+	2	[-]	SETGLOBAL	0 -1	; OnLostTarget
+	3	[-]	CLOSURE  	0 1	; 009A99E0
+	4	[-]	SETGLOBAL	0 -2	; LoadTask
+	5	[-]	CLOSURE  	0 2	; 009A9A38
+	6	[-]	SETGLOBAL	0 -3	; OnLevelUp
+	7	[-]	CLOSURE  	0 3	; 009A9AE8
+	8	[-]	SETGLOBAL	0 -4	; OnInit
+	9	[-]	CLOSURE  	0 4	; 009A9B40
+	10	[-]	SETGLOBAL	0 -5	; Disable
+	11	[-]	CLOSURE  	0 5	; 009A9B98
+	12	[-]	SETGLOBAL	0 -6	; Enable
+	13	[-]	CLOSURE  	0 6	; 009A9BF0
+	14	[-]	SETGLOBAL	0 -7	; TimerHackDelayedInit
+	15	[-]	CLOSURE  	0 7	; 009AA338
+	16	[-]	SETGLOBAL	0 -8	; AntiKiteTimer
+	17	[-]	CLOSURE  	0 8	; 009A7FA8
+	18	[-]	SETGLOBAL	0 -9	; TimerUpdate
+	19	[-]	RETURN   	0 1
+constants (9) for 009ABF88:
+	1	"OnLostTarget"
+	2	"LoadTask"
+	3	"OnLevelUp"
+	4	"OnInit"
+	5	"Disable"
+	6	"Enable"
+	7	"TimerHackDelayedInit"
+	8	"AntiKiteTimer"
+	9	"TimerUpdate"
+locals (0) for 009ABF88:
+upvalues (0) for 009ABF88:
+
+function <?:1,9> (13 instructions, 52 bytes at 009A9948)
+0 params, 3 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; activeTask
+	2	[-]	EQ       	1 0 -2	; - nil
+	3	[-]	JMP      	9	; to 13
+	4	[-]	GETGLOBAL	0 -3	; getmetatable
+	5	[-]	GETGLOBAL	1 -1	; activeTask
+	6	[-]	CALL     	0 2 2
+	7	[-]	GETTABLE 	1 0 -4	; "OnTargetLost"
+	8	[-]	TEST     	1 0 0
+	9	[-]	JMP      	3	; to 13
+	10	[-]	GETTABLE 	1 0 -4	; "OnTargetLost"
+	11	[-]	GETGLOBAL	2 -1	; activeTask
+	12	[-]	CALL     	1 2 1
+	13	[-]	RETURN   	0 1
+constants (4) for 009A9948:
+	1	"activeTask"
+	2	nil
+	3	"getmetatable"
+	4	"OnTargetLost"
+locals (0) for 009A9948:
+upvalues (0) for 009A9948:
+
+function <?:11,15> (6 instructions, 24 bytes at 009A99E0)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; LoadScript
+	2	[-]	MOVE     	2 0
+	3	[-]	CALL     	1 2 2
+	4	[-]	SETTABLE 	1 -2 1	; "__index" -
+	5	[-]	RETURN   	1 2
+	6	[-]	RETURN   	0 1
+constants (2) for 009A99E0:
+	1	"LoadScript"
+	2	"__index"
+locals (0) for 009A99E0:
+upvalues (0) for 009A99E0:
+
+function <?:17,19> (7 instructions, 28 bytes at 009A9A38)
+0 params, 5 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; UpgradeSpellsInOrder
+	2	[-]	LOADK    	1 -2	; 4
+	3	[-]	LOADK    	2 -3	; 2
+	4	[-]	LOADK    	3 -4	; 3
+	5	[-]	LOADK    	4 -5	; 1
+	6	[-]	CALL     	0 5 1
+	7	[-]	RETURN   	0 1
+constants (5) for 009A9A38:
+	1	"UpgradeSpellsInOrder"
+	2	4
+	3	2
+	4	3
+	5	1
+locals (0) for 009A9A38:
+upvalues (0) for 009A9A38:
+
+function <?:21,24> (6 instructions, 24 bytes at 009A9AE8)
+0 params, 4 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; InitTimer
+	2	[-]	LOADK    	1 -2	; "TimerHackDelayedInit"
+	3	[-]	LOADK    	2 -3	; 1
+	4	[-]	LOADBOOL 	3 0 0
+	5	[-]	CALL     	0 4 1
+	6	[-]	RETURN   	0 1
+constants (3) for 009A9AE8:
+	1	"InitTimer"
+	2	"TimerHackDelayedInit"
+	3	1
+locals (0) for 009A9AE8:
+upvalues (0) for 009A9AE8:
+
+function <?:26,28> (4 instructions, 16 bytes at 009A9B40)
+0 params, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; StopTimer
+	2	[-]	LOADK    	1 -2	; "TimerUpdate"
+	3	[-]	CALL     	0 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 009A9B40:
+	1	"StopTimer"
+	2	"TimerUpdate"
+locals (0) for 009A9B40:
+upvalues (0) for 009A9B40:
+
+function <?:30,32> (4 instructions, 16 bytes at 009A9B98)
+0 params, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; ResetAndStartTimer
+	2	[-]	LOADK    	1 -2	; "TimerUpdate"
+	3	[-]	CALL     	0 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 009A9B98:
+	1	"ResetAndStartTimer"
+	2	"TimerUpdate"
+locals (0) for 009A9B98:
+upvalues (0) for 009A9B98:
+
+function <?:35,138> (162 instructions, 648 bytes at 009A9BF0)
+0 params, 18 slots, 0 upvalues, 0 locals, 37 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; LoadTask
+	2	[-]	LOADK    	1 -2	; "TaskPushLane.lua"
+	3	[-]	CALL     	0 2 2
+	4	[-]	GETGLOBAL	1 -1	; LoadTask
+	5	[-]	LOADK    	2 -3	; "TaskRetreat.lua"
+	6	[-]	CALL     	1 2 2
+	7	[-]	GETGLOBAL	2 -1	; LoadTask
+	8	[-]	LOADK    	3 -4	; "TaskDefendStructure.lua"
+	9	[-]	CALL     	2 2 2
+	10	[-]	GETGLOBAL	3 -1	; LoadTask
+	11	[-]	LOADK    	4 -5	; "TaskBuyItem.lua"
+	12	[-]	CALL     	3 2 2
+	13	[-]	GETGLOBAL	4 -1	; LoadTask
+	14	[-]	LOADK    	5 -6	; "TaskKillHero.lua"
+	15	[-]	CALL     	4 2 2
+	16	[-]	GETGLOBAL	5 -1	; LoadTask
+	17	[-]	LOADK    	6 -7	; "TaskCastSpell.lua"
+	18	[-]	CALL     	5 2 2
+	19	[-]	GETGLOBAL	6 -1	; LoadTask
+	20	[-]	LOADK    	7 -8	; "TaskKillMinion.lua"
+	21	[-]	CALL     	6 2 2
+	22	[-]	GETGLOBAL	7 -1	; LoadTask
+	23	[-]	LOADK    	8 -9	; "TaskKillTower.lua"
+	24	[-]	CALL     	7 2 2
+	25	[-]	NEWTABLE 	8 0 0
+	26	[-]	SETGLOBAL	8 -10	; tasks
+	27	[-]	NEWTABLE 	8 0 0
+	28	[-]	GETGLOBAL	9 -11	; setmetatable
+	29	[-]	MOVE     	10 8
+	30	[-]	MOVE     	11 5
+	31	[-]	CALL     	9 3 1
+	32	[-]	SETTABLE 	8 -12 -13	; "Name" "CastSpell"
+	33	[-]	GETGLOBAL	9 -14	; table
+	34	[-]	GETTABLE 	9 9 -15	; "insert"
+	35	[-]	GETGLOBAL	10 -10	; tasks
+	36	[-]	MOVE     	11 8
+	37	[-]	CALL     	9 3 1
+	38	[-]	NEWTABLE 	8 0 0
+	39	[-]	GETGLOBAL	9 -11	; setmetatable
+	40	[-]	MOVE     	10 8
+	41	[-]	MOVE     	11 1
+	42	[-]	CALL     	9 3 1
+	43	[-]	SETTABLE 	8 -12 -16	; "Name" "Retreat"
+	44	[-]	GETGLOBAL	9 -14	; table
+	45	[-]	GETTABLE 	9 9 -15	; "insert"
+	46	[-]	GETGLOBAL	10 -10	; tasks
+	47	[-]	MOVE     	11 8
+	48	[-]	CALL     	9 3 1
+	49	[-]	NEWTABLE 	8 0 0
+	50	[-]	GETGLOBAL	9 -11	; setmetatable
+	51	[-]	MOVE     	10 8
+	52	[-]	MOVE     	11 6
+	53	[-]	CALL     	9 3 1
+	54	[-]	SETTABLE 	8 -12 -17	; "Name" "KillLowHPMinion"
+	55	[-]	GETGLOBAL	9 -14	; table
+	56	[-]	GETTABLE 	9 9 -15	; "insert"
+	57	[-]	GETGLOBAL	10 -10	; tasks
+	58	[-]	MOVE     	11 8
+	59	[-]	CALL     	9 3 1
+	60	[-]	NEWTABLE 	8 0 0
+	61	[-]	GETGLOBAL	9 -11	; setmetatable
+	62	[-]	MOVE     	10 8
+	63	[-]	MOVE     	11 7
+	64	[-]	CALL     	9 3 1
+	65	[-]	SETTABLE 	8 -12 -18	; "Name" "KillNearbyStruct"
+	66	[-]	GETGLOBAL	9 -14	; table
+	67	[-]	GETTABLE 	9 9 -15	; "insert"
+	68	[-]	GETGLOBAL	10 -10	; tasks
+	69	[-]	MOVE     	11 8
+	70	[-]	CALL     	9 3 1
+	71	[-]	LOADK    	8 -19	; 0
+	72	[-]	LOADK    	9 -20	; 2
+	73	[-]	LOADK    	10 -21	; 1
+	74	[-]	FORPREP  	8 15	; to 90
+	75	[-]	NEWTABLE 	12 0 0
+	76	[-]	SETTABLE 	12 -22 11	; "LaneID" -
+	77	[-]	LOADK    	13 -23	; "Push Lane "
+	78	[-]	MOVE     	14 11
+	79	[-]	CONCAT   	13 13 14
+	80	[-]	SETTABLE 	12 -12 13	; "Name" -
+	81	[-]	GETGLOBAL	13 -11	; setmetatable
+	82	[-]	MOVE     	14 12
+	83	[-]	MOVE     	15 0
+	84	[-]	CALL     	13 3 1
+	85	[-]	GETGLOBAL	13 -14	; table
+	86	[-]	GETTABLE 	13 13 -15	; "insert"
+	87	[-]	GETGLOBAL	14 -10	; tasks
+	88	[-]	MOVE     	15 12
+	89	[-]	CALL     	13 3 1
+	90	[-]	FORLOOP  	8 -16	; to 75
+	91	[-]	GETGLOBAL	8 -24	; GetStructures
+	92	[-]	GETGLOBAL	9 -25	; GetTeam
+	93	[-]	CALL     	9 1 0
+	94	[-]	CALL     	8 0 2
+	95	[-]	LOADK    	9 -21	; 1
+	96	[-]	LEN      	10 8
+	97	[-]	LOADK    	11 -21	; 1
+	98	[-]	FORPREP  	9 20	; to 119
+	99	[-]	NEWTABLE 	13 0 0
+	100	[-]	GETTABLE 	14 8 12
+	101	[-]	SETTABLE 	13 -26 14	; "StructureID" -
+	102	[-]	LOADK    	14 -27	; "Defend "
+	103	[-]	GETGLOBAL	15 -28	; objGetName
+	104	[-]	GETGLOBAL	16 -29	; GetObject
+	105	[-]	GETTABLE 	17 8 12
+	106	[-]	CALL     	16 2 0
+	107	[-]	CALL     	15 0 2
+	108	[-]	CONCAT   	14 14 15
+	109	[-]	SETTABLE 	13 -12 14	; "Name" -
+	110	[-]	GETGLOBAL	14 -11	; setmetatable
+	111	[-]	MOVE     	15 13
+	112	[-]	MOVE     	16 2
+	113	[-]	CALL     	14 3 1
+	114	[-]	GETGLOBAL	14 -14	; table
+	115	[-]	GETTABLE 	14 14 -15	; "insert"
+	116	[-]	GETGLOBAL	15 -10	; tasks
+	117	[-]	MOVE     	16 13
+	118	[-]	CALL     	14 3 1
+	119	[-]	FORLOOP  	9 -21	; to 99
+	120	[-]	NEWTABLE 	9 0 0
+	121	[-]	GETGLOBAL	10 -11	; setmetatable
+	122	[-]	MOVE     	11 9
+	123	[-]	MOVE     	12 3
+	124	[-]	CALL     	10 3 1
+	125	[-]	SETTABLE 	9 -12 -30	; "Name" "Buy Item"
+	126	[-]	GETGLOBAL	10 -14	; table
+	127	[-]	GETTABLE 	10 10 -15	; "insert"
+	128	[-]	GETGLOBAL	11 -10	; tasks
+	129	[-]	MOVE     	12 9
+	130	[-]	CALL     	10 3 1
+	131	[-]	GETGLOBAL	9 -31	; GetHeroes
+	132	[-]	GETGLOBAL	10 -32	; GetOtherTeam
+	133	[-]	CALL     	10 1 0
+	134	[-]	CALL     	9 0 2
+	135	[-]	LOADK    	10 -21	; 1
+	136	[-]	LEN      	11 9
+	137	[-]	LOADK    	12 -21	; 1
+	138	[-]	FORPREP  	10 17	; to 156
+	139	[-]	NEWTABLE 	14 0 0
+	140	[-]	SETTABLE 	14 -33 13	; "HeroIDIndex" -
+	141	[-]	LOADK    	15 -34	; "Kill Hero "
+	142	[-]	GETGLOBAL	16 -28	; objGetName
+	143	[-]	GETTABLE 	17 9 13
+	144	[-]	CALL     	16 2 2
+	145	[-]	CONCAT   	15 15 16
+	146	[-]	SETTABLE 	14 -12 15	; "Name" -
+	147	[-]	GETGLOBAL	15 -11	; setmetatable
+	148	[-]	MOVE     	16 14
+	149	[-]	MOVE     	17 4
+	150	[-]	CALL     	15 3 1
+	151	[-]	GETGLOBAL	15 -14	; table
+	152	[-]	GETTABLE 	15 15 -15	; "insert"
+	153	[-]	GETGLOBAL	16 -10	; tasks
+	154	[-]	MOVE     	17 14
+	155	[-]	CALL     	15 3 1
+	156	[-]	FORLOOP  	10 -18	; to 139
+	157	[-]	GETGLOBAL	10 -35	; InitTimer
+	158	[-]	LOADK    	11 -36	; "TimerUpdate"
+	159	[-]	LOADK    	12 -37	; 0.25
+	160	[-]	LOADBOOL 	13 1 0
+	161	[-]	CALL     	10 4 1
+	162	[-]	RETURN   	0 1
+constants (37) for 009A9BF0:
+	1	"LoadTask"
+	2	"TaskPushLane.lua"
+	3	"TaskRetreat.lua"
+	4	"TaskDefendStructure.lua"
+	5	"TaskBuyItem.lua"
+	6	"TaskKillHero.lua"
+	7	"TaskCastSpell.lua"
+	8	"TaskKillMinion.lua"
+	9	"TaskKillTower.lua"
+	10	"tasks"
+	11	"setmetatable"
+	12	"Name"
+	13	"CastSpell"
+	14	"table"
+	15	"insert"
+	16	"Retreat"
+	17	"KillLowHPMinion"
+	18	"KillNearbyStruct"
+	19	0
+	20	2
+	21	1
+	22	"LaneID"
+	23	"Push Lane "
+	24	"GetStructures"
+	25	"GetTeam"
+	26	"StructureID"
+	27	"Defend "
+	28	"objGetName"
+	29	"GetObject"
+	30	"Buy Item"
+	31	"GetHeroes"
+	32	"GetOtherTeam"
+	33	"HeroIDIndex"
+	34	"Kill Hero "
+	35	"InitTimer"
+	36	"TimerUpdate"
+	37	0.25
+locals (0) for 009A9BF0:
+upvalues (0) for 009A9BF0:
+
+function <?:140,149> (14 instructions, 56 bytes at 009AA338)
+0 params, 3 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; activeTask
+	2	[-]	GETTABLE 	0 0 -2	; "HeroID"
+	3	[-]	TEST     	0 0 0
+	4	[-]	JMP      	9	; to 14
+	5	[-]	GETGLOBAL	0 -3	; getmetatable
+	6	[-]	GETGLOBAL	1 -1	; activeTask
+	7	[-]	CALL     	0 2 2
+	8	[-]	GETTABLE 	1 0 -4	; "AntiKiteTimer"
+	9	[-]	TEST     	1 0 0
+	10	[-]	JMP      	3	; to 14
+	11	[-]	GETTABLE 	1 0 -4	; "AntiKiteTimer"
+	12	[-]	GETGLOBAL	2 -1	; activeTask
+	13	[-]	CALL     	1 2 1
+	14	[-]	RETURN   	0 1
+constants (4) for 009AA338:
+	1	"activeTask"
+	2	"HeroID"
+	3	"getmetatable"
+	4	"AntiKiteTimer"
+locals (0) for 009AA338:
+upvalues (0) for 009AA338:
+
+function <?:151,195> (92 instructions, 368 bytes at 009A7FA8)
+0 params, 10 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; tasks
+	2	[-]	GETGLOBAL	1 -1	; tasks
+	3	[-]	LEN      	1 1
+	4	[-]	GETTABLE 	0 0 1
+	5	[-]	GETGLOBAL	1 -1	; tasks
+	6	[-]	LEN      	1 1
+	7	[-]	LOADK    	2 -2	; 1
+	8	[-]	LOADK    	3 -3	; -1
+	9	[-]	FORPREP  	1 36	; to 46
+	10	[-]	GETGLOBAL	5 -1	; tasks
+	11	[-]	GETTABLE 	5 5 4
+	12	[-]	SELF     	5 5 -4	; "UpdatePriority"
+	13	[-]	CALL     	5 2 1
+	14	[-]	GETGLOBAL	5 -1	; tasks
+	15	[-]	GETTABLE 	5 5 4
+	16	[-]	GETTABLE 	5 5 -5	; "Done"
+	17	[-]	TEST     	5 0 0
+	18	[-]	JMP      	19	; to 38
+	19	[-]	GETGLOBAL	5 -6	; activeTask
+	20	[-]	GETGLOBAL	6 -1	; tasks
+	21	[-]	GETTABLE 	6 6 4
+	22	[-]	EQ       	0 5 6
+	23	[-]	JMP      	2	; to 26
+	24	[-]	LOADNIL  	5 5
+	25	[-]	SETGLOBAL	5 -6	; activeTask
+	26	[-]	GETGLOBAL	5 -7	; SetDebugSlotText
+	27	[-]	GETGLOBAL	6 -1	; tasks
+	28	[-]	LEN      	6 6
+	29	[-]	LOADK    	7 -8	; ""
+	30	[-]	LOADK    	8 -9	; 0
+	31	[-]	CALL     	5 4 1
+	32	[-]	GETGLOBAL	5 -10	; table
+	33	[-]	GETTABLE 	5 5 -11	; "remove"
+	34	[-]	GETGLOBAL	6 -1	; tasks
+	35	[-]	MOVE     	7 4
+	36	[-]	CALL     	5 3 1
+	37	[-]	JMP      	8	; to 46
+	38	[-]	GETGLOBAL	5 -1	; tasks
+	39	[-]	GETTABLE 	5 5 4
+	40	[-]	GETTABLE 	5 5 -12	; "Priority"
+	41	[-]	GETTABLE 	6 0 -12	; "Priority"
+	42	[-]	LT       	0 6 5
+	43	[-]	JMP      	2	; to 46
+	44	[-]	GETGLOBAL	5 -1	; tasks
+	45	[-]	GETTABLE 	0 5 4
+	46	[-]	FORLOOP  	1 -37	; to 10
+	47	[-]	LOADK    	1 -2	; 1
+	48	[-]	GETGLOBAL	2 -1	; tasks
+	49	[-]	LEN      	2 2
+	50	[-]	LOADK    	3 -2	; 1
+	51	[-]	FORPREP  	1 21	; to 73
+	52	[-]	GETGLOBAL	5 -1	; tasks
+	53	[-]	GETTABLE 	5 5 4
+	54	[-]	EQ       	0 0 5
+	55	[-]	JMP      	3	; to 59
+	56	[-]	LOADK    	5 -2	; 1
+	57	[-]	SETGLOBAL	5 -13	; colorIndex
+	58	[-]	JMP      	2	; to 61
+	59	[-]	LOADK    	5 -9	; 0
+	60	[-]	SETGLOBAL	5 -13	; colorIndex
+	61	[-]	GETGLOBAL	5 -7	; SetDebugSlotText
+	62	[-]	MOVE     	6 4
+	63	[-]	GETGLOBAL	7 -1	; tasks
+	64	[-]	GETTABLE 	7 7 4
+	65	[-]	GETTABLE 	7 7 -14	; "Name"
+	66	[-]	LOADK    	8 -15	; " : "
+	67	[-]	GETGLOBAL	9 -1	; tasks
+	68	[-]	GETTABLE 	9 9 4
+	69	[-]	GETTABLE 	9 9 -12	; "Priority"
+	70	[-]	CONCAT   	7 7 9
+	71	[-]	GETGLOBAL	8 -13	; colorIndex
+	72	[-]	CALL     	5 4 1
+	73	[-]	FORLOOP  	1 -22	; to 52
+	74	[-]	GETGLOBAL	1 -6	; activeTask
+	75	[-]	EQ       	1 0 1
+	76	[-]	JMP      	12	; to 89
+	77	[-]	GETGLOBAL	1 -6	; activeTask
+	78	[-]	EQ       	1 1 -16	; - nil
+	79	[-]	JMP      	5	; to 85
+	80	[-]	GETTABLE 	1 0 -12	; "Priority"
+	81	[-]	GETGLOBAL	2 -6	; activeTask
+	82	[-]	GETTABLE 	2 2 -12	; "Priority"
+	83	[-]	LT       	0 2 1
+	84	[-]	JMP      	4	; to 89
+	85	[-]	SETGLOBAL	0 -6	; activeTask
+	86	[-]	GETGLOBAL	1 -6	; activeTask
+	87	[-]	SELF     	1 1 -17	; "BeginTask"
+	88	[-]	CALL     	1 2 1
+	89	[-]	GETGLOBAL	1 -6	; activeTask
+	90	[-]	SELF     	1 1 -18	; "Tick"
+	91	[-]	CALL     	1 2 1
+	92	[-]	RETURN   	0 1
+constants (18) for 009A7FA8:
+	1	"tasks"
+	2	1
+	3	-1
+	4	"UpdatePriority"
+	5	"Done"
+	6	"activeTask"
+	7	"SetDebugSlotText"
+	8	""
+	9	0
+	10	"table"
+	11	"remove"
+	12	"Priority"
+	13	"colorIndex"
+	14	"Name"
+	15	" : "
+	16	nil
+	17	"BeginTask"
+	18	"Tick"
+locals (0) for 009A7FA8:
+upvalues (0) for 009A7FA8:

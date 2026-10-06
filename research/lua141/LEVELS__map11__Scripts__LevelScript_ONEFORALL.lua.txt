@@ -1,0 +1,134 @@
+
+main <?:0,0> (16 instructions, 64 bytes at 000002243C063740)
+0+ params, 2 slots, 0 upvalues, 0 locals, 8 constants, 5 functions
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "SR_LevelScript"
+	3	[-]	CALL     	0 2 1
+	4	[-]	CLOSURE  	0 0	; 000002243C063850
+	5	[-]	SETGLOBAL	0 -3	; OverrideDefaultDefines
+	6	[-]	CLOSURE  	0 1	; 000002243C061450
+	7	[-]	SETGLOBAL	0 -4	; OverrideDefaultMinionInfo
+	8	[-]	CLOSURE  	0 2	; 000002243C0614D0
+	9	[-]	SETGLOBAL	0 -5	; OverrideDefaultTables
+	10	[-]	CLOSURE  	0 3	; 000002243C061550
+	11	[-]	SETGLOBAL	0 -6	; OverrideMinionSpawnInfo
+	12	[-]	CLOSURE  	0 4	; 000002243C0615F0
+	13	[-]	SETGLOBAL	0 -7	; DoAdditionalPreloads
+	14	[-]	GETGLOBAL	0 -8	; Init
+	15	[-]	CALL     	0 1 1
+	16	[-]	RETURN   	0 1
+constants (8) for 000002243C063740:
+	1	"DoLuaShared"
+	2	"SR_LevelScript"
+	3	"OverrideDefaultDefines"
+	4	"OverrideDefaultMinionInfo"
+	5	"OverrideDefaultTables"
+	6	"OverrideMinionSpawnInfo"
+	7	"DoAdditionalPreloads"
+	8	"Init"
+locals (0) for 000002243C063740:
+upvalues (0) for 000002243C063740:
+
+function <?:6,42> (49 instructions, 196 bytes at 000002243C063850)
+0 params, 2 slots, 0 upvalues, 0 locals, 21 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; 60
+	2	[-]	SETGLOBAL	0 -1	; UPGRADE_MINION_TIMER
+	3	[-]	LOADK    	0 -4	; 480
+	4	[-]	SETGLOBAL	0 -3	; INCREASE_CANNON_RATE_TIMER
+	5	[-]	LOADK    	0 -6	; 1140
+	6	[-]	SETGLOBAL	0 -5	; INCREASE_CANNON_RATE_TIMER2
+	7	[-]	LOADK    	0 -8	; 1.3
+	8	[-]	SETGLOBAL	0 -7	; INCREASED_GOLD_MULTIPLIER
+	9	[-]	LOADK    	0 -10	; 0.3
+	10	[-]	SETGLOBAL	0 -9	; SHARE_MULT_LASTHIT
+	11	[-]	LOADK    	0 -12	; 0.6
+	12	[-]	SETGLOBAL	0 -11	; SHARE_MULT_MISS
+	13	[-]	GETGLOBAL	0 -13	; CANNON_GOLD
+	14	[-]	GETGLOBAL	1 -7	; INCREASED_GOLD_MULTIPLIER
+	15	[-]	MUL      	0 0 1
+	16	[-]	SETGLOBAL	0 -13	; CANNON_GOLD
+	17	[-]	GETGLOBAL	0 -14	; CASTER_GOLD
+	18	[-]	GETGLOBAL	1 -7	; INCREASED_GOLD_MULTIPLIER
+	19	[-]	MUL      	0 0 1
+	20	[-]	SETGLOBAL	0 -14	; CASTER_GOLD
+	21	[-]	GETGLOBAL	0 -15	; MELEE_GOLD
+	22	[-]	GETGLOBAL	1 -7	; INCREASED_GOLD_MULTIPLIER
+	23	[-]	MUL      	0 0 1
+	24	[-]	SETGLOBAL	0 -15	; MELEE_GOLD
+	25	[-]	GETGLOBAL	0 -9	; SHARE_MULT_LASTHIT
+	26	[-]	GETGLOBAL	1 -13	; CANNON_GOLD
+	27	[-]	MUL      	0 0 1
+	28	[-]	SETGLOBAL	0 -16	; CANNON_SHARE_LASTHIT
+	29	[-]	GETGLOBAL	0 -11	; SHARE_MULT_MISS
+	30	[-]	GETGLOBAL	1 -13	; CANNON_GOLD
+	31	[-]	MUL      	0 0 1
+	32	[-]	SETGLOBAL	0 -17	; CANNON_SHARE_MISS
+	33	[-]	GETGLOBAL	0 -9	; SHARE_MULT_LASTHIT
+	34	[-]	GETGLOBAL	1 -14	; CASTER_GOLD
+	35	[-]	MUL      	0 0 1
+	36	[-]	SETGLOBAL	0 -18	; CASTER_SHARE_LASTHIT
+	37	[-]	GETGLOBAL	0 -11	; SHARE_MULT_MISS
+	38	[-]	GETGLOBAL	1 -14	; CASTER_GOLD
+	39	[-]	MUL      	0 0 1
+	40	[-]	SETGLOBAL	0 -19	; CASTER_SHARE_MISS
+	41	[-]	GETGLOBAL	0 -9	; SHARE_MULT_LASTHIT
+	42	[-]	GETGLOBAL	1 -15	; MELEE_GOLD
+	43	[-]	MUL      	0 0 1
+	44	[-]	SETGLOBAL	0 -20	; MELEE_SHARE_LASTHIT
+	45	[-]	GETGLOBAL	0 -11	; SHARE_MULT_MISS
+	46	[-]	GETGLOBAL	1 -15	; MELEE_GOLD
+	47	[-]	MUL      	0 0 1
+	48	[-]	SETGLOBAL	0 -21	; MELEE_SHARE_MISS
+	49	[-]	RETURN   	0 1
+constants (21) for 000002243C063850:
+	1	"UPGRADE_MINION_TIMER"
+	2	60
+	3	"INCREASE_CANNON_RATE_TIMER"
+	4	480
+	5	"INCREASE_CANNON_RATE_TIMER2"
+	6	1140
+	7	"INCREASED_GOLD_MULTIPLIER"
+	8	1.3
+	9	"SHARE_MULT_LASTHIT"
+	10	0.3
+	11	"SHARE_MULT_MISS"
+	12	0.6
+	13	"CANNON_GOLD"
+	14	"CASTER_GOLD"
+	15	"MELEE_GOLD"
+	16	"CANNON_SHARE_LASTHIT"
+	17	"CANNON_SHARE_MISS"
+	18	"CASTER_SHARE_LASTHIT"
+	19	"CASTER_SHARE_MISS"
+	20	"MELEE_SHARE_LASTHIT"
+	21	"MELEE_SHARE_MISS"
+locals (0) for 000002243C063850:
+upvalues (0) for 000002243C063850:
+
+function <?:44,45> (1 instruction, 4 bytes at 000002243C061450)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000002243C061450:
+locals (0) for 000002243C061450:
+upvalues (0) for 000002243C061450:
+
+function <?:47,48> (1 instruction, 4 bytes at 000002243C0614D0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000002243C0614D0:
+locals (0) for 000002243C0614D0:
+upvalues (0) for 000002243C0614D0:
+
+function <?:50,51> (1 instruction, 4 bytes at 000002243C061550)
+3 params, 3 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000002243C061550:
+locals (0) for 000002243C061550:
+upvalues (0) for 000002243C061550:
+
+function <?:53,54> (1 instruction, 4 bytes at 000002243C0615F0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000002243C0615F0:
+locals (0) for 000002243C0615F0:
+upvalues (0) for 000002243C0615F0:

@@ -1,0 +1,42 @@
+<header class="alias-create__header">
+  {{header}}
+</>
+<div class="alias-create__content">
+  <header class="alias-create__content__header">
+    {{sanitize subhead}}
+  </>
+  <form onsubmit={{action this "createName"}} class="alias-create__content__form">
+    <lol-uikit-flat-input class="alias-create__content__game-name alias-create__content__input">
+      {{input name="game_name" type="text" value=(mut gameName) key-press=(action this "onInputChanged") placeholder=tra.alias_create_placeholder_game_name}}
+      <span class="alias-create__content__character-count {{gameNameCountClass}}">
+        {{gameNameCount}}
+      </>
+    </>
+    {{#if isTaglineCustomizable}}
+      <span class="alias-create__content__separator">
+        #
+      </>
+      <lol-uikit-flat-input class="alias-create__content__tag-line alias-create__content__input">
+        {{input name="tag_line" type="text" value=(mut tagLine) key-press=(action this "onInputChanged") placeholder=tra.alias_create_placeholder_tag_line}}
+        <span class="alias-create__content__character-count {{tagLineCountClass}}">
+          {{tagLineCount}}
+        </>
+      </>
+    {{/if}}
+    {{#if isLoading}}
+      {{uikit-spinner class="alias-create__content__icon alias-create__content__icon--loading"}}
+    {{else}}
+      <span class="alias-create__content__icon {{iconClass}}">
+      </>
+    {{/if}}
+  </>
+  <div class="alias-create__content__message {{messageClass}}">
+    {{#if message}}
+      {{get tra message}}
+    {{else}}
+    {{/if}}
+  </>
+</>
+<footer class="alias-create__footer">
+  {{arrow-footer removeCloseButton=true confirmButtonText=button confirmButtonHoverSound=startButtonSoundHover confirmButtonClickSound=startButtonSoundClick confirmButtonDisabled=disableRegisterButton confirmButtonClicked="createName"}}
+</>

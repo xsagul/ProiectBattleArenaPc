@@ -1,0 +1,96 @@
+{
+  "name": "ConditionFloatClipData",
+  "hash": "0x8ebbe9e2",
+  "interface": false,
+  "value": false,
+  "bases": [
+    "ClipBaseData"
+  ],
+  "since": null,
+  "removedIn": null,
+  "properties": [
+    {
+      "name": "DontStompTransitionClip",
+      "hash": "0x92213dee",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "false"
+    },
+    {
+      "name": "SyncFrameOnChangeAnim",
+      "hash": "0x94c90e2b",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "false"
+    },
+    {
+      "name": "Updater",
+      "hash": "0x16860572",
+      "ft": "Pointer",
+      "kt": null,
+      "vt": null,
+      "kh": "0x0ec2d115",
+      "khName": "IFloatParametricUpdater",
+      "khKind": "class",
+      "defaultValue": "null"
+    },
+    {
+      "name": "mChangeAnimationMidPlay",
+      "hash": "0x4628a916",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "false"
+    },
+    {
+      "name": "mChildAnimDelaySwitchTime",
+      "hash": "0xdde40707",
+      "ft": "F32",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "0"
+    },
+    {
+      "name": "mConditionFloatPairDataList",
+      "hash": "0x2329eec5",
+      "ft": "List",
+      "kt": null,
+      "vt": "Embed",
+      "kh": "0x63e48060",
+      "khName": "ConditionFloatPairData",
+      "khKind": "class",
+      "defaultValue": "[]"
+    },
+    {
+      "name": "mPlayAnimChangeFromBeginning",
+      "hash": "0x31db4e6a",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "false"
+    }
+  ],
+  "ancestorLevels": [
+    [
+      "ClipBaseData"
+    ]
+  ],
+  "descendantTree": []
+}

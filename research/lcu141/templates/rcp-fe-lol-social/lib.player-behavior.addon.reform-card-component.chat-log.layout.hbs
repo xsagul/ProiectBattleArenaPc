@@ -1,0 +1,24 @@
+<div class="reform-card-chat-log-header">
+  <h5>
+    {{tra.player_behavior_reform_card_logs_title}}
+  </>
+  <div class="reform-card-chat-log-header-copy-log-container">
+    <a href="#" class="chat-log-header-copy-log-link" {{action this "copyText"}}>
+      {{copyLinkText}}
+    </>
+  </>
+</>
+<div class="reform-card-chat-log-body">
+  {{#each gamesChatLogs as |gameChatLogs|}}
+    <div class="reform-card-chat-log-game">
+      {{gameChatLogs.title}}
+    </>
+    {{#each gameChatLogs.chatLogs as |chatLog|}}
+      <div class="reform-card-chat-log-example">
+        {{summonerName}}
+        :
+        {{chatLog}}
+      </>
+    {{/each}}
+  {{/each}}
+</>

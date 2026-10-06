@@ -1,0 +1,113 @@
+{
+  "name": "AnimationGraphData",
+  "hash": "0xf5fb07c7",
+  "interface": false,
+  "value": true,
+  "bases": [],
+  "since": null,
+  "removedIn": null,
+  "properties": [
+    {
+      "name": "AnimStateGraphEntryClips",
+      "hash": "0x42550484",
+      "ft": "List",
+      "kt": null,
+      "vt": "Hash",
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "[]"
+    },
+    {
+      "name": "mBlendDataTable",
+      "hash": "0x309113ad",
+      "ft": "Map",
+      "kt": "U64",
+      "vt": "Pointer",
+      "kh": "0xbd1b788b",
+      "khName": "BaseBlendData",
+      "khKind": "class",
+      "defaultValue": "{}"
+    },
+    {
+      "name": "mCascadeBlendValue",
+      "hash": "0x1e53f13e",
+      "ft": "F32",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "-1"
+    },
+    {
+      "name": "mClipDataMap",
+      "hash": "0x45e122f8",
+      "ft": "Map",
+      "kt": "Hash",
+      "vt": "Pointer",
+      "kh": "0xe985e7c6",
+      "khName": "ClipBaseData",
+      "khKind": "class",
+      "defaultValue": "{}"
+    },
+    {
+      "name": "mMaskDataMap",
+      "hash": "0xde04746e",
+      "ft": "Map",
+      "kt": "Hash",
+      "vt": "Embed",
+      "kh": "0x2b3c2139",
+      "khName": "MaskData",
+      "khKind": "class",
+      "defaultValue": "{}"
+    },
+    {
+      "name": "mSyncGroupDataMap",
+      "hash": "0xaf884184",
+      "ft": "Map",
+      "kt": "Hash",
+      "vt": "Embed",
+      "kh": "0x666aa92d",
+      "khName": "SyncGroupData",
+      "khKind": "class",
+      "defaultValue": "{}"
+    },
+    {
+      "name": "mTrackDataMap",
+      "hash": "0x38ea85a7",
+      "ft": "Map",
+      "kt": "Hash",
+      "vt": "Embed",
+      "kh": "0x982a3d24",
+      "khName": "TrackData",
+      "khKind": "class",
+      "defaultValue": "{}"
+    },
+    {
+      "name": "mUseCascadeBlend",
+      "hash": "0xc3983aca",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "false"
+    },
+    {
+      "name": "objectPath",
+      "hash": "0x1d369c29",
+      "ft": "Hash",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "since": "16.16",
+      "defaultValue": "\"0x0\""
+    }
+  ],
+  "ancestorLevels": [],
+  "descendantTree": []
+}

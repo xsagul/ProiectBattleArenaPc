@@ -1,0 +1,123 @@
+
+main <?:0,0> (10 instructions, 40 bytes at 0000016BA4A03420)
+0+ params, 2 slots, 0 upvalues, 0 locals, 5 constants, 2 functions
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "SR_NeutralMinionSpawn"
+	3	[-]	CALL     	0 2 1
+	4	[-]	CLOSURE  	0 0	; 0000016BA4A03500
+	5	[-]	SETGLOBAL	0 -3	; OverrideNeutralMinionSpawnDefaults
+	6	[-]	CLOSURE  	0 1	; 0000016BA4A03740
+	7	[-]	SETGLOBAL	0 -4	; NeutralMinionOverride
+	8	[-]	GETGLOBAL	0 -5	; NeutralMinionSpawnInit
+	9	[-]	CALL     	0 1 1
+	10	[-]	RETURN   	0 1
+constants (5) for 0000016BA4A03420:
+	1	"DoLuaShared"
+	2	"SR_NeutralMinionSpawn"
+	3	"OverrideNeutralMinionSpawnDefaults"
+	4	"NeutralMinionOverride"
+	5	"NeutralMinionSpawnInit"
+locals (0) for 0000016BA4A03420:
+upvalues (0) for 0000016BA4A03420:
+
+function <?:6,21> (26 instructions, 104 bytes at 0000016BA4A03500)
+0 params, 2 slots, 0 upvalues, 0 locals, 20 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; 34
+	2	[-]	SETGLOBAL	0 -1	; START_OF_GAME_ADDITIONAL_DELAY_CRAB
+	3	[-]	LOADK    	0 -4	; 4
+	4	[-]	SETGLOBAL	0 -3	; DRAGONS_TO_ELDER
+	5	[-]	LOADK    	0 -6	; 2
+	6	[-]	SETGLOBAL	0 -5	; DRAGONS_TO_TERRAINCHANGE
+	7	[-]	LOADK    	0 -8	; 1
+	8	[-]	SETGLOBAL	0 -7	; DRAGON_REWARDS_PERKILL
+	9	[-]	GETGLOBAL	0 -10	; MINION_SPAWN_START_TIME
+	10	[-]	SUB      	0 -11 0	; 900 -
+	11	[-]	SETGLOBAL	0 -9	; BARON_SPAWN_TIME
+	12	[-]	GETGLOBAL	0 -10	; MINION_SPAWN_START_TIME
+	13	[-]	SUB      	0 -13 0	; 360 -
+	14	[-]	SETGLOBAL	0 -12	; HERALD_SPAWN_TIME
+	15	[-]	GETGLOBAL	0 -10	; MINION_SPAWN_START_TIME
+	16	[-]	SUB      	0 -15 0	; 210 -
+	17	[-]	SETGLOBAL	0 -14	; DRAGON_SPAWN_TIME
+	18	[-]	LOADK    	0 -17	; 270
+	19	[-]	SETGLOBAL	0 -16	; BARON_SPAWN_RATE
+	20	[-]	LOADK    	0 -15	; 210
+	21	[-]	SETGLOBAL	0 -18	; ELEMENTAL_DRAGON_SPAWN_RATE
+	22	[-]	LOADK    	0 -17	; 270
+	23	[-]	SETGLOBAL	0 -19	; ELDER_DRAGON_SPAWN_RATE
+	24	[-]	LOADK    	0 -17	; 270
+	25	[-]	SETGLOBAL	0 -20	; HERALD_SPAWN_RATE
+	26	[-]	RETURN   	0 1
+constants (20) for 0000016BA4A03500:
+	1	"START_OF_GAME_ADDITIONAL_DELAY_CRAB"
+	2	34
+	3	"DRAGONS_TO_ELDER"
+	4	4
+	5	"DRAGONS_TO_TERRAINCHANGE"
+	6	2
+	7	"DRAGON_REWARDS_PERKILL"
+	8	1
+	9	"BARON_SPAWN_TIME"
+	10	"MINION_SPAWN_START_TIME"
+	11	900
+	12	"HERALD_SPAWN_TIME"
+	13	360
+	14	"DRAGON_SPAWN_TIME"
+	15	210
+	16	"BARON_SPAWN_RATE"
+	17	270
+	18	"ELEMENTAL_DRAGON_SPAWN_RATE"
+	19	"ELDER_DRAGON_SPAWN_RATE"
+	20	"HERALD_SPAWN_RATE"
+locals (0) for 0000016BA4A03500:
+upvalues (0) for 0000016BA4A03500:
+
+function <?:23,36> (32 instructions, 128 bytes at 0000016BA4A03740)
+0 params, 3 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; NeutralMinionCamps
+	2	[-]	GETTABLE 	0 0 -2	; 2
+	3	[-]	GETGLOBAL	1 -4	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	4	[-]	GETGLOBAL	2 -5	; CAMP_TIME_OFFSET
+	5	[-]	MUL      	2 2 -2	; - 2
+	6	[-]	ADD      	1 1 2
+	7	[-]	SETTABLE 	0 -3 1	; "GroupDelaySpawnTime" -
+	8	[-]	GETGLOBAL	0 -1	; NeutralMinionCamps
+	9	[-]	GETTABLE 	0 0 -6	; 3
+	10	[-]	GETGLOBAL	1 -4	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	11	[-]	GETGLOBAL	2 -5	; CAMP_TIME_OFFSET
+	12	[-]	MUL      	2 2 -7	; - 1
+	13	[-]	ADD      	1 1 2
+	14	[-]	SETTABLE 	0 -3 1	; "GroupDelaySpawnTime" -
+	15	[-]	GETGLOBAL	0 -1	; NeutralMinionCamps
+	16	[-]	GETTABLE 	0 0 -8	; 8
+	17	[-]	GETGLOBAL	1 -4	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	18	[-]	GETGLOBAL	2 -5	; CAMP_TIME_OFFSET
+	19	[-]	MUL      	2 2 -2	; - 2
+	20	[-]	ADD      	1 1 2
+	21	[-]	SETTABLE 	0 -3 1	; "GroupDelaySpawnTime" -
+	22	[-]	GETGLOBAL	0 -1	; NeutralMinionCamps
+	23	[-]	GETTABLE 	0 0 -9	; 9
+	24	[-]	GETGLOBAL	1 -4	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	25	[-]	GETGLOBAL	2 -5	; CAMP_TIME_OFFSET
+	26	[-]	MUL      	2 2 -7	; - 1
+	27	[-]	ADD      	1 1 2
+	28	[-]	SETTABLE 	0 -3 1	; "GroupDelaySpawnTime" -
+	29	[-]	GETGLOBAL	0 -1	; NeutralMinionCamps
+	30	[-]	GETTABLE 	0 0 -10	; 17
+	31	[-]	SETTABLE 	0 -11 -12	; "StopSpawnTime" 885
+	32	[-]	RETURN   	0 1
+constants (12) for 0000016BA4A03740:
+	1	"NeutralMinionCamps"
+	2	2
+	3	"GroupDelaySpawnTime"
+	4	"START_OF_GAME_MONSTER_SPAWN_DELAY"
+	5	"CAMP_TIME_OFFSET"
+	6	3
+	7	1
+	8	8
+	9	9
+	10	17
+	11	"StopSpawnTime"
+	12	885
+locals (0) for 0000016BA4A03740:
+upvalues (0) for 0000016BA4A03740:

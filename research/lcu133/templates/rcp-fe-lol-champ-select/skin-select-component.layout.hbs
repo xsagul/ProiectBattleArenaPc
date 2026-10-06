@@ -1,0 +1,9 @@
+<div class="{{if isShowingGrid "hidden"}}">
+  {{skin-name skin=viewSkin shouldShowChestAvailability=shouldShowChestAvailability championChestAvailabilityMap=championChestAvailabilityMap}}
+  <div class="skin-carousel-visibility-wrapper {{if skinSelectionDisabled "hidden" "visible"}}">
+    {{skin-carousel carouselSkins=carouselSkins selectedSkinId=selectedSkinId selectedChampionId=selectedChampionId championName=championName allowSkinSelection=allowSkinSelection isSkinGrantedFromBoost=isSkinGrantedFromBoost disabled=isUILockedForGameStart jmxSettings=jmxSettings map=map rootComponentShown=rootComponentShown rootViewSkin=rootViewSkin setCarouselViewSkin="setCarouselViewSkin" uxSettings=uxSettings viewSkin=viewSkin ip=ip rp=rp timer=timer isSkinSelectVisible=isSkinSelectVisible entitledFeatureClassName=entitledFeatureClassName selfEntitledFeatureType=selfEntitledFeatureType recordDidRequestSucceed=recordDidRequestSucceed UseNewLoyaltyIcon=UseNewLoyaltyIcon}}
+  </>
+</>
+{{#if showRerollButton}}
+  {{reroll-button summoner=summoner tbAllowRerolling=tbAllowRerolling tbRerollsRemaining=tbRerollsRemaining disabled=rerollsDisabled entitledFeatureState=entitledFeatureState entitledFeatureClassName=entitledFeatureClassName selfEntitledFeatureType=selfEntitledFeatureType recordDidRequestSucceed=recordDidRequestSucceed}}
+{{/if}}

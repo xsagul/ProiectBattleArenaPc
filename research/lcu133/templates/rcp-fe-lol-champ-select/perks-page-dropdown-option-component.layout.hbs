@@ -1,0 +1,45 @@
+<div class="perks-page-dropdown-option-content">
+  <div class="perks-page-dropdown-option-icon {{iconClassName}}">
+    <lol-perks-glowing-dot class="perks-page-dropdown-option-dot">
+    </>
+  </>
+  <div class="perks-page-name">
+    {{pageName}}
+  </>
+</>
+{{#uikit-tooltip tooltipConfig=tooltipConfig}}
+  <div class="perks-page-dropdown-details ui-dropdown-option-only">
+    <span class="perks-page-dropdown-details-bg" style={{backgroundStyle}}>
+    </>
+    <div class="perks-page-dropdown-details-style-name style{{page.primaryStyle.id}}">
+      <div class="perks-page-dropdown-details-style-icon style{{page.primaryStyle.id}}" style={{primaryIconStyle}}>
+      </>
+      {{page.primaryStyle.name}}
+    </>
+    {{#if selectedPrimaryPerks.length}}
+      <ul class="perks-page-dropdown-details-ul">
+        {{#each selectedPrimaryPerks as |perk|}}
+          <li class="perks-page-dropdown-details-li {{if perk.isKeystone "keystone"}}">
+            {{perk.name}}
+          </>
+        {{/each}}
+      </>
+    {{/if}}
+    {{#if page.subStyle}}
+      <div class="perks-page-dropdown-details-style-name secondary style{{page.subStyle.id}}">
+        <div class="perks-page-dropdown-details-style-icon style{{page.subStyle.id}}" style={{secondaryIconStyle}}>
+        </>
+        {{page.subStyle.name}}
+      </>
+    {{/if}}
+    {{#if selectedSplashedPerks.length}}
+      <ul class="perks-page-dropdown-details-ul">
+        {{#each selectedSplashedPerks as |perk|}}
+          <li class="perks-page-dropdown-details-li">
+            {{perk.name}}
+          </>
+        {{/each}}
+      </>
+    {{/if}}
+  </>
+{{/uikit-tooltip}}

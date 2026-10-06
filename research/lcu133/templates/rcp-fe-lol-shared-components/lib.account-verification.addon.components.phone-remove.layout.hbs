@@ -1,0 +1,40 @@
+<div class="step-container">
+  <h2 class="step-heading">
+    {{tra.account_verification_phone_remove_heading}}
+    {{tra.account_verification_step_heading}}
+    1
+    {{tra.account_verification_of_heading}}
+    2
+  </>
+  <p class="step-body">
+    {{sanitize tra.account_verification_phone_remove_body}}
+  </>
+  <h3 class="field-title">
+    {{tra.account_verification_phone_remove_field_title}}
+  </>
+  <p class="step-body">
+    <strong>
+      {{maskedPhoneNumber}}
+    </>
+  </>
+  {{#if isTokenRequestNotInProgress}}
+    <p class="field-desc">
+      {{tra.account_verification_phone_remove_field_desc}}
+    </>
+  {{else}}
+    <p class="field-desc field-error-text">
+      {{tra.account_verification_phone_remove_token_request_in_progress_error}}
+      {{#if tokenRequestInProgressTimeLeftInSec}}
+        <br>
+        </>
+        {{tra.account_verification_approximate_time_left_in_seconds}}
+        {{tokenRequestInProgressTimeLeftInSec}}
+      {{/if}}
+    </>
+  {{/if}}
+  <lol-uikit-flat-button-group class="step-buttons" type="dialog-frame">
+    <lol-uikit-flat-button onclick={{action this "confirmRemoval"}}>
+      {{tra.account_verification_proceed_button}}
+    </>
+  </>
+</>

@@ -1,0 +1,19 @@
+<div class="reward-progress-bar {{showingFutureProgressClass}}">
+  {{#if isCurrentLevel}}
+    <div class="reward-progress-bar-fill current" style="width: {{levelProgress}}%">
+    </>
+  {{else}}
+    {{#if isCompleted}}
+      <div class="reward-progress-bar-fill completed">
+      </>
+    {{/if}}
+  {{/if}}
+  <div class="reward-progress-bar-fill future" style="width: {{futureProgress}}%">
+  </>
+</>
+<div class="reward-level-zero-indicator {{levelClass}}">
+  <svg class="reward-star-icon" width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5.9999 0.400024L7.5999 4.40002H11.5999L8.3999 6.80002L9.2915 10.8L5.9999 8.40002L2.70831 10.8L3.5999 6.80002L0.399902 4.40002H4.3999L5.9999 0.400024Z">
+    </>
+  </>
+</>

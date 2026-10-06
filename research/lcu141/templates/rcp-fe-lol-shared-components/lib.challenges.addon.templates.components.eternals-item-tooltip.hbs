@@ -1,0 +1,29 @@
+{{challenge-card-header leftDetailClass="eternal" leftValue=leftHeaderValue showLeftHeaderDetail=true rightDetailClass=rightHeaderClass rightValue=rightHeaderValue showRightHeaderDetail=true}}
+<div class="eternals-tooltip-body">
+  <div class="eternals-tooltip-content-container">
+    <img class="eternals-tooltip-content-icon" src="{{eternal.imageUrl}}">
+    </>
+    <div class="eternals-tooltip-content">
+      <div class="eternals-tooltip-content-name">
+        {{eternal.statstoneName}}
+      </>
+      <div class="eternals-tooltip-content-value">
+        {{eternal.value}}
+      </>
+    </>
+  </>
+  <div class="eternals-tooltip-description">
+    {{eternal.description}}
+  </>
+  <div class="challenges-progress-bar-container">
+    <div class="challenges-progress-bar">
+      <div class="eternals-progress-meter-fill {{categoryLowercase}}" style="transform: scaleX({{progressBarFillPercent}}%)">
+      </>
+      <div class="challenges-progress-text">
+        {{eternal.value}}
+        /
+        {{eternal.nextMilestone}}
+      </>
+    </>
+  </>
+</>

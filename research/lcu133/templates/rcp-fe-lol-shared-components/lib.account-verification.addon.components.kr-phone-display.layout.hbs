@@ -1,0 +1,55 @@
+<div class="step-container">
+  <h2 class="step-heading">
+    {{tra.account_verification_kr_phone_display_heading}}
+  </>
+  <p class="step-body">
+    {{sanitize tra.account_verification_kr_phone_display_body}}
+  </>
+  <h3 class="field-title">
+    {{tra.account_verification_kr_phone_display_field_title}}
+  </>
+  {{#if isKrPhoneRegistered}}
+    {{#if isKrSsnRegistered}}
+      <p class="field-desc">
+        {{tra.account_verification_kr_phone_display_field_desc}}
+      </>
+    {{/if}}
+  {{/if}}
+  {{#unless isKrPhoneRegistered}}
+    {{#if isKrSsnRegistered}}
+      <p class="field-desc field-error-text">
+        {{tra.account_verification_kr_phone_display_phone_not_registered_error}}
+        <a href="{{tra.account_verification_kr_phone_display_phone_not_registered_link_address_error}}" target="_blank">
+          {{tra.account_verification_kr_phone_display_phone_not_registered_link_desc_error}}
+        </>
+      </>
+    {{/if}}
+  {{/unless}}
+  {{#unless isKrSsnRegistered}}
+    {{#if isKrPhoneRegistered}}
+      <p class="field-desc field-error-text">
+        {{tra.account_verification_kr_phone_display_ssn_already_registered_error}}
+      </>
+    {{/if}}
+  {{/unless}}
+  {{#unless isTokenRequestNotInProgress}}
+    {{#if isKrSsnRegistered}}
+      {{#if isKrPhoneRegistered}}
+        <p class="field-desc field-error-text">
+          {{tra.account_verification_kr_phone_display_token_request_in_progress_error}}
+          {{#if tokenRequestInProgressTimeLeftInSec}}
+            <br>
+            </>
+            {{tra.account_verification_approximate_time_left_in_seconds}}
+            {{tokenRequestInProgressTimeLeftInSec}}
+          {{/if}}
+        </>
+      {{/if}}
+    {{/if}}
+  {{/unless}}
+  <lol-uikit-flat-button-group class="step-buttons" type="dialog-frame">
+    <lol-uikit-flat-button onclick={{action this "confirmKrVerify"}}>
+      {{tra.account_verification_proceed_button}}
+    </>
+  </>
+</>

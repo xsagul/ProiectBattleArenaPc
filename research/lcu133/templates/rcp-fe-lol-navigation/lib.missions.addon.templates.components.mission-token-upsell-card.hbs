@@ -1,0 +1,23 @@
+{{#unless isDisabled}}
+  <div class="token-upsell-card-root" style="background-image: url({{bgImagePath}});">
+    <div class="token-upsell-icon" style="background-image: url({{currencyImagePath}});">
+    </>
+    <div class="token-upsell-content">
+      <div class="token-upsell-card-title">
+        {{#if isLocked}}
+          <div class="token-upsell-count">
+            {{lockedCount}}
+          </>
+        {{/if}}
+        <div class="token-upsell-subtitle">
+          {{title}}
+        </>
+      </>
+      <div class="store-redirect-button">
+        <lol-uikit-flat-button onclick={{action this "goToStore"}} class="store-redirect">
+          {{buttonText}}
+        </>
+      </>
+    </>
+  </>
+{{/unless}}

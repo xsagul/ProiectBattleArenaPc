@@ -1,0 +1,21 @@
+<div class="quick-play-grid-champion-champion-container" onclick={{action this "handleClick" champion.id}}>
+  {{#if champion.disabled}}
+    {{#uikit-tooltip tooltipPosition="bottom" type="system"}}
+      <lol-uikit-content-block type="tooltip-system">
+        <p>
+          {{tra.quick_play_champion_disabled}}
+        </>
+      </>
+    {{/uikit-tooltip}}
+  {{/if}}
+  <div class="quick-play-grid-champion-frame">
+    {{quick-play-champion-square championId=champion.id}}
+  </>
+  <div class="quick-play-grid-champion-overlay {{champion.selectedPosition}}">
+  </>
+  <div class="quick-play-grid-champion-inventory-flag {{champion.ownershipType}}">
+  </>
+</>
+<lol-uikit-resizing-text-field class="quick-play-grid-champion-name" data-max-width="100">
+  {{champion.name}}
+</>

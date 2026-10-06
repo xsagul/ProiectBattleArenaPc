@@ -1,0 +1,40 @@
+<lol-uikit-content-block class="reform-card-content" type="dialog-large">
+  <lol-uikit-scrollable class="reform-card-scrollable" overflow-masks="enabled">
+    <div class="reform-card-scrollable-content">
+      <h2>
+        {{headerText}}
+      </>
+      <hr class="reform-card-subhead-rule">
+      </>
+      <div class="reform-card-body">
+        {{#if hasPenalties}}
+          <h4 class="reform-card-subhead">
+            {{penaltyHeader}}
+          </>
+          <div class="reform-card-text">
+            <ul>
+              {{#each penalties as |penalty|}}
+                <li>
+                  {{{penalty}}}
+                </>
+              {{/each}}
+            </>
+          </>
+        {{/if}}
+        <div class="reform-card-text body-text">
+          {{{bodyText}}}
+        </>
+        {{#if hasGameId}}
+          <h4 class="game-id-text">
+            {{gameIdText}}
+          </>
+        {{/if}}
+        {{#if hasChatLogEvidence}}
+          <hr class="reform-card-subhead-rule">
+          </>
+          {{reform-card-v3-chat-log gameId=gameId reformCard=reformCard displayName=displayName}}
+        {{/if}}
+      </>
+    </>
+  </>
+</>

@@ -1,0 +1,17 @@
+<uikit-state-machine class="mission-celebration-interactive-rewards-animation" state="intro-rewards">
+  <uikit-states>
+    <uikit-state name="intro-rewards">
+      <uikit-transition next-state="show-rewards">
+        <uikit-condition-delay duration="2500">
+        </>
+      </>
+    </>
+    <uikit-state name="show-rewards">
+    </>
+  </>
+  <div class="interactive-rewards-wrapper {{if isShowState "show"}}" visible-state="*">
+    {{#each rewardGroups as |rewardGroup index|}}
+      {{mission-celebration-interactive-reward rewardGroup=rewardGroup index=index softSelectionMade=selectionMade onSelect=(action this "onRewardClick"}}
+    {{/each}}
+  </>
+</>

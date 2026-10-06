@@ -1,0 +1,36 @@
+<lol-uikit-content-block class="reform-card-content" type="dialog-large">
+  <lol-uikit-scrollable class="reform-card-scrollable" overflow-masks="enabled">
+    <div class="reform-card-scrollable-content">
+      <h2>
+        {{headerText}}
+      </>
+      <hr class="reform-card-subhead-rule">
+      </>
+      <div class="reform-card-body">
+        <div class="reform-card-text">
+          {{#if isCustomMessage}}
+            <p>
+              {{sanitize trimmedCustomMessage}}
+            </>
+          {{else}}
+            <p>
+              {{sanitize descriptionText}}
+            </>
+            <p>
+              {{sanitize explanationText}}
+            </>
+          {{/if}}
+        </>
+        {{#if shouldShowMatchHistory}}
+          {{reform-card-v2-match-history reformCard=reformCard}}
+        {{else}}
+          {{#if shouldShowChatLogs}}
+            <hr class="reform-card-subhead-rule">
+            </>
+            {{reform-card-v2-chat-log reformCard=reformCard summonerName=summonerName}}
+          {{/if}}
+        {{/if}}
+      </>
+    </>
+  </>
+</>

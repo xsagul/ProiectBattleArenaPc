@@ -1,0 +1,28 @@
+struct 0x8412e0
+    0x8412e0 field 0 mode 0: count table from helper 0x782440 called alone
+  0x8412e0 field 0: bits 0..0 +0xc 12 B 0:seq(struct) 1:const
+struct 0x81e250
+  0x81e250 field 0: bits 3..3 +0x4 12 B 0:const 1:seq(struct)
+  0x81e250 field 1: bits 4..6 +0x10 4 B 0:varint 1:const 2:const 3:varint 4:varint 5:varint 6:const 7:const
+  0x81e250 field 2: bits 14..16 +0x14 4 B 0:const 1:varint 2:const 3:varint 4:const 5:varint 6:const 7:varint
+  0x81e250 field 3: bits 10..12 +0x18 4 B 0:varint 1:varint 2:const 3:varint 4:const 5:const 6:const 7:varint
+  0x81e250 field 4: bits 0..2 +0x1c 2 B 0:varint 1:const 2:const 3:const 4:varint 5:varint 6:const 7:varint
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 1478, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 1149, in learn
+    sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc).learn()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 361, in learn
+    fl = self.learn_field(k)
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 404, in learn_field
+    mode = self.learn_mode(k, m, r, seg, res, d)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 477, in learn_mode
+    return self.learn_text(k, m, res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 643, in learn_text
+    one = L.index(1)
+          ^^^^^^^^^^
+ValueError: 1 is not in list

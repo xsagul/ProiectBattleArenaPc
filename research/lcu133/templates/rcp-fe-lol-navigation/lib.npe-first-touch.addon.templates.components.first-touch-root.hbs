@@ -1,0 +1,22 @@
+<lol-uikit-section-controller class="first-touch-section-controller" animation="crossfade">
+  <lol-uikit-section section-id="patching-experience" class="first-touch-section-container">
+    {{#if patchingExperienceShouldShow}}
+      {{patching-experience showNextScreen=(action this "showNextScreen"}}
+    {{/if}}
+  </>
+  <lol-uikit-section section-id="summoner-name-create" class="first-touch-section-container">
+    {{#if summonerNameSelectShouldShow}}
+      {{summoner-name-create showNextScreen=(action this "showNextScreen") isNameChange=isNameChange}}
+    {{/if}}
+  </>
+  <lol-uikit-section section-id="game-mode-select" class="first-touch-section-container">
+    {{#if gameModeSelectShouldShow}}
+      {{game-mode-select showNextScreen=(action this "showNextScreen") skipToTeamfight=(action this "skipToTeamfight"}}
+    {{/if}}
+  </>
+  <lol-uikit-section section-id="intro-video" class="first-touch-section-container">
+    {{#if introVideoShouldShow}}
+      {{intro-video showNextScreen=(action this "showNextScreen"}}
+    {{/if}}
+  </>
+</>

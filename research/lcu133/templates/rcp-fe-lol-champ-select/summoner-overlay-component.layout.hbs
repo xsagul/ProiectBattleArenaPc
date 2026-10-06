@@ -1,0 +1,22 @@
+<div class="summoner-overlay-background">
+</>
+<div class="summoner-overlay-buttons-container">
+  <button class="overlay-button {{unless jmxSettings.LcuChampionSelect.ChampSelectMutingEnabled "removed"}} {{if isMuted "unmute" "mute"}}" {{action this "toggleMute"}}>
+    {{#uikit-tooltip type="system" tooltipPosition="top"}}
+      <lol-uikit-content-block type="tooltip-system">
+        <p>
+          {{if isMuted tra.csr_button_unmute_description tra.csr_button_mute_description}}
+        </>
+      </>
+    {{/uikit-tooltip}}
+  </>
+  <button class="overlay-button report {{unless isReportingEnabled "removed"}} {{if hasReported "disabled"}}" {{action this "showReportContextMenu"}}>
+    {{#uikit-tooltip type="system" tooltipPosition="top"}}
+      <lol-uikit-content-block type="tooltip-system">
+        <p>
+          {{reportButtonTooltipDescription}}
+        </>
+      </>
+    {{/uikit-tooltip}}
+  </>
+</>

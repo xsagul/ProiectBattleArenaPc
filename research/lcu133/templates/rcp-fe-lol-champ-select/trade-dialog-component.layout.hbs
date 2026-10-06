@@ -1,0 +1,58 @@
+<div class="trade-dialog animated {{unless showAcceptTradeButton "not-received"}} {{tradeStateClass}} {{if isDisplayed "active"}}">
+  <lol-uikit-flyout-frame orientation="right" show={{isDisplayed}} animated={{isAnimated}}>
+    <div class="trade-wrapper">
+      <div class="trade-container">
+        <div class="champion-bg-container">
+          <div class="champion-bg" style="background-image: url({{trade.requesterChampionSplashPath}});">
+          </>
+        </>
+        <div class="champion-bg-overlay">
+        </>
+        <div class="trade-content-container">
+          <div class="trade-message">
+            {{tradeMessageString}}
+          </>
+          <div class="button-group">
+            {{#if showAcceptTradeButton}}
+              <lol-uikit-flat-button class="action-button" onclick={{action this "acceptTrade" trade.id}}>
+                <div class="action-button-inner-container">
+                  <div class="action-icon">
+                  </>
+                  <div class="action-text">
+                    {{tra.pregame_trade_accept}}
+                  </>
+                </>
+              </>
+              <lol-uikit-flat-button class="action-button" onclick={{action this "closeTrade" trade.id trade.state}}>
+                <div class="action-button-inner-container">
+                  <div class="decline-icon">
+                  </>
+                  <div class="action-text">
+                    {{tra.pregame_trade_decline}}
+                  </>
+                </>
+              </>
+            {{/if}}
+            {{#if showCancelTradeButton}}
+              <lol-uikit-flat-button class="action-button" onclick={{action this "closeTrade" trade.id trade.state}}>
+                <div class="action-button-inner-container">
+                  <div class="decline-icon">
+                  </>
+                  <div class="action-text">
+                    {{tra.pregame_trade_cancel}}
+                  </>
+                </>
+              </>
+            {{/if}}
+          </>
+        </>
+      </>
+      {{#if isTradeInProgress}}
+        <div class="trade-timer-wrapper">
+          <div class="trade-timer">
+          </>
+        </>
+      {{/if}}
+    </>
+  </>
+</>

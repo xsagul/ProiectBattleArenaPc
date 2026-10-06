@@ -1,0 +1,98 @@
+
+main <?:0,0> (38 instructions, 152 bytes at 000001B2B72C3420)
+0+ params, 2 slots, 0 upvalues, 0 locals, 29 constants, 2 functions
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "GlobalLevelScript"
+	3	[-]	CALL     	0 2 1
+	4	[-]	LOADK    	0 -4	; 100
+	5	[-]	SETGLOBAL	0 -3	; TEAM_ORDER
+	6	[-]	LOADK    	0 -6	; 200
+	7	[-]	SETGLOBAL	0 -5	; TEAM_CHAOS
+	8	[-]	LOADK    	0 -8	; 1
+	9	[-]	SETGLOBAL	0 -7	; ORDER_HQ
+	10	[-]	LOADK    	0 -10	; 2
+	11	[-]	SETGLOBAL	0 -9	; CHAOS_HQ
+	12	[-]	LOADK    	0 -12	; 3
+	13	[-]	SETGLOBAL	0 -11	; FRONT_TOWER
+	14	[-]	LOADK    	0 -10	; 2
+	15	[-]	SETGLOBAL	0 -13	; MIDDLE_TOWER
+	16	[-]	LOADK    	0 -8	; 1
+	17	[-]	SETGLOBAL	0 -14	; BACK_TOWER
+	18	[-]	LOADK    	0 -16	; 4
+	19	[-]	SETGLOBAL	0 -15	; HQ_TOWER2
+	20	[-]	LOADK    	0 -18	; 5
+	21	[-]	SETGLOBAL	0 -17	; HQ_TOWER1
+	22	[-]	LOADK    	0 -20	; 0
+	23	[-]	SETGLOBAL	0 -19	; RIGHT_LANE
+	24	[-]	LOADK    	0 -8	; 1
+	25	[-]	SETGLOBAL	0 -21	; CENTER_LANE
+	26	[-]	LOADK    	0 -10	; 2
+	27	[-]	SETGLOBAL	0 -22	; LEFT_LANE
+	28	[-]	LOADK    	0 -24	; 100000
+	29	[-]	SETGLOBAL	0 -23	; INITIAL_TIME_TO_SPAWN
+	30	[-]	LOADK    	0 -8	; 1
+	31	[-]	SETGLOBAL	0 -25	; EVENT_STAGE_WELCOME_TIME
+	32	[-]	LOADK    	0 -27	; 30
+	33	[-]	SETGLOBAL	0 -26	; EVENT_STAGE_PREANNOUNCE_TIME
+	34	[-]	CLOSURE  	0 0	; 000001B2B72C3720
+	35	[-]	SETGLOBAL	0 -28	; OnInitClient
+	36	[-]	CLOSURE  	0 1	; 000001B2B72C1990
+	37	[-]	SETGLOBAL	0 -29	; OnInitServer
+	38	[-]	RETURN   	0 1
+constants (29) for 000001B2B72C3420:
+	1	"DoLuaShared"
+	2	"GlobalLevelScript"
+	3	"TEAM_ORDER"
+	4	100
+	5	"TEAM_CHAOS"
+	6	200
+	7	"ORDER_HQ"
+	8	1
+	9	"CHAOS_HQ"
+	10	2
+	11	"FRONT_TOWER"
+	12	3
+	13	"MIDDLE_TOWER"
+	14	"BACK_TOWER"
+	15	"HQ_TOWER2"
+	16	4
+	17	"HQ_TOWER1"
+	18	5
+	19	"RIGHT_LANE"
+	20	0
+	21	"CENTER_LANE"
+	22	"LEFT_LANE"
+	23	"INITIAL_TIME_TO_SPAWN"
+	24	100000
+	25	"EVENT_STAGE_WELCOME_TIME"
+	26	"EVENT_STAGE_PREANNOUNCE_TIME"
+	27	30
+	28	"OnInitClient"
+	29	"OnInitServer"
+locals (0) for 000001B2B72C3420:
+upvalues (0) for 000001B2B72C3420:
+
+function <?:31,33> (4 instructions, 16 bytes at 000001B2B72C3720)
+0 params, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; PreloadSpell
+	2	[-]	LOADK    	1 -2	; "TUTORIAL_MODULE_1_TUInit"
+	3	[-]	CALL     	0 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 000001B2B72C3720:
+	1	"PreloadSpell"
+	2	"TUTORIAL_MODULE_1_TUInit"
+locals (0) for 000001B2B72C3720:
+upvalues (0) for 000001B2B72C3720:
+
+function <?:35,37> (5 instructions, 20 bytes at 000001B2B72C1990)
+0 params, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; ApplyPersistentBuffToAllChampions
+	2	[-]	LOADK    	1 -2	; "TUTORIAL_MODULE_1_TUInit"
+	3	[-]	LOADBOOL 	2 1 0
+	4	[-]	CALL     	0 3 1
+	5	[-]	RETURN   	0 1
+constants (2) for 000001B2B72C1990:
+	1	"ApplyPersistentBuffToAllChampions"
+	2	"TUTORIAL_MODULE_1_TUInit"
+locals (0) for 000001B2B72C1990:
+upvalues (0) for 000001B2B72C1990:

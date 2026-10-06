@@ -1,0 +1,49 @@
+{{#lower-section currentPlayer=currentPlayer}}
+  <div class="upper-right-container">
+    {{disband-countdown}}
+  </>
+  {{#if inParty}}
+    <div class="tft-cards-container">
+      <div class="tft-cards-first-row">
+        {{#unless isPair}}
+          <div class="tft-cards-first-row-left">
+            {{#each nonSelfCards.left key="puuid" as |member|}}
+              {{tft-player-card isInvited=member.isInvited isPlaceholder=member.isPlaceholder partyInvitesAllowed=partyInvitesAllowed member=member isInQueue=isInQueue selected=selected showInviteModal="showInviteModal" isFullCard=isPair}}
+            {{/each}}
+          </>
+        {{/unless}}
+        <div class="tft-cards-first-row-middle">
+          {{#if currentPlayer}}
+            {{tft-player-card member=currentPlayer isMe=true isInQueue=isInQueue selected=selected isFullCard=isPair}}
+            {{#if playbookEnabled}}
+              {{tft-playbook-icon queueId=queueId}}
+            {{/if}}
+          {{/if}}
+        </>
+        <div class="tft-cards-first-row-right">
+          {{#each nonSelfCards.right key="puuid" as |member|}}
+            {{tft-player-card isPlaceholder=member.isPlaceholder isInvited=member.isInvited partyInvitesAllowed=partyInvitesAllowed member=member isInQueue=isInQueue selected=selected showInviteModal="showInviteModal" isFullCard=isPair}}
+          {{/each}}
+        </>
+      </>
+      {{#unless isPair}}
+        <div class="tft-cards-second-row">
+          {{#each nonSelfCards.bottom key="puuid" as |member|}}
+            {{tft-player-card isPlaceholder=member.isPlaceholder isInvited=member.isInvited partyInvitesAllowed=partyInvitesAllowed member=member isInQueue=isInQueue selected=selected showInviteModal="showInviteModal" isFullCard=isPair}}
+          {{/each}}
+        </>
+      {{/unless}}
+    </>
+  {{/if}}
+  {{parties-footer-notifications positionError=positionError positionWarning=positionWarning readyWarning=readyWarning readyWarningTooltip=readyWarningTooltip premadeSizeAllowed=lobbiesService.premadeSizeAllowed allowablePremadeSizes=lobbiesService.allowablePremadeSizes currentPartySize=lobbiesService.currentPartySize isCurrentPlayerPartyLeader=isCurrentPlayerPartyLeader shouldShowBetaWatermark=false}}
+  {{tft-footer showingState=showingState selected=selected readyWarning=readyWarning}}
+  {{invite-info-panel showingState=showingState currentPlayerCanInvite=currentPlayerCanInvite isTFT=true}}
+  <div class="parties-chat-room">
+    <lol-social-chat-room type="lobby" disabled-when-connecting="">
+    </>
+  </>
+{{/lower-section}}
+<div style="display: none;">
+  {{invitationsObserver}}
+</>
+{{tft-emerald-rank-modal}}

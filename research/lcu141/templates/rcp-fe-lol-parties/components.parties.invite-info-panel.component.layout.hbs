@@ -1,0 +1,80 @@
+{{#if isTFT}}
+  <div class="split-panel-header {{if viewingProgression "left-tab-active" "right-tab-active"}}">
+    <a id="invite-header-progression" class="split-panel-header-title
+        {{if viewingProgression "active"}}
+        {{unless progressionEnabled "disabled"}}" {{action this "viewProgression"}}>
+      {{tra.tft_progression_panel_title}}
+    </>
+    <a id="invite-header-invited" class="split-panel-header-title {{if viewingProgression "" "active"}}" {{action this "viewInvited"}}>
+      {{tra.invited_panel_title}}
+      (
+      {{invites.length}}
+      )
+    </>
+    <div class="split-panel-arrow {{if panelIsCollapsed "collapsed"}}" {{action this "toggleCollapsed"}}>
+    </>
+  </>
+{{else}}
+  {{#if isNotCustom}}
+    <div class="split-panel-header {{if viewingSuggested "left-tab-active" "right-tab-active"}}">
+      <a id="invite-header-suggested" class="split-panel-header-title
+        {{if viewingSuggested "active"}}
+        {{if suggestedDisabled "disabled"}}" {{action this "viewSuggested"}}>
+        {{tra.suggested_panel_lobby_title}}
+      </>
+      <a id="invite-header-invited" class="split-panel-header-title {{if viewingSuggested "" "active"}}" {{action this "viewInvited"}}>
+        {{tra.invited_panel_title}}
+        (
+        {{invites.length}}
+        )
+      </>
+      <div class="split-panel-arrow {{if panelIsCollapsed "collapsed"}}" {{action this "toggleCollapsed"}}>
+      </>
+    </>
+  {{else}}
+    <!-- Do not show tabbed header with suggested if invite info only -->
+    <!-- Note: this file should be revised into parties-v2 -->
+    <div class="custom-invite-header">
+      <span class="custom-invite-header-text">
+        {{tra.invited_panel_title}}
+        (
+        {{invites.length}}
+        )
+      </>
+    </>
+  {{/if}}
+{{/if}}
+<div class="parties-invite-info-panel-body {{if panelIsCollapsed "collapsed"}}">
+  <ul class="parties-invite-info-panel-list
+  {{if viewingSuggested "viewing-suggested"}}
+  {{if isCustom "parties-invite-info-is-custom"}}">
+    {{#if viewingSuggested}}
+      {{#each suggestedInvites as |suggestedPlayer|}}
+        {{invite-info-panel-player currentPlayerCanInvite=currentPlayerCanInvite player=suggestedPlayer isSuggested=true}}
+      {{/each}}
+    {{else}}
+      {{#if viewingProgression}}
+        {{invite-info-panel-tft-progression class="tft-progression" activeMilestonesProgress=activeMilestonesProgress}}
+      {{else}}
+        {{#if isTFT}}
+          {{#unless suggestedDisabled}}
+            {{#each suggestedInvites as |suggestedPlayer|}}
+              {{invite-info-panel-player currentPlayerCanInvite=currentPlayerCanInvite player=suggestedPlayer isSuggested=true}}
+            {{/each}}
+          {{/unless}}
+        {{/if}}
+        {{#if hasInvites}}
+          {{#each invites as |invite|}}
+            {{invite-info-panel-player currentPlayerCanInvite=currentPlayerCanInvite invitedPlayer=invite isSuggested=false}}
+          {{/each}}
+        {{else}}
+          <li class="parties-invite-info-empty">
+            <span class="parties-invite-info-empty-text">
+              {{tra.custom_game_invited_panel_no_invites}}
+            </>
+          </>
+        {{/if}}
+      {{/if}}
+    {{/if}}
+  </>
+</>

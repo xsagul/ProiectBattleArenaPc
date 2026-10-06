@@ -1,0 +1,22 @@
+{{#if isInvitedBanner}}
+  <div class="placeholder-invited-container">
+    {{#if animationsEnabled}}
+      <video class="placeholder-invited-video" autoplay="true" preload="auto" loop="true" src={{invitedVideoSrc}}>
+      </>
+    {{else}}
+      <div class="placeholder-invited-image">
+      </>
+    {{/if}}
+  </>
+{{/if}}
+{{#if partyInvitesAllowed}}
+  <div class="placeholder-invite-button">
+    {{#player-management-button type="invite" action="showInviteModal"}}
+      <lol-uikit-content-block type="tooltip-system">
+        <p>
+          {{tra.invite_tooltip}}
+        </>
+      </>
+    {{/player-management-button}}
+  </>
+{{/if}}

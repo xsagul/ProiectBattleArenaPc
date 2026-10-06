@@ -1,0 +1,23 @@
+<div class="social-leaderboard-container">
+  {{#if isLoading}}
+    <div class="social-leaderboard-loading-animation-container">
+      {{hextech-loading-animation}}
+    </>
+  {{else}}
+    {{#if hasError}}
+      {{social-leaderboard-error-state}}
+    {{else}}
+      {{#unless hasEnoughFriends}}
+        {{social-leaderboard-not-enough-friends onAddFriends=(action this "openFriendFinder"}}
+      {{else}}
+        {{social-leaderboard-header selected=selected nextUpdateTime=nextUpdateTime onRefresh=(action this "refreshLeaderboard"}}
+        {{social-leaderboard-friend-filter leaderboardData=leaderboardData updateFilteredData=(action this "updateFilteredData"}}
+        {{#if isFriendsFound}}
+          {{social-leaderboard-table leaderboardData=filteredData currentSummonerName=currentSummonerName closeSocialLeaderboard=closeSocialLeaderboard}}
+        {{else}}
+          {{social-leaderboard-friend-not-found}}
+        {{/if}}
+      {{/unless}}
+    {{/if}}
+  {{/if}}
+</>

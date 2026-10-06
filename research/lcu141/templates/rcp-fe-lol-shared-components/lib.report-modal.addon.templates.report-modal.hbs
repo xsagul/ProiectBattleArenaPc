@@ -1,0 +1,17 @@
+{{report-header reportedPlayer=reportedPlayer championSquarePortraitPath=championSquarePortraitPath}}
+<div class="report-body">
+  <div class="report-body-text">
+    {{tra.report_modal_description}}
+  </>
+  <ul class="report-body-categories">
+    {{#each categories as |category|}}
+      {{report-category category=category}}
+    {{/each}}
+  </>
+  <!-- this scrollable will ensure that the inner textarea scrollbar have the right styles -->
+  <lol-uikit-scrollable class="report-flat-textarea-scrollable">
+    <lol-uikit-flat-textarea class="report-flat-textarea">
+      {{textarea class="report-textarea" placeholder=tra.report_modal_textarea_placeholder value=comment maxlength=maxCommentLength}}
+    </>
+  </>
+</>

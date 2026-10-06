@@ -1,0 +1,10 @@
+<div class="quick-play-summoner-spells-container">
+  {{#each selectingSlotSummonerSpells as |spell index|}}
+    {{quick-play-summoner-spell-renderer spell=spell onRendererClicked=(action this "handleSummonerSpellFlyoutTrigger" spell index}}
+  {{/each}}
+</>
+<lc-flyout open={{isFlyoutOpen}} onHide={{action this "toggleFlyout" false}} uiKitOptionOverrides={{flyoutOptions}}>
+  <lc-flyout-content>
+    {{quick-play-summoner-spell-popup changingSpell=changingSpell spells=quickPlayService.gameModeSummonerSpells handleSpellSelected="handleSummonerSpellSelected"}}
+  </>
+</>

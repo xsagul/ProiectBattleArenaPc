@@ -1,0 +1,32 @@
+{{#if showChampionChestAvailable}}
+  <div class="bench-champion-icon-chest-available-glow">
+  </>
+{{/if}}
+<div class="bench-champion-icon">
+  <div class="bench-champion-background" style={{sanitize backgroundStyle}}>
+  </>
+  {{#if showTooltip}}
+    {{#uikit-tooltip tooltipPosition="bottom" restrictArea="whole-window"}}
+      <lol-uikit-content-block type="tooltip-system">
+        <p>
+          {{tooltipText}}
+        </>
+        {{#if showChampionChestAvailable}}
+          <div class="tooltip-champion-chest-available">
+            {{tra.tooltip_champion_chest_available}}
+          </>
+        {{/if}}
+      </>
+    {{/uikit-tooltip}}
+  {{/if}}
+  <div class="cooldown-mask">
+    <div class="cooldown">
+      <div class="left-half-mask">
+        <div class="left-half">
+        </>
+      </>
+      <div class="right-half">
+      </>
+    </>
+  </>
+</>

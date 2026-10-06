@@ -1,0 +1,22 @@
+{{#if showNextMilestoneReward}}
+  <div class="challenge-item-footer">
+    <div class="challenge-item-milestone-icon-container">
+      <img class="challenge-item-milestone-icon" src="/fe/lol-static-assets/images/challenges-shared/icon_reward_title.svg">
+      </>
+    </>
+    <div class="challenge-item-title-container">
+      {{nextMilestoneRewardText}}
+    </>
+    <div class="challenge-item-level-container">
+      {{#if showLevelText}}
+        <div class="challenge-item-level">
+          {{levelText}}
+        </>
+      {{/if}}
+      <div class="challenge-item-level-icon-container">
+        <img class="challenge-item-level-icon" src="/fe/lol-static-assets/images/challenges-shared/icon-token-{{nextMilestoneReward.level}}.png">
+        </>
+      </>
+    </>
+  </>
+{{/if}}

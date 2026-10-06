@@ -1,0 +1,42 @@
+{{#if isMissionCelebrationDisplayed}}
+  <uikit-state-machine class="mission-celebration-animation" state="start-next-celebration" is-rewards-only-celebration="{{isRewardsOnlyCelebration}}" show-intro="{{showIntro}}" celebration-complete="{{celebrationComplete}}" fade-out-intro="{{fadeOutIntro}}">
+    <uikit-states>
+      <uikit-state name="start-next-celebration">
+        <uikit-transition next-state="rewards">
+          <uikit-condition-parameter name="is-rewards-only-celebration" value="true">
+          </>
+        </>
+        <uikit-transition next-state="intro">
+          <uikit-condition-parameter name="show-intro" value="true">
+          </>
+        </>
+      </>
+      <uikit-state name="intro">
+        <uikit-transition next-state="hide-intro">
+          <uikit-condition-parameter name="fade-out-intro" value="true">
+          </>
+        </>
+      </>
+      <uikit-state name="hide-intro">
+        <uikit-transition next-state="rewards">
+          <uikit-condition-delay duration="1200">
+          </>
+        </>
+      </>
+      <uikit-state name="rewards">
+        <uikit-transition next-state="hide-rewards">
+          <uikit-condition-parameter name="celebration-complete" value="true">
+          </>
+        </>
+      </>
+      <uikit-state name="hide-rewards">
+      </>
+    </>
+    <div class="intro-wrapper" default-visibility="removed" visible-state="intro,hide-intro">
+      {{component missionCelebrationIntroComponent mission=mission fadeOutIntro=(action this "fadeOutIntro") largeAreaAnimationsEnabled=largeAreaAnimationsEnabled}}
+    </>
+    <div class="mission-celebration-rewards-wrapper" default-visibility="removed" visible-state="hide-intro,rewards,hide-rewards">
+      {{component missionCelebrationRewardsComponent mission=mission state=missionCelebrationState isLast=isLast onSelect=(action this "onInteractiveRewardClick") largeAreaAnimationsEnabled=largeAreaAnimationsEnabled}}
+    </>
+  </>
+{{/if}}

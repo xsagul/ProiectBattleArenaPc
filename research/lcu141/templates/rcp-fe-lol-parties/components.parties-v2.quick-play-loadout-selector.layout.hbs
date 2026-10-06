@@ -1,0 +1,77 @@
+<div class="quick-play-loadout-container">
+  <div class="quick-play-loadout-grid-container">
+    <div class="quick-play-loadout-title">
+      {{tra.quick_play_modal_title}}
+    </>
+    <div class="quick-play-selection-rules-tooltip">
+      <div class="quick-play-selection-rules-tooltip-icon">
+      </>
+      {{#uikit-tooltip tooltipPosition="bottom" type="system"}}
+        <lol-uikit-content-block class="quick-play-selection-rules-tooltip-content">
+          <h3 class="quick-play-selection-rules-tooltip-title">
+            {{tra.quick_play_tooltip_title}}
+          </>
+          <h4 class="quick-play-selection-rules-tooltip-header">
+            {{tra.quick_play_tooltip_solo_header}}
+          </>
+          <ul class="quick-play-selection-rules-tooltip-list">
+            <li>
+              {{tra.quick_play_tooltip_solo_rule_1}}
+            </>
+            <li>
+              {{tra.quick_play_tooltip_solo_rule_2}}
+            </>
+          </>
+          <h4 class="quick-play-selection-rules-tooltip-header">
+            {{tra.quick_play_tooltip_2_4_player_header}}
+          </>
+          <ul class="quick-play-selection-rules-tooltip-list">
+            <li>
+              {{tra.quick_play_tooltip_2_4_rule_1}}
+            </>
+            <li>
+              {{tra.quick_play_tooltip_2_4_rule_2}}
+            </>
+            <li>
+              {{tra.quick_play_tooltip_2_4_rule_3}}
+            </>
+          </>
+          <h4 class="quick-play-selection-rules-tooltip-header">
+            {{tra.quick_play_tooltip_5_player_header}}
+          </>
+          <ul class="quick-play-selection-rules-tooltip-list">
+            <li>
+              {{tra.quick_play_tooltip_5_rule_1}}
+            </>
+            <li>
+              {{tra.quick_play_tooltip_5_rule_2}}
+            </>
+          </>
+        </>
+      {{/uikit-tooltip}}
+    </>
+    <div class="quick-play-error-tootlip">
+      {{v2-footer-notifications isQuickPlayModal=true}}
+    </>
+    <div class="quick-play-loadout-selections-container">
+      {{#each quickPlayViewSlots as |playerSlot index|}}
+        {{#unless playerSlot.hide}}
+          <div class="quick-play-loadout-selection-hitbox {{if playerSlot.isSelected "selected"}}">
+            <div class="quick-play-loadout-selection-title">
+              {{if playerSlot.isPrimary tra.quick_play_position_primary tra.quick_play_position_secondary}}
+            </>
+            {{quick-play-selection-renderer isLocalPlayer=true position=playerSlot.positionPreference playerSlot=playerSlot isPrimary=playerSlot.isPrimary championId=playerSlot.championId disabled=false isQuickplayModal=true isPositionOverlayOpen=(eq positionSelectorOpenIndex index) onClick=(action this "handleQuickPlaySlotChange" index) setPositionPreferences="setPositionPreferences" closePositionSelector=(action this "closePositionSelector" index) openPositionSelector=(action this "openPositionSelector" index}}
+          </>
+        {{/unless}}
+      {{/each}}
+    </>
+    {{quick-play-champion-selector champions=quickPlayService.champs selectChampion="handleChampionSelected" selectingSlotIndex=selectingSlotIndex selectingSlotSkinIndex=selectingSlotSkinIndex}}
+  </>
+  <div class="quick-play-loadout-champion-customization-container">
+    {{quick-play-skin-select skins=skins selectingSlot=selectingSlot setSkin="handleSkinSelected"}}
+    <div class="quick-play-loadout-customization-group">
+      {{quick-play-perks-selector perksPages=quickPlayService.perksPages selectingPerksPage=perksPageForSelectingChampion selectingSlotIndex=selectingSlotIndex playerSlots=localPlayer.playerSlots setShowQuickPlayModal="handleQPModalClose" setPerksPage=(action this "handlePerksPageSelected") setQuickPlaySlots=(action this "putQuickPlaySlotsAction"}}
+      {{quick-play-summoner-spell-select selectingSlot=selectingSlot handleSpellsSelected="handleSpellsSelected"}}
+    </>
+  </>
+</>

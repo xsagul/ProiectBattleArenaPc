@@ -1,0 +1,71 @@
+<div class="skin-selection-indicator {{if disabled "disabled" "enabled"}}">
+  <div class="line line-left">
+  </>
+  <ul class="skin-selection-indicator-list">
+    {{#each skinPips as |skinPip index|}}
+      <li class="skin-selection-indicator-selector {{if skinPip.isViewed "skin-selection-indicator-selector-viewed"}}" onclick={{action this "skinButtonClicked" skinPip.skin "sfx-uikit-button-pip-click.ogg"}}>
+      </>
+    {{/each}}
+  </>
+  <div class="line line-right">
+  </>
+</>
+<div class="skin-selection-button-container">
+  <lol-uikit-arrow-button disabled={{disabledAttr}} direction="left" class="skin-selection-button left" click-sfx-src="/fe/lol-champ-select/sounds/sfx-uikit-button-arrowback-click.ogg" hover-sfx-src="/fe/lol-champ-select/sounds/sfx-uikit-button-gold-hover.ogg" onclick={{action this "skinScrollBy1" -1}}>
+  </>
+  <div class="skin-selection-carousel-container">
+    <ul class="skin-selection-carousel {{if disabled "disabled" "enabled"}} {{if willTransition "will-transition" "did-transition"}}">
+      {{#each skinCarouselItems as |item|}}
+        <li class="skin-selection-item
+            skin-selection-item-visible
+            {{if item.placeholder "skin-selection-item-placeholder"}}
+            {{item.offsetClass}}
+            {{if item.showSelected "skin-selection-item-selected"}}
+            {{if item.unlocked "enabled" "disabled"}}" style={{item.containerStyle}}>
+          <div class="skin-selection-thumbnail" onmouseenter={{action this "skinButtonMouseEnter" item.unclickable}} onclick={{action this "skinButtonClicked" item.skin "sfx-cs-button-thumbnail-click.ogg"}} style="background-image:url({{item.skin.tilePath}})">
+            {{#if item.skin.rarityGemPath}}
+              <div class="skin-selection-thumbnail-gem-overlay">
+                <img src="{{item.skin.rarityGemPath}}">
+                </>
+              </>
+            {{/if}}
+            {{#if item.skin.isUnlockedFromEntitledFeature}}
+              <div class="skin-selection-thumbnail-entitled-feature-overlay {{entitledFeatureClassName}}">
+                <div class="content">
+                </>
+              </>
+            {{/if}}
+            {{#unless item.unclickable}}
+              {{#if item.unlocked}}
+                {{#if item.hasChildSkins}}
+                  {{#if item.skin.chromaPreviewPath}}
+                    {{#uikit-framed-icon disabled=disabledAttr class="chroma-button chroma-selection {{if item.selectedChildSkin 'selected'}}" onclick=(action this "chromaButtonClicked" item) interactive=true borderWidth=2}}
+                      <div class="content" style="background: {{item.selectedChromaStyle}}">
+                      </>
+                    {{/uikit-framed-icon}}
+                  {{else}}
+                    <div class="chroma-button-2 chroma-selection" onclick={{action this "chromaButtonClicked" item}}>
+                    </>
+                  {{/if}}
+                {{/if}}
+              {{/if}}
+            {{/unless}}
+          </>
+          <div class="skin-selection-item-information
+            {{if item.skin.ownership.rental.rented "rental-icon"}}
+            {{if item.skin.ownership.loyaltyReward "loyalty-reward-icon"}}
+            {{if UseNewLoyaltyIcon "loyalty-reward-icon--rewards"}}">
+          </>
+        </>
+      {{/each}}
+      <lc-flyout open={{isFlyoutOpen}} onHide={{action this "hideChromaFlyout"}} uiKitOptionOverrides={{flyoutSettings}}>
+        <lc-flyout-content>
+          {{chroma-modal selectedSkinId=selectedSkinId timeRemaining=timeRemaining inFinalizationPhase=inFinalizationPhase disabledChromas=disabledChromas currentMapChromaPath=currentMapChromaPath baseSkin=baseSkin jmxSettings=jmxSettings onSetSkin=(action this "onSetSkin") recordDidRequestSucceed=recordDidRequestSucceed}}
+        </>
+      </>
+    </>
+  </>
+  {{skin-purchase-button jmxSettings=jmxSettings viewSkin=rootViewSkin isShown=rootComponentShown ip=ip rp=rp isSkinSelectVisible=isSkinSelectVisible timeRemaining=timer.timeRemaining inFinalizationPhase=timer.inFinalizationPhase}}
+  <lol-uikit-arrow-button disabled={{disabledAttr}} direction="right" class="skin-selection-button right" hover-sfx-src="/fe/lol-champ-select/sounds/sfx-uikit-button-gold-hover.ogg" click-sfx-src="/fe/lol-champ-select/sounds/sfx-uikit-button-arrowfwd-click.ogg" onclick={{action this "skinScrollBy1" 1}}>
+  </>
+</>

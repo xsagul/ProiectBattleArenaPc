@@ -1,0 +1,13 @@
+{{#if guideMode}}
+  <div class="svg-loader {{if guideMode "guide-mode"}}" style={{loaderStyles}}>
+  </>
+  {{yield }}
+{{else}}
+  <div class="content {{unless showContent "display-none"}}">
+    {{yield }}
+  </>
+  {{#unless showContent}}
+    <div class="svg-loader {{if shouldFadeOutSvg "fade-out"}}" style={{loaderStyles}}>
+    </>
+  {{/unless}}
+{{/if}}

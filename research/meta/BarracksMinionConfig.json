@@ -1,0 +1,83 @@
+{
+  "name": "BarracksMinionConfig",
+  "hash": "0x8129e422",
+  "interface": false,
+  "value": false,
+  "bases": [],
+  "since": null,
+  "removedIn": null,
+  "properties": [
+    {
+      "name": "EntityDefinition",
+      "hash": "0x8a3fc6eb",
+      "ft": "Link",
+      "kt": null,
+      "vt": null,
+      "kh": "0x9d9f60d2",
+      "khName": "AttackableUnitDefinition",
+      "khKind": "class",
+      "since": "14.24",
+      "removedIn": "15.24",
+      "defaultValue": "\"0x0\""
+    },
+    {
+      "name": "EntityTemplate",
+      "hash": "0xfee040bc",
+      "ft": "Link",
+      "kt": null,
+      "vt": null,
+      "kh": "0xad65d8c4",
+      "khName": "AttackableEntityTemplate",
+      "khKind": "class",
+      "since": "15.24",
+      "defaultValue": "\"0x0\""
+    },
+    {
+      "name": "MinionConfig",
+      "hash": "0xee854bd1",
+      "ft": "Embed",
+      "kt": null,
+      "vt": null,
+      "kh": "0x1778b398",
+      "khName": null,
+      "khKind": "class",
+      "removedIn": "14.5",
+      "defaultValue": "{\"Group\":\"0x0\",\"name\":\"0x0\"}"
+    },
+    {
+      "name": "MinionType",
+      "hash": "0x22a50aab",
+      "ft": "U8",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "0"
+    },
+    {
+      "name": "MinionUpgradeStats",
+      "hash": "0xbac0c948",
+      "ft": "Embed",
+      "kt": null,
+      "vt": null,
+      "kh": "0xf60c70bb",
+      "khName": "MinionUpgradeConfig",
+      "khKind": "class",
+      "defaultValue": "{\"LocalGoldGivenOnLastHit\":0,\"HPUpgradeLate\":0,\"ExpUpgrade\":0,\"HPUpgradeGrowth\":0,\"MagicResistance\":0,\"DamageUpgradeLate\":0,\"DamageUpgrade\":0,\"DamageMax\":0,\"HPUpgrade\":0,\"DamageInhibitor\":0,\"GoldUpgrade\":0,\"ExpBonus\":0,\"HPInhibitor\":0,\"ArmorUpgradeGrowth\":0,\"ArmorUpgrade\":0,\"MagicResistanceUpgrade\":0,\"HPUpgradeGrowthLate\":0,\"GoldMax\":0,\"LocalGoldGiven\":0,\"HpMaxBonus\":0,\"ArmorMax\":0}"
+    },
+    {
+      "name": "WaveBehavior",
+      "hash": "0x388f6696",
+      "ft": "Pointer",
+      "kt": null,
+      "vt": null,
+      "kh": "0x699533b1",
+      "khName": "IMinionWaveBehavior",
+      "khKind": "class",
+      "defaultValue": "null"
+    }
+  ],
+  "ancestorLevels": [],
+  "descendantTree": []
+}

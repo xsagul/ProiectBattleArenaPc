@@ -1,0 +1,199 @@
+version 3, 1 entries, 0 links
+Characters/Nexus/Animations/Skin3 (animationGraphData)
+  mCascadeBlendValue: 0
+  mClipDataMap: {6}
+    key death
+    AtomicClipData
+      mTrackDataName: Default
+      mEventDataMap: {7}
+        key submesh
+        SubmeshVisibilityEventData
+          mName: submesh
+          mShowSubmeshList: [1]
+            Destroyed
+          mHideSubmeshList: [1]
+            SRUAP_ChaosNexus_Mat
+        key bone_cp10
+        ParticleEventData
+          mName: bone_cp10
+          mStartFrame: 148
+          mEffectName: "SRU_Chaos_nexus_swirlies.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+              mBoneName: bone_cp10
+          mIsLoop: 0
+        key bone_cp16
+        ParticleEventData
+          mName: bone_cp16
+          mStartFrame: 146
+          mEffectName: "SRU_Chaos_nexus_swirlies.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+              mBoneName: bone_cp16
+          mIsLoop: 0
+        key bone_cp8
+        ParticleEventData
+          mName: bone_cp8
+          mStartFrame: 143
+          mEffectName: "SRU_Chaos_nexus_swirlies.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+              mBoneName: bone_cp8
+          mIsLoop: 0
+          mIsKillEvent: 0
+        key bone_cp11
+        ParticleEventData
+          mName: bone_cp11
+          mStartFrame: 141
+          mEffectName: "SRU_Chaos_nexus_swirlies.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+              mBoneName: bone_cp11
+          mIsLoop: 0
+          mIsKillEvent: 0
+        key bone_cp2
+        ParticleEventData
+          mName: bone_cp2
+          mStartFrame: 140
+          mEffectName: "SRU_Chaos_nexus_swirlies.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+              mBoneName: bone_cp2
+          mIsLoop: 0
+          mIsKillEvent: 0
+        key Audio_Death
+        ParticleEventData
+          mName: Audio_Death
+          mEffectName: "SRUAP_Chaos_Nexus_Death_sound.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+          mIsLoop: 0
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/Nexus/Skins/Skin03/Animations/SRUAP_ChaosNexus_Death.anm"
+    key Idle1_Base
+    AtomicClipData
+      mFlags: 2
+      mTrackDataName: Default
+      mEventDataMap: {1}
+        key {bd5d7a8f}
+        ParticleEventData
+          mName: {bd5d7a8f}
+          mEffectName: "SRUAP_Chaos_Nexus_Idle1_sound.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+          mIsKillEvent: 0
+      mTickDuration: 0.05
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/Nexus/Skins/Skin03/Animations/SRUAP_ChaosNexus_idle.anm"
+    key Spawn_Hold
+    AtomicClipData
+      mFlags: 8
+      mTrackDataName: Default
+      mTickDuration: 2.5
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/Nexus/Skins/Skin03/Animations/SRUAP_ChaosNexus_spawn_hold.anm"
+    key Spawn
+    AtomicClipData
+      mFlags: 8
+      mTrackDataName: Default
+      mEventDataMap: {2}
+        key Audio_Spawn
+        ParticleEventData
+          mName: Audio_Spawn
+          mStartFrame: 1
+          mEffectName: "SRUAP_Chaos_Nexus_Spawn_sound.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+          mIsLoop: 0
+          mIsKillEvent: 0
+        key {bd5d7a8f}
+        ParticleEventData
+          mName: {bd5d7a8f}
+          mStartFrame: 35
+          mEffectName: "SRUAP_Chaos_Nexus_Idle1_sound.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+          mIsKillEvent: 0
+      mTickDuration: 0.1
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/Nexus/Skins/Skin03/Animations/SRUAP_ChaosNexus_spawn.anm"
+    key Idle1
+    SequencerClipData
+      mClipNameList: [4]
+        Spawn_Hold
+        Spawn
+        IdleIn
+        Idle1_Base
+    key IdleIn
+    AtomicClipData
+      mTrackDataName: Default
+      mTickDuration: 0.05
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/Nexus/Skins/Skin03/Animations/SRUAP_ChaosNexus_idleIn.anm"
+  mTrackDataMap: {1}
+    key Default
+    TrackData
+  mBlendDataTable: {21}
+    key 4.189e+18
+    TimeBlendData
+      mTime: 0
+    key 4.189e+18
+    TimeBlendData
+      mTime: 0
+    key 4.189e+18
+    TimeBlendData
+      mTime: 0
+    key 4.189e+18
+    TimeBlendData
+      mTime: 0
+    key 6.10372e+18
+    TimeBlendData
+      mTime: 0
+    key 6.10372e+18
+    TimeBlendData
+      mTime: 0
+    key 6.10372e+18
+    TimeBlendData
+      mTime: 0
+    key 6.10372e+18
+    TimeBlendData
+      mTime: 0
+    key 7.79438e+18
+    TimeBlendData
+      mTime: 0
+    key 7.79438e+18
+    TimeBlendData
+      mTime: 0
+    key 7.79438e+18
+    TimeBlendData
+      mTime: 0
+    key 7.79438e+18
+    TimeBlendData
+      mTime: 0
+    key 1.13744e+19
+    TimeBlendData
+      mTime: 0
+    key 1.36304e+19
+    TimeBlendData
+      mTime: 0
+    key 1.36304e+19
+    TimeBlendData
+      mTime: 0
+    key 1.36304e+19
+    TimeBlendData
+      mTime: 0
+    key 1.36304e+19
+    TimeBlendData
+      mTime: 0
+    key 1.66318e+19
+    TimeBlendData
+      mTime: 0
+    key 1.66318e+19
+    TimeBlendData
+      mTime: 0
+    key 1.66318e+19
+    TimeBlendData
+      mTime: 0
+    key 1.66318e+19
+    TimeBlendData
+      mTime: 0

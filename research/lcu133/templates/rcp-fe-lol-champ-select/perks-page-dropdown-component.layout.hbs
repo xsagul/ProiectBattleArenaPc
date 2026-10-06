@@ -1,0 +1,20 @@
+<lol-uikit-framed-dropdown stylablecontent="" direction="upward" disabled={{disabled}} onclick={{action this "dropdownClicked"}} class="perks-page-dropdown">
+  {{#if hasPages}}
+    {{#each sortedPages key="id" as |page index|}}
+      {{perks-page-dropdown-option showPresetPages=showPresetPages page=page currentPageId=currentPerksPage.id index=index restrictedPageNamesEnabled=restrictedPageNamesEnabled pageRenamingDisabled=pageRenamingDisabled click=(action this "selectPage" page}}
+    {{/each}}
+  {{else}}
+    <lol-uikit-dropdown-option>
+    </>
+  {{/if}}
+</>
+{{#if shouldShowDropdownHighlight}}
+  <div class="framed-highlight-overlay">
+    <div class="framed-highlight-overlay-shadow">
+    </>
+    <div class="framed-highlight-overlay-border">
+    </>
+    <div class="framed-highlight-overlay-background">
+    </>
+  </>
+{{/if}}

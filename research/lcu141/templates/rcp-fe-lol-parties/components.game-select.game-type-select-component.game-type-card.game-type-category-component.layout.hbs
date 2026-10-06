@@ -1,0 +1,49 @@
+<div class="parties-game-type-card-category-radio-option">
+</>
+<div class="queue-eligibility-error queue-status-icon {{if isEligibilityRestricted "queue-status-icon-visible"}}">
+  {{#uikit-tooltip tooltipConfig=tooltipConfig}}
+    <lol-uikit-content-block class="game-type-category-disabled" type="tooltip-system">
+      <ul>
+        {{#each disabledReasons as |reason|}}
+          <li>
+            {{sanitize reason}}
+          </>
+        {{/each}}
+      </>
+    </>
+  {{/uikit-tooltip}}
+</>
+<div class="solo-rewards-icon queue-status-icon {{if shouldShowSoloRewards "queue-status-icon-visible"}}">
+  {{#uikit-tooltip tooltipConfig=tooltipConfig}}
+    <lol-uikit-content-block type="tooltip-large">
+      <h5>
+        {{tra.game_select_solo_rewards_title}}
+      </>
+      <hr>
+      </>
+      {{#if soloAutofillProtectionEnabled}}
+        <p class="game-select-solo-rewards-item">
+          {{tra.game_select_solo_rewards_autofill_protection}}
+        </>
+      {{/if}}
+      {{#if soloIpIncentivesEnabled}}
+        <p class="game-select-solo-rewards-item">
+          {{tra.game_select_solo_rewards_ip_incentive}}
+        </>
+      {{/if}}
+    </>
+  {{/uikit-tooltip}}
+</>
+<div data-queue-id="{{queueId}}" data-disabled-reason="{{computeDisabledReasons}}" class="{{if isSelected "current"}} {{if isDisabled "disabled"}} parties-game-type-card-category-btn">
+  {{gameTypeQueueName}}
+  {{#if shouldShowAllowablePremadeSizes}}
+    <span class="allowable-premade-sizes-text">
+      {{allowablePremadeSizesString}}
+    </>
+  {{/if}}
+</>
+{{#if shouldShowUnlockVideo}}
+  <uikit-video class="parties-game-type-card-category-unlock-video" cache-name="rcp-fe-lol-parties" preload="" src="{{unlockVideo}}">
+  </>
+{{/if}}
+{{tft-event-countdown queueId=queueId}}

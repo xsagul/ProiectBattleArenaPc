@@ -1,0 +1,93 @@
+{{#if shouldDisplayIcon}}
+  <div class="menu-item-icon-wrapper">
+    <uikit-state-machine class="navigation-icon-click-state-machine" state="static">
+      <uikit-states>
+        <uikit-state name="static">
+          <uikit-behavior-media selector=".navigation-icon-click-video" preloading="">
+          </>
+        </>
+        <uikit-state name="click">
+          <uikit-behavior-media selector=".navigation-icon-click-video" playing="">
+          </>
+          <uikit-transition next-state="static">
+            <uikit-condition-media selector=".navigation-icon-click-video" ended="">
+            </>
+          </>
+        </>
+      </>
+      {{#if shouldShowIconCallToActionVideo}}
+        <div visible-state="static" class="menu-item-icon-placeholder">
+        </>
+        <uikit-state-machine visible-state="static" class="navigation-cta-wrapper navigation-icon-cta" state="loading">
+          <uikit-states>
+            <uikit-state name="loading">
+              <uikit-transition next-state="intro">
+                <uikit-condition-media selector=".navigation-cta-intro" can-play="">
+                </>
+                <uikit-condition-media selector=".navigation-cta-loop" can-play="">
+                </>
+              </>
+            </>
+            <uikit-state name="intro">
+              <uikit-behavior-media selector=".navigation-cta-intro" playing="">
+              </>
+              <uikit-transition next-state="loop">
+                <uikit-condition-media selector=".navigation-cta-intro" ended="">
+                </>
+              </>
+            </>
+            <uikit-state name="loop">
+              <uikit-behavior-media selector=".navigation-cta-loop" playing="">
+              </>
+            </>
+          </>
+          <uikit-video visible-state="intro" class="navigation-cta-intro" src={{iconCallToActionVideos.intro}}>
+          </>
+          <uikit-video visible-state="loop" class="navigation-cta-loop" src={{iconCallToActionVideos.loop}} loop="">
+          </>
+        </>
+      {{else}}
+        <div visible-state="static" class="menu-item-icon" style="-webkit-mask-image: url({{item.iconPath}})">
+        </>
+      {{/if}}
+      <div visible-state="click" class="menu-item-icon-placeholder">
+      </>
+      <uikit-video visible-state="click" class="navigation-icon-click-video" src={{iconClickVideo}}>
+      </>
+      <div class="menu-item-icon" style="-webkit-mask-image: url({{item.iconPath}})">
+      </>
+    </>
+    {{#if showAttentionTooltip}}
+      <div class="menu-item-attention-tooltip" onclick={{action this "attentionTooltipRead"}}>
+        <div class="menu-item-attention-tooltip-content">
+          <div class="menu-item-attention-tooltip-content-decoration">
+          </>
+          <div class="menu-item-attention-tooltip-icon">
+            <img src="{{attentionTooltip.iconUrl}}" alt="Nav item attention tooltip icon">
+            </>
+          </>
+          <div class="menu-item-attention-tooltip-text">
+            <div class="menu-item-attention-tooltip-text-title">
+              {{attentionTooltip.title}}
+            </>
+            <div class="menu-item-attention-tooltip-text-msg">
+              {{attentionTooltip.description}}
+            </>
+          </>
+        </>
+      </>
+    {{/if}}
+  </>
+  {{#if shouldDisplayTextBelowIcons}}
+    <div class="menu-item-small-text">
+      {{displayName}}
+    </>
+  {{/if}}
+{{else}}
+  {{displayName}}
+{{/if}}
+{{#if shouldShowCallToActionPip}}
+  <div class="navigation-cta-wrapper navigation-pip-cta">
+    {{call-to-action-pip}}
+  </>
+{{/if}}

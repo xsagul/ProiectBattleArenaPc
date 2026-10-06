@@ -1,0 +1,24 @@
+<div class="framed-icon-button-frame" onmouseenter={{action this "onButtonHover"}} onclick={{action this "onButtonClick"}}>
+  <div class="framed-icon-button-holder">
+    {{button-mask-icon widthStyle="20px" heightStyle="20px" iconPath=iconPath}}
+  </>
+  {{#if showDisabledTooltip}}
+    {{#uikit-tooltip tooltipPosition="top" type="system"}}
+      <lol-uikit-content-block type="tooltip-system">
+        <p>
+          {{disabledTooltipText}}
+        </>
+      </>
+    {{/uikit-tooltip}}
+  {{else}}
+    {{#if tooltipText}}
+      {{#uikit-tooltip tooltipPosition="top" type="system"}}
+        <lol-uikit-content-block type="tooltip-system">
+          <p>
+            {{tooltipText}}
+          </>
+        </>
+      {{/uikit-tooltip}}
+    {{/if}}
+  {{/if}}
+</>

@@ -1,0 +1,130 @@
+version 3, 1 entries, 0 links
+Characters/SRU_OrderMinionSiege/Animations/Skin0 (animationGraphData)
+  mCascadeBlendValue: 0
+  mClipDataMap: {12}
+    key Attack1_BASE
+    AtomicClipData
+      mTrackDataName: Default
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/SRU_OrderMinionSiege/Skins/Base/Animations/Cannon_Order_Attack1.anm"
+    key Attack2_BASE
+    AtomicClipData
+      mTrackDataName: Default
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/SRU_OrderMinionSiege/Skins/Base/Animations/Cannon_Order_Attack2.anm"
+    key Win1
+    AtomicClipData
+      mTrackDataName: Default
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/SRU_OrderMinionSiege/Skins/Base/Animations/Cannon_Order_Win1.anm"
+    key Win2
+    AtomicClipData
+      mTrackDataName: Default
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/SRU_OrderMinionSiege/Skins/Base/Animations/Cannon_Order_Win1.anm"
+    key death
+    AtomicClipData
+      mTrackDataName: Default
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/SRU_OrderMinionSiege/Skins/Base/Animations/Cannon_Order_Death1.anm"
+    key Death2
+    AtomicClipData
+      mTrackDataName: Default
+      mEventDataMap: {3}
+        key {61cad004}
+        SubmeshVisibilityEventData
+          mName: {61cad004}
+          mHideSubmeshList: [1]
+            Minion_Order_Mat
+        key {a3124087}
+        SubmeshVisibilityEventData
+          mName: {a3124087}
+          mHideSubmeshList: [1]
+            Cannon_Order_Mat
+        key DeathParticle
+        ParticleEventData
+          mName: DeathParticle
+          mEffectName: "SRU_Order_CanM_death.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+          mIsLoop: 0
+          mIsKillEvent: 0
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/SRU_OrderMinionSiege/Skins/Base/Animations/Cannon_Order_Death1.anm"
+    key Idle1
+    AtomicClipData
+      mTrackDataName: Default
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/SRU_OrderMinionSiege/Skins/Base/Animations/Cannon_Order_Idle1.anm"
+    key Run
+    AtomicClipData
+      mTrackDataName: Default
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/SRU_OrderMinionSiege/Skins/Base/Animations/Cannon_Order_Run1.anm"
+    key Lose1
+    AtomicClipData
+      mTrackDataName: Default
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/SRU_OrderMinionSiege/Skins/Base/Animations/Cannon_Order_Run1.anm"
+    key Stunned
+    AtomicClipData
+      mTrackDataName: Default
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/SRU_OrderMinionSiege/Skins/Base/Animations/Cannon_Order_Run1.anm"
+    key Attack1
+    SelectorClipData
+      mSelectorPairDataList: [3]
+        SelectorPairData
+          mClipName: Attack1_BASE
+          mProbability: 40
+        SelectorPairData
+          mClipName: Attack2_BASE
+          mProbability: 30
+        SelectorPairData
+          mClipName: {0c656e32}
+          mProbability: 30
+    key {0c656e32}
+    AtomicClipData
+      mTrackDataName: Default
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/SRU_OrderMinionSiege/Skins/Base/Animations/Cannon_Order_Attack3.anm"
+  mTrackDataMap: {1}
+    key Default
+    TrackData
+  mBlendDataTable: {12}
+    key 8.93241e+17
+    TimeBlendData
+      mTime: 0
+    key 3.08421e+18
+    TimeBlendData
+      mTime: 0
+    key 4.5456e+18
+    TimeBlendData
+      mTime: 0
+    key 4.76178e+18
+    TimeBlendData
+      mTime: 0
+    key 5.05369e+18
+    TimeBlendData
+      mTime: 0
+    key 6.24703e+18
+    TimeBlendData
+      mTime: 0
+    key 7.46927e+18
+    TimeBlendData
+      mTime: 0
+    key 7.89383e+18
+    TimeBlendData
+      mTime: 0
+    key 1.13744e+19
+    TimeBlendData
+      mTime: 0
+    key 1.14141e+19
+    TimeBlendData
+      mTime: 0
+    key 1.36304e+19
+    TimeBlendData
+      mTime: 0
+    key 1.55534e+19
+    TimeBlendData
+      mTime: 0

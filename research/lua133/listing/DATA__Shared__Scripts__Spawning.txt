@@ -1,0 +1,35 @@
+
+main <?:0,0> (3 instructions, 12 bytes at 0000029BB82432C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 1 constant, 1 function
+	1	[-]	CLOSURE  	0 0	; 0000029BB8243340
+	2	[-]	SETGLOBAL	0 -1	; SpawnTurret
+	3	[-]	RETURN   	0 1
+constants (1) for 0000029BB82432C0:
+	1	"SpawnTurret"
+locals (0) for 0000029BB82432C0:
+upvalues (0) for 0000029BB82432C0:
+
+function <?:11,18> (16 instructions, 64 bytes at 0000029BB8243340)
+6 params, 13 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	6 -2	; CreateChildTurret
+	2	[-]	MOVE     	7 0
+	3	[-]	MOVE     	8 1
+	4	[-]	MOVE     	9 2
+	5	[-]	MOVE     	10 3
+	6	[-]	MOVE     	11 4
+	7	[-]	MOVE     	12 5
+	8	[-]	CALL     	6 7 2
+	9	[-]	SETGLOBAL	6 -1	; turret
+	10	[-]	GETGLOBAL	6 -3	; SetWorldVar
+	11	[-]	MOVE     	7 0
+	12	[-]	GETGLOBAL	8 -1	; turret
+	13	[-]	CALL     	6 3 1
+	14	[-]	GETGLOBAL	6 -1	; turret
+	15	[-]	RETURN   	6 2
+	16	[-]	RETURN   	0 1
+constants (3) for 0000029BB8243340:
+	1	"turret"
+	2	"CreateChildTurret"
+	3	"SetWorldVar"
+locals (0) for 0000029BB8243340:
+upvalues (0) for 0000029BB8243340:

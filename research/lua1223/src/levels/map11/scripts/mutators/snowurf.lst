@@ -1,0 +1,48 @@
+
+main <?:0,0> (5 instructions, 20 bytes at 006F7F30)
+0+ params, 2 slots, 0 upvalues, 0 locals, 2 constants, 2 functions
+	1	[-]	CLOSURE  	0 0	; 006F98D0
+	2	[-]	SETGLOBAL	0 -1	; OnInitClient
+	3	[-]	CLOSURE  	0 1	; 006F9928
+	4	[-]	SETGLOBAL	0 -2	; OnInitServer
+	5	[-]	RETURN   	0 1
+constants (2) for 006F7F30:
+	1	"OnInitClient"
+	2	"OnInitServer"
+locals (0) for 006F7F30:
+upvalues (0) for 006F7F30:
+
+function <?:2,4> (4 instructions, 16 bytes at 006F98D0)
+0 params, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; PreloadCharacter
+	2	[-]	LOADK    	1 -2	; "KINGPORO_PoroFollower"
+	3	[-]	CALL     	0 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 006F98D0:
+	1	"PreloadCharacter"
+	2	"KINGPORO_PoroFollower"
+locals (0) for 006F98D0:
+upvalues (0) for 006F98D0:
+
+function <?:6,10> (12 instructions, 48 bytes at 006F9928)
+0 params, 3 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; PreloadCharacter
+	2	[-]	LOADK    	1 -2	; "KINGPORO_PoroFollower"
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -3	; ApplyPersistentBuffToAllChampions
+	5	[-]	LOADK    	1 -4	; "PoroFollowerManager"
+	6	[-]	LOADBOOL 	2 0 0
+	7	[-]	CALL     	0 3 1
+	8	[-]	GETGLOBAL	0 -3	; ApplyPersistentBuffToAllChampions
+	9	[-]	LOADK    	1 -5	; "SNOWURF_PlayerBuff"
+	10	[-]	LOADBOOL 	2 0 0
+	11	[-]	CALL     	0 3 1
+	12	[-]	RETURN   	0 1
+constants (5) for 006F9928:
+	1	"PreloadCharacter"
+	2	"KINGPORO_PoroFollower"
+	3	"ApplyPersistentBuffToAllChampions"
+	4	"PoroFollowerManager"
+	5	"SNOWURF_PlayerBuff"
+locals (0) for 006F9928:
+upvalues (0) for 006F9928:

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>BattleArena</title>
+<!-- The out-of-game client. Its look is League's own, patch 14.1: the style sheets, fonts, pictures, sounds and texts
+     are the client's files (lcu-data/14.1/plugins, served by lobby.exe at the addresses the client itself uses), and
+     the elements below are those of the client's page layouts (research/lcu141/templates, read out of its plugins).
+     What the page does with them (champ-select.js) is this project's code. -->
+<link rel="stylesheet" href="/fe/lol-typekit/fonts/fonts.css">
+<link rel="stylesheet" href="/fe/lol-typekit/fonts/styles.css">
+<link rel="stylesheet" href="/fe/lol-uikit/main.css">
+<link rel="stylesheet" href="/fe/lol-champ-select/rcp-fe-lol-champ-select.css">
+<link rel="stylesheet" href="/fe/lol-shared-components/rcp-fe-lol-shared-components.css">
+<link rel="stylesheet" href="/fe/lol-parties/rcp-fe-lol-parties.css">
+<link rel="stylesheet" href="/gameflow.css">
+<style>
+  /* the client's window: 1280 x 720, its content one pixel inside (the plugins are laid out for 1278 x 718) */
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  #viewport {
+    position: absolute; left: 50%; top: 50%; width: 1280px; height: 720px;
+    margin: -360px 0 0 -640px; transform-origin: 50% 50%;
+    background: #010a13; overflow: hidden;
+  }
+  #viewport > .screen { position: absolute; left: 1px; top: 1px; }
+</style>
+</head>
+<body>
+<div id="viewport"></div>
+<script src="/gameflow.js"></script>
+<script src="/champ-select.js"></script>
+</body>
+</html>

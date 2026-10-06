@@ -1,0 +1,24 @@
+<div class="parties-debug-queues">
+  <h1 class="parties-debug-title">
+    PARTIES - DEBUG
+  </>
+  <span class="parties-debug-tip">
+    [ctrl-y to dismiss]
+  </>
+  <lol-uikit-navigation-bar type="nav-bar-secondary" direction="left" selectedIndex="0">
+    <lol-uikit-navigation-item onclick={{action this "selectTab" "queues"}}>
+      Queues
+    </>
+    <lol-uikit-navigation-item onclick={{action this "selectTab" "customs"}}>
+      Custom Games
+    </>
+  </>
+  <div class="parties-debug-tab-content">
+    {{#if selectedTabIsQueues}}
+      {{parties-debug-queue-lobby selected=selected showingState=showingState}}
+    {{/if}}
+    {{#if selectedTabIsCustoms}}
+      {{parties-debug-custom-lobby}}
+    {{/if}}
+  </>
+</>

@@ -1,0 +1,37 @@
+struct 0x86a4a0
+  0x86a4a0 field 0: bits 0..0 +0xa 1 B 0:const 1:const
+  0x86a4a0 field 1: bits 21..21 +0xb 1 B 0:const 1:const
+  0x86a4a0 field 2: bits 8..10 +0xc 4 B 0:varint 1:const 2:const 3:const 4:varint 5:const 6:varint 7:varint
+  0x86a4a0 field 3: bits 23..25 +0x10 4 B 0:varint 1:const 2:varint 3:const 4:varint 5:varint 6:const 7:const
+  0x86a4a0 field 4: bits 11..12 +0x14 12 B 0:text 1:text 2:const 3:text
+  0x86a4a0 field 5: bits 6..6 +0x20 1 B 0:const 1:const
+  0x86a4a0 field 6: bits 13..15 +0x21 1 B 0:const 1:const 2:fixed 3:fixed 4:const 5:const 6:fixed 7:fixed
+  0x86a4a0 field 7: bits 7..7 +0x22 1 B 0:const 1:const
+  0x86a4a0 field 8: bits 22..22 +0x23 1 B 0:const 1:const
+  0x86a4a0 field 9: bits 16..18 +0x24 4 B 0:varint 1:varint 2:const 3:varint 4:const 5:varint 6:const 7:const
+  0x86a4a0 field 10: bits 29..29 +0x28 1 B 0:const 1:const
+  0x86a4a0 field 11: bits 19..20 +0x2c 12 B 0:text 1:text 2:const 3:text
+  0x86a4a0 field 12: bits 1..2 +0x38 12 B 0:text 1:const 2:text 3:text
+  0x86a4a0 field 13: bits 26..28 +0x44 1 B 0:const 1:fixed 2:fixed 3:fixed 4:const 5:fixed 6:const 7:const
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 1478, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 1149, in learn
+    sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc).learn()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 361, in learn
+    fl = self.learn_field(k)
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 404, in learn_field
+    mode = self.learn_mode(k, m, r, seg, res, d)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 481, in learn_mode
+    return self.learn_bytes(k, m, res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 554, in learn_bytes
+    return self.learn_varint(k, m, res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 599, in learn_varint
+    z = S.index(0)
+        ^^^^^^^^^^
+ValueError: 0 is not in list

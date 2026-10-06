@@ -1,0 +1,134 @@
+{
+  "name": "UiElementEffectAnimationData",
+  "hash": "0xa742684a",
+  "interface": false,
+  "value": false,
+  "bases": [
+    "UiElementEffectData"
+  ],
+  "since": null,
+  "removedIn": null,
+  "properties": [
+    {
+      "name": "FramesPerSecond",
+      "hash": "0xff72f56a",
+      "ft": "F32",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "0"
+    },
+    {
+      "name": "NumberOfFramesPerRowInAtlas",
+      "hash": "0x9e17f690",
+      "ft": "F32",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "0"
+    },
+    {
+      "name": "TextureData",
+      "hash": "0xe502c1dc",
+      "ft": "Pointer",
+      "kt": null,
+      "vt": null,
+      "kh": "0x840074ef",
+      "khName": "IUiEffectTextureDataProvider",
+      "khKind": "class",
+      "since": "13.21",
+      "defaultValue": "null"
+    },
+    {
+      "name": "TotalNumberOfFrames",
+      "hash": "0xa6517bab",
+      "ft": "F32",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "0"
+    },
+    {
+      "name": "mAtlas",
+      "hash": "0xe9673baf",
+      "ft": "Pointer",
+      "kt": null,
+      "vt": null,
+      "kh": "0x840074ef",
+      "khName": "IUiEffectTextureDataProvider",
+      "khKind": "class",
+      "removedIn": "13.21",
+      "defaultValue": "null"
+    },
+    {
+      "name": "mFinishBehavior",
+      "hash": "0xee3c0711",
+      "ft": "U8",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "0"
+    },
+    {
+      "name": "mFlipX",
+      "hash": "0xeee395d1",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "false"
+    },
+    {
+      "name": "mFlipY",
+      "hash": "0xede3943e",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "false"
+    },
+    {
+      "name": "mPerPixelUvsX",
+      "hash": "0x5005a7a1",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "false"
+    }
+  ],
+  "ancestorLevels": [
+    [
+      "UiElementEffectData"
+    ],
+    [
+      "UiElementAssetData"
+    ],
+    [
+      "UiElementData"
+    ],
+    [
+      "UiElementIData"
+    ]
+  ],
+  "descendantTree": [
+    {
+      "name": "UiElementEffectAnimatedRotatingIconData",
+      "children": []
+    }
+  ]
+}

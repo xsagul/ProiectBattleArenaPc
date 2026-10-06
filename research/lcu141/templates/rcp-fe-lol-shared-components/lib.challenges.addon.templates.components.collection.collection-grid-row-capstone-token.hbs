@@ -1,0 +1,40 @@
+<img class="capstone-token" src="{{iconPath}}">
+</>
+{{#uikit-tooltip tooltipPosition="right" type="system"}}
+  <lol-uikit-content-block type="tooltip-system" class="capstone-row-token-tooltip">
+    <div class="capstone-row-token-tooltip-container">
+      <div class="capstone-row-token-tooltip-row">
+        <div class="capstone-row-token-tooltip-name">
+          <div class="challenges-medal-icon-container">
+            <div class="challenges-icon medal">
+            </>
+          </>
+          <div>
+            {{challengeName}}
+          </>
+        </>
+        <div class="capstone-row-token-tooltip-value">
+          {{sanitize txtPointsAwarded}}
+        </>
+      </>
+      <div class="capstone-row-token-tooltip-row">
+        <div class="capstone-row-token-tooltip-name">
+          {{tra.challenge_group_capstone_tooltip_name_other}}
+        </>
+        <div class="capstone-row-token-tooltip-value">
+          {{sanitize txtPointsAwardedOtherTotal}}
+        </>
+      </>
+      <div class="capstone-row-token-tooltip-horizontal-line">
+      </>
+      <div class="capstone-row-token-tooltip-row">
+        <div class="capstone-row-token-tooltip-name">
+          {{tra.challenge_group_capstone_tooltip_name_total}}
+        </>
+        <div class="capstone-row-token-tooltip-value">
+          {{sanitize txtGroupPointsTotal}}
+        </>
+      </>
+    </>
+  </>
+{{/uikit-tooltip}}

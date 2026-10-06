@@ -1,0 +1,19 @@
+<div class="play-button-frame" data-is-logged-in={{playButton.isLoggedIn}} data-is-not-patching={{playButton.isNotPatching}} data-patcher-state={{patcher.patcherState}}>
+</>
+{{#if showTooltip}}
+  {{#uikit-tooltip tooltipPosition="bottom"}}
+    <lol-uikit-content-block type="tooltip-large">
+      <p>
+        {{tooltipMessage}}
+      </>
+    </>
+  {{/uikit-tooltip}}
+{{/if}}
+<div class="play-button-container" style={{sanitize buttonContainerStyle}}>
+  {{league-client-logo videoSource=videoSource}}
+  <div class="play-button-content">
+    <span class="play-button-text">
+      {{buttonText}}
+    </>
+  </>
+</>

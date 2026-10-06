@@ -1,0 +1,18 @@
+<div class="multi-purchase-set-quantity-label">
+  {{tra.multi_purchase_slider_set_quantity}}
+</>
+<lol-uikit-flat-input>
+  {{input class="multi-purchase-input-number" type="number" value=selectedQuantity step=min min=min max=max disabled=disabled}}
+</>
+<div class="multi-purchase-set-quantity-error">
+  {{#if errorMessage}}
+    {{errorMessage}}
+  {{/if}}
+</>
+<div class="multi-purchase-uikit-slider-container">
+  <lol-uikit-slider class={{sliderCSSClass}} step={{min}} min={{min}} max={{max}} value={{sliderValue}}>
+  </>
+  <div class="multi-purchase-uikit-slider-max">
+    {{max}}
+  </>
+</>

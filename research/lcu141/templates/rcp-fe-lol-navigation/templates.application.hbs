@@ -1,0 +1,41 @@
+<div class="fake-ember-application">
+  <div id="fake-application-template">
+    {{ready-check-root}}
+  </>
+  {{loading-tab}}
+</>
+<div class="navbar_backdrop">
+  {{#if shouldRenderLegalRatingScreen}}
+    {{legal-rating-screen}}
+  {{/if}}
+  {{patcher-and-play-button}}
+  {{navigation-root}}
+  {{outlet}}
+  <!-- TODO Make this a startup alerts object -->
+  <lc-alert-modal okText="{{tft.tftPassWelcomeButton}}" onOk={{action this "navigateToTft"}} dismissible={{true}} open={{tft.showSeasonStart}} dismissibleType="inside">
+    <lc-modal-content>
+      <div class="tft-season-start" style="background-image: url({{get tft.media "background--season-start-modal"}})">
+        <div class="tft-season-start-title">
+          {{tft.tftPassWelcomeTitle}}
+        </>
+        <div class="tft-season-start-body">
+          {{tft.tftPassWelcomeBody}}
+        </>
+      </>
+    </>
+  </>
+  <!-- TODO Remove After 32-bit deprecation -->
+  <lc-alert-modal okText="{{tra.lib_ui_dialog_alert_ok}}" dismissible={{false}} open={{showDeprecationWarning}}>
+    <lc-modal-content>
+      <div class="deprecation-dialog">
+        <div class="deprecation-dialog-title">
+          {{deprecationWarningTitle}}
+        </>
+        <div class="deprecation-dialog-body">
+          {{{tra.client_game_32_bit_deprecation_body}}}
+        </>
+      </>
+    </>
+  </>
+</>
+{{uikit-toast-celebration celebrations.rewardToasts}}

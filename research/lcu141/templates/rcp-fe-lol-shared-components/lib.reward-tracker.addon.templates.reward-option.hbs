@@ -1,0 +1,83 @@
+{{#if isChoiceReward}}
+  <div class="reward-option-mock-choice second {{rareRewardClass}} {{stateClass}}">
+    <div class="reward-option-image-border overlay {{rareRewardClass}} {{stateClass}}">
+      <div class="reward-option-image-border reward-option-border-glow {{stateClass}}">
+      </>
+    </>
+  </>
+  <div class="reward-option-mock-choice {{rareRewardClass}}">
+    <div class="reward-option-image-border overlay {{rareRewardClass}} {{stateClass}}">
+      <div class="reward-option-image-border reward-option-border-glow {{stateClass}}">
+      </>
+    </>
+  </>
+{{/if}}
+<div class="reward-header">
+  {{#if isPremiumHeader}}
+    <div class="reward-header-icon">
+      <img src="/fe/lol-static-assets/images/reward-tracker/ticket-grey.svg" class="premium-icon">
+      </>
+    </>
+  {{/if}}
+  {{#if isFreeHeader}}
+    <div class="reward-header-free">
+      <div class="reward-header-text">
+        {{tra.reward_tracker_reward_item_header_override_Free}}
+      </>
+    </>
+  {{/if}}
+</>
+<div class="reward-option-image-mask {{stateClass}}">
+  <img class="reward-option-image {{rareRewardClass}}" src="{{rewardIcon}}">
+  </>
+</>
+<div class="reward-option-image-border inlay {{rareRewardClass}}">
+</>
+<div class="reward-option-image-border overlay {{rareRewardClass}} {{stateClass}}">
+  {{#if footerText}}
+    <div class="reward-footer-text">
+      {{footerText}}
+    </>
+  {{/if}}
+  <div class="reward-option-image-border reward-option-border-glow {{stateClass}}">
+  </>
+  {{#if isUnselected}}
+    <div class="reward-option-unselected-glow">
+    </>
+  {{/if}}
+  {{#if shouldShowChoiceUnselectedPip}}
+    <img class="reward-choice-unselected-pip" src="/fe/lol-static-assets/images/reward-tracker/pip-unselected-choice.svg">
+    </>
+    {{#if isUnselected}}
+      <img class="reward-choice-unselected-pip reward-choice-unselected-pip-glow" src="/fe/lol-static-assets/images/reward-tracker/pip-unselected-choice-glow.png">
+      </>
+    {{/if}}
+  {{/if}}
+  {{#if isSelected}}
+    {{#if isDisabled}}
+      <div class="reward-option-selected-disabled-pip-container">
+        <img class="reward-option-selected-disabled-slot" src="/fe/lol-static-assets/images/reward-tracker/disabled-pip-slot.svg">
+        </>
+        <div class="reward-option-selected-disabled-pip">
+        </>
+      </>
+    {{else}}
+      <img class="reward-option-selected-pip" src="/fe/lol-static-assets/images/reward-tracker/pip-checked.png">
+      </>
+    {{/if}}
+  {{/if}}
+</>
+{{#if shouldShowGlowAnimation}}
+  <div class="reward-option-unselected-glow-animation-wrapper {{rareRewardClass}} animation-idle">
+    <uikit-video src="/fe/lol-static-assets/videos/reward-item-claimable-{{rewardVideoSize}}-glow-idle.webm" preload="" autoplay="" loop="">
+    </>
+  </>
+  <div class="reward-option-unselected-glow-animation-wrapper {{rareRewardClass}} animation-hover">
+    <uikit-video src="/fe/lol-static-assets/videos/reward-item-claimable-{{rewardVideoSize}}-glow-hover.webm" preload="" autoplay="" loop="">
+    </>
+  </>
+  <div class="reward-option-unselected-glow-animation-wrapper {{rareRewardClass}} animation-active">
+    <uikit-video src="/fe/lol-static-assets/videos/reward-item-claimable-{{rewardVideoSize}}-glow-active.webm" preload="">
+    </>
+  </>
+{{/if}}

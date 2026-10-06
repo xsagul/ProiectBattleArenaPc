@@ -1,0 +1,13 @@
+<div class="description">
+  {{instructions}}
+</>
+<div class="summoner-name-input-wrapper">
+  <lol-uikit-flat-input class="flat-input">
+    <input type="search" class={{inputClasses}} maxlength="26" placeholder={{tra.friend_finder_modal_enter_a_summoner_name_placeholder}} disabled={{working}}>
+    </>
+  </>
+  <lol-uikit-flat-button-secondary class="add-friend-button" onclick={{action this "submitAddFriend"}} disabled={{working}}>
+    {{tra.friend_finder_modal_button_add_friend}}
+  </>
+</>
+{{tooltip-message position="bottom" messagePacket=messagePacket delay=4000 width=messageWidth selector=".enter-summoner-name"}}

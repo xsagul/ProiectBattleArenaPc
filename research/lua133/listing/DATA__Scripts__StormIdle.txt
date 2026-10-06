@@ -1,0 +1,106 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 0000023CD42B32C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 9 constants, 9 functions
+	1	[-]	CLOSURE  	0 0	; 0000023CD42B3440
+	2	[-]	SETGLOBAL	0 -1	; OnInit
+	3	[-]	CLOSURE  	0 1	; 0000023CD42B34C0
+	4	[-]	SETGLOBAL	0 -2	; OnTargetLost
+	5	[-]	CLOSURE  	0 2	; 0000023CD42B3540
+	6	[-]	SETGLOBAL	0 -3	; OnCallForHelp
+	7	[-]	CLOSURE  	0 3	; 0000023CD42B35C0
+	8	[-]	SETGLOBAL	0 -4	; OnTauntBegin
+	9	[-]	CLOSURE  	0 4	; 0000023CD42B3640
+	10	[-]	SETGLOBAL	0 -5	; OnTauntEnd
+	11	[-]	CLOSURE  	0 5	; 0000023CD42B36E0
+	12	[-]	SETGLOBAL	0 -6	; OnCanMove
+	13	[-]	CLOSURE  	0 6	; 0000023CD42B3780
+	14	[-]	SETGLOBAL	0 -7	; OnCanAttack
+	15	[-]	CLOSURE  	0 7	; 0000023CD42B3820
+	16	[-]	SETGLOBAL	0 -8	; TimerFindEnemies
+	17	[-]	CLOSURE  	0 8	; 0000023CD42B38C0
+	18	[-]	SETGLOBAL	0 -9	; HaltAI
+	19	[-]	RETURN   	0 1
+constants (9) for 0000023CD42B32C0:
+	1	"OnInit"
+	2	"OnTargetLost"
+	3	"OnCallForHelp"
+	4	"OnTauntBegin"
+	5	"OnTauntEnd"
+	6	"OnCanMove"
+	7	"OnCanAttack"
+	8	"TimerFindEnemies"
+	9	"HaltAI"
+locals (0) for 0000023CD42B32C0:
+upvalues (0) for 0000023CD42B32C0:
+
+function <?:1,4> (6 instructions, 24 bytes at 0000023CD42B3440)
+0 params, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SetState
+	2	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	3	[-]	CALL     	0 2 1
+	4	[-]	LOADBOOL 	0 0 0
+	5	[-]	RETURN   	0 2
+	6	[-]	RETURN   	0 1
+constants (2) for 0000023CD42B3440:
+	1	"SetState"
+	2	"AI_HALTED"
+locals (0) for 0000023CD42B3440:
+upvalues (0) for 0000023CD42B3440:
+
+function <?:8,10> (3 instructions, 12 bytes at 0000023CD42B34C0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	RETURN   	0 2
+	3	[-]	RETURN   	0 1
+constants (0) for 0000023CD42B34C0:
+locals (0) for 0000023CD42B34C0:
+upvalues (0) for 0000023CD42B34C0:
+
+function <?:14,15> (1 instruction, 4 bytes at 0000023CD42B3540)
+2 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000023CD42B3540:
+locals (0) for 0000023CD42B3540:
+upvalues (0) for 0000023CD42B3540:
+
+function <?:18,21> (1 instruction, 4 bytes at 0000023CD42B35C0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000023CD42B35C0:
+locals (0) for 0000023CD42B35C0:
+upvalues (0) for 0000023CD42B35C0:
+
+function <?:24,25> (1 instruction, 4 bytes at 0000023CD42B3640)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000023CD42B3640:
+locals (0) for 0000023CD42B3640:
+upvalues (0) for 0000023CD42B3640:
+
+function <?:28,30> (1 instruction, 4 bytes at 0000023CD42B36E0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000023CD42B36E0:
+locals (0) for 0000023CD42B36E0:
+upvalues (0) for 0000023CD42B36E0:
+
+function <?:34,35> (1 instruction, 4 bytes at 0000023CD42B3780)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000023CD42B3780:
+locals (0) for 0000023CD42B3780:
+upvalues (0) for 0000023CD42B3780:
+
+function <?:39,41> (1 instruction, 4 bytes at 0000023CD42B3820)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000023CD42B3820:
+locals (0) for 0000023CD42B3820:
+upvalues (0) for 0000023CD42B3820:
+
+function <?:45,47> (1 instruction, 4 bytes at 0000023CD42B38C0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000023CD42B38C0:
+locals (0) for 0000023CD42B38C0:
+upvalues (0) for 0000023CD42B38C0:

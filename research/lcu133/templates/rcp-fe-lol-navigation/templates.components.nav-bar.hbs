@@ -1,0 +1,18 @@
+<div class="left-nav-menu">
+  {{#each leftItems as |item|}}
+    {{menu-item item=item action="deactivateMenuItems" forceTextLabels=true}}
+  {{/each}}
+</>
+<div class="right-nav-menu">
+  {{#each rightItems as |item|}}
+    {{menu-item item=item action="deactivateMenuItems"}}
+  {{/each}}
+  <div class="right-nav-vertical-rule">
+  </>
+  <div class="wallet-and-badges">
+    {{#if isLoyaltyEnabled}}
+      {{loyalty-badge loyaltyData=loyaltyData isRewardsProgramEnabled=isRewardsProgramEnabled}}
+    {{/if}}
+    {{currency-container}}
+  </>
+</>

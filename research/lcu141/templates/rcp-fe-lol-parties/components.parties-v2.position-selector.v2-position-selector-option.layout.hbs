@@ -1,0 +1,13 @@
+{{#if shouldShow}}
+  <div class="position-selector-option-container">
+    <div class="position-selector-text position">
+      {{positionText}}
+    </>
+    <div class="position-selector-text in-demand {{if inDemand "visible"}}">
+      {{tra.parties_position_in_demand}}
+    </>
+    {{v2-position-icon position=position selected=isPositionAlreadySelected hovered=hovered inDemand=inDemand isQuickPlayModal=isQuickPlayModal}}
+  </>
+  <div class="position-selector-wrapper {{if useGenerousHitbox "visible"}}" onmouseup={{action this "handlePositionSelected" ordinal position}} onmouseenter={{action this "onHoverIn"}} onmouseleave={{action this "onHoverOut"}}>
+  </>
+{{/if}}

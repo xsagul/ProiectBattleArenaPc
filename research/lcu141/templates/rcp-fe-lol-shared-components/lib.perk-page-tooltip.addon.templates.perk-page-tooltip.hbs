@@ -1,0 +1,34 @@
+<div class="perks-page-dropdown-details ui-dropdown-option-only">
+  <span class="perks-page-dropdown-details-bg" style={{tooltipBackgroundStyle}}>
+  </>
+  <div class="perks-page-dropdown-details-style-name style{{page.primaryStyleId}}">
+    <div class="perks-page-dropdown-details-style-icon style{{page.primaryStyleId}}" style={{primaryIconStyle}}>
+    </>
+    {{page.primaryStyleName}}
+  </>
+  {{#if selectedPrimaryPerks.length}}
+    <ul class="perks-page-dropdown-details-ul">
+      {{#each selectedPrimaryPerks as |perk|}}
+        <li class="perks-page-dropdown-details-li {{perk.slotType}}">
+          {{perk.name}}
+        </>
+      {{/each}}
+    </>
+  {{/if}}
+  {{#if page.subStyleId}}
+    <div class="perks-page-dropdown-details-style-name secondary style{{page.subStyleId}}">
+      <div class="perks-page-dropdown-details-style-icon style{{page.subStyleId}}" style={{secondaryIconStyle}}>
+      </>
+      {{page.secondaryStyleName}}
+    </>
+  {{/if}}
+  {{#if selectedSplashedPerks.length}}
+    <ul class="perks-page-dropdown-details-ul">
+      {{#each selectedSplashedPerks as |perk|}}
+        <li class="perks-page-dropdown-details-li">
+          {{perk.name}}
+        </>
+      {{/each}}
+    </>
+  {{/if}}
+</>

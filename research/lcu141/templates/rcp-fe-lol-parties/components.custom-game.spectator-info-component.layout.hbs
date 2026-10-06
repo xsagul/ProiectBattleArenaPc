@@ -1,0 +1,43 @@
+<div class="spectator-info-header-wrapper">
+  <span class="spectator-info-header">
+    {{tra.custom_game_spectators}}
+    (
+    {{spectatorsCountText}}
+    )
+  </>
+  {{#if showSpectatorButton}}
+    <div class="custom-game-spectate-button-wrapper">
+      <lol-uikit-flat-button-secondary class="custom-game-spectate-button" disabled={{spectateButtonDisabled}} onclick={{action this "currentPlayerToSpectator"}}>
+        {{tra.custom_game_spectate}}
+        {{#if spectateButtonDisabled}}
+          {{#uikit-tooltip tooltipPosition="top" type="system"}}
+            <lol-uikit-content-block type="tooltip-system">
+              <p>
+                {{spectateDisabledTooltip}}
+              </>
+            </>
+          {{/uikit-tooltip}}
+        {{/if}}
+      </>
+    </>
+  {{/if}}
+</>
+<div class="spectator-info-spectators">
+  <ul class="spectator-info-spectators-list">
+    {{#if hasSpectators}}
+      {{#each spectatorSummoners as |spectator|}}
+        {{spectator-member spectator=spectator}}
+      {{/each}}
+    {{else}}
+      <li class="spectator-info-spectators-list-item">
+        <span class="spectator-info-empty">
+          {{tra.custom_game_no_spectators}}
+        </>
+      </>
+    {{/if}}
+  </>
+</>
+<!-- We need to include spectatorsObserver in the layout or Ember will not fire that computed, for shame. -->
+<div style="display: none">
+  {{spectatorsObserver}}
+</>

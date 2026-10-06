@@ -1,0 +1,45 @@
+<!-- need currentPatchPercentComplete in the template to ensure it fires updates -->
+<div data-video-state={{videoState}} data-current-progress={{patcher.currentPatchPercentComplete}} class="animated-progress-bar main {{patchingStatus}}">
+  <div class="patcher-bar-proxy">
+  </>
+  {{#if isLongPatcherBar}}
+    <img class="frame" src={{progressBarAssets.patcherFrame}}>
+    </>
+  {{else}}
+    {{patcher-video-state class="frame" srcIntro=progressBarAssets.patcherFrameIntro}}
+  {{/if}}
+  {{#if isPatching}}
+    {{#if isProgressing}}
+      {{#progress-bar progressPercent=patcher.currentPatchPercentComplete srcMainLoop=progressBarAssets.progressBarMainLoop srcBorderLoop=progressBarAssets.progressBarBorder srcTipIntro=progressBarAssets.progressBarTipIntro srcTipLoop=progressBarAssets.progressBarTipLoop}}
+        {{#if isLongPatcherBar}}
+          <div class="progress-percent-text">
+            <span>
+              {{tra.long_patcher_bar_text}}
+            </>
+            <span>
+              {{patcher.formattedPercent}}
+            </>
+          </>
+        {{else}}
+          <div class="progress-percent-text">
+            {{patcher.formattedPercent}}
+            <span class="phase">
+              {{phase}}
+            </>
+          </>
+        {{/if}}
+      {{/progress-bar}}
+    {{/if}}
+    {{patcher-video-state class="logo" srcIntro=leagueLogoIntro srcLoop=leagueLogoLoop srcWidth="64" srcHeight="54"}}
+  {{/if}}
+</>
+<div id="lol-patcher-client-patch-modal-holder" class="lol-patcher-modal-holder">
+  <lol-uikit-content-block class="lol-patcher-client-patch-modal-body" type="dialog-medium">
+    <p>
+      {{clientPatchMessageText}}
+    </>
+    <p class="timer">
+      {{clientPatchModalTimerText}}
+    </>
+  </>
+</>

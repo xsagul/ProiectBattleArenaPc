@@ -1,0 +1,5747 @@
+
+main <?:0,0> (337 instructions, 1348 bytes at 012EDA28)
+0+ params, 2 slots, 0 upvalues, 0 locals, 172 constants, 161 functions
+	1	[-]	LOADK    	0 -2	; -1
+	2	[-]	SETGLOBAL	0 -1	; gCurrentBuildingBlockNumber
+	3	[-]	LOADK    	0 -4	; ""
+	4	[-]	SETGLOBAL	0 -3	; gCurrentBuildingBlockString
+	5	[-]	NEWTABLE 	0 0 0
+	6	[-]	SETGLOBAL	0 -5	; functionToStringMap
+	7	[-]	LOADBOOL 	0 0 0
+	8	[-]	SETGLOBAL	0 -6	; functionToStringMapInitialized
+	9	[-]	CLOSURE  	0 0	; 012EDD08
+	10	[-]	SETGLOBAL	0 -7	; ExecuteBuildingBlocks
+	11	[-]	CLOSURE  	0 1	; 012EDBA0
+	12	[-]	SETGLOBAL	0 -8	; BBRequireVar
+	13	[-]	NEWTABLE 	0 0 0
+	14	[-]	SETGLOBAL	0 -9	; ALREADY_WARNED
+	15	[-]	CLOSURE  	0 2	; 012ED978
+	16	[-]	SETGLOBAL	0 -10	; BBCom
+	17	[-]	CLOSURE  	0 3	; 012EDBF8
+	18	[-]	SETGLOBAL	0 -11	; BBConditionallyExecute
+	19	[-]	CLOSURE  	0 4	; 012F6CA0
+	20	[-]	SETGLOBAL	0 -12	; BBPrintTypeToChat
+	21	[-]	CLOSURE  	0 5	; 012F6DF0
+	22	[-]	SETGLOBAL	0 -13	; BBPrintToChat
+	23	[-]	CLOSURE  	0 6	; 012F70B0
+	24	[-]	SETGLOBAL	0 -14	; BBPrintTableToChat
+	25	[-]	CLOSURE  	0 7	; 012F7968
+	26	[-]	SETGLOBAL	0 -15	; PrintTableToChat
+	27	[-]	CLOSURE  	0 8	; 012F7C00
+	28	[-]	SETGLOBAL	0 -16	; BBDebugPrintToChat
+	29	[-]	CLOSURE  	0 9	; 012F7C58
+	30	[-]	SETGLOBAL	0 -17	; BBDebugPrintTableToChat
+	31	[-]	CLOSURE  	0 10	; 012F7D08
+	32	[-]	SETGLOBAL	0 -18	; DebugPrintTableToChat
+	33	[-]	CLOSURE  	0 11	; 012F7FA0
+	34	[-]	SETGLOBAL	0 -19	; GetTable
+	35	[-]	CLOSURE  	0 12	; 012F7FF8
+	36	[-]	SETGLOBAL	0 -20	; GetParam
+	37	[-]	CLOSURE  	0 13	; 012F82A0
+	38	[-]	SETGLOBAL	0 -21	; BBCreateCustomTable
+	39	[-]	CLOSURE  	0 14	; 012F82F8
+	40	[-]	SETGLOBAL	0 -22	; BBDestroyCustomTable
+	41	[-]	CLOSURE  	0 15	; 012F8350
+	42	[-]	SETGLOBAL	0 -23	; BBSetKeyValueInCustomTable
+	43	[-]	CLOSURE  	0 16	; 012F84B0
+	44	[-]	SETGLOBAL	0 -24	; BBGetKeyValueInCustomTable
+	45	[-]	CLOSURE  	0 17	; 012F8400
+	46	[-]	SETGLOBAL	0 -25	; BBInsertIntoInCustomTable
+	47	[-]	CLOSURE  	0 18	; 012F87C8
+	48	[-]	SETGLOBAL	0 -26	; BBRemoveFromCustomTable
+	49	[-]	CLOSURE  	0 19	; 012F8248
+	50	[-]	SETGLOBAL	0 -27	; BBForEachInCustomTable
+	51	[-]	CLOSURE  	0 20	; 012F8198
+	52	[-]	SETGLOBAL	0 -28	; BBCustomTableContainsValue
+	53	[-]	CLOSURE  	0 21	; 012F8770
+	54	[-]	SETGLOBAL	0 -29	; BBGetSizeOfCustomTable
+	55	[-]	CLOSURE  	0 22	; 012F83A8
+	56	[-]	SETGLOBAL	0 -30	; BBGetLocationHints
+	57	[-]	CLOSURE  	0 23	; 012F8718
+	58	[-]	SETGLOBAL	0 -31	; BBGetSlotSpellInfo
+	59	[-]	CLOSURE  	0 24	; 012F86C0
+	60	[-]	SETGLOBAL	0 -32	; BBSetSlotSpellCooldownTime
+	61	[-]	CLOSURE  	0 25	; 012F8508
+	62	[-]	SETGLOBAL	0 -33	; BBSetReturnValue
+	63	[-]	CLOSURE  	0 26	; 012F80E8
+	64	[-]	SETGLOBAL	0 -34	; CO_EQUAL
+	65	[-]	CLOSURE  	0 27	; 012F8458
+	66	[-]	SETGLOBAL	0 -35	; CO_NOT_EQUAL
+	67	[-]	CLOSURE  	0 28	; 012F8560
+	68	[-]	SETGLOBAL	0 -36	; CO_LESS_THAN
+	69	[-]	CLOSURE  	0 29	; 012F81F0
+	70	[-]	SETGLOBAL	0 -37	; CO_GREATER_THAN
+	71	[-]	CLOSURE  	0 30	; 012F85B8
+	72	[-]	SETGLOBAL	0 -38	; CO_LESS_THAN_OR_EQUAL
+	73	[-]	CLOSURE  	0 31	; 012F8610
+	74	[-]	SETGLOBAL	0 -39	; CO_GREATER_THAN_OR_EQUAL
+	75	[-]	CLOSURE  	0 32	; 012F8820
+	76	[-]	SETGLOBAL	0 -40	; CO_SAME_TEAM
+	77	[-]	CLOSURE  	0 33	; 012F8668
+	78	[-]	SETGLOBAL	0 -41	; CO_DIFFERENT_TEAM
+	79	[-]	CLOSURE  	0 34	; 012F8140
+	80	[-]	SETGLOBAL	0 -42	; CO_DAMAGE_SOURCETYPE_IS
+	81	[-]	CLOSURE  	0 35	; 012FB130
+	82	[-]	SETGLOBAL	0 -43	; CO_DAMAGE_SOURCETYPE_IS_NOT
+	83	[-]	CLOSURE  	0 36	; 012FAC60
+	84	[-]	SETGLOBAL	0 -44	; CO_IS_TYPE_AI
+	85	[-]	CLOSURE  	0 37	; 012FB2E8
+	86	[-]	SETGLOBAL	0 -45	; CO_IS_NOT_AI
+	87	[-]	CLOSURE  	0 38	; 012FACB8
+	88	[-]	SETGLOBAL	0 -46	; CO_IS_TYPE_HERO
+	89	[-]	CLOSURE  	0 39	; 012FAD68
+	90	[-]	SETGLOBAL	0 -47	; CO_IS_NOT_HERO
+	91	[-]	CLOSURE  	0 40	; 012FB398
+	92	[-]	SETGLOBAL	0 -48	; CO_IS_CLONE
+	93	[-]	CLOSURE  	0 41	; 012FB448
+	94	[-]	SETGLOBAL	0 -49	; CO_IS_NOT_CLONE
+	95	[-]	CLOSURE  	0 42	; 012FAF20
+	96	[-]	SETGLOBAL	0 -50	; CO_IS_MELEE
+	97	[-]	CLOSURE  	0 43	; 012FAF78
+	98	[-]	SETGLOBAL	0 -51	; CO_IS_RANGED
+	99	[-]	CLOSURE  	0 44	; 012FB4F8
+	100	[-]	SETGLOBAL	0 -52	; CO_RANDOM_CHANCE_LESS_THAN
+	101	[-]	CLOSURE  	0 45	; 012FABB0
+	102	[-]	SETGLOBAL	0 -53	; CO_IS_TYPE_TURRET
+	103	[-]	CLOSURE  	0 46	; 012FB1E0
+	104	[-]	SETGLOBAL	0 -54	; CO_IS_NOT_TURRET
+	105	[-]	CLOSURE  	0 47	; 012FB3F0
+	106	[-]	SETGLOBAL	0 -55	; CO_IS_TYPE_INHIBITOR
+	107	[-]	CLOSURE  	0 48	; 012FADC0
+	108	[-]	SETGLOBAL	0 -56	; CO_IS_NOT_INHIBITOR
+	109	[-]	CLOSURE  	0 49	; 012FB028
+	110	[-]	SETGLOBAL	0 -57	; CO_IS_TYPE_NEXUS
+	111	[-]	CLOSURE  	0 50	; 012FAFD0
+	112	[-]	SETGLOBAL	0 -58	; CO_IS_NOT_NEXUS
+	113	[-]	CLOSURE  	0 51	; 012FAD10
+	114	[-]	SETGLOBAL	0 -59	; CO_IS_DEAD
+	115	[-]	CLOSURE  	0 52	; 012FB4A0
+	116	[-]	SETGLOBAL	0 -60	; CO_IS_NOT_DEAD
+	117	[-]	CLOSURE  	0 53	; 012FAB58
+	118	[-]	SETGLOBAL	0 -61	; CO_IS_DEAD_OR_ZOMBIE
+	119	[-]	CLOSURE  	0 54	; 012FB340
+	120	[-]	SETGLOBAL	0 -62	; CO_IS_TARGET_IN_FRONT_OF_ME
+	121	[-]	CLOSURE  	0 55	; 012FB080
+	122	[-]	SETGLOBAL	0 -63	; CO_IS_TARGET_BEHIND_ME
+	123	[-]	CLOSURE  	0 56	; 012FB290
+	124	[-]	SETGLOBAL	0 -64	; CO_IS_WARD
+	125	[-]	CLOSURE  	0 57	; 012FB550
+	126	[-]	SETGLOBAL	0 -65	; CO_IS_STRUCTURE
+	127	[-]	CLOSURE  	0 58	; 012FB0D8
+	128	[-]	SETGLOBAL	0 -66	; CO_IS_NOT_STRUCTURE
+	129	[-]	CLOSURE  	0 59	; 012FB238
+	130	[-]	SETGLOBAL	0 -67	; CO_IS_NOT_NIL
+	131	[-]	CLOSURE  	0 60	; 012FAAA8
+	132	[-]	SETGLOBAL	0 -68	; BBCreateMacro
+	133	[-]	CLOSURE  	0 61	; 012FAB00
+	134	[-]	SETGLOBAL	0 -69	; BBRunMacro
+	135	[-]	CLOSURE  	0 62	; 012FB188
+	136	[-]	SETGLOBAL	0 -70	; BBIf
+	137	[-]	CLOSURE  	0 63	; 012FAC08
+	138	[-]	SETGLOBAL	0 -71	; BBElse
+	139	[-]	CLOSURE  	0 64	; 012FAE18
+	140	[-]	SETGLOBAL	0 -72	; BBOrIf
+	141	[-]	CLOSURE  	0 65	; 012FAE70
+	142	[-]	SETGLOBAL	0 -73	; BBAndIf
+	143	[-]	CLOSURE  	0 66	; 012FAEC8
+	144	[-]	SETGLOBAL	0 -74	; BBElseIf
+	145	[-]	CLOSURE  	0 67	; 012FB810
+	146	[-]	SETGLOBAL	0 -75	; BBIfHasBuffOfType
+	147	[-]	CLOSURE  	0 68	; 012FB868
+	148	[-]	SETGLOBAL	0 -76	; BBIfHasBuff
+	149	[-]	CLOSURE  	0 69	; 012FB9C8
+	150	[-]	SETGLOBAL	0 -77	; BBIfMissileIsAutoAttack
+	151	[-]	CLOSURE  	0 70	; 012FB8C0
+	152	[-]	SETGLOBAL	0 -78	; BBIfMissileConsideredAsAutoAttack
+	153	[-]	CLOSURE  	0 71	; 012FB6B0
+	154	[-]	SETGLOBAL	0 -79	; BBBreakExecution
+	155	[-]	CLOSURE  	0 72	; 012FB708
+	156	[-]	SETGLOBAL	0 -80	; BBIfNotHasBuff
+	157	[-]	CLOSURE  	0 73	; 012FBA20
+	158	[-]	SETGLOBAL	0 -81	; BBIfHasUnitTag
+	159	[-]	CLOSURE  	0 74	; 012FB760
+	160	[-]	SETGLOBAL	0 -82	; BBIfPARTypeEquals
+	161	[-]	CLOSURE  	0 75	; 012FB5A8
+	162	[-]	SETGLOBAL	0 -83	; BBIfPARTypeNotEquals
+	163	[-]	CLOSURE  	0 76	; 012FB918
+	164	[-]	SETGLOBAL	0 -84	; BBWhile
+	165	[-]	CLOSURE  	0 77	; 012FB600
+	166	[-]	SETGLOBAL	0 -85	; MO_MULTIPLY
+	167	[-]	CLOSURE  	0 78	; 012FB658
+	168	[-]	SETGLOBAL	0 -86	; MO_ADD
+	169	[-]	CLOSURE  	0 79	; 012FDD40
+	170	[-]	SETGLOBAL	0 -87	; MO_SUBTRACT
+	171	[-]	CLOSURE  	0 80	; 012FD870
+	172	[-]	SETGLOBAL	0 -88	; MO_DIVIDE
+	173	[-]	CLOSURE  	0 81	; 012FD768
+	174	[-]	SETGLOBAL	0 -89	; MO_MIN
+	175	[-]	CLOSURE  	0 82	; 012FDDF0
+	176	[-]	SETGLOBAL	0 -90	; MO_MAX
+	177	[-]	CLOSURE  	0 83	; 012FD660
+	178	[-]	SETGLOBAL	0 -91	; MO_MODULO
+	179	[-]	CLOSURE  	0 84	; 012FD3F8
+	180	[-]	SETGLOBAL	0 -92	; MO_ROUND
+	181	[-]	CLOSURE  	0 85	; 012FDC38
+	182	[-]	SETGLOBAL	0 -93	; MO_ROUNDUP
+	183	[-]	CLOSURE  	0 86	; 012FD6B8
+	184	[-]	SETGLOBAL	0 -94	; MO_ROUNDDOWN
+	185	[-]	CLOSURE  	0 87	; 012FD450
+	186	[-]	SETGLOBAL	0 -95	; MO_SIN
+	187	[-]	CLOSURE  	0 88	; 012FD920
+	188	[-]	SETGLOBAL	0 -96	; MO_COSINE
+	189	[-]	CLOSURE  	0 89	; 012FDB88
+	190	[-]	SETGLOBAL	0 -97	; MO_TANGENT
+	191	[-]	CLOSURE  	0 90	; 012FDAD8
+	192	[-]	SETGLOBAL	0 -98	; MO_ASIN
+	193	[-]	CLOSURE  	0 91	; 012FD4A8
+	194	[-]	SETGLOBAL	0 -99	; MO_ACOS
+	195	[-]	CLOSURE  	0 92	; 012FDBE0
+	196	[-]	SETGLOBAL	0 -100	; MO_ATAN
+	197	[-]	CLOSURE  	0 93	; 012FD710
+	198	[-]	SETGLOBAL	0 -101	; MO_POW
+	199	[-]	CLOSURE  	0 94	; 012FD608
+	200	[-]	SETGLOBAL	0 -102	; MO_SQUARE_ROOT
+	201	[-]	CLOSURE  	0 95	; 012FD978
+	202	[-]	SETGLOBAL	0 -103	; MO_BOOLEAN_AND
+	203	[-]	CLOSURE  	0 96	; 012FD500
+	204	[-]	SETGLOBAL	0 -104	; MO_BOOLEAN_OR
+	205	[-]	CLOSURE  	0 97	; 012FDC90
+	206	[-]	SETGLOBAL	0 -105	; MO_BOOLEAN_NOT
+	207	[-]	CLOSURE  	0 98	; 012FDA80
+	208	[-]	SETGLOBAL	0 -106	; MO_ABS
+	209	[-]	CLOSURE  	0 99	; 012FD7C0
+	210	[-]	SETGLOBAL	0 -107	; MO_RAND_INT_RANGE
+	211	[-]	CLOSURE  	0 100	; 012FDD98
+	212	[-]	SETGLOBAL	0 -108	; BBMath
+	213	[-]	CLOSURE  	0 101	; 012FD9D0
+	214	[-]	SETGLOBAL	0 -109	; GetMathNumber
+	215	[-]	CLOSURE  	0 102	; 012FDB30
+	216	[-]	SETGLOBAL	0 -110	; GetNumber
+	217	[-]	CLOSURE  	0 103	; 012FDA28
+	218	[-]	SETGLOBAL	0 -111	; VEC_ADD
+	219	[-]	CLOSURE  	0 104	; 012FD818
+	220	[-]	SETGLOBAL	0 -112	; VEC_SUBTRACT
+	221	[-]	CLOSURE  	0 105	; 012FD8C8
+	222	[-]	SETGLOBAL	0 -113	; VEC_SCALAR_MULTIPLY
+	223	[-]	CLOSURE  	0 106	; 012FD558
+	224	[-]	SETGLOBAL	0 -114	; VEC_SCALAR_DIVIDE
+	225	[-]	CLOSURE  	0 107	; 012FD5B0
+	226	[-]	SETGLOBAL	0 -115	; VEC_ROTATE
+	227	[-]	CLOSURE  	0 108	; 012FD348
+	228	[-]	SETGLOBAL	0 -116	; BBVectorMath
+	229	[-]	CLOSURE  	0 109	; 012FD3A0
+	230	[-]	SETGLOBAL	0 -117	; BBKnockback
+	231	[-]	CLOSURE  	0 110	; 012FE268
+	232	[-]	SETGLOBAL	0 -118	; BBAppendString
+	233	[-]	CLOSURE  	0 111	; 012FDEA0
+	234	[-]	SETGLOBAL	0 -119	; BBIncStat
+	235	[-]	CLOSURE  	0 112	; 012FE2C0
+	236	[-]	SETGLOBAL	0 -120	; BBIncPermanentStat
+	237	[-]	CLOSURE  	0 113	; 012FDEF8
+	238	[-]	SETGLOBAL	0 -121	; BBSetMinionLane
+	239	[-]	CLOSURE  	0 114	; 012FE210
+	240	[-]	SETGLOBAL	0 -122	; BBCalculateCriticalDamage
+	241	[-]	CLOSURE  	0 115	; 012FE000
+	242	[-]	SETGLOBAL	0 -123	; BBInitializeShield
+	243	[-]	CLOSURE  	0 116	; 012FDF50
+	244	[-]	SETGLOBAL	0 -124	; BBGetModifiedCooldown
+	245	[-]	CLOSURE  	0 117	; 012FDE48
+	246	[-]	SETGLOBAL	0 -125	; BBGetStat
+	247	[-]	CLOSURE  	0 118	; 012FE1B8
+	248	[-]	SETGLOBAL	0 -126	; BBGetLevel
+	249	[-]	CLOSURE  	0 119	; 012FE058
+	250	[-]	SETGLOBAL	0 -127	; BBGetUnitSignificance
+	251	[-]	CLOSURE  	0 120	; 012FE108
+	252	[-]	SETGLOBAL	0 -128	; BBGetArmor
+	253	[-]	CLOSURE  	0 121	; 013018F0
+	254	[-]	SETGLOBAL	0 -129	; BBGetSpellBlock
+	255	[-]	CLOSURE  	0 122	; 01301318
+	256	[-]	SETGLOBAL	0 -130	; BBGetTeamID
+	257	[-]	CLOSURE  	0 123	; 01301840
+	258	[-]	SETGLOBAL	0 -131	; BBGetEnemyTeamID
+	259	[-]	CLOSURE  	0 124	; 01301528
+	260	[-]	SETGLOBAL	0 -132	; BBGetUnitSkinName
+	261	[-]	CLOSURE  	0 125	; 01301580
+	262	[-]	SETGLOBAL	0 -133	; BBGetTotalAttackDamage
+	263	[-]	CLOSURE  	0 126	; 01301738
+	264	[-]	SETGLOBAL	0 -134	; BBGetStatus
+	265	[-]	CLOSURE  	0 127	; 01300F50
+	266	[-]	SETGLOBAL	0 -135	; BBClearAttackTarget
+	267	[-]	CLOSURE  	0 128	; 01301058
+	268	[-]	SETGLOBAL	0 -136	; BBGetCastInfo
+	269	[-]	CLOSURE  	0 129	; 013016E0
+	270	[-]	SETGLOBAL	0 -137	; BBExecutePeriodically
+	271	[-]	CLOSURE  	0 130	; 01301420
+	272	[-]	SETGLOBAL	0 -138	; BBExecutePeriodicallyReset
+	273	[-]	CLOSURE  	0 131	; 01301370
+	274	[-]	SETGLOBAL	0 -139	; BBSetStatus
+	275	[-]	CLOSURE  	0 132	; 01301790
+	276	[-]	SETGLOBAL	0 -140	; BBAlert
+	277	[-]	CLOSURE  	0 133	; 01301898
+	278	[-]	SETGLOBAL	0 -141	; BBSayWithFloatingTextOnUnitToChampion
+	279	[-]	CLOSURE  	0 134	; 013010B0
+	280	[-]	SETGLOBAL	0 -142	; BBSay
+	281	[-]	CLOSURE  	0 135	; 01301630
+	282	[-]	SETGLOBAL	0 -143	; BBDebugSay
+	283	[-]	CLOSURE  	0 136	; 013013C8
+	284	[-]	SETGLOBAL	0 -144	; BBGetGold
+	285	[-]	CLOSURE  	0 137	; 01300EA0
+	286	[-]	SETGLOBAL	0 -145	; BBGetTotalGold
+	287	[-]	CLOSURE  	0 138	; 013015D8
+	288	[-]	SETGLOBAL	0 -146	; BBTeleportToPosition
+	289	[-]	CLOSURE  	0 139	; 01301688
+	290	[-]	SETGLOBAL	0 -147	; BBTeleportToPoint
+	291	[-]	CLOSURE  	0 140	; 01300EF8
+	292	[-]	SETGLOBAL	0 -148	; BBDefUpdateAura
+	293	[-]	CLOSURE  	0 141	; 01301000
+	294	[-]	SETGLOBAL	0 -149	; BBReincarnateHero
+	295	[-]	CLOSURE  	0 142	; 01301478
+	296	[-]	SETGLOBAL	0 -150	; BBGetPAROrHealth
+	297	[-]	CLOSURE  	0 143	; 013014D0
+	298	[-]	SETGLOBAL	0 -151	; BBIssueOrder
+	299	[-]	CLOSURE  	0 144	; 01300FA8
+	300	[-]	SETGLOBAL	0 -152	; BBSetSpellCastRange
+	301	[-]	CLOSURE  	0 145	; 01301108
+	302	[-]	SETGLOBAL	0 -153	; BBGetTime
+	303	[-]	CLOSURE  	0 146	; 01301160
+	304	[-]	SETGLOBAL	0 -154	; BBDistanceBetweenObjects
+	305	[-]	CLOSURE  	0 147	; 013011B8
+	306	[-]	SETGLOBAL	0 -155	; BBDistanceBetweenObjectAndPoint
+	307	[-]	CLOSURE  	0 148	; 01301210
+	308	[-]	SETGLOBAL	0 -156	; BBDistanceBetweenPoints
+	309	[-]	LOADK    	0 -158	; 1
+	310	[-]	SETGLOBAL	0 -157	; OBJECT_CENTER
+	311	[-]	LOADK    	0 -160	; 2
+	312	[-]	SETGLOBAL	0 -159	; OBJECT_BOUNDARY
+	313	[-]	CLOSURE  	0 149	; 01301D68
+	314	[-]	SETGLOBAL	0 -161	; BBIfDistanceBetween
+	315	[-]	CLOSURE  	0 150	; 013019F8
+	316	[-]	SETGLOBAL	0 -162	; BBGetBuffCountFromCaster
+	317	[-]	CLOSURE  	0 151	; 01301C08
+	318	[-]	SETGLOBAL	0 -163	; BBGetBuffCountFromAll
+	319	[-]	CLOSURE  	0 152	; 01301E18
+	320	[-]	SETGLOBAL	0 -164	; BBSetScaleSkinCoef
+	321	[-]	CLOSURE  	0 153	; 01301A50
+	322	[-]	SETGLOBAL	0 -165	; BBBreakSpellShields
+	323	[-]	CLOSURE  	0 154	; 01301DC0
+	324	[-]	SETGLOBAL	0 -166	; BBSpellBuffRemoveStacks
+	325	[-]	CLOSURE  	0 155	; 013019A0
+	326	[-]	SETGLOBAL	0 -167	; BBSetShowHealthBarToChampion
+	327	[-]	CLOSURE  	0 156	; 01301CB8
+	328	[-]	SETGLOBAL	0 -168	; BBIfEmoteIs
+	329	[-]	CLOSURE  	0 157	; 01301B00
+	330	[-]	SETGLOBAL	0 -169	; BBIfEmoteIsNot
+	331	[-]	CLOSURE  	0 158	; 01301BB0
+	332	[-]	SETGLOBAL	0 -170	; BBConcatenateStrings
+	333	[-]	CLOSURE  	0 159	; 01301C60
+	334	[-]	SETGLOBAL	0 -171	; BBEncaseInParantheses
+	335	[-]	CLOSURE  	0 160	; 01306F00
+	336	[-]	SETGLOBAL	0 -172	; BBIncreaseMinionKills
+	337	[-]	RETURN   	0 1
+constants (172) for 012EDA28:
+	1	"gCurrentBuildingBlockNumber"
+	2	-1
+	3	"gCurrentBuildingBlockString"
+	4	""
+	5	"functionToStringMap"
+	6	"functionToStringMapInitialized"
+	7	"ExecuteBuildingBlocks"
+	8	"BBRequireVar"
+	9	"ALREADY_WARNED"
+	10	"BBCom"
+	11	"BBConditionallyExecute"
+	12	"BBPrintTypeToChat"
+	13	"BBPrintToChat"
+	14	"BBPrintTableToChat"
+	15	"PrintTableToChat"
+	16	"BBDebugPrintToChat"
+	17	"BBDebugPrintTableToChat"
+	18	"DebugPrintTableToChat"
+	19	"GetTable"
+	20	"GetParam"
+	21	"BBCreateCustomTable"
+	22	"BBDestroyCustomTable"
+	23	"BBSetKeyValueInCustomTable"
+	24	"BBGetKeyValueInCustomTable"
+	25	"BBInsertIntoInCustomTable"
+	26	"BBRemoveFromCustomTable"
+	27	"BBForEachInCustomTable"
+	28	"BBCustomTableContainsValue"
+	29	"BBGetSizeOfCustomTable"
+	30	"BBGetLocationHints"
+	31	"BBGetSlotSpellInfo"
+	32	"BBSetSlotSpellCooldownTime"
+	33	"BBSetReturnValue"
+	34	"CO_EQUAL"
+	35	"CO_NOT_EQUAL"
+	36	"CO_LESS_THAN"
+	37	"CO_GREATER_THAN"
+	38	"CO_LESS_THAN_OR_EQUAL"
+	39	"CO_GREATER_THAN_OR_EQUAL"
+	40	"CO_SAME_TEAM"
+	41	"CO_DIFFERENT_TEAM"
+	42	"CO_DAMAGE_SOURCETYPE_IS"
+	43	"CO_DAMAGE_SOURCETYPE_IS_NOT"
+	44	"CO_IS_TYPE_AI"
+	45	"CO_IS_NOT_AI"
+	46	"CO_IS_TYPE_HERO"
+	47	"CO_IS_NOT_HERO"
+	48	"CO_IS_CLONE"
+	49	"CO_IS_NOT_CLONE"
+	50	"CO_IS_MELEE"
+	51	"CO_IS_RANGED"
+	52	"CO_RANDOM_CHANCE_LESS_THAN"
+	53	"CO_IS_TYPE_TURRET"
+	54	"CO_IS_NOT_TURRET"
+	55	"CO_IS_TYPE_INHIBITOR"
+	56	"CO_IS_NOT_INHIBITOR"
+	57	"CO_IS_TYPE_NEXUS"
+	58	"CO_IS_NOT_NEXUS"
+	59	"CO_IS_DEAD"
+	60	"CO_IS_NOT_DEAD"
+	61	"CO_IS_DEAD_OR_ZOMBIE"
+	62	"CO_IS_TARGET_IN_FRONT_OF_ME"
+	63	"CO_IS_TARGET_BEHIND_ME"
+	64	"CO_IS_WARD"
+	65	"CO_IS_STRUCTURE"
+	66	"CO_IS_NOT_STRUCTURE"
+	67	"CO_IS_NOT_NIL"
+	68	"BBCreateMacro"
+	69	"BBRunMacro"
+	70	"BBIf"
+	71	"BBElse"
+	72	"BBOrIf"
+	73	"BBAndIf"
+	74	"BBElseIf"
+	75	"BBIfHasBuffOfType"
+	76	"BBIfHasBuff"
+	77	"BBIfMissileIsAutoAttack"
+	78	"BBIfMissileConsideredAsAutoAttack"
+	79	"BBBreakExecution"
+	80	"BBIfNotHasBuff"
+	81	"BBIfHasUnitTag"
+	82	"BBIfPARTypeEquals"
+	83	"BBIfPARTypeNotEquals"
+	84	"BBWhile"
+	85	"MO_MULTIPLY"
+	86	"MO_ADD"
+	87	"MO_SUBTRACT"
+	88	"MO_DIVIDE"
+	89	"MO_MIN"
+	90	"MO_MAX"
+	91	"MO_MODULO"
+	92	"MO_ROUND"
+	93	"MO_ROUNDUP"
+	94	"MO_ROUNDDOWN"
+	95	"MO_SIN"
+	96	"MO_COSINE"
+	97	"MO_TANGENT"
+	98	"MO_ASIN"
+	99	"MO_ACOS"
+	100	"MO_ATAN"
+	101	"MO_POW"
+	102	"MO_SQUARE_ROOT"
+	103	"MO_BOOLEAN_AND"
+	104	"MO_BOOLEAN_OR"
+	105	"MO_BOOLEAN_NOT"
+	106	"MO_ABS"
+	107	"MO_RAND_INT_RANGE"
+	108	"BBMath"
+	109	"GetMathNumber"
+	110	"GetNumber"
+	111	"VEC_ADD"
+	112	"VEC_SUBTRACT"
+	113	"VEC_SCALAR_MULTIPLY"
+	114	"VEC_SCALAR_DIVIDE"
+	115	"VEC_ROTATE"
+	116	"BBVectorMath"
+	117	"BBKnockback"
+	118	"BBAppendString"
+	119	"BBIncStat"
+	120	"BBIncPermanentStat"
+	121	"BBSetMinionLane"
+	122	"BBCalculateCriticalDamage"
+	123	"BBInitializeShield"
+	124	"BBGetModifiedCooldown"
+	125	"BBGetStat"
+	126	"BBGetLevel"
+	127	"BBGetUnitSignificance"
+	128	"BBGetArmor"
+	129	"BBGetSpellBlock"
+	130	"BBGetTeamID"
+	131	"BBGetEnemyTeamID"
+	132	"BBGetUnitSkinName"
+	133	"BBGetTotalAttackDamage"
+	134	"BBGetStatus"
+	135	"BBClearAttackTarget"
+	136	"BBGetCastInfo"
+	137	"BBExecutePeriodically"
+	138	"BBExecutePeriodicallyReset"
+	139	"BBSetStatus"
+	140	"BBAlert"
+	141	"BBSayWithFloatingTextOnUnitToChampion"
+	142	"BBSay"
+	143	"BBDebugSay"
+	144	"BBGetGold"
+	145	"BBGetTotalGold"
+	146	"BBTeleportToPosition"
+	147	"BBTeleportToPoint"
+	148	"BBDefUpdateAura"
+	149	"BBReincarnateHero"
+	150	"BBGetPAROrHealth"
+	151	"BBIssueOrder"
+	152	"BBSetSpellCastRange"
+	153	"BBGetTime"
+	154	"BBDistanceBetweenObjects"
+	155	"BBDistanceBetweenObjectAndPoint"
+	156	"BBDistanceBetweenPoints"
+	157	"OBJECT_CENTER"
+	158	1
+	159	"OBJECT_BOUNDARY"
+	160	2
+	161	"BBIfDistanceBetween"
+	162	"BBGetBuffCountFromCaster"
+	163	"BBGetBuffCountFromAll"
+	164	"BBSetScaleSkinCoef"
+	165	"BBBreakSpellShields"
+	166	"BBSpellBuffRemoveStacks"
+	167	"BBSetShowHealthBarToChampion"
+	168	"BBIfEmoteIs"
+	169	"BBIfEmoteIsNot"
+	170	"BBConcatenateStrings"
+	171	"BBEncaseInParantheses"
+	172	"BBIncreaseMinionKills"
+locals (0) for 012EDA28:
+upvalues (0) for 012EDA28:
+
+function <?:18,63> (69 instructions, 276 bytes at 012EDD08)
+2 params, 15 slots, 0 upvalues, 0 locals, 19 constants, 0 functions
+	1	[-]	EQ       	1 0 -1	; - nil
+	2	[-]	JMP      	66	; to 69
+	3	[-]	GETGLOBAL	2 -2	; gCurrentBuildingBlockString
+	4	[-]	SETTABLE 	1 -3 -4	; "___BreakExecution___" false
+	5	[-]	LOADK    	3 -5	; 1
+	6	[-]	LEN      	4 0
+	7	[-]	LOADK    	5 -5	; 1
+	8	[-]	FORPREP  	3 54	; to 63
+	9	[-]	MOVE     	7 2
+	10	[-]	GETTABLE 	8 1 -3	; "___BreakExecution___"
+	11	[-]	EQ       	0 -4 8	; false -
+	12	[-]	JMP      	50	; to 63
+	13	[-]	SETGLOBAL	6 -6	; gCurrentBuildingBlockNumber
+	14	[-]	GETGLOBAL	8 -6	; gCurrentBuildingBlockNumber
+	15	[-]	GETTABLE 	8 0 8
+	16	[-]	SETGLOBAL	8 -7	; gCurrentBuildingBlock
+	17	[-]	GETGLOBAL	8 -8	; gDebugMode
+	18	[-]	TEST     	8 0 0
+	19	[-]	JMP      	30	; to 50
+	20	[-]	GETGLOBAL	8 -9	; functionToStringMapInitialized
+	21	[-]	TEST     	8 0 1
+	22	[-]	JMP      	21	; to 44
+	23	[-]	GETGLOBAL	8 -10	; pairs
+	24	[-]	GETGLOBAL	9 -11	; _G
+	25	[-]	CALL     	8 2 4
+	26	[-]	JMP      	12	; to 39
+	27	[-]	GETGLOBAL	13 -12	; type
+	28	[-]	MOVE     	14 12
+	29	[-]	CALL     	13 2 2
+	30	[-]	EQ       	0 13 -13	; - "function"
+	31	[-]	JMP      	7	; to 39
+	32	[-]	GETGLOBAL	13 -14	; functionToStringMap
+	33	[-]	SETTABLE 	13 12 11
+	34	[-]	GETGLOBAL	13 -7	; gCurrentBuildingBlock
+	35	[-]	GETTABLE 	13 13 -15	; "Function"
+	36	[-]	EQ       	0 12 13
+	37	[-]	JMP      	1	; to 39
+	38	[-]	SETGLOBAL	11 -2	; gCurrentBuildingBlockString
+	39	[-]	TFORLOOP 	8 2
+	40	[-]	JMP      	-14	; to 27
+	41	[-]	LOADBOOL 	8 1 0
+	42	[-]	SETGLOBAL	8 -9	; functionToStringMapInitialized
+	43	[-]	JMP      	11	; to 55
+	44	[-]	GETGLOBAL	8 -14	; functionToStringMap
+	45	[-]	GETGLOBAL	9 -7	; gCurrentBuildingBlock
+	46	[-]	GETTABLE 	9 9 -15	; "Function"
+	47	[-]	GETTABLE 	8 8 9
+	48	[-]	SETGLOBAL	8 -2	; gCurrentBuildingBlockString
+	49	[-]	JMP      	5	; to 55
+	50	[-]	MOVE     	8 7
+	51	[-]	LOADK    	9 -16	; "."
+	52	[-]	GETGLOBAL	10 -6	; gCurrentBuildingBlockNumber
+	53	[-]	CONCAT   	8 8 10
+	54	[-]	SETGLOBAL	8 -2	; gCurrentBuildingBlockString
+	55	[-]	GETGLOBAL	8 -7	; gCurrentBuildingBlock
+	56	[-]	GETTABLE 	8 8 -15	; "Function"
+	57	[-]	MOVE     	9 1
+	58	[-]	GETGLOBAL	10 -7	; gCurrentBuildingBlock
+	59	[-]	GETTABLE 	10 10 -17	; "Params"
+	60	[-]	GETGLOBAL	11 -7	; gCurrentBuildingBlock
+	61	[-]	GETTABLE 	11 11 -18	; "SubBlocks"
+	62	[-]	CALL     	8 4 1
+	63	[-]	FORLOOP  	3 -55	; to 9
+	64	[-]	SETGLOBAL	2 -2	; gCurrentBuildingBlockString
+	65	[-]	LOADK    	3 -19	; -1
+	66	[-]	SETGLOBAL	3 -6	; gCurrentBuildingBlockNumber
+	67	[-]	LOADNIL  	3 3
+	68	[-]	SETGLOBAL	3 -7	; gCurrentBuildingBlock
+	69	[-]	RETURN   	0 1
+constants (19) for 012EDD08:
+	1	nil
+	2	"gCurrentBuildingBlockString"
+	3	"___BreakExecution___"
+	4	false
+	5	1
+	6	"gCurrentBuildingBlockNumber"
+	7	"gCurrentBuildingBlock"
+	8	"gDebugMode"
+	9	"functionToStringMapInitialized"
+	10	"pairs"
+	11	"_G"
+	12	"type"
+	13	"function"
+	14	"functionToStringMap"
+	15	"Function"
+	16	"."
+	17	"Params"
+	18	"SubBlocks"
+	19	-1
+locals (0) for 012EDD08:
+upvalues (0) for 012EDD08:
+
+function <?:73,88> (37 instructions, 148 bytes at 012EDBA0)
+2 params, 12 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetParam
+	2	[-]	LOADK    	3 -2	; "Required"
+	3	[-]	MOVE     	4 0
+	4	[-]	MOVE     	5 1
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETGLOBAL	3 -3	; gDebugMode
+	7	[-]	EQ       	1 3 -4	; - nil
+	8	[-]	JMP      	28	; to 37
+	9	[-]	EQ       	0 2 -4	; - nil
+	10	[-]	JMP      	26	; to 37
+	11	[-]	GETGLOBAL	3 -5	; ALREADY_WARNED
+	12	[-]	GETTABLE 	4 1 -6	; "RequiredVar"
+	13	[-]	GETTABLE 	3 3 4
+	14	[-]	EQ       	0 3 -4	; - nil
+	15	[-]	JMP      	21	; to 37
+	16	[-]	GETTABLE 	3 1 -6	; "RequiredVar"
+	17	[-]	EQ       	1 3 -4	; - nil
+	18	[-]	JMP      	18	; to 37
+	19	[-]	GETTABLE 	3 1 -7	; "RequiredVarTable"
+	20	[-]	EQ       	0 3 -4	; - nil
+	21	[-]	JMP      	1	; to 23
+	22	[-]	LOADK    	3 -8	; "PassThroughParams"
+	23	[-]	GETGLOBAL	4 -9	; DebugClientPrint
+	24	[-]	LOADK    	5 -10	; "Missing Required Variable: "
+	25	[-]	MOVE     	6 3
+	26	[-]	LOADK    	7 -11	; "."
+	27	[-]	GETTABLE 	8 1 -6	; "RequiredVar"
+	28	[-]	LOADK    	9 -12	; " Current block data is: "
+	29	[-]	GETGLOBAL	10 -13	; tostring
+	30	[-]	GETGLOBAL	11 -14	; gCurrentBuildingBlockString
+	31	[-]	CALL     	10 2 2
+	32	[-]	CONCAT   	5 5 10
+	33	[-]	CALL     	4 2 1
+	34	[-]	GETGLOBAL	4 -5	; ALREADY_WARNED
+	35	[-]	GETTABLE 	5 1 -6	; "RequiredVar"
+	36	[-]	SETTABLE 	4 5 -15	; - true
+	37	[-]	RETURN   	0 1
+constants (15) for 012EDBA0:
+	1	"GetParam"
+	2	"Required"
+	3	"gDebugMode"
+	4	nil
+	5	"ALREADY_WARNED"
+	6	"RequiredVar"
+	7	"RequiredVarTable"
+	8	"PassThroughParams"
+	9	"DebugClientPrint"
+	10	"Missing Required Variable: "
+	11	"."
+	12	" Current block data is: "
+	13	"tostring"
+	14	"gCurrentBuildingBlockString"
+	15	true
+locals (0) for 012EDBA0:
+upvalues (0) for 012EDBA0:
+
+function <?:100,103> (5 instructions, 20 bytes at 012ED978)
+3 params, 6 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	3 -1	; ExecuteBuildingBlocks
+	2	[-]	MOVE     	4 2
+	3	[-]	MOVE     	5 0
+	4	[-]	CALL     	3 3 1
+	5	[-]	RETURN   	0 1
+constants (1) for 012ED978:
+	1	"ExecuteBuildingBlocks"
+locals (0) for 012ED978:
+upvalues (0) for 012ED978:
+
+function <?:113,124> (10 instructions, 40 bytes at 012EDBF8)
+3 params, 6 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETTABLE 	3 1 -1	; "IsConditionTrue"
+	2	[-]	MOVE     	4 0
+	3	[-]	CALL     	3 2 2
+	4	[-]	TEST     	3 0 0
+	5	[-]	JMP      	4	; to 10
+	6	[-]	GETGLOBAL	3 -2	; ExecuteBuildingBlocks
+	7	[-]	MOVE     	4 2
+	8	[-]	MOVE     	5 0
+	9	[-]	CALL     	3 3 1
+	10	[-]	RETURN   	0 1
+constants (2) for 012EDBF8:
+	1	"IsConditionTrue"
+	2	"ExecuteBuildingBlocks"
+locals (0) for 012EDBF8:
+upvalues (0) for 012EDBF8:
+
+function <?:135,141> (21 instructions, 84 bytes at 012F6CA0)
+2 params, 9 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "SrcVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "ToSay"
+	7	[-]	TEST     	3 0 1
+	8	[-]	JMP      	1	; to 10
+	9	[-]	LOADK    	3 -4	; ""
+	10	[-]	GETGLOBAL	4 -5	; ClientPrint
+	11	[-]	GETGLOBAL	5 -6	; tostring
+	12	[-]	MOVE     	6 3
+	13	[-]	CALL     	5 2 2
+	14	[-]	LOADK    	6 -7	; ": "
+	15	[-]	GETGLOBAL	7 -8	; type
+	16	[-]	GETTABLE 	8 1 -9	; "SrcVar"
+	17	[-]	GETTABLE 	8 2 8
+	18	[-]	CALL     	7 2 2
+	19	[-]	CONCAT   	5 5 7
+	20	[-]	CALL     	4 2 1
+	21	[-]	RETURN   	0 1
+constants (9) for 012F6CA0:
+	1	"GetTable"
+	2	"SrcVarTable"
+	3	"ToSay"
+	4	""
+	5	"ClientPrint"
+	6	"tostring"
+	7	": "
+	8	"type"
+	9	"SrcVar"
+locals (0) for 012F6CA0:
+upvalues (0) for 012F6CA0:
+
+function <?:152,180> (74 instructions, 296 bytes at 012F6DF0)
+2 params, 11 slots, 0 upvalues, 0 locals, 19 constants, 0 functions
+	1	[-]	GETTABLE 	2 1 -1	; "ToSay"
+	2	[-]	TEST     	2 0 1
+	3	[-]	JMP      	1	; to 5
+	4	[-]	LOADK    	2 -2	; ""
+	5	[-]	GETTABLE 	3 1 -3	; "Color"
+	6	[-]	TEST     	3 0 1
+	7	[-]	JMP      	1	; to 9
+	8	[-]	LOADK    	3 -4	; "FFFFFF"
+	9	[-]	GETGLOBAL	4 -5	; GetTable
+	10	[-]	MOVE     	5 0
+	11	[-]	GETTABLE 	6 1 -6	; "SrcVarTable"
+	12	[-]	LOADBOOL 	7 0 0
+	13	[-]	CALL     	4 4 2
+	14	[-]	GETTABLE 	5 1 -7	; "SrcVar"
+	15	[-]	GETTABLE 	5 4 5
+	16	[-]	LOADK    	6 -8	; "<font color=\""
+	17	[-]	MOVE     	7 3
+	18	[-]	LOADK    	8 -9	; "\">"
+	19	[-]	CONCAT   	6 6 8
+	20	[-]	EQ       	0 2 -2	; - ""
+	21	[-]	JMP      	19	; to 41
+	22	[-]	GETTABLE 	7 1 -6	; "SrcVarTable"
+	23	[-]	EQ       	1 7 -10	; - nil
+	24	[-]	JMP      	9	; to 34
+	25	[-]	MOVE     	7 6
+	26	[-]	GETTABLE 	8 1 -6	; "SrcVarTable"
+	27	[-]	LOADK    	9 -11	; "."
+	28	[-]	GETTABLE 	10 1 -7	; "SrcVar"
+	29	[-]	TEST     	10 0 1
+	30	[-]	JMP      	1	; to 32
+	31	[-]	LOADK    	10 -2	; ""
+	32	[-]	CONCAT   	6 7 10
+	33	[-]	JMP      	10	; to 44
+	34	[-]	MOVE     	7 6
+	35	[-]	GETTABLE 	8 1 -7	; "SrcVar"
+	36	[-]	TEST     	8 0 1
+	37	[-]	JMP      	1	; to 39
+	38	[-]	LOADK    	8 -2	; ""
+	39	[-]	CONCAT   	6 7 8
+	40	[-]	JMP      	3	; to 44
+	41	[-]	MOVE     	7 6
+	42	[-]	MOVE     	8 2
+	43	[-]	CONCAT   	6 7 8
+	44	[-]	GETGLOBAL	7 -12	; type
+	45	[-]	MOVE     	8 5
+	46	[-]	CALL     	7 2 2
+	47	[-]	EQ       	1 7 -13	; - "table"
+	48	[-]	JMP      	11	; to 60
+	49	[-]	GETGLOBAL	7 -12	; type
+	50	[-]	MOVE     	8 5
+	51	[-]	CALL     	7 2 2
+	52	[-]	EQ       	1 7 -14	; - "nil"
+	53	[-]	JMP      	6	; to 60
+	54	[-]	MOVE     	7 6
+	55	[-]	LOADK    	8 -15	; " "
+	56	[-]	GETGLOBAL	9 -16	; tostring
+	57	[-]	MOVE     	10 5
+	58	[-]	CALL     	9 2 2
+	59	[-]	CONCAT   	6 7 9
+	60	[-]	MOVE     	7 6
+	61	[-]	LOADK    	8 -17	; "</font>"
+	62	[-]	CONCAT   	6 7 8
+	63	[-]	GETGLOBAL	7 -18	; ClientPrint
+	64	[-]	MOVE     	8 6
+	65	[-]	CALL     	7 2 1
+	66	[-]	GETGLOBAL	7 -12	; type
+	67	[-]	MOVE     	8 5
+	68	[-]	CALL     	7 2 2
+	69	[-]	EQ       	0 7 -13	; - "table"
+	70	[-]	JMP      	3	; to 74
+	71	[-]	GETGLOBAL	7 -19	; PrintTableToChat
+	72	[-]	MOVE     	8 5
+	73	[-]	CALL     	7 2 1
+	74	[-]	RETURN   	0 1
+constants (19) for 012F6DF0:
+	1	"ToSay"
+	2	""
+	3	"Color"
+	4	"FFFFFF"
+	5	"GetTable"
+	6	"SrcVarTable"
+	7	"SrcVar"
+	8	"<font color=\""
+	9	"\">"
+	10	nil
+	11	"."
+	12	"type"
+	13	"table"
+	14	"nil"
+	15	" "
+	16	"tostring"
+	17	"</font>"
+	18	"ClientPrint"
+	19	"PrintTableToChat"
+locals (0) for 012F6DF0:
+upvalues (0) for 012F6DF0:
+
+function <?:189,195> (16 instructions, 64 bytes at 012F70B0)
+2 params, 6 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "TableName"
+	4	[-]	LOADBOOL 	5 1 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -2	; "TableName"
+	7	[-]	TEST     	3 0 1
+	8	[-]	JMP      	1	; to 10
+	9	[-]	LOADK    	3 -3	; "PassThroughParams"
+	10	[-]	GETGLOBAL	4 -4	; ClientPrint
+	11	[-]	MOVE     	5 3
+	12	[-]	CALL     	4 2 1
+	13	[-]	GETGLOBAL	4 -5	; PrintTableToChat
+	14	[-]	MOVE     	5 2
+	15	[-]	CALL     	4 2 1
+	16	[-]	RETURN   	0 1
+constants (5) for 012F70B0:
+	1	"GetTable"
+	2	"TableName"
+	3	"PassThroughParams"
+	4	"ClientPrint"
+	5	"PrintTableToChat"
+locals (0) for 012F70B0:
+upvalues (0) for 012F70B0:
+
+function <?:198,237> (72 instructions, 288 bytes at 012F7968)
+2 params, 18 slots, 0 upvalues, 0 locals, 17 constants, 0 functions
+	1	[-]	TEST     	1 0 1
+	2	[-]	JMP      	1	; to 4
+	3	[-]	LOADK    	1 -1	; 0
+	4	[-]	LT       	0 -2 1	; 10 -
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	LOADNIL  	2 2
+	8	[-]	LOADK    	3 -3	; "|"
+	9	[-]	LOADK    	4 -4	; 1
+	10	[-]	MOVE     	5 1
+	11	[-]	LOADK    	6 -4	; 1
+	12	[-]	FORPREP  	4 3	; to 16
+	13	[-]	MOVE     	8 3
+	14	[-]	LOADK    	9 -5	; "----"
+	15	[-]	CONCAT   	3 8 9
+	16	[-]	FORLOOP  	4 -4	; to 13
+	17	[-]	MOVE     	4 3
+	18	[-]	LOADK    	5 -6	; "{"
+	19	[-]	CONCAT   	4 4 5
+	20	[-]	MOVE     	5 3
+	21	[-]	LOADK    	6 -7	; "}"
+	22	[-]	CONCAT   	5 5 6
+	23	[-]	GETGLOBAL	6 -8	; ClientPrint
+	24	[-]	MOVE     	7 4
+	25	[-]	CALL     	6 2 1
+	26	[-]	GETGLOBAL	6 -9	; pairs
+	27	[-]	MOVE     	7 0
+	28	[-]	CALL     	6 2 4
+	29	[-]	JMP      	37	; to 67
+	30	[-]	LOADNIL  	11 11
+	31	[-]	GETGLOBAL	12 -10	; tostring
+	32	[-]	MOVE     	13 9
+	33	[-]	CALL     	12 2 2
+	34	[-]	EQ       	0 12 -11	; - "PassThroughParams"
+	35	[-]	JMP      	2	; to 38
+	36	[-]	LOADK    	11 -12	; "{{ PassThroughParams }}"
+	37	[-]	JMP      	11	; to 49
+	38	[-]	GETGLOBAL	13 -13	; type
+	39	[-]	MOVE     	14 10
+	40	[-]	CALL     	13 2 2
+	41	[-]	EQ       	0 13 -14	; - "table"
+	42	[-]	JMP      	2	; to 45
+	43	[-]	LOADK    	11 -15	; "Table"
+	44	[-]	JMP      	4	; to 49
+	45	[-]	GETGLOBAL	13 -10	; tostring
+	46	[-]	MOVE     	14 10
+	47	[-]	CALL     	13 2 2
+	48	[-]	MOVE     	11 13
+	49	[-]	MOVE     	13 3
+	50	[-]	MOVE     	14 13
+	51	[-]	MOVE     	15 12
+	52	[-]	LOADK    	16 -16	; ": "
+	53	[-]	MOVE     	17 11
+	54	[-]	CONCAT   	13 14 17
+	55	[-]	GETGLOBAL	14 -8	; ClientPrint
+	56	[-]	MOVE     	15 13
+	57	[-]	CALL     	14 2 1
+	58	[-]	GETGLOBAL	14 -13	; type
+	59	[-]	MOVE     	15 10
+	60	[-]	CALL     	14 2 2
+	61	[-]	EQ       	0 14 -14	; - "table"
+	62	[-]	JMP      	4	; to 67
+	63	[-]	GETGLOBAL	14 -17	; PrintTableToChat
+	64	[-]	MOVE     	15 10
+	65	[-]	ADD      	16 1 -4	; - 1
+	66	[-]	CALL     	14 3 1
+	67	[-]	TFORLOOP 	6 2
+	68	[-]	JMP      	-39	; to 30
+	69	[-]	GETGLOBAL	6 -8	; ClientPrint
+	70	[-]	MOVE     	7 5
+	71	[-]	CALL     	6 2 1
+	72	[-]	RETURN   	0 1
+constants (17) for 012F7968:
+	1	0
+	2	10
+	3	"|"
+	4	1
+	5	"----"
+	6	"{"
+	7	"}"
+	8	"ClientPrint"
+	9	"pairs"
+	10	"tostring"
+	11	"PassThroughParams"
+	12	"{{ PassThroughParams }}"
+	13	"type"
+	14	"table"
+	15	"Table"
+	16	": "
+	17	"PrintTableToChat"
+locals (0) for 012F7968:
+upvalues (0) for 012F7968:
+
+function <?:249,250> (1 instruction, 4 bytes at 012F7C00)
+2 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 012F7C00:
+locals (0) for 012F7C00:
+upvalues (0) for 012F7C00:
+
+function <?:260,266> (16 instructions, 64 bytes at 012F7C58)
+2 params, 6 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "TableName"
+	4	[-]	LOADBOOL 	5 1 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -2	; "TableName"
+	7	[-]	TEST     	3 0 1
+	8	[-]	JMP      	1	; to 10
+	9	[-]	LOADK    	3 -3	; "PassThroughParams"
+	10	[-]	GETGLOBAL	4 -4	; DebugClientPrint
+	11	[-]	MOVE     	5 3
+	12	[-]	CALL     	4 2 1
+	13	[-]	GETGLOBAL	4 -5	; DebugPrintTableToChat
+	14	[-]	MOVE     	5 2
+	15	[-]	CALL     	4 2 1
+	16	[-]	RETURN   	0 1
+constants (5) for 012F7C58:
+	1	"GetTable"
+	2	"TableName"
+	3	"PassThroughParams"
+	4	"DebugClientPrint"
+	5	"DebugPrintTableToChat"
+locals (0) for 012F7C58:
+upvalues (0) for 012F7C58:
+
+function <?:269,308> (72 instructions, 288 bytes at 012F7D08)
+2 params, 18 slots, 0 upvalues, 0 locals, 17 constants, 0 functions
+	1	[-]	TEST     	1 0 1
+	2	[-]	JMP      	1	; to 4
+	3	[-]	LOADK    	1 -1	; 0
+	4	[-]	LT       	0 -2 1	; 10 -
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	LOADNIL  	2 2
+	8	[-]	LOADK    	3 -3	; "|"
+	9	[-]	LOADK    	4 -4	; 1
+	10	[-]	MOVE     	5 1
+	11	[-]	LOADK    	6 -4	; 1
+	12	[-]	FORPREP  	4 3	; to 16
+	13	[-]	MOVE     	8 3
+	14	[-]	LOADK    	9 -5	; "----"
+	15	[-]	CONCAT   	3 8 9
+	16	[-]	FORLOOP  	4 -4	; to 13
+	17	[-]	MOVE     	4 3
+	18	[-]	LOADK    	5 -6	; "{"
+	19	[-]	CONCAT   	4 4 5
+	20	[-]	MOVE     	5 3
+	21	[-]	LOADK    	6 -7	; "}"
+	22	[-]	CONCAT   	5 5 6
+	23	[-]	GETGLOBAL	6 -8	; DebugClientPrint
+	24	[-]	MOVE     	7 4
+	25	[-]	CALL     	6 2 1
+	26	[-]	GETGLOBAL	6 -9	; pairs
+	27	[-]	MOVE     	7 0
+	28	[-]	CALL     	6 2 4
+	29	[-]	JMP      	37	; to 67
+	30	[-]	LOADNIL  	11 11
+	31	[-]	GETGLOBAL	12 -10	; tostring
+	32	[-]	MOVE     	13 9
+	33	[-]	CALL     	12 2 2
+	34	[-]	EQ       	0 12 -11	; - "PassThroughParams"
+	35	[-]	JMP      	2	; to 38
+	36	[-]	LOADK    	11 -12	; "{{ PassThroughParams }}"
+	37	[-]	JMP      	11	; to 49
+	38	[-]	GETGLOBAL	13 -13	; type
+	39	[-]	MOVE     	14 10
+	40	[-]	CALL     	13 2 2
+	41	[-]	EQ       	0 13 -14	; - "table"
+	42	[-]	JMP      	2	; to 45
+	43	[-]	LOADK    	11 -15	; "Table"
+	44	[-]	JMP      	4	; to 49
+	45	[-]	GETGLOBAL	13 -10	; tostring
+	46	[-]	MOVE     	14 10
+	47	[-]	CALL     	13 2 2
+	48	[-]	MOVE     	11 13
+	49	[-]	MOVE     	13 3
+	50	[-]	MOVE     	14 13
+	51	[-]	MOVE     	15 12
+	52	[-]	LOADK    	16 -16	; ": "
+	53	[-]	MOVE     	17 11
+	54	[-]	CONCAT   	13 14 17
+	55	[-]	GETGLOBAL	14 -8	; DebugClientPrint
+	56	[-]	MOVE     	15 13
+	57	[-]	CALL     	14 2 1
+	58	[-]	GETGLOBAL	14 -13	; type
+	59	[-]	MOVE     	15 10
+	60	[-]	CALL     	14 2 2
+	61	[-]	EQ       	0 14 -14	; - "table"
+	62	[-]	JMP      	4	; to 67
+	63	[-]	GETGLOBAL	14 -17	; DebugPrintTableToChat
+	64	[-]	MOVE     	15 10
+	65	[-]	ADD      	16 1 -4	; - 1
+	66	[-]	CALL     	14 3 1
+	67	[-]	TFORLOOP 	6 2
+	68	[-]	JMP      	-39	; to 30
+	69	[-]	GETGLOBAL	6 -8	; DebugClientPrint
+	70	[-]	MOVE     	7 5
+	71	[-]	CALL     	6 2 1
+	72	[-]	RETURN   	0 1
+constants (17) for 012F7D08:
+	1	0
+	2	10
+	3	"|"
+	4	1
+	5	"----"
+	6	"{"
+	7	"}"
+	8	"DebugClientPrint"
+	9	"pairs"
+	10	"tostring"
+	11	"PassThroughParams"
+	12	"{{ PassThroughParams }}"
+	13	"type"
+	14	"table"
+	15	"Table"
+	16	": "
+	17	"DebugPrintTableToChat"
+locals (0) for 012F7D08:
+upvalues (0) for 012F7D08:
+
+function <?:312,330> (16 instructions, 64 bytes at 012F7FA0)
+3 params, 5 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	EQ       	1 1 -1	; - nil
+	2	[-]	JMP      	9	; to 12
+	3	[-]	GETTABLE 	3 0 1
+	4	[-]	EQ       	0 3 -1	; - nil
+	5	[-]	JMP      	6	; to 12
+	6	[-]	TEST     	2 0 0
+	7	[-]	JMP      	4	; to 12
+	8	[-]	NEWTABLE 	4 0 0
+	9	[-]	SETTABLE 	0 1 4
+	10	[-]	GETTABLE 	4 0 1
+	11	[-]	RETURN   	4 2
+	12	[-]	EQ       	0 3 -1	; - nil
+	13	[-]	JMP      	1	; to 15
+	14	[-]	MOVE     	3 0
+	15	[-]	RETURN   	3 2
+	16	[-]	RETURN   	0 1
+constants (1) for 012F7FA0:
+	1	nil
+locals (0) for 012F7FA0:
+upvalues (0) for 012F7FA0:
+
+function <?:336,344> (26 instructions, 104 bytes at 012F7FF8)
+3 params, 7 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	3 -1	; GetTable
+	2	[-]	MOVE     	4 1
+	3	[-]	MOVE     	5 0
+	4	[-]	LOADK    	6 -2	; "VarTable"
+	5	[-]	CONCAT   	5 5 6
+	6	[-]	GETTABLE 	5 2 5
+	7	[-]	LOADBOOL 	6 0 0
+	8	[-]	CALL     	3 4 2
+	9	[-]	MOVE     	4 0
+	10	[-]	LOADK    	5 -3	; "Var"
+	11	[-]	CONCAT   	4 4 5
+	12	[-]	GETTABLE 	4 2 4
+	13	[-]	EQ       	1 4 -4	; - nil
+	14	[-]	JMP      	9	; to 24
+	15	[-]	EQ       	1 3 -4	; - nil
+	16	[-]	JMP      	7	; to 24
+	17	[-]	MOVE     	4 0
+	18	[-]	LOADK    	5 -3	; "Var"
+	19	[-]	CONCAT   	4 4 5
+	20	[-]	GETTABLE 	4 2 4
+	21	[-]	GETTABLE 	4 3 4
+	22	[-]	RETURN   	4 2
+	23	[-]	JMP      	2	; to 26
+	24	[-]	GETTABLE 	4 2 0
+	25	[-]	RETURN   	4 2
+	26	[-]	RETURN   	0 1
+constants (4) for 012F7FF8:
+	1	"GetTable"
+	2	"VarTable"
+	3	"Var"
+	4	nil
+locals (0) for 012F7FF8:
+upvalues (0) for 012F7FF8:
+
+function <?:353,358> (9 instructions, 36 bytes at 012F82A0)
+2 params, 6 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 1 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "DestVar"
+	7	[-]	NEWTABLE 	4 0 0
+	8	[-]	SETTABLE 	2 3 4
+	9	[-]	RETURN   	0 1
+constants (3) for 012F82A0:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"DestVar"
+locals (0) for 012F82A0:
+upvalues (0) for 012F82A0:
+
+function <?:367,372> (8 instructions, 32 bytes at 012F82F8)
+2 params, 6 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "TableNameVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "TableNameVar"
+	7	[-]	SETTABLE 	2 3 -4	; - nil
+	8	[-]	RETURN   	0 1
+constants (4) for 012F82F8:
+	1	"GetTable"
+	2	"TableNameVarTable"
+	3	"TableNameVar"
+	4	nil
+locals (0) for 012F82F8:
+upvalues (0) for 012F82F8:
+
+function <?:386,400> (34 instructions, 136 bytes at 012F8350)
+2 params, 8 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestTableVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETGLOBAL	3 -3	; GetParam
+	7	[-]	LOADK    	4 -4	; "Key"
+	8	[-]	MOVE     	5 0
+	9	[-]	MOVE     	6 1
+	10	[-]	CALL     	3 4 2
+	11	[-]	GETGLOBAL	4 -3	; GetParam
+	12	[-]	LOADK    	5 -5	; "Value"
+	13	[-]	MOVE     	6 0
+	14	[-]	MOVE     	7 1
+	15	[-]	CALL     	4 4 2
+	16	[-]	GETGLOBAL	5 -6	; type
+	17	[-]	GETTABLE 	6 1 -7	; "DestTableVar"
+	18	[-]	GETTABLE 	6 2 6
+	19	[-]	CALL     	5 2 2
+	20	[-]	EQ       	0 5 -8	; - "nil"
+	21	[-]	JMP      	3	; to 25
+	22	[-]	GETTABLE 	5 1 -7	; "DestTableVar"
+	23	[-]	NEWTABLE 	6 0 0
+	24	[-]	SETTABLE 	2 5 6
+	25	[-]	GETGLOBAL	5 -6	; type
+	26	[-]	GETTABLE 	6 1 -7	; "DestTableVar"
+	27	[-]	GETTABLE 	6 2 6
+	28	[-]	CALL     	5 2 2
+	29	[-]	EQ       	0 5 -9	; - "table"
+	30	[-]	JMP      	3	; to 34
+	31	[-]	GETTABLE 	5 1 -7	; "DestTableVar"
+	32	[-]	GETTABLE 	5 2 5
+	33	[-]	SETTABLE 	5 3 4
+	34	[-]	RETURN   	0 1
+constants (9) for 012F8350:
+	1	"GetTable"
+	2	"DestTableVarTable"
+	3	"GetParam"
+	4	"Key"
+	5	"Value"
+	6	"type"
+	7	"DestTableVar"
+	8	"nil"
+	9	"table"
+locals (0) for 012F8350:
+upvalues (0) for 012F8350:
+
+function <?:412,425> (27 instructions, 108 bytes at 012F84B0)
+2 params, 8 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "SrcTableVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETGLOBAL	3 -3	; GetParam
+	7	[-]	LOADK    	4 -4	; "SrcKey"
+	8	[-]	MOVE     	5 0
+	9	[-]	MOVE     	6 1
+	10	[-]	CALL     	3 4 2
+	11	[-]	GETGLOBAL	4 -5	; type
+	12	[-]	GETTABLE 	5 1 -6	; "SrcTableVar"
+	13	[-]	GETTABLE 	5 2 5
+	14	[-]	CALL     	4 2 2
+	15	[-]	EQ       	0 4 -7	; - "table"
+	16	[-]	JMP      	10	; to 27
+	17	[-]	GETGLOBAL	4 -1	; GetTable
+	18	[-]	MOVE     	5 0
+	19	[-]	GETTABLE 	6 1 -8	; "DestVarTable"
+	20	[-]	LOADBOOL 	7 1 0
+	21	[-]	CALL     	4 4 2
+	22	[-]	GETTABLE 	5 1 -9	; "DestVar"
+	23	[-]	GETTABLE 	6 1 -6	; "SrcTableVar"
+	24	[-]	GETTABLE 	6 2 6
+	25	[-]	GETTABLE 	6 6 3
+	26	[-]	SETTABLE 	4 5 6
+	27	[-]	RETURN   	0 1
+constants (9) for 012F84B0:
+	1	"GetTable"
+	2	"SrcTableVarTable"
+	3	"GetParam"
+	4	"SrcKey"
+	5	"type"
+	6	"SrcTableVar"
+	7	"table"
+	8	"DestVarTable"
+	9	"DestVar"
+locals (0) for 012F84B0:
+upvalues (0) for 012F84B0:
+
+function <?:440,467> (72 instructions, 288 bytes at 012F8400)
+2 params, 9 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestTableVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETGLOBAL	3 -3	; GetParam
+	7	[-]	LOADK    	4 -4	; "DestIndex"
+	8	[-]	MOVE     	5 0
+	9	[-]	MOVE     	6 1
+	10	[-]	CALL     	3 4 2
+	11	[-]	GETGLOBAL	4 -3	; GetParam
+	12	[-]	LOADK    	5 -5	; "Value"
+	13	[-]	MOVE     	6 0
+	14	[-]	MOVE     	7 1
+	15	[-]	CALL     	4 4 2
+	16	[-]	GETGLOBAL	5 -6	; type
+	17	[-]	GETTABLE 	6 1 -7	; "DestTableVar"
+	18	[-]	GETTABLE 	6 2 6
+	19	[-]	CALL     	5 2 2
+	20	[-]	EQ       	0 5 -8	; - "nil"
+	21	[-]	JMP      	3	; to 25
+	22	[-]	GETTABLE 	5 1 -7	; "DestTableVar"
+	23	[-]	NEWTABLE 	6 0 0
+	24	[-]	SETTABLE 	2 5 6
+	25	[-]	GETGLOBAL	5 -6	; type
+	26	[-]	GETTABLE 	6 1 -7	; "DestTableVar"
+	27	[-]	GETTABLE 	6 2 6
+	28	[-]	CALL     	5 2 2
+	29	[-]	EQ       	0 5 -9	; - "table"
+	30	[-]	JMP      	41	; to 72
+	31	[-]	TEST     	3 0 0
+	32	[-]	JMP      	18	; to 51
+	33	[-]	GETGLOBAL	5 -9	; table
+	34	[-]	GETTABLE 	5 5 -10	; "insert"
+	35	[-]	GETTABLE 	6 1 -7	; "DestTableVar"
+	36	[-]	GETTABLE 	6 2 6
+	37	[-]	MOVE     	7 3
+	38	[-]	MOVE     	8 4
+	39	[-]	CALL     	5 4 1
+	40	[-]	GETTABLE 	5 1 -11	; "OutIndexVar"
+	41	[-]	TEST     	5 0 0
+	42	[-]	JMP      	29	; to 72
+	43	[-]	GETGLOBAL	5 -1	; GetTable
+	44	[-]	MOVE     	6 0
+	45	[-]	GETTABLE 	7 1 -12	; "OutIndexVarTable"
+	46	[-]	LOADBOOL 	8 1 0
+	47	[-]	CALL     	5 4 2
+	48	[-]	GETTABLE 	6 1 -11	; "OutIndexVar"
+	49	[-]	SETTABLE 	5 6 3
+	50	[-]	JMP      	21	; to 72
+	51	[-]	GETGLOBAL	5 -9	; table
+	52	[-]	GETTABLE 	5 5 -10	; "insert"
+	53	[-]	GETTABLE 	6 1 -7	; "DestTableVar"
+	54	[-]	GETTABLE 	6 2 6
+	55	[-]	MOVE     	7 4
+	56	[-]	CALL     	5 3 1
+	57	[-]	GETTABLE 	5 1 -11	; "OutIndexVar"
+	58	[-]	TEST     	5 0 0
+	59	[-]	JMP      	12	; to 72
+	60	[-]	GETGLOBAL	5 -1	; GetTable
+	61	[-]	MOVE     	6 0
+	62	[-]	GETTABLE 	7 1 -12	; "OutIndexVarTable"
+	63	[-]	LOADBOOL 	8 1 0
+	64	[-]	CALL     	5 4 2
+	65	[-]	GETTABLE 	6 1 -11	; "OutIndexVar"
+	66	[-]	GETGLOBAL	7 -9	; table
+	67	[-]	GETTABLE 	7 7 -13	; "getn"
+	68	[-]	GETTABLE 	8 1 -7	; "DestTableVar"
+	69	[-]	GETTABLE 	8 2 8
+	70	[-]	CALL     	7 2 2
+	71	[-]	SETTABLE 	5 6 7
+	72	[-]	RETURN   	0 1
+constants (13) for 012F8400:
+	1	"GetTable"
+	2	"DestTableVarTable"
+	3	"GetParam"
+	4	"DestIndex"
+	5	"Value"
+	6	"type"
+	7	"DestTableVar"
+	8	"nil"
+	9	"table"
+	10	"insert"
+	11	"OutIndexVar"
+	12	"OutIndexVarTable"
+	13	"getn"
+locals (0) for 012F8400:
+upvalues (0) for 012F8400:
+
+function <?:481,503> (66 instructions, 264 bytes at 012F87C8)
+2 params, 11 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "TableVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETGLOBAL	3 -3	; GetParam
+	7	[-]	LOADK    	4 -4	; "Index"
+	8	[-]	MOVE     	5 0
+	9	[-]	MOVE     	6 1
+	10	[-]	CALL     	3 4 2
+	11	[-]	GETGLOBAL	4 -3	; GetParam
+	12	[-]	LOADK    	5 -5	; "Key"
+	13	[-]	MOVE     	6 0
+	14	[-]	MOVE     	7 1
+	15	[-]	CALL     	4 4 2
+	16	[-]	GETGLOBAL	5 -6	; type
+	17	[-]	GETTABLE 	6 1 -7	; "TableVar"
+	18	[-]	GETTABLE 	6 2 6
+	19	[-]	CALL     	5 2 2
+	20	[-]	EQ       	0 5 -8	; - "nil"
+	21	[-]	JMP      	12	; to 34
+	22	[-]	GETGLOBAL	5 -9	; DebugClientPrint
+	23	[-]	LOADK    	6 -10	; "Table specified does not exist: "
+	24	[-]	GETGLOBAL	7 -11	; tostring
+	25	[-]	GETTABLE 	8 1 -2	; "TableVarTable"
+	26	[-]	CALL     	7 2 2
+	27	[-]	LOADK    	8 -12	; "."
+	28	[-]	GETGLOBAL	9 -11	; tostring
+	29	[-]	GETTABLE 	10 1 -7	; "TableVar"
+	30	[-]	CALL     	9 2 2
+	31	[-]	CONCAT   	6 6 9
+	32	[-]	CALL     	5 2 1
+	33	[-]	RETURN   	0 1
+	34	[-]	GETGLOBAL	5 -6	; type
+	35	[-]	GETTABLE 	6 1 -7	; "TableVar"
+	36	[-]	GETTABLE 	6 2 6
+	37	[-]	CALL     	5 2 2
+	38	[-]	EQ       	0 5 -13	; - "table"
+	39	[-]	JMP      	26	; to 66
+	40	[-]	TEST     	4 0 0
+	41	[-]	JMP      	4	; to 46
+	42	[-]	GETTABLE 	5 1 -7	; "TableVar"
+	43	[-]	GETTABLE 	5 2 5
+	44	[-]	SETTABLE 	5 4 -14	; - nil
+	45	[-]	JMP      	20	; to 66
+	46	[-]	TEST     	3 0 0
+	47	[-]	JMP      	7	; to 55
+	48	[-]	GETGLOBAL	5 -13	; table
+	49	[-]	GETTABLE 	5 5 -15	; "remove"
+	50	[-]	GETTABLE 	6 1 -7	; "TableVar"
+	51	[-]	GETTABLE 	6 2 6
+	52	[-]	MOVE     	7 3
+	53	[-]	CALL     	5 3 1
+	54	[-]	JMP      	11	; to 66
+	55	[-]	GETGLOBAL	5 -9	; DebugClientPrint
+	56	[-]	LOADK    	6 -16	; "Specified index/key was nil: "
+	57	[-]	GETGLOBAL	7 -11	; tostring
+	58	[-]	GETTABLE 	8 1 -17	; "IndexVarTable"
+	59	[-]	CALL     	7 2 2
+	60	[-]	LOADK    	8 -12	; "."
+	61	[-]	GETGLOBAL	9 -11	; tostring
+	62	[-]	GETTABLE 	10 1 -18	; "IndexVar"
+	63	[-]	CALL     	9 2 2
+	64	[-]	CONCAT   	6 6 9
+	65	[-]	CALL     	5 2 1
+	66	[-]	RETURN   	0 1
+constants (18) for 012F87C8:
+	1	"GetTable"
+	2	"TableVarTable"
+	3	"GetParam"
+	4	"Index"
+	5	"Key"
+	6	"type"
+	7	"TableVar"
+	8	"nil"
+	9	"DebugClientPrint"
+	10	"Table specified does not exist: "
+	11	"tostring"
+	12	"."
+	13	"table"
+	14	nil
+	15	"remove"
+	16	"Specified index/key was nil: "
+	17	"IndexVarTable"
+	18	"IndexVar"
+locals (0) for 012F87C8:
+upvalues (0) for 012F87C8:
+
+function <?:517,555> (85 instructions, 340 bytes at 012F8248)
+3 params, 16 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	GETGLOBAL	3 -1	; GetTable
+	2	[-]	MOVE     	4 0
+	3	[-]	GETTABLE 	5 1 -2	; "TableVarTable"
+	4	[-]	LOADBOOL 	6 0 0
+	5	[-]	CALL     	3 4 2
+	6	[-]	GETGLOBAL	4 -3	; type
+	7	[-]	GETTABLE 	5 1 -4	; "TableVar"
+	8	[-]	GETTABLE 	5 3 5
+	9	[-]	CALL     	4 2 2
+	10	[-]	EQ       	0 4 -5	; - "table"
+	11	[-]	JMP      	73	; to 85
+	12	[-]	GETTABLE 	4 1 -6	; "SortedByKeys"
+	13	[-]	TEST     	4 0 0
+	14	[-]	JMP      	45	; to 60
+	15	[-]	NEWTABLE 	4 0 0
+	16	[-]	GETGLOBAL	5 -7	; pairs
+	17	[-]	GETTABLE 	6 1 -4	; "TableVar"
+	18	[-]	GETTABLE 	6 3 6
+	19	[-]	CALL     	5 2 4
+	20	[-]	JMP      	5	; to 26
+	21	[-]	GETGLOBAL	10 -5	; table
+	22	[-]	GETTABLE 	10 10 -8	; "insert"
+	23	[-]	MOVE     	11 4
+	24	[-]	MOVE     	12 8
+	25	[-]	CALL     	10 3 1
+	26	[-]	TFORLOOP 	5 2
+	27	[-]	JMP      	-7	; to 21
+	28	[-]	GETGLOBAL	5 -5	; table
+	29	[-]	GETTABLE 	5 5 -9	; "sort"
+	30	[-]	MOVE     	6 4
+	31	[-]	CALL     	5 2 1
+	32	[-]	GETGLOBAL	5 -7	; pairs
+	33	[-]	MOVE     	6 4
+	34	[-]	CALL     	5 2 4
+	35	[-]	JMP      	21	; to 57
+	36	[-]	GETTABLE 	10 1 -4	; "TableVar"
+	37	[-]	GETTABLE 	10 3 10
+	38	[-]	GETTABLE 	10 10 9
+	39	[-]	GETGLOBAL	11 -1	; GetTable
+	40	[-]	MOVE     	12 0
+	41	[-]	GETTABLE 	13 1 -10	; "DestKeyVarTable"
+	42	[-]	LOADBOOL 	14 1 0
+	43	[-]	CALL     	11 4 2
+	44	[-]	GETGLOBAL	12 -1	; GetTable
+	45	[-]	MOVE     	13 0
+	46	[-]	GETTABLE 	14 1 -11	; "DestValueVarTable"
+	47	[-]	LOADBOOL 	15 1 0
+	48	[-]	CALL     	12 4 2
+	49	[-]	GETTABLE 	13 1 -12	; "DestKeyVar"
+	50	[-]	SETTABLE 	11 13 9
+	51	[-]	GETTABLE 	13 1 -13	; "DestValueVar"
+	52	[-]	SETTABLE 	12 13 10
+	53	[-]	GETGLOBAL	13 -14	; ExecuteBuildingBlocks
+	54	[-]	MOVE     	14 2
+	55	[-]	MOVE     	15 0
+	56	[-]	CALL     	13 3 1
+	57	[-]	TFORLOOP 	5 2
+	58	[-]	JMP      	-23	; to 36
+	59	[-]	JMP      	25	; to 85
+	60	[-]	GETGLOBAL	4 -7	; pairs
+	61	[-]	GETTABLE 	5 1 -4	; "TableVar"
+	62	[-]	GETTABLE 	5 3 5
+	63	[-]	CALL     	4 2 4
+	64	[-]	JMP      	18	; to 83
+	65	[-]	GETGLOBAL	9 -1	; GetTable
+	66	[-]	MOVE     	10 0
+	67	[-]	GETTABLE 	11 1 -10	; "DestKeyVarTable"
+	68	[-]	LOADBOOL 	12 1 0
+	69	[-]	CALL     	9 4 2
+	70	[-]	GETGLOBAL	10 -1	; GetTable
+	71	[-]	MOVE     	11 0
+	72	[-]	GETTABLE 	12 1 -11	; "DestValueVarTable"
+	73	[-]	LOADBOOL 	13 1 0
+	74	[-]	CALL     	10 4 2
+	75	[-]	GETTABLE 	11 1 -12	; "DestKeyVar"
+	76	[-]	SETTABLE 	9 11 7
+	77	[-]	GETTABLE 	11 1 -13	; "DestValueVar"
+	78	[-]	SETTABLE 	10 11 8
+	79	[-]	GETGLOBAL	11 -14	; ExecuteBuildingBlocks
+	80	[-]	MOVE     	12 2
+	81	[-]	MOVE     	13 0
+	82	[-]	CALL     	11 3 1
+	83	[-]	TFORLOOP 	4 2
+	84	[-]	JMP      	-20	; to 65
+	85	[-]	RETURN   	0 1
+constants (14) for 012F8248:
+	1	"GetTable"
+	2	"TableVarTable"
+	3	"type"
+	4	"TableVar"
+	5	"table"
+	6	"SortedByKeys"
+	7	"pairs"
+	8	"insert"
+	9	"sort"
+	10	"DestKeyVarTable"
+	11	"DestValueVarTable"
+	12	"DestKeyVar"
+	13	"DestValueVar"
+	14	"ExecuteBuildingBlocks"
+locals (0) for 012F8248:
+upvalues (0) for 012F8248:
+
+function <?:569,591> (46 instructions, 184 bytes at 012F8198)
+2 params, 13 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "SrcTableVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETGLOBAL	3 -3	; GetParam
+	7	[-]	LOADK    	4 -4	; "Value"
+	8	[-]	MOVE     	5 0
+	9	[-]	MOVE     	6 1
+	10	[-]	CALL     	3 4 2
+	11	[-]	GETGLOBAL	4 -1	; GetTable
+	12	[-]	MOVE     	5 0
+	13	[-]	GETTABLE 	6 1 -5	; "MatchingKeyVarTable"
+	14	[-]	LOADBOOL 	7 0 0
+	15	[-]	CALL     	4 4 2
+	16	[-]	GETGLOBAL	5 -1	; GetTable
+	17	[-]	MOVE     	6 0
+	18	[-]	GETTABLE 	7 1 -6	; "WasFoundVarTable"
+	19	[-]	LOADBOOL 	8 0 0
+	20	[-]	CALL     	5 4 2
+	21	[-]	GETTABLE 	6 1 -7	; "WasFoundVar"
+	22	[-]	SETTABLE 	5 6 -8	; - false
+	23	[-]	GETGLOBAL	6 -9	; type
+	24	[-]	GETTABLE 	7 1 -10	; "SrcTableVar"
+	25	[-]	GETTABLE 	7 2 7
+	26	[-]	CALL     	6 2 2
+	27	[-]	EQ       	0 6 -11	; - "table"
+	28	[-]	JMP      	17	; to 46
+	29	[-]	GETGLOBAL	6 -1	; GetTable
+	30	[-]	MOVE     	7 0
+	31	[-]	GETTABLE 	8 1 -12	; "DestVarTable"
+	32	[-]	LOADBOOL 	9 1 0
+	33	[-]	CALL     	6 4 2
+	34	[-]	GETGLOBAL	7 -13	; pairs
+	35	[-]	MOVE     	8 6
+	36	[-]	CALL     	7 2 4
+	37	[-]	JMP      	6	; to 44
+	38	[-]	EQ       	0 11 3
+	39	[-]	JMP      	4	; to 44
+	40	[-]	GETTABLE 	12 1 -7	; "WasFoundVar"
+	41	[-]	SETTABLE 	5 12 -14	; - true
+	42	[-]	GETTABLE 	12 1 -15	; "MatchingKeyVar"
+	43	[-]	SETTABLE 	4 12 10
+	44	[-]	TFORLOOP 	7 2
+	45	[-]	JMP      	-8	; to 38
+	46	[-]	RETURN   	0 1
+constants (15) for 012F8198:
+	1	"GetTable"
+	2	"SrcTableVarTable"
+	3	"GetParam"
+	4	"Value"
+	5	"MatchingKeyVarTable"
+	6	"WasFoundVarTable"
+	7	"WasFoundVar"
+	8	false
+	9	"type"
+	10	"SrcTableVar"
+	11	"table"
+	12	"DestVarTable"
+	13	"pairs"
+	14	true
+	15	"MatchingKeyVar"
+locals (0) for 012F8198:
+upvalues (0) for 012F8198:
+
+function <?:603,617> (22 instructions, 88 bytes at 012F8770)
+3 params, 12 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	3 -1	; GetTable
+	2	[-]	MOVE     	4 0
+	3	[-]	GETTABLE 	5 1 -2	; "TableVarTable"
+	4	[-]	LOADBOOL 	6 0 0
+	5	[-]	CALL     	3 4 2
+	6	[-]	GETGLOBAL	4 -1	; GetTable
+	7	[-]	MOVE     	5 0
+	8	[-]	GETTABLE 	6 1 -3	; "SizeVarTable"
+	9	[-]	LOADBOOL 	7 0 0
+	10	[-]	CALL     	4 4 2
+	11	[-]	LOADK    	5 -4	; 0
+	12	[-]	GETGLOBAL	6 -5	; pairs
+	13	[-]	GETTABLE 	7 1 -6	; "TableVar"
+	14	[-]	GETTABLE 	7 3 7
+	15	[-]	CALL     	6 2 4
+	16	[-]	JMP      	1	; to 18
+	17	[-]	ADD      	5 5 -7	; - 1
+	18	[-]	TFORLOOP 	6 2
+	19	[-]	JMP      	-3	; to 17
+	20	[-]	GETTABLE 	6 1 -8	; "SizeVar"
+	21	[-]	SETTABLE 	4 6 5
+	22	[-]	RETURN   	0 1
+constants (8) for 012F8770:
+	1	"GetTable"
+	2	"TableVarTable"
+	3	"SizeVarTable"
+	4	0
+	5	"pairs"
+	6	"TableVar"
+	7	1
+	8	"SizeVar"
+locals (0) for 012F8770:
+upvalues (0) for 012F8770:
+
+function <?:634,701> (93 instructions, 372 bytes at 012F83A8)
+2 params, 20 slots, 0 upvalues, 0 locals, 25 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetParam
+	2	[-]	LOADK    	3 -2	; "X"
+	3	[-]	MOVE     	4 0
+	4	[-]	MOVE     	5 1
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETGLOBAL	3 -1	; GetParam
+	7	[-]	LOADK    	4 -3	; "Z"
+	8	[-]	MOVE     	5 0
+	9	[-]	MOVE     	6 1
+	10	[-]	CALL     	3 4 2
+	11	[-]	LOADK    	4 -4	; 2
+	12	[-]	LOADK    	5 -5	; 1
+	13	[-]	LOADK    	6 -6	; 0
+	14	[-]	LOADK    	7 -7	; 4
+	15	[-]	LOADK    	8 -8	; 3
+	16	[-]	SUB      	9 3 2
+	17	[-]	SUB      	10 -9 3	; 14500 -
+	18	[-]	MUL      	11 2 -10	; - 0.965
+	19	[-]	SUB      	10 10 11
+	20	[-]	MOVE     	11 5
+	21	[-]	MOVE     	12 5
+	22	[-]	LOADBOOL 	13 1 0
+	23	[-]	LT       	0 -11 3	; 12250 -
+	24	[-]	JMP      	2	; to 27
+	25	[-]	MOVE     	12 4
+	26	[-]	JMP      	19	; to 46
+	27	[-]	LT       	0 3 -12	; - 2650
+	28	[-]	JMP      	2	; to 31
+	29	[-]	MOVE     	12 6
+	30	[-]	JMP      	15	; to 46
+	31	[-]	LT       	0 -11 2	; 12250 -
+	32	[-]	JMP      	2	; to 35
+	33	[-]	MOVE     	12 6
+	34	[-]	JMP      	11	; to 46
+	35	[-]	LT       	0 2 -12	; - 2650
+	36	[-]	JMP      	2	; to 39
+	37	[-]	MOVE     	12 4
+	38	[-]	JMP      	7	; to 46
+	39	[-]	LT       	0 -13 9	; 4500 -
+	40	[-]	JMP      	2	; to 43
+	41	[-]	MOVE     	12 4
+	42	[-]	JMP      	3	; to 46
+	43	[-]	LT       	0 9 -14	; - -4500
+	44	[-]	JMP      	1	; to 46
+	45	[-]	MOVE     	12 6
+	46	[-]	LT       	0 -15 3	; 13000 -
+	47	[-]	JMP      	2	; to 50
+	48	[-]	MOVE     	11 4
+	49	[-]	JMP      	19	; to 69
+	50	[-]	LT       	0 3 -16	; - 1800
+	51	[-]	JMP      	2	; to 54
+	52	[-]	MOVE     	11 6
+	53	[-]	JMP      	15	; to 69
+	54	[-]	LT       	0 -15 2	; 13000 -
+	55	[-]	JMP      	2	; to 58
+	56	[-]	MOVE     	11 6
+	57	[-]	JMP      	11	; to 69
+	58	[-]	LT       	0 2 -16	; - 1800
+	59	[-]	JMP      	2	; to 62
+	60	[-]	MOVE     	11 4
+	61	[-]	JMP      	7	; to 69
+	62	[-]	LT       	0 -17 9	; 1150 -
+	63	[-]	JMP      	2	; to 66
+	64	[-]	MOVE     	11 7
+	65	[-]	JMP      	3	; to 69
+	66	[-]	LT       	0 9 -18	; - -1150
+	67	[-]	JMP      	1	; to 69
+	68	[-]	MOVE     	11 8
+	69	[-]	LT       	0 -6 10	; 0 -
+	70	[-]	JMP      	1	; to 72
+	71	[-]	LOADBOOL 	13 0 0
+	72	[-]	GETGLOBAL	14 -19	; GetTable
+	73	[-]	MOVE     	15 0
+	74	[-]	GETTABLE 	16 1 -20	; "NearLaneVarTable"
+	75	[-]	LOADBOOL 	17 0 0
+	76	[-]	CALL     	14 4 2
+	77	[-]	GETTABLE 	15 1 -21	; "NearLaneVar"
+	78	[-]	SETTABLE 	14 15 12
+	79	[-]	GETGLOBAL	15 -19	; GetTable
+	80	[-]	MOVE     	16 0
+	81	[-]	GETTABLE 	17 1 -22	; "NearSectionVarTable"
+	82	[-]	LOADBOOL 	18 0 0
+	83	[-]	CALL     	15 4 2
+	84	[-]	GETTABLE 	16 1 -23	; "NearSectionVar"
+	85	[-]	SETTABLE 	15 16 11
+	86	[-]	GETGLOBAL	16 -19	; GetTable
+	87	[-]	MOVE     	17 0
+	88	[-]	GETTABLE 	18 1 -24	; "BlueSideVarTable"
+	89	[-]	LOADBOOL 	19 0 0
+	90	[-]	CALL     	16 4 2
+	91	[-]	GETTABLE 	17 1 -25	; "BlueSideVar"
+	92	[-]	SETTABLE 	16 17 13
+	93	[-]	RETURN   	0 1
+constants (25) for 012F83A8:
+	1	"GetParam"
+	2	"X"
+	3	"Z"
+	4	2
+	5	1
+	6	0
+	7	4
+	8	3
+	9	14500
+	10	0.965
+	11	12250
+	12	2650
+	13	4500
+	14	-4500
+	15	13000
+	16	1800
+	17	1150
+	18	-1150
+	19	"GetTable"
+	20	"NearLaneVarTable"
+	21	"NearLaneVar"
+	22	"NearSectionVarTable"
+	23	"NearSectionVar"
+	24	"BlueSideVarTable"
+	25	"BlueSideVar"
+locals (0) for 012F83A8:
+upvalues (0) for 012F83A8:
+
+function <?:885,900> (33 instructions, 132 bytes at 012F8718)
+2 params, 10 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 1 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	LOADNIL  	3 3
+	7	[-]	GETGLOBAL	4 -1	; GetTable
+	8	[-]	MOVE     	5 0
+	9	[-]	GETTABLE 	6 1 -3	; "SpellSlotVarTable"
+	10	[-]	LOADBOOL 	7 0 0
+	11	[-]	CALL     	4 4 2
+	12	[-]	GETTABLE 	5 1 -4	; "SpellSlotVar"
+	13	[-]	EQ       	1 5 -5	; - nil
+	14	[-]	JMP      	5	; to 20
+	15	[-]	EQ       	1 4 -5	; - nil
+	16	[-]	JMP      	3	; to 20
+	17	[-]	GETTABLE 	5 1 -4	; "SpellSlotVar"
+	18	[-]	GETTABLE 	3 4 5
+	19	[-]	JMP      	1	; to 21
+	20	[-]	GETTABLE 	3 1 -6	; "SpellSlotValue"
+	21	[-]	GETTABLE 	5 1 -7	; "Function"
+	22	[-]	GETTABLE 	6 1 -8	; "OwnerVar"
+	23	[-]	GETTABLE 	6 0 6
+	24	[-]	MOVE     	7 3
+	25	[-]	GETTABLE 	8 1 -9	; "SpellbookType"
+	26	[-]	GETTABLE 	9 1 -10	; "SlotType"
+	27	[-]	CALL     	5 5 2
+	28	[-]	GETGLOBAL	6 -11	; SetVarInTable
+	29	[-]	MOVE     	7 0
+	30	[-]	MOVE     	8 1
+	31	[-]	MOVE     	9 5
+	32	[-]	CALL     	6 4 1
+	33	[-]	RETURN   	0 1
+constants (11) for 012F8718:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"SpellSlotVarTable"
+	4	"SpellSlotVar"
+	5	nil
+	6	"SpellSlotValue"
+	7	"Function"
+	8	"OwnerVar"
+	9	"SpellbookType"
+	10	"SlotType"
+	11	"SetVarInTable"
+locals (0) for 012F8718:
+upvalues (0) for 012F8718:
+
+function <?:928,952> (39 instructions, 156 bytes at 012F86C0)
+2 params, 12 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "SrcVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	LOADNIL  	3 3
+	7	[-]	GETTABLE 	4 1 -3	; "SrcVar"
+	8	[-]	EQ       	1 4 -4	; - nil
+	9	[-]	JMP      	5	; to 15
+	10	[-]	EQ       	1 2 -4	; - nil
+	11	[-]	JMP      	3	; to 15
+	12	[-]	GETTABLE 	4 1 -3	; "SrcVar"
+	13	[-]	GETTABLE 	3 2 4
+	14	[-]	JMP      	1	; to 16
+	15	[-]	GETTABLE 	3 1 -5	; "SrcValue"
+	16	[-]	LOADNIL  	4 4
+	17	[-]	GETGLOBAL	5 -1	; GetTable
+	18	[-]	MOVE     	6 0
+	19	[-]	GETTABLE 	7 1 -6	; "SpellSlotVarTable"
+	20	[-]	LOADBOOL 	8 0 0
+	21	[-]	CALL     	5 4 2
+	22	[-]	GETTABLE 	6 1 -7	; "SpellSlotVar"
+	23	[-]	EQ       	1 6 -4	; - nil
+	24	[-]	JMP      	5	; to 30
+	25	[-]	EQ       	1 5 -4	; - nil
+	26	[-]	JMP      	3	; to 30
+	27	[-]	GETTABLE 	6 1 -7	; "SpellSlotVar"
+	28	[-]	GETTABLE 	4 5 6
+	29	[-]	JMP      	1	; to 31
+	30	[-]	GETTABLE 	4 1 -8	; "SpellSlotValue"
+	31	[-]	GETGLOBAL	6 -9	; SetSlotSpellCooldownTime
+	32	[-]	GETTABLE 	7 1 -10	; "OwnerVar"
+	33	[-]	GETTABLE 	7 0 7
+	34	[-]	MOVE     	8 4
+	35	[-]	GETTABLE 	9 1 -11	; "SpellbookType"
+	36	[-]	GETTABLE 	10 1 -12	; "SlotType"
+	37	[-]	MOVE     	11 3
+	38	[-]	CALL     	6 6 1
+	39	[-]	RETURN   	0 1
+constants (12) for 012F86C0:
+	1	"GetTable"
+	2	"SrcVarTable"
+	3	"SrcVar"
+	4	nil
+	5	"SrcValue"
+	6	"SpellSlotVarTable"
+	7	"SpellSlotVar"
+	8	"SpellSlotValue"
+	9	"SetSlotSpellCooldownTime"
+	10	"OwnerVar"
+	11	"SpellbookType"
+	12	"SlotType"
+locals (0) for 012F86C0:
+upvalues (0) for 012F86C0:
+
+function <?:1279,1295> (28 instructions, 112 bytes at 012F8508)
+2 params, 6 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETTABLE 	2 0 -1	; "Level"
+	2	[-]	EQ       	1 2 -2	; - nil
+	3	[-]	JMP      	8	; to 12
+	4	[-]	GETTABLE 	2 1 -3	; "SrcValueByLevel"
+	5	[-]	EQ       	1 2 -2	; - nil
+	6	[-]	JMP      	5	; to 12
+	7	[-]	GETTABLE 	2 1 -3	; "SrcValueByLevel"
+	8	[-]	GETTABLE 	3 0 -1	; "Level"
+	9	[-]	GETTABLE 	2 2 3
+	10	[-]	SETTABLE 	0 -4 2	; "ReturnValue" -
+	11	[-]	JMP      	16	; to 28
+	12	[-]	GETGLOBAL	2 -5	; GetTable
+	13	[-]	MOVE     	3 0
+	14	[-]	GETTABLE 	4 1 -6	; "SrcVarTable"
+	15	[-]	LOADBOOL 	5 0 0
+	16	[-]	CALL     	2 4 2
+	17	[-]	GETTABLE 	3 1 -7	; "SrcVar"
+	18	[-]	EQ       	1 3 -2	; - nil
+	19	[-]	JMP      	6	; to 26
+	20	[-]	EQ       	1 2 -2	; - nil
+	21	[-]	JMP      	4	; to 26
+	22	[-]	GETTABLE 	3 1 -7	; "SrcVar"
+	23	[-]	GETTABLE 	3 2 3
+	24	[-]	SETTABLE 	0 -4 3	; "ReturnValue" -
+	25	[-]	JMP      	2	; to 28
+	26	[-]	GETTABLE 	3 1 -8	; "SrcValue"
+	27	[-]	SETTABLE 	0 -4 3	; "ReturnValue" -
+	28	[-]	RETURN   	0 1
+constants (8) for 012F8508:
+	1	"Level"
+	2	nil
+	3	"SrcValueByLevel"
+	4	"ReturnValue"
+	5	"GetTable"
+	6	"SrcVarTable"
+	7	"SrcVar"
+	8	"SrcValue"
+locals (0) for 012F8508:
+upvalues (0) for 012F8508:
+
+function <?:1298,1305> (26 instructions, 104 bytes at 012F80E8)
+2 params, 4 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; type
+	2	[-]	MOVE     	3 0
+	3	[-]	CALL     	2 2 2
+	4	[-]	EQ       	0 2 -2	; - "string"
+	5	[-]	JMP      	15	; to 21
+	6	[-]	GETGLOBAL	2 -1	; type
+	7	[-]	MOVE     	3 1
+	8	[-]	CALL     	2 2 2
+	9	[-]	EQ       	0 2 -2	; - "string"
+	10	[-]	JMP      	10	; to 21
+	11	[-]	GETGLOBAL	2 -2	; string
+	12	[-]	GETTABLE 	2 2 -3	; "lower"
+	13	[-]	MOVE     	3 0
+	14	[-]	CALL     	2 2 2
+	15	[-]	MOVE     	0 2
+	16	[-]	GETGLOBAL	2 -2	; string
+	17	[-]	GETTABLE 	2 2 -3	; "lower"
+	18	[-]	MOVE     	3 1
+	19	[-]	CALL     	2 2 2
+	20	[-]	MOVE     	1 2
+	21	[-]	EQ       	1 0 1
+	22	[-]	JMP      	1	; to 24
+	23	[-]	LOADBOOL 	2 0 1
+	24	[-]	LOADBOOL 	2 1 0
+	25	[-]	RETURN   	2 2
+	26	[-]	RETURN   	0 1
+constants (3) for 012F80E8:
+	1	"type"
+	2	"string"
+	3	"lower"
+locals (0) for 012F80E8:
+upvalues (0) for 012F80E8:
+
+function <?:1307,1314> (26 instructions, 104 bytes at 012F8458)
+2 params, 4 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; type
+	2	[-]	MOVE     	3 0
+	3	[-]	CALL     	2 2 2
+	4	[-]	EQ       	0 2 -2	; - "string"
+	5	[-]	JMP      	15	; to 21
+	6	[-]	GETGLOBAL	2 -1	; type
+	7	[-]	MOVE     	3 1
+	8	[-]	CALL     	2 2 2
+	9	[-]	EQ       	0 2 -2	; - "string"
+	10	[-]	JMP      	10	; to 21
+	11	[-]	GETGLOBAL	2 -2	; string
+	12	[-]	GETTABLE 	2 2 -3	; "lower"
+	13	[-]	MOVE     	3 0
+	14	[-]	CALL     	2 2 2
+	15	[-]	MOVE     	0 2
+	16	[-]	GETGLOBAL	2 -2	; string
+	17	[-]	GETTABLE 	2 2 -3	; "lower"
+	18	[-]	MOVE     	3 1
+	19	[-]	CALL     	2 2 2
+	20	[-]	MOVE     	1 2
+	21	[-]	EQ       	0 0 1
+	22	[-]	JMP      	1	; to 24
+	23	[-]	LOADBOOL 	2 0 1
+	24	[-]	LOADBOOL 	2 1 0
+	25	[-]	RETURN   	2 2
+	26	[-]	RETURN   	0 1
+constants (3) for 012F8458:
+	1	"type"
+	2	"string"
+	3	"lower"
+locals (0) for 012F8458:
+upvalues (0) for 012F8458:
+
+function <?:1316,1318> (6 instructions, 24 bytes at 012F8560)
+2 params, 3 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	LT       	1 0 1
+	2	[-]	JMP      	1	; to 4
+	3	[-]	LOADBOOL 	2 0 1
+	4	[-]	LOADBOOL 	2 1 0
+	5	[-]	RETURN   	2 2
+	6	[-]	RETURN   	0 1
+constants (0) for 012F8560:
+locals (0) for 012F8560:
+upvalues (0) for 012F8560:
+
+function <?:1320,1322> (6 instructions, 24 bytes at 012F81F0)
+2 params, 3 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	LT       	1 1 0
+	2	[-]	JMP      	1	; to 4
+	3	[-]	LOADBOOL 	2 0 1
+	4	[-]	LOADBOOL 	2 1 0
+	5	[-]	RETURN   	2 2
+	6	[-]	RETURN   	0 1
+constants (0) for 012F81F0:
+locals (0) for 012F81F0:
+upvalues (0) for 012F81F0:
+
+function <?:1324,1326> (6 instructions, 24 bytes at 012F85B8)
+2 params, 3 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	LE       	1 0 1
+	2	[-]	JMP      	1	; to 4
+	3	[-]	LOADBOOL 	2 0 1
+	4	[-]	LOADBOOL 	2 1 0
+	5	[-]	RETURN   	2 2
+	6	[-]	RETURN   	0 1
+constants (0) for 012F85B8:
+locals (0) for 012F85B8:
+upvalues (0) for 012F85B8:
+
+function <?:1328,1330> (6 instructions, 24 bytes at 012F8610)
+2 params, 3 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	LE       	1 1 0
+	2	[-]	JMP      	1	; to 4
+	3	[-]	LOADBOOL 	2 0 1
+	4	[-]	LOADBOOL 	2 1 0
+	5	[-]	RETURN   	2 2
+	6	[-]	RETURN   	0 1
+constants (0) for 012F8610:
+locals (0) for 012F8610:
+upvalues (0) for 012F8610:
+
+function <?:1332,1334> (12 instructions, 48 bytes at 012F8820)
+2 params, 5 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTeamID
+	2	[-]	MOVE     	3 0
+	3	[-]	CALL     	2 2 2
+	4	[-]	GETGLOBAL	3 -1	; GetTeamID
+	5	[-]	MOVE     	4 1
+	6	[-]	CALL     	3 2 2
+	7	[-]	EQ       	1 2 3
+	8	[-]	JMP      	1	; to 10
+	9	[-]	LOADBOOL 	2 0 1
+	10	[-]	LOADBOOL 	2 1 0
+	11	[-]	RETURN   	2 2
+	12	[-]	RETURN   	0 1
+constants (1) for 012F8820:
+	1	"GetTeamID"
+locals (0) for 012F8820:
+upvalues (0) for 012F8820:
+
+function <?:1336,1338> (12 instructions, 48 bytes at 012F8668)
+2 params, 5 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTeamID
+	2	[-]	MOVE     	3 0
+	3	[-]	CALL     	2 2 2
+	4	[-]	GETGLOBAL	3 -1	; GetTeamID
+	5	[-]	MOVE     	4 1
+	6	[-]	CALL     	3 2 2
+	7	[-]	EQ       	0 2 3
+	8	[-]	JMP      	1	; to 10
+	9	[-]	LOADBOOL 	2 0 1
+	10	[-]	LOADBOOL 	2 1 0
+	11	[-]	RETURN   	2 2
+	12	[-]	RETURN   	0 1
+constants (1) for 012F8668:
+	1	"GetTeamID"
+locals (0) for 012F8668:
+upvalues (0) for 012F8668:
+
+function <?:1340,1342> (12 instructions, 48 bytes at 012F8140)
+2 params, 3 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetSourceType
+	2	[-]	CALL     	2 1 2
+	3	[-]	EQ       	1 2 1
+	4	[-]	JMP      	5	; to 10
+	5	[-]	GETGLOBAL	2 -1	; GetSourceType
+	6	[-]	CALL     	2 1 2
+	7	[-]	EQ       	1 2 0
+	8	[-]	JMP      	1	; to 10
+	9	[-]	LOADBOOL 	2 0 1
+	10	[-]	LOADBOOL 	2 1 0
+	11	[-]	RETURN   	2 2
+	12	[-]	RETURN   	0 1
+constants (1) for 012F8140:
+	1	"GetSourceType"
+locals (0) for 012F8140:
+upvalues (0) for 012F8140:
+
+function <?:1344,1346> (12 instructions, 48 bytes at 012FB130)
+2 params, 3 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetSourceType
+	2	[-]	CALL     	2 1 2
+	3	[-]	EQ       	1 2 1
+	4	[-]	JMP      	4	; to 9
+	5	[-]	GETGLOBAL	2 -1	; GetSourceType
+	6	[-]	CALL     	2 1 2
+	7	[-]	EQ       	0 2 0
+	8	[-]	JMP      	1	; to 10
+	9	[-]	LOADBOOL 	2 0 1
+	10	[-]	LOADBOOL 	2 1 0
+	11	[-]	RETURN   	2 2
+	12	[-]	RETURN   	0 1
+constants (1) for 012FB130:
+	1	"GetSourceType"
+locals (0) for 012FB130:
+upvalues (0) for 012FB130:
+
+function <?:1348,1350> (5 instructions, 20 bytes at 012FAC60)
+1 param, 3 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsObjectAI
+	2	[-]	MOVE     	2 0
+	3	[-]	TAILCALL 	1 2 0
+	4	[-]	RETURN   	1 0
+	5	[-]	RETURN   	0 1
+constants (1) for 012FAC60:
+	1	"IsObjectAI"
+locals (0) for 012FAC60:
+upvalues (0) for 012FAC60:
+
+function <?:1352,1354> (9 instructions, 36 bytes at 012FB2E8)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsObjectAI
+	2	[-]	MOVE     	2 0
+	3	[-]	CALL     	1 2 2
+	4	[-]	EQ       	0 1 -2	; - true
+	5	[-]	JMP      	1	; to 7
+	6	[-]	LOADBOOL 	1 0 1
+	7	[-]	LOADBOOL 	1 1 0
+	8	[-]	RETURN   	1 2
+	9	[-]	RETURN   	0 1
+constants (2) for 012FB2E8:
+	1	"IsObjectAI"
+	2	true
+locals (0) for 012FB2E8:
+upvalues (0) for 012FB2E8:
+
+function <?:1356,1358> (5 instructions, 20 bytes at 012FACB8)
+1 param, 3 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsObjectHero
+	2	[-]	MOVE     	2 0
+	3	[-]	TAILCALL 	1 2 0
+	4	[-]	RETURN   	1 0
+	5	[-]	RETURN   	0 1
+constants (1) for 012FACB8:
+	1	"IsObjectHero"
+locals (0) for 012FACB8:
+upvalues (0) for 012FACB8:
+
+function <?:1360,1362> (9 instructions, 36 bytes at 012FAD68)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsObjectHero
+	2	[-]	MOVE     	2 0
+	3	[-]	CALL     	1 2 2
+	4	[-]	EQ       	0 1 -2	; - true
+	5	[-]	JMP      	1	; to 7
+	6	[-]	LOADBOOL 	1 0 1
+	7	[-]	LOADBOOL 	1 1 0
+	8	[-]	RETURN   	1 2
+	9	[-]	RETURN   	0 1
+constants (2) for 012FAD68:
+	1	"IsObjectHero"
+	2	true
+locals (0) for 012FAD68:
+upvalues (0) for 012FAD68:
+
+function <?:1364,1366> (5 instructions, 20 bytes at 012FB398)
+1 param, 3 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsClone
+	2	[-]	MOVE     	2 0
+	3	[-]	TAILCALL 	1 2 0
+	4	[-]	RETURN   	1 0
+	5	[-]	RETURN   	0 1
+constants (1) for 012FB398:
+	1	"IsClone"
+locals (0) for 012FB398:
+upvalues (0) for 012FB398:
+
+function <?:1368,1370> (9 instructions, 36 bytes at 012FB448)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsClone
+	2	[-]	MOVE     	2 0
+	3	[-]	CALL     	1 2 2
+	4	[-]	EQ       	0 1 -2	; - true
+	5	[-]	JMP      	1	; to 7
+	6	[-]	LOADBOOL 	1 0 1
+	7	[-]	LOADBOOL 	1 1 0
+	8	[-]	RETURN   	1 2
+	9	[-]	RETURN   	0 1
+constants (2) for 012FB448:
+	1	"IsClone"
+	2	true
+locals (0) for 012FB448:
+upvalues (0) for 012FB448:
+
+function <?:1372,1374> (5 instructions, 20 bytes at 012FAF20)
+1 param, 3 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsMelee
+	2	[-]	MOVE     	2 0
+	3	[-]	TAILCALL 	1 2 0
+	4	[-]	RETURN   	1 0
+	5	[-]	RETURN   	0 1
+constants (1) for 012FAF20:
+	1	"IsMelee"
+locals (0) for 012FAF20:
+upvalues (0) for 012FAF20:
+
+function <?:1376,1378> (9 instructions, 36 bytes at 012FAF78)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsMelee
+	2	[-]	MOVE     	2 0
+	3	[-]	CALL     	1 2 2
+	4	[-]	EQ       	0 1 -2	; - true
+	5	[-]	JMP      	1	; to 7
+	6	[-]	LOADBOOL 	1 0 1
+	7	[-]	LOADBOOL 	1 1 0
+	8	[-]	RETURN   	1 2
+	9	[-]	RETURN   	0 1
+constants (2) for 012FAF78:
+	1	"IsMelee"
+	2	true
+locals (0) for 012FAF78:
+upvalues (0) for 012FAF78:
+
+function <?:1380,1382> (9 instructions, 36 bytes at 012FB4F8)
+1 param, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; math
+	2	[-]	GETTABLE 	1 1 -2	; "random"
+	3	[-]	CALL     	1 1 2
+	4	[-]	LT       	1 1 0
+	5	[-]	JMP      	1	; to 7
+	6	[-]	LOADBOOL 	1 0 1
+	7	[-]	LOADBOOL 	1 1 0
+	8	[-]	RETURN   	1 2
+	9	[-]	RETURN   	0 1
+constants (2) for 012FB4F8:
+	1	"math"
+	2	"random"
+locals (0) for 012FB4F8:
+upvalues (0) for 012FB4F8:
+
+function <?:1384,1386> (5 instructions, 20 bytes at 012FABB0)
+1 param, 3 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsTurretAI
+	2	[-]	MOVE     	2 0
+	3	[-]	TAILCALL 	1 2 0
+	4	[-]	RETURN   	1 0
+	5	[-]	RETURN   	0 1
+constants (1) for 012FABB0:
+	1	"IsTurretAI"
+locals (0) for 012FABB0:
+upvalues (0) for 012FABB0:
+
+function <?:1388,1390> (9 instructions, 36 bytes at 012FB1E0)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsTurretAI
+	2	[-]	MOVE     	2 0
+	3	[-]	CALL     	1 2 2
+	4	[-]	EQ       	0 1 -2	; - true
+	5	[-]	JMP      	1	; to 7
+	6	[-]	LOADBOOL 	1 0 1
+	7	[-]	LOADBOOL 	1 1 0
+	8	[-]	RETURN   	1 2
+	9	[-]	RETURN   	0 1
+constants (2) for 012FB1E0:
+	1	"IsTurretAI"
+	2	true
+locals (0) for 012FB1E0:
+upvalues (0) for 012FB1E0:
+
+function <?:1392,1394> (5 instructions, 20 bytes at 012FB3F0)
+1 param, 3 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsDampener
+	2	[-]	MOVE     	2 0
+	3	[-]	TAILCALL 	1 2 0
+	4	[-]	RETURN   	1 0
+	5	[-]	RETURN   	0 1
+constants (1) for 012FB3F0:
+	1	"IsDampener"
+locals (0) for 012FB3F0:
+upvalues (0) for 012FB3F0:
+
+function <?:1396,1398> (9 instructions, 36 bytes at 012FADC0)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsDampener
+	2	[-]	MOVE     	2 0
+	3	[-]	CALL     	1 2 2
+	4	[-]	EQ       	0 1 -2	; - true
+	5	[-]	JMP      	1	; to 7
+	6	[-]	LOADBOOL 	1 0 1
+	7	[-]	LOADBOOL 	1 1 0
+	8	[-]	RETURN   	1 2
+	9	[-]	RETURN   	0 1
+constants (2) for 012FADC0:
+	1	"IsDampener"
+	2	true
+locals (0) for 012FADC0:
+upvalues (0) for 012FADC0:
+
+function <?:1400,1402> (5 instructions, 20 bytes at 012FB028)
+1 param, 3 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsHQ
+	2	[-]	MOVE     	2 0
+	3	[-]	TAILCALL 	1 2 0
+	4	[-]	RETURN   	1 0
+	5	[-]	RETURN   	0 1
+constants (1) for 012FB028:
+	1	"IsHQ"
+locals (0) for 012FB028:
+upvalues (0) for 012FB028:
+
+function <?:1404,1406> (9 instructions, 36 bytes at 012FAFD0)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsHQ
+	2	[-]	MOVE     	2 0
+	3	[-]	CALL     	1 2 2
+	4	[-]	EQ       	0 1 -2	; - true
+	5	[-]	JMP      	1	; to 7
+	6	[-]	LOADBOOL 	1 0 1
+	7	[-]	LOADBOOL 	1 1 0
+	8	[-]	RETURN   	1 2
+	9	[-]	RETURN   	0 1
+constants (2) for 012FAFD0:
+	1	"IsHQ"
+	2	true
+locals (0) for 012FAFD0:
+upvalues (0) for 012FAFD0:
+
+function <?:1408,1410> (5 instructions, 20 bytes at 012FAD10)
+1 param, 3 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsDead
+	2	[-]	MOVE     	2 0
+	3	[-]	TAILCALL 	1 2 0
+	4	[-]	RETURN   	1 0
+	5	[-]	RETURN   	0 1
+constants (1) for 012FAD10:
+	1	"IsDead"
+locals (0) for 012FAD10:
+upvalues (0) for 012FAD10:
+
+function <?:1412,1414> (9 instructions, 36 bytes at 012FB4A0)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsDead
+	2	[-]	MOVE     	2 0
+	3	[-]	CALL     	1 2 2
+	4	[-]	EQ       	0 1 -2	; - true
+	5	[-]	JMP      	1	; to 7
+	6	[-]	LOADBOOL 	1 0 1
+	7	[-]	LOADBOOL 	1 1 0
+	8	[-]	RETURN   	1 2
+	9	[-]	RETURN   	0 1
+constants (2) for 012FB4A0:
+	1	"IsDead"
+	2	true
+locals (0) for 012FB4A0:
+upvalues (0) for 012FB4A0:
+
+function <?:1416,1418> (5 instructions, 20 bytes at 012FAB58)
+1 param, 3 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsDeadOrZombie
+	2	[-]	MOVE     	2 0
+	3	[-]	TAILCALL 	1 2 0
+	4	[-]	RETURN   	1 0
+	5	[-]	RETURN   	0 1
+constants (1) for 012FAB58:
+	1	"IsDeadOrZombie"
+locals (0) for 012FAB58:
+upvalues (0) for 012FAB58:
+
+function <?:1420,1422> (6 instructions, 24 bytes at 012FB340)
+2 params, 5 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; BBIsTargetInFrontOfMe
+	2	[-]	MOVE     	3 0
+	3	[-]	MOVE     	4 1
+	4	[-]	TAILCALL 	2 3 0
+	5	[-]	RETURN   	2 0
+	6	[-]	RETURN   	0 1
+constants (1) for 012FB340:
+	1	"BBIsTargetInFrontOfMe"
+locals (0) for 012FB340:
+upvalues (0) for 012FB340:
+
+function <?:1424,1426> (6 instructions, 24 bytes at 012FB080)
+2 params, 5 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; BBIsTargetBehindMe
+	2	[-]	MOVE     	3 0
+	3	[-]	MOVE     	4 1
+	4	[-]	TAILCALL 	2 3 0
+	5	[-]	RETURN   	2 0
+	6	[-]	RETURN   	0 1
+constants (1) for 012FB080:
+	1	"BBIsTargetBehindMe"
+locals (0) for 012FB080:
+upvalues (0) for 012FB080:
+
+function <?:1428,1430> (5 instructions, 20 bytes at 012FB290)
+1 param, 3 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsWard
+	2	[-]	MOVE     	2 0
+	3	[-]	TAILCALL 	1 2 0
+	4	[-]	RETURN   	1 0
+	5	[-]	RETURN   	0 1
+constants (1) for 012FB290:
+	1	"IsWard"
+locals (0) for 012FB290:
+upvalues (0) for 012FB290:
+
+function <?:1432,1434> (5 instructions, 20 bytes at 012FB550)
+1 param, 3 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsStructure
+	2	[-]	MOVE     	2 0
+	3	[-]	TAILCALL 	1 2 0
+	4	[-]	RETURN   	1 0
+	5	[-]	RETURN   	0 1
+constants (1) for 012FB550:
+	1	"IsStructure"
+locals (0) for 012FB550:
+upvalues (0) for 012FB550:
+
+function <?:1436,1438> (9 instructions, 36 bytes at 012FB0D8)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsStructure
+	2	[-]	MOVE     	2 0
+	3	[-]	CALL     	1 2 2
+	4	[-]	EQ       	0 1 -2	; - true
+	5	[-]	JMP      	1	; to 7
+	6	[-]	LOADBOOL 	1 0 1
+	7	[-]	LOADBOOL 	1 1 0
+	8	[-]	RETURN   	1 2
+	9	[-]	RETURN   	0 1
+constants (2) for 012FB0D8:
+	1	"IsStructure"
+	2	true
+locals (0) for 012FB0D8:
+upvalues (0) for 012FB0D8:
+
+function <?:1440,1442> (6 instructions, 24 bytes at 012FB238)
+1 param, 2 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	EQ       	0 0 -1	; - nil
+	2	[-]	JMP      	1	; to 4
+	3	[-]	LOADBOOL 	1 0 1
+	4	[-]	LOADBOOL 	1 1 0
+	5	[-]	RETURN   	1 2
+	6	[-]	RETURN   	0 1
+constants (1) for 012FB238:
+	1	nil
+locals (0) for 012FB238:
+upvalues (0) for 012FB238:
+
+function <?:1452,1455> (8 instructions, 32 bytes at 012FAAA8)
+3 params, 7 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	3 -1	; GetTable
+	2	[-]	MOVE     	4 0
+	3	[-]	GETTABLE 	5 1 -2	; "MacroVarTable"
+	4	[-]	LOADBOOL 	6 1 0
+	5	[-]	CALL     	3 4 2
+	6	[-]	GETTABLE 	4 1 -3	; "MacroVar"
+	7	[-]	SETTABLE 	3 4 2
+	8	[-]	RETURN   	0 1
+constants (3) for 012FAAA8:
+	1	"GetTable"
+	2	"MacroVarTable"
+	3	"MacroVar"
+locals (0) for 012FAAA8:
+upvalues (0) for 012FAAA8:
+
+function <?:1464,1473> (28 instructions, 112 bytes at 012FAB00)
+2 params, 9 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetParam
+	2	[-]	LOADK    	3 -2	; "Macro"
+	3	[-]	MOVE     	4 0
+	4	[-]	MOVE     	5 1
+	5	[-]	CALL     	2 4 2
+	6	[-]	EQ       	1 2 -3	; - nil
+	7	[-]	JMP      	10	; to 18
+	8	[-]	GETGLOBAL	3 -4	; type
+	9	[-]	MOVE     	4 2
+	10	[-]	CALL     	3 2 2
+	11	[-]	EQ       	0 3 -5	; - "table"
+	12	[-]	JMP      	5	; to 18
+	13	[-]	GETGLOBAL	3 -6	; ExecuteBuildingBlocks
+	14	[-]	MOVE     	4 2
+	15	[-]	MOVE     	5 0
+	16	[-]	CALL     	3 3 1
+	17	[-]	JMP      	10	; to 28
+	18	[-]	GETGLOBAL	3 -7	; DebugClientPrint
+	19	[-]	LOADK    	4 -8	; "Designer Error: Macro variable is not initialized inside of event. Macro Variable was: "
+	20	[-]	GETGLOBAL	5 -9	; tostring
+	21	[-]	GETTABLE 	6 1 -10	; "MacroVar"
+	22	[-]	CALL     	5 2 2
+	23	[-]	LOADK    	6 -11	; " and current block data is: "
+	24	[-]	GETGLOBAL	7 -12	; gCurrentBuildingBlockString
+	25	[-]	LOADK    	8 -13	; ". This error probably occurred due to variable not being initialized yet, being misnamed or two events being called out of sequence. It is highly recommended that script macros either be initialized OnBuffActivate, OnCharActivate or in the same event. Pro Devs may violate this rule at the risk of being forced to read this error message again."
+	26	[-]	CONCAT   	4 4 8
+	27	[-]	CALL     	3 2 1
+	28	[-]	RETURN   	0 1
+constants (13) for 012FAB00:
+	1	"GetParam"
+	2	"Macro"
+	3	nil
+	4	"type"
+	5	"table"
+	6	"ExecuteBuildingBlocks"
+	7	"DebugClientPrint"
+	8	"Designer Error: Macro variable is not initialized inside of event. Macro Variable was: "
+	9	"tostring"
+	10	"MacroVar"
+	11	" and current block data is: "
+	12	"gCurrentBuildingBlockString"
+	13	". This error probably occurred due to variable not being initialized yet, being misnamed or two events being called out of sequence. It is highly recommended that script macros either be initialized OnBuffActivate, OnCharActivate or in the same event. Pro Devs may violate this rule at the risk of being forced to read this error message again."
+locals (0) for 012FAB00:
+upvalues (0) for 012FAB00:
+
+function <?:1487,1516> (48 instructions, 192 bytes at 012FB188)
+3 params, 10 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	GETGLOBAL	3 -1	; GetTable
+	2	[-]	MOVE     	4 0
+	3	[-]	GETTABLE 	5 1 -2	; "Src1VarTable"
+	4	[-]	LOADBOOL 	6 0 0
+	5	[-]	CALL     	3 4 2
+	6	[-]	GETGLOBAL	4 -1	; GetTable
+	7	[-]	MOVE     	5 0
+	8	[-]	GETTABLE 	6 1 -3	; "Src2VarTable"
+	9	[-]	LOADBOOL 	7 0 0
+	10	[-]	CALL     	4 4 2
+	11	[-]	LOADBOOL 	5 0 0
+	12	[-]	LOADNIL  	6 6
+	13	[-]	EQ       	1 3 -4	; - nil
+	14	[-]	JMP      	6	; to 21
+	15	[-]	GETTABLE 	7 1 -5	; "Src1Var"
+	16	[-]	EQ       	1 7 -4	; - nil
+	17	[-]	JMP      	3	; to 21
+	18	[-]	GETTABLE 	7 1 -5	; "Src1Var"
+	19	[-]	GETTABLE 	6 3 7
+	20	[-]	JMP      	1	; to 22
+	21	[-]	GETTABLE 	6 1 -6	; "Value1"
+	22	[-]	EQ       	1 4 -4	; - nil
+	23	[-]	JMP      	10	; to 34
+	24	[-]	GETTABLE 	7 1 -7	; "Src2Var"
+	25	[-]	EQ       	1 7 -4	; - nil
+	26	[-]	JMP      	7	; to 34
+	27	[-]	GETTABLE 	7 1 -8	; "CompareOp"
+	28	[-]	MOVE     	8 6
+	29	[-]	GETTABLE 	9 1 -7	; "Src2Var"
+	30	[-]	GETTABLE 	9 4 9
+	31	[-]	CALL     	7 3 2
+	32	[-]	MOVE     	5 7
+	33	[-]	JMP      	5	; to 39
+	34	[-]	GETTABLE 	7 1 -8	; "CompareOp"
+	35	[-]	MOVE     	8 6
+	36	[-]	GETTABLE 	9 1 -9	; "Value2"
+	37	[-]	CALL     	7 3 2
+	38	[-]	MOVE     	5 7
+	39	[-]	TEST     	5 0 0
+	40	[-]	JMP      	6	; to 47
+	41	[-]	GETGLOBAL	7 -10	; ExecuteBuildingBlocks
+	42	[-]	MOVE     	8 2
+	43	[-]	MOVE     	9 0
+	44	[-]	CALL     	7 3 1
+	45	[-]	SETTABLE 	0 -11 -12	; "LastIfSucceeded" true
+	46	[-]	JMP      	1	; to 48
+	47	[-]	SETTABLE 	0 -11 -13	; "LastIfSucceeded" false
+	48	[-]	RETURN   	0 1
+constants (13) for 012FB188:
+	1	"GetTable"
+	2	"Src1VarTable"
+	3	"Src2VarTable"
+	4	nil
+	5	"Src1Var"
+	6	"Value1"
+	7	"Src2Var"
+	8	"CompareOp"
+	9	"Value2"
+	10	"ExecuteBuildingBlocks"
+	11	"LastIfSucceeded"
+	12	true
+	13	false
+locals (0) for 012FB188:
+upvalues (0) for 012FB188:
+
+function <?:1527,1533> (9 instructions, 36 bytes at 012FAC08)
+3 params, 6 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETTABLE 	3 0 -1	; "LastIfSucceeded"
+	2	[-]	EQ       	0 3 -2	; - false
+	3	[-]	JMP      	5	; to 9
+	4	[-]	GETGLOBAL	3 -3	; ExecuteBuildingBlocks
+	5	[-]	MOVE     	4 2
+	6	[-]	MOVE     	5 0
+	7	[-]	CALL     	3 3 1
+	8	[-]	SETTABLE 	0 -1 -4	; "LastIfSucceeded" true
+	9	[-]	RETURN   	0 1
+constants (4) for 012FAC08:
+	1	"LastIfSucceeded"
+	2	false
+	3	"ExecuteBuildingBlocks"
+	4	true
+locals (0) for 012FAC08:
+upvalues (0) for 012FAC08:
+
+function <?:1549,1556> (15 instructions, 60 bytes at 012FAE18)
+3 params, 7 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETTABLE 	3 0 -1	; "LastIfSucceeded"
+	2	[-]	EQ       	0 3 -2	; - true
+	3	[-]	JMP      	6	; to 10
+	4	[-]	GETGLOBAL	3 -3	; ExecuteBuildingBlocks
+	5	[-]	MOVE     	4 2
+	6	[-]	MOVE     	5 0
+	7	[-]	CALL     	3 3 1
+	8	[-]	SETTABLE 	0 -1 -2	; "LastIfSucceeded" true
+	9	[-]	JMP      	5	; to 15
+	10	[-]	GETGLOBAL	3 -4	; BBIf
+	11	[-]	MOVE     	4 0
+	12	[-]	MOVE     	5 1
+	13	[-]	MOVE     	6 2
+	14	[-]	CALL     	3 4 1
+	15	[-]	RETURN   	0 1
+constants (4) for 012FAE18:
+	1	"LastIfSucceeded"
+	2	true
+	3	"ExecuteBuildingBlocks"
+	4	"BBIf"
+locals (0) for 012FAE18:
+upvalues (0) for 012FAE18:
+
+function <?:1572,1576> (9 instructions, 36 bytes at 012FAE70)
+3 params, 7 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETTABLE 	3 0 -1	; "LastIfSucceeded"
+	2	[-]	EQ       	0 3 -2	; - true
+	3	[-]	JMP      	5	; to 9
+	4	[-]	GETGLOBAL	3 -3	; BBIf
+	5	[-]	MOVE     	4 0
+	6	[-]	MOVE     	5 1
+	7	[-]	MOVE     	6 2
+	8	[-]	CALL     	3 4 1
+	9	[-]	RETURN   	0 1
+constants (3) for 012FAE70:
+	1	"LastIfSucceeded"
+	2	true
+	3	"BBIf"
+locals (0) for 012FAE70:
+upvalues (0) for 012FAE70:
+
+function <?:1592,1621> (51 instructions, 204 bytes at 012FAEC8)
+3 params, 10 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	GETTABLE 	3 0 -1	; "LastIfSucceeded"
+	2	[-]	EQ       	0 3 -2	; - false
+	3	[-]	JMP      	47	; to 51
+	4	[-]	GETGLOBAL	3 -3	; GetTable
+	5	[-]	MOVE     	4 0
+	6	[-]	GETTABLE 	5 1 -4	; "Src1VarTable"
+	7	[-]	LOADBOOL 	6 0 0
+	8	[-]	CALL     	3 4 2
+	9	[-]	GETGLOBAL	4 -3	; GetTable
+	10	[-]	MOVE     	5 0
+	11	[-]	GETTABLE 	6 1 -5	; "Src2VarTable"
+	12	[-]	LOADBOOL 	7 0 0
+	13	[-]	CALL     	4 4 2
+	14	[-]	LOADBOOL 	5 0 0
+	15	[-]	LOADNIL  	6 6
+	16	[-]	EQ       	1 3 -6	; - nil
+	17	[-]	JMP      	6	; to 24
+	18	[-]	GETTABLE 	7 1 -7	; "Src1Var"
+	19	[-]	EQ       	1 7 -6	; - nil
+	20	[-]	JMP      	3	; to 24
+	21	[-]	GETTABLE 	7 1 -7	; "Src1Var"
+	22	[-]	GETTABLE 	6 3 7
+	23	[-]	JMP      	1	; to 25
+	24	[-]	GETTABLE 	6 1 -8	; "Value1"
+	25	[-]	EQ       	1 4 -6	; - nil
+	26	[-]	JMP      	10	; to 37
+	27	[-]	GETTABLE 	7 1 -9	; "Src2Var"
+	28	[-]	EQ       	1 7 -6	; - nil
+	29	[-]	JMP      	7	; to 37
+	30	[-]	GETTABLE 	7 1 -10	; "CompareOp"
+	31	[-]	MOVE     	8 6
+	32	[-]	GETTABLE 	9 1 -9	; "Src2Var"
+	33	[-]	GETTABLE 	9 4 9
+	34	[-]	CALL     	7 3 2
+	35	[-]	MOVE     	5 7
+	36	[-]	JMP      	5	; to 42
+	37	[-]	GETTABLE 	7 1 -10	; "CompareOp"
+	38	[-]	MOVE     	8 6
+	39	[-]	GETTABLE 	9 1 -11	; "Value2"
+	40	[-]	CALL     	7 3 2
+	41	[-]	MOVE     	5 7
+	42	[-]	TEST     	5 0 0
+	43	[-]	JMP      	6	; to 50
+	44	[-]	GETGLOBAL	7 -12	; ExecuteBuildingBlocks
+	45	[-]	MOVE     	8 2
+	46	[-]	MOVE     	9 0
+	47	[-]	CALL     	7 3 1
+	48	[-]	SETTABLE 	0 -1 -13	; "LastIfSucceeded" true
+	49	[-]	JMP      	1	; to 51
+	50	[-]	SETTABLE 	0 -1 -2	; "LastIfSucceeded" false
+	51	[-]	RETURN   	0 1
+constants (13) for 012FAEC8:
+	1	"LastIfSucceeded"
+	2	false
+	3	"GetTable"
+	4	"Src1VarTable"
+	5	"Src2VarTable"
+	6	nil
+	7	"Src1Var"
+	8	"Value1"
+	9	"Src2Var"
+	10	"CompareOp"
+	11	"Value2"
+	12	"ExecuteBuildingBlocks"
+	13	true
+locals (0) for 012FAEC8:
+upvalues (0) for 012FAEC8:
+
+function <?:1632,1650> (21 instructions, 84 bytes at 012FB810)
+3 params, 8 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETTABLE 	4 1 -1	; "TargetVar"
+	2	[-]	EQ       	1 4 -2	; - nil
+	3	[-]	JMP      	3	; to 7
+	4	[-]	GETTABLE 	4 1 -1	; "TargetVar"
+	5	[-]	GETTABLE 	3 0 4
+	6	[-]	JMP      	1	; to 8
+	7	[-]	GETTABLE 	3 0 -3	; "Target"
+	8	[-]	GETGLOBAL	4 -4	; HasBuffOfType
+	9	[-]	MOVE     	5 3
+	10	[-]	GETTABLE 	6 1 -5	; "BuffType"
+	11	[-]	CALL     	4 3 2
+	12	[-]	TEST     	4 0 0
+	13	[-]	JMP      	6	; to 20
+	14	[-]	GETGLOBAL	5 -6	; ExecuteBuildingBlocks
+	15	[-]	MOVE     	6 2
+	16	[-]	MOVE     	7 0
+	17	[-]	CALL     	5 3 1
+	18	[-]	SETTABLE 	0 -7 -8	; "LastIfSucceeded" true
+	19	[-]	JMP      	1	; to 21
+	20	[-]	SETTABLE 	0 -7 -9	; "LastIfSucceeded" false
+	21	[-]	RETURN   	0 1
+constants (9) for 012FB810:
+	1	"TargetVar"
+	2	nil
+	3	"Target"
+	4	"HasBuffOfType"
+	5	"BuffType"
+	6	"ExecuteBuildingBlocks"
+	7	"LastIfSucceeded"
+	8	true
+	9	false
+locals (0) for 012FB810:
+upvalues (0) for 012FB810:
+
+function <?:1663,1688> (33 instructions, 132 bytes at 012FB868)
+3 params, 9 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETTABLE 	5 1 -1	; "OwnerVar"
+	2	[-]	EQ       	1 5 -2	; - nil
+	3	[-]	JMP      	3	; to 7
+	4	[-]	GETTABLE 	5 1 -1	; "OwnerVar"
+	5	[-]	GETTABLE 	3 0 5
+	6	[-]	JMP      	1	; to 8
+	7	[-]	GETTABLE 	3 0 -3	; "Owner"
+	8	[-]	GETTABLE 	5 1 -4	; "AttackerVar"
+	9	[-]	EQ       	1 5 -2	; - nil
+	10	[-]	JMP      	3	; to 14
+	11	[-]	GETTABLE 	5 1 -4	; "AttackerVar"
+	12	[-]	GETTABLE 	4 0 5
+	13	[-]	JMP      	1	; to 15
+	14	[-]	GETTABLE 	4 0 -5	; "Attacker"
+	15	[-]	GETGLOBAL	5 -6	; SpellBuffCount
+	16	[-]	MOVE     	6 3
+	17	[-]	GETTABLE 	7 1 -7	; "BuffName"
+	18	[-]	MOVE     	8 4
+	19	[-]	CALL     	5 4 2
+	20	[-]	LT       	1 -8 5	; 0 -
+	21	[-]	JMP      	1	; to 23
+	22	[-]	LOADBOOL 	5 0 1
+	23	[-]	LOADBOOL 	5 1 0
+	24	[-]	TEST     	5 0 0
+	25	[-]	JMP      	6	; to 32
+	26	[-]	GETGLOBAL	6 -9	; ExecuteBuildingBlocks
+	27	[-]	MOVE     	7 2
+	28	[-]	MOVE     	8 0
+	29	[-]	CALL     	6 3 1
+	30	[-]	SETTABLE 	0 -10 -11	; "LastIfSucceeded" true
+	31	[-]	JMP      	1	; to 33
+	32	[-]	SETTABLE 	0 -10 -12	; "LastIfSucceeded" false
+	33	[-]	RETURN   	0 1
+constants (12) for 012FB868:
+	1	"OwnerVar"
+	2	nil
+	3	"Owner"
+	4	"AttackerVar"
+	5	"Attacker"
+	6	"SpellBuffCount"
+	7	"BuffName"
+	8	0
+	9	"ExecuteBuildingBlocks"
+	10	"LastIfSucceeded"
+	11	true
+	12	false
+locals (0) for 012FB868:
+upvalues (0) for 012FB868:
+
+function <?:1700,1709> (14 instructions, 56 bytes at 012FB9C8)
+3 params, 7 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	3 -1	; BBIsMissileAutoAttack
+	2	[-]	MOVE     	4 0
+	3	[-]	MOVE     	5 1
+	4	[-]	CALL     	3 3 2
+	5	[-]	TEST     	3 0 0
+	6	[-]	JMP      	6	; to 13
+	7	[-]	GETGLOBAL	4 -2	; ExecuteBuildingBlocks
+	8	[-]	MOVE     	5 2
+	9	[-]	MOVE     	6 0
+	10	[-]	CALL     	4 3 1
+	11	[-]	SETTABLE 	0 -3 -4	; "LastIfSucceeded" true
+	12	[-]	JMP      	1	; to 14
+	13	[-]	SETTABLE 	0 -3 -5	; "LastIfSucceeded" false
+	14	[-]	RETURN   	0 1
+constants (5) for 012FB9C8:
+	1	"BBIsMissileAutoAttack"
+	2	"ExecuteBuildingBlocks"
+	3	"LastIfSucceeded"
+	4	true
+	5	false
+locals (0) for 012FB9C8:
+upvalues (0) for 012FB9C8:
+
+function <?:1721,1730> (14 instructions, 56 bytes at 012FB8C0)
+3 params, 7 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	3 -1	; BBIsMissileConsideredAsAutoAttack
+	2	[-]	MOVE     	4 0
+	3	[-]	MOVE     	5 1
+	4	[-]	CALL     	3 3 2
+	5	[-]	TEST     	3 0 0
+	6	[-]	JMP      	6	; to 13
+	7	[-]	GETGLOBAL	4 -2	; ExecuteBuildingBlocks
+	8	[-]	MOVE     	5 2
+	9	[-]	MOVE     	6 0
+	10	[-]	CALL     	4 3 1
+	11	[-]	SETTABLE 	0 -3 -4	; "LastIfSucceeded" true
+	12	[-]	JMP      	1	; to 14
+	13	[-]	SETTABLE 	0 -3 -5	; "LastIfSucceeded" false
+	14	[-]	RETURN   	0 1
+constants (5) for 012FB8C0:
+	1	"BBIsMissileConsideredAsAutoAttack"
+	2	"ExecuteBuildingBlocks"
+	3	"LastIfSucceeded"
+	4	true
+	5	false
+locals (0) for 012FB8C0:
+upvalues (0) for 012FB8C0:
+
+function <?:1739,1742> (2 instructions, 8 bytes at 012FB6B0)
+2 params, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	SETTABLE 	0 -1 -2	; "___BreakExecution___" true
+	2	[-]	RETURN   	0 1
+constants (2) for 012FB6B0:
+	1	"___BreakExecution___"
+	2	true
+locals (0) for 012FB6B0:
+upvalues (0) for 012FB6B0:
+
+function <?:1755,1779> (33 instructions, 132 bytes at 012FB708)
+3 params, 9 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETTABLE 	5 1 -1	; "OwnerVar"
+	2	[-]	EQ       	1 5 -2	; - nil
+	3	[-]	JMP      	3	; to 7
+	4	[-]	GETTABLE 	5 1 -1	; "OwnerVar"
+	5	[-]	GETTABLE 	3 0 5
+	6	[-]	JMP      	1	; to 8
+	7	[-]	GETTABLE 	3 0 -3	; "Owner"
+	8	[-]	GETTABLE 	5 1 -4	; "CasterVar"
+	9	[-]	EQ       	1 5 -2	; - nil
+	10	[-]	JMP      	3	; to 14
+	11	[-]	GETTABLE 	5 1 -4	; "CasterVar"
+	12	[-]	GETTABLE 	4 0 5
+	13	[-]	JMP      	1	; to 15
+	14	[-]	GETTABLE 	4 0 -5	; "Caster"
+	15	[-]	GETGLOBAL	5 -6	; SpellBuffCount
+	16	[-]	MOVE     	6 3
+	17	[-]	GETTABLE 	7 1 -7	; "BuffName"
+	18	[-]	MOVE     	8 4
+	19	[-]	CALL     	5 4 2
+	20	[-]	LE       	1 5 -8	; - 0
+	21	[-]	JMP      	1	; to 23
+	22	[-]	LOADBOOL 	5 0 1
+	23	[-]	LOADBOOL 	5 1 0
+	24	[-]	TEST     	5 0 0
+	25	[-]	JMP      	6	; to 32
+	26	[-]	GETGLOBAL	6 -9	; ExecuteBuildingBlocks
+	27	[-]	MOVE     	7 2
+	28	[-]	MOVE     	8 0
+	29	[-]	CALL     	6 3 1
+	30	[-]	SETTABLE 	0 -10 -11	; "LastIfSucceeded" true
+	31	[-]	JMP      	1	; to 33
+	32	[-]	SETTABLE 	0 -10 -12	; "LastIfSucceeded" false
+	33	[-]	RETURN   	0 1
+constants (12) for 012FB708:
+	1	"OwnerVar"
+	2	nil
+	3	"Owner"
+	4	"CasterVar"
+	5	"Caster"
+	6	"SpellBuffCount"
+	7	"BuffName"
+	8	0
+	9	"ExecuteBuildingBlocks"
+	10	"LastIfSucceeded"
+	11	true
+	12	false
+locals (0) for 012FB708:
+upvalues (0) for 012FB708:
+
+function <?:1791,1806> (22 instructions, 88 bytes at 012FBA20)
+3 params, 7 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETTABLE 	4 1 -1	; "TargetVar"
+	2	[-]	EQ       	1 4 -2	; - nil
+	3	[-]	JMP      	3	; to 7
+	4	[-]	GETTABLE 	4 1 -1	; "TargetVar"
+	5	[-]	GETTABLE 	3 0 4
+	6	[-]	JMP      	1	; to 8
+	7	[-]	GETTABLE 	3 0 -3	; "Owner"
+	8	[-]	GETGLOBAL	4 -4	; HasUnitTag
+	9	[-]	MOVE     	5 3
+	10	[-]	GETTABLE 	6 1 -5	; "UnitTag"
+	11	[-]	CALL     	4 3 2
+	12	[-]	GETTABLE 	5 1 -6	; "InvertResult"
+	13	[-]	EQ       	1 4 5
+	14	[-]	JMP      	6	; to 21
+	15	[-]	GETGLOBAL	4 -7	; ExecuteBuildingBlocks
+	16	[-]	MOVE     	5 2
+	17	[-]	MOVE     	6 0
+	18	[-]	CALL     	4 3 1
+	19	[-]	SETTABLE 	0 -8 -9	; "LastIfSucceeded" true
+	20	[-]	JMP      	1	; to 22
+	21	[-]	SETTABLE 	0 -8 -10	; "LastIfSucceeded" false
+	22	[-]	RETURN   	0 1
+constants (10) for 012FBA20:
+	1	"TargetVar"
+	2	nil
+	3	"Owner"
+	4	"HasUnitTag"
+	5	"UnitTag"
+	6	"InvertResult"
+	7	"ExecuteBuildingBlocks"
+	8	"LastIfSucceeded"
+	9	true
+	10	false
+locals (0) for 012FBA20:
+upvalues (0) for 012FBA20:
+
+function <?:1817,1834> (21 instructions, 84 bytes at 012FB760)
+3 params, 9 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETTABLE 	5 1 -1	; "OwnerVar"
+	2	[-]	EQ       	1 5 -2	; - nil
+	3	[-]	JMP      	3	; to 7
+	4	[-]	GETTABLE 	5 1 -1	; "OwnerVar"
+	5	[-]	GETTABLE 	3 0 5
+	6	[-]	JMP      	1	; to 8
+	7	[-]	GETTABLE 	3 0 -3	; "Owner"
+	8	[-]	GETGLOBAL	5 -4	; HasPARType
+	9	[-]	MOVE     	6 3
+	10	[-]	GETTABLE 	7 1 -5	; "PARType"
+	11	[-]	CALL     	5 3 2
+	12	[-]	TEST     	5 0 0
+	13	[-]	JMP      	6	; to 20
+	14	[-]	GETGLOBAL	6 -6	; ExecuteBuildingBlocks
+	15	[-]	MOVE     	7 2
+	16	[-]	MOVE     	8 0
+	17	[-]	CALL     	6 3 1
+	18	[-]	SETTABLE 	0 -7 -8	; "LastIfSucceeded" true
+	19	[-]	JMP      	1	; to 21
+	20	[-]	SETTABLE 	0 -7 -9	; "LastIfSucceeded" false
+	21	[-]	RETURN   	0 1
+constants (9) for 012FB760:
+	1	"OwnerVar"
+	2	nil
+	3	"Owner"
+	4	"HasPARType"
+	5	"PARType"
+	6	"ExecuteBuildingBlocks"
+	7	"LastIfSucceeded"
+	8	true
+	9	false
+locals (0) for 012FB760:
+upvalues (0) for 012FB760:
+
+function <?:1845,1863> (22 instructions, 88 bytes at 012FB5A8)
+3 params, 9 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETTABLE 	5 1 -1	; "OwnerVar"
+	2	[-]	EQ       	1 5 -2	; - nil
+	3	[-]	JMP      	3	; to 7
+	4	[-]	GETTABLE 	5 1 -1	; "OwnerVar"
+	5	[-]	GETTABLE 	3 0 5
+	6	[-]	JMP      	1	; to 8
+	7	[-]	GETTABLE 	3 0 -3	; "Owner"
+	8	[-]	GETGLOBAL	5 -4	; HasPARType
+	9	[-]	MOVE     	6 3
+	10	[-]	GETTABLE 	7 1 -5	; "PARType"
+	11	[-]	CALL     	5 3 2
+	12	[-]	NOT      	5 5
+	13	[-]	TEST     	5 0 0
+	14	[-]	JMP      	6	; to 21
+	15	[-]	GETGLOBAL	6 -6	; ExecuteBuildingBlocks
+	16	[-]	MOVE     	7 2
+	17	[-]	MOVE     	8 0
+	18	[-]	CALL     	6 3 1
+	19	[-]	SETTABLE 	0 -7 -8	; "LastIfSucceeded" true
+	20	[-]	JMP      	1	; to 22
+	21	[-]	SETTABLE 	0 -7 -9	; "LastIfSucceeded" false
+	22	[-]	RETURN   	0 1
+constants (9) for 012FB5A8:
+	1	"OwnerVar"
+	2	nil
+	3	"Owner"
+	4	"HasPARType"
+	5	"PARType"
+	6	"ExecuteBuildingBlocks"
+	7	"LastIfSucceeded"
+	8	true
+	9	false
+locals (0) for 012FB5A8:
+upvalues (0) for 012FB5A8:
+
+function <?:1880,1909> (51 instructions, 204 bytes at 012FB918)
+3 params, 11 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETGLOBAL	3 -1	; GetTable
+	2	[-]	MOVE     	4 0
+	3	[-]	GETTABLE 	5 1 -2	; "Src1VarTable"
+	4	[-]	LOADBOOL 	6 0 0
+	5	[-]	CALL     	3 4 2
+	6	[-]	GETGLOBAL	4 -1	; GetTable
+	7	[-]	MOVE     	5 0
+	8	[-]	GETTABLE 	6 1 -3	; "Src2VarTable"
+	9	[-]	LOADBOOL 	7 0 0
+	10	[-]	CALL     	4 4 2
+	11	[-]	LOADBOOL 	5 1 0
+	12	[-]	TEST     	5 0 0
+	13	[-]	JMP      	37	; to 51
+	14	[-]	LOADBOOL 	6 0 0
+	15	[-]	LOADNIL  	7 7
+	16	[-]	EQ       	1 3 -4	; - nil
+	17	[-]	JMP      	6	; to 24
+	18	[-]	GETTABLE 	8 1 -5	; "Src1Var"
+	19	[-]	EQ       	1 8 -4	; - nil
+	20	[-]	JMP      	3	; to 24
+	21	[-]	GETTABLE 	8 1 -5	; "Src1Var"
+	22	[-]	GETTABLE 	7 3 8
+	23	[-]	JMP      	1	; to 25
+	24	[-]	GETTABLE 	7 1 -6	; "Value1"
+	25	[-]	EQ       	1 4 -4	; - nil
+	26	[-]	JMP      	10	; to 37
+	27	[-]	GETTABLE 	8 1 -7	; "Src2Var"
+	28	[-]	EQ       	1 8 -4	; - nil
+	29	[-]	JMP      	7	; to 37
+	30	[-]	GETTABLE 	8 1 -8	; "CompareOp"
+	31	[-]	MOVE     	9 7
+	32	[-]	GETTABLE 	10 1 -7	; "Src2Var"
+	33	[-]	GETTABLE 	10 4 10
+	34	[-]	CALL     	8 3 2
+	35	[-]	MOVE     	6 8
+	36	[-]	JMP      	5	; to 42
+	37	[-]	GETTABLE 	8 1 -8	; "CompareOp"
+	38	[-]	MOVE     	9 7
+	39	[-]	GETTABLE 	10 1 -9	; "Value2"
+	40	[-]	CALL     	8 3 2
+	41	[-]	MOVE     	6 8
+	42	[-]	TEST     	6 0 0
+	43	[-]	JMP      	5	; to 49
+	44	[-]	GETGLOBAL	8 -10	; ExecuteBuildingBlocks
+	45	[-]	MOVE     	9 2
+	46	[-]	MOVE     	10 0
+	47	[-]	CALL     	8 3 1
+	48	[-]	JMP      	-37	; to 12
+	49	[-]	LOADBOOL 	5 0 0
+	50	[-]	JMP      	-39	; to 12
+	51	[-]	RETURN   	0 1
+constants (10) for 012FB918:
+	1	"GetTable"
+	2	"Src1VarTable"
+	3	"Src2VarTable"
+	4	nil
+	5	"Src1Var"
+	6	"Value1"
+	7	"Src2Var"
+	8	"CompareOp"
+	9	"Value2"
+	10	"ExecuteBuildingBlocks"
+locals (0) for 012FB918:
+upvalues (0) for 012FB918:
+
+function <?:1913,1915> (3 instructions, 12 bytes at 012FB600)
+2 params, 3 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	MUL      	2 0 1
+	2	[-]	RETURN   	2 2
+	3	[-]	RETURN   	0 1
+constants (0) for 012FB600:
+locals (0) for 012FB600:
+upvalues (0) for 012FB600:
+
+function <?:1917,1919> (3 instructions, 12 bytes at 012FB658)
+2 params, 3 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	ADD      	2 0 1
+	2	[-]	RETURN   	2 2
+	3	[-]	RETURN   	0 1
+constants (0) for 012FB658:
+locals (0) for 012FB658:
+upvalues (0) for 012FB658:
+
+function <?:1921,1923> (3 instructions, 12 bytes at 012FDD40)
+2 params, 3 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	SUB      	2 0 1
+	2	[-]	RETURN   	2 2
+	3	[-]	RETURN   	0 1
+constants (0) for 012FDD40:
+locals (0) for 012FDD40:
+upvalues (0) for 012FDD40:
+
+function <?:1925,1927> (3 instructions, 12 bytes at 012FD870)
+2 params, 3 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	DIV      	2 0 1
+	2	[-]	RETURN   	2 2
+	3	[-]	RETURN   	0 1
+constants (0) for 012FD870:
+locals (0) for 012FD870:
+upvalues (0) for 012FD870:
+
+function <?:1929,1931> (6 instructions, 24 bytes at 012FD768)
+2 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	LT       	0 0 1
+	2	[-]	JMP      	2	; to 5
+	3	[-]	RETURN   	0 2
+	4	[-]	JMP      	1	; to 6
+	5	[-]	RETURN   	1 2
+	6	[-]	RETURN   	0 1
+constants (0) for 012FD768:
+locals (0) for 012FD768:
+upvalues (0) for 012FD768:
+
+function <?:1933,1935> (6 instructions, 24 bytes at 012FDDF0)
+2 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	LT       	0 1 0
+	2	[-]	JMP      	2	; to 5
+	3	[-]	RETURN   	0 2
+	4	[-]	JMP      	1	; to 6
+	5	[-]	RETURN   	1 2
+	6	[-]	RETURN   	0 1
+constants (0) for 012FDDF0:
+locals (0) for 012FDDF0:
+upvalues (0) for 012FDDF0:
+
+function <?:1937,1939> (3 instructions, 12 bytes at 012FD660)
+2 params, 3 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	MOD      	2 0 1
+	2	[-]	RETURN   	2 2
+	3	[-]	RETURN   	0 1
+constants (0) for 012FD660:
+locals (0) for 012FD660:
+upvalues (0) for 012FD660:
+
+function <?:1941,1943> (6 instructions, 24 bytes at 012FD3F8)
+1 param, 3 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; math
+	2	[-]	GETTABLE 	1 1 -2	; "floor"
+	3	[-]	ADD      	2 0 -3	; - 0.5
+	4	[-]	TAILCALL 	1 2 0
+	5	[-]	RETURN   	1 0
+	6	[-]	RETURN   	0 1
+constants (3) for 012FD3F8:
+	1	"math"
+	2	"floor"
+	3	0.5
+locals (0) for 012FD3F8:
+upvalues (0) for 012FD3F8:
+
+function <?:1945,1947> (6 instructions, 24 bytes at 012FDC38)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; math
+	2	[-]	GETTABLE 	1 1 -2	; "ceil"
+	3	[-]	MOVE     	2 0
+	4	[-]	TAILCALL 	1 2 0
+	5	[-]	RETURN   	1 0
+	6	[-]	RETURN   	0 1
+constants (2) for 012FDC38:
+	1	"math"
+	2	"ceil"
+locals (0) for 012FDC38:
+upvalues (0) for 012FDC38:
+
+function <?:1949,1951> (6 instructions, 24 bytes at 012FD6B8)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; math
+	2	[-]	GETTABLE 	1 1 -2	; "floor"
+	3	[-]	MOVE     	2 0
+	4	[-]	TAILCALL 	1 2 0
+	5	[-]	RETURN   	1 0
+	6	[-]	RETURN   	0 1
+constants (2) for 012FD6B8:
+	1	"math"
+	2	"floor"
+locals (0) for 012FD6B8:
+upvalues (0) for 012FD6B8:
+
+function <?:1953,1955> (9 instructions, 36 bytes at 012FD450)
+1 param, 4 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; math
+	2	[-]	GETTABLE 	1 1 -2	; "sin"
+	3	[-]	GETGLOBAL	2 -1	; math
+	4	[-]	GETTABLE 	2 2 -3	; "rad"
+	5	[-]	MOVE     	3 0
+	6	[-]	CALL     	2 2 0
+	7	[-]	TAILCALL 	1 0 0
+	8	[-]	RETURN   	1 0
+	9	[-]	RETURN   	0 1
+constants (3) for 012FD450:
+	1	"math"
+	2	"sin"
+	3	"rad"
+locals (0) for 012FD450:
+upvalues (0) for 012FD450:
+
+function <?:1957,1959> (9 instructions, 36 bytes at 012FD920)
+1 param, 4 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; math
+	2	[-]	GETTABLE 	1 1 -2	; "cos"
+	3	[-]	GETGLOBAL	2 -1	; math
+	4	[-]	GETTABLE 	2 2 -3	; "rad"
+	5	[-]	MOVE     	3 0
+	6	[-]	CALL     	2 2 0
+	7	[-]	TAILCALL 	1 0 0
+	8	[-]	RETURN   	1 0
+	9	[-]	RETURN   	0 1
+constants (3) for 012FD920:
+	1	"math"
+	2	"cos"
+	3	"rad"
+locals (0) for 012FD920:
+upvalues (0) for 012FD920:
+
+function <?:1961,1963> (9 instructions, 36 bytes at 012FDB88)
+1 param, 4 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; math
+	2	[-]	GETTABLE 	1 1 -2	; "tan"
+	3	[-]	GETGLOBAL	2 -1	; math
+	4	[-]	GETTABLE 	2 2 -3	; "rad"
+	5	[-]	MOVE     	3 0
+	6	[-]	CALL     	2 2 0
+	7	[-]	TAILCALL 	1 0 0
+	8	[-]	RETURN   	1 0
+	9	[-]	RETURN   	0 1
+constants (3) for 012FDB88:
+	1	"math"
+	2	"tan"
+	3	"rad"
+locals (0) for 012FDB88:
+upvalues (0) for 012FDB88:
+
+function <?:1965,1967> (9 instructions, 36 bytes at 012FDAD8)
+1 param, 4 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; math
+	2	[-]	GETTABLE 	1 1 -2	; "deg"
+	3	[-]	GETGLOBAL	2 -1	; math
+	4	[-]	GETTABLE 	2 2 -3	; "asin"
+	5	[-]	MOVE     	3 0
+	6	[-]	CALL     	2 2 0
+	7	[-]	TAILCALL 	1 0 0
+	8	[-]	RETURN   	1 0
+	9	[-]	RETURN   	0 1
+constants (3) for 012FDAD8:
+	1	"math"
+	2	"deg"
+	3	"asin"
+locals (0) for 012FDAD8:
+upvalues (0) for 012FDAD8:
+
+function <?:1969,1971> (9 instructions, 36 bytes at 012FD4A8)
+1 param, 4 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; math
+	2	[-]	GETTABLE 	1 1 -2	; "deg"
+	3	[-]	GETGLOBAL	2 -1	; math
+	4	[-]	GETTABLE 	2 2 -3	; "acos"
+	5	[-]	MOVE     	3 0
+	6	[-]	CALL     	2 2 0
+	7	[-]	TAILCALL 	1 0 0
+	8	[-]	RETURN   	1 0
+	9	[-]	RETURN   	0 1
+constants (3) for 012FD4A8:
+	1	"math"
+	2	"deg"
+	3	"acos"
+locals (0) for 012FD4A8:
+upvalues (0) for 012FD4A8:
+
+function <?:1973,1975> (9 instructions, 36 bytes at 012FDBE0)
+1 param, 4 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; math
+	2	[-]	GETTABLE 	1 1 -2	; "deg"
+	3	[-]	GETGLOBAL	2 -1	; math
+	4	[-]	GETTABLE 	2 2 -3	; "atan"
+	5	[-]	MOVE     	3 0
+	6	[-]	CALL     	2 2 0
+	7	[-]	TAILCALL 	1 0 0
+	8	[-]	RETURN   	1 0
+	9	[-]	RETURN   	0 1
+constants (3) for 012FDBE0:
+	1	"math"
+	2	"deg"
+	3	"atan"
+locals (0) for 012FDBE0:
+upvalues (0) for 012FDBE0:
+
+function <?:1977,1979> (7 instructions, 28 bytes at 012FD710)
+2 params, 5 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; math
+	2	[-]	GETTABLE 	2 2 -2	; "pow"
+	3	[-]	MOVE     	3 0
+	4	[-]	MOVE     	4 1
+	5	[-]	TAILCALL 	2 3 0
+	6	[-]	RETURN   	2 0
+	7	[-]	RETURN   	0 1
+constants (2) for 012FD710:
+	1	"math"
+	2	"pow"
+locals (0) for 012FD710:
+upvalues (0) for 012FD710:
+
+function <?:1981,1983> (6 instructions, 24 bytes at 012FD608)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; math
+	2	[-]	GETTABLE 	1 1 -2	; "sqrt"
+	3	[-]	MOVE     	2 0
+	4	[-]	TAILCALL 	1 2 0
+	5	[-]	RETURN   	1 0
+	6	[-]	RETURN   	0 1
+constants (2) for 012FD608:
+	1	"math"
+	2	"sqrt"
+locals (0) for 012FD608:
+upvalues (0) for 012FD608:
+
+function <?:1985,1987> (5 instructions, 20 bytes at 012FD978)
+2 params, 3 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	TESTSET  	2 0 0
+	2	[-]	JMP      	1	; to 4
+	3	[-]	MOVE     	2 1
+	4	[-]	RETURN   	2 2
+	5	[-]	RETURN   	0 1
+constants (0) for 012FD978:
+locals (0) for 012FD978:
+upvalues (0) for 012FD978:
+
+function <?:1989,1991> (5 instructions, 20 bytes at 012FD500)
+2 params, 3 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	TESTSET  	2 0 1
+	2	[-]	JMP      	1	; to 4
+	3	[-]	MOVE     	2 1
+	4	[-]	RETURN   	2 2
+	5	[-]	RETURN   	0 1
+constants (0) for 012FD500:
+locals (0) for 012FD500:
+upvalues (0) for 012FD500:
+
+function <?:1993,1995> (3 instructions, 12 bytes at 012FDC90)
+1 param, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	NOT      	1 0
+	2	[-]	RETURN   	1 2
+	3	[-]	RETURN   	0 1
+constants (0) for 012FDC90:
+locals (0) for 012FDC90:
+upvalues (0) for 012FDC90:
+
+function <?:1997,1999> (6 instructions, 24 bytes at 012FDA80)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; math
+	2	[-]	GETTABLE 	1 1 -2	; "abs"
+	3	[-]	MOVE     	2 0
+	4	[-]	TAILCALL 	1 2 0
+	5	[-]	RETURN   	1 0
+	6	[-]	RETURN   	0 1
+constants (2) for 012FDA80:
+	1	"math"
+	2	"abs"
+locals (0) for 012FDA80:
+upvalues (0) for 012FDA80:
+
+function <?:2001,2003> (7 instructions, 28 bytes at 012FD7C0)
+2 params, 5 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; math
+	2	[-]	GETTABLE 	2 2 -2	; "random"
+	3	[-]	MOVE     	3 0
+	4	[-]	MOVE     	4 1
+	5	[-]	TAILCALL 	2 3 0
+	6	[-]	RETURN   	2 0
+	7	[-]	RETURN   	0 1
+constants (2) for 012FD7C0:
+	1	"math"
+	2	"random"
+locals (0) for 012FD7C0:
+upvalues (0) for 012FD7C0:
+
+function <?:2019,2029> (26 instructions, 104 bytes at 012FDD98)
+2 params, 10 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetMathNumber
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "Src1VarTable"
+	4	[-]	GETTABLE 	5 1 -3	; "Src1Var"
+	5	[-]	GETTABLE 	6 1 -4	; "Src1Value"
+	6	[-]	CALL     	2 5 2
+	7	[-]	GETGLOBAL	3 -1	; GetMathNumber
+	8	[-]	MOVE     	4 0
+	9	[-]	GETTABLE 	5 1 -5	; "Src2VarTable"
+	10	[-]	GETTABLE 	6 1 -6	; "Src2Var"
+	11	[-]	GETTABLE 	7 1 -7	; "Src2Value"
+	12	[-]	CALL     	3 5 2
+	13	[-]	GETGLOBAL	4 -8	; GetTable
+	14	[-]	MOVE     	5 0
+	15	[-]	GETTABLE 	6 1 -9	; "DestVarTable"
+	16	[-]	CALL     	4 3 2
+	17	[-]	GETTABLE 	5 1 -10	; "MathOp"
+	18	[-]	MOVE     	6 2
+	19	[-]	MOVE     	7 3
+	20	[-]	CALL     	5 3 2
+	21	[-]	GETGLOBAL	6 -11	; SetVarInTable
+	22	[-]	MOVE     	7 0
+	23	[-]	MOVE     	8 1
+	24	[-]	MOVE     	9 5
+	25	[-]	CALL     	6 4 1
+	26	[-]	RETURN   	0 1
+constants (11) for 012FDD98:
+	1	"GetMathNumber"
+	2	"Src1VarTable"
+	3	"Src1Var"
+	4	"Src1Value"
+	5	"Src2VarTable"
+	6	"Src2Var"
+	7	"Src2Value"
+	8	"GetTable"
+	9	"DestVarTable"
+	10	"MathOp"
+	11	"SetVarInTable"
+locals (0) for 012FDD98:
+upvalues (0) for 012FDD98:
+
+function <?:2031,2041> (12 instructions, 48 bytes at 012FD9D0)
+4 params, 7 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	EQ       	1 2 -1	; - nil
+	2	[-]	JMP      	8	; to 11
+	3	[-]	GETGLOBAL	4 -2	; GetTable
+	4	[-]	MOVE     	5 0
+	5	[-]	MOVE     	6 1
+	6	[-]	CALL     	4 3 2
+	7	[-]	GETTABLE 	5 4 2
+	8	[-]	EQ       	1 5 -1	; - nil
+	9	[-]	JMP      	1	; to 11
+	10	[-]	RETURN   	5 2
+	11	[-]	RETURN   	3 2
+	12	[-]	RETURN   	0 1
+constants (2) for 012FD9D0:
+	1	nil
+	2	"GetTable"
+locals (0) for 012FD9D0:
+upvalues (0) for 012FD9D0:
+
+function <?:2044,2053> (19 instructions, 76 bytes at 012FDB30)
+2 params, 5 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; type
+	2	[-]	MOVE     	3 1
+	3	[-]	CALL     	2 2 2
+	4	[-]	EQ       	0 2 -2	; - "number"
+	5	[-]	JMP      	2	; to 8
+	6	[-]	RETURN   	1 2
+	7	[-]	JMP      	11	; to 19
+	8	[-]	EQ       	0 2 -3	; - "function"
+	9	[-]	JMP      	5	; to 15
+	10	[-]	MOVE     	3 1
+	11	[-]	MOVE     	4 0
+	12	[-]	TAILCALL 	3 2 0
+	13	[-]	RETURN   	3 0
+	14	[-]	JMP      	4	; to 19
+	15	[-]	EQ       	0 2 -4	; - "string"
+	16	[-]	JMP      	2	; to 19
+	17	[-]	GETTABLE 	3 0 1
+	18	[-]	RETURN   	3 2
+	19	[-]	RETURN   	0 1
+constants (4) for 012FDB30:
+	1	"type"
+	2	"number"
+	3	"function"
+	4	"string"
+locals (0) for 012FDB30:
+upvalues (0) for 012FDB30:
+
+function <?:2058,2060> (6 instructions, 24 bytes at 012FDA28)
+2 params, 5 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; VectorAdd
+	2	[-]	MOVE     	3 0
+	3	[-]	MOVE     	4 1
+	4	[-]	TAILCALL 	2 3 0
+	5	[-]	RETURN   	2 0
+	6	[-]	RETURN   	0 1
+constants (1) for 012FDA28:
+	1	"VectorAdd"
+locals (0) for 012FDA28:
+upvalues (0) for 012FDA28:
+
+function <?:2062,2064> (6 instructions, 24 bytes at 012FD818)
+2 params, 5 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; VectorSubtract
+	2	[-]	MOVE     	3 0
+	3	[-]	MOVE     	4 1
+	4	[-]	TAILCALL 	2 3 0
+	5	[-]	RETURN   	2 0
+	6	[-]	RETURN   	0 1
+constants (1) for 012FD818:
+	1	"VectorSubtract"
+locals (0) for 012FD818:
+upvalues (0) for 012FD818:
+
+function <?:2066,2068> (6 instructions, 24 bytes at 012FD8C8)
+2 params, 5 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; VectorScalarMultiply
+	2	[-]	MOVE     	3 0
+	3	[-]	MOVE     	4 1
+	4	[-]	TAILCALL 	2 3 0
+	5	[-]	RETURN   	2 0
+	6	[-]	RETURN   	0 1
+constants (1) for 012FD8C8:
+	1	"VectorScalarMultiply"
+locals (0) for 012FD8C8:
+upvalues (0) for 012FD8C8:
+
+function <?:2070,2072> (6 instructions, 24 bytes at 012FD558)
+2 params, 5 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; VectorScalarDivide
+	2	[-]	MOVE     	3 0
+	3	[-]	MOVE     	4 1
+	4	[-]	TAILCALL 	2 3 0
+	5	[-]	RETURN   	2 0
+	6	[-]	RETURN   	0 1
+constants (1) for 012FD558:
+	1	"VectorScalarDivide"
+locals (0) for 012FD558:
+upvalues (0) for 012FD558:
+
+function <?:2074,2076> (6 instructions, 24 bytes at 012FD5B0)
+2 params, 5 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; VectorRotateY
+	2	[-]	MOVE     	3 0
+	3	[-]	MOVE     	4 1
+	4	[-]	TAILCALL 	2 3 0
+	5	[-]	RETURN   	2 0
+	6	[-]	RETURN   	0 1
+constants (1) for 012FD5B0:
+	1	"VectorRotateY"
+locals (0) for 012FD5B0:
+upvalues (0) for 012FD5B0:
+
+function <?:2091,2096> (5 instructions, 20 bytes at 012FD348)
+2 params, 5 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; BBMath
+	2	[-]	MOVE     	3 0
+	3	[-]	MOVE     	4 1
+	4	[-]	CALL     	2 3 1
+	5	[-]	RETURN   	0 1
+constants (1) for 012FD348:
+	1	"BBMath"
+locals (0) for 012FD348:
+upvalues (0) for 012FD348:
+
+function <?:2111,2146> (71 instructions, 284 bytes at 012FD3A0)
+2 params, 9 slots, 0 upvalues, 0 locals, 20 constants, 0 functions
+	1	[-]	GETTABLE 	2 0 -1	; "InstanceVars"
+	2	[-]	GETTABLE 	3 2 -2	; "InterpDelta"
+	3	[-]	EQ       	0 3 -3	; - nil
+	4	[-]	JMP      	36	; to 41
+	5	[-]	GETTABLE 	3 1 -4	; "Amount"
+	6	[-]	GETTABLE 	4 1 -5	; "AmountVar"
+	7	[-]	EQ       	1 4 -3	; - nil
+	8	[-]	JMP      	6	; to 15
+	9	[-]	GETGLOBAL	4 -6	; GetTable
+	10	[-]	MOVE     	5 0
+	11	[-]	GETTABLE 	6 1 -7	; "AmountVarTable"
+	12	[-]	CALL     	4 3 2
+	13	[-]	GETTABLE 	5 1 -5	; "AmountVar"
+	14	[-]	GETTABLE 	3 4 5
+	15	[-]	GETGLOBAL	4 -9	; GetPosition
+	16	[-]	GETTABLE 	5 1 -10	; "TargetVar"
+	17	[-]	GETTABLE 	5 0 5
+	18	[-]	CALL     	4 2 2
+	19	[-]	SETTABLE 	2 -8 4	; "KnockBackStart" -
+	20	[-]	GETGLOBAL	4 -11	; GetNormalizedPositionDelta
+	21	[-]	GETTABLE 	5 1 -10	; "TargetVar"
+	22	[-]	GETTABLE 	5 0 5
+	23	[-]	GETTABLE 	6 1 -12	; "AttackerVar"
+	24	[-]	GETTABLE 	6 0 6
+	25	[-]	LOADBOOL 	7 1 0
+	26	[-]	CALL     	4 4 2
+	27	[-]	NEWTABLE 	5 0 3
+	28	[-]	GETTABLE 	6 4 -13	; "x"
+	29	[-]	MUL      	6 6 3
+	30	[-]	SETTABLE 	5 -13 6	; "x" -
+	31	[-]	SETTABLE 	5 -14 -15	; "y" 0
+	32	[-]	GETTABLE 	6 4 -16	; "z"
+	33	[-]	MUL      	6 6 3
+	34	[-]	SETTABLE 	5 -16 6	; "z" -
+	35	[-]	SETTABLE 	2 -2 5	; "InterpDelta" -
+	36	[-]	GETGLOBAL	5 -18	; GetTime
+	37	[-]	CALL     	5 1 2
+	38	[-]	SETTABLE 	2 -17 5	; "StartTime" -
+	39	[-]	GETTABLE 	5 1 -19	; "KnockBackDuration"
+	40	[-]	SETTABLE 	2 -19 5	; "KnockBackDuration" -
+	41	[-]	GETTABLE 	3 1 -10	; "TargetVar"
+	42	[-]	GETTABLE 	3 0 3
+	43	[-]	GETGLOBAL	4 -18	; GetTime
+	44	[-]	CALL     	4 1 2
+	45	[-]	GETTABLE 	5 2 -17	; "StartTime"
+	46	[-]	SUB      	4 4 5
+	47	[-]	GETTABLE 	5 2 -19	; "KnockBackDuration"
+	48	[-]	DIV      	4 4 5
+	49	[-]	NEWTABLE 	5 0 3
+	50	[-]	GETTABLE 	6 2 -8	; "KnockBackStart"
+	51	[-]	GETTABLE 	6 6 -13	; "x"
+	52	[-]	GETTABLE 	7 2 -2	; "InterpDelta"
+	53	[-]	GETTABLE 	7 7 -13	; "x"
+	54	[-]	MUL      	7 7 4
+	55	[-]	ADD      	6 6 7
+	56	[-]	SETTABLE 	5 -13 6	; "x" -
+	57	[-]	GETTABLE 	6 2 -8	; "KnockBackStart"
+	58	[-]	GETTABLE 	6 6 -14	; "y"
+	59	[-]	SETTABLE 	5 -14 6	; "y" -
+	60	[-]	GETTABLE 	6 2 -8	; "KnockBackStart"
+	61	[-]	GETTABLE 	6 6 -16	; "z"
+	62	[-]	GETTABLE 	7 2 -2	; "InterpDelta"
+	63	[-]	GETTABLE 	7 7 -16	; "z"
+	64	[-]	MUL      	7 7 4
+	65	[-]	ADD      	6 6 7
+	66	[-]	SETTABLE 	5 -16 6	; "z" -
+	67	[-]	GETGLOBAL	6 -20	; SetPosition
+	68	[-]	MOVE     	7 3
+	69	[-]	MOVE     	8 5
+	70	[-]	CALL     	6 3 1
+	71	[-]	RETURN   	0 1
+constants (20) for 012FD3A0:
+	1	"InstanceVars"
+	2	"InterpDelta"
+	3	nil
+	4	"Amount"
+	5	"AmountVar"
+	6	"GetTable"
+	7	"AmountVarTable"
+	8	"KnockBackStart"
+	9	"GetPosition"
+	10	"TargetVar"
+	11	"GetNormalizedPositionDelta"
+	12	"AttackerVar"
+	13	"x"
+	14	"y"
+	15	0
+	16	"z"
+	17	"StartTime"
+	18	"GetTime"
+	19	"KnockBackDuration"
+	20	"SetPosition"
+locals (0) for 012FD3A0:
+upvalues (0) for 012FD3A0:
+
+function <?:2160,2166> (25 instructions, 100 bytes at 012FE268)
+2 params, 9 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetParam
+	2	[-]	LOADK    	3 -2	; "Left"
+	3	[-]	MOVE     	4 0
+	4	[-]	MOVE     	5 1
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETGLOBAL	3 -1	; GetParam
+	7	[-]	LOADK    	4 -3	; "Right"
+	8	[-]	MOVE     	5 0
+	9	[-]	MOVE     	6 1
+	10	[-]	CALL     	3 4 2
+	11	[-]	GETGLOBAL	4 -4	; GetTable
+	12	[-]	MOVE     	5 0
+	13	[-]	GETTABLE 	6 1 -5	; "DestVarTable"
+	14	[-]	LOADBOOL 	7 1 0
+	15	[-]	CALL     	4 4 2
+	16	[-]	GETTABLE 	5 1 -6	; "DestVar"
+	17	[-]	GETGLOBAL	6 -7	; tostring
+	18	[-]	MOVE     	7 2
+	19	[-]	CALL     	6 2 2
+	20	[-]	GETGLOBAL	7 -7	; tostring
+	21	[-]	MOVE     	8 3
+	22	[-]	CALL     	7 2 2
+	23	[-]	CONCAT   	6 6 7
+	24	[-]	SETTABLE 	4 5 6
+	25	[-]	RETURN   	0 1
+constants (7) for 012FE268:
+	1	"GetParam"
+	2	"Left"
+	3	"Right"
+	4	"GetTable"
+	5	"DestVarTable"
+	6	"DestVar"
+	7	"tostring"
+locals (0) for 012FE268:
+upvalues (0) for 012FE268:
+
+function <?:2381,2407> (39 instructions, 156 bytes at 012FDEA0)
+2 params, 7 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADK    	2 -1	; 0
+	2	[-]	GETTABLE 	3 1 -2	; "Delta"
+	3	[-]	EQ       	1 3 -3	; - nil
+	4	[-]	JMP      	2	; to 7
+	5	[-]	GETTABLE 	3 1 -2	; "Delta"
+	6	[-]	ADD      	2 2 3
+	7	[-]	GETTABLE 	3 1 -4	; "DeltaByLevel"
+	8	[-]	EQ       	1 3 -3	; - nil
+	9	[-]	JMP      	7	; to 17
+	10	[-]	GETTABLE 	3 0 -5	; "Level"
+	11	[-]	EQ       	1 3 -3	; - nil
+	12	[-]	JMP      	4	; to 17
+	13	[-]	GETTABLE 	3 1 -4	; "DeltaByLevel"
+	14	[-]	GETTABLE 	4 0 -5	; "Level"
+	15	[-]	GETTABLE 	3 3 4
+	16	[-]	ADD      	2 2 3
+	17	[-]	GETTABLE 	3 1 -6	; "DeltaVar"
+	18	[-]	EQ       	1 3 -3	; - nil
+	19	[-]	JMP      	8	; to 28
+	20	[-]	GETGLOBAL	3 -7	; GetTable
+	21	[-]	MOVE     	4 0
+	22	[-]	GETTABLE 	5 1 -8	; "DeltaVarTable"
+	23	[-]	LOADBOOL 	6 1 0
+	24	[-]	CALL     	3 4 2
+	25	[-]	GETTABLE 	4 1 -6	; "DeltaVar"
+	26	[-]	GETTABLE 	4 3 4
+	27	[-]	ADD      	2 2 4
+	28	[-]	GETTABLE 	3 1 -9	; "TargetVar"
+	29	[-]	EQ       	1 3 -3	; - nil
+	30	[-]	JMP      	5	; to 36
+	31	[-]	GETTABLE 	4 1 -10	; "Stat"
+	32	[-]	MOVE     	5 2
+	33	[-]	GETTABLE 	6 0 3
+	34	[-]	CALL     	4 3 1
+	35	[-]	JMP      	3	; to 39
+	36	[-]	GETTABLE 	4 1 -10	; "Stat"
+	37	[-]	MOVE     	5 2
+	38	[-]	CALL     	4 2 1
+	39	[-]	RETURN   	0 1
+constants (10) for 012FDEA0:
+	1	0
+	2	"Delta"
+	3	nil
+	4	"DeltaByLevel"
+	5	"Level"
+	6	"DeltaVar"
+	7	"GetTable"
+	8	"DeltaVarTable"
+	9	"TargetVar"
+	10	"Stat"
+locals (0) for 012FDEA0:
+upvalues (0) for 012FDEA0:
+
+function <?:2423,2449> (39 instructions, 156 bytes at 012FE2C0)
+2 params, 7 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADK    	2 -1	; 0
+	2	[-]	GETTABLE 	3 1 -2	; "Delta"
+	3	[-]	EQ       	1 3 -3	; - nil
+	4	[-]	JMP      	2	; to 7
+	5	[-]	GETTABLE 	3 1 -2	; "Delta"
+	6	[-]	ADD      	2 2 3
+	7	[-]	GETTABLE 	3 1 -4	; "DeltaByLevel"
+	8	[-]	EQ       	1 3 -3	; - nil
+	9	[-]	JMP      	7	; to 17
+	10	[-]	GETTABLE 	3 0 -5	; "Level"
+	11	[-]	EQ       	1 3 -3	; - nil
+	12	[-]	JMP      	4	; to 17
+	13	[-]	GETTABLE 	3 1 -4	; "DeltaByLevel"
+	14	[-]	GETTABLE 	4 0 -5	; "Level"
+	15	[-]	GETTABLE 	3 3 4
+	16	[-]	ADD      	2 2 3
+	17	[-]	GETTABLE 	3 1 -6	; "DeltaVar"
+	18	[-]	EQ       	1 3 -3	; - nil
+	19	[-]	JMP      	8	; to 28
+	20	[-]	GETGLOBAL	3 -7	; GetTable
+	21	[-]	MOVE     	4 0
+	22	[-]	GETTABLE 	5 1 -8	; "DeltaVarTable"
+	23	[-]	LOADBOOL 	6 1 0
+	24	[-]	CALL     	3 4 2
+	25	[-]	GETTABLE 	4 1 -6	; "DeltaVar"
+	26	[-]	GETTABLE 	4 3 4
+	27	[-]	ADD      	2 2 4
+	28	[-]	GETTABLE 	3 1 -9	; "TargetVar"
+	29	[-]	EQ       	1 3 -3	; - nil
+	30	[-]	JMP      	5	; to 36
+	31	[-]	GETTABLE 	4 1 -10	; "Stat"
+	32	[-]	MOVE     	5 2
+	33	[-]	GETTABLE 	6 0 3
+	34	[-]	CALL     	4 3 1
+	35	[-]	JMP      	3	; to 39
+	36	[-]	GETTABLE 	4 1 -10	; "Stat"
+	37	[-]	MOVE     	5 2
+	38	[-]	CALL     	4 2 1
+	39	[-]	RETURN   	0 1
+constants (10) for 012FE2C0:
+	1	0
+	2	"Delta"
+	3	nil
+	4	"DeltaByLevel"
+	5	"Level"
+	6	"DeltaVar"
+	7	"GetTable"
+	8	"DeltaVarTable"
+	9	"TargetVar"
+	10	"Stat"
+locals (0) for 012FE2C0:
+upvalues (0) for 012FE2C0:
+
+function <?:2461,2476> (23 instructions, 92 bytes at 012FDEF8)
+2 params, 8 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETTABLE 	2 1 -1	; "TargetVar"
+	2	[-]	LOADK    	3 -2	; 0
+	3	[-]	GETTABLE 	4 1 -3	; "LaneVar"
+	4	[-]	EQ       	1 4 -4	; - nil
+	5	[-]	JMP      	8	; to 14
+	6	[-]	GETGLOBAL	4 -5	; GetTable
+	7	[-]	MOVE     	5 0
+	8	[-]	GETTABLE 	6 1 -6	; "LaneVarTable"
+	9	[-]	LOADBOOL 	7 1 0
+	10	[-]	CALL     	4 4 2
+	11	[-]	GETTABLE 	5 1 -3	; "LaneVar"
+	12	[-]	GETTABLE 	5 4 5
+	13	[-]	ADD      	3 3 5
+	14	[-]	GETTABLE 	4 1 -7	; "Lane"
+	15	[-]	EQ       	1 4 -4	; - nil
+	16	[-]	JMP      	2	; to 19
+	17	[-]	GETTABLE 	4 1 -7	; "Lane"
+	18	[-]	ADD      	3 3 4
+	19	[-]	GETGLOBAL	4 -8	; SetMinionLane
+	20	[-]	GETTABLE 	5 0 2
+	21	[-]	MOVE     	6 3
+	22	[-]	CALL     	4 3 1
+	23	[-]	RETURN   	0 1
+constants (8) for 012FDEF8:
+	1	"TargetVar"
+	2	0
+	3	"LaneVar"
+	4	nil
+	5	"GetTable"
+	6	"LaneVarTable"
+	7	"Lane"
+	8	"SetMinionLane"
+locals (0) for 012FDEF8:
+upvalues (0) for 012FDEF8:
+
+function <?:2491,2532> (61 instructions, 244 bytes at 012FE210)
+2 params, 11 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "TargetVar"
+	7	[-]	LOADK    	4 -4	; 0
+	8	[-]	LOADK    	5 -4	; 0
+	9	[-]	GETTABLE 	6 1 -5	; "AttackVar"
+	10	[-]	EQ       	1 6 -6	; - nil
+	11	[-]	JMP      	8	; to 20
+	12	[-]	GETGLOBAL	6 -1	; GetTable
+	13	[-]	MOVE     	7 0
+	14	[-]	GETTABLE 	8 1 -7	; "AttackVarTable"
+	15	[-]	LOADBOOL 	9 1 0
+	16	[-]	CALL     	6 4 2
+	17	[-]	GETTABLE 	7 1 -5	; "AttackVar"
+	18	[-]	GETTABLE 	7 6 7
+	19	[-]	ADD      	4 4 7
+	20	[-]	GETTABLE 	6 1 -8	; "Attack"
+	21	[-]	EQ       	1 6 -6	; - nil
+	22	[-]	JMP      	2	; to 25
+	23	[-]	GETTABLE 	6 1 -8	; "Attack"
+	24	[-]	ADD      	4 4 6
+	25	[-]	GETTABLE 	6 1 -9	; "TotalCoefficientVar"
+	26	[-]	EQ       	1 6 -6	; - nil
+	27	[-]	JMP      	8	; to 36
+	28	[-]	GETGLOBAL	6 -1	; GetTable
+	29	[-]	MOVE     	7 0
+	30	[-]	GETTABLE 	8 1 -10	; "TotalCoefficientVarTable"
+	31	[-]	LOADBOOL 	9 1 0
+	32	[-]	CALL     	6 4 2
+	33	[-]	GETTABLE 	7 1 -9	; "TotalCoefficientVar"
+	34	[-]	GETTABLE 	7 6 7
+	35	[-]	ADD      	5 5 7
+	36	[-]	GETTABLE 	6 1 -11	; "TotalCoefficient"
+	37	[-]	EQ       	1 6 -6	; - nil
+	38	[-]	JMP      	2	; to 41
+	39	[-]	GETTABLE 	6 1 -11	; "TotalCoefficient"
+	40	[-]	ADD      	5 5 6
+	41	[-]	EQ       	1 3 -6	; - nil
+	42	[-]	JMP      	14	; to 57
+	43	[-]	GETGLOBAL	6 -12	; GetFlatCritDamageMod
+	44	[-]	GETTABLE 	7 0 3
+	45	[-]	CALL     	6 2 2
+	46	[-]	GETGLOBAL	7 -13	; GetPercentCritDamageMod
+	47	[-]	GETTABLE 	8 0 3
+	48	[-]	CALL     	7 2 2
+	49	[-]	ADD      	8 -14 7	; 1 -
+	50	[-]	MUL      	8 -15 8	; 2 -
+	51	[-]	ADD      	8 8 6
+	52	[-]	GETTABLE 	9 1 -16	; "DestVar"
+	53	[-]	MUL      	10 4 8
+	54	[-]	MUL      	10 10 5
+	55	[-]	SETTABLE 	2 9 10
+	56	[-]	JMP      	4	; to 61
+	57	[-]	GETTABLE 	6 1 -16	; "DestVar"
+	58	[-]	GETTABLE 	7 1 -8	; "Attack"
+	59	[-]	MUL      	7 -15 7	; 2 -
+	60	[-]	SETTABLE 	2 6 7
+	61	[-]	RETURN   	0 1
+constants (16) for 012FE210:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"TargetVar"
+	4	0
+	5	"AttackVar"
+	6	nil
+	7	"AttackVarTable"
+	8	"Attack"
+	9	"TotalCoefficientVar"
+	10	"TotalCoefficientVarTable"
+	11	"TotalCoefficient"
+	12	"GetFlatCritDamageMod"
+	13	"GetPercentCritDamageMod"
+	14	1
+	15	2
+	16	"DestVar"
+locals (0) for 012FE210:
+upvalues (0) for 012FE210:
+
+function <?:2547,2585> (61 instructions, 244 bytes at 012FE000)
+2 params, 13 slots, 0 upvalues, 0 locals, 19 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETGLOBAL	3 -1	; GetTable
+	7	[-]	MOVE     	4 0
+	8	[-]	GETTABLE 	5 1 -3	; "AmountVarTable"
+	9	[-]	LOADBOOL 	6 1 0
+	10	[-]	CALL     	3 4 2
+	11	[-]	GETGLOBAL	4 -1	; GetTable
+	12	[-]	MOVE     	5 0
+	13	[-]	GETTABLE 	6 0 -4	; "NextBuffVars"
+	14	[-]	LOADBOOL 	7 0 0
+	15	[-]	CALL     	4 4 2
+	16	[-]	GETTABLE 	5 1 -6	; "AmountVar"
+	17	[-]	GETTABLE 	5 3 5
+	18	[-]	GETTABLE 	6 1 -7	; "Amount"
+	19	[-]	ADD      	5 5 6
+	20	[-]	SETTABLE 	4 -5 5	; "InitializeShield_Amount" -
+	21	[-]	GETTABLE 	5 1 -6	; "AmountVar"
+	22	[-]	EQ       	1 5 -8	; - nil
+	23	[-]	JMP      	22	; to 46
+	24	[-]	GETTABLE 	5 1 -9	; "HealShieldMod"
+	25	[-]	EQ       	1 5 -8	; - nil
+	26	[-]	JMP      	19	; to 46
+	27	[-]	EQ       	0 5 -10	; - true
+	28	[-]	JMP      	17	; to 46
+	29	[-]	GETTABLE 	6 1 -11	; "AttackerVar"
+	30	[-]	LOADK    	7 -12	; 0
+	31	[-]	EQ       	1 6 -8	; - nil
+	32	[-]	JMP      	4	; to 37
+	33	[-]	GETGLOBAL	8 -13	; GetPercentHealingAmountMod
+	34	[-]	GETTABLE 	9 0 6
+	35	[-]	CALL     	8 2 2
+	36	[-]	MOVE     	7 8
+	37	[-]	GETTABLE 	8 1 -7	; "Amount"
+	38	[-]	GETTABLE 	9 1 -6	; "AmountVar"
+	39	[-]	GETTABLE 	9 3 9
+	40	[-]	ADD      	10 8 9
+	41	[-]	ADD      	11 -14 7	; 1 -
+	42	[-]	MUL      	10 10 11
+	43	[-]	GETTABLE 	11 1 -6	; "AmountVar"
+	44	[-]	SETTABLE 	3 11 10
+	45	[-]	SETTABLE 	4 -5 10	; "InitializeShield_Amount" -
+	46	[-]	GETGLOBAL	5 -15	; SpellBuffAddNoRenew
+	47	[-]	GETTABLE 	6 1 -11	; "AttackerVar"
+	48	[-]	GETTABLE 	6 0 6
+	49	[-]	GETTABLE 	7 1 -16	; "UnitVar"
+	50	[-]	GETTABLE 	7 0 7
+	51	[-]	LOADK    	8 -17	; "InitializeShieldMarker"
+	52	[-]	LOADK    	9 -12	; 0
+	53	[-]	LOADK    	10 -14	; 1
+	54	[-]	LOADK    	11 -18	; 25000
+	55	[-]	MOVE     	12 4
+	56	[-]	CALL     	5 8 1
+	57	[-]	GETGLOBAL	5 -19	; BBIncreaseShield
+	58	[-]	MOVE     	6 0
+	59	[-]	MOVE     	7 1
+	60	[-]	CALL     	5 3 1
+	61	[-]	RETURN   	0 1
+constants (19) for 012FE000:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"AmountVarTable"
+	4	"NextBuffVars"
+	5	"InitializeShield_Amount"
+	6	"AmountVar"
+	7	"Amount"
+	8	nil
+	9	"HealShieldMod"
+	10	true
+	11	"AttackerVar"
+	12	0
+	13	"GetPercentHealingAmountMod"
+	14	1
+	15	"SpellBuffAddNoRenew"
+	16	"UnitVar"
+	17	"InitializeShieldMarker"
+	18	25000
+	19	"BBIncreaseShield"
+locals (0) for 012FE000:
+upvalues (0) for 012FE000:
+
+function <?:2598,2625> (38 instructions, 152 bytes at 012FDF50)
+2 params, 10 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETGLOBAL	3 -3	; GetPercentCooldownMod
+	7	[-]	GETTABLE 	4 1 -4	; "TargetVar"
+	8	[-]	LOADK    	5 -5	; 0
+	9	[-]	GETTABLE 	6 1 -6	; "CDVar"
+	10	[-]	EQ       	1 6 -7	; - nil
+	11	[-]	JMP      	8	; to 20
+	12	[-]	GETGLOBAL	6 -1	; GetTable
+	13	[-]	MOVE     	7 0
+	14	[-]	GETTABLE 	8 1 -8	; "CDVarTable"
+	15	[-]	LOADBOOL 	9 1 0
+	16	[-]	CALL     	6 4 2
+	17	[-]	GETTABLE 	7 1 -6	; "CDVar"
+	18	[-]	GETTABLE 	7 6 7
+	19	[-]	ADD      	5 5 7
+	20	[-]	GETTABLE 	6 1 -9	; "CD"
+	21	[-]	EQ       	1 6 -7	; - nil
+	22	[-]	JMP      	2	; to 25
+	23	[-]	GETTABLE 	6 1 -9	; "CD"
+	24	[-]	ADD      	5 5 6
+	25	[-]	EQ       	1 4 -7	; - nil
+	26	[-]	JMP      	8	; to 35
+	27	[-]	GETGLOBAL	6 -3	; GetPercentCooldownMod
+	28	[-]	GETTABLE 	7 0 4
+	29	[-]	CALL     	6 2 2
+	30	[-]	GETTABLE 	7 1 -10	; "DestVar"
+	31	[-]	ADD      	8 -11 6	; 1 -
+	32	[-]	MUL      	8 5 8
+	33	[-]	SETTABLE 	2 7 8
+	34	[-]	JMP      	3	; to 38
+	35	[-]	GETTABLE 	6 1 -10	; "DestVar"
+	36	[-]	GETTABLE 	7 1 -9	; "CD"
+	37	[-]	SETTABLE 	2 6 7
+	38	[-]	RETURN   	0 1
+constants (11) for 012FDF50:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"GetPercentCooldownMod"
+	4	"TargetVar"
+	5	0
+	6	"CDVar"
+	7	nil
+	8	"CDVarTable"
+	9	"CD"
+	10	"DestVar"
+	11	1
+locals (0) for 012FDF50:
+upvalues (0) for 012FDF50:
+
+function <?:2636,2646> (17 instructions, 68 bytes at 012FDE48)
+2 params, 8 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETTABLE 	3 1 -1	; "TargetVar"
+	2	[-]	EQ       	1 3 -2	; - nil
+	3	[-]	JMP      	5	; to 9
+	4	[-]	GETTABLE 	4 1 -3	; "Stat"
+	5	[-]	GETTABLE 	5 0 3
+	6	[-]	CALL     	4 2 2
+	7	[-]	MOVE     	2 4
+	8	[-]	JMP      	3	; to 12
+	9	[-]	GETTABLE 	4 1 -3	; "Stat"
+	10	[-]	CALL     	4 1 2
+	11	[-]	MOVE     	2 4
+	12	[-]	GETGLOBAL	4 -4	; SetVarInTable
+	13	[-]	MOVE     	5 0
+	14	[-]	MOVE     	6 1
+	15	[-]	MOVE     	7 2
+	16	[-]	CALL     	4 4 1
+	17	[-]	RETURN   	0 1
+constants (4) for 012FDE48:
+	1	"TargetVar"
+	2	nil
+	3	"Stat"
+	4	"SetVarInTable"
+locals (0) for 012FDE48:
+upvalues (0) for 012FDE48:
+
+function <?:2656,2664> (19 instructions, 76 bytes at 012FE1B8)
+2 params, 7 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "TargetVar"
+	7	[-]	EQ       	1 3 -4	; - nil
+	8	[-]	JMP      	6	; to 15
+	9	[-]	GETTABLE 	4 1 -5	; "DestVar"
+	10	[-]	GETGLOBAL	5 -6	; GetLevel
+	11	[-]	GETTABLE 	6 0 3
+	12	[-]	CALL     	5 2 2
+	13	[-]	SETTABLE 	2 4 5
+	14	[-]	JMP      	4	; to 19
+	15	[-]	GETTABLE 	4 1 -5	; "DestVar"
+	16	[-]	GETGLOBAL	5 -6	; GetLevel
+	17	[-]	CALL     	5 1 2
+	18	[-]	SETTABLE 	2 4 5
+	19	[-]	RETURN   	0 1
+constants (6) for 012FE1B8:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"TargetVar"
+	4	nil
+	5	"DestVar"
+	6	"GetLevel"
+locals (0) for 012FE1B8:
+upvalues (0) for 012FE1B8:
+
+function <?:2685,2693> (19 instructions, 76 bytes at 012FE058)
+2 params, 7 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "TargetVar"
+	7	[-]	EQ       	1 3 -4	; - nil
+	8	[-]	JMP      	6	; to 15
+	9	[-]	GETTABLE 	4 1 -5	; "DestVar"
+	10	[-]	GETGLOBAL	5 -6	; GetUnitSignificance
+	11	[-]	GETTABLE 	6 0 3
+	12	[-]	CALL     	5 2 2
+	13	[-]	SETTABLE 	2 4 5
+	14	[-]	JMP      	4	; to 19
+	15	[-]	GETTABLE 	4 1 -5	; "DestVar"
+	16	[-]	GETGLOBAL	5 -6	; GetUnitSignificance
+	17	[-]	CALL     	5 1 2
+	18	[-]	SETTABLE 	2 4 5
+	19	[-]	RETURN   	0 1
+constants (6) for 012FE058:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"TargetVar"
+	4	nil
+	5	"DestVar"
+	6	"GetUnitSignificance"
+locals (0) for 012FE058:
+upvalues (0) for 012FE058:
+
+function <?:2705,2713> (19 instructions, 76 bytes at 012FE108)
+2 params, 7 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "TargetVar"
+	7	[-]	EQ       	1 3 -4	; - nil
+	8	[-]	JMP      	6	; to 15
+	9	[-]	GETTABLE 	4 1 -5	; "DestVar"
+	10	[-]	GETGLOBAL	5 -6	; GetArmor
+	11	[-]	GETTABLE 	6 0 3
+	12	[-]	CALL     	5 2 2
+	13	[-]	SETTABLE 	2 4 5
+	14	[-]	JMP      	4	; to 19
+	15	[-]	GETTABLE 	4 1 -5	; "DestVar"
+	16	[-]	GETGLOBAL	5 -6	; GetArmor
+	17	[-]	CALL     	5 1 2
+	18	[-]	SETTABLE 	2 4 5
+	19	[-]	RETURN   	0 1
+constants (6) for 012FE108:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"TargetVar"
+	4	nil
+	5	"DestVar"
+	6	"GetArmor"
+locals (0) for 012FE108:
+upvalues (0) for 012FE108:
+
+function <?:2724,2732> (19 instructions, 76 bytes at 013018F0)
+2 params, 7 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "TargetVar"
+	7	[-]	EQ       	1 3 -4	; - nil
+	8	[-]	JMP      	6	; to 15
+	9	[-]	GETTABLE 	4 1 -5	; "DestVar"
+	10	[-]	GETGLOBAL	5 -6	; GetSpellBlock
+	11	[-]	GETTABLE 	6 0 3
+	12	[-]	CALL     	5 2 2
+	13	[-]	SETTABLE 	2 4 5
+	14	[-]	JMP      	4	; to 19
+	15	[-]	GETTABLE 	4 1 -5	; "DestVar"
+	16	[-]	GETGLOBAL	5 -6	; GetSpellBlock
+	17	[-]	CALL     	5 1 2
+	18	[-]	SETTABLE 	2 4 5
+	19	[-]	RETURN   	0 1
+constants (6) for 013018F0:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"TargetVar"
+	4	nil
+	5	"DestVar"
+	6	"GetSpellBlock"
+locals (0) for 013018F0:
+upvalues (0) for 013018F0:
+
+function <?:2742,2751> (17 instructions, 68 bytes at 01301318)
+2 params, 8 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETTABLE 	3 1 -1	; "TargetVar"
+	2	[-]	EQ       	1 3 -2	; - nil
+	3	[-]	JMP      	5	; to 9
+	4	[-]	GETGLOBAL	4 -3	; GetTeamID
+	5	[-]	GETTABLE 	5 0 3
+	6	[-]	CALL     	4 2 2
+	7	[-]	MOVE     	2 4
+	8	[-]	JMP      	3	; to 12
+	9	[-]	GETGLOBAL	4 -3	; GetTeamID
+	10	[-]	CALL     	4 1 2
+	11	[-]	MOVE     	2 4
+	12	[-]	GETGLOBAL	4 -4	; SetVarInTable
+	13	[-]	MOVE     	5 0
+	14	[-]	MOVE     	6 1
+	15	[-]	MOVE     	7 2
+	16	[-]	CALL     	4 4 1
+	17	[-]	RETURN   	0 1
+constants (4) for 01301318:
+	1	"TargetVar"
+	2	nil
+	3	"GetTeamID"
+	4	"SetVarInTable"
+locals (0) for 01301318:
+upvalues (0) for 01301318:
+
+function <?:2762,2778> (31 instructions, 124 bytes at 01301840)
+2 params, 7 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "TargetVar"
+	7	[-]	LOADNIL  	4 4
+	8	[-]	EQ       	1 3 -4	; - nil
+	9	[-]	JMP      	5	; to 15
+	10	[-]	GETGLOBAL	5 -5	; GetTeamID
+	11	[-]	GETTABLE 	6 0 3
+	12	[-]	CALL     	5 2 2
+	13	[-]	MOVE     	4 5
+	14	[-]	JMP      	3	; to 18
+	15	[-]	GETGLOBAL	5 -5	; GetTeamID
+	16	[-]	CALL     	5 1 2
+	17	[-]	MOVE     	4 5
+	18	[-]	GETGLOBAL	5 -6	; TEAM_ORDER
+	19	[-]	EQ       	0 4 5
+	20	[-]	JMP      	4	; to 25
+	21	[-]	GETTABLE 	5 1 -7	; "DestVar"
+	22	[-]	GETGLOBAL	6 -8	; TEAM_CHAOS
+	23	[-]	SETTABLE 	2 5 6
+	24	[-]	JMP      	6	; to 31
+	25	[-]	GETGLOBAL	5 -8	; TEAM_CHAOS
+	26	[-]	EQ       	0 4 5
+	27	[-]	JMP      	3	; to 31
+	28	[-]	GETTABLE 	5 1 -7	; "DestVar"
+	29	[-]	GETGLOBAL	6 -6	; TEAM_ORDER
+	30	[-]	SETTABLE 	2 5 6
+	31	[-]	RETURN   	0 1
+constants (8) for 01301840:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"TargetVar"
+	4	nil
+	5	"GetTeamID"
+	6	"TEAM_ORDER"
+	7	"DestVar"
+	8	"TEAM_CHAOS"
+locals (0) for 01301840:
+upvalues (0) for 01301840:
+
+function <?:2796,2802> (14 instructions, 56 bytes at 01301528)
+2 params, 7 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "TargetVar"
+	7	[-]	EQ       	1 3 -4	; - nil
+	8	[-]	JMP      	5	; to 14
+	9	[-]	GETTABLE 	4 1 -5	; "DestVar"
+	10	[-]	GETGLOBAL	5 -6	; GetUnitSkinName
+	11	[-]	GETTABLE 	6 0 3
+	12	[-]	CALL     	5 2 2
+	13	[-]	SETTABLE 	2 4 5
+	14	[-]	RETURN   	0 1
+constants (6) for 01301528:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"TargetVar"
+	4	nil
+	5	"DestVar"
+	6	"GetUnitSkinName"
+locals (0) for 01301528:
+upvalues (0) for 01301528:
+
+function <?:2823,2834> (24 instructions, 96 bytes at 01301580)
+2 params, 10 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 0 -3	; "Owner"
+	7	[-]	LOADNIL  	4 4
+	8	[-]	GETTABLE 	5 1 -4	; "TargetVar"
+	9	[-]	EQ       	1 5 -5	; - nil
+	10	[-]	JMP      	5	; to 16
+	11	[-]	GETGLOBAL	6 -6	; GetTotalAttackDamage
+	12	[-]	GETTABLE 	7 0 5
+	13	[-]	CALL     	6 2 2
+	14	[-]	MOVE     	4 6
+	15	[-]	JMP      	3	; to 19
+	16	[-]	GETGLOBAL	6 -6	; GetTotalAttackDamage
+	17	[-]	CALL     	6 1 2
+	18	[-]	MOVE     	4 6
+	19	[-]	GETGLOBAL	6 -7	; SetVarInTable
+	20	[-]	MOVE     	7 0
+	21	[-]	MOVE     	8 1
+	22	[-]	MOVE     	9 4
+	23	[-]	CALL     	6 4 1
+	24	[-]	RETURN   	0 1
+constants (7) for 01301580:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"Owner"
+	4	"TargetVar"
+	5	nil
+	6	"GetTotalAttackDamage"
+	7	"SetVarInTable"
+locals (0) for 01301580:
+upvalues (0) for 01301580:
+
+function <?:2846,2851> (12 instructions, 48 bytes at 01301738)
+2 params, 6 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 1 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "DestVar"
+	7	[-]	GETTABLE 	4 1 -4	; "Status"
+	8	[-]	GETTABLE 	5 1 -5	; "TargetVar"
+	9	[-]	GETTABLE 	5 0 5
+	10	[-]	CALL     	4 2 2
+	11	[-]	SETTABLE 	2 3 4
+	12	[-]	RETURN   	0 1
+constants (5) for 01301738:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"DestVar"
+	4	"Status"
+	5	"TargetVar"
+locals (0) for 01301738:
+upvalues (0) for 01301738:
+
+function <?:2891,2894> (6 instructions, 24 bytes at 01300F50)
+2 params, 5 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETTABLE 	2 1 -1	; "TargetVar"
+	2	[-]	GETTABLE 	2 0 2
+	3	[-]	GETGLOBAL	3 -2	; ClearAttackTarget
+	4	[-]	MOVE     	4 2
+	5	[-]	CALL     	3 2 1
+	6	[-]	RETURN   	0 1
+constants (2) for 01300F50:
+	1	"TargetVar"
+	2	"ClearAttackTarget"
+locals (0) for 01300F50:
+upvalues (0) for 01300F50:
+
+function <?:3060,3064> (15 instructions, 60 bytes at 01301058)
+2 params, 8 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 1 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "Info"
+	7	[-]	GETTABLE 	4 1 -4	; "TargetVar"
+	8	[-]	GETTABLE 	4 0 4
+	9	[-]	CALL     	3 2 2
+	10	[-]	GETGLOBAL	4 -5	; SetVarInTable
+	11	[-]	MOVE     	5 0
+	12	[-]	MOVE     	6 1
+	13	[-]	MOVE     	7 3
+	14	[-]	CALL     	4 4 1
+	15	[-]	RETURN   	0 1
+constants (5) for 01301058:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"Info"
+	4	"TargetVar"
+	5	"SetVarInTable"
+locals (0) for 01301058:
+upvalues (0) for 01301058:
+
+function <?:3081,3109> (53 instructions, 212 bytes at 013016E0)
+3 params, 11 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETGLOBAL	3 -1	; GetTable
+	2	[-]	MOVE     	4 0
+	3	[-]	GETTABLE 	5 1 -2	; "TrackTimeVarTable"
+	4	[-]	LOADBOOL 	6 0 0
+	5	[-]	CALL     	3 4 2
+	6	[-]	GETGLOBAL	4 -3	; GetTime
+	7	[-]	CALL     	4 1 2
+	8	[-]	GETTABLE 	5 1 -4	; "ExecuteImmediately"
+	9	[-]	GETGLOBAL	6 -5	; GetParam
+	10	[-]	LOADK    	7 -6	; "TimeBetweenExecutions"
+	11	[-]	MOVE     	8 0
+	12	[-]	MOVE     	9 1
+	13	[-]	CALL     	6 4 2
+	14	[-]	GETTABLE 	7 1 -7	; "TickTimeVar"
+	15	[-]	EQ       	1 7 -8	; - nil
+	16	[-]	JMP      	10	; to 27
+	17	[-]	GETGLOBAL	7 -1	; GetTable
+	18	[-]	MOVE     	8 0
+	19	[-]	GETTABLE 	9 1 -9	; "TickTimeVarTable"
+	20	[-]	LOADBOOL 	10 0 0
+	21	[-]	CALL     	7 4 2
+	22	[-]	GETTABLE 	8 1 -7	; "TickTimeVar"
+	23	[-]	GETTABLE 	8 7 8
+	24	[-]	EQ       	1 8 -8	; - nil
+	25	[-]	JMP      	1	; to 27
+	26	[-]	MOVE     	6 8
+	27	[-]	GETTABLE 	7 1 -10	; "TrackTimeVar"
+	28	[-]	GETTABLE 	7 3 7
+	29	[-]	EQ       	0 7 -8	; - nil
+	30	[-]	JMP      	8	; to 39
+	31	[-]	GETTABLE 	7 1 -10	; "TrackTimeVar"
+	32	[-]	SETTABLE 	3 7 4
+	33	[-]	EQ       	0 5 -11	; - true
+	34	[-]	JMP      	4	; to 39
+	35	[-]	GETGLOBAL	7 -12	; ExecuteBuildingBlocks
+	36	[-]	MOVE     	8 2
+	37	[-]	MOVE     	9 0
+	38	[-]	CALL     	7 3 1
+	39	[-]	GETTABLE 	7 1 -10	; "TrackTimeVar"
+	40	[-]	GETTABLE 	7 3 7
+	41	[-]	ADD      	7 7 6
+	42	[-]	LE       	0 7 4
+	43	[-]	JMP      	9	; to 53
+	44	[-]	GETTABLE 	7 1 -10	; "TrackTimeVar"
+	45	[-]	GETTABLE 	8 1 -10	; "TrackTimeVar"
+	46	[-]	GETTABLE 	8 3 8
+	47	[-]	ADD      	8 8 6
+	48	[-]	SETTABLE 	3 7 8
+	49	[-]	GETGLOBAL	7 -12	; ExecuteBuildingBlocks
+	50	[-]	MOVE     	8 2
+	51	[-]	MOVE     	9 0
+	52	[-]	CALL     	7 3 1
+	53	[-]	RETURN   	0 1
+constants (12) for 013016E0:
+	1	"GetTable"
+	2	"TrackTimeVarTable"
+	3	"GetTime"
+	4	"ExecuteImmediately"
+	5	"GetParam"
+	6	"TimeBetweenExecutions"
+	7	"TickTimeVar"
+	8	nil
+	9	"TickTimeVarTable"
+	10	"TrackTimeVar"
+	11	true
+	12	"ExecuteBuildingBlocks"
+locals (0) for 013016E0:
+upvalues (0) for 013016E0:
+
+function <?:3121,3124> (8 instructions, 32 bytes at 01301420)
+3 params, 7 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	3 -1	; GetTable
+	2	[-]	MOVE     	4 0
+	3	[-]	GETTABLE 	5 1 -2	; "TrackTimeVarTable"
+	4	[-]	LOADBOOL 	6 0 0
+	5	[-]	CALL     	3 4 2
+	6	[-]	GETTABLE 	4 1 -3	; "TrackTimeVar"
+	7	[-]	SETTABLE 	3 4 -4	; - nil
+	8	[-]	RETURN   	0 1
+constants (4) for 01301420:
+	1	"GetTable"
+	2	"TrackTimeVarTable"
+	3	"TrackTimeVar"
+	4	nil
+locals (0) for 01301420:
+upvalues (0) for 01301420:
+
+function <?:3136,3146> (17 instructions, 68 bytes at 01301370)
+2 params, 7 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETTABLE 	2 1 -1	; "SrcValue"
+	2	[-]	GETTABLE 	3 1 -2	; "SrcVar"
+	3	[-]	EQ       	1 3 -3	; - nil
+	4	[-]	JMP      	7	; to 12
+	5	[-]	GETGLOBAL	3 -4	; GetTable
+	6	[-]	MOVE     	4 0
+	7	[-]	GETTABLE 	5 1 -5	; "SrcVarTable"
+	8	[-]	LOADBOOL 	6 1 0
+	9	[-]	CALL     	3 4 2
+	10	[-]	GETTABLE 	4 1 -2	; "SrcVar"
+	11	[-]	GETTABLE 	2 3 4
+	12	[-]	GETTABLE 	3 1 -6	; "Status"
+	13	[-]	GETTABLE 	4 1 -7	; "TargetVar"
+	14	[-]	GETTABLE 	4 0 4
+	15	[-]	MOVE     	5 2
+	16	[-]	CALL     	3 3 1
+	17	[-]	RETURN   	0 1
+constants (7) for 01301370:
+	1	"SrcValue"
+	2	"SrcVar"
+	3	nil
+	4	"GetTable"
+	5	"SrcVarTable"
+	6	"Status"
+	7	"TargetVar"
+locals (0) for 01301370:
+upvalues (0) for 01301370:
+
+function <?:3154,3164> (19 instructions, 76 bytes at 01301790)
+2 params, 7 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETTABLE 	2 1 -1	; "ToAlert"
+	2	[-]	GETGLOBAL	3 -2	; GetTable
+	3	[-]	MOVE     	4 0
+	4	[-]	GETTABLE 	5 1 -3	; "SrcVarTable"
+	5	[-]	LOADBOOL 	6 0 0
+	6	[-]	CALL     	3 4 2
+	7	[-]	EQ       	1 3 -4	; - nil
+	8	[-]	JMP      	7	; to 16
+	9	[-]	GETTABLE 	4 1 -5	; "SrcVar"
+	10	[-]	EQ       	1 4 -4	; - nil
+	11	[-]	JMP      	4	; to 16
+	12	[-]	MOVE     	4 2
+	13	[-]	GETTABLE 	5 1 -5	; "SrcVar"
+	14	[-]	GETTABLE 	5 3 5
+	15	[-]	CONCAT   	2 4 5
+	16	[-]	GETGLOBAL	4 -6	; _ALERT
+	17	[-]	MOVE     	5 2
+	18	[-]	CALL     	4 2 1
+	19	[-]	RETURN   	0 1
+constants (6) for 01301790:
+	1	"ToAlert"
+	2	"GetTable"
+	3	"SrcVarTable"
+	4	nil
+	5	"SrcVar"
+	6	"_ALERT"
+locals (0) for 01301790:
+upvalues (0) for 01301790:
+
+function <?:3178,3214> (76 instructions, 304 bytes at 01301898)
+2 params, 16 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetParam
+	2	[-]	LOADK    	3 -2	; "Message"
+	3	[-]	MOVE     	4 0
+	4	[-]	MOVE     	5 1
+	5	[-]	CALL     	2 4 2
+	6	[-]	EQ       	0 2 -3	; - nil
+	7	[-]	JMP      	4	; to 12
+	8	[-]	GETGLOBAL	3 -4	; ReportError
+	9	[-]	LOADK    	4 -5	; "Could not resolve Message param"
+	10	[-]	CALL     	3 2 1
+	11	[-]	RETURN   	0 1
+	12	[-]	LOADBOOL 	3 1 0
+	13	[-]	GETGLOBAL	4 -1	; GetParam
+	14	[-]	LOADK    	5 -6	; "OnUnit"
+	15	[-]	MOVE     	6 0
+	16	[-]	MOVE     	7 1
+	17	[-]	CALL     	4 4 2
+	18	[-]	EQ       	0 4 -3	; - nil
+	19	[-]	JMP      	7	; to 27
+	20	[-]	LOADBOOL 	3 0 0
+	21	[-]	GETGLOBAL	5 -1	; GetParam
+	22	[-]	LOADK    	6 -7	; "OnUnitByFlag"
+	23	[-]	MOVE     	7 0
+	24	[-]	MOVE     	8 1
+	25	[-]	CALL     	5 4 2
+	26	[-]	MOVE     	4 5
+	27	[-]	EQ       	0 4 -3	; - nil
+	28	[-]	JMP      	4	; to 33
+	29	[-]	GETGLOBAL	5 -4	; ReportError
+	30	[-]	LOADK    	6 -8	; "Could not resolve OnUnit param"
+	31	[-]	CALL     	5 2 1
+	32	[-]	RETURN   	0 1
+	33	[-]	LOADBOOL 	5 1 0
+	34	[-]	GETGLOBAL	6 -1	; GetParam
+	35	[-]	LOADK    	7 -9	; "ChampionToSayTo"
+	36	[-]	MOVE     	8 0
+	37	[-]	MOVE     	9 1
+	38	[-]	CALL     	6 4 2
+	39	[-]	EQ       	0 6 -3	; - nil
+	40	[-]	JMP      	7	; to 48
+	41	[-]	LOADBOOL 	5 0 0
+	42	[-]	GETGLOBAL	7 -1	; GetParam
+	43	[-]	LOADK    	8 -10	; "ChampionToSayToByFlag"
+	44	[-]	MOVE     	9 0
+	45	[-]	MOVE     	10 1
+	46	[-]	CALL     	7 4 2
+	47	[-]	MOVE     	6 7
+	48	[-]	EQ       	0 6 -3	; - nil
+	49	[-]	JMP      	4	; to 54
+	50	[-]	GETGLOBAL	7 -4	; ReportError
+	51	[-]	LOADK    	8 -11	; "Could not resolve ChampionToSayTo param"
+	52	[-]	CALL     	7 2 1
+	53	[-]	RETURN   	0 1
+	54	[-]	GETGLOBAL	7 -1	; GetParam
+	55	[-]	LOADK    	8 -12	; "ShowToSpectator"
+	56	[-]	MOVE     	9 0
+	57	[-]	MOVE     	10 1
+	58	[-]	CALL     	7 4 2
+	59	[-]	EQ       	0 7 -3	; - nil
+	60	[-]	JMP      	4	; to 65
+	61	[-]	GETGLOBAL	8 -4	; ReportError
+	62	[-]	LOADK    	9 -13	; "Could not resolve ShowToSpectator param"
+	63	[-]	CALL     	8 2 1
+	64	[-]	RETURN   	0 1
+	65	[-]	GETGLOBAL	8 -14	; SayWithFloatingTextOnUnitToChampion
+	66	[-]	GETGLOBAL	9 -15	; tostring
+	67	[-]	MOVE     	10 2
+	68	[-]	CALL     	9 2 2
+	69	[-]	GETTABLE 	10 1 -16	; "TextType"
+	70	[-]	MOVE     	11 4
+	71	[-]	MOVE     	12 3
+	72	[-]	MOVE     	13 6
+	73	[-]	MOVE     	14 5
+	74	[-]	MOVE     	15 7
+	75	[-]	CALL     	8 8 1
+	76	[-]	RETURN   	0 1
+constants (16) for 01301898:
+	1	"GetParam"
+	2	"Message"
+	3	nil
+	4	"ReportError"
+	5	"Could not resolve Message param"
+	6	"OnUnit"
+	7	"OnUnitByFlag"
+	8	"Could not resolve OnUnit param"
+	9	"ChampionToSayTo"
+	10	"ChampionToSayToByFlag"
+	11	"Could not resolve ChampionToSayTo param"
+	12	"ShowToSpectator"
+	13	"Could not resolve ShowToSpectator param"
+	14	"SayWithFloatingTextOnUnitToChampion"
+	15	"tostring"
+	16	"TextType"
+locals (0) for 01301898:
+upvalues (0) for 01301898:
+
+function <?:3224,3244> (35 instructions, 140 bytes at 013010B0)
+2 params, 9 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	GETTABLE 	2 1 -1	; "ToSay"
+	2	[-]	GETGLOBAL	3 -2	; GetTable
+	3	[-]	MOVE     	4 0
+	4	[-]	GETTABLE 	5 1 -3	; "SrcVarTable"
+	5	[-]	LOADBOOL 	6 0 0
+	6	[-]	CALL     	3 4 2
+	7	[-]	EQ       	1 3 -4	; - nil
+	8	[-]	JMP      	9	; to 18
+	9	[-]	GETTABLE 	4 1 -5	; "SrcVar"
+	10	[-]	EQ       	1 4 -4	; - nil
+	11	[-]	JMP      	6	; to 18
+	12	[-]	MOVE     	4 2
+	13	[-]	GETGLOBAL	5 -6	; tostring
+	14	[-]	GETTABLE 	6 1 -5	; "SrcVar"
+	15	[-]	GETTABLE 	6 3 6
+	16	[-]	CALL     	5 2 2
+	17	[-]	CONCAT   	2 4 5
+	18	[-]	LOADNIL  	4 4
+	19	[-]	GETTABLE 	5 1 -7	; "OwnerVar"
+	20	[-]	EQ       	1 5 -4	; - nil
+	21	[-]	JMP      	3	; to 25
+	22	[-]	GETTABLE 	5 1 -7	; "OwnerVar"
+	23	[-]	GETTABLE 	4 0 5
+	24	[-]	JMP      	1	; to 26
+	25	[-]	GETTABLE 	4 0 -8	; "Owner"
+	26	[-]	GETTABLE 	5 1 -9	; "TextType"
+	27	[-]	EQ       	0 5 -4	; - nil
+	28	[-]	JMP      	1	; to 30
+	29	[-]	SETTABLE 	1 -9 -10	; "TextType" 0
+	30	[-]	GETGLOBAL	5 -11	; Say
+	31	[-]	MOVE     	6 4
+	32	[-]	MOVE     	7 2
+	33	[-]	GETTABLE 	8 1 -9	; "TextType"
+	34	[-]	CALL     	5 4 1
+	35	[-]	RETURN   	0 1
+constants (11) for 013010B0:
+	1	"ToSay"
+	2	"GetTable"
+	3	"SrcVarTable"
+	4	nil
+	5	"SrcVar"
+	6	"tostring"
+	7	"OwnerVar"
+	8	"Owner"
+	9	"TextType"
+	10	0
+	11	"Say"
+locals (0) for 013010B0:
+upvalues (0) for 013010B0:
+
+function <?:3254,3274> (35 instructions, 140 bytes at 01301630)
+2 params, 9 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	GETTABLE 	2 1 -1	; "ToSay"
+	2	[-]	GETGLOBAL	3 -2	; GetTable
+	3	[-]	MOVE     	4 0
+	4	[-]	GETTABLE 	5 1 -3	; "SrcVarTable"
+	5	[-]	LOADBOOL 	6 0 0
+	6	[-]	CALL     	3 4 2
+	7	[-]	EQ       	1 3 -4	; - nil
+	8	[-]	JMP      	9	; to 18
+	9	[-]	GETTABLE 	4 1 -5	; "SrcVar"
+	10	[-]	EQ       	1 4 -4	; - nil
+	11	[-]	JMP      	6	; to 18
+	12	[-]	MOVE     	4 2
+	13	[-]	GETGLOBAL	5 -6	; tostring
+	14	[-]	GETTABLE 	6 1 -5	; "SrcVar"
+	15	[-]	GETTABLE 	6 3 6
+	16	[-]	CALL     	5 2 2
+	17	[-]	CONCAT   	2 4 5
+	18	[-]	LOADNIL  	4 4
+	19	[-]	GETTABLE 	5 1 -7	; "OwnerVar"
+	20	[-]	EQ       	1 5 -4	; - nil
+	21	[-]	JMP      	3	; to 25
+	22	[-]	GETTABLE 	5 1 -7	; "OwnerVar"
+	23	[-]	GETTABLE 	4 0 5
+	24	[-]	JMP      	1	; to 26
+	25	[-]	GETTABLE 	4 0 -8	; "Owner"
+	26	[-]	GETTABLE 	5 1 -9	; "TextType"
+	27	[-]	EQ       	0 5 -4	; - nil
+	28	[-]	JMP      	1	; to 30
+	29	[-]	SETTABLE 	1 -9 -10	; "TextType" 0
+	30	[-]	GETGLOBAL	5 -11	; Say
+	31	[-]	MOVE     	6 4
+	32	[-]	MOVE     	7 2
+	33	[-]	GETTABLE 	8 1 -9	; "TextType"
+	34	[-]	CALL     	5 4 1
+	35	[-]	RETURN   	0 1
+constants (11) for 01301630:
+	1	"ToSay"
+	2	"GetTable"
+	3	"SrcVarTable"
+	4	nil
+	5	"SrcVar"
+	6	"tostring"
+	7	"OwnerVar"
+	8	"Owner"
+	9	"TextType"
+	10	0
+	11	"Say"
+locals (0) for 01301630:
+upvalues (0) for 01301630:
+
+function <?:3825,3828> (12 instructions, 48 bytes at 013013C8)
+2 params, 7 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 1 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "DestVar"
+	7	[-]	GETGLOBAL	4 -4	; BBLuaGetGold
+	8	[-]	MOVE     	5 0
+	9	[-]	MOVE     	6 1
+	10	[-]	CALL     	4 3 2
+	11	[-]	SETTABLE 	2 3 4
+	12	[-]	RETURN   	0 1
+constants (4) for 013013C8:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"DestVar"
+	4	"BBLuaGetGold"
+locals (0) for 013013C8:
+upvalues (0) for 013013C8:
+
+function <?:3838,3841> (12 instructions, 48 bytes at 01300EA0)
+2 params, 7 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 1 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "DestVar"
+	7	[-]	GETGLOBAL	4 -4	; BBLuaGetTotalGold
+	8	[-]	MOVE     	5 0
+	9	[-]	MOVE     	6 1
+	10	[-]	CALL     	4 3 2
+	11	[-]	SETTABLE 	2 3 4
+	12	[-]	RETURN   	0 1
+constants (4) for 01300EA0:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"DestVar"
+	4	"BBLuaGetTotalGold"
+locals (0) for 01300EA0:
+upvalues (0) for 01300EA0:
+
+function <?:4274,4277> (16 instructions, 64 bytes at 013015D8)
+2 params, 10 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; SpellBuffAdd
+	2	[-]	GETTABLE 	3 1 -2	; "OwnerVar"
+	3	[-]	GETTABLE 	3 0 3
+	4	[-]	GETTABLE 	4 1 -2	; "OwnerVar"
+	5	[-]	GETTABLE 	4 0 4
+	6	[-]	LOADK    	5 -3	; "TeleportMarker"
+	7	[-]	LOADK    	6 -4	; 0
+	8	[-]	LOADK    	7 -5	; 1
+	9	[-]	LOADK    	8 -6	; 25000
+	10	[-]	GETTABLE 	9 0 -7	; "NextBuffVars"
+	11	[-]	CALL     	2 8 1
+	12	[-]	GETGLOBAL	2 -8	; BBTeleportToPositionHelper
+	13	[-]	MOVE     	3 0
+	14	[-]	MOVE     	4 1
+	15	[-]	CALL     	2 3 1
+	16	[-]	RETURN   	0 1
+constants (8) for 013015D8:
+	1	"SpellBuffAdd"
+	2	"OwnerVar"
+	3	"TeleportMarker"
+	4	0
+	5	1
+	6	25000
+	7	"NextBuffVars"
+	8	"BBTeleportToPositionHelper"
+locals (0) for 013015D8:
+upvalues (0) for 013015D8:
+
+function <?:4292,4324> (62 instructions, 248 bytes at 01301688)
+2 params, 10 slots, 0 upvalues, 0 locals, 19 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "XVarTable"
+	4	[-]	LOADBOOL 	5 1 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "XVar"
+	7	[-]	EQ       	1 3 -4	; - nil
+	8	[-]	JMP      	6	; to 15
+	9	[-]	EQ       	1 2 -4	; - nil
+	10	[-]	JMP      	4	; to 15
+	11	[-]	GETTABLE 	3 1 -3	; "XVar"
+	12	[-]	GETTABLE 	3 2 3
+	13	[-]	SETGLOBAL	3 -5	; Xloc
+	14	[-]	JMP      	2	; to 17
+	15	[-]	GETTABLE 	3 1 -6	; "X"
+	16	[-]	SETGLOBAL	3 -5	; Xloc
+	17	[-]	GETGLOBAL	3 -1	; GetTable
+	18	[-]	MOVE     	4 0
+	19	[-]	GETTABLE 	5 1 -7	; "YVarTable"
+	20	[-]	LOADBOOL 	6 1 0
+	21	[-]	CALL     	3 4 2
+	22	[-]	GETTABLE 	4 1 -8	; "YVar"
+	23	[-]	EQ       	1 4 -4	; - nil
+	24	[-]	JMP      	6	; to 31
+	25	[-]	EQ       	1 3 -4	; - nil
+	26	[-]	JMP      	4	; to 31
+	27	[-]	GETTABLE 	4 1 -8	; "YVar"
+	28	[-]	GETTABLE 	4 3 4
+	29	[-]	SETGLOBAL	4 -9	; Yloc
+	30	[-]	JMP      	2	; to 33
+	31	[-]	GETTABLE 	4 1 -10	; "Y"
+	32	[-]	SETGLOBAL	4 -9	; Yloc
+	33	[-]	GETGLOBAL	4 -1	; GetTable
+	34	[-]	MOVE     	5 0
+	35	[-]	GETTABLE 	6 1 -11	; "ZVarTable"
+	36	[-]	LOADBOOL 	7 1 0
+	37	[-]	CALL     	4 4 2
+	38	[-]	GETTABLE 	5 1 -12	; "ZVar"
+	39	[-]	EQ       	1 5 -4	; - nil
+	40	[-]	JMP      	6	; to 47
+	41	[-]	EQ       	1 4 -4	; - nil
+	42	[-]	JMP      	4	; to 47
+	43	[-]	GETTABLE 	5 1 -12	; "ZVar"
+	44	[-]	GETTABLE 	5 4 5
+	45	[-]	SETGLOBAL	5 -13	; Zloc
+	46	[-]	JMP      	2	; to 49
+	47	[-]	GETTABLE 	5 1 -14	; "Z"
+	48	[-]	SETGLOBAL	5 -13	; Zloc
+	49	[-]	GETTABLE 	5 1 -15	; "OwnerVar"
+	50	[-]	GETGLOBAL	6 -16	; Make3DPoint
+	51	[-]	GETGLOBAL	7 -5	; Xloc
+	52	[-]	GETGLOBAL	8 -9	; Yloc
+	53	[-]	GETGLOBAL	9 -13	; Zloc
+	54	[-]	CALL     	6 4 2
+	55	[-]	SETTABLE 	0 -17 6	; "position" -
+	56	[-]	SETTABLE 	1 -15 5	; "OwnerVar" -
+	57	[-]	SETTABLE 	1 -18 -17	; "CastPositionName" "position"
+	58	[-]	GETGLOBAL	7 -19	; BBTeleportToPosition
+	59	[-]	MOVE     	8 0
+	60	[-]	MOVE     	9 1
+	61	[-]	CALL     	7 3 1
+	62	[-]	RETURN   	0 1
+constants (19) for 01301688:
+	1	"GetTable"
+	2	"XVarTable"
+	3	"XVar"
+	4	nil
+	5	"Xloc"
+	6	"X"
+	7	"YVarTable"
+	8	"YVar"
+	9	"Yloc"
+	10	"Y"
+	11	"ZVarTable"
+	12	"ZVar"
+	13	"Zloc"
+	14	"Z"
+	15	"OwnerVar"
+	16	"Make3DPoint"
+	17	"position"
+	18	"CastPositionName"
+	19	"BBTeleportToPosition"
+locals (0) for 01301688:
+upvalues (0) for 01301688:
+
+function <?:5446,5450> (13 instructions, 52 bytes at 01300EF8)
+2 params, 8 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "CenterTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETGLOBAL	3 -3	; DefUpdateAura
+	7	[-]	GETTABLE 	4 1 -4	; "CenterVar"
+	8	[-]	GETTABLE 	4 2 4
+	9	[-]	GETTABLE 	5 1 -5	; "Range"
+	10	[-]	GETTABLE 	6 1 -6	; "UnitScan"
+	11	[-]	GETTABLE 	7 1 -7	; "BuffName"
+	12	[-]	CALL     	3 5 1
+	13	[-]	RETURN   	0 1
+constants (7) for 01300EF8:
+	1	"GetTable"
+	2	"CenterTable"
+	3	"DefUpdateAura"
+	4	"CenterVar"
+	5	"Range"
+	6	"UnitScan"
+	7	"BuffName"
+locals (0) for 01300EF8:
+upvalues (0) for 01300EF8:
+
+function <?:5462,5465> (10 instructions, 40 bytes at 01301000)
+2 params, 6 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "TargetTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETGLOBAL	3 -3	; ReincarnateNonDeadHero
+	7	[-]	GETTABLE 	4 1 -4	; "TargetVar"
+	8	[-]	GETTABLE 	4 2 4
+	9	[-]	CALL     	3 2 1
+	10	[-]	RETURN   	0 1
+constants (4) for 01301000:
+	1	"GetTable"
+	2	"TargetTable"
+	3	"ReincarnateNonDeadHero"
+	4	"TargetVar"
+locals (0) for 01301000:
+upvalues (0) for 01301000:
+
+function <?:5479,5484> (13 instructions, 52 bytes at 01301478)
+2 params, 7 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 1 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "DestVar"
+	7	[-]	GETTABLE 	4 1 -4	; "Function"
+	8	[-]	GETTABLE 	5 1 -5	; "OwnerVar"
+	9	[-]	GETTABLE 	5 0 5
+	10	[-]	GETTABLE 	6 1 -6	; "PARType"
+	11	[-]	CALL     	4 3 2
+	12	[-]	SETTABLE 	2 3 4
+	13	[-]	RETURN   	0 1
+constants (6) for 01301478:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"DestVar"
+	4	"Function"
+	5	"OwnerVar"
+	6	"PARType"
+locals (0) for 01301478:
+upvalues (0) for 01301478:
+
+function <?:5601,5618> (32 instructions, 128 bytes at 013014D0)
+2 params, 11 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETTABLE 	2 1 -1	; "WhomToOrderVar"
+	2	[-]	GETTABLE 	2 0 2
+	3	[-]	GETTABLE 	3 1 -2	; "TargetOfOrderVar"
+	4	[-]	GETTABLE 	3 0 3
+	5	[-]	GETGLOBAL	4 -3	; GetTable
+	6	[-]	MOVE     	5 0
+	7	[-]	GETTABLE 	6 1 -4	; "SrcVarTable"
+	8	[-]	LOADBOOL 	7 0 0
+	9	[-]	CALL     	4 4 2
+	10	[-]	LOADNIL  	5 5
+	11	[-]	GETTABLE 	6 1 -5	; "SrcVar"
+	12	[-]	EQ       	1 6 -6	; - nil
+	13	[-]	JMP      	5	; to 19
+	14	[-]	EQ       	1 4 -6	; - nil
+	15	[-]	JMP      	3	; to 19
+	16	[-]	GETTABLE 	6 1 -5	; "SrcVar"
+	17	[-]	GETTABLE 	5 4 6
+	18	[-]	JMP      	4	; to 23
+	19	[-]	GETGLOBAL	6 -7	; GetPosition
+	20	[-]	MOVE     	7 3
+	21	[-]	CALL     	6 2 2
+	22	[-]	MOVE     	5 6
+	23	[-]	EQ       	0 3 -6	; - nil
+	24	[-]	JMP      	1	; to 26
+	25	[-]	MOVE     	3 2
+	26	[-]	GETGLOBAL	6 -8	; IssueOrder
+	27	[-]	MOVE     	7 2
+	28	[-]	GETTABLE 	8 1 -9	; "Order"
+	29	[-]	MOVE     	9 5
+	30	[-]	MOVE     	10 3
+	31	[-]	CALL     	6 5 1
+	32	[-]	RETURN   	0 1
+constants (9) for 013014D0:
+	1	"WhomToOrderVar"
+	2	"TargetOfOrderVar"
+	3	"GetTable"
+	4	"SrcVarTable"
+	5	"SrcVar"
+	6	nil
+	7	"GetPosition"
+	8	"IssueOrder"
+	9	"Order"
+locals (0) for 013014D0:
+upvalues (0) for 013014D0:
+
+function <?:5630,5633> (9 instructions, 36 bytes at 01300FA8)
+2 params, 6 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetParam
+	2	[-]	LOADK    	3 -2	; "NewRange"
+	3	[-]	MOVE     	4 0
+	4	[-]	MOVE     	5 1
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETGLOBAL	3 -3	; SetSpellCastRange
+	7	[-]	MOVE     	4 2
+	8	[-]	CALL     	3 2 1
+	9	[-]	RETURN   	0 1
+constants (3) for 01300FA8:
+	1	"GetParam"
+	2	"NewRange"
+	3	"SetSpellCastRange"
+locals (0) for 01300FA8:
+upvalues (0) for 01300FA8:
+
+function <?:5644,5647> (10 instructions, 40 bytes at 01301108)
+2 params, 6 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "DestVarTable"
+	4	[-]	LOADBOOL 	5 1 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "DestVar"
+	7	[-]	GETGLOBAL	4 -4	; GetTime
+	8	[-]	CALL     	4 1 2
+	9	[-]	SETTABLE 	2 3 4
+	10	[-]	RETURN   	0 1
+constants (4) for 01301108:
+	1	"GetTable"
+	2	"DestVarTable"
+	3	"DestVar"
+	4	"GetTime"
+locals (0) for 01301108:
+upvalues (0) for 01301108:
+
+function <?:5658,5663> (16 instructions, 64 bytes at 01301160)
+2 params, 9 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETTABLE 	2 1 -1	; "ObjectVar1"
+	2	[-]	GETTABLE 	2 0 2
+	3	[-]	GETTABLE 	3 1 -2	; "ObjectVar2"
+	4	[-]	GETTABLE 	3 0 3
+	5	[-]	GETGLOBAL	4 -3	; GetTable
+	6	[-]	MOVE     	5 0
+	7	[-]	GETTABLE 	6 1 -4	; "DestVarTable"
+	8	[-]	LOADBOOL 	7 1 0
+	9	[-]	CALL     	4 4 2
+	10	[-]	GETTABLE 	5 1 -5	; "DestVar"
+	11	[-]	GETGLOBAL	6 -6	; DistanceBetweenObjectBounds
+	12	[-]	MOVE     	7 2
+	13	[-]	MOVE     	8 3
+	14	[-]	CALL     	6 3 2
+	15	[-]	SETTABLE 	4 5 6
+	16	[-]	RETURN   	0 1
+constants (6) for 01301160:
+	1	"ObjectVar1"
+	2	"ObjectVar2"
+	3	"GetTable"
+	4	"DestVarTable"
+	5	"DestVar"
+	6	"DistanceBetweenObjectBounds"
+locals (0) for 01301160:
+upvalues (0) for 01301160:
+
+function <?:5674,5680> (21 instructions, 84 bytes at 013011B8)
+2 params, 10 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETTABLE 	2 1 -1	; "ObjectVar"
+	2	[-]	GETTABLE 	2 0 2
+	3	[-]	GETGLOBAL	3 -2	; GetTable
+	4	[-]	MOVE     	4 0
+	5	[-]	GETTABLE 	5 1 -3	; "PointVarTable"
+	6	[-]	LOADBOOL 	6 1 0
+	7	[-]	CALL     	3 4 2
+	8	[-]	GETTABLE 	4 1 -4	; "PointVar"
+	9	[-]	GETTABLE 	4 3 4
+	10	[-]	GETGLOBAL	5 -2	; GetTable
+	11	[-]	MOVE     	6 0
+	12	[-]	GETTABLE 	7 1 -5	; "DestVarTable"
+	13	[-]	LOADBOOL 	8 1 0
+	14	[-]	CALL     	5 4 2
+	15	[-]	GETTABLE 	6 1 -6	; "DestVar"
+	16	[-]	GETGLOBAL	7 -7	; DistanceBetweenObjectCenterAndPoint
+	17	[-]	MOVE     	8 2
+	18	[-]	MOVE     	9 4
+	19	[-]	CALL     	7 3 2
+	20	[-]	SETTABLE 	5 6 7
+	21	[-]	RETURN   	0 1
+constants (7) for 013011B8:
+	1	"ObjectVar"
+	2	"GetTable"
+	3	"PointVarTable"
+	4	"PointVar"
+	5	"DestVarTable"
+	6	"DestVar"
+	7	"DistanceBetweenObjectCenterAndPoint"
+locals (0) for 013011B8:
+upvalues (0) for 013011B8:
+
+function <?:5691,5697> (22 instructions, 88 bytes at 01301210)
+2 params, 9 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetParam
+	2	[-]	LOADK    	3 -2	; "Point1"
+	3	[-]	MOVE     	4 0
+	4	[-]	MOVE     	5 1
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETGLOBAL	3 -1	; GetParam
+	7	[-]	LOADK    	4 -3	; "Point2"
+	8	[-]	MOVE     	5 0
+	9	[-]	MOVE     	6 1
+	10	[-]	CALL     	3 4 2
+	11	[-]	GETGLOBAL	4 -4	; GetTable
+	12	[-]	MOVE     	5 0
+	13	[-]	GETTABLE 	6 1 -5	; "DestVarTable"
+	14	[-]	LOADBOOL 	7 1 0
+	15	[-]	CALL     	4 4 2
+	16	[-]	GETTABLE 	5 1 -6	; "DestVar"
+	17	[-]	GETGLOBAL	6 -7	; DistanceBetweenPoints
+	18	[-]	MOVE     	7 2
+	19	[-]	MOVE     	8 3
+	20	[-]	CALL     	6 3 2
+	21	[-]	SETTABLE 	4 5 6
+	22	[-]	RETURN   	0 1
+constants (7) for 01301210:
+	1	"GetParam"
+	2	"Point1"
+	3	"Point2"
+	4	"GetTable"
+	5	"DestVarTable"
+	6	"DestVar"
+	7	"DistanceBetweenPoints"
+locals (0) for 01301210:
+upvalues (0) for 01301210:
+
+function <?:5718,5791> (125 instructions, 500 bytes at 01301D68)
+3 params, 14 slots, 0 upvalues, 0 locals, 30 constants, 0 functions
+	1	[-]	LOADK    	5 -1	; 0
+	2	[-]	LOADNIL  	6 6
+	3	[-]	GETTABLE 	7 1 -2	; "ObjectDistanceType"
+	4	[-]	GETTABLE 	8 1 -3	; "ObjectVar1"
+	5	[-]	GETTABLE 	3 0 8
+	6	[-]	GETTABLE 	8 1 -4	; "ObjectVar2"
+	7	[-]	GETTABLE 	4 0 8
+	8	[-]	EQ       	0 -5 4	; nil -
+	9	[-]	JMP      	11	; to 21
+	10	[-]	GETTABLE 	8 1 -6	; "Point2Var"
+	11	[-]	EQ       	1 -5 8	; nil -
+	12	[-]	JMP      	8	; to 21
+	13	[-]	GETGLOBAL	8 -7	; GetTable
+	14	[-]	MOVE     	9 0
+	15	[-]	GETTABLE 	10 1 -8	; "Point2VarTable"
+	16	[-]	LOADBOOL 	11 1 0
+	17	[-]	CALL     	8 4 2
+	18	[-]	GETTABLE 	9 1 -6	; "Point2Var"
+	19	[-]	GETTABLE 	4 8 9
+	20	[-]	ADD      	5 5 -9	; - 1
+	21	[-]	EQ       	0 -5 3	; nil -
+	22	[-]	JMP      	16	; to 39
+	23	[-]	GETTABLE 	8 1 -10	; "Point1Var"
+	24	[-]	EQ       	1 -5 8	; nil -
+	25	[-]	JMP      	13	; to 39
+	26	[-]	GETGLOBAL	8 -7	; GetTable
+	27	[-]	MOVE     	9 0
+	28	[-]	GETTABLE 	10 1 -11	; "Point1VarTable"
+	29	[-]	LOADBOOL 	11 1 0
+	30	[-]	CALL     	8 4 2
+	31	[-]	GETTABLE 	9 1 -10	; "Point1Var"
+	32	[-]	GETTABLE 	3 8 9
+	33	[-]	ADD      	5 5 -9	; - 1
+	34	[-]	EQ       	0 -9 5	; 1 -
+	35	[-]	JMP      	3	; to 39
+	36	[-]	MOVE     	9 4
+	37	[-]	MOVE     	4 3
+	38	[-]	MOVE     	3 9
+	39	[-]	EQ       	1 -5 7	; nil -
+	40	[-]	JMP      	41	; to 82
+	41	[-]	EQ       	0 -1 5	; 0 -
+	42	[-]	JMP      	18	; to 61
+	43	[-]	GETGLOBAL	8 -12	; OBJECT_CENTER
+	44	[-]	EQ       	0 8 7
+	45	[-]	JMP      	2	; to 48
+	46	[-]	GETGLOBAL	6 -13	; IfDistanceBetweenObjectCentersLessThan
+	47	[-]	JMP      	34	; to 82
+	48	[-]	GETGLOBAL	8 -14	; OBJECT_BOUNDARY
+	49	[-]	EQ       	0 8 7
+	50	[-]	JMP      	2	; to 53
+	51	[-]	GETGLOBAL	6 -15	; IfDistanceBetweenObjectBoundsLessThan
+	52	[-]	JMP      	29	; to 82
+	53	[-]	GETTABLE 	8 1 -16	; "OwnerVar"
+	54	[-]	GETTABLE 	8 0 8
+	55	[-]	GETGLOBAL	9 -17	; Say
+	56	[-]	MOVE     	10 8
+	57	[-]	LOADK    	11 -18	; "invalid object distance type"
+	58	[-]	LOADK    	12 -1	; 0
+	59	[-]	CALL     	9 4 1
+	60	[-]	JMP      	21	; to 82
+	61	[-]	EQ       	0 -9 5	; 1 -
+	62	[-]	JMP      	18	; to 81
+	63	[-]	GETGLOBAL	8 -12	; OBJECT_CENTER
+	64	[-]	EQ       	0 8 7
+	65	[-]	JMP      	2	; to 68
+	66	[-]	GETGLOBAL	6 -19	; IfDistanceBetweenObjectCenterAndPointLessThan
+	67	[-]	JMP      	14	; to 82
+	68	[-]	GETGLOBAL	8 -14	; OBJECT_BOUNDARY
+	69	[-]	EQ       	0 8 7
+	70	[-]	JMP      	2	; to 73
+	71	[-]	GETGLOBAL	6 -20	; IfDistanceBetweenObjectBoundAndPointLessThan
+	72	[-]	JMP      	9	; to 82
+	73	[-]	GETTABLE 	8 1 -16	; "OwnerVar"
+	74	[-]	GETTABLE 	8 0 8
+	75	[-]	GETGLOBAL	9 -17	; Say
+	76	[-]	MOVE     	10 8
+	77	[-]	LOADK    	11 -18	; "invalid object distance type"
+	78	[-]	LOADK    	12 -1	; 0
+	79	[-]	CALL     	9 4 1
+	80	[-]	JMP      	1	; to 82
+	81	[-]	GETGLOBAL	6 -21	; IfDistanceBetweenPointsLessThan
+	82	[-]	GETTABLE 	8 1 -22	; "Distance"
+	83	[-]	GETGLOBAL	9 -7	; GetTable
+	84	[-]	MOVE     	10 0
+	85	[-]	GETTABLE 	11 1 -23	; "DistanceVarTable"
+	86	[-]	LOADBOOL 	12 1 0
+	87	[-]	CALL     	9 4 2
+	88	[-]	GETTABLE 	10 1 -24	; "DistanceVar"
+	89	[-]	EQ       	1 10 -5	; - nil
+	90	[-]	JMP      	5	; to 96
+	91	[-]	EQ       	1 9 -5	; - nil
+	92	[-]	JMP      	3	; to 96
+	93	[-]	GETTABLE 	10 1 -24	; "DistanceVar"
+	94	[-]	GETTABLE 	10 9 10
+	95	[-]	ADD      	8 8 10
+	96	[-]	EQ       	1 3 -5	; - nil
+	97	[-]	JMP      	26	; to 124
+	98	[-]	EQ       	1 4 -5	; - nil
+	99	[-]	JMP      	24	; to 124
+	100	[-]	EQ       	1 6 -5	; - nil
+	101	[-]	JMP      	22	; to 124
+	102	[-]	EQ       	1 8 -5	; - nil
+	103	[-]	JMP      	20	; to 124
+	104	[-]	MOVE     	10 6
+	105	[-]	MOVE     	11 3
+	106	[-]	MOVE     	12 4
+	107	[-]	MOVE     	13 8
+	108	[-]	CALL     	10 4 2
+	109	[-]	GETGLOBAL	11 -25	; CO_GREATER_THAN_OR_EQUAL
+	110	[-]	GETTABLE 	12 1 -26	; "CompareOp"
+	111	[-]	EQ       	0 11 12
+	112	[-]	JMP      	1	; to 114
+	113	[-]	NOT      	10 10
+	114	[-]	TEST     	10 0 0
+	115	[-]	JMP      	6	; to 122
+	116	[-]	GETGLOBAL	11 -27	; ExecuteBuildingBlocks
+	117	[-]	MOVE     	12 2
+	118	[-]	MOVE     	13 0
+	119	[-]	CALL     	11 3 1
+	120	[-]	SETTABLE 	0 -28 -29	; "LastIfSucceeded" true
+	121	[-]	JMP      	3	; to 125
+	122	[-]	SETTABLE 	0 -28 -30	; "LastIfSucceeded" false
+	123	[-]	JMP      	1	; to 125
+	124	[-]	SETTABLE 	0 -28 -30	; "LastIfSucceeded" false
+	125	[-]	RETURN   	0 1
+constants (30) for 01301D68:
+	1	0
+	2	"ObjectDistanceType"
+	3	"ObjectVar1"
+	4	"ObjectVar2"
+	5	nil
+	6	"Point2Var"
+	7	"GetTable"
+	8	"Point2VarTable"
+	9	1
+	10	"Point1Var"
+	11	"Point1VarTable"
+	12	"OBJECT_CENTER"
+	13	"IfDistanceBetweenObjectCentersLessThan"
+	14	"OBJECT_BOUNDARY"
+	15	"IfDistanceBetweenObjectBoundsLessThan"
+	16	"OwnerVar"
+	17	"Say"
+	18	"invalid object distance type"
+	19	"IfDistanceBetweenObjectCenterAndPointLessThan"
+	20	"IfDistanceBetweenObjectBoundAndPointLessThan"
+	21	"IfDistanceBetweenPointsLessThan"
+	22	"Distance"
+	23	"DistanceVarTable"
+	24	"DistanceVar"
+	25	"CO_GREATER_THAN_OR_EQUAL"
+	26	"CompareOp"
+	27	"ExecuteBuildingBlocks"
+	28	"LastIfSucceeded"
+	29	true
+	30	false
+locals (0) for 01301D68:
+upvalues (0) for 01301D68:
+
+function <?:5803,5808> (17 instructions, 68 bytes at 013019F8)
+2 params, 10 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETTABLE 	2 1 -1	; "TargetVar"
+	2	[-]	GETTABLE 	2 0 2
+	3	[-]	GETTABLE 	3 1 -2	; "CasterVar"
+	4	[-]	GETTABLE 	3 0 3
+	5	[-]	GETGLOBAL	4 -3	; GetTable
+	6	[-]	MOVE     	5 0
+	7	[-]	GETTABLE 	6 1 -4	; "DestVarTable"
+	8	[-]	LOADBOOL 	7 1 0
+	9	[-]	CALL     	4 4 2
+	10	[-]	GETTABLE 	5 1 -5	; "DestVar"
+	11	[-]	GETGLOBAL	6 -6	; SpellBuffCount
+	12	[-]	MOVE     	7 2
+	13	[-]	GETTABLE 	8 1 -7	; "BuffName"
+	14	[-]	MOVE     	9 3
+	15	[-]	CALL     	6 4 2
+	16	[-]	SETTABLE 	4 5 6
+	17	[-]	RETURN   	0 1
+constants (7) for 013019F8:
+	1	"TargetVar"
+	2	"CasterVar"
+	3	"GetTable"
+	4	"DestVarTable"
+	5	"DestVar"
+	6	"SpellBuffCount"
+	7	"BuffName"
+locals (0) for 013019F8:
+upvalues (0) for 013019F8:
+
+function <?:5819,5823> (15 instructions, 60 bytes at 01301C08)
+2 params, 9 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETTABLE 	2 1 -1	; "TargetVar"
+	2	[-]	GETTABLE 	2 0 2
+	3	[-]	GETGLOBAL	3 -2	; GetTable
+	4	[-]	MOVE     	4 0
+	5	[-]	GETTABLE 	5 1 -3	; "DestVarTable"
+	6	[-]	LOADBOOL 	6 1 0
+	7	[-]	CALL     	3 4 2
+	8	[-]	GETTABLE 	4 1 -4	; "DestVar"
+	9	[-]	GETGLOBAL	5 -5	; SpellBuffCount
+	10	[-]	MOVE     	6 2
+	11	[-]	GETTABLE 	7 1 -6	; "BuffName"
+	12	[-]	GETGLOBAL	8 -7	; caster
+	13	[-]	CALL     	5 4 2
+	14	[-]	SETTABLE 	3 4 5
+	15	[-]	RETURN   	0 1
+constants (7) for 01301C08:
+	1	"TargetVar"
+	2	"GetTable"
+	3	"DestVarTable"
+	4	"DestVar"
+	5	"SpellBuffCount"
+	6	"BuffName"
+	7	"caster"
+locals (0) for 01301C08:
+upvalues (0) for 01301C08:
+
+function <?:6204,6219> (30 instructions, 120 bytes at 01301E18)
+2 params, 7 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "ScaleVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	LOADNIL  	3 3
+	7	[-]	GETTABLE 	4 1 -3	; "OwnerVar"
+	8	[-]	EQ       	1 4 -4	; - nil
+	9	[-]	JMP      	3	; to 13
+	10	[-]	GETTABLE 	4 1 -3	; "OwnerVar"
+	11	[-]	GETTABLE 	3 0 4
+	12	[-]	JMP      	1	; to 14
+	13	[-]	GETTABLE 	3 0 -5	; "Owner"
+	14	[-]	GETTABLE 	4 1 -6	; "ScaleVar"
+	15	[-]	EQ       	1 4 -4	; - nil
+	16	[-]	JMP      	9	; to 26
+	17	[-]	GETTABLE 	4 1 -2	; "ScaleVarTable"
+	18	[-]	EQ       	1 4 -4	; - nil
+	19	[-]	JMP      	6	; to 26
+	20	[-]	GETGLOBAL	4 -7	; SetScaleSkinCoef
+	21	[-]	GETTABLE 	5 1 -6	; "ScaleVar"
+	22	[-]	GETTABLE 	5 2 5
+	23	[-]	MOVE     	6 3
+	24	[-]	CALL     	4 3 1
+	25	[-]	JMP      	4	; to 30
+	26	[-]	GETGLOBAL	4 -7	; SetScaleSkinCoef
+	27	[-]	GETTABLE 	5 1 -8	; "Scale"
+	28	[-]	MOVE     	6 3
+	29	[-]	CALL     	4 3 1
+	30	[-]	RETURN   	0 1
+constants (8) for 01301E18:
+	1	"GetTable"
+	2	"ScaleVarTable"
+	3	"OwnerVar"
+	4	nil
+	5	"Owner"
+	6	"ScaleVar"
+	7	"SetScaleSkinCoef"
+	8	"Scale"
+locals (0) for 01301E18:
+upvalues (0) for 01301E18:
+
+function <?:6372,6374> (12 instructions, 48 bytes at 01301A50)
+2 params, 10 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; SpellBuffAdd
+	2	[-]	GETTABLE 	3 1 -2	; "TargetVar"
+	3	[-]	GETTABLE 	3 0 3
+	4	[-]	GETTABLE 	4 1 -2	; "TargetVar"
+	5	[-]	GETTABLE 	4 0 4
+	6	[-]	LOADK    	5 -3	; "SpellShieldMarker"
+	7	[-]	LOADK    	6 -4	; 0
+	8	[-]	LOADK    	7 -5	; 1
+	9	[-]	LOADK    	8 -6	; 37037
+	10	[-]	GETTABLE 	9 0 -7	; "NextBuffVars"
+	11	[-]	CALL     	2 8 1
+	12	[-]	RETURN   	0 1
+constants (7) for 01301A50:
+	1	"SpellBuffAdd"
+	2	"TargetVar"
+	3	"SpellShieldMarker"
+	4	0
+	5	1
+	6	37037
+	7	"NextBuffVars"
+locals (0) for 01301A50:
+upvalues (0) for 01301A50:
+
+function <?:6388,6407> (29 instructions, 116 bytes at 01301DC0)
+3 params, 10 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETTABLE 	3 1 -1	; "TargetVar"
+	2	[-]	GETTABLE 	3 0 3
+	3	[-]	GETTABLE 	4 1 -2	; "NumStacks"
+	4	[-]	GETGLOBAL	5 -3	; GetParam
+	5	[-]	LOADK    	6 -2	; "NumStacks"
+	6	[-]	MOVE     	7 0
+	7	[-]	MOVE     	8 1
+	8	[-]	CALL     	5 4 2
+	9	[-]	EQ       	0 5 -4	; - 0
+	10	[-]	JMP      	7	; to 18
+	11	[-]	GETGLOBAL	6 -5	; SpellBuffCount
+	12	[-]	MOVE     	7 3
+	13	[-]	GETTABLE 	8 1 -6	; "BuffName"
+	14	[-]	GETGLOBAL	9 -7	; caster
+	15	[-]	CALL     	6 4 2
+	16	[-]	MOVE     	4 6
+	17	[-]	JMP      	1	; to 19
+	18	[-]	MOVE     	4 5
+	19	[-]	LT       	0 -4 4	; 0 -
+	20	[-]	JMP      	8	; to 29
+	21	[-]	GETGLOBAL	6 -8	; SpellBuffRemove
+	22	[-]	MOVE     	7 3
+	23	[-]	GETTABLE 	8 1 -6	; "BuffName"
+	24	[-]	GETTABLE 	9 1 -9	; "AttackerVar"
+	25	[-]	GETTABLE 	9 0 9
+	26	[-]	CALL     	6 4 1
+	27	[-]	SUB      	4 4 -10	; - 1
+	28	[-]	JMP      	-10	; to 19
+	29	[-]	RETURN   	0 1
+constants (10) for 01301DC0:
+	1	"TargetVar"
+	2	"NumStacks"
+	3	"GetParam"
+	4	0
+	5	"SpellBuffCount"
+	6	"BuffName"
+	7	"caster"
+	8	"SpellBuffRemove"
+	9	"AttackerVar"
+	10	1
+locals (0) for 01301DC0:
+upvalues (0) for 01301DC0:
+
+function <?:6495,6514> (42 instructions, 168 bytes at 013019A0)
+2 params, 10 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -2	; GetParam
+	2	[-]	LOADK    	3 -3	; "Unit"
+	3	[-]	MOVE     	4 0
+	4	[-]	MOVE     	5 1
+	5	[-]	CALL     	2 4 2
+	6	[-]	SETGLOBAL	2 -1	; unit
+	7	[-]	GETGLOBAL	2 -1	; unit
+	8	[-]	EQ       	0 2 -4	; - nil
+	9	[-]	JMP      	4	; to 14
+	10	[-]	GETGLOBAL	2 -5	; ReportError
+	11	[-]	LOADK    	3 -6	; "Could not resolve Unit param"
+	12	[-]	CALL     	2 2 1
+	13	[-]	RETURN   	0 1
+	14	[-]	LOADBOOL 	2 1 0
+	15	[-]	GETGLOBAL	3 -2	; GetParam
+	16	[-]	LOADK    	4 -7	; "ChampionToShowTo"
+	17	[-]	MOVE     	5 0
+	18	[-]	MOVE     	6 1
+	19	[-]	CALL     	3 4 2
+	20	[-]	EQ       	0 3 -4	; - nil
+	21	[-]	JMP      	7	; to 29
+	22	[-]	LOADBOOL 	2 0 0
+	23	[-]	GETGLOBAL	4 -2	; GetParam
+	24	[-]	LOADK    	5 -8	; "ChampionToShowToByFlag"
+	25	[-]	MOVE     	6 0
+	26	[-]	MOVE     	7 1
+	27	[-]	CALL     	4 4 2
+	28	[-]	MOVE     	3 4
+	29	[-]	EQ       	0 3 -4	; - nil
+	30	[-]	JMP      	4	; to 35
+	31	[-]	GETGLOBAL	4 -5	; ReportError
+	32	[-]	LOADK    	5 -9	; "Could not resolve ChampionToShowTo param"
+	33	[-]	CALL     	4 2 1
+	34	[-]	RETURN   	0 1
+	35	[-]	GETGLOBAL	4 -10	; SetShowHealthBarToChampion
+	36	[-]	GETGLOBAL	5 -1	; unit
+	37	[-]	GETTABLE 	6 1 -11	; "Show"
+	38	[-]	MOVE     	7 3
+	39	[-]	MOVE     	8 2
+	40	[-]	GETTABLE 	9 1 -12	; "ApplyToSpectator"
+	41	[-]	CALL     	4 6 1
+	42	[-]	RETURN   	0 1
+constants (12) for 013019A0:
+	1	"unit"
+	2	"GetParam"
+	3	"Unit"
+	4	nil
+	5	"ReportError"
+	6	"Could not resolve Unit param"
+	7	"ChampionToShowTo"
+	8	"ChampionToShowToByFlag"
+	9	"Could not resolve ChampionToShowTo param"
+	10	"SetShowHealthBarToChampion"
+	11	"Show"
+	12	"ApplyToSpectator"
+locals (0) for 013019A0:
+upvalues (0) for 013019A0:
+
+function <?:6809,6816> (12 instructions, 48 bytes at 01301CB8)
+3 params, 6 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETTABLE 	3 0 -1	; "EmoteId"
+	2	[-]	GETTABLE 	4 1 -1	; "EmoteId"
+	3	[-]	EQ       	0 3 4
+	4	[-]	JMP      	6	; to 11
+	5	[-]	GETGLOBAL	3 -2	; ExecuteBuildingBlocks
+	6	[-]	MOVE     	4 2
+	7	[-]	MOVE     	5 0
+	8	[-]	CALL     	3 3 1
+	9	[-]	SETTABLE 	0 -3 -4	; "LastIfSucceeded" true
+	10	[-]	JMP      	1	; to 12
+	11	[-]	SETTABLE 	0 -3 -5	; "LastIfSucceeded" false
+	12	[-]	RETURN   	0 1
+constants (5) for 01301CB8:
+	1	"EmoteId"
+	2	"ExecuteBuildingBlocks"
+	3	"LastIfSucceeded"
+	4	true
+	5	false
+locals (0) for 01301CB8:
+upvalues (0) for 01301CB8:
+
+function <?:6827,6834> (12 instructions, 48 bytes at 01301B00)
+3 params, 6 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETTABLE 	3 0 -1	; "EmoteId"
+	2	[-]	GETTABLE 	4 1 -1	; "EmoteId"
+	3	[-]	EQ       	1 3 4
+	4	[-]	JMP      	6	; to 11
+	5	[-]	GETGLOBAL	3 -2	; ExecuteBuildingBlocks
+	6	[-]	MOVE     	4 2
+	7	[-]	MOVE     	5 0
+	8	[-]	CALL     	3 3 1
+	9	[-]	SETTABLE 	0 -3 -4	; "LastIfSucceeded" true
+	10	[-]	JMP      	1	; to 12
+	11	[-]	SETTABLE 	0 -3 -5	; "LastIfSucceeded" false
+	12	[-]	RETURN   	0 1
+constants (5) for 01301B00:
+	1	"EmoteId"
+	2	"ExecuteBuildingBlocks"
+	3	"LastIfSucceeded"
+	4	true
+	5	false
+locals (0) for 01301B00:
+upvalues (0) for 01301B00:
+
+function <?:7230,7237> (25 instructions, 100 bytes at 01301BB0)
+2 params, 10 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "String1VarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "String1Var"
+	7	[-]	GETTABLE 	3 2 3
+	8	[-]	GETGLOBAL	4 -1	; GetTable
+	9	[-]	MOVE     	5 0
+	10	[-]	GETTABLE 	6 1 -4	; "String2VarTable"
+	11	[-]	LOADBOOL 	7 0 0
+	12	[-]	CALL     	4 4 2
+	13	[-]	GETTABLE 	5 1 -5	; "String2Var"
+	14	[-]	GETTABLE 	5 4 5
+	15	[-]	GETGLOBAL	6 -1	; GetTable
+	16	[-]	MOVE     	7 0
+	17	[-]	GETTABLE 	8 1 -6	; "ResultVarTable"
+	18	[-]	LOADBOOL 	9 0 0
+	19	[-]	CALL     	6 4 2
+	20	[-]	GETTABLE 	7 1 -7	; "ResultVar"
+	21	[-]	MOVE     	8 3
+	22	[-]	MOVE     	9 5
+	23	[-]	CONCAT   	8 8 9
+	24	[-]	SETTABLE 	6 7 8
+	25	[-]	RETURN   	0 1
+constants (7) for 01301BB0:
+	1	"GetTable"
+	2	"String1VarTable"
+	3	"String1Var"
+	4	"String2VarTable"
+	5	"String2Var"
+	6	"ResultVarTable"
+	7	"ResultVar"
+locals (0) for 01301BB0:
+upvalues (0) for 01301BB0:
+
+function <?:7247,7253> (19 instructions, 76 bytes at 01301C60)
+2 params, 9 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetTable
+	2	[-]	MOVE     	3 0
+	3	[-]	GETTABLE 	4 1 -2	; "VariableVarTable"
+	4	[-]	LOADBOOL 	5 0 0
+	5	[-]	CALL     	2 4 2
+	6	[-]	GETTABLE 	3 1 -3	; "VariableVar"
+	7	[-]	GETTABLE 	3 2 3
+	8	[-]	GETGLOBAL	4 -1	; GetTable
+	9	[-]	MOVE     	5 0
+	10	[-]	GETTABLE 	6 1 -4	; "ResultVarTable"
+	11	[-]	LOADBOOL 	7 0 0
+	12	[-]	CALL     	4 4 2
+	13	[-]	GETTABLE 	5 1 -5	; "ResultVar"
+	14	[-]	LOADK    	6 -6	; "("
+	15	[-]	MOVE     	7 3
+	16	[-]	LOADK    	8 -7	; ")"
+	17	[-]	CONCAT   	6 6 8
+	18	[-]	SETTABLE 	4 5 6
+	19	[-]	RETURN   	0 1
+constants (7) for 01301C60:
+	1	"GetTable"
+	2	"VariableVarTable"
+	3	"VariableVar"
+	4	"ResultVarTable"
+	5	"ResultVar"
+	6	"("
+	7	")"
+locals (0) for 01301C60:
+upvalues (0) for 01301C60:
+
+function <?:7285,7295> (21 instructions, 84 bytes at 01306F00)
+2 params, 7 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; BBGetMinionKills
+	2	[-]	MOVE     	3 0
+	3	[-]	MOVE     	4 1
+	4	[-]	CALL     	2 3 1
+	5	[-]	GETTABLE 	2 0 -2	; "MinionsKilled"
+	6	[-]	GETGLOBAL	3 -3	; GetParam
+	7	[-]	LOADK    	4 -4	; "MinionKills"
+	8	[-]	MOVE     	5 0
+	9	[-]	MOVE     	6 1
+	10	[-]	CALL     	3 4 2
+	11	[-]	GETGLOBAL	4 -3	; GetParam
+	12	[-]	LOADK    	5 -6	; "MinionKillTarget"
+	13	[-]	CALL     	4 2 2
+	14	[-]	SETTABLE 	0 -5 4	; "MinionKillSource" -
+	15	[-]	ADD      	4 2 3
+	16	[-]	SETTABLE 	0 -4 4	; "MinionKills" -
+	17	[-]	GETGLOBAL	4 -7	; BBSetMinionKills
+	18	[-]	MOVE     	5 0
+	19	[-]	MOVE     	6 1
+	20	[-]	CALL     	4 3 1
+	21	[-]	RETURN   	0 1
+constants (7) for 01306F00:
+	1	"BBGetMinionKills"
+	2	"MinionsKilled"
+	3	"GetParam"
+	4	"MinionKills"
+	5	"MinionKillSource"
+	6	"MinionKillTarget"
+	7	"BBSetMinionKills"
+locals (0) for 01306F00:
+upvalues (0) for 01306F00:

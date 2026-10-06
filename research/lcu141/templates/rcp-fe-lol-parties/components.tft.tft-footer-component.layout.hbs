@@ -1,0 +1,116 @@
+<div class="tft-center-container">
+  <div class="tft-close-button-container">
+    <div class="tft-close-button">
+      {{generic-button onClick=(action this "closeButton") baseImgPath="/fe/lol-parties/button-x.png" overImgPath="/fe/lol-parties/button-x-over.png" downImgPath="/fe/lol-parties/button-x-down.png" onClickSound=buttonSounds.closeClick onHoverSound=buttonSounds.closeHover}}
+    </>
+  </>
+  <div class="tft-find-match-button-container">
+    {{#unless animationsEnabled}}
+      {{generic-button onClick=(action this "confirmButton") baseImgPath="/fe/lol-parties/button-find-match.png" overImgPath="/fe/lol-parties/button-find-match-over.png" downImgPath="/fe/lol-parties/button-find-match-down.png" disabledImgPath="/fe/lol-parties/button-find-match-disabled.png" upText=confirmButtonText overText=confirmButtonText downText=confirmButtonText disabledText=confirmButtonText onClickSound=buttonSounds.confirmClick onHoverSound=buttonSounds.confirmHover disabledStyle="color: grey" isEnabled=confirmButtonEnabled}}
+    {{else}}
+      {{animated-find-match-button confirmButton="confirmButton" baseImgPath="/fe/lol-static-assets/images/buttons/find_match_default.png" overImgPath="/fe/lol-static-assets/images/buttons/find_match_hover.png" downImgPath="/fe/lol-static-assets/images/buttons/find_match_active.png" disabledImgPath="/fe/lol-parties/button-find-match-disabled.png" buttonText=confirmButtonText onClickSound=buttonSounds.confirmClick onHoverSound=buttonSounds.confirmHover disabledStyle="color: grey" clickedStyle="color: #005A82" isEnabled=confirmButtonEnabled}}
+    {{/unless}}
+    <div class="left-wing">
+    </>
+    <div class="right-wing">
+    </>
+    {{#if confirmButtonShowTooltip}}
+      {{#uikit-tooltip tooltipPosition="top" type="system"}}
+        <lol-uikit-content-block type="tooltip-system">
+          <p>
+            {{confirmButtonTooltipText}}
+          </>
+        </>
+      {{/uikit-tooltip}}
+    {{/if}}
+  </>
+  <div class="team-planner-button-container">
+    {{#if teamPlannerEnabled}}
+      <div class="team-planner-button">
+        {{generic-button onClick=(action this "showTeamPlanner") baseBgPath="/fe/lol-parties/button-bg.png" overBgPath="/fe/lol-parties/button-bg-over.png" downBgPath="/fe/lol-parties/button-bg-down.png" disabledBgPath="/fe/lol-parties/button-bg-disabled.png" baseImgPath=teamPlannerButtonAssets.team-planner-icon-lobby downImgPath=teamPlannerButtonAssets.team-planner-icon-clicked disabledImgPath=teamPlannerButtonAssets.team-planner-icon-disabled onClickSound=buttonSounds.teamPlannerClick onHoverSound=buttonSounds.teamPlannerHover}}
+      </>
+    {{/if}}
+  </>
+</>
+<span data-eligibility-observer="{{eligibilityObserver}}">
+</>
+<span data-showing-party-observer="{{showingPartyObserver}}">
+</>
+<span data-close-transition-observer="{{handleCloseDuringTransition}}">
+</>
+<div style="display:none;">
+  <lol-uikit-content-block class="custom-games-error" id="custom-games-disabled-reasons" type="dialog-medium">
+    {{#if showCustomGameContentWarning}}
+      <ul>
+        <li>
+          {{tra.custom_game_training_content_warning}}
+        </>
+        <li>
+          {{tra.custom_game_training_rewards_warning}}
+        </>
+        <br>
+        </>
+        <p>
+          {{tra.custom_game_training_question}}
+        </>
+      </>
+    {{else}}
+      <h5 class="preserve-case">
+        {{tra.custom_game_rewards_disabled_header}}
+      </>
+      <p>
+        {{tra.custom_game_rewards_disabled_question}}
+      </>
+      <p>
+        {{tra.custom_game_rewards_disabled_reasons_header}}
+      </>
+      <ul>
+        {{#each customGameRewardsDisabledReasons as |reason|}}
+          <li>
+            {{reason}}
+          </>
+        {{/each}}
+      </>
+    {{/if}}
+  </>
+  <lol-uikit-content-block class="custom-games-error" id="custom-games-champ-select-error" type="dialog-medium">
+    <h5 class="preserve-case">
+      {{tra.custom_game_champ_select_error_start_game}}
+    </>
+    <p>
+      {{customGameChampSelectErrorBody}}
+    </>
+    <ul>
+      {{#each customGameChampSelectErrorPlayers as |player|}}
+        <li>
+          {{player}}
+        </>
+      {{/each}}
+    </>
+    {{#if showCustomGameMinorRestrictionDetails}}
+      <div class="custom-games-minor-restriction-details">
+        <p>
+          {{tra.custom_game_minor_restriction_details_header}}
+        </>
+        <ul>
+          <li>
+            {{tra.custom_game_minor_restriction_details_real_name_auth}}
+          </>
+          <li>
+            {{tra.custom_game_minor_restriction_details_healthy_time}}
+          </>
+          <li>
+            {{tra.custom_game_minor_restriction_details_harmful_behavior}}
+          </>
+        </>
+        <p>
+          {{tra.custom_game_minor_restriction_details_footer_text_before_link}}
+          <a href="http://lol.qq.com/jksh" target="_blank">
+            http://lol.qq.com/jksh
+          </>
+        </>
+      </>
+    {{/if}}
+  </>
+</>
+{{matchmaking-errors _isTransitioningState=_isTransitioningState}}

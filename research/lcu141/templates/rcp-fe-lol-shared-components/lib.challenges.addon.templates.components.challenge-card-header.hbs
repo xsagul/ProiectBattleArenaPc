@@ -1,0 +1,28 @@
+<div class="challenge-card-header-content">
+  <div class="challenge-card-header-detail {{leftDetailClass}}">
+    {{#if showLeftHeaderDetail}}
+      <div class="challenge-card-header-icon">
+      </>
+      <div class="challenge-card-header-value">
+        {{leftValue}}
+      </>
+    {{/if}}
+  </>
+  <div>
+    {{#if showRightHeaderDetail}}
+      <div class="challenge-card-header-detail {{rightDetailClass}}">
+        <div class="challenge-card-header-icon">
+        </>
+        <div class="challenge-card-header-value">
+          {{rightValue}}
+        </>
+      </>
+    {{/if}}
+    {{#if showSecondaryRightHeaderDetail}}
+      <div class="challenge-card-header-detail {{secondaryRightDetailClass}}">
+        <div class="challenge-card-header-icon">
+        </>
+      </>
+    {{/if}}
+  </>
+</>

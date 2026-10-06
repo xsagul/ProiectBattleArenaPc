@@ -1,0 +1,57 @@
+<div class="playbook-text-container">
+  <span class="title">
+    {{tra.tft_playbook_title}}
+  </>
+  <br>
+  </>
+  <lol-uikit-info-icon onclick={{action this "showPlaybookTutorial"}}>
+  </>
+</>
+<div class="playbook-bottom-container">
+  <div class="left-container">
+    <lol-uikit-scrollable class="scroller" overflow-masks="enabled">
+      <ul class="selection-display">
+        {{#each itemData as |currItem|}}
+          {{tft-playbook-item item=currItem onSelectItem=(action this "selectItem") selectedItemId=selectedItemId viewItemId=viewItemId queueId=queueId}}
+        {{/each}}
+      </>
+    </>
+    {{tft-playbook-item-details isShown=displayPlaybookItemDetails}}
+  </>
+  <div class="playbook-right-container" style={{sidePanelBackgroundStyle}}>
+    <div class="description-container">
+      <div class="name-text">
+        {{name}}
+      </>
+      <div class="name-divider">
+      </>
+      <div class="sub-name-text">
+        {{subName}}
+      </>
+      <div class="description-text">
+        {{viewItem.description}}
+      </>
+      <div class="button-divider">
+      </>
+    </>
+    <div class="playbook-button-container">
+      {{#if displayPlaybookItemDetails}}
+        <lol-uikit-flat-button onclick={{action this "back"}} class="button glow" primary="false">
+          {{tra.tft_playbook_button_back}}
+        </>
+      {{else}}
+        <lol-uikit-flat-button onclick={{action this "showDetails"}} class="button glow" primary="false" disabled={{detailsDisabled}}>
+          {{tra.tft_playbook_button_details}}
+        </>
+      {{/if}}
+    </>
+    <div class="playbook-button-container">
+      <lol-uikit-flat-button onclick={{action this "equip"}} class="button glow" primary="true" disabled={{equipDisabled}}>
+        {{tra.tft_playbook_button_equip}}
+      </>
+    </>
+  </>
+</>
+{{#if shouldDisplayPlaybookTutorial}}
+  {{tft-playbook-tutorial}}
+{{/if}}

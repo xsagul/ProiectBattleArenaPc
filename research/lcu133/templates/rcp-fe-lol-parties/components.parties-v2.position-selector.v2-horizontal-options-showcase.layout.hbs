@@ -1,0 +1,28 @@
+<div class="horizontal-options-showcase-background">
+</>
+<div class="horizontal-options-showcase-content">
+  {{#each positionOptions as |positionOption|}}
+    {{v2-position-selector-option position=positionOption.position inDemand=positionOption.inDemand primaryPosition=primaryPosition secondaryPosition=secondaryPosition ordinal=selectingOrdinal selectPosition=(action this "selectPosition") useGenerousHitbox=true}}
+  {{/each}}
+  <div class="horizontal-options-showcase-vertical-divider">
+  </>
+  {{v2-position-selector-option position="FILL" primaryPosition=primaryPosition secondaryPosition=secondaryPosition ordinal=selectingOrdinal selectPosition=(action this "selectPosition") useGenerousHitbox=true}}
+</>
+<!-- animation elements -->
+<div class="animations-wrapper">
+  <div class="animation-intro-container">
+    <lol-uikit-lottie id="lottie-intro-animation" src="/fe/lol-parties/lottie/parties-v2/intro-role-selector.json" autoplay="false" loop="true">
+    </>
+  </>
+  <div class="animation-outro-base-container">
+    <lol-uikit-video class="animation-outro" id="outro-base" fade-in="0" fade-out="0" preload="" src="/fe/lol-parties/parties-v2/outro-role-selector.webm">
+    </>
+  </>
+  <div class="animation-outro-magic-container {{if isPrimaryCentered "centered"}}">
+    <lol-uikit-video class="animation-outro" id="outro-magic" fade-in="0" fade-out="0" preload="" src="/fe/lol-parties/parties-v2/outro-role-selector-magic.webm">
+    </>
+  </>
+  <div class="animation-button-icon">
+    {{v2-position-selector-button ordinal="PRIMARY" position=selectedPosition}}
+  </>
+</>

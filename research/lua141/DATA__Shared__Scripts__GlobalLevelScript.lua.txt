@@ -1,0 +1,80 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 000002BBAF303710)
+0+ params, 2 slots, 0 upvalues, 0 locals, 12 constants, 1 function
+	1	[-]	LOADK    	0 -2	; 30
+	2	[-]	SETGLOBAL	0 -1	; EVENT_STAGE_WELCOME_TIME
+	3	[-]	LOADK    	0 -4	; 60
+	4	[-]	SETGLOBAL	0 -3	; EVENT_STAGE_PREANNOUNCE_TIME
+	5	[-]	LOADK    	0 -6	; 0
+	6	[-]	SETGLOBAL	0 -5	; EVENT_STAGE_FINISHED
+	7	[-]	LOADK    	0 -8	; 1
+	8	[-]	SETGLOBAL	0 -7	; EVENT_STAGE_WELCOME
+	9	[-]	LOADK    	0 -10	; 2
+	10	[-]	SETGLOBAL	0 -9	; EVENT_STAGE_PREANNOUNCE
+	11	[-]	GETGLOBAL	0 -7	; EVENT_STAGE_WELCOME
+	12	[-]	SETGLOBAL	0 -11	; NextEventStage
+	13	[-]	CLOSURE  	0 0	; 000002BBAF303860
+	14	[-]	SETGLOBAL	0 -12	; UpdateEventTimers
+	15	[-]	RETURN   	0 1
+constants (12) for 000002BBAF303710:
+	1	"EVENT_STAGE_WELCOME_TIME"
+	2	30
+	3	"EVENT_STAGE_PREANNOUNCE_TIME"
+	4	60
+	5	"EVENT_STAGE_FINISHED"
+	6	0
+	7	"EVENT_STAGE_WELCOME"
+	8	1
+	9	"EVENT_STAGE_PREANNOUNCE"
+	10	2
+	11	"NextEventStage"
+	12	"UpdateEventTimers"
+locals (0) for 000002BBAF303710:
+upvalues (0) for 000002BBAF303710:
+
+function <?:16,30> (32 instructions, 128 bytes at 000002BBAF303860)
+1 param, 3 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; NextEventStage
+	2	[-]	GETGLOBAL	2 -2	; EVENT_STAGE_FINISHED
+	3	[-]	EQ       	0 1 2
+	4	[-]	JMP      	2	; to 7
+	5	[-]	RETURN   	0 1
+	6	[-]	JMP      	25	; to 32
+	7	[-]	GETGLOBAL	1 -1	; NextEventStage
+	8	[-]	GETGLOBAL	2 -3	; EVENT_STAGE_WELCOME
+	9	[-]	EQ       	0 1 2
+	10	[-]	JMP      	9	; to 20
+	11	[-]	GETGLOBAL	1 -4	; EVENT_STAGE_WELCOME_TIME
+	12	[-]	LE       	0 1 0
+	13	[-]	JMP      	18	; to 32
+	14	[-]	GETGLOBAL	1 -5	; NotifyGlobalEvent
+	15	[-]	LOADK    	2 -6	; "OnStartGameMessage1"
+	16	[-]	CALL     	1 2 1
+	17	[-]	GETGLOBAL	1 -7	; EVENT_STAGE_PREANNOUNCE
+	18	[-]	SETGLOBAL	1 -1	; NextEventStage
+	19	[-]	JMP      	12	; to 32
+	20	[-]	GETGLOBAL	1 -1	; NextEventStage
+	21	[-]	GETGLOBAL	2 -7	; EVENT_STAGE_PREANNOUNCE
+	22	[-]	EQ       	0 1 2
+	23	[-]	JMP      	8	; to 32
+	24	[-]	GETGLOBAL	1 -8	; EVENT_STAGE_PREANNOUNCE_TIME
+	25	[-]	LE       	0 1 0
+	26	[-]	JMP      	5	; to 32
+	27	[-]	GETGLOBAL	1 -5	; NotifyGlobalEvent
+	28	[-]	LOADK    	2 -9	; "OnStartGameMessage2"
+	29	[-]	CALL     	1 2 1
+	30	[-]	GETGLOBAL	1 -2	; EVENT_STAGE_FINISHED
+	31	[-]	SETGLOBAL	1 -1	; NextEventStage
+	32	[-]	RETURN   	0 1
+constants (9) for 000002BBAF303860:
+	1	"NextEventStage"
+	2	"EVENT_STAGE_FINISHED"
+	3	"EVENT_STAGE_WELCOME"
+	4	"EVENT_STAGE_WELCOME_TIME"
+	5	"NotifyGlobalEvent"
+	6	"OnStartGameMessage1"
+	7	"EVENT_STAGE_PREANNOUNCE"
+	8	"EVENT_STAGE_PREANNOUNCE_TIME"
+	9	"OnStartGameMessage2"
+locals (0) for 000002BBAF303860:
+upvalues (0) for 000002BBAF303860:

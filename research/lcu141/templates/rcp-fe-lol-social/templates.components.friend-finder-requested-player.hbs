@@ -1,0 +1,31 @@
+<div class={{playerIdentityClasses}}>
+  <lol-social-avatar icon={{iconId}} hideindicator="" disabled="">
+  </>
+  <div class="player-name-wrapper">
+    {{player-name format="short" puuid=puuid gameNameClass="player-name" summonerNameClass="player-name" gameName=gameName tagLine=tagLine summonerName=summonerName}}
+    {{#if hasGameNameAndTagLine}}
+      <div class="player-gnt">
+        <span class="player-game-name">
+          {{gameName}}
+        </>
+        <span class="player-game-tag">
+          #
+          {{tagLine}}
+        </>
+      </>
+    {{/if}}
+  </>
+</>
+{{#if working}}
+  {{uikit-spinner width="16px" height="16px"}}
+{{else}}
+  <div class="remove-button" onclick={{action this "removeFriendRequest"}}>
+  </>
+{{/if}}
+{{#if summonerId}}
+  {{hovercard-component options=hovercardOptions summonerId=summonerId}}
+{{else}}
+  {{#if puuid}}
+    {{hovercard-component options=hovercardOptions friendId=puuid}}
+  {{/if}}
+{{/if}}

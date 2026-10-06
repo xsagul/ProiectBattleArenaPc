@@ -1,0 +1,52 @@
+<lol-uikit-tooltip id="patcher-progress-tooltip">
+  <lol-uikit-content-block type="tooltip-large">
+    <h1>
+      {{primaryWorkDisplayText}}
+      |
+      {{productName}}
+    </>
+    <hr>
+    </>
+    <p class="info">
+      {{#if isDownloading}}
+        <div>
+          {{progress}}
+        </>
+        {{#unless isHanging}}
+          <div>
+            {{eta}}
+          </>
+        {{else}}
+          <div>
+            {{tra.patcher_hanging_text}}
+          </>
+        {{/unless}}
+      {{else}}
+        {{#if isScanningFiles}}
+          <div>
+            {{filesScanned}}
+          </>
+          <div class="filename">
+            {{lastFileProcessed}}
+          </>
+        {{else}}
+          {{#if isRepairing}}
+            <div>
+              {{progress}}
+            </>
+            <div class="filename">
+              {{lastFileProcessed}}
+            </>
+          {{else}}
+            <div>
+              {{primaryWorkDisplayDetailText}}
+            </>
+            <div>
+              {{eta}}
+            </>
+          {{/if}}
+        {{/if}}
+      {{/if}}
+    </>
+  </>
+</>

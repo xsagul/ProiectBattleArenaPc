@@ -1,0 +1,52 @@
+<div class="header" {{action this "toggleExpanded"}}>
+  {{groupName}}
+</>
+<div class="list-wrapper">
+  <div class="list">
+    {{#each group.friends as |friend|}}
+      <div class="invite-dialog-friend">
+        <lol-uikit-flat-checkbox class="invite-dialog-friend-checkbox">
+          {{input slot="input" type="checkbox" id=friend.checkboxId checked=friend.checked name=friend.checkboxId}}
+          <label slot="label" for={{friend.checkboxId}}>
+            <span class="flat-checkbox-span">
+            </>
+            <span class="invite-dialog-friend-name">
+              <div class="lol_parties__invite_dialog_avatar">
+                <img src={{friend.avatarImgUrl}}>
+                </>
+              </>
+              <div class="lol_parties__invite_dialog_name-and-context">
+                <span>
+                  {{friend.name}}
+                </>
+                {{#if friend.isHonorRecognized}}
+                  <span class="lol_parties__invite_dialog_historical-context">
+                    <img src="/fe/lol-static-assets/images/honor-leaf.svg" alt="recently-honored-default-icon" class="lol_parties__invite_dialog_invite-context-icon">
+                    </>
+                    {{tra.parties_invite_dialog_recently_honored}}
+                  </>
+                {{else}}
+                  {{#if friend.isRecentlyPlayed}}
+                    <span class="lol_parties__invite_dialog_historical-context">
+                      <img src="/fe/lol-static-assets/images/clock-icon-grey1_5.svg" alt="recently-played-default-icon" class="lol_parties__invite_dialog_invite-context-icon clock">
+                      </>
+                      {{tra.parties_invite_dialog_recently_played}}
+                    </>
+                  {{else}}
+                    {{#if friend.gameName}}
+                      <span class="invite-dialog-friend-gnt">
+                        {{friend.gameName}}
+                        #
+                        {{friend.gameTag}}
+                      </>
+                    {{/if}}
+                  {{/if}}
+                {{/if}}
+              </>
+            </>
+          </>
+        </>
+      </>
+    {{/each}}
+  </>
+</>

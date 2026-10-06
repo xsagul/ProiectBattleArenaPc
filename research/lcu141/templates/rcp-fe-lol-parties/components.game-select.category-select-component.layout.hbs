@@ -1,0 +1,11 @@
+<lol-uikit-navigation-bar selectedindex="{{selectedIndex}}" type="nav-bar-secondary" class="parties-game-navs-list">
+  {{#each categories as |catObj|}}
+    {{playable-category category=catObj selected=selected action="selectCategory"}}
+  {{/each}}
+  <span class="parties-game-navs-break">
+  </>
+  {{#each secondaryCategories as |catObj|}}
+    {{playable-category category=catObj selected=selected action="selectCategory"}}
+  {{/each}}
+</>
+{{custom-game-tournament-code}}

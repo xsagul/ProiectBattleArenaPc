@@ -1,0 +1,70 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 00000234D89A32C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 10 constants, 5 functions
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "SR_LevelScript"
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -3	; DoLuaLevel
+	5	[-]	LOADK    	1 -4	; "Plants"
+	6	[-]	CALL     	0 2 1
+	7	[-]	CLOSURE  	0 0	; 00000234D89A3450
+	8	[-]	SETGLOBAL	0 -5	; OverrideDefaultDefines
+	9	[-]	CLOSURE  	0 1	; 00000234D89A34D0
+	10	[-]	SETGLOBAL	0 -6	; OverrideDefaultMinionInfo
+	11	[-]	CLOSURE  	0 2	; 00000234D89A3570
+	12	[-]	SETGLOBAL	0 -7	; OverrideDefaultTables
+	13	[-]	CLOSURE  	0 3	; 00000234D89A3610
+	14	[-]	SETGLOBAL	0 -8	; OverrideMinionSpawnInfo
+	15	[-]	CLOSURE  	0 4	; 00000234D89A36B0
+	16	[-]	SETGLOBAL	0 -9	; DoAdditionalPreloads
+	17	[-]	GETGLOBAL	0 -10	; Init
+	18	[-]	CALL     	0 1 1
+	19	[-]	RETURN   	0 1
+constants (10) for 00000234D89A32C0:
+	1	"DoLuaShared"
+	2	"SR_LevelScript"
+	3	"DoLuaLevel"
+	4	"Plants"
+	5	"OverrideDefaultDefines"
+	6	"OverrideDefaultMinionInfo"
+	7	"OverrideDefaultTables"
+	8	"OverrideMinionSpawnInfo"
+	9	"DoAdditionalPreloads"
+	10	"Init"
+locals (0) for 00000234D89A32C0:
+upvalues (0) for 00000234D89A32C0:
+
+function <?:7,8> (1 instruction, 4 bytes at 00000234D89A3450)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 00000234D89A3450:
+locals (0) for 00000234D89A3450:
+upvalues (0) for 00000234D89A3450:
+
+function <?:10,11> (1 instruction, 4 bytes at 00000234D89A34D0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 00000234D89A34D0:
+locals (0) for 00000234D89A34D0:
+upvalues (0) for 00000234D89A34D0:
+
+function <?:13,14> (1 instruction, 4 bytes at 00000234D89A3570)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 00000234D89A3570:
+locals (0) for 00000234D89A3570:
+upvalues (0) for 00000234D89A3570:
+
+function <?:16,17> (1 instruction, 4 bytes at 00000234D89A3610)
+3 params, 3 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 00000234D89A3610:
+locals (0) for 00000234D89A3610:
+upvalues (0) for 00000234D89A3610:
+
+function <?:19,20> (1 instruction, 4 bytes at 00000234D89A36B0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 00000234D89A36B0:
+locals (0) for 00000234D89A36B0:
+upvalues (0) for 00000234D89A36B0:

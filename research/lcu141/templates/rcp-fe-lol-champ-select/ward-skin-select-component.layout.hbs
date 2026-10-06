@@ -1,0 +1,15 @@
+{{flyout-selector-trigger-button selectedItem=selectedWardSkin toggleFlyout=(action this "toggleFlyout") disabled=disabled imageStyle=flyoutImageStyle didUserChangeItem=didUserChangeItem afterUserChangedItemAnimation=(action this "afterUserChangedItemAnimation"}}
+<lc-flyout open={{isFlyoutOpen}} onHide={{action this "toggleFlyout"}} uiKitOptionOverrides={{flyoutOptions}}>
+  <lc-flyout-content>
+    {{ward-skin-popup selectedWardSkin=selectedWardSkin wardSkins=wardSkins map=map onWardSkinConfirmed=(action this "onWardSkinConfirmed"}}
+  </>
+</>
+{{#if disabled}}
+  {{#uikit-tooltip tooltipPosition="top" type="system" offsetY=22}}
+    <lol-uikit-content-block type="tooltip-small" class="champ-select-edit-ward-skin-tooltip">
+      <p>
+        {{wardSkinDisabledTooltipText}}
+      </>
+    </>
+  {{/uikit-tooltip}}
+{{/if}}

@@ -1,0 +1,45 @@
+<div class="celebration-reward-wrapper {{if isSelected "selected"}} {{if isChampion "champion"}}" onclick={{unless isChampion (action this "onClicked"}}>
+  <div class="celebration-reward-image-wrapper">
+    <div class="idle-filter {{if isSelected "selected"}} {{if softSelectionMade "dimmed"}}">
+    </>
+    <div class="text-gradient-backer {{if isSelected "selected"}}">
+    </>
+    <div class="radial-glow">
+    </>
+    <img class="celebration-reward-image" onerror={{action this "rewardImageError"}} src="{{iconUrl}}">
+    </>
+  </>
+  {{#if isChampion}}
+    <div class="celebration-champion-details-block {{if isSelected "selected"}}">
+      <div class="celebration-champion-details-wrapper">
+        <div>
+          <lol-uikit-flat-button class="celebration-champion-details-abilities-button" onclick={{action this "showChampionDetails" championId}}>
+            {{tra.mission_reward_view_abilities_button}}
+          </>
+        </>
+        <div>
+          <lol-uikit-flat-button class="celebration-champion-details-choose-button" onclick={{action this "onClicked"}} disabled={{isSelected}}>
+            {{tra.mission_reward_choose_button}}
+          </>
+        </>
+      </>
+    </>
+  {{/if}}
+  <div class="celebration-text-block {{if isSelected "selected"}} {{if isChampion "champion-text"}}">
+    <div class="celebration-text">
+      {{sanitize label}}
+    </>
+    <div class="celebration-footer">
+      {{footer}}
+    </>
+  </>
+  {{#if isChampion}}
+    <div class="tactical-info-difficulty">
+      <span class="difficulty-graph difficulty-level-{{championDifficulty}}">
+      </>
+      <h6 class="difficulty-label">
+        {{tra.mission_reward_champion_difficulty}}
+      </>
+    </>
+  {{/if}}
+</>

@@ -1,0 +1,58 @@
+<div class="custom-game-list-header">
+  <div class="custom-game-list-title">
+    {{tra.custom_game_list_title}}
+  </>
+</>
+<div class="custom-game-list-subheader">
+  {{#uikit-framed-icon onclick=(action this "refresh") class="custom-game-list-button-refresh" borderWidth=2 disabled=refreshDisabled}}
+    <div class="custom-game-list-button-icon">
+    </>
+  {{/uikit-framed-icon}}
+  <div class="custom-game-list-filters">
+    <lol-uikit-flat-input class="custom-game-list-search">
+      {{input type="search" name="search" maxlength="48" placeholder=tra.custom_game_list_search_placeholder disabled=false value=searchString autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck=false}}
+    </>
+    <lol-uikit-flat-checkbox class="custom-game-list-filters-checkbox">
+      {{input slot="input" id="custom-game-filter-spectators" type="checkbox" checked=shouldShowSpectators}}
+      <label slot="label" for="custom-game-filter-spectators">
+        {{tra.custom_game_list_spectators_allowed}}
+      </>
+    </>
+    <lol-uikit-flat-checkbox class="custom-game-list-filters-checkbox">
+      {{input slot="input" id="custom-game-filter-private" type="checkbox" checked=shouldShowPrivateOnly}}
+      <label slot="label" for="custom-game-filter-private">
+        {{tra.custom_game_list_private_only}}
+      </>
+    </>
+  </>
+</>
+<div class="custom-game-list-body">
+  <table class="custom-game-list-table">
+    <thead class="custom-game-list-table-header">
+      <tr class="custom-game-list-table-header-row">
+        <th class="custom-game-list-table-header-private">
+        </>
+        <th class="custom-game-list-table-header-name {{if showLobbyNameSorted sortOrderClass ""}}" {{action this "sort" "lobbyName"}}>
+          {{tra.custom_game_list_header_lobby_name}}
+        </>
+        <th class="custom-game-list-table-header-owner {{if showOwnerSummonerNameSorted sortOrderClass ""}}" {{action this "sort" "ownerSummonerName"}}>
+          {{tra.custom_game_list_header_owner}}
+        </>
+        <th class="custom-game-list-table-header-map {{if showMapNameSorted sortOrderClass ""}}" {{action this "sort" "mapName"}}>
+          {{tra.custom_game_list_header_map}}
+        </>
+        <th class="custom-game-list-table-header-slots">
+        </>
+        <th class="custom-game-list-table-header-spectators">
+        </>
+      </>
+    </>
+    <lol-uikit-scrollable class="custom-game-list-table-scroll" overflow-masks="enabled">
+      <tbody class="custom-game-list-table-body">
+        {{#each customGameRenderList as |customGame|}}
+          {{custom-game-row customGame=customGame selectedCustomGame=selectedCustomGame joinSelectedCustomGame="joinSelectedCustomGame" selectCustomGame="selectCustomGame"}}
+        {{/each}}
+      </>
+    </>
+  </>
+</>

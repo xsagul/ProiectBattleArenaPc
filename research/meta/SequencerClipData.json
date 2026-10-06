@@ -1,0 +1,41 @@
+{
+  "name": "SequencerClipData",
+  "hash": "0x8d30a7c0",
+  "interface": false,
+  "value": false,
+  "bases": [
+    "ClipBaseData"
+  ],
+  "since": null,
+  "removedIn": null,
+  "properties": [
+    {
+      "name": "mClipNameList",
+      "hash": "0x078cafd9",
+      "ft": "List",
+      "kt": null,
+      "vt": "Hash",
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "[]"
+    },
+    {
+      "name": "mEventDataMap",
+      "hash": "0xf598463e",
+      "ft": "Map",
+      "kt": "Hash",
+      "vt": "Pointer",
+      "kh": "0x798c7d28",
+      "khName": "BaseEventData",
+      "khKind": "class",
+      "defaultValue": "{}"
+    }
+  ],
+  "ancestorLevels": [
+    [
+      "ClipBaseData"
+    ]
+  ],
+  "descendantTree": []
+}

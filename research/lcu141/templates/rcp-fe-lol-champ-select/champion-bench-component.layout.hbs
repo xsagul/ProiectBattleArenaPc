@@ -1,0 +1,15 @@
+<div class="bench-label">
+  {{benchLabel}}
+  {{#uikit-tooltip tooltipPosition="bottom" restrictArea="whole-window"}}
+    <lol-uikit-content-block type="tooltip-small" padding="small">
+      <p>
+        {{benchInfoTooltip}}
+      </>
+    </>
+  {{/uikit-tooltip}}
+</>
+<div class="bench-container">
+  {{#each benchChampionsSize as |champIndex|}}
+    {{champion-bench-item benchChampions=benchChampions index=champIndex championClicked="championClicked" benchSwapOnCooldown=benchSwapOnCooldown inventory=inventory championChestAvailabilityMap=championChestAvailabilityMap shouldShowChestAvailability=shouldShowChestAvailability}}
+  {{/each}}
+</>

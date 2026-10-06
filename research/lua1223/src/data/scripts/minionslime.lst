@@ -1,0 +1,657 @@
+
+main <?:0,0> (46 instructions, 184 bytes at 009798A8)
+0+ params, 2 slots, 0 upvalues, 0 locals, 31 constants, 10 functions
+	1	[-]	LOADK    	0 -2	; 2500
+	2	[-]	SETGLOBAL	0 -1	; MAX_ENGAGE_DISTANCE
+	3	[-]	LOADK    	0 -4	; 500
+	4	[-]	SETGLOBAL	0 -3	; FEAR_WANDER_DISTANCE
+	5	[-]	LOADK    	0 -6	; 0.25
+	6	[-]	SETGLOBAL	0 -5	; DELAY_FIND_ENEMIES
+	7	[-]	LOADK    	0 -8	; 0.1
+	8	[-]	SETGLOBAL	0 -7	; DELAY_WAIT_FOR_ATTACK
+	9	[-]	LOADK    	0 -10	; 1
+	10	[-]	SETGLOBAL	0 -9	; CENTER_LANE
+	11	[-]	LOADK    	0 -12	; 70
+	12	[-]	SETGLOBAL	0 -11	; FIRST_WAVE_TIME
+	13	[-]	LOADK    	0 -14	; 90
+	14	[-]	SETGLOBAL	0 -13	; ASLEEP_TIME_DEFAULT_LANE
+	15	[-]	GETGLOBAL	0 -13	; ASLEEP_TIME_DEFAULT_LANE
+	16	[-]	SUB      	0 0 -16	; - 5
+	17	[-]	SETGLOBAL	0 -15	; ASLEEP_TIME_CENTER_LANE
+	18	[-]	LOADK    	0 -18	; 15
+	19	[-]	SETGLOBAL	0 -17	; FIRST_WAVE_GHOST_TIME
+	20	[-]	GETGLOBAL	0 -19	; DoLuaShared
+	21	[-]	LOADK    	1 -20	; "ObjectTags"
+	22	[-]	CALL     	0 2 1
+	23	[-]	GETGLOBAL	0 -19	; DoLuaShared
+	24	[-]	LOADK    	1 -21	; "Minions"
+	25	[-]	CALL     	0 2 1
+	26	[-]	CLOSURE  	0 0	; 00977F90
+	27	[-]	SETGLOBAL	0 -22	; OnPostInit
+	28	[-]	CLOSURE  	0 1	; 00979E98
+	29	[-]	SETGLOBAL	0 -23	; TimerDisableGhosting
+	30	[-]	CLOSURE  	0 2	; 00979EF0
+	31	[-]	SETGLOBAL	0 -24	; OnTauntBegin
+	32	[-]	CLOSURE  	0 3	; 0097A038
+	33	[-]	SETGLOBAL	0 -25	; OnTauntEnd
+	34	[-]	CLOSURE  	0 4	; 0097A1A0
+	35	[-]	SETGLOBAL	0 -26	; LaneMinionFindTarget
+	36	[-]	CLOSURE  	0 5	; 0097A1F8
+	37	[-]	SETGLOBAL	0 -27	; IsNochaseRegionForMinions
+	38	[-]	CLOSURE  	0 6	; 0097A300
+	39	[-]	SETGLOBAL	0 -28	; TimerWaitForAttackFinish
+	40	[-]	CLOSURE  	0 7	; 0097DBB0
+	41	[-]	SETGLOBAL	0 -29	; TimerFindEnemies
+	42	[-]	CLOSURE  	0 8	; 0097DF78
+	43	[-]	SETGLOBAL	0 -30	; FindTargetOrMove
+	44	[-]	CLOSURE  	0 9	; 0097E198
+	45	[-]	SETGLOBAL	0 -31	; TimerMoveForward
+	46	[-]	RETURN   	0 1
+constants (31) for 009798A8:
+	1	"MAX_ENGAGE_DISTANCE"
+	2	2500
+	3	"FEAR_WANDER_DISTANCE"
+	4	500
+	5	"DELAY_FIND_ENEMIES"
+	6	0.25
+	7	"DELAY_WAIT_FOR_ATTACK"
+	8	0.1
+	9	"CENTER_LANE"
+	10	1
+	11	"FIRST_WAVE_TIME"
+	12	70
+	13	"ASLEEP_TIME_DEFAULT_LANE"
+	14	90
+	15	"ASLEEP_TIME_CENTER_LANE"
+	16	5
+	17	"FIRST_WAVE_GHOST_TIME"
+	18	15
+	19	"DoLuaShared"
+	20	"ObjectTags"
+	21	"Minions"
+	22	"OnPostInit"
+	23	"TimerDisableGhosting"
+	24	"OnTauntBegin"
+	25	"OnTauntEnd"
+	26	"LaneMinionFindTarget"
+	27	"IsNochaseRegionForMinions"
+	28	"TimerWaitForAttackFinish"
+	29	"TimerFindEnemies"
+	30	"FindTargetOrMove"
+	31	"TimerMoveForward"
+locals (0) for 009798A8:
+upvalues (0) for 009798A8:
+
+function <?:19,32> (31 instructions, 124 bytes at 00977F90)
+0 params, 4 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetMissionTime
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; FIRST_WAVE_TIME
+	4	[-]	LT       	0 0 1
+	5	[-]	JMP      	14	; to 20
+	6	[-]	GETGLOBAL	0 -3	; SetTargetAcquisitionMode
+	7	[-]	GETGLOBAL	1 -4	; TARGET_ACQUISITION_MODE_ASLEEP
+	8	[-]	CALL     	0 2 1
+	9	[-]	GETGLOBAL	0 -5	; SetGhostedForAllies
+	10	[-]	LOADBOOL 	1 1 0
+	11	[-]	CALL     	0 2 1
+	12	[-]	GETGLOBAL	0 -6	; InitTimer
+	13	[-]	LOADK    	1 -7	; "TimerDisableGhosting"
+	14	[-]	GETGLOBAL	2 -8	; FIRST_WAVE_GHOST_TIME
+	15	[-]	LOADBOOL 	3 1 0
+	16	[-]	CALL     	0 4 1
+	17	[-]	GETGLOBAL	0 -9	; ResetAndStartTimer
+	18	[-]	LOADK    	1 -7	; "TimerDisableGhosting"
+	19	[-]	CALL     	0 2 1
+	20	[-]	GETGLOBAL	0 -6	; InitTimer
+	21	[-]	LOADK    	1 -10	; "TimerWaitForAttackFinish"
+	22	[-]	GETGLOBAL	2 -11	; DELAY_WAIT_FOR_ATTACK
+	23	[-]	LOADBOOL 	3 1 0
+	24	[-]	CALL     	0 4 1
+	25	[-]	GETGLOBAL	0 -12	; StopTimer
+	26	[-]	LOADK    	1 -10	; "TimerWaitForAttackFinish"
+	27	[-]	CALL     	0 2 1
+	28	[-]	GETGLOBAL	0 -13	; SetWardsAreValidTargets
+	29	[-]	LOADBOOL 	1 1 0
+	30	[-]	CALL     	0 2 1
+	31	[-]	RETURN   	0 1
+constants (13) for 00977F90:
+	1	"GetMissionTime"
+	2	"FIRST_WAVE_TIME"
+	3	"SetTargetAcquisitionMode"
+	4	"TARGET_ACQUISITION_MODE_ASLEEP"
+	5	"SetGhostedForAllies"
+	6	"InitTimer"
+	7	"TimerDisableGhosting"
+	8	"FIRST_WAVE_GHOST_TIME"
+	9	"ResetAndStartTimer"
+	10	"TimerWaitForAttackFinish"
+	11	"DELAY_WAIT_FOR_ATTACK"
+	12	"StopTimer"
+	13	"SetWardsAreValidTargets"
+locals (0) for 00977F90:
+upvalues (0) for 00977F90:
+
+function <?:34,37> (7 instructions, 28 bytes at 00979E98)
+0 params, 2 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SetGhostedForAllies
+	2	[-]	LOADBOOL 	1 0 0
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -2	; StopTimer
+	5	[-]	LOADK    	1 -3	; "TimerDisableGhosting"
+	6	[-]	CALL     	0 2 1
+	7	[-]	RETURN   	0 1
+constants (3) for 00979E98:
+	1	"SetGhostedForAllies"
+	2	"StopTimer"
+	3	"TimerDisableGhosting"
+locals (0) for 00979E98:
+upvalues (0) for 00979E98:
+
+function <?:40,52> (20 instructions, 80 bytes at 00979EF0)
+0 params, 4 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; GetTauntTarget
+	8	[-]	CALL     	1 1 2
+	9	[-]	SETGLOBAL	1 -3	; tauntTarget
+	10	[-]	GETGLOBAL	1 -3	; tauntTarget
+	11	[-]	EQ       	1 1 -5	; - nil
+	12	[-]	JMP      	7	; to 20
+	13	[-]	GETGLOBAL	1 -6	; SetStateAndCloseToTarget
+	14	[-]	GETGLOBAL	2 -7	; AI_TAUNTED
+	15	[-]	GETGLOBAL	3 -3	; tauntTarget
+	16	[-]	CALL     	1 3 1
+	17	[-]	GETGLOBAL	1 -8	; StopTimer
+	18	[-]	LOADK    	2 -9	; "TimerAntiKite"
+	19	[-]	CALL     	1 2 1
+	20	[-]	RETURN   	0 1
+constants (9) for 00979EF0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"tauntTarget"
+	4	"GetTauntTarget"
+	5	nil
+	6	"SetStateAndCloseToTarget"
+	7	"AI_TAUNTED"
+	8	"StopTimer"
+	9	"TimerAntiKite"
+locals (0) for 00979EF0:
+upvalues (0) for 00979EF0:
+
+function <?:56,70> (23 instructions, 92 bytes at 0097A038)
+0 params, 4 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; GetTauntTarget
+	8	[-]	CALL     	1 1 2
+	9	[-]	SETGLOBAL	1 -3	; tauntTarget
+	10	[-]	GETGLOBAL	1 -3	; tauntTarget
+	11	[-]	EQ       	1 1 -5	; - nil
+	12	[-]	JMP      	8	; to 21
+	13	[-]	GETGLOBAL	1 -6	; SetStateAndCloseToTarget
+	14	[-]	GETGLOBAL	2 -7	; AI_ATTACKMOVE_ATTACKING
+	15	[-]	GETGLOBAL	3 -3	; tauntTarget
+	16	[-]	CALL     	1 3 1
+	17	[-]	GETGLOBAL	1 -8	; ResetAndStartTimer
+	18	[-]	LOADK    	2 -9	; "TimerAntiKite"
+	19	[-]	CALL     	1 2 1
+	20	[-]	JMP      	2	; to 23
+	21	[-]	GETGLOBAL	1 -10	; FindTargetOrMove
+	22	[-]	CALL     	1 1 1
+	23	[-]	RETURN   	0 1
+constants (10) for 0097A038:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"tauntTarget"
+	4	"GetTauntTarget"
+	5	nil
+	6	"SetStateAndCloseToTarget"
+	7	"AI_ATTACKMOVE_ATTACKING"
+	8	"ResetAndStartTimer"
+	9	"TimerAntiKite"
+	10	"FindTargetOrMove"
+locals (0) for 0097A038:
+upvalues (0) for 0097A038:
+
+function <?:73,155> (116 instructions, 464 bytes at 0097A1A0)
+0 params, 8 slots, 0 upvalues, 0 locals, 27 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetTargetAcquisitionMode
+	2	[-]	CALL     	1 1 2
+	3	[-]	GETGLOBAL	2 -2	; TARGET_ACQUISITION_MODE_DEFAULT
+	4	[-]	EQ       	1 1 2
+	5	[-]	JMP      	78	; to 84
+	6	[-]	GETGLOBAL	2 -3	; TARGET_ACQUISITION_MODE_ASLEEP
+	7	[-]	EQ       	0 1 2
+	8	[-]	JMP      	24	; to 33
+	9	[-]	GETGLOBAL	2 -4	; SetTargetAcquisitionMode
+	10	[-]	GETGLOBAL	3 -2	; TARGET_ACQUISITION_MODE_DEFAULT
+	11	[-]	CALL     	2 2 1
+	12	[-]	GETGLOBAL	2 -5	; FindTargetInWakeUpRange
+	13	[-]	CALL     	2 1 2
+	14	[-]	GETGLOBAL	3 -4	; SetTargetAcquisitionMode
+	15	[-]	GETGLOBAL	4 -3	; TARGET_ACQUISITION_MODE_ASLEEP
+	16	[-]	CALL     	3 2 1
+	17	[-]	EQ       	1 2 -6	; - nil
+	18	[-]	JMP      	40	; to 59
+	19	[-]	GETGLOBAL	3 -4	; SetTargetAcquisitionMode
+	20	[-]	GETGLOBAL	4 -7	; TARGET_ACQUISITION_MODE_DISTRIBUTE_FIRE
+	21	[-]	CALL     	3 2 1
+	22	[-]	GETGLOBAL	3 -8	; FindTargetInFirstAcquisitionRangeWithFilter
+	23	[-]	NEWTABLE 	4 0 0
+	24	[-]	NEWTABLE 	5 2 0
+	25	[-]	GETGLOBAL	6 -9	; UnitTagIndicies
+	26	[-]	GETTABLE 	6 6 -10	; "Minion_Lane_Ranged"
+	27	[-]	GETGLOBAL	7 -9	; UnitTagIndicies
+	28	[-]	GETTABLE 	7 7 -11	; "Special_TurretIgnores"
+	29	[-]	SETLIST  	5 2 1	; 1
+	30	[-]	CALL     	3 3 2
+	31	[-]	MOVE     	0 3
+	32	[-]	JMP      	26	; to 59
+	33	[-]	GETGLOBAL	2 -12	; ASLEEP_TIME_DEFAULT_LANE
+	34	[-]	GETGLOBAL	3 -13	; GetMinionLane
+	35	[-]	CALL     	3 1 2
+	36	[-]	GETGLOBAL	4 -14	; CENTER_LANE
+	37	[-]	EQ       	0 3 4
+	38	[-]	JMP      	1	; to 40
+	39	[-]	GETGLOBAL	2 -15	; ASLEEP_TIME_CENTER_LANE
+	40	[-]	GETGLOBAL	3 -16	; GetMissionTime
+	41	[-]	CALL     	3 1 2
+	42	[-]	LT       	1 2 3
+	43	[-]	JMP      	4	; to 48
+	44	[-]	GETGLOBAL	3 -17	; GetTarget
+	45	[-]	CALL     	3 1 2
+	46	[-]	EQ       	0 3 -6	; - nil
+	47	[-]	JMP      	11	; to 59
+	48	[-]	GETGLOBAL	3 -4	; SetTargetAcquisitionMode
+	49	[-]	GETGLOBAL	4 -2	; TARGET_ACQUISITION_MODE_DEFAULT
+	50	[-]	CALL     	3 2 1
+	51	[-]	GETGLOBAL	3 -18	; FindTargetInAcRWithFilter
+	52	[-]	LOADK    	4 -19	; 0
+	53	[-]	NEWTABLE 	5 1 0
+	54	[-]	GETGLOBAL	6 -9	; UnitTagIndicies
+	55	[-]	GETTABLE 	6 6 -11	; "Special_TurretIgnores"
+	56	[-]	SETLIST  	5 1 1	; 1
+	57	[-]	CALL     	3 3 2
+	58	[-]	MOVE     	0 3
+	59	[-]	EQ       	1 0 -6	; - nil
+	60	[-]	JMP      	31	; to 92
+	61	[-]	GETGLOBAL	2 -20	; IsHeroAI
+	62	[-]	MOVE     	3 0
+	63	[-]	CALL     	2 2 2
+	64	[-]	TEST     	2 0 0
+	65	[-]	JMP      	26	; to 92
+	66	[-]	GETGLOBAL	2 -21	; SetTarget
+	67	[-]	MOVE     	3 0
+	68	[-]	CALL     	2 2 1
+	69	[-]	GETGLOBAL	2 -22	; AddToIgnore
+	70	[-]	LOADK    	3 -23	; 0.1
+	71	[-]	CALL     	2 2 1
+	72	[-]	GETGLOBAL	2 -4	; SetTargetAcquisitionMode
+	73	[-]	GETGLOBAL	3 -2	; TARGET_ACQUISITION_MODE_DEFAULT
+	74	[-]	CALL     	2 2 1
+	75	[-]	GETGLOBAL	2 -18	; FindTargetInAcRWithFilter
+	76	[-]	LOADK    	3 -19	; 0
+	77	[-]	NEWTABLE 	4 1 0
+	78	[-]	GETGLOBAL	5 -9	; UnitTagIndicies
+	79	[-]	GETTABLE 	5 5 -11	; "Special_TurretIgnores"
+	80	[-]	SETLIST  	4 1 1	; 1
+	81	[-]	CALL     	2 3 2
+	82	[-]	MOVE     	0 2
+	83	[-]	JMP      	8	; to 92
+	84	[-]	GETGLOBAL	2 -18	; FindTargetInAcRWithFilter
+	85	[-]	LOADK    	3 -19	; 0
+	86	[-]	NEWTABLE 	4 1 0
+	87	[-]	GETGLOBAL	5 -9	; UnitTagIndicies
+	88	[-]	GETTABLE 	5 5 -11	; "Special_TurretIgnores"
+	89	[-]	SETLIST  	4 1 1	; 1
+	90	[-]	CALL     	2 3 2
+	91	[-]	MOVE     	0 2
+	92	[-]	EQ       	1 0 -6	; - nil
+	93	[-]	JMP      	21	; to 115
+	94	[-]	GETGLOBAL	2 -24	; GetRegionTag
+	95	[-]	MOVE     	3 0
+	96	[-]	GETGLOBAL	4 -25	; GameplayArea
+	97	[-]	CALL     	2 3 2
+	98	[-]	GETGLOBAL	3 -26	; IsNochaseRegionForMinions
+	99	[-]	MOVE     	4 2
+	100	[-]	CALL     	3 2 2
+	101	[-]	TEST     	3 0 0
+	102	[-]	JMP      	9	; to 112
+	103	[-]	GETGLOBAL	3 -21	; SetTarget
+	104	[-]	MOVE     	4 0
+	105	[-]	CALL     	3 2 1
+	106	[-]	GETGLOBAL	3 -22	; AddToIgnore
+	107	[-]	LOADK    	4 -23	; 0.1
+	108	[-]	CALL     	3 2 1
+	109	[-]	GETGLOBAL	3 -27	; LaneMinionFindTarget
+	110	[-]	TAILCALL 	3 1 0
+	111	[-]	RETURN   	3 0
+	112	[-]	GETGLOBAL	3 -21	; SetTarget
+	113	[-]	MOVE     	4 0
+	114	[-]	CALL     	3 2 1
+	115	[-]	RETURN   	0 2
+	116	[-]	RETURN   	0 1
+constants (27) for 0097A1A0:
+	1	"GetTargetAcquisitionMode"
+	2	"TARGET_ACQUISITION_MODE_DEFAULT"
+	3	"TARGET_ACQUISITION_MODE_ASLEEP"
+	4	"SetTargetAcquisitionMode"
+	5	"FindTargetInWakeUpRange"
+	6	nil
+	7	"TARGET_ACQUISITION_MODE_DISTRIBUTE_FIRE"
+	8	"FindTargetInFirstAcquisitionRangeWithFilter"
+	9	"UnitTagIndicies"
+	10	"Minion_Lane_Ranged"
+	11	"Special_TurretIgnores"
+	12	"ASLEEP_TIME_DEFAULT_LANE"
+	13	"GetMinionLane"
+	14	"CENTER_LANE"
+	15	"ASLEEP_TIME_CENTER_LANE"
+	16	"GetMissionTime"
+	17	"GetTarget"
+	18	"FindTargetInAcRWithFilter"
+	19	0
+	20	"IsHeroAI"
+	21	"SetTarget"
+	22	"AddToIgnore"
+	23	0.1
+	24	"GetRegionTag"
+	25	"GameplayArea"
+	26	"IsNochaseRegionForMinions"
+	27	"LaneMinionFindTarget"
+locals (0) for 0097A1A0:
+upvalues (0) for 0097A1A0:
+
+function <?:157,162> (20 instructions, 80 bytes at 0097A1F8)
+1 param, 2 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; AREA_Lane_Top
+	2	[-]	EQ       	1 0 1
+	3	[-]	JMP      	14	; to 18
+	4	[-]	GETGLOBAL	1 -2	; AREA_Lane_Mid
+	5	[-]	EQ       	1 0 1
+	6	[-]	JMP      	11	; to 18
+	7	[-]	GETGLOBAL	1 -3	; AREA_Lane_Bot
+	8	[-]	EQ       	1 0 1
+	9	[-]	JMP      	8	; to 18
+	10	[-]	GETGLOBAL	1 -4	; AREA_Base
+	11	[-]	EQ       	1 0 1
+	12	[-]	JMP      	5	; to 18
+	13	[-]	GETGLOBAL	1 -5	; AREA_Platform
+	14	[-]	EQ       	1 0 1
+	15	[-]	JMP      	2	; to 18
+	16	[-]	LOADBOOL 	1 1 0
+	17	[-]	RETURN   	1 2
+	18	[-]	LOADBOOL 	1 0 0
+	19	[-]	RETURN   	1 2
+	20	[-]	RETURN   	0 1
+constants (5) for 0097A1F8:
+	1	"AREA_Lane_Top"
+	2	"AREA_Lane_Mid"
+	3	"AREA_Lane_Bot"
+	4	"AREA_Base"
+	5	"AREA_Platform"
+locals (0) for 0097A1F8:
+upvalues (0) for 0097A1F8:
+
+function <?:164,169> (10 instructions, 40 bytes at 0097A300)
+0 params, 2 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; LastAutoAttackFinished
+	2	[-]	CALL     	0 1 2
+	3	[-]	EQ       	0 0 -2	; - true
+	4	[-]	JMP      	5	; to 10
+	5	[-]	GETGLOBAL	0 -3	; StopTimer
+	6	[-]	LOADK    	1 -4	; "TimerWaitForAttackFinish"
+	7	[-]	CALL     	0 2 1
+	8	[-]	GETGLOBAL	0 -5	; FindTargetOrMove
+	9	[-]	CALL     	0 1 1
+	10	[-]	RETURN   	0 1
+constants (5) for 0097A300:
+	1	"LastAutoAttackFinished"
+	2	true
+	3	"StopTimer"
+	4	"TimerWaitForAttackFinish"
+	5	"FindTargetOrMove"
+locals (0) for 0097A300:
+upvalues (0) for 0097A300:
+
+function <?:172,226> (103 instructions, 412 bytes at 0097DBB0)
+0 params, 6 slots, 0 upvalues, 0 locals, 28 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; GetMyRegionTag
+	8	[-]	GETGLOBAL	2 -4	; GameplayArea
+	9	[-]	CALL     	1 2 2
+	10	[-]	GETGLOBAL	2 -5	; IsNochaseRegionForMinions
+	11	[-]	MOVE     	3 1
+	12	[-]	CALL     	2 2 2
+	13	[-]	TEST     	2 0 0
+	14	[-]	JMP      	10	; to 25
+	15	[-]	GETGLOBAL	2 -6	; GetTarget
+	16	[-]	CALL     	2 1 2
+	17	[-]	EQ       	1 2 -7	; - nil
+	18	[-]	JMP      	3	; to 22
+	19	[-]	GETGLOBAL	2 -8	; AddToIgnore
+	20	[-]	LOADK    	3 -9	; 0.6
+	21	[-]	CALL     	2 2 1
+	22	[-]	GETGLOBAL	2 -10	; FindTargetOrMove
+	23	[-]	CALL     	2 1 1
+	24	[-]	RETURN   	0 1
+	25	[-]	GETGLOBAL	2 -11	; AI_ATTACKMOVESTATE
+	26	[-]	EQ       	0 0 2
+	27	[-]	JMP      	16	; to 44
+	28	[-]	GETGLOBAL	2 -12	; LaneMinionFindTarget
+	29	[-]	CALL     	2 1 2
+	30	[-]	EQ       	0 2 -7	; - nil
+	31	[-]	JMP      	4	; to 36
+	32	[-]	GETGLOBAL	3 -13	; TurnOffAutoAttack
+	33	[-]	GETGLOBAL	4 -14	; STOPREASON_TARGET_LOST
+	34	[-]	CALL     	3 2 1
+	35	[-]	RETURN   	0 1
+	36	[-]	GETGLOBAL	3 -15	; SetStateAndCloseToTarget
+	37	[-]	GETGLOBAL	4 -16	; AI_ATTACKMOVE_ATTACKING
+	38	[-]	MOVE     	5 2
+	39	[-]	CALL     	3 3 1
+	40	[-]	GETGLOBAL	3 -17	; ResetAndStartTimer
+	41	[-]	LOADK    	4 -18	; "TimerAntiKite"
+	42	[-]	CALL     	3 2 1
+	43	[-]	JMP      	12	; to 56
+	44	[-]	GETGLOBAL	2 -19	; AI_TAUNTED
+	45	[-]	EQ       	0 0 2
+	46	[-]	JMP      	9	; to 56
+	47	[-]	GETGLOBAL	2 -20	; GetTauntTarget
+	48	[-]	CALL     	2 1 2
+	49	[-]	EQ       	1 2 -7	; - nil
+	50	[-]	JMP      	5	; to 56
+	51	[-]	GETGLOBAL	2 -15	; SetStateAndCloseToTarget
+	52	[-]	GETGLOBAL	3 -19	; AI_TAUNTED
+	53	[-]	GETGLOBAL	4 -20	; GetTauntTarget
+	54	[-]	CALL     	4 1 0
+	55	[-]	CALL     	2 0 1
+	56	[-]	GETGLOBAL	2 -16	; AI_ATTACKMOVE_ATTACKING
+	57	[-]	EQ       	1 0 2
+	58	[-]	JMP      	6	; to 65
+	59	[-]	GETGLOBAL	2 -19	; AI_TAUNTED
+	60	[-]	EQ       	1 0 2
+	61	[-]	JMP      	3	; to 65
+	62	[-]	GETGLOBAL	2 -21	; AI_BERSERK
+	63	[-]	EQ       	0 0 2
+	64	[-]	JMP      	38	; to 103
+	65	[-]	GETGLOBAL	2 -6	; GetTarget
+	66	[-]	CALL     	2 1 2
+	67	[-]	EQ       	1 2 -7	; - nil
+	68	[-]	JMP      	7	; to 76
+	69	[-]	GETGLOBAL	2 -22	; DistanceBetweenMeAndObject
+	70	[-]	GETGLOBAL	3 -6	; GetTarget
+	71	[-]	CALL     	3 1 0
+	72	[-]	CALL     	2 0 2
+	73	[-]	GETGLOBAL	3 -23	; MAX_ENGAGE_DISTANCE
+	74	[-]	LT       	0 3 2
+	75	[-]	JMP      	2	; to 78
+	76	[-]	GETGLOBAL	2 -10	; FindTargetOrMove
+	77	[-]	CALL     	2 1 1
+	78	[-]	GETGLOBAL	2 -24	; TargetInAttackRange
+	79	[-]	CALL     	2 1 2
+	80	[-]	TEST     	2 0 0
+	81	[-]	JMP      	14	; to 96
+	82	[-]	GETGLOBAL	2 -19	; AI_TAUNTED
+	83	[-]	EQ       	1 0 2
+	84	[-]	JMP      	6	; to 91
+	85	[-]	GETGLOBAL	2 -21	; AI_BERSERK
+	86	[-]	EQ       	1 0 2
+	87	[-]	JMP      	3	; to 91
+	88	[-]	GETGLOBAL	2 -17	; ResetAndStartTimer
+	89	[-]	LOADK    	3 -18	; "TimerAntiKite"
+	90	[-]	CALL     	2 2 1
+	91	[-]	GETGLOBAL	2 -25	; TurnOnAutoAttack
+	92	[-]	GETGLOBAL	3 -6	; GetTarget
+	93	[-]	CALL     	3 1 0
+	94	[-]	CALL     	2 0 1
+	95	[-]	JMP      	7	; to 103
+	96	[-]	GETGLOBAL	2 -26	; TargetInCancelAttackRange
+	97	[-]	CALL     	2 1 2
+	98	[-]	EQ       	0 2 -27	; - false
+	99	[-]	JMP      	3	; to 103
+	100	[-]	GETGLOBAL	2 -13	; TurnOffAutoAttack
+	101	[-]	GETGLOBAL	3 -28	; STOPREASON_MOVING
+	102	[-]	CALL     	2 2 1
+	103	[-]	RETURN   	0 1
+constants (28) for 0097DBB0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"GetMyRegionTag"
+	4	"GameplayArea"
+	5	"IsNochaseRegionForMinions"
+	6	"GetTarget"
+	7	nil
+	8	"AddToIgnore"
+	9	0.6
+	10	"FindTargetOrMove"
+	11	"AI_ATTACKMOVESTATE"
+	12	"LaneMinionFindTarget"
+	13	"TurnOffAutoAttack"
+	14	"STOPREASON_TARGET_LOST"
+	15	"SetStateAndCloseToTarget"
+	16	"AI_ATTACKMOVE_ATTACKING"
+	17	"ResetAndStartTimer"
+	18	"TimerAntiKite"
+	19	"AI_TAUNTED"
+	20	"GetTauntTarget"
+	21	"AI_BERSERK"
+	22	"DistanceBetweenMeAndObject"
+	23	"MAX_ENGAGE_DISTANCE"
+	24	"TargetInAttackRange"
+	25	"TurnOnAutoAttack"
+	26	"TargetInCancelAttackRange"
+	27	false
+	28	"STOPREASON_MOVING"
+locals (0) for 0097DBB0:
+upvalues (0) for 0097DBB0:
+
+function <?:230,254> (42 instructions, 168 bytes at 0097DF78)
+0 params, 5 slots, 0 upvalues, 0 locals, 17 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	4	; to 10
+	6	[-]	GETGLOBAL	1 -3	; TurnOffAutoAttack
+	7	[-]	GETGLOBAL	2 -4	; STOPREASON_MOVING
+	8	[-]	CALL     	1 2 1
+	9	[-]	RETURN   	0 1
+	10	[-]	GETGLOBAL	1 -5	; LaneMinionFindTarget
+	11	[-]	CALL     	1 1 2
+	12	[-]	EQ       	1 1 -6	; - nil
+	13	[-]	JMP      	19	; to 33
+	14	[-]	GETGLOBAL	2 -7	; LastAutoAttackFinished
+	15	[-]	CALL     	2 1 2
+	16	[-]	EQ       	0 2 -8	; - false
+	17	[-]	JMP      	7	; to 25
+	18	[-]	GETGLOBAL	2 -9	; ResetAndStartTimer
+	19	[-]	LOADK    	3 -10	; "TimerWaitForAttackFinish"
+	20	[-]	CALL     	2 2 1
+	21	[-]	GETGLOBAL	2 -9	; ResetAndStartTimer
+	22	[-]	LOADK    	3 -11	; "TimerFindEnemies"
+	23	[-]	CALL     	2 2 1
+	24	[-]	RETURN   	0 1
+	25	[-]	GETGLOBAL	2 -12	; SetStateAndCloseToTarget
+	26	[-]	GETGLOBAL	3 -13	; AI_ATTACKMOVE_ATTACKING
+	27	[-]	MOVE     	4 1
+	28	[-]	CALL     	2 3 1
+	29	[-]	GETGLOBAL	2 -9	; ResetAndStartTimer
+	30	[-]	LOADK    	3 -14	; "TimerAntiKite"
+	31	[-]	CALL     	2 2 1
+	32	[-]	JMP      	9	; to 42
+	33	[-]	GETGLOBAL	2 -3	; TurnOffAutoAttack
+	34	[-]	GETGLOBAL	3 -4	; STOPREASON_MOVING
+	35	[-]	CALL     	2 2 1
+	36	[-]	GETGLOBAL	2 -15	; SetStateAndMoveToForwardNav
+	37	[-]	GETGLOBAL	3 -16	; AI_ATTACKMOVESTATE
+	38	[-]	CALL     	2 2 1
+	39	[-]	GETGLOBAL	2 -17	; StopTimer
+	40	[-]	LOADK    	3 -14	; "TimerAntiKite"
+	41	[-]	CALL     	2 2 1
+	42	[-]	RETURN   	0 1
+constants (17) for 0097DF78:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"TurnOffAutoAttack"
+	4	"STOPREASON_MOVING"
+	5	"LaneMinionFindTarget"
+	6	nil
+	7	"LastAutoAttackFinished"
+	8	false
+	9	"ResetAndStartTimer"
+	10	"TimerWaitForAttackFinish"
+	11	"TimerFindEnemies"
+	12	"SetStateAndCloseToTarget"
+	13	"AI_ATTACKMOVE_ATTACKING"
+	14	"TimerAntiKite"
+	15	"SetStateAndMoveToForwardNav"
+	16	"AI_ATTACKMOVESTATE"
+	17	"StopTimer"
+locals (0) for 0097DF78:
+upvalues (0) for 0097DF78:
+
+function <?:258,270> (19 instructions, 76 bytes at 0097E198)
+0 params, 3 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; AI_IDLE
+	8	[-]	EQ       	0 0 1
+	9	[-]	JMP      	3	; to 13
+	10	[-]	GETGLOBAL	1 -4	; FindTargetOrMove
+	11	[-]	CALL     	1 1 1
+	12	[-]	JMP      	6	; to 19
+	13	[-]	GETGLOBAL	1 -5	; AI_ATTACKMOVESTATE
+	14	[-]	EQ       	0 0 1
+	15	[-]	JMP      	3	; to 19
+	16	[-]	GETGLOBAL	1 -6	; SetStateAndMoveToForwardNav
+	17	[-]	GETGLOBAL	2 -5	; AI_ATTACKMOVESTATE
+	18	[-]	CALL     	1 2 1
+	19	[-]	RETURN   	0 1
+constants (6) for 0097E198:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"AI_IDLE"
+	4	"FindTargetOrMove"
+	5	"AI_ATTACKMOVESTATE"
+	6	"SetStateAndMoveToForwardNav"
+locals (0) for 0097E198:
+upvalues (0) for 0097E198:

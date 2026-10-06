@@ -1,0 +1,48 @@
+<div class="parties-debug-queues-wrapper">
+  <lol-uikit-flat-checkbox class="parties-debug-show-disabled-queues">
+    {{input slot="input" id="parties-debug-show-disabled-queues-check" type="checkbox" checked=omitDisabledQueues}}
+    <label slot="label" for="parties-debug-show-disabled-queues-check">
+      Hide Disabled Queues
+    </>
+  </>
+  <label for="parties-debug-maps-dropdown">
+    Map
+  </>
+  <lol-uikit-framed-dropdown id="parties-debug-maps-dropdown">
+    {{#each debugMaps as |map|}}
+      <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{map.selected}} onclick={{action this "setDebugMap" map on="click"}}>
+        {{map.name}}
+      </>
+    {{/each}}
+  </>
+  <label for="parties-debug-types-dropdown">
+    Game Type
+  </>
+  <lol-uikit-framed-dropdown disabled={{if typesDropdownDisabled true null}} id="parties-debug-types-dropdown">
+    {{#each debugTypes as |type|}}
+      <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{type.selected}} onclick={{action this "setDebugType" type on="click"}}>
+        <span class="parties-debug-disabled">
+          {{if type.disabled "DISABLED - "}}
+        </>
+        <span class="parties-debug-tb">
+          {{if type.isTeamBuilderManaged "TB - "}}
+        </>
+        {{type.numPlayers}}
+        -
+        {{type.name}}
+        - (
+        {{type.id}}
+        )
+      </>
+    {{/each}}
+  </>
+  <span class="parties-debug-selected-queue">
+    {{#if selectedType.id}}
+      Selected QueueId:
+      {{selectedType.id}}
+    {{/if}}
+  </>
+  <lol-uikit-flat-button disabled={{if createButtonDisabled true null}} onclick={{action this "debugSetGameMode" on="click"}}>
+    Create Lobby
+  </>
+</>

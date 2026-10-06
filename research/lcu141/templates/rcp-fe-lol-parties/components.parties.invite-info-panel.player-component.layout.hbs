@@ -1,0 +1,22 @@
+{{#if showPendingIndicator}}
+  <div class="lol-pending-loader">
+    <div class="lol-pending-loader-segment">
+    </>
+    <div class="lol-pending-loader-segment">
+    </>
+    <div class="lol-pending-loader-segment">
+    </>
+  </>
+{{/if}}
+<span class="invite-info-name">
+  {{player-name format="tooltip" summonerId=summonerId summonerName=name}}
+</>
+{{#if isSuggested}}
+  <button class="parties-remove-suggested-player" {{action this "remove" bubbles=false}}>
+  </>
+{{/if}}
+<!-- Work around for Ember.computed to act like an observer. -->
+<div style="display: none;">
+  {{recycle}}
+  {{errorObserver}}
+</>

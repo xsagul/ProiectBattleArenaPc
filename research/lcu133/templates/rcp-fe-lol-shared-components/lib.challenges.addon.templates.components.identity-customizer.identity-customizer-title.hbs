@@ -1,0 +1,34 @@
+{{#if title.challengeData}}
+  {{#uikit-tooltip tooltipPosition="right" type="system"}}
+    {{challenge-item-tooltip challengeData=title.challengeData animationsEnabled=false}}
+  {{/uikit-tooltip}}
+{{else}}
+  {{#if isDefaultTitle}}
+    {{#uikit-tooltip tooltipPosition="right" type="system"}}
+      <lol-uikit-content-block type="tooltip-system">
+        <p>
+          {{tra.challenges_identity_customizer_default_title_description}}
+        </>
+      </>
+    {{/uikit-tooltip}}
+  {{/if}}
+{{/if}}
+{{#if showNotificationPip}}
+  <div class="notification-pip">
+    {{call-to-action-pip}}
+  </>
+{{/if}}
+<div class="title-text">
+  {{title.name}}
+</>
+{{#if shouldShowChallengeName}}
+  <div class="challenge-data">
+    <div class="challenge-icon-container">
+      <img class="challenge-icon" src="/fe/lol-static-assets/images/challenges-shared/icon-token-{{challengeLevel}}.png">
+      </>
+    </>
+    <div class="challenge-name">
+      {{title.challengeName}}
+    </>
+  </>
+{{/if}}

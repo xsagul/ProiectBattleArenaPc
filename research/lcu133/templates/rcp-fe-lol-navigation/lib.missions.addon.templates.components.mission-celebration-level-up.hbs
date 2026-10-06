@@ -1,0 +1,51 @@
+<uikit-state-machine class="mission-celebration-level-up-animation" state="show-level-up">
+  <uikit-states>
+    <uikit-state name="show-level-up">
+      <uikit-transition next-state="fill-circle">
+        <uikit-condition-delay duration="500">
+        </>
+      </>
+    </>
+    <uikit-state name="fill-circle">
+      <uikit-transition next-state="hide-level-up">
+        <uikit-condition-delay duration="1150">
+        </>
+      </>
+    </>
+    <uikit-state name="hide-level-up">
+      <uikit-behavior-media selector=".mission-small-dissipate" playing="">
+      </>
+      <uikit-behavior-media selector=".mission-medium-dissipate" playing="">
+      </>
+      <uikit-transition next-state="complete">
+        <uikit-condition-delay duration="400">
+        </>
+      </>
+    </>
+    <uikit-state name="complete">
+    </>
+  </>
+  <div class="level-up-wrapper" visible-state="show-level-up,fill-circle,hide-level-up,complete">
+    <div class="level-up-item-wrapper {{if hideLevelUp "hide-level-up"}}">
+      <img class="summoner-icon-image" src={{summonerIconImage}}>
+      </>
+      <lol-uikit-themed-level-ring-v2 id="level-up-circle" size="large" class="level-up-circle" level={{summonerLevel}}>
+      </>
+    </>
+    {{#if isMediumCelebration}}
+      <user-experience-perf-switch class="mission-dissipate mission-medium-dissipate">
+        <uikit-video src="/fe/lol-navigation/LevelUpExplosion_Medium.webm" perf-flags="largeAreaAnimationsEnabled" cache-name="rcp-fe-lol-missions">
+        </>
+        <div class="hidden">
+        </>
+      </>
+    {{else}}
+      <user-experience-perf-switch class="mission-dissipate mission-small-dissipate">
+        <uikit-video src="/fe/lol-navigation/LevelUpExplosion_Small.webm" perf-flags="largeAreaAnimationsEnabled" cache-name="rcp-fe-lol-missions">
+        </>
+        <div class="hidden">
+        </>
+      </>
+    {{/if}}
+  </>
+</>

@@ -1,0 +1,22 @@
+{{champion-showcase-team showcaseActions=myTeamBans enemyBansHidden=waitingForBans myTeamBanning=waitingForMyTeamBans introAnimation=localSummonerActionComplete}}
+<div class="waiting-for-their-bans-label">
+  <div class="waiting-for-their-bans-text">
+    {{tra.ban_component_waiting_for_their_bans}}
+    <div class="waiting-for-their-bans-glow">
+      {{tra.ban_component_waiting_for_their_bans}}
+    </>
+  </>
+</>
+<div class="enemy-bans-wrapper {{if waitingForBans "removed" "visible"}}">
+  <div class="ban-announcement-label">
+    <div class="ban-announcement-bg-glow">
+    </>
+    <div class="ban-announcement-text">
+      {{tra.ban_component_ban_announcement}}
+      <div class="ban-announcement-label-glow">
+        {{tra.ban_component_ban_announcement}}
+      </>
+    </>
+  </>
+  {{champion-showcase-team showcaseActions=theirTeamBans theirTeam=true}}
+</>

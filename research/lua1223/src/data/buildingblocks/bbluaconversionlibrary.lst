@@ -1,0 +1,66 @@
+
+main <?:0,0> (3 instructions, 12 bytes at 008A99B0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 1 constant, 1 function
+	1	[-]	CLOSURE  	0 0	; 008A9A08
+	2	[-]	SETGLOBAL	0 -1	; SpawnMinion
+	3	[-]	RETURN   	0 1
+constants (1) for 008A99B0:
+	1	"SpawnMinion"
+locals (0) for 008A99B0:
+upvalues (0) for 008A99B0:
+
+function <?:5,14> (30 instructions, 120 bytes at 008A9A08)
+12 params, 15 slots, 0 upvalues, 0 locals, 20 constants, 0 functions
+	1	[-]	NEWTABLE 	12 0 2
+	2	[-]	SETTABLE 	12 -2 3	; "Pos" -
+	3	[-]	GETGLOBAL	13 -3	; GetHashedGameObjName
+	4	[-]	LOADK    	14 -4	; "GoldRedirectObj"
+	5	[-]	CALL     	13 2 2
+	6	[-]	SETTABLE 	12 13 11
+	7	[-]	SETGLOBAL	12 -1	; passThroughParams
+	8	[-]	NEWTABLE 	12 0 13
+	9	[-]	SETTABLE 	12 -6 0	; "Name" -
+	10	[-]	SETTABLE 	12 -7 1	; "Skin" -
+	11	[-]	SETTABLE 	12 -8 2	; "AiScript" -
+	12	[-]	SETTABLE 	12 -9 -2	; "PosVar" "Pos"
+	13	[-]	SETTABLE 	12 -10 4	; "Team" -
+	14	[-]	SETTABLE 	12 -11 5	; "Stunned" -
+	15	[-]	SETTABLE 	12 -12 6	; "Rooted" -
+	16	[-]	SETTABLE 	12 -13 7	; "Silenced" -
+	17	[-]	SETTABLE 	12 -14 8	; "Invulnerable" -
+	18	[-]	SETTABLE 	12 -15 9	; "MagicImmune" -
+	19	[-]	SETTABLE 	12 -16 10	; "IgnoreCollision" -
+	20	[-]	SETTABLE 	12 -17 -18	; "DestVar" "DestObj"
+	21	[-]	SETTABLE 	12 -19 -4	; "GoldRedirectTargetVar" "GoldRedirectObj"
+	22	[-]	SETGLOBAL	12 -5	; perBlockParams
+	23	[-]	GETGLOBAL	12 -20	; BBSpawnMinion
+	24	[-]	GETGLOBAL	13 -1	; passThroughParams
+	25	[-]	GETGLOBAL	14 -5	; perBlockParams
+	26	[-]	CALL     	12 3 1
+	27	[-]	GETGLOBAL	12 -1	; passThroughParams
+	28	[-]	GETTABLE 	12 12 -18	; "DestObj"
+	29	[-]	RETURN   	12 2
+	30	[-]	RETURN   	0 1
+constants (20) for 008A9A08:
+	1	"passThroughParams"
+	2	"Pos"
+	3	"GetHashedGameObjName"
+	4	"GoldRedirectObj"
+	5	"perBlockParams"
+	6	"Name"
+	7	"Skin"
+	8	"AiScript"
+	9	"PosVar"
+	10	"Team"
+	11	"Stunned"
+	12	"Rooted"
+	13	"Silenced"
+	14	"Invulnerable"
+	15	"MagicImmune"
+	16	"IgnoreCollision"
+	17	"DestVar"
+	18	"DestObj"
+	19	"GoldRedirectTargetVar"
+	20	"BBSpawnMinion"
+locals (0) for 008A9A08:
+upvalues (0) for 008A9A08:

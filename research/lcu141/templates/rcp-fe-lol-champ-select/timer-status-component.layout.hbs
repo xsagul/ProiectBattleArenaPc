@@ -1,0 +1,61 @@
+{{#if isHeaderExpanded}}
+  {{#if displayAlternateTimer}}
+    <div class="small-timer {{if isPlayingCeremony "hidden"}}" data-time={{formattedTime}}>
+      {{#if timer.isInfinite}}
+        ∞
+      {{else}}
+        {{formattedTime}}
+      {{/if}}
+    </>
+  {{/if}}
+  {{#if showChampionBench}}
+    {{champion-bench benchChampions=benchChampions championChestAvailabilityMap=championChestAvailabilityMap shouldShowChestAvailability=shouldShowChestAvailability showChestAvailabilityHintedPortraits=showChestAvailabilityHintedPortraits inventory=inventory summoner=summoner recordDidRequestSucceed=recordDidRequestSucceed}}
+  {{/if}}
+{{else}}
+  <div class="message {{if shouldHideMessage "hidden"}} {{if localPlayerActive "local-player-acting"}}">
+    {{message}}
+  </>
+{{/if}}
+<div class="timer-container">
+  <div class="burnout-timer left {{unless alliedTeamActive "hidden"}} {{if alliedActiveAction.isBan "red" "blue"}}">
+    <div class="burnout-timer-glow">
+    </>
+    <div class="burnout-timer-bar">
+    </>
+  </>
+  <div class="timer {{if isPlayingCeremony "hidden"}} {{if displayAlternateTimer "hidden"}}" data-time={{formattedTime}}>
+    {{#if timer.isInfinite}}
+      ∞
+    {{else}}
+      {{formattedTime}}
+    {{/if}}
+  </>
+  <div class="burnout-timer right {{unless enemyTeamActive "hidden"}} {{if inPlanningOrFinalization "blue" "red"}}">
+    <div class="burnout-timer-glow">
+    </>
+    <div class="burnout-timer-bar">
+    </>
+  </>
+  <svg class="metal-work left" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 140.04" width="340" height="35.01">
+    <defs>
+      <linearGradient id="Gradient1">
+        <stop class="stop1" offset="0%">
+        </>
+        <stop class="stop2" offset="55%">
+        </>
+      </>
+      <style type="text/css">
+        .cls-1 { fill: url(#Gradient1); }
+      .stop1 { stop-color: #463714; }
+      .stop2 { stop-color: #785A28; }
+      </>
+    </>
+    <path class="cls-1" transform="translate(615.5 6.54)" d="M-261.55,112.3v9.45h10.79V101.37h-5.4c-47,0-87.17-36-93.48-83.75l-2.71-7.84H-583.08L-595.5-2.5h212c-.08,1.83,0,10.14,0,12h4v-16l-236,0v4h4l23,23.14h225.34C-354.46,69.64-310,109.74-261.55,112.3Zm6,17.2c-57.68,0-107.69-40.62-120-96h-4c12.41,58.46,63.33,100,124,100h996l4-4Z">
+    </>
+  </>
+  <svg class="metal-work right" id="Layer_2" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 140.04" width="340" height="35.01">
+    <path class="cls-1" transform="translate(615.5 6.54)" d="M-261.55,112.3v9.45h10.79V101.37h-5.4c-47,0-87.17-36-93.48-83.75l-2.71-7.84H-583.08L-595.5-2.5h212c-.08,1.83,0,10.14,0,12h4v-16l-236,0v4h4l23,23.14h225.34C-354.46,69.64-310,109.74-261.55,112.3Zm6,17.2c-57.68,0-107.69-40.62-120-96h-4c12.41,58.46,63.33,100,124,100h996l4-4Z">
+    </>
+  </>
+</>
+{{team-boost-button allowBattleBoost=allowBattleBoost isUILockedForGameStart=isUILockedForGameStart jmxSettings=jmxSettings inFinalizationPhase=inFinalizationPhase isShowingVoteCeremonies=isShowingVoteCeremonies boostableSkinCount=boostableSkinCount recordDidRequestSucceed=recordDidRequestSucceed timeRemaining=timer.timeRemaining}}

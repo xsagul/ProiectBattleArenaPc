@@ -1,0 +1,63 @@
+{
+  "name": "HealthBarTickStyleHero",
+  "hash": "0x1e18eebe",
+  "interface": false,
+  "value": false,
+  "bases": [
+    "HealthBarTickStyleBase"
+  ],
+  "since": null,
+  "removedIn": null,
+  "properties": [
+    {
+      "name": "HealthPerstandardTick",
+      "hash": "0x3ba1659e",
+      "ft": "F32",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "1000"
+    },
+    {
+      "name": "MicroTick",
+      "hash": "0x61e47ab2",
+      "ft": "Hash",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "\"0x0\""
+    },
+    {
+      "name": "MicroTickPerStandardTickData",
+      "hash": "0x82b638b9",
+      "ft": "List",
+      "kt": null,
+      "vt": "Embed",
+      "kh": "0x522ba90a",
+      "khName": "MicroTicksPerStandardTickData",
+      "khKind": "class",
+      "defaultValue": "[]"
+    },
+    {
+      "name": "StandardTick",
+      "hash": "0xd4080da5",
+      "ft": "Hash",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "\"0x0\""
+    }
+  ],
+  "ancestorLevels": [
+    [
+      "HealthBarTickStyleBase"
+    ]
+  ],
+  "descendantTree": []
+}

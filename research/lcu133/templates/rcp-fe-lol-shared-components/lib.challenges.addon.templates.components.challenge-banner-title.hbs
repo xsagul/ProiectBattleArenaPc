@@ -1,0 +1,40 @@
+<div class="challenge-banner-title-container">
+  {{titleName}}
+  {{#if titleName}}
+    {{#uikit-tooltip tooltipPosition="right" type="system"}}
+      <div class="challenge-banner-title-tooltip">
+        <div class="challenge-banner-title-tooltip-header">
+          <div class="challenge-banner-title-tooltip-scroll-icon">
+          </>
+          <div class="challenge-banner-title-tooltip-title">
+            {{titleName}}
+          </>
+          <div class="challenge-banner-title-tooltip-divider">
+          </>
+        </>
+        {{#unless isDefaultTitle}}
+          <div class="challenge-banner-title-tooltip-level-details-container">
+            <img class="challenge-banner-title-tooltip-challenge-title-level-token {{if titleChallenge.isCapstone "capstone"}}" src="{{titleLevelTokenIconPath}}">
+            </>
+            <div class="challenge-banner-title-tooltip-level-details-text-container">
+              <div class="challenge-banner-title-tooltip-challenge-name">
+                {{titleChallengeName}}
+              </>
+              <div class="challenge-banner-title-tooltip-challenge-title-level">
+                {{txtTitleLevel}}
+              </>
+            </>
+          </>
+          <div class="challenge-banner-title-tooltip-challenge-description">
+            {{titleChallengeDescription}}
+          </>
+        {{/unless}}
+        {{#if titleAcquiredDate}}
+          <div class="challenge-banner-title-tooltip-challenge-title-acquired-date">
+            {{titleAcquiredDate}}
+          </>
+        {{/if}}
+      </>
+    {{/uikit-tooltip}}
+  {{/if}}
+</>

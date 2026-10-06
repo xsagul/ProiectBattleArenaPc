@@ -1,0 +1,2782 @@
+
+main <?:0,0> (485 instructions, 1940 bytes at 0100D948)
+0+ params, 14 slots, 0 upvalues, 0 locals, 213 constants, 35 functions
+	1	[-]	LOADK    	0 -2	; 180
+	2	[-]	SETGLOBAL	0 -1	; MAX_MINIONS_EVER
+	3	[-]	LOADK    	0 -4	; 0
+	4	[-]	SETGLOBAL	0 -3	; TEAM_UNKNOWN
+	5	[-]	LOADK    	0 -6	; 100
+	6	[-]	SETGLOBAL	0 -5	; TEAM_ORDER
+	7	[-]	LOADK    	0 -8	; 200
+	8	[-]	SETGLOBAL	0 -7	; TEAM_CHAOS
+	9	[-]	LOADK    	0 -10	; 1
+	10	[-]	SETGLOBAL	0 -9	; ORDER_HQ
+	11	[-]	LOADK    	0 -12	; 2
+	12	[-]	SETGLOBAL	0 -11	; CHAOS_HQ
+	13	[-]	LOADK    	0 -14	; 3
+	14	[-]	SETGLOBAL	0 -13	; FRONT_TOWER
+	15	[-]	LOADK    	0 -12	; 2
+	16	[-]	SETGLOBAL	0 -15	; MIDDLE_TOWER
+	17	[-]	LOADK    	0 -10	; 1
+	18	[-]	SETGLOBAL	0 -16	; BACK_TOWER
+	19	[-]	LOADK    	0 -18	; 4
+	20	[-]	SETGLOBAL	0 -17	; HQ_TOWER2
+	21	[-]	LOADK    	0 -20	; 5
+	22	[-]	SETGLOBAL	0 -19	; HQ_TOWER1
+	23	[-]	LOADK    	0 -4	; 0
+	24	[-]	SETGLOBAL	0 -21	; RIGHT_LANE
+	25	[-]	LOADK    	0 -10	; 1
+	26	[-]	SETGLOBAL	0 -22	; CENTER_LANE
+	27	[-]	LOADK    	0 -12	; 2
+	28	[-]	SETGLOBAL	0 -23	; LEFT_LANE
+	29	[-]	LOADK    	0 -25	; 90
+	30	[-]	SETGLOBAL	0 -24	; INITIAL_TIME_TO_SPAWN
+	31	[-]	LOADK    	0 -14	; 3
+	32	[-]	SETGLOBAL	0 -26	; CANNON_MINION_SPAWN_FREQUENCY
+	33	[-]	LOADK    	0 -28	; 1200
+	34	[-]	SETGLOBAL	0 -27	; INCREASE_CANNON_RATE_TIMER
+	35	[-]	LOADK    	0 -30	; 2100
+	36	[-]	SETGLOBAL	0 -29	; INCREASE_CANNON_RATE_TIMER2
+	37	[-]	LOADK    	0 -4	; 0
+	38	[-]	SETGLOBAL	0 -31	; MINION_HEALTH_DENIAL_PERCENT
+	39	[-]	LOADK    	0 -25	; 90
+	40	[-]	SETGLOBAL	0 -32	; UPGRADE_MINION_TIMER
+	41	[-]	LOADK    	0 -34	; 1400
+	42	[-]	SETGLOBAL	0 -33	; EXP_GIVEN_RADIUS
+	43	[-]	LOADK    	0 -36	; 1250
+	44	[-]	SETGLOBAL	0 -35	; GOLD_GIVEN_RADIUS
+	45	[-]	LOADK    	0 -38	; 300
+	46	[-]	SETGLOBAL	0 -37	; DISABLE_MINION_SPAWN_BASE_TIME
+	47	[-]	LOADK    	0 -4	; 0
+	48	[-]	SETGLOBAL	0 -39	; DISABLE_MINION_SPAWN_MAG_TIME
+	49	[-]	LOADK    	0 -41	; 11.67
+	50	[-]	SETGLOBAL	0 -40	; CHAOS_INHIBITOR_RESPAWN_ANIMATION_DURATION
+	51	[-]	LOADK    	0 -43	; 11
+	52	[-]	SETGLOBAL	0 -42	; ORDER_INHIBITOR_RESPAWN_ANIMATION_DURATION
+	53	[-]	LOADK    	0 -45	; -1
+	54	[-]	SETGLOBAL	0 -44	; LAST_WAVE
+	55	[-]	LOADK    	0 -47	; "none"
+	56	[-]	SETGLOBAL	0 -46	; SPECIAL_MINION_MODE
+	57	[-]	LOADBOOL 	0 0 0
+	58	[-]	SETGLOBAL	0 -48	; HQTurretAttackable
+	59	[-]	GETGLOBAL	0 -49	; DoLuaLevel
+	60	[-]	LOADK    	1 -50	; "BBLuaConversionLibrary"
+	61	[-]	CALL     	0 2 1
+	62	[-]	GETGLOBAL	0 -49	; DoLuaLevel
+	63	[-]	LOADK    	1 -51	; "LaneSigils"
+	64	[-]	CALL     	0 2 1
+	65	[-]	NEWTABLE 	0 0 4
+	66	[-]	SETTABLE 	0 -53 -54	; "WaveSpawnRate" 30000
+	67	[-]	SETTABLE 	0 -55 -56	; "SingleMinionSpawnDelay" 800
+	68	[-]	GETGLOBAL	1 -33	; EXP_GIVEN_RADIUS
+	69	[-]	SETTABLE 	0 -57 1	; "ExpRadius" -
+	70	[-]	GETGLOBAL	1 -35	; GOLD_GIVEN_RADIUS
+	71	[-]	SETTABLE 	0 -58 1	; "GoldRadius" -
+	72	[-]	SETGLOBAL	0 -52	; SpawnTable
+	73	[-]	NEWTABLE 	0 0 21
+	74	[-]	SETTABLE 	0 -60 -14	; "DefaultNumPerWave" 3
+	75	[-]	SETTABLE 	0 -61 -4	; "Armor" 0
+	76	[-]	SETTABLE 	0 -62 -10	; "ArmorUpgrade" 1
+	77	[-]	SETTABLE 	0 -63 -4	; "MagicResistance" 0
+	78	[-]	SETTABLE 	0 -64 -65	; "MagicResistanceUpgrade" 0.625
+	79	[-]	SETTABLE 	0 -66 -4	; "HPBonus" 0
+	80	[-]	SETTABLE 	0 -67 -68	; "HPUpgrade" 15
+	81	[-]	SETTABLE 	0 -69 -70	; "HPUpgradeGrowth" 0.2
+	82	[-]	SETTABLE 	0 -71 -4	; "HPInhibitor" 0
+	83	[-]	SETTABLE 	0 -72 -4	; "DamageBonus" 0
+	84	[-]	SETTABLE 	0 -73 -74	; "DamageUpgrade" 0.5
+	85	[-]	SETTABLE 	0 -75 -4	; "DamageInhibitor" 0
+	86	[-]	SETTABLE 	0 -76 -77	; "ExpGiven" 64
+	87	[-]	SETTABLE 	0 -78 -4	; "ExpBonus" 0
+	88	[-]	SETTABLE 	0 -79 -4	; "ExpUpgrade" 0
+	89	[-]	SETTABLE 	0 -80 -4	; "ExpInhibitor" 0
+	90	[-]	SETTABLE 	0 -81 -82	; "GoldGiven" 18.8
+	91	[-]	SETTABLE 	0 -83 -4	; "GoldBonus" 0
+	92	[-]	SETTABLE 	0 -84 -70	; "GoldUpgrade" 0.2
+	93	[-]	SETTABLE 	0 -85 -4	; "GoldInhibitor" 0
+	94	[-]	SETTABLE 	0 -86 -4	; "GoldShared" 0
+	95	[-]	SETTABLE 	0 -87 -4	; "GoldShareUpgrade" 0
+	96	[-]	SETTABLE 	0 -88 -89	; "GoldMaximumBonus" 12
+	97	[-]	SETTABLE 	0 -90 -4	; "LocalGoldGiven" 0
+	98	[-]	SETTABLE 	0 -91 -4	; "LocalGoldBonus" 0
+	99	[-]	SETGLOBAL	0 -59	; MeleeDefaultMinionInfo
+	100	[-]	NEWTABLE 	0 0 21
+	101	[-]	SETTABLE 	0 -60 -14	; "DefaultNumPerWave" 3
+	102	[-]	SETTABLE 	0 -61 -4	; "Armor" 0
+	103	[-]	SETTABLE 	0 -62 -65	; "ArmorUpgrade" 0.625
+	104	[-]	SETTABLE 	0 -63 -4	; "MagicResistance" 0
+	105	[-]	SETTABLE 	0 -64 -10	; "MagicResistanceUpgrade" 1
+	106	[-]	SETTABLE 	0 -66 -4	; "HPBonus" 0
+	107	[-]	SETTABLE 	0 -67 -43	; "HPUpgrade" 11
+	108	[-]	SETTABLE 	0 -69 -70	; "HPUpgradeGrowth" 0.2
+	109	[-]	SETTABLE 	0 -71 -4	; "HPInhibitor" 0
+	110	[-]	SETTABLE 	0 -72 -4	; "DamageBonus" 0
+	111	[-]	SETTABLE 	0 -73 -10	; "DamageUpgrade" 1
+	112	[-]	SETTABLE 	0 -75 -4	; "DamageInhibitor" 0
+	113	[-]	SETTABLE 	0 -76 -93	; "ExpGiven" 32
+	114	[-]	SETTABLE 	0 -78 -4	; "ExpBonus" 0
+	115	[-]	SETTABLE 	0 -79 -4	; "ExpUpgrade" 0
+	116	[-]	SETTABLE 	0 -80 -4	; "ExpInhibitor" 0
+	117	[-]	SETTABLE 	0 -81 -94	; "GoldGiven" 13.8
+	118	[-]	SETTABLE 	0 -83 -4	; "GoldBonus" 0
+	119	[-]	SETTABLE 	0 -84 -70	; "GoldUpgrade" 0.2
+	120	[-]	SETTABLE 	0 -85 -4	; "GoldInhibitor" 0
+	121	[-]	SETTABLE 	0 -86 -4	; "GoldShared" 0
+	122	[-]	SETTABLE 	0 -87 -4	; "GoldShareUpgrade" 0
+	123	[-]	SETTABLE 	0 -88 -95	; "GoldMaximumBonus" 8
+	124	[-]	SETTABLE 	0 -90 -4	; "LocalGoldGiven" 0
+	125	[-]	SETTABLE 	0 -91 -4	; "LocalGoldBonus" 0
+	126	[-]	SETGLOBAL	0 -92	; CasterDefaultMinionInfo
+	127	[-]	NEWTABLE 	0 0 21
+	128	[-]	SETTABLE 	0 -60 -4	; "DefaultNumPerWave" 0
+	129	[-]	SETTABLE 	0 -61 -4	; "Armor" 0
+	130	[-]	SETTABLE 	0 -62 -97	; "ArmorUpgrade" 1.5
+	131	[-]	SETTABLE 	0 -63 -4	; "MagicResistance" 0
+	132	[-]	SETTABLE 	0 -64 -97	; "MagicResistanceUpgrade" 1.5
+	133	[-]	SETTABLE 	0 -66 -4	; "HPBonus" 0
+	134	[-]	SETTABLE 	0 -67 -98	; "HPUpgrade" 23
+	135	[-]	SETTABLE 	0 -69 -99	; "HPUpgradeGrowth" 0.3
+	136	[-]	SETTABLE 	0 -71 -4	; "HPInhibitor" 0
+	137	[-]	SETTABLE 	0 -72 -4	; "DamageBonus" 0
+	138	[-]	SETTABLE 	0 -73 -97	; "DamageUpgrade" 1.5
+	139	[-]	SETTABLE 	0 -75 -4	; "DamageInhibitor" 0
+	140	[-]	SETTABLE 	0 -76 -6	; "ExpGiven" 100
+	141	[-]	SETTABLE 	0 -78 -4	; "ExpBonus" 0
+	142	[-]	SETTABLE 	0 -79 -4	; "ExpUpgrade" 0
+	143	[-]	SETTABLE 	0 -80 -4	; "ExpInhibitor" 0
+	144	[-]	SETTABLE 	0 -81 -100	; "GoldGiven" 39.5
+	145	[-]	SETTABLE 	0 -83 -4	; "GoldBonus" 0
+	146	[-]	SETTABLE 	0 -84 -74	; "GoldUpgrade" 0.5
+	147	[-]	SETTABLE 	0 -85 -4	; "GoldInhibitor" 0
+	148	[-]	SETTABLE 	0 -86 -4	; "GoldShared" 0
+	149	[-]	SETTABLE 	0 -87 -4	; "GoldShareUpgrade" 0
+	150	[-]	SETTABLE 	0 -88 -101	; "GoldMaximumBonus" 30
+	151	[-]	SETTABLE 	0 -90 -4	; "LocalGoldGiven" 0
+	152	[-]	SETTABLE 	0 -91 -4	; "LocalGoldBonus" 0
+	153	[-]	SETGLOBAL	0 -96	; CannonDefaultMinionInfo
+	154	[-]	NEWTABLE 	0 0 21
+	155	[-]	SETTABLE 	0 -60 -4	; "DefaultNumPerWave" 0
+	156	[-]	SETTABLE 	0 -61 -4	; "Armor" 0
+	157	[-]	SETTABLE 	0 -62 -4	; "ArmorUpgrade" 0
+	158	[-]	SETTABLE 	0 -63 -4	; "MagicResistance" 0
+	159	[-]	SETTABLE 	0 -64 -4	; "MagicResistanceUpgrade" 0
+	160	[-]	SETTABLE 	0 -66 -4	; "HPBonus" 0
+	161	[-]	SETTABLE 	0 -67 -6	; "HPUpgrade" 100
+	162	[-]	SETTABLE 	0 -69 -4	; "HPUpgradeGrowth" 0
+	163	[-]	SETTABLE 	0 -71 -4	; "HPInhibitor" 0
+	164	[-]	SETTABLE 	0 -72 -4	; "DamageBonus" 0
+	165	[-]	SETTABLE 	0 -73 -20	; "DamageUpgrade" 5
+	166	[-]	SETTABLE 	0 -75 -4	; "DamageInhibitor" 0
+	167	[-]	SETTABLE 	0 -76 -6	; "ExpGiven" 100
+	168	[-]	SETTABLE 	0 -78 -4	; "ExpBonus" 0
+	169	[-]	SETTABLE 	0 -79 -4	; "ExpUpgrade" 0
+	170	[-]	SETTABLE 	0 -80 -4	; "ExpInhibitor" 0
+	171	[-]	SETTABLE 	0 -81 -100	; "GoldGiven" 39.5
+	172	[-]	SETTABLE 	0 -83 -4	; "GoldBonus" 0
+	173	[-]	SETTABLE 	0 -84 -74	; "GoldUpgrade" 0.5
+	174	[-]	SETTABLE 	0 -85 -4	; "GoldInhibitor" 0
+	175	[-]	SETTABLE 	0 -86 -4	; "GoldShared" 0
+	176	[-]	SETTABLE 	0 -87 -4	; "GoldShareUpgrade" 0
+	177	[-]	SETTABLE 	0 -88 -101	; "GoldMaximumBonus" 30
+	178	[-]	SETTABLE 	0 -90 -4	; "LocalGoldGiven" 0
+	179	[-]	SETTABLE 	0 -91 -4	; "LocalGoldBonus" 0
+	180	[-]	SETGLOBAL	0 -102	; SuperDefaultMinionInfo
+	181	[-]	NEWTABLE 	0 0 21
+	182	[-]	SETTABLE 	0 -60 -4	; "DefaultNumPerWave" 0
+	183	[-]	SETTABLE 	0 -61 -4	; "Armor" 0
+	184	[-]	SETTABLE 	0 -62 -4	; "ArmorUpgrade" 0
+	185	[-]	SETTABLE 	0 -63 -4	; "MagicResistance" 0
+	186	[-]	SETTABLE 	0 -64 -4	; "MagicResistanceUpgrade" 0
+	187	[-]	SETTABLE 	0 -66 -4	; "HPBonus" 0
+	188	[-]	SETTABLE 	0 -67 -6	; "HPUpgrade" 100
+	189	[-]	SETTABLE 	0 -69 -4	; "HPUpgradeGrowth" 0
+	190	[-]	SETTABLE 	0 -71 -4	; "HPInhibitor" 0
+	191	[-]	SETTABLE 	0 -72 -4	; "DamageBonus" 0
+	192	[-]	SETTABLE 	0 -73 -20	; "DamageUpgrade" 5
+	193	[-]	SETTABLE 	0 -75 -4	; "DamageInhibitor" 0
+	194	[-]	SETTABLE 	0 -76 -6	; "ExpGiven" 100
+	195	[-]	SETTABLE 	0 -78 -4	; "ExpBonus" 0
+	196	[-]	SETTABLE 	0 -79 -4	; "ExpUpgrade" 0
+	197	[-]	SETTABLE 	0 -80 -4	; "ExpInhibitor" 0
+	198	[-]	SETTABLE 	0 -81 -100	; "GoldGiven" 39.5
+	199	[-]	SETTABLE 	0 -83 -4	; "GoldBonus" 0
+	200	[-]	SETTABLE 	0 -84 -74	; "GoldUpgrade" 0.5
+	201	[-]	SETTABLE 	0 -85 -4	; "GoldInhibitor" 0
+	202	[-]	SETTABLE 	0 -86 -4	; "GoldShared" 0
+	203	[-]	SETTABLE 	0 -87 -4	; "GoldShareUpgrade" 0
+	204	[-]	SETTABLE 	0 -88 -101	; "GoldMaximumBonus" 30
+	205	[-]	SETTABLE 	0 -90 -4	; "LocalGoldGiven" 0
+	206	[-]	SETTABLE 	0 -91 -4	; "LocalGoldBonus" 0
+	207	[-]	SETGLOBAL	0 -103	; TestDefaultMinionInfo
+	208	[-]	NEWTABLE 	0 0 2
+	209	[-]	SETTABLE 	0 -105 -106	; "MinionName" "SRU_OrderMinionMelee"
+	210	[-]	GETGLOBAL	1 -59	; MeleeDefaultMinionInfo
+	211	[-]	SETTABLE 	0 -107 1	; "DefaultInfo" -
+	212	[-]	SETGLOBAL	0 -104	; OrderMeleeMinionInfo
+	213	[-]	NEWTABLE 	0 0 2
+	214	[-]	SETTABLE 	0 -105 -109	; "MinionName" "SRU_ChaosMinionMelee"
+	215	[-]	GETGLOBAL	1 -59	; MeleeDefaultMinionInfo
+	216	[-]	SETTABLE 	0 -107 1	; "DefaultInfo" -
+	217	[-]	SETGLOBAL	0 -108	; ChaosMeleeMinionInfo
+	218	[-]	NEWTABLE 	0 0 2
+	219	[-]	SETTABLE 	0 -105 -111	; "MinionName" "SRU_OrderMinionRanged"
+	220	[-]	GETGLOBAL	1 -92	; CasterDefaultMinionInfo
+	221	[-]	SETTABLE 	0 -107 1	; "DefaultInfo" -
+	222	[-]	SETGLOBAL	0 -110	; OrderCasterMinionInfo
+	223	[-]	NEWTABLE 	0 0 2
+	224	[-]	SETTABLE 	0 -105 -113	; "MinionName" "SRU_ChaosMinionRanged"
+	225	[-]	GETGLOBAL	1 -92	; CasterDefaultMinionInfo
+	226	[-]	SETTABLE 	0 -107 1	; "DefaultInfo" -
+	227	[-]	SETGLOBAL	0 -112	; ChaosCasterMinionInfo
+	228	[-]	NEWTABLE 	0 0 2
+	229	[-]	SETTABLE 	0 -105 -115	; "MinionName" "SRU_OrderMinionSiege"
+	230	[-]	GETGLOBAL	1 -96	; CannonDefaultMinionInfo
+	231	[-]	SETTABLE 	0 -107 1	; "DefaultInfo" -
+	232	[-]	SETGLOBAL	0 -114	; OrderCannonMinionInfo
+	233	[-]	NEWTABLE 	0 0 2
+	234	[-]	SETTABLE 	0 -105 -117	; "MinionName" "SRU_ChaosMinionSiege"
+	235	[-]	GETGLOBAL	1 -96	; CannonDefaultMinionInfo
+	236	[-]	SETTABLE 	0 -107 1	; "DefaultInfo" -
+	237	[-]	SETGLOBAL	0 -116	; ChaosCannonMinionInfo
+	238	[-]	NEWTABLE 	0 0 2
+	239	[-]	SETTABLE 	0 -105 -119	; "MinionName" "SRU_OrderMinionSuper"
+	240	[-]	GETGLOBAL	1 -102	; SuperDefaultMinionInfo
+	241	[-]	SETTABLE 	0 -107 1	; "DefaultInfo" -
+	242	[-]	SETGLOBAL	0 -118	; OrderSuperMinionInfo
+	243	[-]	NEWTABLE 	0 0 2
+	244	[-]	SETTABLE 	0 -105 -121	; "MinionName" "SRU_ChaosMinionSuper"
+	245	[-]	GETGLOBAL	1 -102	; SuperDefaultMinionInfo
+	246	[-]	SETTABLE 	0 -107 1	; "DefaultInfo" -
+	247	[-]	SETGLOBAL	0 -120	; ChaosSuperMinionInfo
+	248	[-]	NEWTABLE 	0 0 2
+	249	[-]	SETTABLE 	0 -105 -123	; "MinionName" "Blue_Minion_Basic"
+	250	[-]	GETGLOBAL	1 -103	; TestDefaultMinionInfo
+	251	[-]	SETTABLE 	0 -107 1	; "DefaultInfo" -
+	252	[-]	SETGLOBAL	0 -122	; OrderTestMinionInfo
+	253	[-]	NEWTABLE 	0 0 2
+	254	[-]	SETTABLE 	0 -105 -125	; "MinionName" "Red_Minion_Basic"
+	255	[-]	GETGLOBAL	1 -103	; TestDefaultMinionInfo
+	256	[-]	SETTABLE 	0 -107 1	; "DefaultInfo" -
+	257	[-]	SETGLOBAL	0 -124	; ChaosTestMinionInfo
+	258	[-]	NEWTABLE 	0 0 4
+	259	[-]	SETTABLE 	0 -127 -128	; "IsDestroyed" false
+	260	[-]	SETTABLE 	0 -129 -4	; "NumOfSpawnDisables" 0
+	261	[-]	SETTABLE 	0 -130 -4	; "WillSpawnSuperMinion" 0
+	262	[-]	NEWTABLE 	1 5 0
+	263	[-]	LOADK    	2 -132	; "Super"
+	264	[-]	LOADK    	3 -133	; "Melee"
+	265	[-]	LOADK    	4 -134	; "Cannon"
+	266	[-]	LOADK    	5 -135	; "Caster"
+	267	[-]	LOADK    	6 -136	; "Test"
+	268	[-]	SETLIST  	1 5 1	; 1
+	269	[-]	SETTABLE 	0 -131 1	; "SpawnOrderMinionNames" -
+	270	[-]	SETGLOBAL	0 -126	; DefaultBarrackInfo
+	271	[-]	NEWTABLE 	0 0 5
+	272	[-]	GETGLOBAL	1 -104	; OrderMeleeMinionInfo
+	273	[-]	SETTABLE 	0 -133 1	; "Melee" -
+	274	[-]	GETGLOBAL	1 -110	; OrderCasterMinionInfo
+	275	[-]	SETTABLE 	0 -135 1	; "Caster" -
+	276	[-]	GETGLOBAL	1 -114	; OrderCannonMinionInfo
+	277	[-]	SETTABLE 	0 -134 1	; "Cannon" -
+	278	[-]	GETGLOBAL	1 -118	; OrderSuperMinionInfo
+	279	[-]	SETTABLE 	0 -132 1	; "Super" -
+	280	[-]	GETGLOBAL	1 -122	; OrderTestMinionInfo
+	281	[-]	SETTABLE 	0 -136 1	; "Test" -
+	282	[-]	SETGLOBAL	0 -137	; DefaultOrderMinionInfoTable
+	283	[-]	NEWTABLE 	0 0 5
+	284	[-]	GETGLOBAL	1 -108	; ChaosMeleeMinionInfo
+	285	[-]	SETTABLE 	0 -133 1	; "Melee" -
+	286	[-]	GETGLOBAL	1 -112	; ChaosCasterMinionInfo
+	287	[-]	SETTABLE 	0 -135 1	; "Caster" -
+	288	[-]	GETGLOBAL	1 -116	; ChaosCannonMinionInfo
+	289	[-]	SETTABLE 	0 -134 1	; "Cannon" -
+	290	[-]	GETGLOBAL	1 -120	; ChaosSuperMinionInfo
+	291	[-]	SETTABLE 	0 -132 1	; "Super" -
+	292	[-]	GETGLOBAL	1 -124	; ChaosTestMinionInfo
+	293	[-]	SETTABLE 	0 -136 1	; "Test" -
+	294	[-]	SETGLOBAL	0 -138	; DefaultChaosMinionInfoTable
+	295	[-]	NEWTABLE 	0 0 2
+	296	[-]	GETGLOBAL	1 -126	; DefaultBarrackInfo
+	297	[-]	SETTABLE 	0 -107 1	; "DefaultInfo" -
+	298	[-]	GETGLOBAL	1 -137	; DefaultOrderMinionInfoTable
+	299	[-]	SETTABLE 	0 -140 1	; "DefaultMinionInfoTable" -
+	300	[-]	SETGLOBAL	0 -139	; OrderBarrack0
+	301	[-]	NEWTABLE 	0 0 2
+	302	[-]	GETGLOBAL	1 -126	; DefaultBarrackInfo
+	303	[-]	SETTABLE 	0 -107 1	; "DefaultInfo" -
+	304	[-]	GETGLOBAL	1 -137	; DefaultOrderMinionInfoTable
+	305	[-]	SETTABLE 	0 -140 1	; "DefaultMinionInfoTable" -
+	306	[-]	SETGLOBAL	0 -141	; OrderBarrack1
+	307	[-]	NEWTABLE 	0 0 2
+	308	[-]	GETGLOBAL	1 -126	; DefaultBarrackInfo
+	309	[-]	SETTABLE 	0 -107 1	; "DefaultInfo" -
+	310	[-]	GETGLOBAL	1 -137	; DefaultOrderMinionInfoTable
+	311	[-]	SETTABLE 	0 -140 1	; "DefaultMinionInfoTable" -
+	312	[-]	SETGLOBAL	0 -142	; OrderBarrack2
+	313	[-]	NEWTABLE 	0 0 2
+	314	[-]	GETGLOBAL	1 -126	; DefaultBarrackInfo
+	315	[-]	SETTABLE 	0 -107 1	; "DefaultInfo" -
+	316	[-]	GETGLOBAL	1 -138	; DefaultChaosMinionInfoTable
+	317	[-]	SETTABLE 	0 -140 1	; "DefaultMinionInfoTable" -
+	318	[-]	SETGLOBAL	0 -143	; ChaosBarrack0
+	319	[-]	NEWTABLE 	0 0 2
+	320	[-]	GETGLOBAL	1 -126	; DefaultBarrackInfo
+	321	[-]	SETTABLE 	0 -107 1	; "DefaultInfo" -
+	322	[-]	GETGLOBAL	1 -138	; DefaultChaosMinionInfoTable
+	323	[-]	SETTABLE 	0 -140 1	; "DefaultMinionInfoTable" -
+	324	[-]	SETGLOBAL	0 -144	; ChaosBarrack1
+	325	[-]	NEWTABLE 	0 0 2
+	326	[-]	GETGLOBAL	1 -126	; DefaultBarrackInfo
+	327	[-]	SETTABLE 	0 -107 1	; "DefaultInfo" -
+	328	[-]	GETGLOBAL	1 -138	; DefaultChaosMinionInfoTable
+	329	[-]	SETTABLE 	0 -140 1	; "DefaultMinionInfoTable" -
+	330	[-]	SETGLOBAL	0 -145	; ChaosBarrack2
+	331	[-]	CLOSURE  	0 0	; 0100C878
+	332	[-]	SETGLOBAL	0 -146	; AppendTable
+	333	[-]	CLOSURE  	0 1	; 0100F030
+	334	[-]	SETGLOBAL	0 -147	; InitBarrackInfo
+	335	[-]	NEWTABLE 	0 2 0
+	336	[-]	GETGLOBAL	1 -147	; InitBarrackInfo
+	337	[-]	GETGLOBAL	2 -139	; OrderBarrack0
+	338	[-]	CALL     	1 2 2
+	339	[-]	GETGLOBAL	2 -147	; InitBarrackInfo
+	340	[-]	GETGLOBAL	3 -141	; OrderBarrack1
+	341	[-]	CALL     	2 2 2
+	342	[-]	GETGLOBAL	3 -147	; InitBarrackInfo
+	343	[-]	GETGLOBAL	4 -142	; OrderBarrack2
+	344	[-]	CALL     	3 2 0
+	345	[-]	SETLIST  	0 0 1	; 1
+	346	[-]	SETGLOBAL	0 -148	; OrderBarracksBonuses
+	347	[-]	NEWTABLE 	0 2 0
+	348	[-]	GETGLOBAL	1 -147	; InitBarrackInfo
+	349	[-]	GETGLOBAL	2 -143	; ChaosBarrack0
+	350	[-]	CALL     	1 2 2
+	351	[-]	GETGLOBAL	2 -147	; InitBarrackInfo
+	352	[-]	GETGLOBAL	3 -144	; ChaosBarrack1
+	353	[-]	CALL     	2 2 2
+	354	[-]	GETGLOBAL	3 -147	; InitBarrackInfo
+	355	[-]	GETGLOBAL	4 -145	; ChaosBarrack2
+	356	[-]	CALL     	3 2 0
+	357	[-]	SETLIST  	0 0 1	; 1
+	358	[-]	SETGLOBAL	0 -149	; ChaosBarracksBonuses
+	359	[-]	NEWTABLE 	0 13 0
+	360	[-]	LOADK    	1 -151	; "SRU_Dragon"
+	361	[-]	LOADK    	2 -152	; "SRU_Krug"
+	362	[-]	LOADK    	3 -153	; "SRU_KrugMini"
+	363	[-]	LOADK    	4 -154	; "SRU_Red"
+	364	[-]	LOADK    	5 -155	; "SRU_RedMini"
+	365	[-]	LOADK    	6 -156	; "SRU_Razorbeak"
+	366	[-]	LOADK    	7 -157	; "SRU_RazorbeakMini"
+	367	[-]	LOADK    	8 -158	; "SRU_Murkwolf"
+	368	[-]	LOADK    	9 -159	; "SRU_MurkwolfMini"
+	369	[-]	LOADK    	10 -160	; "SRU_Blue"
+	370	[-]	LOADK    	11 -161	; "SRU_BlueMini"
+	371	[-]	LOADK    	12 -162	; "SRU_Gromp"
+	372	[-]	LOADK    	13 -163	; "SRU_Baron"
+	373	[-]	SETLIST  	0 13 1	; 1
+	374	[-]	SETGLOBAL	0 -150	; NeutralMinionNames
+	375	[-]	CLOSURE  	0 2	; 01011F00
+	376	[-]	SETGLOBAL	0 -164	; CreateLaneBuildingTable
+	377	[-]	NEWTABLE 	0 3 3
+	378	[-]	GETGLOBAL	1 -164	; CreateLaneBuildingTable
+	379	[-]	CALL     	1 1 2
+	380	[-]	GETGLOBAL	2 -164	; CreateLaneBuildingTable
+	381	[-]	CALL     	2 1 2
+	382	[-]	GETGLOBAL	3 -164	; CreateLaneBuildingTable
+	383	[-]	CALL     	3 1 2
+	384	[-]	SETTABLE 	0 -166 -167	; "HQTower2" true
+	385	[-]	SETTABLE 	0 -168 -167	; "HQTower1" true
+	386	[-]	SETTABLE 	0 -169 -167	; "HQ" true
+	387	[-]	SETLIST  	0 3 1	; 1
+	388	[-]	SETGLOBAL	0 -165	; OrderBuildingStatus
+	389	[-]	NEWTABLE 	0 3 3
+	390	[-]	GETGLOBAL	1 -164	; CreateLaneBuildingTable
+	391	[-]	CALL     	1 1 2
+	392	[-]	GETGLOBAL	2 -164	; CreateLaneBuildingTable
+	393	[-]	CALL     	2 1 2
+	394	[-]	GETGLOBAL	3 -164	; CreateLaneBuildingTable
+	395	[-]	CALL     	3 1 2
+	396	[-]	SETTABLE 	0 -166 -167	; "HQTower2" true
+	397	[-]	SETTABLE 	0 -168 -167	; "HQTower1" true
+	398	[-]	SETTABLE 	0 -169 -167	; "HQ" true
+	399	[-]	SETLIST  	0 3 1	; 1
+	400	[-]	SETGLOBAL	0 -170	; ChaosBuildingStatus
+	401	[-]	LOADK    	0 -4	; 0
+	402	[-]	SETGLOBAL	0 -171	; TotalNumberOfMinions
+	403	[-]	LOADK    	0 -14	; 3
+	404	[-]	SETGLOBAL	0 -172	; totalNumberOfChaosBarracks
+	405	[-]	LOADK    	0 -14	; 3
+	406	[-]	SETGLOBAL	0 -173	; totalNumberOfOrderBarracks
+	407	[-]	CLOSURE  	0 3	; 01011FB0
+	408	[-]	SETGLOBAL	0 -174	; PreloadBarrackCharacters
+	409	[-]	CLOSURE  	0 4	; 010120C0
+	410	[-]	SETGLOBAL	0 -175	; OnLevelInit
+	411	[-]	CLOSURE  	0 5	; 010100B0
+	412	[-]	SETGLOBAL	0 -176	; OnLevelInitServer
+	413	[-]	CLOSURE  	0 6	; 01010200
+	414	[-]	SETGLOBAL	0 -177	; OnPostLevelLoad
+	415	[-]	CLOSURE  	0 7	; 01010400
+	416	[-]	SETGLOBAL	0 -178	; OnGameStartup
+	417	[-]	CLOSURE  	0 8	; 01010458
+	418	[-]	SETGLOBAL	0 -179	; SetShieldBuffsOnSecondaryTurrets
+	419	[-]	LOADK    	0 -10	; 1
+	420	[-]	SETGLOBAL	0 -180	; SPELLBOOK_SUMMONER
+	421	[-]	CLOSURE  	0 9	; 01014A50
+	422	[-]	SETGLOBAL	0 -181	; ApplyJungleTracker
+	423	[-]	CLOSURE  	0 10	; 01014B88
+	424	[-]	SETGLOBAL	0 -182	; ApplyBaseBuffToAllChampions
+	425	[-]	CLOSURE  	0 11	; 01014C38
+	426	[-]	SETGLOBAL	0 -183	; ApplyBaseBuffChaos
+	427	[-]	CLOSURE  	0 12	; 01014C90
+	428	[-]	SETGLOBAL	0 -184	; ApplyBaseBuffOrder
+	429	[-]	LOADK    	0 -186	; 12250000
+	430	[-]	SETGLOBAL	0 -185	; baseBuffRadiusSquared
+	431	[-]	LOADK    	0 -10	; 1
+	432	[-]	SETGLOBAL	0 -187	; BUFF_Aura
+	433	[-]	CLOSURE  	0 13	; 01014D10
+	434	[-]	SETGLOBAL	0 -188	; ApplyBaseBuff
+	435	[-]	CLOSURE  	0 14	; 01015028
+	436	[-]	SETGLOBAL	0 -189	; OppositeTeam
+	437	[-]	CLOSURE  	0 15	; 010151E0
+	438	[-]	SETGLOBAL	0 -190	; UpgradeMinionTimer
+	439	[-]	CLOSURE  	0 16	; 01014FD0
+	440	[-]	SETGLOBAL	0 -191	; AllowDamageOnBuildings
+	441	[-]	CLOSURE  	0 17	; 010153F0
+	442	[-]	SETGLOBAL	0 -192	; ResetToDefaultWaveCounts
+	443	[-]	CLOSURE  	0 18	; 01015130
+	444	[-]	SETGLOBAL	0 -193	; ClearCurrentWaveCounts
+	445	[-]	CLOSURE  	0 19	; 01015080
+	446	[-]	SETGLOBAL	0 -194	; GetInitSpawnInfo
+	447	[-]	CLOSURE  	0 20	; 01015188
+	448	[-]	SETGLOBAL	0 -195	; GetMinionSpawnInfo
+	449	[-]	CLOSURE  	0 21	; 01015238
+	450	[-]	SETGLOBAL	0 -196	; DeactivateCorrectStructure
+	451	[-]	CLOSURE  	0 22	; 01015448
+	452	[-]	SETGLOBAL	0 -197	; GetLuaBarracks
+	453	[-]	CLOSURE  	0 23	; 01014D68
+	454	[-]	SETGLOBAL	0 -198	; GetDisableMinionSpawnTime
+	455	[-]	CLOSURE  	0 24	; 01014E18
+	456	[-]	SETGLOBAL	0 -199	; DisableBarracksSpawn
+	457	[-]	LOADK    	0 -4	; 0
+	458	[-]	SETGLOBAL	0 -200	; BonusesCounter
+	459	[-]	CLOSURE  	0 25	; 01014E70
+	460	[-]	SETGLOBAL	0 -201	; ApplyBarracksDestructionBonuses
+	461	[-]	LOADK    	0 -4	; 0
+	462	[-]	SETGLOBAL	0 -202	; ReductionCounter
+	463	[-]	CLOSURE  	0 26	; 01014EC8
+	464	[-]	SETGLOBAL	0 -203	; ApplyBarracksRespawnReductions
+	465	[-]	LOADK    	0 -4	; 0
+	466	[-]	SETGLOBAL	0 -204	; ReactiveCounter
+	467	[-]	CLOSURE  	0 27	; 010150D8
+	468	[-]	SETGLOBAL	0 -205	; BarrackReactiveEvent
+	469	[-]	CLOSURE  	0 28	; 01015398
+	470	[-]	SETGLOBAL	0 -206	; DisableSuperMinions
+	471	[-]	CLOSURE  	0 29	; 01015290
+	472	[-]	SETGLOBAL	0 -207	; OnJumpToMidGameCheat
+	473	[-]	LOADK    	0 -4	; 0
+	474	[-]	SETGLOBAL	0 -208	; DisactivatedCounter
+	475	[-]	CLOSURE  	0 30	; 01014F20
+	476	[-]	SETGLOBAL	0 -209	; HandleDestroyedObject
+	477	[-]	CLOSURE  	0 31	; 01015340
+	478	[-]	SETGLOBAL	0 -210	; IncreaseCannonMinionSpawnRate
+	479	[-]	CLOSURE  	0 32	; 010152E8
+	480	[-]	SETGLOBAL	0 -211	; IncreaseCannonMinionSpawnRateAgain
+	481	[-]	CLOSURE  	0 33	; 01017F48
+	482	[-]	SETGLOBAL	0 -212	; PostGameSetup
+	483	[-]	CLOSURE  	0 34	; 01017E40
+	484	[-]	SETGLOBAL	0 -213	; PostGameUpdate
+	485	[-]	RETURN   	0 1
+constants (213) for 0100D948:
+	1	"MAX_MINIONS_EVER"
+	2	180
+	3	"TEAM_UNKNOWN"
+	4	0
+	5	"TEAM_ORDER"
+	6	100
+	7	"TEAM_CHAOS"
+	8	200
+	9	"ORDER_HQ"
+	10	1
+	11	"CHAOS_HQ"
+	12	2
+	13	"FRONT_TOWER"
+	14	3
+	15	"MIDDLE_TOWER"
+	16	"BACK_TOWER"
+	17	"HQ_TOWER2"
+	18	4
+	19	"HQ_TOWER1"
+	20	5
+	21	"RIGHT_LANE"
+	22	"CENTER_LANE"
+	23	"LEFT_LANE"
+	24	"INITIAL_TIME_TO_SPAWN"
+	25	90
+	26	"CANNON_MINION_SPAWN_FREQUENCY"
+	27	"INCREASE_CANNON_RATE_TIMER"
+	28	1200
+	29	"INCREASE_CANNON_RATE_TIMER2"
+	30	2100
+	31	"MINION_HEALTH_DENIAL_PERCENT"
+	32	"UPGRADE_MINION_TIMER"
+	33	"EXP_GIVEN_RADIUS"
+	34	1400
+	35	"GOLD_GIVEN_RADIUS"
+	36	1250
+	37	"DISABLE_MINION_SPAWN_BASE_TIME"
+	38	300
+	39	"DISABLE_MINION_SPAWN_MAG_TIME"
+	40	"CHAOS_INHIBITOR_RESPAWN_ANIMATION_DURATION"
+	41	11.67
+	42	"ORDER_INHIBITOR_RESPAWN_ANIMATION_DURATION"
+	43	11
+	44	"LAST_WAVE"
+	45	-1
+	46	"SPECIAL_MINION_MODE"
+	47	"none"
+	48	"HQTurretAttackable"
+	49	"DoLuaLevel"
+	50	"BBLuaConversionLibrary"
+	51	"LaneSigils"
+	52	"SpawnTable"
+	53	"WaveSpawnRate"
+	54	30000
+	55	"SingleMinionSpawnDelay"
+	56	800
+	57	"ExpRadius"
+	58	"GoldRadius"
+	59	"MeleeDefaultMinionInfo"
+	60	"DefaultNumPerWave"
+	61	"Armor"
+	62	"ArmorUpgrade"
+	63	"MagicResistance"
+	64	"MagicResistanceUpgrade"
+	65	0.625
+	66	"HPBonus"
+	67	"HPUpgrade"
+	68	15
+	69	"HPUpgradeGrowth"
+	70	0.2
+	71	"HPInhibitor"
+	72	"DamageBonus"
+	73	"DamageUpgrade"
+	74	0.5
+	75	"DamageInhibitor"
+	76	"ExpGiven"
+	77	64
+	78	"ExpBonus"
+	79	"ExpUpgrade"
+	80	"ExpInhibitor"
+	81	"GoldGiven"
+	82	18.8
+	83	"GoldBonus"
+	84	"GoldUpgrade"
+	85	"GoldInhibitor"
+	86	"GoldShared"
+	87	"GoldShareUpgrade"
+	88	"GoldMaximumBonus"
+	89	12
+	90	"LocalGoldGiven"
+	91	"LocalGoldBonus"
+	92	"CasterDefaultMinionInfo"
+	93	32
+	94	13.8
+	95	8
+	96	"CannonDefaultMinionInfo"
+	97	1.5
+	98	23
+	99	0.3
+	100	39.5
+	101	30
+	102	"SuperDefaultMinionInfo"
+	103	"TestDefaultMinionInfo"
+	104	"OrderMeleeMinionInfo"
+	105	"MinionName"
+	106	"SRU_OrderMinionMelee"
+	107	"DefaultInfo"
+	108	"ChaosMeleeMinionInfo"
+	109	"SRU_ChaosMinionMelee"
+	110	"OrderCasterMinionInfo"
+	111	"SRU_OrderMinionRanged"
+	112	"ChaosCasterMinionInfo"
+	113	"SRU_ChaosMinionRanged"
+	114	"OrderCannonMinionInfo"
+	115	"SRU_OrderMinionSiege"
+	116	"ChaosCannonMinionInfo"
+	117	"SRU_ChaosMinionSiege"
+	118	"OrderSuperMinionInfo"
+	119	"SRU_OrderMinionSuper"
+	120	"ChaosSuperMinionInfo"
+	121	"SRU_ChaosMinionSuper"
+	122	"OrderTestMinionInfo"
+	123	"Blue_Minion_Basic"
+	124	"ChaosTestMinionInfo"
+	125	"Red_Minion_Basic"
+	126	"DefaultBarrackInfo"
+	127	"IsDestroyed"
+	128	false
+	129	"NumOfSpawnDisables"
+	130	"WillSpawnSuperMinion"
+	131	"SpawnOrderMinionNames"
+	132	"Super"
+	133	"Melee"
+	134	"Cannon"
+	135	"Caster"
+	136	"Test"
+	137	"DefaultOrderMinionInfoTable"
+	138	"DefaultChaosMinionInfoTable"
+	139	"OrderBarrack0"
+	140	"DefaultMinionInfoTable"
+	141	"OrderBarrack1"
+	142	"OrderBarrack2"
+	143	"ChaosBarrack0"
+	144	"ChaosBarrack1"
+	145	"ChaosBarrack2"
+	146	"AppendTable"
+	147	"InitBarrackInfo"
+	148	"OrderBarracksBonuses"
+	149	"ChaosBarracksBonuses"
+	150	"NeutralMinionNames"
+	151	"SRU_Dragon"
+	152	"SRU_Krug"
+	153	"SRU_KrugMini"
+	154	"SRU_Red"
+	155	"SRU_RedMini"
+	156	"SRU_Razorbeak"
+	157	"SRU_RazorbeakMini"
+	158	"SRU_Murkwolf"
+	159	"SRU_MurkwolfMini"
+	160	"SRU_Blue"
+	161	"SRU_BlueMini"
+	162	"SRU_Gromp"
+	163	"SRU_Baron"
+	164	"CreateLaneBuildingTable"
+	165	"OrderBuildingStatus"
+	166	"HQTower2"
+	167	true
+	168	"HQTower1"
+	169	"HQ"
+	170	"ChaosBuildingStatus"
+	171	"TotalNumberOfMinions"
+	172	"totalNumberOfChaosBarracks"
+	173	"totalNumberOfOrderBarracks"
+	174	"PreloadBarrackCharacters"
+	175	"OnLevelInit"
+	176	"OnLevelInitServer"
+	177	"OnPostLevelLoad"
+	178	"OnGameStartup"
+	179	"SetShieldBuffsOnSecondaryTurrets"
+	180	"SPELLBOOK_SUMMONER"
+	181	"ApplyJungleTracker"
+	182	"ApplyBaseBuffToAllChampions"
+	183	"ApplyBaseBuffChaos"
+	184	"ApplyBaseBuffOrder"
+	185	"baseBuffRadiusSquared"
+	186	12250000
+	187	"BUFF_Aura"
+	188	"ApplyBaseBuff"
+	189	"OppositeTeam"
+	190	"UpgradeMinionTimer"
+	191	"AllowDamageOnBuildings"
+	192	"ResetToDefaultWaveCounts"
+	193	"ClearCurrentWaveCounts"
+	194	"GetInitSpawnInfo"
+	195	"GetMinionSpawnInfo"
+	196	"DeactivateCorrectStructure"
+	197	"GetLuaBarracks"
+	198	"GetDisableMinionSpawnTime"
+	199	"DisableBarracksSpawn"
+	200	"BonusesCounter"
+	201	"ApplyBarracksDestructionBonuses"
+	202	"ReductionCounter"
+	203	"ApplyBarracksRespawnReductions"
+	204	"ReactiveCounter"
+	205	"BarrackReactiveEvent"
+	206	"DisableSuperMinions"
+	207	"OnJumpToMidGameCheat"
+	208	"DisactivatedCounter"
+	209	"HandleDestroyedObject"
+	210	"IncreaseCannonMinionSpawnRate"
+	211	"IncreaseCannonMinionSpawnRateAgain"
+	212	"PostGameSetup"
+	213	"PostGameUpdate"
+locals (0) for 0100D948:
+upvalues (0) for 0100D948:
+
+function <?:300,315> (36 instructions, 144 bytes at 0100C878)
+4 params, 16 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	EQ       	1 1 -1	; - nil
+	2	[-]	JMP      	32	; to 35
+	3	[-]	GETGLOBAL	4 -2	; type
+	4	[-]	MOVE     	5 1
+	5	[-]	CALL     	4 2 2
+	6	[-]	EQ       	0 4 -3	; - "table"
+	7	[-]	JMP      	27	; to 35
+	8	[-]	LOADNIL  	4 5
+	9	[-]	EQ       	0 0 -1	; - nil
+	10	[-]	JMP      	2	; to 13
+	11	[-]	NEWTABLE 	6 0 0
+	12	[-]	MOVE     	0 6
+	13	[-]	GETGLOBAL	6 -4	; pairs
+	14	[-]	MOVE     	7 1
+	15	[-]	CALL     	6 2 4
+	16	[-]	JMP      	16	; to 33
+	17	[-]	EQ       	0 2 -5	; - true
+	18	[-]	JMP      	13	; to 32
+	19	[-]	GETGLOBAL	11 -2	; type
+	20	[-]	MOVE     	12 10
+	21	[-]	CALL     	11 2 2
+	22	[-]	EQ       	0 11 -3	; - "table"
+	23	[-]	JMP      	8	; to 32
+	24	[-]	GETGLOBAL	11 -6	; AppendTable
+	25	[-]	GETTABLE 	12 0 9
+	26	[-]	MOVE     	13 10
+	27	[-]	MOVE     	14 3
+	28	[-]	MOVE     	15 3
+	29	[-]	CALL     	11 5 2
+	30	[-]	SETTABLE 	0 9 11
+	31	[-]	JMP      	1	; to 33
+	32	[-]	SETTABLE 	0 9 10
+	33	[-]	TFORLOOP 	6 2
+	34	[-]	JMP      	-18	; to 17
+	35	[-]	RETURN   	0 2
+	36	[-]	RETURN   	0 1
+constants (6) for 0100C878:
+	1	nil
+	2	"type"
+	3	"table"
+	4	"pairs"
+	5	true
+	6	"AppendTable"
+locals (0) for 0100C878:
+upvalues (0) for 0100C878:
+
+function <?:317,353> (76 instructions, 304 bytes at 0100F030)
+1 param, 15 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; AppendTable
+	2	[-]	MOVE     	2 0
+	3	[-]	GETTABLE 	3 0 -2	; "DefaultInfo"
+	4	[-]	LOADBOOL 	4 1 0
+	5	[-]	LOADBOOL 	5 1 0
+	6	[-]	CALL     	1 5 2
+	7	[-]	MOVE     	0 1
+	8	[-]	GETGLOBAL	1 -1	; AppendTable
+	9	[-]	GETTABLE 	2 0 -3	; "MinionInfoTable"
+	10	[-]	GETTABLE 	3 0 -4	; "DefaultMinionInfoTable"
+	11	[-]	LOADBOOL 	4 1 0
+	12	[-]	LOADBOOL 	5 0 0
+	13	[-]	CALL     	1 5 2
+	14	[-]	SETTABLE 	0 -3 1	; "MinionInfoTable" -
+	15	[-]	GETTABLE 	1 0 -3	; "MinionInfoTable"
+	16	[-]	EQ       	1 1 -5	; - nil
+	17	[-]	JMP      	24	; to 42
+	18	[-]	GETTABLE 	1 0 -3	; "MinionInfoTable"
+	19	[-]	LOADNIL  	2 3
+	20	[-]	GETGLOBAL	4 -6	; pairs
+	21	[-]	MOVE     	5 1
+	22	[-]	CALL     	4 2 4
+	23	[-]	JMP      	16	; to 40
+	24	[-]	GETTABLE 	9 1 7
+	25	[-]	GETTABLE 	10 9 -2	; "DefaultInfo"
+	26	[-]	EQ       	1 10 -5	; - nil
+	27	[-]	JMP      	12	; to 40
+	28	[-]	GETGLOBAL	10 -1	; AppendTable
+	29	[-]	MOVE     	11 9
+	30	[-]	GETTABLE 	12 9 -2	; "DefaultInfo"
+	31	[-]	LOADBOOL 	13 1 0
+	32	[-]	LOADBOOL 	14 1 0
+	33	[-]	CALL     	10 5 1
+	34	[-]	GETTABLE 	10 9 -8	; "DefaultNumPerWave"
+	35	[-]	SETTABLE 	9 -7 10	; "NumPerWave" -
+	36	[-]	GETTABLE 	10 9 -10	; "GoldGiven"
+	37	[-]	SETTABLE 	9 -9 10	; "GoldGivenBase" -
+	38	[-]	GETTABLE 	10 9 -12	; "ExpGiven"
+	39	[-]	SETTABLE 	9 -11 10	; "ExpGivenBase" -
+	40	[-]	TFORLOOP 	4 2
+	41	[-]	JMP      	-18	; to 24
+	42	[-]	GETTABLE 	1 0 -13	; "Overrides"
+	43	[-]	EQ       	1 1 -5	; - nil
+	44	[-]	JMP      	30	; to 75
+	45	[-]	LOADNIL  	1 2
+	46	[-]	GETGLOBAL	3 -6	; pairs
+	47	[-]	GETTABLE 	4 0 -13	; "Overrides"
+	48	[-]	CALL     	3 2 4
+	49	[-]	JMP      	23	; to 73
+	50	[-]	GETGLOBAL	8 -14	; type
+	51	[-]	GETTABLE 	9 0 6
+	52	[-]	CALL     	8 2 2
+	53	[-]	EQ       	0 8 -15	; - "table"
+	54	[-]	JMP      	12	; to 67
+	55	[-]	GETGLOBAL	8 -14	; type
+	56	[-]	MOVE     	9 7
+	57	[-]	CALL     	8 2 2
+	58	[-]	EQ       	0 8 -15	; - "table"
+	59	[-]	JMP      	13	; to 73
+	60	[-]	GETGLOBAL	8 -1	; AppendTable
+	61	[-]	GETTABLE 	9 0 6
+	62	[-]	MOVE     	10 7
+	63	[-]	LOADBOOL 	11 1 0
+	64	[-]	LOADBOOL 	12 1 0
+	65	[-]	CALL     	8 5 1
+	66	[-]	JMP      	6	; to 73
+	67	[-]	GETGLOBAL	8 -14	; type
+	68	[-]	MOVE     	9 7
+	69	[-]	CALL     	8 2 2
+	70	[-]	EQ       	1 8 -15	; - "table"
+	71	[-]	JMP      	1	; to 73
+	72	[-]	SETTABLE 	0 6 7
+	73	[-]	TFORLOOP 	3 2
+	74	[-]	JMP      	-25	; to 50
+	75	[-]	RETURN   	0 2
+	76	[-]	RETURN   	0 1
+constants (15) for 0100F030:
+	1	"AppendTable"
+	2	"DefaultInfo"
+	3	"MinionInfoTable"
+	4	"DefaultMinionInfoTable"
+	5	nil
+	6	"pairs"
+	7	"NumPerWave"
+	8	"DefaultNumPerWave"
+	9	"GoldGivenBase"
+	10	"GoldGiven"
+	11	"ExpGivenBase"
+	12	"ExpGiven"
+	13	"Overrides"
+	14	"type"
+	15	"table"
+locals (0) for 0100F030:
+upvalues (0) for 0100F030:
+
+function <?:365,368> (7 instructions, 28 bytes at 01011F00)
+0 params, 2 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	NEWTABLE 	0 0 4
+	2	[-]	SETTABLE 	0 -1 -2	; "Turret3" true
+	3	[-]	SETTABLE 	0 -3 -2	; "Turret2" true
+	4	[-]	SETTABLE 	0 -4 -2	; "Turret1" true
+	5	[-]	SETTABLE 	0 -5 -2	; "Barracks" true
+	6	[-]	RETURN   	0 2
+	7	[-]	RETURN   	0 1
+constants (5) for 01011F00:
+	1	"Turret3"
+	2	true
+	3	"Turret2"
+	4	"Turret1"
+	5	"Barracks"
+locals (0) for 01011F00:
+upvalues (0) for 01011F00:
+
+function <?:385,393> (14 instructions, 56 bytes at 01011FB0)
+1 param, 10 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	3 -1	; pairs
+	2	[-]	GETTABLE 	4 0 -2	; "DefaultMinionInfoTable"
+	3	[-]	CALL     	3 2 4
+	4	[-]	JMP      	7	; to 12
+	5	[-]	GETTABLE 	8 7 -3	; "PreloadedCharacter"
+	6	[-]	EQ       	0 8 -4	; - nil
+	7	[-]	JMP      	4	; to 12
+	8	[-]	SETTABLE 	7 -3 -5	; "PreloadedCharacter" 1
+	9	[-]	GETGLOBAL	8 -6	; PreloadCharacter
+	10	[-]	GETTABLE 	9 7 -7	; "MinionName"
+	11	[-]	CALL     	8 2 1
+	12	[-]	TFORLOOP 	3 2
+	13	[-]	JMP      	-9	; to 5
+	14	[-]	RETURN   	0 1
+constants (7) for 01011FB0:
+	1	"pairs"
+	2	"DefaultMinionInfoTable"
+	3	"PreloadedCharacter"
+	4	nil
+	5	1
+	6	"PreloadCharacter"
+	7	"MinionName"
+locals (0) for 01011FB0:
+upvalues (0) for 01011FB0:
+
+function <?:395,498> (190 instructions, 760 bytes at 010120C0)
+0 params, 9 slots, 0 upvalues, 0 locals, 72 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; pairs
+	2	[-]	GETGLOBAL	3 -2	; OrderBarracksBonuses
+	3	[-]	CALL     	2 2 4
+	4	[-]	JMP      	3	; to 8
+	5	[-]	GETGLOBAL	7 -3	; PreloadBarrackCharacters
+	6	[-]	MOVE     	8 6
+	7	[-]	CALL     	7 2 1
+	8	[-]	TFORLOOP 	2 2
+	9	[-]	JMP      	-5	; to 5
+	10	[-]	GETGLOBAL	2 -1	; pairs
+	11	[-]	GETGLOBAL	3 -4	; ChaosBarracksBonuses
+	12	[-]	CALL     	2 2 4
+	13	[-]	JMP      	3	; to 17
+	14	[-]	GETGLOBAL	7 -3	; PreloadBarrackCharacters
+	15	[-]	MOVE     	8 6
+	16	[-]	CALL     	7 2 1
+	17	[-]	TFORLOOP 	2 2
+	18	[-]	JMP      	-5	; to 14
+	19	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	20	[-]	LOADK    	3 -6	; "OrderTurretAngel"
+	21	[-]	CALL     	2 2 1
+	22	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	23	[-]	LOADK    	3 -7	; "OrderTurretDragon"
+	24	[-]	CALL     	2 2 1
+	25	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	26	[-]	LOADK    	3 -8	; "OrderTurretNormal2"
+	27	[-]	CALL     	2 2 1
+	28	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	29	[-]	LOADK    	3 -9	; "OrderTurretNormal"
+	30	[-]	CALL     	2 2 1
+	31	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	32	[-]	LOADK    	3 -10	; "ChaosTurretWorm"
+	33	[-]	CALL     	2 2 1
+	34	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	35	[-]	LOADK    	3 -11	; "ChaosTurretWorm2"
+	36	[-]	CALL     	2 2 1
+	37	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	38	[-]	LOADK    	3 -12	; "ChaosTurretGiant"
+	39	[-]	CALL     	2 2 1
+	40	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	41	[-]	LOADK    	3 -13	; "ChaosTurretNormal"
+	42	[-]	CALL     	2 2 1
+	43	[-]	GETGLOBAL	2 -14	; PreloadSpell
+	44	[-]	LOADK    	3 -15	; "RespawnClassic"
+	45	[-]	CALL     	2 2 1
+	46	[-]	GETGLOBAL	2 -14	; PreloadSpell
+	47	[-]	LOADK    	3 -16	; "SpellShieldMarker"
+	48	[-]	CALL     	2 2 1
+	49	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	50	[-]	LOADK    	3 -17	; "SRUAP_Turret_Order1"
+	51	[-]	CALL     	2 2 1
+	52	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	53	[-]	LOADK    	3 -18	; "SRUAP_Turret_Chaos1"
+	54	[-]	CALL     	2 2 1
+	55	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	56	[-]	LOADK    	3 -19	; "SRUAP_OrderInhibitor"
+	57	[-]	CALL     	2 2 1
+	58	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	59	[-]	LOADK    	3 -20	; "SRUAP_ChaosInhibitor"
+	60	[-]	CALL     	2 2 1
+	61	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	62	[-]	LOADK    	3 -21	; "SRUAP_OrderNexus"
+	63	[-]	CALL     	2 2 1
+	64	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	65	[-]	LOADK    	3 -22	; "SRUAP_ChaosNexus"
+	66	[-]	CALL     	2 2 1
+	67	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	68	[-]	LOADK    	3 -23	; "SRU_OrderMinionMelee"
+	69	[-]	CALL     	2 2 1
+	70	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	71	[-]	LOADK    	3 -24	; "SRU_OrderMinionRanged"
+	72	[-]	CALL     	2 2 1
+	73	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	74	[-]	LOADK    	3 -25	; "SRU_OrderMinionSiege"
+	75	[-]	CALL     	2 2 1
+	76	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	77	[-]	LOADK    	3 -26	; "SRU_OrderMinionSuper"
+	78	[-]	CALL     	2 2 1
+	79	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	80	[-]	LOADK    	3 -27	; "SRU_ChaosMinionMelee"
+	81	[-]	CALL     	2 2 1
+	82	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	83	[-]	LOADK    	3 -28	; "SRU_ChaosMinionRanged"
+	84	[-]	CALL     	2 2 1
+	85	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	86	[-]	LOADK    	3 -29	; "SRU_ChaosMinionSiege"
+	87	[-]	CALL     	2 2 1
+	88	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	89	[-]	LOADK    	3 -30	; "SRU_ChaosMinionSuper"
+	90	[-]	CALL     	2 2 1
+	91	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	92	[-]	LOADK    	3 -31	; "SRU_Blue"
+	93	[-]	CALL     	2 2 1
+	94	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	95	[-]	LOADK    	3 -32	; "SRU_BlueMini"
+	96	[-]	CALL     	2 2 1
+	97	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	98	[-]	LOADK    	3 -33	; "SRU_BlueMini2"
+	99	[-]	CALL     	2 2 1
+	100	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	101	[-]	LOADK    	3 -34	; "SRU_Red"
+	102	[-]	CALL     	2 2 1
+	103	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	104	[-]	LOADK    	3 -35	; "SRU_RedMini"
+	105	[-]	CALL     	2 2 1
+	106	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	107	[-]	LOADK    	3 -36	; "SRU_Murkwolf"
+	108	[-]	CALL     	2 2 1
+	109	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	110	[-]	LOADK    	3 -37	; "SRU_MurkwolfMini"
+	111	[-]	CALL     	2 2 1
+	112	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	113	[-]	LOADK    	3 -38	; "SRU_Razorbeak"
+	114	[-]	CALL     	2 2 1
+	115	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	116	[-]	LOADK    	3 -39	; "SRU_RazorbeakMini"
+	117	[-]	CALL     	2 2 1
+	118	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	119	[-]	LOADK    	3 -40	; "SRU_Krug"
+	120	[-]	CALL     	2 2 1
+	121	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	122	[-]	LOADK    	3 -41	; "SRU_KrugMini"
+	123	[-]	CALL     	2 2 1
+	124	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	125	[-]	LOADK    	3 -42	; "SRU_Gromp"
+	126	[-]	CALL     	2 2 1
+	127	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	128	[-]	LOADK    	3 -43	; "SRU_Dragon"
+	129	[-]	CALL     	2 2 1
+	130	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	131	[-]	LOADK    	3 -44	; "SRU_Baron"
+	132	[-]	CALL     	2 2 1
+	133	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	134	[-]	LOADK    	3 -45	; "SRU_BaronSpawn"
+	135	[-]	CALL     	2 2 1
+	136	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	137	[-]	LOADK    	3 -46	; "SRUAP_MageCrystal"
+	138	[-]	CALL     	2 2 1
+	139	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	140	[-]	LOADK    	3 -47	; "SRUAP_Flag"
+	141	[-]	CALL     	2 2 1
+	142	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	143	[-]	LOADK    	3 -48	; "SRU_Snail"
+	144	[-]	CALL     	2 2 1
+	145	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	146	[-]	LOADK    	3 -49	; "SRU_Dragon_prop"
+	147	[-]	CALL     	2 2 1
+	148	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	149	[-]	LOADK    	3 -50	; "SRU_Bird"
+	150	[-]	CALL     	2 2 1
+	151	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	152	[-]	LOADK    	3 -51	; "SRU_Antlermouse"
+	153	[-]	CALL     	2 2 1
+	154	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	155	[-]	LOADK    	3 -52	; "SRU_Gromp_prop"
+	156	[-]	CALL     	2 2 1
+	157	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	158	[-]	LOADK    	3 -53	; "SRU_Lizard"
+	159	[-]	CALL     	2 2 1
+	160	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	161	[-]	LOADK    	3 -54	; "SRU_StoreKeeperNorth"
+	162	[-]	CALL     	2 2 1
+	163	[-]	GETGLOBAL	2 -5	; PreloadCharacter
+	164	[-]	LOADK    	3 -55	; "SRU_StoreKeeperSouth"
+	165	[-]	CALL     	2 2 1
+	166	[-]	GETGLOBAL	2 -56	; math
+	167	[-]	GETTABLE 	2 2 -57	; "randomseed"
+	168	[-]	GETGLOBAL	3 -58	; os
+	169	[-]	GETTABLE 	3 3 -59	; "time"
+	170	[-]	CALL     	3 1 0
+	171	[-]	CALL     	2 0 1
+	172	[-]	GETGLOBAL	2 -60	; LoadLevelScriptIntoScript
+	173	[-]	LOADK    	3 -61	; "NeutralMinionSpawn.lua"
+	174	[-]	CALL     	2 2 1
+	175	[-]	GETGLOBAL	2 -62	; NeutralMinionInit
+	176	[-]	CALL     	2 1 1
+	177	[-]	GETGLOBAL	2 -60	; LoadLevelScriptIntoScript
+	178	[-]	LOADK    	3 -63	; "EndOfGame.lua"
+	179	[-]	CALL     	2 2 1
+	180	[-]	GETGLOBAL	2 -64	; SpawnTable
+	181	[-]	SETTABLE 	2 -65 -66	; "WaveSpawnRate" 30000
+	182	[-]	GETGLOBAL	2 -64	; SpawnTable
+	183	[-]	SETTABLE 	2 -67 -68	; "SingleMinionSpawnDelay" 800
+	184	[-]	GETGLOBAL	2 -64	; SpawnTable
+	185	[-]	GETGLOBAL	3 -70	; EXP_GIVEN_RADIUS
+	186	[-]	SETTABLE 	2 -69 3	; "ExpRadius" -
+	187	[-]	GETGLOBAL	2 -64	; SpawnTable
+	188	[-]	GETGLOBAL	3 -72	; GOLD_GIVEN_RADIUS
+	189	[-]	SETTABLE 	2 -71 3	; "GoldRadius" -
+	190	[-]	RETURN   	0 1
+constants (72) for 010120C0:
+	1	"pairs"
+	2	"OrderBarracksBonuses"
+	3	"PreloadBarrackCharacters"
+	4	"ChaosBarracksBonuses"
+	5	"PreloadCharacter"
+	6	"OrderTurretAngel"
+	7	"OrderTurretDragon"
+	8	"OrderTurretNormal2"
+	9	"OrderTurretNormal"
+	10	"ChaosTurretWorm"
+	11	"ChaosTurretWorm2"
+	12	"ChaosTurretGiant"
+	13	"ChaosTurretNormal"
+	14	"PreloadSpell"
+	15	"RespawnClassic"
+	16	"SpellShieldMarker"
+	17	"SRUAP_Turret_Order1"
+	18	"SRUAP_Turret_Chaos1"
+	19	"SRUAP_OrderInhibitor"
+	20	"SRUAP_ChaosInhibitor"
+	21	"SRUAP_OrderNexus"
+	22	"SRUAP_ChaosNexus"
+	23	"SRU_OrderMinionMelee"
+	24	"SRU_OrderMinionRanged"
+	25	"SRU_OrderMinionSiege"
+	26	"SRU_OrderMinionSuper"
+	27	"SRU_ChaosMinionMelee"
+	28	"SRU_ChaosMinionRanged"
+	29	"SRU_ChaosMinionSiege"
+	30	"SRU_ChaosMinionSuper"
+	31	"SRU_Blue"
+	32	"SRU_BlueMini"
+	33	"SRU_BlueMini2"
+	34	"SRU_Red"
+	35	"SRU_RedMini"
+	36	"SRU_Murkwolf"
+	37	"SRU_MurkwolfMini"
+	38	"SRU_Razorbeak"
+	39	"SRU_RazorbeakMini"
+	40	"SRU_Krug"
+	41	"SRU_KrugMini"
+	42	"SRU_Gromp"
+	43	"SRU_Dragon"
+	44	"SRU_Baron"
+	45	"SRU_BaronSpawn"
+	46	"SRUAP_MageCrystal"
+	47	"SRUAP_Flag"
+	48	"SRU_Snail"
+	49	"SRU_Dragon_prop"
+	50	"SRU_Bird"
+	51	"SRU_Antlermouse"
+	52	"SRU_Gromp_prop"
+	53	"SRU_Lizard"
+	54	"SRU_StoreKeeperNorth"
+	55	"SRU_StoreKeeperSouth"
+	56	"math"
+	57	"randomseed"
+	58	"os"
+	59	"time"
+	60	"LoadLevelScriptIntoScript"
+	61	"NeutralMinionSpawn.lua"
+	62	"NeutralMinionInit"
+	63	"EndOfGame.lua"
+	64	"SpawnTable"
+	65	"WaveSpawnRate"
+	66	30000
+	67	"SingleMinionSpawnDelay"
+	68	800
+	69	"ExpRadius"
+	70	"EXP_GIVEN_RADIUS"
+	71	"GoldRadius"
+	72	"GOLD_GIVEN_RADIUS"
+locals (0) for 010120C0:
+upvalues (0) for 010120C0:
+
+function <?:500,511> (21 instructions, 84 bytes at 010100B0)
+0 params, 4 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; InitTimer
+	2	[-]	LOADK    	1 -2	; "UpgradeMinionTimer"
+	3	[-]	GETGLOBAL	2 -3	; UPGRADE_MINION_TIMER
+	4	[-]	LOADBOOL 	3 1 0
+	5	[-]	CALL     	0 4 1
+	6	[-]	GETGLOBAL	0 -1	; InitTimer
+	7	[-]	LOADK    	1 -4	; "IncreaseCannonMinionSpawnRate"
+	8	[-]	GETGLOBAL	2 -5	; INCREASE_CANNON_RATE_TIMER
+	9	[-]	LOADBOOL 	3 0 0
+	10	[-]	CALL     	0 4 1
+	11	[-]	GETGLOBAL	0 -1	; InitTimer
+	12	[-]	LOADK    	1 -6	; "IncreaseCannonMinionSpawnRateAgain"
+	13	[-]	GETGLOBAL	2 -7	; INCREASE_CANNON_RATE_TIMER2
+	14	[-]	LOADBOOL 	3 0 0
+	15	[-]	CALL     	0 4 1
+	16	[-]	GETGLOBAL	0 -1	; InitTimer
+	17	[-]	LOADK    	1 -8	; "AllowDamageOnBuildings"
+	18	[-]	LOADK    	2 -9	; 10
+	19	[-]	LOADBOOL 	3 0 0
+	20	[-]	CALL     	0 4 1
+	21	[-]	RETURN   	0 1
+constants (9) for 010100B0:
+	1	"InitTimer"
+	2	"UpgradeMinionTimer"
+	3	"UPGRADE_MINION_TIMER"
+	4	"IncreaseCannonMinionSpawnRate"
+	5	"INCREASE_CANNON_RATE_TIMER"
+	6	"IncreaseCannonMinionSpawnRateAgain"
+	7	"INCREASE_CANNON_RATE_TIMER2"
+	8	"AllowDamageOnBuildings"
+	9	10
+locals (0) for 010100B0:
+upvalues (0) for 010100B0:
+
+function <?:513,526> (34 instructions, 136 bytes at 01010200)
+0 params, 8 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; LoadLevelScriptIntoScript
+	2	[-]	LOADK    	1 -2	; "CreateLevelProps.lua"
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -3	; CreateLevelProps
+	5	[-]	CALL     	0 1 1
+	6	[-]	GETGLOBAL	0 -4	; RIGHT_LANE
+	7	[-]	GETGLOBAL	1 -5	; LEFT_LANE
+	8	[-]	LOADK    	2 -6	; 1
+	9	[-]	FORPREP  	0 17	; to 27
+	10	[-]	GETGLOBAL	4 -7	; GetDampener
+	11	[-]	GETGLOBAL	5 -8	; TEAM_ORDER
+	12	[-]	MOVE     	6 3
+	13	[-]	CALL     	4 3 2
+	14	[-]	GETGLOBAL	5 -9	; SetDampenerRespawnAnimationDuration
+	15	[-]	MOVE     	6 4
+	16	[-]	GETGLOBAL	7 -10	; ORDER_INHIBITOR_RESPAWN_ANIMATION_DURATION
+	17	[-]	CALL     	5 3 1
+	18	[-]	GETGLOBAL	5 -7	; GetDampener
+	19	[-]	GETGLOBAL	6 -11	; TEAM_CHAOS
+	20	[-]	MOVE     	7 3
+	21	[-]	CALL     	5 3 2
+	22	[-]	MOVE     	4 5
+	23	[-]	GETGLOBAL	5 -9	; SetDampenerRespawnAnimationDuration
+	24	[-]	MOVE     	6 4
+	25	[-]	GETGLOBAL	7 -12	; CHAOS_INHIBITOR_RESPAWN_ANIMATION_DURATION
+	26	[-]	CALL     	5 3 1
+	27	[-]	FORLOOP  	0 -18	; to 10
+	28	[-]	GETGLOBAL	0 -13	; SetShieldBuffsOnSecondaryTurrets
+	29	[-]	GETGLOBAL	1 -8	; TEAM_ORDER
+	30	[-]	CALL     	0 2 1
+	31	[-]	GETGLOBAL	0 -13	; SetShieldBuffsOnSecondaryTurrets
+	32	[-]	GETGLOBAL	1 -11	; TEAM_CHAOS
+	33	[-]	CALL     	0 2 1
+	34	[-]	RETURN   	0 1
+constants (13) for 01010200:
+	1	"LoadLevelScriptIntoScript"
+	2	"CreateLevelProps.lua"
+	3	"CreateLevelProps"
+	4	"RIGHT_LANE"
+	5	"LEFT_LANE"
+	6	1
+	7	"GetDampener"
+	8	"TEAM_ORDER"
+	9	"SetDampenerRespawnAnimationDuration"
+	10	"ORDER_INHIBITOR_RESPAWN_ANIMATION_DURATION"
+	11	"TEAM_CHAOS"
+	12	"CHAOS_INHIBITOR_RESPAWN_ANIMATION_DURATION"
+	13	"SetShieldBuffsOnSecondaryTurrets"
+locals (0) for 01010200:
+upvalues (0) for 01010200:
+
+function <?:528,537> (14 instructions, 56 bytes at 01010400)
+0 params, 4 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SpawnLaneSigilEffects
+	2	[-]	CALL     	0 1 1
+	3	[-]	LOADK    	0 -2	; 0
+	4	[-]	GETGLOBAL	1 -4	; GetKeyLocation
+	5	[-]	MOVE     	2 0
+	6	[-]	GETGLOBAL	3 -5	; TEAM_ORDER
+	7	[-]	CALL     	1 3 2
+	8	[-]	SETGLOBAL	1 -3	; OrderHQPos
+	9	[-]	GETGLOBAL	1 -4	; GetKeyLocation
+	10	[-]	MOVE     	2 0
+	11	[-]	GETGLOBAL	3 -7	; TEAM_CHAOS
+	12	[-]	CALL     	1 3 2
+	13	[-]	SETGLOBAL	1 -6	; ChaosHQPos
+	14	[-]	RETURN   	0 1
+constants (7) for 01010400:
+	1	"SpawnLaneSigilEffects"
+	2	0
+	3	"OrderHQPos"
+	4	"GetKeyLocation"
+	5	"TEAM_ORDER"
+	6	"ChaosHQPos"
+	7	"TEAM_CHAOS"
+locals (0) for 01010400:
+upvalues (0) for 01010400:
+
+function <?:539,547> (25 instructions, 100 bytes at 01010458)
+1 param, 11 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; RIGHT_LANE
+	2	[-]	GETGLOBAL	2 -2	; LEFT_LANE
+	3	[-]	LOADK    	3 -3	; 1
+	4	[-]	FORPREP  	1 19	; to 24
+	5	[-]	GETGLOBAL	5 -5	; GetTurret
+	6	[-]	MOVE     	6 0
+	7	[-]	MOVE     	7 4
+	8	[-]	GETGLOBAL	8 -6	; MIDDLE_TOWER
+	9	[-]	CALL     	5 4 2
+	10	[-]	SETGLOBAL	5 -4	; innerTurret
+	11	[-]	GETGLOBAL	5 -7	; ApplyPersistentBuff
+	12	[-]	GETGLOBAL	6 -4	; innerTurret
+	13	[-]	LOADK    	7 -8	; "SRTurretSecondaryShielder"
+	14	[-]	LOADBOOL 	8 0 0
+	15	[-]	LOADK    	9 -3	; 1
+	16	[-]	LOADK    	10 -3	; 1
+	17	[-]	CALL     	5 6 1
+	18	[-]	GETGLOBAL	5 -9	; AddBuffCounter
+	19	[-]	GETGLOBAL	6 -4	; innerTurret
+	20	[-]	LOADK    	7 -8	; "SRTurretSecondaryShielder"
+	21	[-]	MOVE     	8 4
+	22	[-]	LOADK    	9 -10	; 2
+	23	[-]	CALL     	5 5 1
+	24	[-]	FORLOOP  	1 -20	; to 5
+	25	[-]	RETURN   	0 1
+constants (10) for 01010458:
+	1	"RIGHT_LANE"
+	2	"LEFT_LANE"
+	3	1
+	4	"innerTurret"
+	5	"GetTurret"
+	6	"MIDDLE_TOWER"
+	7	"ApplyPersistentBuff"
+	8	"SRTurretSecondaryShielder"
+	9	"AddBuffCounter"
+	10	2
+locals (0) for 01010458:
+upvalues (0) for 01010458:
+
+function <?:550,555> (24 instructions, 96 bytes at 01014A50)
+1 param, 7 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetSlotSpellName
+	2	[-]	MOVE     	2 0
+	3	[-]	LOADK    	3 -2	; 0
+	4	[-]	GETGLOBAL	4 -3	; SPELLBOOK_SUMMONER
+	5	[-]	LOADK    	5 -2	; 0
+	6	[-]	CALL     	1 5 2
+	7	[-]	EQ       	1 1 -4	; - "summonersmite"
+	8	[-]	JMP      	8	; to 17
+	9	[-]	GETGLOBAL	1 -1	; GetSlotSpellName
+	10	[-]	MOVE     	2 0
+	11	[-]	LOADK    	3 -5	; 1
+	12	[-]	GETGLOBAL	4 -3	; SPELLBOOK_SUMMONER
+	13	[-]	LOADK    	5 -2	; 0
+	14	[-]	CALL     	1 5 2
+	15	[-]	EQ       	0 1 -4	; - "summonersmite"
+	16	[-]	JMP      	7	; to 24
+	17	[-]	GETGLOBAL	1 -6	; ApplyPersistentBuff
+	18	[-]	MOVE     	2 0
+	19	[-]	LOADK    	3 -7	; "ItemJungleStatsTracker"
+	20	[-]	LOADBOOL 	4 1 0
+	21	[-]	LOADK    	5 -5	; 1
+	22	[-]	LOADK    	6 -5	; 1
+	23	[-]	CALL     	1 6 1
+	24	[-]	RETURN   	0 1
+constants (7) for 01014A50:
+	1	"GetSlotSpellName"
+	2	0
+	3	"SPELLBOOK_SUMMONER"
+	4	"summonersmite"
+	5	1
+	6	"ApplyPersistentBuff"
+	7	"ItemJungleStatsTracker"
+locals (0) for 01014A50:
+upvalues (0) for 01014A50:
+
+function <?:559,562> (9 instructions, 36 bytes at 01014B88)
+0 params, 3 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; LuaForEachChampion
+	2	[-]	GETGLOBAL	1 -2	; TEAM_CHAOS
+	3	[-]	LOADK    	2 -3	; "ApplyBaseBuffChaos"
+	4	[-]	CALL     	0 3 1
+	5	[-]	GETGLOBAL	0 -1	; LuaForEachChampion
+	6	[-]	GETGLOBAL	1 -4	; TEAM_ORDER
+	7	[-]	LOADK    	2 -5	; "ApplyBaseBuffOrder"
+	8	[-]	CALL     	0 3 1
+	9	[-]	RETURN   	0 1
+constants (5) for 01014B88:
+	1	"LuaForEachChampion"
+	2	"TEAM_CHAOS"
+	3	"ApplyBaseBuffChaos"
+	4	"TEAM_ORDER"
+	5	"ApplyBaseBuffOrder"
+locals (0) for 01014B88:
+upvalues (0) for 01014B88:
+
+function <?:564,564> (5 instructions, 20 bytes at 01014C38)
+1 param, 4 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; ApplyBaseBuff
+	2	[-]	MOVE     	2 0
+	3	[-]	GETGLOBAL	3 -2	; ChaosHQPos
+	4	[-]	CALL     	1 3 1
+	5	[-]	RETURN   	0 1
+constants (2) for 01014C38:
+	1	"ApplyBaseBuff"
+	2	"ChaosHQPos"
+locals (0) for 01014C38:
+upvalues (0) for 01014C38:
+
+function <?:565,565> (5 instructions, 20 bytes at 01014C90)
+1 param, 4 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; ApplyBaseBuff
+	2	[-]	MOVE     	2 0
+	3	[-]	GETGLOBAL	3 -2	; OrderHQPos
+	4	[-]	CALL     	1 3 1
+	5	[-]	RETURN   	0 1
+constants (2) for 01014C90:
+	1	"ApplyBaseBuff"
+	2	"OrderHQPos"
+locals (0) for 01014C90:
+upvalues (0) for 01014C90:
+
+function <?:569,573> (19 instructions, 76 bytes at 01014D10)
+2 params, 10 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetPosition
+	2	[-]	MOVE     	3 0
+	3	[-]	CALL     	2 2 2
+	4	[-]	SUB      	2 2 1
+	5	[-]	SELF     	2 2 -2	; "lengthSq"
+	6	[-]	CALL     	2 2 2
+	7	[-]	GETGLOBAL	3 -3	; baseBuffRadiusSquared
+	8	[-]	LT       	0 2 3
+	9	[-]	JMP      	9	; to 19
+	10	[-]	GETGLOBAL	2 -4	; SpellBuffAdd
+	11	[-]	MOVE     	3 0
+	12	[-]	MOVE     	4 0
+	13	[-]	LOADK    	5 -5	; "S5Test_BaseBuff"
+	14	[-]	GETGLOBAL	6 -6	; BUFF_Aura
+	15	[-]	LOADK    	7 -7	; 1
+	16	[-]	LOADK    	8 -8	; 0.5
+	17	[-]	LOADNIL  	9 9
+	18	[-]	CALL     	2 8 1
+	19	[-]	RETURN   	0 1
+constants (8) for 01014D10:
+	1	"GetPosition"
+	2	"lengthSq"
+	3	"baseBuffRadiusSquared"
+	4	"SpellBuffAdd"
+	5	"S5Test_BaseBuff"
+	6	"BUFF_Aura"
+	7	1
+	8	0.5
+locals (0) for 01014D10:
+upvalues (0) for 01014D10:
+
+function <?:575,581> (9 instructions, 36 bytes at 01015028)
+1 param, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; TEAM_CHAOS
+	2	[-]	EQ       	0 0 1
+	3	[-]	JMP      	3	; to 7
+	4	[-]	GETGLOBAL	1 -2	; TEAM_ORDER
+	5	[-]	RETURN   	1 2
+	6	[-]	JMP      	2	; to 9
+	7	[-]	GETGLOBAL	1 -1	; TEAM_CHAOS
+	8	[-]	RETURN   	1 2
+	9	[-]	RETURN   	0 1
+constants (2) for 01015028:
+	1	"TEAM_CHAOS"
+	2	"TEAM_ORDER"
+locals (0) for 01015028:
+upvalues (0) for 01015028:
+
+function <?:584,620> (71 instructions, 284 bytes at 010151E0)
+0 params, 19 slots, 0 upvalues, 0 locals, 27 constants, 0 functions
+	1	[-]	LOADK    	1 -1	; 1
+	2	[-]	LOADK    	2 -2	; 2
+	3	[-]	LOADK    	3 -1	; 1
+	4	[-]	FORPREP  	1 65	; to 70
+	5	[-]	EQ       	0 4 -1	; - 1
+	6	[-]	JMP      	2	; to 9
+	7	[-]	GETGLOBAL	0 -3	; OrderBarracksBonuses
+	8	[-]	JMP      	1	; to 10
+	9	[-]	GETGLOBAL	0 -4	; ChaosBarracksBonuses
+	10	[-]	LOADK    	5 -1	; 1
+	11	[-]	LOADK    	6 -5	; 3
+	12	[-]	LOADK    	7 -1	; 1
+	13	[-]	FORPREP  	5 55	; to 69
+	14	[-]	LOADNIL  	9 10
+	15	[-]	GETTABLE 	11 0 8
+	16	[-]	GETTABLE 	11 11 -6	; "MinionInfoTable"
+	17	[-]	GETGLOBAL	12 -7	; pairs
+	18	[-]	MOVE     	13 11
+	19	[-]	CALL     	12 2 4
+	20	[-]	JMP      	46	; to 67
+	21	[-]	GETTABLE 	17 16 -8	; "HPBonus"
+	22	[-]	GETTABLE 	18 16 -9	; "HPUpgrade"
+	23	[-]	ADD      	17 17 18
+	24	[-]	SETTABLE 	16 -8 17	; "HPBonus" -
+	25	[-]	GETTABLE 	17 16 -10	; "DamageBonus"
+	26	[-]	GETTABLE 	18 16 -11	; "DamageUpgrade"
+	27	[-]	ADD      	17 17 18
+	28	[-]	SETTABLE 	16 -10 17	; "DamageBonus" -
+	29	[-]	GETTABLE 	17 16 -12	; "GoldBonus"
+	30	[-]	GETTABLE 	18 16 -13	; "GoldUpgrade"
+	31	[-]	ADD      	17 17 18
+	32	[-]	SETTABLE 	16 -12 17	; "GoldBonus" -
+	33	[-]	GETTABLE 	17 16 -9	; "HPUpgrade"
+	34	[-]	GETTABLE 	18 16 -14	; "HPUpgradeGrowth"
+	35	[-]	ADD      	17 17 18
+	36	[-]	SETTABLE 	16 -9 17	; "HPUpgrade" -
+	37	[-]	GETTABLE 	17 16 -12	; "GoldBonus"
+	38	[-]	GETTABLE 	18 16 -15	; "GoldMaximumBonus"
+	39	[-]	LT       	0 18 17
+	40	[-]	JMP      	2	; to 43
+	41	[-]	GETTABLE 	17 16 -15	; "GoldMaximumBonus"
+	42	[-]	SETTABLE 	16 -12 17	; "GoldBonus" -
+	43	[-]	GETTABLE 	17 16 -16	; "LocalGoldBonus"
+	44	[-]	GETTABLE 	18 16 -17	; "GoldShareUpgrade"
+	45	[-]	ADD      	17 17 18
+	46	[-]	SETTABLE 	16 -16 17	; "LocalGoldBonus" -
+	47	[-]	GETTABLE 	17 16 -18	; "Armor"
+	48	[-]	SETTABLE 	16 -18 17	; "Armor" -
+	49	[-]	GETTABLE 	17 16 -19	; "MagicResistance"
+	50	[-]	SETTABLE 	16 -19 17	; "MagicResistance" -
+	51	[-]	GETTABLE 	17 16 -20	; "ExpBonus"
+	52	[-]	GETTABLE 	18 16 -21	; "ExpUpgrade"
+	53	[-]	ADD      	17 17 18
+	54	[-]	SETTABLE 	16 -20 17	; "ExpBonus" -
+	55	[-]	GETTABLE 	17 16 -12	; "GoldBonus"
+	56	[-]	GETTABLE 	18 16 -23	; "GoldGivenBase"
+	57	[-]	ADD      	17 17 18
+	58	[-]	SETTABLE 	16 -22 17	; "GoldGiven" -
+	59	[-]	GETTABLE 	17 16 -16	; "LocalGoldBonus"
+	60	[-]	GETTABLE 	18 16 -25	; "GoldShared"
+	61	[-]	ADD      	17 17 18
+	62	[-]	SETTABLE 	16 -24 17	; "LocalGoldGiven" -
+	63	[-]	GETTABLE 	17 16 -20	; "ExpBonus"
+	64	[-]	GETTABLE 	18 16 -27	; "ExpGivenBase"
+	65	[-]	ADD      	17 17 18
+	66	[-]	SETTABLE 	16 -26 17	; "ExpGiven" -
+	67	[-]	TFORLOOP 	12 2
+	68	[-]	JMP      	-48	; to 21
+	69	[-]	FORLOOP  	5 -56	; to 14
+	70	[-]	FORLOOP  	1 -66	; to 5
+	71	[-]	RETURN   	0 1
+constants (27) for 010151E0:
+	1	1
+	2	2
+	3	"OrderBarracksBonuses"
+	4	"ChaosBarracksBonuses"
+	5	3
+	6	"MinionInfoTable"
+	7	"pairs"
+	8	"HPBonus"
+	9	"HPUpgrade"
+	10	"DamageBonus"
+	11	"DamageUpgrade"
+	12	"GoldBonus"
+	13	"GoldUpgrade"
+	14	"HPUpgradeGrowth"
+	15	"GoldMaximumBonus"
+	16	"LocalGoldBonus"
+	17	"GoldShareUpgrade"
+	18	"Armor"
+	19	"MagicResistance"
+	20	"ExpBonus"
+	21	"ExpUpgrade"
+	22	"GoldGiven"
+	23	"GoldGivenBase"
+	24	"LocalGoldGiven"
+	25	"GoldShared"
+	26	"ExpGiven"
+	27	"ExpGivenBase"
+locals (0) for 010151E0:
+upvalues (0) for 010151E0:
+
+function <?:622,649> (71 instructions, 284 bytes at 01014FD0)
+0 params, 12 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; RIGHT_LANE
+	2	[-]	GETGLOBAL	1 -2	; LEFT_LANE
+	3	[-]	LOADK    	2 -3	; 1
+	4	[-]	FORPREP  	0 65	; to 70
+	5	[-]	GETGLOBAL	4 -4	; BACK_TOWER
+	6	[-]	GETGLOBAL	5 -5	; HQ_TOWER1
+	7	[-]	LOADK    	6 -3	; 1
+	8	[-]	FORPREP  	4 60	; to 69
+	9	[-]	GETGLOBAL	8 -7	; GetTurret
+	10	[-]	GETGLOBAL	9 -8	; TEAM_ORDER
+	11	[-]	MOVE     	10 3
+	12	[-]	MOVE     	11 7
+	13	[-]	CALL     	8 4 2
+	14	[-]	SETGLOBAL	8 -6	; orderTurret
+	15	[-]	GETGLOBAL	8 -6	; orderTurret
+	16	[-]	EQ       	1 8 -9	; - nil
+	17	[-]	JMP      	21	; to 39
+	18	[-]	GETGLOBAL	8 -10	; FRONT_TOWER
+	19	[-]	EQ       	0 7 8
+	20	[-]	JMP      	9	; to 30
+	21	[-]	GETGLOBAL	8 -11	; SetInvulnerable
+	22	[-]	GETGLOBAL	9 -6	; orderTurret
+	23	[-]	LOADBOOL 	10 0 0
+	24	[-]	CALL     	8 3 1
+	25	[-]	GETGLOBAL	8 -12	; SetTargetable
+	26	[-]	GETGLOBAL	9 -6	; orderTurret
+	27	[-]	LOADBOOL 	10 1 0
+	28	[-]	CALL     	8 3 1
+	29	[-]	JMP      	9	; to 39
+	30	[-]	GETGLOBAL	8 -11	; SetInvulnerable
+	31	[-]	GETGLOBAL	9 -6	; orderTurret
+	32	[-]	LOADBOOL 	10 1 0
+	33	[-]	CALL     	8 3 1
+	34	[-]	GETGLOBAL	8 -13	; SetNotTargetableToTeam
+	35	[-]	GETGLOBAL	9 -6	; orderTurret
+	36	[-]	LOADBOOL 	10 1 0
+	37	[-]	GETGLOBAL	11 -14	; TEAM_CHAOS
+	38	[-]	CALL     	8 4 1
+	39	[-]	GETGLOBAL	8 -7	; GetTurret
+	40	[-]	GETGLOBAL	9 -14	; TEAM_CHAOS
+	41	[-]	MOVE     	10 3
+	42	[-]	MOVE     	11 7
+	43	[-]	CALL     	8 4 2
+	44	[-]	SETGLOBAL	8 -15	; chaosTurret
+	45	[-]	GETGLOBAL	8 -15	; chaosTurret
+	46	[-]	EQ       	1 8 -9	; - nil
+	47	[-]	JMP      	21	; to 69
+	48	[-]	GETGLOBAL	8 -10	; FRONT_TOWER
+	49	[-]	EQ       	0 7 8
+	50	[-]	JMP      	9	; to 60
+	51	[-]	GETGLOBAL	8 -11	; SetInvulnerable
+	52	[-]	GETGLOBAL	9 -15	; chaosTurret
+	53	[-]	LOADBOOL 	10 0 0
+	54	[-]	CALL     	8 3 1
+	55	[-]	GETGLOBAL	8 -12	; SetTargetable
+	56	[-]	GETGLOBAL	9 -15	; chaosTurret
+	57	[-]	LOADBOOL 	10 1 0
+	58	[-]	CALL     	8 3 1
+	59	[-]	JMP      	9	; to 69
+	60	[-]	GETGLOBAL	8 -11	; SetInvulnerable
+	61	[-]	GETGLOBAL	9 -15	; chaosTurret
+	62	[-]	LOADBOOL 	10 1 0
+	63	[-]	CALL     	8 3 1
+	64	[-]	GETGLOBAL	8 -13	; SetNotTargetableToTeam
+	65	[-]	GETGLOBAL	9 -15	; chaosTurret
+	66	[-]	LOADBOOL 	10 1 0
+	67	[-]	GETGLOBAL	11 -8	; TEAM_ORDER
+	68	[-]	CALL     	8 4 1
+	69	[-]	FORLOOP  	4 -61	; to 9
+	70	[-]	FORLOOP  	0 -66	; to 5
+	71	[-]	RETURN   	0 1
+constants (15) for 01014FD0:
+	1	"RIGHT_LANE"
+	2	"LEFT_LANE"
+	3	1
+	4	"BACK_TOWER"
+	5	"HQ_TOWER1"
+	6	"orderTurret"
+	7	"GetTurret"
+	8	"TEAM_ORDER"
+	9	nil
+	10	"FRONT_TOWER"
+	11	"SetInvulnerable"
+	12	"SetTargetable"
+	13	"SetNotTargetableToTeam"
+	14	"TEAM_CHAOS"
+	15	"chaosTurret"
+locals (0) for 01014FD0:
+upvalues (0) for 01014FD0:
+
+function <?:651,656> (9 instructions, 36 bytes at 010153F0)
+1 param, 9 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	3 -1	; pairs
+	2	[-]	MOVE     	4 0
+	3	[-]	CALL     	3 2 4
+	4	[-]	JMP      	2	; to 7
+	5	[-]	GETTABLE 	8 7 -3	; "DefaultNumPerWave"
+	6	[-]	SETTABLE 	7 -2 8	; "NumPerWave" -
+	7	[-]	TFORLOOP 	3 2
+	8	[-]	JMP      	-4	; to 5
+	9	[-]	RETURN   	0 1
+constants (3) for 010153F0:
+	1	"pairs"
+	2	"NumPerWave"
+	3	"DefaultNumPerWave"
+locals (0) for 010153F0:
+upvalues (0) for 010153F0:
+
+function <?:658,663> (8 instructions, 32 bytes at 01015130)
+1 param, 9 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	3 -1	; pairs
+	2	[-]	MOVE     	4 0
+	3	[-]	CALL     	3 2 4
+	4	[-]	JMP      	1	; to 6
+	5	[-]	SETTABLE 	7 -2 -3	; "NumPerWave" 0
+	6	[-]	TFORLOOP 	3 2
+	7	[-]	JMP      	-3	; to 5
+	8	[-]	RETURN   	0 1
+constants (3) for 01015130:
+	1	"pairs"
+	2	"NumPerWave"
+	3	0
+locals (0) for 01015130:
+upvalues (0) for 01015130:
+
+function <?:666,684> (26 instructions, 104 bytes at 01015080)
+2 params, 5 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADK    	2 -1	; 0
+	2	[-]	GETGLOBAL	3 -2	; TEAM_ORDER
+	3	[-]	EQ       	0 1 3
+	4	[-]	JMP      	4	; to 9
+	5	[-]	GETGLOBAL	3 -3	; OrderBarracksBonuses
+	6	[-]	ADD      	4 0 -4	; - 1
+	7	[-]	GETTABLE 	2 3 4
+	8	[-]	JMP      	3	; to 12
+	9	[-]	GETGLOBAL	3 -5	; ChaosBarracksBonuses
+	10	[-]	ADD      	4 0 -4	; - 1
+	11	[-]	GETTABLE 	2 3 4
+	12	[-]	NEWTABLE 	3 0 4
+	13	[-]	GETGLOBAL	4 -8	; SpawnTable
+	14	[-]	GETTABLE 	4 4 -7	; "WaveSpawnRate"
+	15	[-]	SETTABLE 	3 -7 4	; "WaveSpawnRate" -
+	16	[-]	GETGLOBAL	4 -8	; SpawnTable
+	17	[-]	GETTABLE 	4 4 -9	; "SingleMinionSpawnDelay"
+	18	[-]	SETTABLE 	3 -9 4	; "SingleMinionSpawnDelay" -
+	19	[-]	GETTABLE 	4 2 -10	; "IsDestroyed"
+	20	[-]	SETTABLE 	3 -10 4	; "IsDestroyed" -
+	21	[-]	GETTABLE 	4 2 -11	; "MinionInfoTable"
+	22	[-]	SETTABLE 	3 -11 4	; "MinionInfoTable" -
+	23	[-]	SETGLOBAL	3 -6	; ReturnTable
+	24	[-]	GETGLOBAL	3 -6	; ReturnTable
+	25	[-]	RETURN   	3 2
+	26	[-]	RETURN   	0 1
+constants (11) for 01015080:
+	1	0
+	2	"TEAM_ORDER"
+	3	"OrderBarracksBonuses"
+	4	1
+	5	"ChaosBarracksBonuses"
+	6	"ReturnTable"
+	7	"WaveSpawnRate"
+	8	"SpawnTable"
+	9	"SingleMinionSpawnDelay"
+	10	"IsDestroyed"
+	11	"MinionInfoTable"
+locals (0) for 01015080:
+upvalues (0) for 01015080:
+
+function <?:687,770> (127 instructions, 508 bytes at 01015188)
+5 params, 16 slots, 0 upvalues, 0 locals, 43 constants, 0 functions
+	1	[-]	LOADK    	5 -1	; 0
+	2	[-]	GETGLOBAL	6 -2	; TEAM_ORDER
+	3	[-]	EQ       	0 3 6
+	4	[-]	JMP      	4	; to 9
+	5	[-]	GETGLOBAL	6 -3	; OrderBarracksBonuses
+	6	[-]	ADD      	7 0 -4	; - 1
+	7	[-]	GETTABLE 	5 6 7
+	8	[-]	JMP      	3	; to 12
+	9	[-]	GETGLOBAL	6 -5	; ChaosBarracksBonuses
+	10	[-]	ADD      	7 0 -4	; - 1
+	11	[-]	GETTABLE 	5 6 7
+	12	[-]	GETTABLE 	6 5 -6	; "MinionInfoTable"
+	13	[-]	GETTABLE 	6 6 -7	; "Super"
+	14	[-]	GETTABLE 	7 5 -6	; "MinionInfoTable"
+	15	[-]	GETTABLE 	7 7 -8	; "Cannon"
+	16	[-]	GETTABLE 	8 5 -6	; "MinionInfoTable"
+	17	[-]	GETTABLE 	8 8 -9	; "Captain"
+	18	[-]	GETTABLE 	9 5 -6	; "MinionInfoTable"
+	19	[-]	GETTABLE 	9 9 -10	; "Ranger"
+	20	[-]	GETTABLE 	10 5 -6	; "MinionInfoTable"
+	21	[-]	GETTABLE 	10 10 -11	; "Artillery"
+	22	[-]	GETGLOBAL	11 -12	; ResetToDefaultWaveCounts
+	23	[-]	GETTABLE 	12 5 -6	; "MinionInfoTable"
+	24	[-]	CALL     	11 2 1
+	25	[-]	GETGLOBAL	11 -13	; CANNON_MINION_SPAWN_FREQUENCY
+	26	[-]	MOD      	11 1 11
+	27	[-]	EQ       	0 11 -1	; - 0
+	28	[-]	JMP      	3	; to 32
+	29	[-]	GETTABLE 	11 7 -14	; "NumPerWave"
+	30	[-]	ADD      	11 11 -4	; - 1
+	31	[-]	SETTABLE 	7 -14 11	; "NumPerWave" -
+	32	[-]	GETGLOBAL	11 -15	; LAST_WAVE
+	33	[-]	EQ       	1 4 11
+	34	[-]	JMP      	31	; to 66
+	35	[-]	LOADK    	11 -17	; 6
+	36	[-]	SETGLOBAL	11 -16	; BARRACKSCOUNT
+	37	[-]	GETGLOBAL	11 -19	; MAX_MINIONS_EVER
+	38	[-]	GETGLOBAL	12 -20	; GetTotalTeamMinionsSpawned
+	39	[-]	CALL     	12 1 2
+	40	[-]	SUB      	11 11 12
+	41	[-]	SETGLOBAL	11 -18	; totalMinionsRemaining
+	42	[-]	GETGLOBAL	11 -18	; totalMinionsRemaining
+	43	[-]	GETGLOBAL	12 -16	; BARRACKSCOUNT
+	44	[-]	MUL      	12 12 -21	; - 7
+	45	[-]	LE       	0 11 12
+	46	[-]	JMP      	16	; to 63
+	47	[-]	GETGLOBAL	11 -18	; totalMinionsRemaining
+	48	[-]	LE       	0 11 -1	; - 0
+	49	[-]	JMP      	3	; to 53
+	50	[-]	LOADK    	11 -23	; "None"
+	51	[-]	SETGLOBAL	11 -22	; SPECIAL_MINION_MODE
+	52	[-]	JMP      	12	; to 65
+	53	[-]	GETGLOBAL	11 -18	; totalMinionsRemaining
+	54	[-]	GETGLOBAL	12 -16	; BARRACKSCOUNT
+	55	[-]	LE       	0 12 11
+	56	[-]	JMP      	3	; to 60
+	57	[-]	LOADK    	11 -24	; "2MeleeMinions"
+	58	[-]	SETGLOBAL	11 -22	; SPECIAL_MINION_MODE
+	59	[-]	JMP      	5	; to 65
+	60	[-]	LOADK    	11 -23	; "None"
+	61	[-]	SETGLOBAL	11 -22	; SPECIAL_MINION_MODE
+	62	[-]	JMP      	2	; to 65
+	63	[-]	LOADK    	11 -25	; ""
+	64	[-]	SETGLOBAL	11 -22	; SPECIAL_MINION_MODE
+	65	[-]	SETGLOBAL	4 -15	; LAST_WAVE
+	66	[-]	GETTABLE 	11 5 -26	; "WillSpawnSuperMinion"
+	67	[-]	EQ       	0 11 -4	; - 1
+	68	[-]	JMP      	16	; to 85
+	69	[-]	GETGLOBAL	11 -2	; TEAM_ORDER
+	70	[-]	EQ       	0 3 11
+	71	[-]	JMP      	3	; to 75
+	72	[-]	GETGLOBAL	11 -27	; totalNumberOfChaosBarracks
+	73	[-]	EQ       	1 11 -1	; - 0
+	74	[-]	JMP      	6	; to 81
+	75	[-]	GETGLOBAL	11 -28	; TEAM_CHAOS
+	76	[-]	EQ       	0 3 11
+	77	[-]	JMP      	5	; to 83
+	78	[-]	GETGLOBAL	11 -29	; totalNumberOfOrderBarracks
+	79	[-]	EQ       	0 11 -1	; - 0
+	80	[-]	JMP      	2	; to 83
+	81	[-]	SETTABLE 	6 -14 -30	; "NumPerWave" 2
+	82	[-]	JMP      	1	; to 84
+	83	[-]	SETTABLE 	6 -14 -4	; "NumPerWave" 1
+	84	[-]	SETTABLE 	7 -14 -1	; "NumPerWave" 0
+	85	[-]	GETGLOBAL	11 -22	; SPECIAL_MINION_MODE
+	86	[-]	EQ       	0 11 -24	; - "2MeleeMinions"
+	87	[-]	JMP      	16	; to 104
+	88	[-]	GETTABLE 	11 5 -6	; "MinionInfoTable"
+	89	[-]	GETTABLE 	11 11 -7	; "Super"
+	90	[-]	GETTABLE 	11 11 -14	; "NumPerWave"
+	91	[-]	GETGLOBAL	12 -31	; ClearCurrentWaveCounts
+	92	[-]	GETTABLE 	13 5 -6	; "MinionInfoTable"
+	93	[-]	CALL     	12 2 1
+	94	[-]	SETTABLE 	6 -14 11	; "NumPerWave" -
+	95	[-]	GETTABLE 	12 5 -6	; "MinionInfoTable"
+	96	[-]	GETTABLE 	12 12 -32	; "Melee"
+	97	[-]	GETGLOBAL	13 -33	; math
+	98	[-]	GETTABLE 	13 13 -34	; "max"
+	99	[-]	SUB      	14 -30 11	; 2 -
+	100	[-]	LOADK    	15 -1	; 0
+	101	[-]	CALL     	13 3 2
+	102	[-]	SETTABLE 	12 -14 13	; "NumPerWave" -
+	103	[-]	JMP      	6	; to 110
+	104	[-]	GETGLOBAL	11 -22	; SPECIAL_MINION_MODE
+	105	[-]	EQ       	0 11 -23	; - "None"
+	106	[-]	JMP      	3	; to 110
+	107	[-]	GETGLOBAL	11 -31	; ClearCurrentWaveCounts
+	108	[-]	GETTABLE 	12 5 -6	; "MinionInfoTable"
+	109	[-]	CALL     	11 2 1
+	110	[-]	NEWTABLE 	11 0 6
+	111	[-]	SETTABLE 	11 -36 -37	; "NewFormat" true
+	112	[-]	GETTABLE 	12 5 -38	; "SpawnOrderMinionNames"
+	113	[-]	SETTABLE 	11 -38 12	; "SpawnOrderMinionNames" -
+	114	[-]	GETTABLE 	12 5 -39	; "IsDestroyed"
+	115	[-]	SETTABLE 	11 -39 12	; "IsDestroyed" -
+	116	[-]	GETGLOBAL	12 -41	; SpawnTable
+	117	[-]	GETTABLE 	12 12 -42	; "ExpRadius"
+	118	[-]	SETTABLE 	11 -40 12	; "ExperienceRadius" -
+	119	[-]	GETGLOBAL	12 -41	; SpawnTable
+	120	[-]	GETTABLE 	12 12 -43	; "GoldRadius"
+	121	[-]	SETTABLE 	11 -43 12	; "GoldRadius" -
+	122	[-]	GETTABLE 	12 5 -6	; "MinionInfoTable"
+	123	[-]	SETTABLE 	11 -6 12	; "MinionInfoTable" -
+	124	[-]	SETGLOBAL	11 -35	; ReturnTable
+	125	[-]	GETGLOBAL	11 -35	; ReturnTable
+	126	[-]	RETURN   	11 2
+	127	[-]	RETURN   	0 1
+constants (43) for 01015188:
+	1	0
+	2	"TEAM_ORDER"
+	3	"OrderBarracksBonuses"
+	4	1
+	5	"ChaosBarracksBonuses"
+	6	"MinionInfoTable"
+	7	"Super"
+	8	"Cannon"
+	9	"Captain"
+	10	"Ranger"
+	11	"Artillery"
+	12	"ResetToDefaultWaveCounts"
+	13	"CANNON_MINION_SPAWN_FREQUENCY"
+	14	"NumPerWave"
+	15	"LAST_WAVE"
+	16	"BARRACKSCOUNT"
+	17	6
+	18	"totalMinionsRemaining"
+	19	"MAX_MINIONS_EVER"
+	20	"GetTotalTeamMinionsSpawned"
+	21	7
+	22	"SPECIAL_MINION_MODE"
+	23	"None"
+	24	"2MeleeMinions"
+	25	""
+	26	"WillSpawnSuperMinion"
+	27	"totalNumberOfChaosBarracks"
+	28	"TEAM_CHAOS"
+	29	"totalNumberOfOrderBarracks"
+	30	2
+	31	"ClearCurrentWaveCounts"
+	32	"Melee"
+	33	"math"
+	34	"max"
+	35	"ReturnTable"
+	36	"NewFormat"
+	37	true
+	38	"SpawnOrderMinionNames"
+	39	"IsDestroyed"
+	40	"ExperienceRadius"
+	41	"SpawnTable"
+	42	"ExpRadius"
+	43	"GoldRadius"
+locals (0) for 01015188:
+upvalues (0) for 01015188:
+
+function <?:775,823> (103 instructions, 412 bytes at 01015238)
+3 params, 8 slots, 0 upvalues, 0 locals, 20 constants, 0 functions
+	1	[-]	GETGLOBAL	4 -1	; TEAM_ORDER
+	2	[-]	EQ       	0 0 4
+	3	[-]	JMP      	2	; to 6
+	4	[-]	GETGLOBAL	3 -2	; OrderBuildingStatus
+	5	[-]	JMP      	1	; to 7
+	6	[-]	GETGLOBAL	3 -3	; ChaosBuildingStatus
+	7	[-]	GETGLOBAL	4 -4	; FRONT_TOWER
+	8	[-]	EQ       	0 2 4
+	9	[-]	JMP      	17	; to 27
+	10	[-]	ADD      	4 1 -5	; - 1
+	11	[-]	GETTABLE 	4 3 4
+	12	[-]	SETTABLE 	4 -6 -7	; "Turret3" false
+	13	[-]	GETGLOBAL	4 -8	; GetTurret
+	14	[-]	MOVE     	5 0
+	15	[-]	MOVE     	6 1
+	16	[-]	GETGLOBAL	7 -9	; MIDDLE_TOWER
+	17	[-]	CALL     	4 4 2
+	18	[-]	GETGLOBAL	5 -10	; SetInvulnerable
+	19	[-]	MOVE     	6 4
+	20	[-]	LOADBOOL 	7 0 0
+	21	[-]	CALL     	5 3 1
+	22	[-]	GETGLOBAL	5 -11	; SetTargetable
+	23	[-]	MOVE     	6 4
+	24	[-]	LOADBOOL 	7 1 0
+	25	[-]	CALL     	5 3 1
+	26	[-]	JMP      	76	; to 103
+	27	[-]	GETGLOBAL	4 -9	; MIDDLE_TOWER
+	28	[-]	EQ       	0 2 4
+	29	[-]	JMP      	17	; to 47
+	30	[-]	ADD      	4 1 -5	; - 1
+	31	[-]	GETTABLE 	4 3 4
+	32	[-]	SETTABLE 	4 -12 -7	; "Turret2" false
+	33	[-]	GETGLOBAL	4 -8	; GetTurret
+	34	[-]	MOVE     	5 0
+	35	[-]	MOVE     	6 1
+	36	[-]	GETGLOBAL	7 -13	; BACK_TOWER
+	37	[-]	CALL     	4 4 2
+	38	[-]	GETGLOBAL	5 -10	; SetInvulnerable
+	39	[-]	MOVE     	6 4
+	40	[-]	LOADBOOL 	7 0 0
+	41	[-]	CALL     	5 3 1
+	42	[-]	GETGLOBAL	5 -11	; SetTargetable
+	43	[-]	MOVE     	6 4
+	44	[-]	LOADBOOL 	7 1 0
+	45	[-]	CALL     	5 3 1
+	46	[-]	JMP      	56	; to 103
+	47	[-]	GETGLOBAL	4 -13	; BACK_TOWER
+	48	[-]	EQ       	0 2 4
+	49	[-]	JMP      	16	; to 66
+	50	[-]	ADD      	4 1 -5	; - 1
+	51	[-]	GETTABLE 	4 3 4
+	52	[-]	SETTABLE 	4 -14 -7	; "Turret1" false
+	53	[-]	GETGLOBAL	4 -15	; GetDampener
+	54	[-]	MOVE     	5 0
+	55	[-]	MOVE     	6 1
+	56	[-]	CALL     	4 3 2
+	57	[-]	GETGLOBAL	5 -10	; SetInvulnerable
+	58	[-]	MOVE     	6 4
+	59	[-]	LOADBOOL 	7 0 0
+	60	[-]	CALL     	5 3 1
+	61	[-]	GETGLOBAL	5 -11	; SetTargetable
+	62	[-]	MOVE     	6 4
+	63	[-]	LOADBOOL 	7 1 0
+	64	[-]	CALL     	5 3 1
+	65	[-]	JMP      	37	; to 103
+	66	[-]	GETGLOBAL	4 -16	; HQ_TOWER2
+	67	[-]	EQ       	0 2 4
+	68	[-]	JMP      	16	; to 85
+	69	[-]	SETTABLE 	3 -17 -7	; "HQTower2" false
+	70	[-]	GETTABLE 	4 3 -18	; "HQTower1"
+	71	[-]	EQ       	0 4 -7	; - false
+	72	[-]	JMP      	30	; to 103
+	73	[-]	GETGLOBAL	4 -19	; GetHQ
+	74	[-]	MOVE     	5 0
+	75	[-]	CALL     	4 2 2
+	76	[-]	GETGLOBAL	5 -10	; SetInvulnerable
+	77	[-]	MOVE     	6 4
+	78	[-]	LOADBOOL 	7 0 0
+	79	[-]	CALL     	5 3 1
+	80	[-]	GETGLOBAL	5 -11	; SetTargetable
+	81	[-]	MOVE     	6 4
+	82	[-]	LOADBOOL 	7 1 0
+	83	[-]	CALL     	5 3 1
+	84	[-]	JMP      	18	; to 103
+	85	[-]	GETGLOBAL	4 -20	; HQ_TOWER1
+	86	[-]	EQ       	0 2 4
+	87	[-]	JMP      	15	; to 103
+	88	[-]	SETTABLE 	3 -18 -7	; "HQTower1" false
+	89	[-]	GETTABLE 	4 3 -17	; "HQTower2"
+	90	[-]	EQ       	0 4 -7	; - false
+	91	[-]	JMP      	11	; to 103
+	92	[-]	GETGLOBAL	4 -19	; GetHQ
+	93	[-]	MOVE     	5 0
+	94	[-]	CALL     	4 2 2
+	95	[-]	GETGLOBAL	5 -10	; SetInvulnerable
+	96	[-]	MOVE     	6 4
+	97	[-]	LOADBOOL 	7 0 0
+	98	[-]	CALL     	5 3 1
+	99	[-]	GETGLOBAL	5 -11	; SetTargetable
+	100	[-]	MOVE     	6 4
+	101	[-]	LOADBOOL 	7 1 0
+	102	[-]	CALL     	5 3 1
+	103	[-]	RETURN   	0 1
+constants (20) for 01015238:
+	1	"TEAM_ORDER"
+	2	"OrderBuildingStatus"
+	3	"ChaosBuildingStatus"
+	4	"FRONT_TOWER"
+	5	1
+	6	"Turret3"
+	7	false
+	8	"GetTurret"
+	9	"MIDDLE_TOWER"
+	10	"SetInvulnerable"
+	11	"SetTargetable"
+	12	"Turret2"
+	13	"BACK_TOWER"
+	14	"Turret1"
+	15	"GetDampener"
+	16	"HQ_TOWER2"
+	17	"HQTower2"
+	18	"HQTower1"
+	19	"GetHQ"
+	20	"HQ_TOWER1"
+locals (0) for 01015238:
+upvalues (0) for 01015238:
+
+function <?:825,836> (12 instructions, 48 bytes at 01015448)
+2 params, 5 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	3 -1	; TEAM_ORDER
+	2	[-]	EQ       	0 0 3
+	3	[-]	JMP      	4	; to 8
+	4	[-]	GETGLOBAL	3 -2	; OrderBarracksBonuses
+	5	[-]	ADD      	4 1 -3	; - 1
+	6	[-]	GETTABLE 	2 3 4
+	7	[-]	JMP      	3	; to 11
+	8	[-]	GETGLOBAL	3 -4	; ChaosBarracksBonuses
+	9	[-]	ADD      	4 1 -3	; - 1
+	10	[-]	GETTABLE 	2 3 4
+	11	[-]	RETURN   	2 2
+	12	[-]	RETURN   	0 1
+constants (4) for 01015448:
+	1	"TEAM_ORDER"
+	2	"OrderBarracksBonuses"
+	3	1
+	4	"ChaosBarracksBonuses"
+locals (0) for 01015448:
+upvalues (0) for 01015448:
+
+function <?:838,844> (13 instructions, 52 bytes at 01014D68)
+2 params, 5 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -2	; GetLuaBarracks
+	2	[-]	MOVE     	3 1
+	3	[-]	MOVE     	4 0
+	4	[-]	CALL     	2 3 2
+	5	[-]	SETGLOBAL	2 -1	; barrack
+	6	[-]	GETGLOBAL	2 -3	; DISABLE_MINION_SPAWN_BASE_TIME
+	7	[-]	GETGLOBAL	3 -4	; DISABLE_MINION_SPAWN_MAG_TIME
+	8	[-]	GETGLOBAL	4 -1	; barrack
+	9	[-]	GETTABLE 	4 4 -5	; "NumOfSpawnDisables"
+	10	[-]	MUL      	3 3 4
+	11	[-]	ADD      	2 2 3
+	12	[-]	RETURN   	2 2
+	13	[-]	RETURN   	0 1
+constants (5) for 01014D68:
+	1	"barrack"
+	2	"GetLuaBarracks"
+	3	"DISABLE_MINION_SPAWN_BASE_TIME"
+	4	"DISABLE_MINION_SPAWN_MAG_TIME"
+	5	"NumOfSpawnDisables"
+locals (0) for 01014D68:
+upvalues (0) for 01014D68:
+
+function <?:846,852> (23 instructions, 92 bytes at 01014E18)
+2 params, 7 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -2	; GetBarracks
+	2	[-]	MOVE     	3 1
+	3	[-]	MOVE     	4 0
+	4	[-]	CALL     	2 3 2
+	5	[-]	SETGLOBAL	2 -1	; cLangBarracks
+	6	[-]	GETGLOBAL	2 -4	; GetLuaBarracks
+	7	[-]	MOVE     	3 1
+	8	[-]	MOVE     	4 0
+	9	[-]	CALL     	2 3 2
+	10	[-]	SETGLOBAL	2 -3	; luaBarrack
+	11	[-]	GETGLOBAL	2 -5	; SetDisableMinionSpawn
+	12	[-]	GETGLOBAL	3 -1	; cLangBarracks
+	13	[-]	GETGLOBAL	4 -6	; GetDisableMinionSpawnTime
+	14	[-]	MOVE     	5 0
+	15	[-]	MOVE     	6 1
+	16	[-]	CALL     	4 3 0
+	17	[-]	CALL     	2 0 1
+	18	[-]	GETGLOBAL	2 -3	; luaBarrack
+	19	[-]	GETGLOBAL	3 -3	; luaBarrack
+	20	[-]	GETTABLE 	3 3 -7	; "NumOfSpawnDisables"
+	21	[-]	ADD      	3 3 -8	; - 1
+	22	[-]	SETTABLE 	2 -7 3	; "NumOfSpawnDisables" -
+	23	[-]	RETURN   	0 1
+constants (8) for 01014E18:
+	1	"cLangBarracks"
+	2	"GetBarracks"
+	3	"luaBarrack"
+	4	"GetLuaBarracks"
+	5	"SetDisableMinionSpawn"
+	6	"GetDisableMinionSpawnTime"
+	7	"NumOfSpawnDisables"
+	8	1
+locals (0) for 01014E18:
+upvalues (0) for 01014E18:
+
+function <?:855,895> (62 instructions, 248 bytes at 01014E70)
+2 params, 18 slots, 0 upvalues, 0 locals, 21 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; BonusesCounter
+	2	[-]	ADD      	2 2 -2	; - 1
+	3	[-]	SETGLOBAL	2 -1	; BonusesCounter
+	4	[-]	LOADK    	2 -2	; 1
+	5	[-]	LOADK    	3 -3	; 3
+	6	[-]	LOADK    	4 -2	; 1
+	7	[-]	FORPREP  	2 53	; to 61
+	8	[-]	LOADNIL  	6 7
+	9	[-]	GETGLOBAL	8 -4	; TEAM_ORDER
+	10	[-]	EQ       	0 0 8
+	11	[-]	JMP      	5	; to 17
+	12	[-]	GETGLOBAL	7 -5	; TEAM_CHAOS
+	13	[-]	GETGLOBAL	6 -6	; OrderBarracksBonuses
+	14	[-]	GETGLOBAL	8 -8	; ChaosBarracksBonuses
+	15	[-]	SETGLOBAL	8 -7	; EnemyBarracks
+	16	[-]	JMP      	4	; to 21
+	17	[-]	GETGLOBAL	7 -4	; TEAM_ORDER
+	18	[-]	GETGLOBAL	6 -8	; ChaosBarracksBonuses
+	19	[-]	GETGLOBAL	8 -6	; OrderBarracksBonuses
+	20	[-]	SETGLOBAL	8 -7	; EnemyBarracks
+	21	[-]	LOADNIL  	8 9
+	22	[-]	GETTABLE 	10 6 5
+	23	[-]	GETTABLE 	10 10 -9	; "MinionInfoTable"
+	24	[-]	GETGLOBAL	11 -10	; pairs
+	25	[-]	MOVE     	12 10
+	26	[-]	CALL     	11 2 4
+	27	[-]	JMP      	16	; to 44
+	28	[-]	GETTABLE 	16 15 -11	; "HPBonus"
+	29	[-]	GETTABLE 	17 15 -12	; "HPInhibitor"
+	30	[-]	ADD      	16 16 17
+	31	[-]	SETTABLE 	15 -11 16	; "HPBonus" -
+	32	[-]	GETTABLE 	16 15 -13	; "DamageBonus"
+	33	[-]	GETTABLE 	17 15 -14	; "DamageInhibitor"
+	34	[-]	ADD      	16 16 17
+	35	[-]	SETTABLE 	15 -13 16	; "DamageBonus" -
+	36	[-]	GETTABLE 	16 15 -15	; "ExpGiven"
+	37	[-]	GETTABLE 	17 15 -16	; "ExpInhibitor"
+	38	[-]	SUB      	16 16 17
+	39	[-]	SETTABLE 	15 -15 16	; "ExpGiven" -
+	40	[-]	GETTABLE 	16 15 -17	; "GoldGiven"
+	41	[-]	GETTABLE 	17 15 -18	; "GoldInhibitor"
+	42	[-]	SUB      	16 16 17
+	43	[-]	SETTABLE 	15 -17 16	; "GoldGiven" -
+	44	[-]	TFORLOOP 	11 2
+	45	[-]	JMP      	-18	; to 28
+	46	[-]	ADD      	11 1 -2	; - 1
+	47	[-]	EQ       	0 5 11
+	48	[-]	JMP      	12	; to 61
+	49	[-]	GETTABLE 	11 6 5
+	50	[-]	SETTABLE 	11 -19 -2	; "WillSpawnSuperMinion" 1
+	51	[-]	GETGLOBAL	11 -4	; TEAM_ORDER
+	52	[-]	EQ       	0 0 11
+	53	[-]	JMP      	4	; to 58
+	54	[-]	GETGLOBAL	11 -20	; totalNumberOfChaosBarracks
+	55	[-]	SUB      	11 11 -2	; - 1
+	56	[-]	SETGLOBAL	11 -20	; totalNumberOfChaosBarracks
+	57	[-]	JMP      	3	; to 61
+	58	[-]	GETGLOBAL	11 -21	; totalNumberOfOrderBarracks
+	59	[-]	SUB      	11 11 -2	; - 1
+	60	[-]	SETGLOBAL	11 -21	; totalNumberOfOrderBarracks
+	61	[-]	FORLOOP  	2 -54	; to 8
+	62	[-]	RETURN   	0 1
+constants (21) for 01014E70:
+	1	"BonusesCounter"
+	2	1
+	3	3
+	4	"TEAM_ORDER"
+	5	"TEAM_CHAOS"
+	6	"OrderBarracksBonuses"
+	7	"EnemyBarracks"
+	8	"ChaosBarracksBonuses"
+	9	"MinionInfoTable"
+	10	"pairs"
+	11	"HPBonus"
+	12	"HPInhibitor"
+	13	"DamageBonus"
+	14	"DamageInhibitor"
+	15	"ExpGiven"
+	16	"ExpInhibitor"
+	17	"GoldGiven"
+	18	"GoldInhibitor"
+	19	"WillSpawnSuperMinion"
+	20	"totalNumberOfChaosBarracks"
+	21	"totalNumberOfOrderBarracks"
+locals (0) for 01014E70:
+upvalues (0) for 01014E70:
+
+function <?:898,958> (116 instructions, 464 bytes at 01014EC8)
+2 params, 23 slots, 0 upvalues, 0 locals, 32 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; ReductionCounter
+	2	[-]	ADD      	2 2 -2	; - 1
+	3	[-]	SETGLOBAL	2 -1	; ReductionCounter
+	4	[-]	LOADK    	2 -2	; 1
+	5	[-]	LOADK    	3 -3	; 3
+	6	[-]	LOADK    	4 -2	; 1
+	7	[-]	FORPREP  	2 107	; to 115
+	8	[-]	LOADNIL  	6 8
+	9	[-]	GETGLOBAL	9 -4	; TEAM_ORDER
+	10	[-]	EQ       	0 0 9
+	11	[-]	JMP      	4	; to 16
+	12	[-]	GETGLOBAL	8 -5	; TEAM_CHAOS
+	13	[-]	GETGLOBAL	6 -6	; OrderBarracksBonuses
+	14	[-]	GETGLOBAL	7 -7	; ChaosBarracksBonuses
+	15	[-]	JMP      	3	; to 19
+	16	[-]	GETGLOBAL	8 -4	; TEAM_ORDER
+	17	[-]	GETGLOBAL	6 -7	; ChaosBarracksBonuses
+	18	[-]	GETGLOBAL	7 -6	; OrderBarracksBonuses
+	19	[-]	LOADNIL  	9 10
+	20	[-]	GETTABLE 	11 6 5
+	21	[-]	GETTABLE 	11 11 -8	; "MinionInfoTable"
+	22	[-]	GETGLOBAL	12 -9	; pairs
+	23	[-]	MOVE     	13 11
+	24	[-]	CALL     	12 2 4
+	25	[-]	JMP      	16	; to 42
+	26	[-]	GETTABLE 	17 16 -10	; "HPBonus"
+	27	[-]	GETTABLE 	18 16 -11	; "HPInhibitor"
+	28	[-]	SUB      	17 17 18
+	29	[-]	SETTABLE 	16 -10 17	; "HPBonus" -
+	30	[-]	GETTABLE 	17 16 -12	; "DamageBonus"
+	31	[-]	GETTABLE 	18 16 -13	; "DamageInhibitor"
+	32	[-]	SUB      	17 17 18
+	33	[-]	SETTABLE 	16 -12 17	; "DamageBonus" -
+	34	[-]	GETTABLE 	17 16 -14	; "ExpGiven"
+	35	[-]	GETTABLE 	18 16 -15	; "ExpInhibitor"
+	36	[-]	ADD      	17 17 18
+	37	[-]	SETTABLE 	16 -14 17	; "ExpGiven" -
+	38	[-]	GETTABLE 	17 16 -16	; "GoldGiven"
+	39	[-]	GETTABLE 	18 16 -17	; "GoldInhibitor"
+	40	[-]	ADD      	17 17 18
+	41	[-]	SETTABLE 	16 -16 17	; "GoldGiven" -
+	42	[-]	TFORLOOP 	12 2
+	43	[-]	JMP      	-18	; to 26
+	44	[-]	LOADNIL  	12 12
+	45	[-]	ADD      	13 1 -2	; - 1
+	46	[-]	EQ       	0 5 13
+	47	[-]	JMP      	14	; to 62
+	48	[-]	GETGLOBAL	13 -4	; TEAM_ORDER
+	49	[-]	EQ       	0 0 13
+	50	[-]	JMP      	5	; to 56
+	51	[-]	GETGLOBAL	13 -18	; totalNumberOfChaosBarracks
+	52	[-]	ADD      	13 13 -2	; - 1
+	53	[-]	SETGLOBAL	13 -18	; totalNumberOfChaosBarracks
+	54	[-]	GETGLOBAL	12 -18	; totalNumberOfChaosBarracks
+	55	[-]	JMP      	4	; to 60
+	56	[-]	GETGLOBAL	13 -19	; totalNumberOfOrderBarracks
+	57	[-]	ADD      	13 13 -2	; - 1
+	58	[-]	SETGLOBAL	13 -19	; totalNumberOfOrderBarracks
+	59	[-]	GETGLOBAL	12 -19	; totalNumberOfOrderBarracks
+	60	[-]	GETTABLE 	13 6 5
+	61	[-]	SETTABLE 	13 -20 -21	; "WillSpawnSuperMinion" 0
+	62	[-]	EQ       	0 12 -3	; - 3
+	63	[-]	JMP      	51	; to 115
+	64	[-]	GETGLOBAL	13 -23	; GetHQ
+	65	[-]	MOVE     	14 8
+	66	[-]	CALL     	13 2 2
+	67	[-]	SETGLOBAL	13 -22	; HQ
+	68	[-]	GETGLOBAL	13 -24	; SetInvulnerable
+	69	[-]	GETGLOBAL	14 -22	; HQ
+	70	[-]	LOADBOOL 	15 1 0
+	71	[-]	CALL     	13 3 1
+	72	[-]	GETGLOBAL	13 -25	; SetTargetable
+	73	[-]	GETGLOBAL	14 -22	; HQ
+	74	[-]	LOADBOOL 	15 0 0
+	75	[-]	CALL     	13 3 1
+	76	[-]	GETGLOBAL	13 -26	; RIGHT_LANE
+	77	[-]	GETGLOBAL	14 -27	; LEFT_LANE
+	78	[-]	LOADK    	15 -2	; 1
+	79	[-]	FORPREP  	13 34	; to 114
+	80	[-]	GETGLOBAL	17 -28	; GetTurret
+	81	[-]	MOVE     	18 8
+	82	[-]	MOVE     	19 16
+	83	[-]	GETGLOBAL	20 -29	; HQ_TOWER1
+	84	[-]	CALL     	17 4 2
+	85	[-]	GETGLOBAL	18 -28	; GetTurret
+	86	[-]	MOVE     	19 8
+	87	[-]	MOVE     	20 16
+	88	[-]	GETGLOBAL	21 -30	; HQ_TOWER2
+	89	[-]	CALL     	18 4 2
+	90	[-]	GETGLOBAL	19 -31	; Nil
+	91	[-]	EQ       	1 17 19
+	92	[-]	JMP      	9	; to 102
+	93	[-]	GETGLOBAL	19 -24	; SetInvulnerable
+	94	[-]	MOVE     	20 17
+	95	[-]	LOADBOOL 	21 1 0
+	96	[-]	CALL     	19 3 1
+	97	[-]	GETGLOBAL	19 -32	; SetNotTargetableToTeam
+	98	[-]	MOVE     	20 17
+	99	[-]	LOADBOOL 	21 1 0
+	100	[-]	MOVE     	22 0
+	101	[-]	CALL     	19 4 1
+	102	[-]	GETGLOBAL	19 -31	; Nil
+	103	[-]	EQ       	1 18 19
+	104	[-]	JMP      	9	; to 114
+	105	[-]	GETGLOBAL	19 -24	; SetInvulnerable
+	106	[-]	MOVE     	20 18
+	107	[-]	LOADBOOL 	21 1 0
+	108	[-]	CALL     	19 3 1
+	109	[-]	GETGLOBAL	19 -32	; SetNotTargetableToTeam
+	110	[-]	MOVE     	20 18
+	111	[-]	LOADBOOL 	21 1 0
+	112	[-]	MOVE     	22 0
+	113	[-]	CALL     	19 4 1
+	114	[-]	FORLOOP  	13 -35	; to 80
+	115	[-]	FORLOOP  	2 -108	; to 8
+	116	[-]	RETURN   	0 1
+constants (32) for 01014EC8:
+	1	"ReductionCounter"
+	2	1
+	3	3
+	4	"TEAM_ORDER"
+	5	"TEAM_CHAOS"
+	6	"OrderBarracksBonuses"
+	7	"ChaosBarracksBonuses"
+	8	"MinionInfoTable"
+	9	"pairs"
+	10	"HPBonus"
+	11	"HPInhibitor"
+	12	"DamageBonus"
+	13	"DamageInhibitor"
+	14	"ExpGiven"
+	15	"ExpInhibitor"
+	16	"GoldGiven"
+	17	"GoldInhibitor"
+	18	"totalNumberOfChaosBarracks"
+	19	"totalNumberOfOrderBarracks"
+	20	"WillSpawnSuperMinion"
+	21	0
+	22	"HQ"
+	23	"GetHQ"
+	24	"SetInvulnerable"
+	25	"SetTargetable"
+	26	"RIGHT_LANE"
+	27	"LEFT_LANE"
+	28	"GetTurret"
+	29	"HQ_TOWER1"
+	30	"HQ_TOWER2"
+	31	"Nil"
+	32	"SetNotTargetableToTeam"
+locals (0) for 01014EC8:
+upvalues (0) for 01014EC8:
+
+function <?:961,976> (25 instructions, 100 bytes at 010150D8)
+2 params, 6 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	3 -1	; ReactiveCounter
+	2	[-]	ADD      	3 3 -2	; - 1
+	3	[-]	SETGLOBAL	3 -1	; ReactiveCounter
+	4	[-]	GETGLOBAL	3 -3	; OppositeTeam
+	5	[-]	MOVE     	4 0
+	6	[-]	CALL     	3 2 2
+	7	[-]	MOVE     	2 3
+	8	[-]	GETGLOBAL	3 -5	; GetDampener
+	9	[-]	MOVE     	4 0
+	10	[-]	MOVE     	5 1
+	11	[-]	CALL     	3 3 2
+	12	[-]	SETGLOBAL	3 -4	; dampener
+	13	[-]	GETGLOBAL	3 -6	; SetInvulnerable
+	14	[-]	GETGLOBAL	4 -4	; dampener
+	15	[-]	LOADBOOL 	5 0 0
+	16	[-]	CALL     	3 3 1
+	17	[-]	GETGLOBAL	3 -7	; SetTargetable
+	18	[-]	GETGLOBAL	4 -4	; dampener
+	19	[-]	LOADBOOL 	5 1 0
+	20	[-]	CALL     	3 3 1
+	21	[-]	GETGLOBAL	3 -8	; ApplyBarracksRespawnReductions
+	22	[-]	MOVE     	4 2
+	23	[-]	MOVE     	5 1
+	24	[-]	CALL     	3 3 1
+	25	[-]	RETURN   	0 1
+constants (8) for 010150D8:
+	1	"ReactiveCounter"
+	2	1
+	3	"OppositeTeam"
+	4	"dampener"
+	5	"GetDampener"
+	6	"SetInvulnerable"
+	7	"SetTargetable"
+	8	"ApplyBarracksRespawnReductions"
+locals (0) for 010150D8:
+upvalues (0) for 010150D8:
+
+function <?:978,998> (26 instructions, 104 bytes at 01015398)
+2 params, 7 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	4 -1	; OppositeTeam
+	2	[-]	MOVE     	5 0
+	3	[-]	CALL     	4 2 2
+	4	[-]	GETGLOBAL	5 -2	; TEAM_ORDER
+	5	[-]	EQ       	0 0 5
+	6	[-]	JMP      	7	; to 14
+	7	[-]	GETGLOBAL	5 -3	; OrderBarracksBonuses
+	8	[-]	ADD      	6 1 -4	; - 1
+	9	[-]	GETTABLE 	2 5 6
+	10	[-]	GETGLOBAL	5 -5	; ChaosBarracksBonuses
+	11	[-]	ADD      	6 1 -4	; - 1
+	12	[-]	GETTABLE 	3 5 6
+	13	[-]	JMP      	9	; to 23
+	14	[-]	GETGLOBAL	5 -6	; TEAM_CHAOS
+	15	[-]	EQ       	0 0 5
+	16	[-]	JMP      	6	; to 23
+	17	[-]	GETGLOBAL	5 -5	; ChaosBarracksBonuses
+	18	[-]	ADD      	6 1 -4	; - 1
+	19	[-]	GETTABLE 	2 5 6
+	20	[-]	GETGLOBAL	5 -3	; OrderBarracksBonuses
+	21	[-]	ADD      	6 1 -4	; - 1
+	22	[-]	GETTABLE 	3 5 6
+	23	[-]	TEST     	3 0 0
+	24	[-]	JMP      	1	; to 26
+	25	[-]	SETTABLE 	3 -7 -8	; "WillSpawnSuperMinion" 0
+	26	[-]	RETURN   	0 1
+constants (8) for 01015398:
+	1	"OppositeTeam"
+	2	"TEAM_ORDER"
+	3	"OrderBarracksBonuses"
+	4	1
+	5	"ChaosBarracksBonuses"
+	6	"TEAM_CHAOS"
+	7	"WillSpawnSuperMinion"
+	8	0
+locals (0) for 01015398:
+upvalues (0) for 01015398:
+
+function <?:1000,1008> (23 instructions, 92 bytes at 01015290)
+1 param, 8 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetTurret
+	2	[-]	GETGLOBAL	2 -2	; TEAM_ORDER
+	3	[-]	LOADK    	3 -3	; 1
+	4	[-]	GETGLOBAL	4 -4	; HQ_TOWER1
+	5	[-]	CALL     	1 4 2
+	6	[-]	EQ       	0 0 -5	; - 0
+	7	[-]	JMP      	8	; to 16
+	8	[-]	GETGLOBAL	2 -6	; ApplyPersistentBuff
+	9	[-]	MOVE     	3 1
+	10	[-]	LOADK    	4 -7	; "DebugMidGameBuff"
+	11	[-]	LOADBOOL 	5 0 0
+	12	[-]	LOADK    	6 -3	; 1
+	13	[-]	LOADK    	7 -3	; 1
+	14	[-]	CALL     	2 6 1
+	15	[-]	JMP      	7	; to 23
+	16	[-]	GETGLOBAL	2 -6	; ApplyPersistentBuff
+	17	[-]	MOVE     	3 1
+	18	[-]	LOADK    	4 -8	; "DebugLateGameBuff"
+	19	[-]	LOADBOOL 	5 0 0
+	20	[-]	LOADK    	6 -3	; 1
+	21	[-]	LOADK    	7 -3	; 1
+	22	[-]	CALL     	2 6 1
+	23	[-]	RETURN   	0 1
+constants (8) for 01015290:
+	1	"GetTurret"
+	2	"TEAM_ORDER"
+	3	1
+	4	"HQ_TOWER1"
+	5	0
+	6	"ApplyPersistentBuff"
+	7	"DebugMidGameBuff"
+	8	"DebugLateGameBuff"
+locals (0) for 01015290:
+upvalues (0) for 01015290:
+
+function <?:1011,1121> (185 instructions, 740 bytes at 01014F20)
+1 param, 8 slots, 0 upvalues, 0 locals, 44 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -2	; GetHQType
+	2	[-]	MOVE     	2 0
+	3	[-]	CALL     	1 2 2
+	4	[-]	SETGLOBAL	1 -1	; HQType
+	5	[-]	GETGLOBAL	1 -1	; HQType
+	6	[-]	GETGLOBAL	2 -3	; ORDER_HQ
+	7	[-]	EQ       	1 1 2
+	8	[-]	JMP      	4	; to 13
+	9	[-]	GETGLOBAL	1 -1	; HQType
+	10	[-]	GETGLOBAL	2 -4	; CHAOS_HQ
+	11	[-]	EQ       	0 1 2
+	12	[-]	JMP      	14	; to 27
+	13	[-]	GETGLOBAL	1 -1	; HQType
+	14	[-]	GETGLOBAL	2 -4	; CHAOS_HQ
+	15	[-]	EQ       	0 1 2
+	16	[-]	JMP      	5	; to 22
+	17	[-]	GETGLOBAL	1 -5	; EndOfGameCeremony
+	18	[-]	GETGLOBAL	2 -6	; TEAM_ORDER
+	19	[-]	MOVE     	3 0
+	20	[-]	CALL     	1 3 1
+	21	[-]	JMP      	4	; to 26
+	22	[-]	GETGLOBAL	1 -5	; EndOfGameCeremony
+	23	[-]	GETGLOBAL	2 -7	; TEAM_CHAOS
+	24	[-]	MOVE     	3 0
+	25	[-]	CALL     	1 3 1
+	26	[-]	RETURN   	0 1
+	27	[-]	GETGLOBAL	1 -8	; IsDampener
+	28	[-]	MOVE     	2 0
+	29	[-]	CALL     	1 2 2
+	30	[-]	TEST     	1 0 0
+	31	[-]	JMP      	92	; to 124
+	32	[-]	GETGLOBAL	1 -10	; GetLinkedBarrack
+	33	[-]	MOVE     	2 0
+	34	[-]	CALL     	1 2 2
+	35	[-]	SETGLOBAL	1 -9	; barrack
+	36	[-]	GETGLOBAL	1 -12	; GetTeamID
+	37	[-]	GETGLOBAL	2 -9	; barrack
+	38	[-]	CALL     	1 2 2
+	39	[-]	SETGLOBAL	1 -11	; barrackTeam
+	40	[-]	GETGLOBAL	1 -14	; GetLane
+	41	[-]	MOVE     	2 0
+	42	[-]	CALL     	1 2 2
+	43	[-]	SETGLOBAL	1 -13	; barrackLane
+	44	[-]	GETGLOBAL	1 -15	; DisableBarracksSpawn
+	45	[-]	GETGLOBAL	2 -13	; barrackLane
+	46	[-]	GETGLOBAL	3 -11	; barrackTeam
+	47	[-]	CALL     	1 3 1
+	48	[-]	GETGLOBAL	1 -16	; SetDampenerState
+	49	[-]	MOVE     	2 0
+	50	[-]	GETGLOBAL	3 -17	; DampenerRegenerationState
+	51	[-]	CALL     	1 3 1
+	52	[-]	GETGLOBAL	1 -18	; SetInvulnerable
+	53	[-]	MOVE     	2 0
+	54	[-]	LOADBOOL 	3 1 0
+	55	[-]	CALL     	1 3 1
+	56	[-]	GETGLOBAL	1 -19	; SetTargetable
+	57	[-]	MOVE     	2 0
+	58	[-]	LOADBOOL 	3 0 0
+	59	[-]	CALL     	1 3 1
+	60	[-]	GETGLOBAL	1 -20	; DisactivatedCounter
+	61	[-]	ADD      	1 1 -21	; - 1
+	62	[-]	SETGLOBAL	1 -20	; DisactivatedCounter
+	63	[-]	GETGLOBAL	1 -22	; GetTurret
+	64	[-]	GETGLOBAL	2 -11	; barrackTeam
+	65	[-]	LOADK    	3 -21	; 1
+	66	[-]	GETGLOBAL	4 -23	; HQ_TOWER1
+	67	[-]	CALL     	1 4 2
+	68	[-]	GETGLOBAL	2 -22	; GetTurret
+	69	[-]	GETGLOBAL	3 -11	; barrackTeam
+	70	[-]	LOADK    	4 -21	; 1
+	71	[-]	GETGLOBAL	5 -24	; HQ_TOWER2
+	72	[-]	CALL     	2 4 2
+	73	[-]	GETGLOBAL	3 -25	; Nil
+	74	[-]	EQ       	1 1 3
+	75	[-]	JMP      	8	; to 84
+	76	[-]	GETGLOBAL	3 -18	; SetInvulnerable
+	77	[-]	MOVE     	4 1
+	78	[-]	LOADBOOL 	5 0 0
+	79	[-]	CALL     	3 3 1
+	80	[-]	GETGLOBAL	3 -19	; SetTargetable
+	81	[-]	MOVE     	4 1
+	82	[-]	LOADBOOL 	5 1 0
+	83	[-]	CALL     	3 3 1
+	84	[-]	GETGLOBAL	3 -25	; Nil
+	85	[-]	EQ       	1 2 3
+	86	[-]	JMP      	8	; to 95
+	87	[-]	GETGLOBAL	3 -18	; SetInvulnerable
+	88	[-]	MOVE     	4 2
+	89	[-]	LOADBOOL 	5 0 0
+	90	[-]	CALL     	3 3 1
+	91	[-]	GETGLOBAL	3 -19	; SetTargetable
+	92	[-]	MOVE     	4 2
+	93	[-]	LOADBOOL 	5 1 0
+	94	[-]	CALL     	3 3 1
+	95	[-]	GETGLOBAL	3 -25	; Nil
+	96	[-]	EQ       	0 1 3
+	97	[-]	JMP      	14	; to 112
+	98	[-]	GETGLOBAL	3 -25	; Nil
+	99	[-]	EQ       	0 2 3
+	100	[-]	JMP      	11	; to 112
+	101	[-]	GETGLOBAL	3 -26	; GetHQ
+	102	[-]	GETGLOBAL	4 -11	; barrackTeam
+	103	[-]	CALL     	3 2 2
+	104	[-]	GETGLOBAL	4 -18	; SetInvulnerable
+	105	[-]	MOVE     	5 3
+	106	[-]	LOADBOOL 	6 0 0
+	107	[-]	CALL     	4 3 1
+	108	[-]	GETGLOBAL	4 -19	; SetTargetable
+	109	[-]	MOVE     	5 3
+	110	[-]	LOADBOOL 	6 1 0
+	111	[-]	CALL     	4 3 1
+	112	[-]	LOADNIL  	3 3
+	113	[-]	GETGLOBAL	4 -11	; barrackTeam
+	114	[-]	GETGLOBAL	5 -7	; TEAM_CHAOS
+	115	[-]	EQ       	0 4 5
+	116	[-]	JMP      	2	; to 119
+	117	[-]	GETGLOBAL	3 -6	; TEAM_ORDER
+	118	[-]	JMP      	1	; to 120
+	119	[-]	GETGLOBAL	3 -7	; TEAM_CHAOS
+	120	[-]	GETGLOBAL	4 -27	; ApplyBarracksDestructionBonuses
+	121	[-]	MOVE     	5 3
+	122	[-]	GETGLOBAL	6 -13	; barrackLane
+	123	[-]	CALL     	4 3 1
+	124	[-]	GETGLOBAL	1 -28	; IsTurretAI
+	125	[-]	MOVE     	2 0
+	126	[-]	CALL     	1 2 2
+	127	[-]	TEST     	1 0 0
+	128	[-]	JMP      	15	; to 144
+	129	[-]	GETGLOBAL	1 -12	; GetTeamID
+	130	[-]	MOVE     	2 0
+	131	[-]	CALL     	1 2 2
+	132	[-]	GETGLOBAL	2 -29	; GetObjectLaneId
+	133	[-]	MOVE     	3 0
+	134	[-]	CALL     	2 2 2
+	135	[-]	GETGLOBAL	3 -30	; GetTurretPosition
+	136	[-]	MOVE     	4 0
+	137	[-]	CALL     	3 2 2
+	138	[-]	GETGLOBAL	4 -31	; DeactivateCorrectStructure
+	139	[-]	MOVE     	5 1
+	140	[-]	MOVE     	6 2
+	141	[-]	MOVE     	7 3
+	142	[-]	CALL     	4 4 1
+	143	[-]	RETURN   	0 1
+	144	[-]	GETGLOBAL	1 -32	; GetDampenerType
+	145	[-]	MOVE     	2 0
+	146	[-]	CALL     	1 2 2
+	147	[-]	LT       	0 -33 1	; -1 -
+	148	[-]	JMP      	31	; to 180
+	149	[-]	LOADK    	2 -34	; 0
+	150	[-]	GETGLOBAL	3 -6	; TEAM_ORDER
+	151	[-]	GETGLOBAL	4 -7	; TEAM_CHAOS
+	152	[-]	GETGLOBAL	5 -7	; TEAM_CHAOS
+	153	[-]	MOD      	5 1 5
+	154	[-]	GETGLOBAL	6 -35	; RIGHT_LANE
+	155	[-]	LE       	0 6 5
+	156	[-]	JMP      	11	; to 168
+	157	[-]	GETGLOBAL	6 -36	; LEFT_LANE
+	158	[-]	LE       	0 5 6
+	159	[-]	JMP      	8	; to 168
+	160	[-]	GETGLOBAL	6 -37	; ChaosBarracksBonuses
+	161	[-]	ADD      	7 5 -21	; - 1
+	162	[-]	GETTABLE 	2 6 7
+	163	[-]	GETGLOBAL	6 -38	; ChaosBuildingStatus
+	164	[-]	ADD      	7 5 -21	; - 1
+	165	[-]	GETTABLE 	6 6 7
+	166	[-]	SETTABLE 	6 -39 -40	; "Barracks" false
+	167	[-]	JMP      	15	; to 183
+	168	[-]	GETGLOBAL	6 -6	; TEAM_ORDER
+	169	[-]	SUB      	5 5 6
+	170	[-]	GETGLOBAL	3 -7	; TEAM_CHAOS
+	171	[-]	GETGLOBAL	4 -6	; TEAM_ORDER
+	172	[-]	GETGLOBAL	6 -41	; OrderBarracksBonuses
+	173	[-]	ADD      	7 5 -21	; - 1
+	174	[-]	GETTABLE 	2 6 7
+	175	[-]	GETGLOBAL	6 -42	; OrderBuildingStatus
+	176	[-]	ADD      	7 5 -21	; - 1
+	177	[-]	GETTABLE 	6 6 7
+	178	[-]	SETTABLE 	6 -39 -40	; "Barracks" false
+	179	[-]	JMP      	3	; to 183
+	180	[-]	GETGLOBAL	2 -43	; Log
+	181	[-]	LOADK    	3 -44	; "Could not find Linking barracks!"
+	182	[-]	CALL     	2 2 1
+	183	[-]	LOADBOOL 	2 1 0
+	184	[-]	RETURN   	2 2
+	185	[-]	RETURN   	0 1
+constants (44) for 01014F20:
+	1	"HQType"
+	2	"GetHQType"
+	3	"ORDER_HQ"
+	4	"CHAOS_HQ"
+	5	"EndOfGameCeremony"
+	6	"TEAM_ORDER"
+	7	"TEAM_CHAOS"
+	8	"IsDampener"
+	9	"barrack"
+	10	"GetLinkedBarrack"
+	11	"barrackTeam"
+	12	"GetTeamID"
+	13	"barrackLane"
+	14	"GetLane"
+	15	"DisableBarracksSpawn"
+	16	"SetDampenerState"
+	17	"DampenerRegenerationState"
+	18	"SetInvulnerable"
+	19	"SetTargetable"
+	20	"DisactivatedCounter"
+	21	1
+	22	"GetTurret"
+	23	"HQ_TOWER1"
+	24	"HQ_TOWER2"
+	25	"Nil"
+	26	"GetHQ"
+	27	"ApplyBarracksDestructionBonuses"
+	28	"IsTurretAI"
+	29	"GetObjectLaneId"
+	30	"GetTurretPosition"
+	31	"DeactivateCorrectStructure"
+	32	"GetDampenerType"
+	33	-1
+	34	0
+	35	"RIGHT_LANE"
+	36	"LEFT_LANE"
+	37	"ChaosBarracksBonuses"
+	38	"ChaosBuildingStatus"
+	39	"Barracks"
+	40	false
+	41	"OrderBarracksBonuses"
+	42	"OrderBuildingStatus"
+	43	"Log"
+	44	"Could not find Linking barracks!"
+locals (0) for 01014F20:
+upvalues (0) for 01014F20:
+
+function <?:1123,1125> (3 instructions, 12 bytes at 01015340)
+0 params, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; 2
+	2	[-]	SETGLOBAL	0 -1	; CANNON_MINION_SPAWN_FREQUENCY
+	3	[-]	RETURN   	0 1
+constants (2) for 01015340:
+	1	"CANNON_MINION_SPAWN_FREQUENCY"
+	2	2
+locals (0) for 01015340:
+upvalues (0) for 01015340:
+
+function <?:1127,1129> (3 instructions, 12 bytes at 010152E8)
+0 params, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; 1
+	2	[-]	SETGLOBAL	0 -1	; CANNON_MINION_SPAWN_FREQUENCY
+	3	[-]	RETURN   	0 1
+constants (2) for 010152E8:
+	1	"CANNON_MINION_SPAWN_FREQUENCY"
+	2	1
+locals (0) for 010152E8:
+upvalues (0) for 010152E8:
+
+function <?:1131,1136> (3 instructions, 12 bytes at 01017F48)
+1 param, 2 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	NEWTABLE 	1 0 0
+	2	[-]	SETGLOBAL	1 -1	; POST_GAME_EVENTS
+	3	[-]	RETURN   	0 1
+constants (1) for 01017F48:
+	1	"POST_GAME_EVENTS"
+locals (0) for 01017F48:
+upvalues (0) for 01017F48:
+
+function <?:1138,1153> (26 instructions, 104 bytes at 01017E40)
+2 params, 12 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETGLOBAL	4 -1	; pairs
+	2	[-]	GETGLOBAL	5 -2	; POST_GAME_EVENTS
+	3	[-]	CALL     	4 2 4
+	4	[-]	JMP      	19	; to 24
+	5	[-]	GETTABLE 	9 8 -3	; "delay"
+	6	[-]	LT       	0 9 0
+	7	[-]	JMP      	16	; to 24
+	8	[-]	GETGLOBAL	9 -4	; ClientSide_CameraMoveCameraFromCurrentPositionToPoint
+	9	[-]	GETTABLE 	10 8 -5	; "cameraLocation"
+	10	[-]	GETTABLE 	11 8 -6	; "travelTime"
+	11	[-]	CALL     	9 3 1
+	12	[-]	GETTABLE 	9 8 -7	; "soundFile"
+	13	[-]	TEST     	9 0 0
+	14	[-]	JMP      	3	; to 18
+	15	[-]	GETGLOBAL	9 -8	; ClientSide_PlaySoundFile
+	16	[-]	GETTABLE 	10 8 -7	; "soundFile"
+	17	[-]	CALL     	9 2 1
+	18	[-]	GETGLOBAL	9 -9	; table
+	19	[-]	GETTABLE 	9 9 -10	; "remove"
+	20	[-]	GETGLOBAL	10 -2	; POST_GAME_EVENTS
+	21	[-]	MOVE     	11 7
+	22	[-]	CALL     	9 3 1
+	23	[-]	JMP      	2	; to 26
+	24	[-]	TFORLOOP 	4 2
+	25	[-]	JMP      	-21	; to 5
+	26	[-]	RETURN   	0 1
+constants (10) for 01017E40:
+	1	"pairs"
+	2	"POST_GAME_EVENTS"
+	3	"delay"
+	4	"ClientSide_CameraMoveCameraFromCurrentPositionToPoint"
+	5	"cameraLocation"
+	6	"travelTime"
+	7	"soundFile"
+	8	"ClientSide_PlaySoundFile"
+	9	"table"
+	10	"remove"
+locals (0) for 01017E40:
+upvalues (0) for 01017E40:

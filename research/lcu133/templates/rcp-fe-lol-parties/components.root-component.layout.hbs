@@ -1,0 +1,41 @@
+{{parties-background selected=selected showingState=showingState isMatchmakingClassName=isMatchmakingClassName}}
+{{parties-ambience selected=selected showingState=showingState}}
+<div class="parties-content">
+  {{#if isShowingParty}}
+    <div class="empty-header-spacer">
+    </>
+  {{/if}}
+  {{#if isCustomUI}}
+    {{#if isShowingParty}}
+      {{parties-header showingState=showingState selected=selected isInQueue=isInQueue queues=queues}}
+    {{/if}}
+    {{custom-game-root selected=selected showingState=showingState showInviteModal="showInviteModal"}}
+  {{else}}
+    {{#if isTFT}}
+      {{tft-lobby showingState=showingState selected=selected showGameSelect="showGameSelect" isInQueue=isInQueue showInviteModal="showInviteModal"}}
+    {{else}}
+      {{#if shouldUsePartiesV2Components}}
+        {{v2-parties-root showingState=showingState selected=selected showGameSelect="showGameSelect" isInQueue=isInQueue showInviteModal="showInviteModal" partiesV2Enabled=partiesV2Enabled}}
+      {{else}}
+        {{parties-root showingState=showingState selected=selected showGameSelect="showGameSelect" isInQueue=isInQueue showInviteModal="showInviteModal" positionSelectorEmberApp=_positionSelectorEmberApp positionSelectorData=_positionSelectorData cachePositionSelector=(action this "cachePositionSelector"}}
+      {{/if}}
+    {{/if}}
+    {{#if isShowingParty}}
+      {{#if shouldUsePartiesV2Components}}
+        {{v2-header showingState=showingState selected=selected isInQueue=isInQueue queues=queues cancelFlow="showGameSelect"}}
+      {{else}}
+        {{parties-header showingState=showingState selected=selected isInQueue=isInQueue queues=queues}}
+      {{/if}}
+    {{/if}}
+  {{/if}}
+  {{game-select-root showingState=showingState selected=selected queues=queues}}
+  {{parties-notifications}}
+  {{#if debugToolsEnabled}}
+    {{parties-debug-tools selected=selected showingState=showingState}}
+  {{/if}}
+</>
+<div style="display: none">
+  <!-- here are some computeds we need in a template somewhere, so they update -->
+  {{customGamesService.gameIdObserver}}
+  {{customGamesService.gameflowPhaseObserver}}
+</>

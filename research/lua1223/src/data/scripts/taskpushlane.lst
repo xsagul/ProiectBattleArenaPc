@@ -1,0 +1,302 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 009B98B0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 16 constants, 7 functions
+	1	[-]	LOADK    	0 -2	; 5625
+	2	[-]	SETGLOBAL	0 -1	; MIN_FOLLOW_DIST_SQ
+	3	[-]	LOADK    	0 -4	; 500
+	4	[-]	SETGLOBAL	0 -3	; MAX_DIST_TO_LANE
+	5	[-]	LOADK    	0 -6	; 22500
+	6	[-]	SETGLOBAL	0 -5	; MIN_FIGHT_DIST_SQ
+	7	[-]	LOADK    	0 -8	; 90000
+	8	[-]	SETGLOBAL	0 -7	; MAX_FIGHT_DIST_SQ
+	9	[-]	LOADBOOL 	0 0 0
+	10	[-]	SETGLOBAL	0 -9	; allBarracksStarted
+	11	[-]	CLOSURE  	0 0	; 009BA288
+	12	[-]	SETGLOBAL	0 -10	; FindNearestFriendlyMinion
+	13	[-]	CLOSURE  	0 1	; 009BC060
+	14	[-]	SETGLOBAL	0 -11	; UpdatePriority
+	15	[-]	CLOSURE  	0 2	; 009B7F98
+	16	[-]	SETGLOBAL	0 -12	; FollowClosestMinion
+	17	[-]	CLOSURE  	0 3	; 009B7FF0
+	18	[-]	SETGLOBAL	0 -13	; BeginTask
+	19	[-]	CLOSURE  	0 4	; 009B8048
+	20	[-]	SETGLOBAL	0 -14	; IsMinionCloseToLane
+	21	[-]	CLOSURE  	0 5	; 009BC570
+	22	[-]	SETGLOBAL	0 -15	; Tick
+	23	[-]	CLOSURE  	0 6	; 009BC690
+	24	[-]	SETGLOBAL	0 -16	; OnTargetLost
+	25	[-]	RETURN   	0 1
+constants (16) for 009B98B0:
+	1	"MIN_FOLLOW_DIST_SQ"
+	2	5625
+	3	"MAX_DIST_TO_LANE"
+	4	500
+	5	"MIN_FIGHT_DIST_SQ"
+	6	22500
+	7	"MAX_FIGHT_DIST_SQ"
+	8	90000
+	9	"allBarracksStarted"
+	10	"FindNearestFriendlyMinion"
+	11	"UpdatePriority"
+	12	"FollowClosestMinion"
+	13	"BeginTask"
+	14	"IsMinionCloseToLane"
+	15	"Tick"
+	16	"OnTargetLost"
+locals (0) for 009B98B0:
+upvalues (0) for 009B98B0:
+
+function <?:17,34> (37 instructions, 148 bytes at 009BA288)
+1 param, 12 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetMinions
+	2	[-]	GETGLOBAL	2 -2	; GetTeam
+	3	[-]	CALL     	2 1 2
+	4	[-]	GETTABLE 	3 0 -3	; "LaneID"
+	5	[-]	CALL     	1 3 2
+	6	[-]	GETGLOBAL	2 -4	; GetMaxTravelDistSquared
+	7	[-]	CALL     	2 1 2
+	8	[-]	LOADNIL  	3 3
+	9	[-]	LOADK    	4 -5	; 1
+	10	[-]	LEN      	5 1
+	11	[-]	LOADK    	6 -5	; 1
+	12	[-]	FORPREP  	4 20	; to 33
+	13	[-]	GETGLOBAL	8 -6	; GetMinionDistanceToLane
+	14	[-]	GETTABLE 	9 1 7
+	15	[-]	CALL     	8 2 2
+	16	[-]	GETGLOBAL	9 -7	; MAX_DIST_TO_LANE
+	17	[-]	LT       	0 8 9
+	18	[-]	JMP      	14	; to 33
+	19	[-]	GETGLOBAL	8 -8	; GetDistSquared
+	20	[-]	GETGLOBAL	9 -9	; GetPos
+	21	[-]	CALL     	9 1 2
+	22	[-]	GETGLOBAL	10 -9	; GetPos
+	23	[-]	GETTABLE 	11 1 7
+	24	[-]	CALL     	10 2 0
+	25	[-]	CALL     	8 0 2
+	26	[-]	GETGLOBAL	9 -10	; MIN_FOLLOW_DIST_SQ
+	27	[-]	LT       	0 9 8
+	28	[-]	JMP      	4	; to 33
+	29	[-]	LT       	0 8 2
+	30	[-]	JMP      	2	; to 33
+	31	[-]	MOVE     	2 8
+	32	[-]	GETTABLE 	3 1 7
+	33	[-]	FORLOOP  	4 -21	; to 13
+	34	[-]	MOVE     	4 3
+	35	[-]	MOVE     	5 2
+	36	[-]	RETURN   	4 3
+	37	[-]	RETURN   	0 1
+constants (10) for 009BA288:
+	1	"GetMinions"
+	2	"GetTeam"
+	3	"LaneID"
+	4	"GetMaxTravelDistSquared"
+	5	1
+	6	"GetMinionDistanceToLane"
+	7	"MAX_DIST_TO_LANE"
+	8	"GetDistSquared"
+	9	"GetPos"
+	10	"MIN_FOLLOW_DIST_SQ"
+locals (0) for 009BA288:
+upvalues (0) for 009BA288:
+
+function <?:36,96> (79 instructions, 316 bytes at 009BC060)
+1 param, 12 slots, 0 upvalues, 0 locals, 22 constants, 0 functions
+	1	[-]	LOADK    	1 -1	; 0.3
+	2	[-]	GETGLOBAL	2 -2	; allBarracksStarted
+	3	[-]	TEST     	2 0 1
+	4	[-]	JMP      	5	; to 10
+	5	[-]	GETGLOBAL	2 -3	; GetAreAllBarracksStarted
+	6	[-]	GETGLOBAL	3 -4	; GetTeam
+	7	[-]	CALL     	3 1 0
+	8	[-]	CALL     	2 0 2
+	9	[-]	SETGLOBAL	2 -2	; allBarracksStarted
+	10	[-]	GETGLOBAL	2 -2	; allBarracksStarted
+	11	[-]	TEST     	2 0 0
+	12	[-]	JMP      	65	; to 78
+	13	[-]	LOADK    	2 -5	; 0
+	14	[-]	GETGLOBAL	3 -6	; GetHeroes
+	15	[-]	GETGLOBAL	4 -4	; GetTeam
+	16	[-]	CALL     	4 1 0
+	17	[-]	CALL     	3 0 2
+	18	[-]	LOADK    	4 -7	; 1
+	19	[-]	LEN      	5 3
+	20	[-]	LOADK    	6 -7	; 1
+	21	[-]	FORPREP  	4 7	; to 29
+	22	[-]	GETGLOBAL	8 -8	; GetActiveTaskName
+	23	[-]	GETTABLE 	9 3 7
+	24	[-]	CALL     	8 2 2
+	25	[-]	GETTABLE 	9 0 -9	; "Name"
+	26	[-]	EQ       	0 8 9
+	27	[-]	JMP      	1	; to 29
+	28	[-]	ADD      	2 2 -7	; - 1
+	29	[-]	FORLOOP  	4 -8	; to 22
+	30	[-]	LOADK    	4 -5	; 0
+	31	[-]	GETGLOBAL	5 -8	; GetActiveTaskName
+	32	[-]	CALL     	5 1 2
+	33	[-]	GETTABLE 	6 0 -9	; "Name"
+	34	[-]	EQ       	0 5 6
+	35	[-]	JMP      	2	; to 38
+	36	[-]	LOADK    	4 -10	; 0.05
+	37	[-]	SUB      	2 2 -7	; - 1
+	38	[-]	LOADK    	5 -5	; 0
+	39	[-]	LEN      	6 3
+	40	[-]	LT       	0 -5 6	; 0 -
+	41	[-]	JMP      	5	; to 47
+	42	[-]	LEN      	6 3
+	43	[-]	SUB      	6 6 2
+	44	[-]	LEN      	7 3
+	45	[-]	DIV      	6 6 7
+	46	[-]	MUL      	5 6 -11	; - 0.04
+	47	[-]	SELF     	6 0 -12	; "FindNearestFriendlyMinion"
+	48	[-]	CALL     	6 2 2
+	49	[-]	TEST     	6 0 0
+	50	[-]	JMP      	25	; to 76
+	51	[-]	GETGLOBAL	7 -13	; GetDist
+	52	[-]	GETGLOBAL	8 -14	; GetPos
+	53	[-]	MOVE     	9 6
+	54	[-]	CALL     	8 2 2
+	55	[-]	GETGLOBAL	9 -14	; GetPos
+	56	[-]	CALL     	9 1 0
+	57	[-]	CALL     	7 0 2
+	58	[-]	GETGLOBAL	8 -15	; math
+	59	[-]	GETTABLE 	8 8 -16	; "sqrt"
+	60	[-]	GETGLOBAL	9 -17	; GetMaxTravelDistSquared
+	61	[-]	CALL     	9 1 0
+	62	[-]	CALL     	8 0 2
+	63	[-]	DIV      	9 7 8
+	64	[-]	SUB      	9 -7 9	; 1 -
+	65	[-]	MUL      	10 1 9
+	66	[-]	MUL      	10 10 -19	; - 0.2
+	67	[-]	ADD      	10 10 -20	; - 0.24
+	68	[-]	ADD      	10 10 5
+	69	[-]	ADD      	10 10 4
+	70	[-]	GETGLOBAL	11 -21	; GetRandomFloatLua
+	71	[-]	CALL     	11 1 2
+	72	[-]	MUL      	11 11 -22	; - 0.03
+	73	[-]	ADD      	10 10 11
+	74	[-]	SETTABLE 	0 -18 10	; "Priority" -
+	75	[-]	JMP      	3	; to 79
+	76	[-]	SETTABLE 	0 -18 -5	; "Priority" 0
+	77	[-]	JMP      	1	; to 79
+	78	[-]	SETTABLE 	0 -18 -5	; "Priority" 0
+	79	[-]	RETURN   	0 1
+constants (22) for 009BC060:
+	1	0.3
+	2	"allBarracksStarted"
+	3	"GetAreAllBarracksStarted"
+	4	"GetTeam"
+	5	0
+	6	"GetHeroes"
+	7	1
+	8	"GetActiveTaskName"
+	9	"Name"
+	10	0.05
+	11	0.04
+	12	"FindNearestFriendlyMinion"
+	13	"GetDist"
+	14	"GetPos"
+	15	"math"
+	16	"sqrt"
+	17	"GetMaxTravelDistSquared"
+	18	"Priority"
+	19	0.2
+	20	0.24
+	21	"GetRandomFloatLua"
+	22	0.03
+locals (0) for 009BC060:
+upvalues (0) for 009BC060:
+
+function <?:99,105> (11 instructions, 44 bytes at 009B7F98)
+1 param, 6 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	SELF     	1 0 -1	; "FindNearestFriendlyMinion"
+	2	[-]	CALL     	1 2 2
+	3	[-]	TEST     	1 0 0
+	4	[-]	JMP      	6	; to 11
+	5	[-]	GETGLOBAL	2 -2	; SetStateAndMove
+	6	[-]	GETGLOBAL	3 -3	; AI_SOFTATTACK
+	7	[-]	GETGLOBAL	4 -4	; GetPos
+	8	[-]	MOVE     	5 1
+	9	[-]	CALL     	4 2 0
+	10	[-]	CALL     	2 0 1
+	11	[-]	RETURN   	0 1
+constants (4) for 009B7F98:
+	1	"FindNearestFriendlyMinion"
+	2	"SetStateAndMove"
+	3	"AI_SOFTATTACK"
+	4	"GetPos"
+locals (0) for 009B7F98:
+upvalues (0) for 009B7F98:
+
+function <?:107,111> (6 instructions, 24 bytes at 009B7FF0)
+1 param, 3 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; TurnOffAutoAttack
+	2	[-]	GETGLOBAL	2 -2	; STOPREASON_TARGET_LOST
+	3	[-]	CALL     	1 2 1
+	4	[-]	SELF     	1 0 -3	; "FollowClosestMinion"
+	5	[-]	CALL     	1 2 1
+	6	[-]	RETURN   	0 1
+constants (3) for 009B7FF0:
+	1	"TurnOffAutoAttack"
+	2	"STOPREASON_TARGET_LOST"
+	3	"FollowClosestMinion"
+locals (0) for 009B7FF0:
+upvalues (0) for 009B7FF0:
+
+function <?:113,117> (10 instructions, 40 bytes at 009B8048)
+2 params, 4 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetMinionDistanceToLane
+	2	[-]	MOVE     	3 1
+	3	[-]	CALL     	2 2 2
+	4	[-]	GETGLOBAL	3 -2	; MAX_DIST_TO_LANE
+	5	[-]	LT       	1 2 3
+	6	[-]	JMP      	1	; to 8
+	7	[-]	LOADBOOL 	3 0 1
+	8	[-]	LOADBOOL 	3 1 0
+	9	[-]	RETURN   	3 2
+	10	[-]	RETURN   	0 1
+constants (2) for 009B8048:
+	1	"GetMinionDistanceToLane"
+	2	"MAX_DIST_TO_LANE"
+locals (0) for 009B8048:
+upvalues (0) for 009B8048:
+
+function <?:119,127> (22 instructions, 88 bytes at 009BC570)
+1 param, 5 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	SELF     	1 0 -1	; "FindNearestFriendlyMinion"
+	2	[-]	CALL     	1 2 3
+	3	[-]	GETGLOBAL	3 -2	; IsMoving
+	4	[-]	CALL     	3 1 2
+	5	[-]	TEST     	3 0 1
+	6	[-]	JMP      	6	; to 13
+	7	[-]	GETGLOBAL	3 -3	; MAX_FIGHT_DIST_SQ
+	8	[-]	LT       	0 3 2
+	9	[-]	JMP      	3	; to 13
+	10	[-]	SELF     	3 0 -4	; "FollowClosestMinion"
+	11	[-]	CALL     	3 2 1
+	12	[-]	JMP      	9	; to 22
+	13	[-]	GETGLOBAL	3 -2	; IsMoving
+	14	[-]	CALL     	3 1 2
+	15	[-]	TEST     	3 0 0
+	16	[-]	JMP      	5	; to 22
+	17	[-]	GETGLOBAL	3 -5	; MIN_FIGHT_DIST_SQ
+	18	[-]	LT       	0 2 3
+	19	[-]	JMP      	2	; to 22
+	20	[-]	GETGLOBAL	3 -6	; StopMove
+	21	[-]	CALL     	3 1 1
+	22	[-]	RETURN   	0 1
+constants (6) for 009BC570:
+	1	"FindNearestFriendlyMinion"
+	2	"IsMoving"
+	3	"MAX_FIGHT_DIST_SQ"
+	4	"FollowClosestMinion"
+	5	"MIN_FIGHT_DIST_SQ"
+	6	"StopMove"
+locals (0) for 009BC570:
+upvalues (0) for 009BC570:
+
+function <?:129,131> (1 instruction, 4 bytes at 009BC690)
+1 param, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 009BC690:
+locals (0) for 009BC690:
+upvalues (0) for 009BC690:

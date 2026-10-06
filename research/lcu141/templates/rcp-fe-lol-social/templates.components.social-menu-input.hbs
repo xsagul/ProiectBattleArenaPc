@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <div class="animation">
+    <div class="input-message">
+      {{saveMessage}}
+    </>
+  </>
+  {{#if showIcon}}
+    <div class="input-icon">
+    </>
+  {{/if}}
+  <form onsubmit={{action this "onSubmit"}}>
+    <lol-uikit-flat-input class="flat-input">
+      <input type="text" class="input social-status-change-input" value={{currentStatusValue}} onblur={{action this "onBlur"}} oninput={{action this "onInput" value="target.value"}} maxlength={{maxLength}} placeholder={{placeholderText}}>
+      </>
+    </>
+  </>
+</>

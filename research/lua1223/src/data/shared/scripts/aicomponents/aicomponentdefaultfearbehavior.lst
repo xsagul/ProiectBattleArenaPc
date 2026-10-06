@@ -1,0 +1,204 @@
+
+main <?:0,0> (34 instructions, 136 bytes at 00949AA0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 8 constants, 5 functions
+	1	[-]	NEWTABLE 	0 0 1
+	2	[-]	SETTABLE 	0 -2 -3	; "TimerCallbackName" "TimerFeared"
+	3	[-]	SETGLOBAL	0 -1	; DefaultFearBehavior
+	4	[-]	GETGLOBAL	0 -4	; RegisterForEvent
+	5	[-]	LOADK    	1 -5	; "ComponentInit"
+	6	[-]	GETGLOBAL	2 -1	; DefaultFearBehavior
+	7	[-]	CALL     	0 3 1
+	8	[-]	GETGLOBAL	0 -4	; RegisterForEvent
+	9	[-]	LOADK    	1 -6	; "OnFearBegin"
+	10	[-]	GETGLOBAL	2 -1	; DefaultFearBehavior
+	11	[-]	CALL     	0 3 1
+	12	[-]	GETGLOBAL	0 -4	; RegisterForEvent
+	13	[-]	LOADK    	1 -7	; "OnFearEnd"
+	14	[-]	GETGLOBAL	2 -1	; DefaultFearBehavior
+	15	[-]	CALL     	0 3 1
+	16	[-]	GETGLOBAL	0 -4	; RegisterForEvent
+	17	[-]	LOADK    	1 -8	; "ComponentHalt"
+	18	[-]	GETGLOBAL	2 -1	; DefaultFearBehavior
+	19	[-]	CALL     	0 3 1
+	20	[-]	GETGLOBAL	0 -1	; DefaultFearBehavior
+	21	[-]	CLOSURE  	1 0	; 00949C10
+	22	[-]	SETTABLE 	0 -5 1	; "ComponentInit" -
+	23	[-]	GETGLOBAL	0 -1	; DefaultFearBehavior
+	24	[-]	CLOSURE  	1 1	; 00949C68
+	25	[-]	SETTABLE 	0 -8 1	; "ComponentHalt" -
+	26	[-]	GETGLOBAL	0 -1	; DefaultFearBehavior
+	27	[-]	CLOSURE  	1 2	; 00949CC0
+	28	[-]	SETTABLE 	0 -6 1	; "OnFearBegin" -
+	29	[-]	GETGLOBAL	0 -1	; DefaultFearBehavior
+	30	[-]	CLOSURE  	1 3	; 009480A8
+	31	[-]	SETTABLE 	0 -7 1	; "OnFearEnd" -
+	32	[-]	CLOSURE  	0 4	; 00948170
+	33	[-]	SETGLOBAL	0 -3	; TimerFeared
+	34	[-]	RETURN   	0 1
+constants (8) for 00949AA0:
+	1	"DefaultFearBehavior"
+	2	"TimerCallbackName"
+	3	"TimerFeared"
+	4	"RegisterForEvent"
+	5	"ComponentInit"
+	6	"OnFearBegin"
+	7	"OnFearEnd"
+	8	"ComponentHalt"
+locals (0) for 00949AA0:
+upvalues (0) for 00949AA0:
+
+function <?:11,14> (9 instructions, 36 bytes at 00949C10)
+1 param, 5 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; InitTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	LOADK    	3 -3	; 0.5
+	4	[-]	LOADBOOL 	4 1 0
+	5	[-]	CALL     	1 4 1
+	6	[-]	GETGLOBAL	1 -4	; StopTimer
+	7	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	8	[-]	CALL     	1 2 1
+	9	[-]	RETURN   	0 1
+constants (4) for 00949C10:
+	1	"InitTimer"
+	2	"TimerCallbackName"
+	3	0.5
+	4	"StopTimer"
+locals (0) for 00949C10:
+upvalues (0) for 00949C10:
+
+function <?:16,18> (4 instructions, 16 bytes at 00949C68)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; StopTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	CALL     	1 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 00949C68:
+	1	"StopTimer"
+	2	"TimerCallbackName"
+locals (0) for 00949C68:
+upvalues (0) for 00949C68:
+
+function <?:20,34> (26 instructions, 104 bytes at 00949CC0)
+1 param, 5 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetState
+	2	[-]	CALL     	1 1 2
+	3	[-]	GETGLOBAL	2 -2	; AI_HALTED
+	4	[-]	EQ       	0 1 2
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	2 -4	; MakeWanderPoint
+	8	[-]	GETGLOBAL	3 -5	; GetFearLeashPoint
+	9	[-]	CALL     	3 1 2
+	10	[-]	GETGLOBAL	4 -6	; FEAR_WANDER_DISTANCE
+	11	[-]	CALL     	2 3 2
+	12	[-]	SETGLOBAL	2 -3	; wanderPoint
+	13	[-]	GETGLOBAL	2 -7	; SetStateAndMove
+	14	[-]	GETGLOBAL	3 -8	; AI_FEARED
+	15	[-]	GETGLOBAL	4 -3	; wanderPoint
+	16	[-]	CALL     	2 3 1
+	17	[-]	GETGLOBAL	2 -9	; SetRoamState
+	18	[-]	GETGLOBAL	3 -10	; RUN_IN_FEAR
+	19	[-]	CALL     	2 2 1
+	20	[-]	GETGLOBAL	2 -11	; TurnOffAutoAttack
+	21	[-]	GETGLOBAL	3 -12	; STOPREASON_IMMEDIATELY
+	22	[-]	CALL     	2 2 1
+	23	[-]	GETGLOBAL	2 -13	; ResetAndStartTimer
+	24	[-]	GETTABLE 	3 0 -14	; "TimerCallbackName"
+	25	[-]	CALL     	2 2 1
+	26	[-]	RETURN   	0 1
+constants (14) for 00949CC0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"wanderPoint"
+	4	"MakeWanderPoint"
+	5	"GetFearLeashPoint"
+	6	"FEAR_WANDER_DISTANCE"
+	7	"SetStateAndMove"
+	8	"AI_FEARED"
+	9	"SetRoamState"
+	10	"RUN_IN_FEAR"
+	11	"TurnOffAutoAttack"
+	12	"STOPREASON_IMMEDIATELY"
+	13	"ResetAndStartTimer"
+	14	"TimerCallbackName"
+locals (0) for 00949CC0:
+upvalues (0) for 00949CC0:
+
+function <?:36,55> (25 instructions, 100 bytes at 009480A8)
+1 param, 4 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetState
+	2	[-]	CALL     	1 1 2
+	3	[-]	GETGLOBAL	2 -2	; AI_HALTED
+	4	[-]	EQ       	0 1 2
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	2 -3	; GetThis
+	8	[-]	CALL     	2 1 2
+	9	[-]	EQ       	0 2 -4	; - nil
+	10	[-]	JMP      	1	; to 12
+	11	[-]	RETURN   	0 1
+	12	[-]	GETGLOBAL	2 -5	; StopTimer
+	13	[-]	GETTABLE 	3 0 -6	; "TimerCallbackName"
+	14	[-]	CALL     	2 2 1
+	15	[-]	GETGLOBAL	2 -7	; SetRoamState
+	16	[-]	GETGLOBAL	3 -8	; HOSTILE
+	17	[-]	CALL     	2 2 1
+	18	[-]	GETGLOBAL	2 -9	; NetSetState
+	19	[-]	GETGLOBAL	3 -10	; AI_ATTACK
+	20	[-]	CALL     	2 2 1
+	21	[-]	GETGLOBAL	2 -11	; TimerRetreat
+	22	[-]	CALL     	2 1 1
+	23	[-]	GETGLOBAL	2 -12	; TimerAttack
+	24	[-]	CALL     	2 1 1
+	25	[-]	RETURN   	0 1
+constants (12) for 009480A8:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"GetThis"
+	4	nil
+	5	"StopTimer"
+	6	"TimerCallbackName"
+	7	"SetRoamState"
+	8	"HOSTILE"
+	9	"NetSetState"
+	10	"AI_ATTACK"
+	11	"TimerRetreat"
+	12	"TimerAttack"
+locals (0) for 009480A8:
+upvalues (0) for 009480A8:
+
+function <?:58,70> (20 instructions, 80 bytes at 00948170)
+0 params, 4 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; MakeWanderPoint
+	8	[-]	GETGLOBAL	2 -5	; GetFearLeashPoint
+	9	[-]	CALL     	2 1 2
+	10	[-]	GETGLOBAL	3 -6	; FEAR_WANDER_DISTANCE
+	11	[-]	CALL     	1 3 2
+	12	[-]	SETGLOBAL	1 -3	; wanderPoint
+	13	[-]	GETGLOBAL	1 -7	; SetRoamState
+	14	[-]	GETGLOBAL	2 -8	; RUN_IN_FEAR
+	15	[-]	CALL     	1 2 1
+	16	[-]	GETGLOBAL	1 -9	; SetStateAndMove
+	17	[-]	GETGLOBAL	2 -10	; AI_FEARED
+	18	[-]	GETGLOBAL	3 -3	; wanderPoint
+	19	[-]	CALL     	1 3 1
+	20	[-]	RETURN   	0 1
+constants (10) for 00948170:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"wanderPoint"
+	4	"MakeWanderPoint"
+	5	"GetFearLeashPoint"
+	6	"FEAR_WANDER_DISTANCE"
+	7	"SetRoamState"
+	8	"RUN_IN_FEAR"
+	9	"SetStateAndMove"
+	10	"AI_FEARED"
+locals (0) for 00948170:
+upvalues (0) for 00948170:

@@ -1,0 +1,68 @@
+{
+  "name": "VfxChildParticleSetDefinitionData",
+  "hash": "0xb520045a",
+  "interface": false,
+  "value": true,
+  "bases": [],
+  "since": null,
+  "removedIn": null,
+  "properties": [
+    {
+      "name": "ParentInheritanceDefinition",
+      "hash": "0xdc65f8fe",
+      "ft": "Pointer",
+      "kt": null,
+      "vt": null,
+      "kh": "0x12ab5c27",
+      "khName": "VfxParentInheritanceParams",
+      "khKind": "class",
+      "defaultValue": "null"
+    },
+    {
+      "name": "boneToSpawnAt",
+      "hash": "0x64fe08ec",
+      "ft": "List",
+      "kt": null,
+      "vt": "String",
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "[]"
+    },
+    {
+      "name": "childEmitOnDeath",
+      "hash": "0xc35d9c0f",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "false"
+    },
+    {
+      "name": "childrenIdentifiers",
+      "hash": "0x663f55e6",
+      "ft": "List",
+      "kt": null,
+      "vt": "Embed",
+      "kh": "0x969aee94",
+      "khName": "VfxChildIdentifier",
+      "khKind": "class",
+      "defaultValue": "[]"
+    },
+    {
+      "name": "childrenProbability",
+      "hash": "0xf1d201d5",
+      "ft": "Embed",
+      "kt": null,
+      "vt": null,
+      "kh": "0x04300058",
+      "khName": "ValueFloat",
+      "khKind": "class",
+      "defaultValue": "{\"constantValue\":0,\"dynamics\":null}"
+    }
+  ],
+  "ancestorLevels": [],
+  "descendantTree": []
+}

@@ -1,0 +1,44 @@
+<div class="identity-customizer-subheader">
+  <div class="search-filter-container">
+    <lol-uikit-flat-input>
+      {{input type="search" maxlength="50" class="search-filter-input" value=searchFilter placeholder=tra.challenges_search_placeholder}}
+    </>
+  </>
+  <lol-uikit-framed-dropdown class="icon-grouping-options">
+    {{#if canGroupByAll}}
+      <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{isGroupByAll}} onclick={{action this "dropdownSelect" "all"}}>
+        {{tra.identity_customizer_grouping_all}}
+      </>
+    {{/if}}
+    {{#if canGroupBySet}}
+      <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{isGroupBySet}} onclick={{action this "dropdownSelect" "set"}}>
+        {{tra.identity_customizer_grouping_set}}
+      </>
+    {{/if}}
+    {{#if canGroupByEsports}}
+      <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{isGroupByEsports}} onclick={{action this "dropdownSelect" "esports"}}>
+        {{tra.identity_customizer_grouping_esports}}
+      </>
+    {{/if}}
+    {{#if canGroupByTier}}
+      <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{isGroupByTier}} onclick={{action this "dropdownSelect" "tier"}}>
+        {{tra.identity_customizer_grouping_tier}}
+      </>
+    {{/if}}
+  </>
+</>
+<div class="identity-customizer-grid">
+  {{#if emptySearch}}
+    {{identity-customizer-empty-search clearSearch=(action this "clearSearch"}}
+  {{else}}
+    {{#ember-collection class="item-grid-scrollable" items=groupedSummonerIcons cell-layout=(mixed-grid-layout itemSizes) as |icon index|}}
+      {{#if icon.isHeader}}
+        <div class="identity-customizer-icon-header">
+          {{icon.groupName}}
+        </>
+      {{else}}
+        {{identity-customizer-icon icon=icon selectedIconId=selectedIconId shouldShowLegacyInfo=shouldShowLegacyInfo lastIconsVisitTime=lastIconsVisitTime selectIcon=(action this "selectIcon"}}
+      {{/if}}
+    {{/ember-collection}}
+  {{/if}}
+</>

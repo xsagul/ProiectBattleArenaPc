@@ -1,0 +1,15 @@
+<div class="open-party-toggle-wrapper" class="{{partyType}} {{if showPartyOpen "right"}} {{if disabled "disabled"}}">
+  <div class="toggle-container animated {{if isToggleAnimating "is-animating"}} " onclick={{action this "toggle"}}>
+    <div class="open">
+    </>
+    <div class="toggle-button animated">
+    </>
+  </>
+  {{#uikit-tooltip tooltipPosition="bottom" type="system"}}
+    <lol-uikit-content-block type="tooltip-small">
+      <p>
+        {{openPartyToggleTooltip}}
+      </>
+    </>
+  {{/uikit-tooltip}}
+</>

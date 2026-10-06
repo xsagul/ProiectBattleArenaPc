@@ -1,0 +1,81 @@
+<div class="step-container">
+  <h2 class="step-heading">
+    {{tra.account_verification_token_entry_heading}}
+    {{tra.account_verification_step_heading}}
+    {{#if isPasswordEntryActive}}
+      3
+    {{else}}
+      2
+    {{/if}}
+    {{tra.account_verification_of_heading}}
+    {{#if isPasswordEntryActive}}
+      3
+    {{else}}
+      2
+    {{/if}}
+  </>
+  <p class="step-body">
+    {{sanitize tra.account_verification_token_entry_body}}
+  </>
+  <h3 class="field-title">
+    {{tra.account_verification_token_entry_field_title}}
+  </>
+  <lol-uikit-flat-input class="{{if isTokenValid "" "field-error"}}{{if isTokenNotExpired "" "field-error"}}">
+    {{input type="text" class="field centered" value=token key-press="restrictField" insert-newline="tokenEntered" maxlength="6" placeholder=tra.account_verification_token_placeholder}}
+  </>
+  <div class="avs-replay-button">
+    <div class="avs-replay-button-container">
+      <div id="avs-replay-button-preload">
+      </>
+      <span draggable="false" class="avs-replay-button-img resend-button {{if canResend "enabled" "disabled"}}" {{action this (if canResend "resendToken" "")}}>
+      </>
+    </>
+  </>
+  <h3 class="expire-title">
+    {{tra.account_verification_token_entry_expire_title}}
+    <b class="time-left">
+    </>
+  </>
+  {{#unless isKrEnabled}}
+    {{#if isTokenValid}}
+      {{#if isTokenNotExpired}}
+        <p class="field-desc">
+          {{tra.account_verification_token_entry_field_desc}}
+        </>
+        {{#if formattedPhoneNumber}}
+          <img style="float: left; width: 32px; height: 32px; padding-left: 125px;" src="/fe/lol-static-assets/images/country-flags/{{selectedCountry}}.png">
+          </>
+          <p class="formatted-phone-number">
+            {{formattedPhoneNumber}}
+          </>
+        {{else}}
+          <p class="formatted-phone-number">
+            {{phoneNumber}}
+          </>
+        {{/if}}
+      {{/if}}
+    {{/if}}
+  {{/unless}}
+  {{#unless isTokenValid}}
+    {{#if isTokenNotExpired}}
+      <p class="field-desc field-error-text">
+        {{tra.account_verification_token_entry_not_valid_error}}
+      </>
+    {{/if}}
+  {{/unless}}
+  {{#unless isTokenNotExpired}}
+    {{#if isTokenValid}}
+      <p class="field-desc field-error-text">
+        {{tra.account_verification_token_entry_expired_error}}
+      </>
+    {{/if}}
+  {{/unless}}
+  <lol-uikit-flat-button-group class="step-buttons" type="dialog-frame">
+    <lol-uikit-flat-button class="submit-button" onclick={{action this "postToken"}}>
+      {{tra.account_verification_submit_button}}
+    </>
+    <lol-uikit-flat-button class="iconic-buttons previous-button" onclick={{action this "returnToPreviousScreen"}} disabled="">
+      {{tra.account_verification_back_button}}
+    </>
+  </>
+</>

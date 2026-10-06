@@ -1,0 +1,7 @@
+{{flyout-selector-trigger-button selectedItem=spell1 summonerConfig=summonerConfig toggleFlyout=(action this "toggleFlyout") disabled=disabled temporarilyDisabled=requestInProgress didUserChangeItem=didUserChangeItem afterUserChangedItemAnimation=(action this "afterUserChangedItemAnimation"}}
+{{flyout-selector-trigger-button selectedItem=spell2 summonerConfig=summonerConfig toggleFlyout=(action this "toggleFlyout") disabled=disabled temporarilyDisabled=requestInProgress didUserChangeItem=didUserChangeItem afterUserChangedItemAnimation=(action this "afterUserChangedItemAnimation"}}
+<lc-flyout open={{isFlyoutOpen}} onHide={{action this "toggleFlyout"}} didShow={{action this "repositionCaret"}} uiKitOptionOverrides={{flyoutOptions}}>
+  <lc-flyout-content>
+    {{summoner-spell-popup spells=filteredSpells hoveredSpell=hoveredSpell targetedSpell=targetedSpell onFlyoutSpellSelected=(action this "onFlyoutSpellSelected"}}
+  </>
+</>

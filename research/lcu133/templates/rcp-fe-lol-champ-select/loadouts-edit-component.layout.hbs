@@ -1,0 +1,29 @@
+<div class="loadout-edit-controls">
+  {{#if showPerksSelectionControls}}
+    <div class="loadout-edit-controls-row">
+      {{#if showRuneRecommenderButton}}
+        {{rune-recommender-button isDisabled=isRuneRecommenderButtonDisabled disabledTooltipText=runeRecommenderButtonDisabledText handleClick="showRuneRecommender" timedTooltipText=tra.rune_recommender_tutorial_tooltip shouldShowTimedTooltip=showRuneRecommenderTutorialTooltip acknowledgeTutorialTooltip=(action this "acknowledgeTutorialTooltip" "runeRecommenderTutorialTipSeen"}}
+      {{/if}}
+      {{framed-icon-button disabled=isPerkSelectionDisabled iconPath="/fe/lol-champ-select/images/config/edit-perks-button.png" clickSfxPath="/fe/lol-champ-select/sounds/sfx-uikit-edit-click.ogg" onButtonClick=(action this "showPerksModal"}}
+      <div class="dropdowns">
+        <div class="perks-dropdowns">
+          {{perks-page-dropdown perksPages=perksPages perksSettings=perksSettings currentPerksPage=currentPerksPage timer=timer isPerkSelectionUnlocked=isPerkSelectionUnlocked showPerksSelectionControls=showPerksSelectionControls disabled=isPerkSelectionDisabled localSummonerLevel=localSummonerLevel tutorial=perksTutorialSettings jmxSettings=jmxSettings recordDidRequestSucceed=recordDidRequestSucceed}}
+        </>
+      </>
+    </>
+  {{/if}}
+</>
+{{summoner-spell-select spells=availableSpells spell1=currentSummoner.spell1 spell2=currentSummoner.spell2 disabled=isUILockedForGameStart uxSettings=uxSettings queue=queue currentSummoner=currentSummoner timer=timer showPositionAssignment=showPositionAssignment assignedPosition=currentSummoner.assignedPosition perPositionRequiredSummonerSpells=perPositionRequiredSummonerSpells perPositionDisallowedSummonerSpells=perPositionDisallowedSummonerSpells recordDidRequestSucceed=recordDidRequestSucceed}}
+<div class="loadoutsSpacer">
+</>
+{{#if showWardSkinSelector}}
+  {{ward-skin-select wardSkins=wardSkins selectedWardSkin=selectedWardSkin disabled=isWardSkinSelectionDisabled isDonePicking=currentSummoner.isDonePicking map=map uxSettings=uxSettings useLoadouts=jmxSettings.WardSkinConfig.UseLoadouts accountLoadout=accountLoadout recordDidRequestSucceed=recordDidRequestSucceed}}
+{{else}}
+  {{#if isCompanionsEnabled}}
+    <lol-parties-cosmetics-picker type="companions" set-name="default" orientation="top" show-none="">
+    </>
+  {{/if}}
+{{/if}}
+<div class="emotes-visibility-wrapper {{if shouldShowEmoteButton "visible" "removed"}}">
+  {{emotes-edit isDonePicking=currentSummoner.isDonePicking lockedAtEndOfChampSelect=isUILockedForGameStart wardSkinsAvailable=showWardSkinSelector}}
+</>

@@ -1,0 +1,27 @@
+{{identity-and-parties}}
+{{#if chatAndFriendsInitializing}}
+  <div class="roster inprogress centered social-ember-fade-in" animate="fade">
+    <div class="spinner">
+    </>
+  </>
+{{else}}
+  {{#if chatSessionSessionStateDisconnected}}
+    <div class="roster disconnected centered social-ember-fade-in">
+      <div class="message">
+        {{tra.system_message_disconnected}}
+      </>
+    </>
+  {{else}}
+    <div class="lol-social-lower-pane-container">
+      {{actions-bar}}
+      <lol-social-roster class="roster social-ember-fade-in">
+      </>
+    </>
+  {{/if}}
+{{/if}}
+{{#each friendHovercardsService.friendNodes as |packet|}}
+  {{hovercard-component key="puuid" summonerId=packet.summonerId friendId=packet.puuid targetDomNode=packet.domNode options=packet.options openPartyDescription=packet.openPartyDescription}}
+{{/each}}
+{{#each hovercards as |packet|}}
+  {{hovercard-component key="uuid" summonerId=packet.summonerId targetDomNode=packet.domNode options=packet.options}}
+{{/each}}

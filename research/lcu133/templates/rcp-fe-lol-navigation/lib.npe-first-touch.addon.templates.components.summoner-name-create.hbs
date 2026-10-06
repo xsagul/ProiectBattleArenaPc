@@ -1,0 +1,63 @@
+<div class="first-touch-summoner-name-creation-container">
+  <div class="first-touch-summoner-name-creation-header">
+    {{wait-for-resolved-string headerString}}
+  </>
+  <div class="first-touch-summoner-name-creation-wrapper">
+    <div class="first-touch-summoner-name-creation-content">
+      <div class="first-touch-summoner-name-creation-subheader {{subheaderClass}}">
+        {{sanitize subheaderString}}
+      </>
+      <form {{action this (if disableRegisterButton (action this (mut undefProp)) "createSummonerName") on="submit"}}>
+        <lol-uikit-flat-input>
+          <input value={{nameInput}} type="text" maxlength="30" class="first-touch-summoner-name-creation-input" placeholder={{placeholderString}} onfocus={{action this "setInputFocus" true}} onblur={{action this "setInputFocus" false}} oninput={{action this "startWaitTime" value="target.value"}}>
+          </>
+        </>
+      </>
+      <div class="fade-in-parent {{inputIconClass}}">
+        <div class="error-icon">
+        </>
+        <div class="confirmed-icon">
+        </>
+        <div class="unavailable-icon">
+        </>
+        {{uikit-spinner class="loading"}}
+        <div class="char-counter {{if showRedCounter "negative-char"}}">
+          {{charRemainingCounter}}
+        </>
+        <lol-uikit-close-button refresh="" class="retry-button" onclick={{action this "retryCheckingNameAvailability"}}>
+        </>
+      </>
+      <div class="first-touch-summoner-name-creation-error {{if shouldShowErrorMessage "fade-in-error-messages"}}">
+        {{#if failsRestrictedWordCheck}}
+          {{wait-for-resolved-string tra.summoner_create_name_error_restricted_words}}
+        {{else}}
+          {{#if failsInvalidCharCheck}}
+            {{wait-for-resolved-string invalidCharacterErrorMessage}}
+          {{else}}
+            {{#if failsLengthCharacterCheck}}
+              {{wait-for-resolved-string tra.summoner_create_name_error_character_length}}
+            {{else}}
+              {{#if showNameUnavailableWarning}}
+                <span class="error-name-taken">
+                  {{wait-for-resolved-string tra.summoner_create_name_taken_error}}
+                </>
+              {{else}}
+                {{#if isNameAvailabilityRequestError}}
+                  <span class="request-error-name-availability">
+                    {{wait-for-resolved-string tra.summoner_create_name_request_error}}
+                  </>
+                {{/if}}
+              {{/if}}
+            {{/if}}
+          {{/if}}
+        {{/if}}
+      </>
+    </>
+  </>
+  <div class="footer-container">
+    <div class="request-error-submit {{if isFormSubmitRequestErrorMessage "fade-in-error-messages"}}">
+      {{wait-for-resolved-string tra.summoner_create_name_request_error_name_unavailable}}
+    </>
+    {{arrow-footer removeCloseButton=true confirmButtonText=buttonString confirmButtonHoverSound=startNowButtonSound.onHover confirmButtonClickSound=startNowButtonSound.onClick confirmButtonDisabled=disableRegisterButton confirmButtonClicked="createSummonerName"}}
+  </>
+</>

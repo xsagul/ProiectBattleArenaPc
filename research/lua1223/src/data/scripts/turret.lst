@@ -1,0 +1,379 @@
+
+main <?:0,0> (46 instructions, 184 bytes at 0088BF90)
+0+ params, 21 slots, 0 upvalues, 0 locals, 34 constants, 9 functions
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "ObjectTags"
+	3	[-]	CALL     	0 2 1
+	4	[-]	CLOSURE  	0 0	; 00887F30
+	5	[-]	SETGLOBAL	0 -3	; OnInit
+	6	[-]	NEWTABLE 	0 18 1
+	7	[-]	SETTABLE 	0 -5 -6	; 0 "AI_IDLE"
+	8	[-]	LOADK    	1 -7	; "AI_SOFTATTACK"
+	9	[-]	LOADK    	2 -8	; "AI_HARDATTACK"
+	10	[-]	LOADK    	3 -9	; "AI_ATTACKMOVESTATE"
+	11	[-]	LOADK    	4 -10	; "AI_STANDING"
+	12	[-]	LOADK    	5 -11	; "AI_MOVE"
+	13	[-]	LOADK    	6 -12	; "AI_GUARD"
+	14	[-]	LOADK    	7 -13	; "AI_ATTACK"
+	15	[-]	LOADK    	8 -14	; "AI_RETREAT"
+	16	[-]	LOADK    	9 -15	; "AI_HARDIDLE"
+	17	[-]	LOADK    	10 -16	; "AI_HARDIDLE_ATTACKING"
+	18	[-]	LOADK    	11 -17	; "AI_TAUNTED"
+	19	[-]	LOADK    	12 -18	; "AI_BERSERK"
+	20	[-]	LOADK    	13 -19	; "AI_ATTACKMOVE_ATTACKING"
+	21	[-]	LOADK    	14 -20	; "AI_FEARED"
+	22	[-]	LOADK    	15 -21	; "AI_CHARMED"
+	23	[-]	LOADK    	16 -22	; "AI_FLEEING"
+	24	[-]	LOADK    	17 -23	; "AI_ATTACK_GOING_TO_LAST_KNOWN_LOCATION"
+	25	[-]	LOADK    	18 -24	; "AI_HALTED"
+	26	[-]	LOADK    	19 -25	; "AI_SIEGEATTACK"
+	27	[-]	LOADK    	20 -26	; "AI_LAST_NONPET_AI_STATE"
+	28	[-]	SETLIST  	0 20 1	; 1
+	29	[-]	SETGLOBAL	0 -4	; DEBUG_MINION_STATE_TABLE
+	30	[-]	CLOSURE  	0 1	; 00887F88
+	31	[-]	SETGLOBAL	0 -27	; OnTargetLost
+	32	[-]	CLOSURE  	0 2	; 00887FE0
+	33	[-]	SETGLOBAL	0 -28	; OnCallForHelp
+	34	[-]	CLOSURE  	0 3	; 0088A0A8
+	35	[-]	SETGLOBAL	0 -29	; OnReceiveImportantCallForHelp
+	36	[-]	CLOSURE  	0 4	; 0088A100
+	37	[-]	SETGLOBAL	0 -30	; OnTauntBegin
+	38	[-]	CLOSURE  	0 5	; 0088A238
+	39	[-]	SETGLOBAL	0 -31	; OnTauntEnd
+	40	[-]	CLOSURE  	0 6	; 0088CFF8
+	41	[-]	SETGLOBAL	0 -32	; OnCanMove
+	42	[-]	CLOSURE  	0 7	; 0088D050
+	43	[-]	SETGLOBAL	0 -33	; OnCanAttack
+	44	[-]	CLOSURE  	0 8	; 0088D0A8
+	45	[-]	SETGLOBAL	0 -34	; HaltAI
+	46	[-]	RETURN   	0 1
+constants (34) for 0088BF90:
+	1	"DoLuaShared"
+	2	"ObjectTags"
+	3	"OnInit"
+	4	"DEBUG_MINION_STATE_TABLE"
+	5	0
+	6	"AI_IDLE"
+	7	"AI_SOFTATTACK"
+	8	"AI_HARDATTACK"
+	9	"AI_ATTACKMOVESTATE"
+	10	"AI_STANDING"
+	11	"AI_MOVE"
+	12	"AI_GUARD"
+	13	"AI_ATTACK"
+	14	"AI_RETREAT"
+	15	"AI_HARDIDLE"
+	16	"AI_HARDIDLE_ATTACKING"
+	17	"AI_TAUNTED"
+	18	"AI_BERSERK"
+	19	"AI_ATTACKMOVE_ATTACKING"
+	20	"AI_FEARED"
+	21	"AI_CHARMED"
+	22	"AI_FLEEING"
+	23	"AI_ATTACK_GOING_TO_LAST_KNOWN_LOCATION"
+	24	"AI_HALTED"
+	25	"AI_SIEGEATTACK"
+	26	"AI_LAST_NONPET_AI_STATE"
+	27	"OnTargetLost"
+	28	"OnCallForHelp"
+	29	"OnReceiveImportantCallForHelp"
+	30	"OnTauntBegin"
+	31	"OnTauntEnd"
+	32	"OnCanMove"
+	33	"OnCanAttack"
+	34	"HaltAI"
+locals (0) for 0088BF90:
+upvalues (0) for 0088BF90:
+
+function <?:3,6> (6 instructions, 24 bytes at 00887F30)
+0 params, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SetState
+	2	[-]	GETGLOBAL	1 -2	; AI_HARDIDLE
+	3	[-]	CALL     	0 2 1
+	4	[-]	LOADBOOL 	0 0 0
+	5	[-]	RETURN   	0 2
+	6	[-]	RETURN   	0 1
+constants (2) for 00887F30:
+	1	"SetState"
+	2	"AI_HARDIDLE"
+locals (0) for 00887F30:
+upvalues (0) for 00887F30:
+
+function <?:34,70> (56 instructions, 224 bytes at 00887F88)
+2 params, 7 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetState
+	2	[-]	CALL     	2 1 2
+	3	[-]	GETGLOBAL	3 -2	; AI_HALTED
+	4	[-]	EQ       	0 2 3
+	5	[-]	JMP      	2	; to 8
+	6	[-]	LOADBOOL 	3 0 0
+	7	[-]	RETURN   	3 2
+	8	[-]	GETGLOBAL	3 -4	; FindTargetInAcRWithFilter
+	9	[-]	LOADK    	4 -5	; 0
+	10	[-]	NEWTABLE 	5 1 0
+	11	[-]	GETGLOBAL	6 -6	; UnitTagIndicies
+	12	[-]	GETTABLE 	6 6 -7	; "Special_TurretIgnores"
+	13	[-]	SETLIST  	5 1 1	; 1
+	14	[-]	CALL     	3 3 2
+	15	[-]	SETGLOBAL	3 -3	; newTarget
+	16	[-]	GETGLOBAL	3 -3	; newTarget
+	17	[-]	EQ       	0 3 -8	; - nil
+	18	[-]	JMP      	15	; to 34
+	19	[-]	GETGLOBAL	3 -9	; AI_HARDIDLE_ATTACKING
+	20	[-]	EQ       	1 2 3
+	21	[-]	JMP      	6	; to 28
+	22	[-]	GETGLOBAL	3 -10	; AI_TAUNTED
+	23	[-]	EQ       	1 2 3
+	24	[-]	JMP      	3	; to 28
+	25	[-]	GETGLOBAL	3 -11	; AI_BERSERK
+	26	[-]	EQ       	0 2 3
+	27	[-]	JMP      	23	; to 51
+	28	[-]	GETGLOBAL	3 -12	; NetSetState
+	29	[-]	GETGLOBAL	4 -13	; AI_HARDIDLE
+	30	[-]	CALL     	3 2 1
+	31	[-]	LOADBOOL 	3 1 0
+	32	[-]	RETURN   	3 2
+	33	[-]	JMP      	17	; to 51
+	34	[-]	GETGLOBAL	3 -9	; AI_HARDIDLE_ATTACKING
+	35	[-]	EQ       	1 2 3
+	36	[-]	JMP      	6	; to 43
+	37	[-]	GETGLOBAL	3 -10	; AI_TAUNTED
+	38	[-]	EQ       	1 2 3
+	39	[-]	JMP      	3	; to 43
+	40	[-]	GETGLOBAL	3 -11	; AI_BERSERK
+	41	[-]	EQ       	0 2 3
+	42	[-]	JMP      	8	; to 51
+	43	[-]	GETGLOBAL	3 -12	; NetSetState
+	44	[-]	GETGLOBAL	4 -9	; AI_HARDIDLE_ATTACKING
+	45	[-]	CALL     	3 2 1
+	46	[-]	GETGLOBAL	3 -14	; SetTarget
+	47	[-]	GETGLOBAL	4 -3	; newTarget
+	48	[-]	CALL     	3 2 1
+	49	[-]	LOADBOOL 	3 1 0
+	50	[-]	RETURN   	3 2
+	51	[-]	GETGLOBAL	3 -12	; NetSetState
+	52	[-]	GETGLOBAL	4 -13	; AI_HARDIDLE
+	53	[-]	CALL     	3 2 1
+	54	[-]	LOADBOOL 	3 1 0
+	55	[-]	RETURN   	3 2
+	56	[-]	RETURN   	0 1
+constants (14) for 00887F88:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"newTarget"
+	4	"FindTargetInAcRWithFilter"
+	5	0
+	6	"UnitTagIndicies"
+	7	"Special_TurretIgnores"
+	8	nil
+	9	"AI_HARDIDLE_ATTACKING"
+	10	"AI_TAUNTED"
+	11	"AI_BERSERK"
+	12	"NetSetState"
+	13	"AI_HARDIDLE"
+	14	"SetTarget"
+locals (0) for 00887F88:
+upvalues (0) for 00887F88:
+
+function <?:74,90> (42 instructions, 168 bytes at 00887FE0)
+2 params, 6 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetState
+	2	[-]	CALL     	2 1 2
+	3	[-]	GETGLOBAL	3 -2	; AI_HALTED
+	4	[-]	EQ       	0 2 3
+	5	[-]	JMP      	2	; to 8
+	6	[-]	LOADBOOL 	3 0 0
+	7	[-]	RETURN   	3 2
+	8	[-]	TEST     	1 0 0
+	9	[-]	JMP      	30	; to 40
+	10	[-]	GETGLOBAL	3 -3	; AI_HARDIDLE
+	11	[-]	EQ       	1 2 3
+	12	[-]	JMP      	3	; to 16
+	13	[-]	GETGLOBAL	3 -4	; AI_HARDIDLE_ATTACKING
+	14	[-]	EQ       	0 2 3
+	15	[-]	JMP      	24	; to 40
+	16	[-]	GETGLOBAL	3 -5	; GetCanAttack
+	17	[-]	GETGLOBAL	4 -6	; me
+	18	[-]	CALL     	3 2 2
+	19	[-]	TEST     	3 0 0
+	20	[-]	JMP      	19	; to 40
+	21	[-]	GETGLOBAL	3 -7	; GetTargetableByUnit
+	22	[-]	MOVE     	4 1
+	23	[-]	GETGLOBAL	5 -6	; me
+	24	[-]	CALL     	3 3 2
+	25	[-]	TEST     	3 0 0
+	26	[-]	JMP      	13	; to 40
+	27	[-]	GETGLOBAL	3 -8	; IsDead
+	28	[-]	MOVE     	4 1
+	29	[-]	CALL     	3 2 2
+	30	[-]	TEST     	3 0 1
+	31	[-]	JMP      	8	; to 40
+	32	[-]	GETGLOBAL	3 -9	; NetSetState
+	33	[-]	GETGLOBAL	4 -4	; AI_HARDIDLE_ATTACKING
+	34	[-]	CALL     	3 2 1
+	35	[-]	GETGLOBAL	3 -10	; SetTarget
+	36	[-]	MOVE     	4 1
+	37	[-]	CALL     	3 2 1
+	38	[-]	LOADBOOL 	3 1 0
+	39	[-]	RETURN   	3 2
+	40	[-]	LOADBOOL 	3 0 0
+	41	[-]	RETURN   	3 2
+	42	[-]	RETURN   	0 1
+constants (10) for 00887FE0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"AI_HARDIDLE"
+	4	"AI_HARDIDLE_ATTACKING"
+	5	"GetCanAttack"
+	6	"me"
+	7	"GetTargetableByUnit"
+	8	"IsDead"
+	9	"NetSetState"
+	10	"SetTarget"
+locals (0) for 00887FE0:
+upvalues (0) for 00887FE0:
+
+function <?:94,99> (9 instructions, 36 bytes at 0088A0A8)
+2 params, 4 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; ObjectInAttackRange
+	2	[-]	MOVE     	3 1
+	3	[-]	CALL     	2 2 2
+	4	[-]	TEST     	2 0 0
+	5	[-]	JMP      	3	; to 9
+	6	[-]	GETGLOBAL	2 -2	; PutTargetInTargetList
+	7	[-]	MOVE     	3 1
+	8	[-]	CALL     	2 2 1
+	9	[-]	RETURN   	0 1
+constants (2) for 0088A0A8:
+	1	"ObjectInAttackRange"
+	2	"PutTargetInTargetList"
+locals (0) for 0088A0A8:
+upvalues (0) for 0088A0A8:
+
+function <?:102,116> (19 instructions, 76 bytes at 0088A100)
+0 params, 3 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; GetTauntTarget
+	8	[-]	CALL     	1 1 2
+	9	[-]	SETGLOBAL	1 -3	; tauntTarget
+	10	[-]	GETGLOBAL	1 -3	; tauntTarget
+	11	[-]	EQ       	1 1 -5	; - nil
+	12	[-]	JMP      	6	; to 19
+	13	[-]	GETGLOBAL	1 -6	; NetSetState
+	14	[-]	GETGLOBAL	2 -7	; AI_TAUNTED
+	15	[-]	CALL     	1 2 1
+	16	[-]	GETGLOBAL	1 -8	; SetTarget
+	17	[-]	GETGLOBAL	2 -3	; tauntTarget
+	18	[-]	CALL     	1 2 1
+	19	[-]	RETURN   	0 1
+constants (8) for 0088A100:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"tauntTarget"
+	4	"GetTauntTarget"
+	5	nil
+	6	"NetSetState"
+	7	"AI_TAUNTED"
+	8	"SetTarget"
+locals (0) for 0088A100:
+upvalues (0) for 0088A100:
+
+function <?:119,135> (23 instructions, 92 bytes at 0088A238)
+0 params, 3 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; GetTauntTarget
+	8	[-]	CALL     	1 1 2
+	9	[-]	SETGLOBAL	1 -3	; tauntTarget
+	10	[-]	GETGLOBAL	1 -3	; tauntTarget
+	11	[-]	EQ       	1 1 -5	; - nil
+	12	[-]	JMP      	7	; to 20
+	13	[-]	GETGLOBAL	1 -6	; NetSetState
+	14	[-]	GETGLOBAL	2 -7	; AI_HARDIDLE_ATTACKING
+	15	[-]	CALL     	1 2 1
+	16	[-]	GETGLOBAL	1 -8	; SetTarget
+	17	[-]	GETGLOBAL	2 -3	; tauntTarget
+	18	[-]	CALL     	1 2 1
+	19	[-]	JMP      	3	; to 23
+	20	[-]	GETGLOBAL	1 -6	; NetSetState
+	21	[-]	GETGLOBAL	2 -9	; AI_HARDIDLE
+	22	[-]	CALL     	1 2 1
+	23	[-]	RETURN   	0 1
+constants (9) for 0088A238:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"tauntTarget"
+	4	"GetTauntTarget"
+	5	nil
+	6	"NetSetState"
+	7	"AI_HARDIDLE_ATTACKING"
+	8	"SetTarget"
+	9	"AI_HARDIDLE"
+locals (0) for 0088A238:
+upvalues (0) for 0088A238:
+
+function <?:138,145> (10 instructions, 40 bytes at 0088CFF8)
+0 params, 3 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; NetSetState
+	8	[-]	GETGLOBAL	2 -4	; AI_HARDIDLE
+	9	[-]	CALL     	1 2 1
+	10	[-]	RETURN   	0 1
+constants (4) for 0088CFF8:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"NetSetState"
+	4	"AI_HARDIDLE"
+locals (0) for 0088CFF8:
+upvalues (0) for 0088CFF8:
+
+function <?:149,156> (10 instructions, 40 bytes at 0088D050)
+0 params, 3 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; NetSetState
+	8	[-]	GETGLOBAL	2 -4	; AI_HARDIDLE
+	9	[-]	CALL     	1 2 1
+	10	[-]	RETURN   	0 1
+constants (4) for 0088D050:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"NetSetState"
+	4	"AI_HARDIDLE"
+locals (0) for 0088D050:
+upvalues (0) for 0088D050:
+
+function <?:159,164> (7 instructions, 28 bytes at 0088D0A8)
+0 params, 2 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; TurnOffAutoAttack
+	2	[-]	GETGLOBAL	1 -2	; STOPREASON_IMMEDIATELY
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -3	; NetSetState
+	5	[-]	GETGLOBAL	1 -4	; AI_HALTED
+	6	[-]	CALL     	0 2 1
+	7	[-]	RETURN   	0 1
+constants (4) for 0088D0A8:
+	1	"TurnOffAutoAttack"
+	2	"STOPREASON_IMMEDIATELY"
+	3	"NetSetState"
+	4	"AI_HALTED"
+locals (0) for 0088D0A8:
+upvalues (0) for 0088D0A8:

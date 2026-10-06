@@ -1,0 +1,166 @@
+
+main <?:0,0> (41 instructions, 164 bytes at 0000020371DD3860)
+0+ params, 3 slots, 0 upvalues, 0 locals, 9 constants, 6 functions
+	1	[-]	NEWTABLE 	0 0 1
+	2	[-]	SETTABLE 	0 -2 -3	; "TimerCallbackName" "TimerWander"
+	3	[-]	SETGLOBAL	0 -1	; WanderAlongPath
+	4	[-]	GETGLOBAL	0 -4	; RegisterForEvent
+	5	[-]	LOADK    	1 -5	; "ComponentInit"
+	6	[-]	GETGLOBAL	2 -1	; WanderAlongPath
+	7	[-]	CALL     	0 3 1
+	8	[-]	GETGLOBAL	0 -4	; RegisterForEvent
+	9	[-]	LOADK    	1 -6	; "ComponentStart"
+	10	[-]	GETGLOBAL	2 -1	; WanderAlongPath
+	11	[-]	CALL     	0 3 1
+	12	[-]	GETGLOBAL	0 -4	; RegisterForEvent
+	13	[-]	LOADK    	1 -7	; "WanderPause"
+	14	[-]	GETGLOBAL	2 -1	; WanderAlongPath
+	15	[-]	CALL     	0 3 1
+	16	[-]	GETGLOBAL	0 -4	; RegisterForEvent
+	17	[-]	LOADK    	1 -8	; "WanderResume"
+	18	[-]	GETGLOBAL	2 -1	; WanderAlongPath
+	19	[-]	CALL     	0 3 1
+	20	[-]	GETGLOBAL	0 -4	; RegisterForEvent
+	21	[-]	LOADK    	1 -9	; "ComponentHalt"
+	22	[-]	GETGLOBAL	2 -1	; WanderAlongPath
+	23	[-]	CALL     	0 3 1
+	24	[-]	GETGLOBAL	0 -1	; WanderAlongPath
+	25	[-]	CLOSURE  	1 0	; 0000020371DD3A30
+	26	[-]	SETTABLE 	0 -5 1	; "ComponentInit" -
+	27	[-]	GETGLOBAL	0 -1	; WanderAlongPath
+	28	[-]	CLOSURE  	1 1	; 0000020371DD42C0
+	29	[-]	SETTABLE 	0 -6 1	; "ComponentStart" -
+	30	[-]	GETGLOBAL	0 -1	; WanderAlongPath
+	31	[-]	CLOSURE  	1 2	; 0000020371DD4340
+	32	[-]	SETTABLE 	0 -7 1	; "WanderPause" -
+	33	[-]	GETGLOBAL	0 -1	; WanderAlongPath
+	34	[-]	CLOSURE  	1 3	; 0000020371DD43C0
+	35	[-]	SETTABLE 	0 -8 1	; "WanderResume" -
+	36	[-]	GETGLOBAL	0 -1	; WanderAlongPath
+	37	[-]	CLOSURE  	1 4	; 0000020371DD4440
+	38	[-]	SETTABLE 	0 -9 1	; "ComponentHalt" -
+	39	[-]	CLOSURE  	0 5	; 0000020371DD44C0
+	40	[-]	SETGLOBAL	0 -3	; TimerWander
+	41	[-]	RETURN   	0 1
+constants (9) for 0000020371DD3860:
+	1	"WanderAlongPath"
+	2	"TimerCallbackName"
+	3	"TimerWander"
+	4	"RegisterForEvent"
+	5	"ComponentInit"
+	6	"ComponentStart"
+	7	"WanderPause"
+	8	"WanderResume"
+	9	"ComponentHalt"
+locals (0) for 0000020371DD3860:
+upvalues (0) for 0000020371DD3860:
+
+function <?:12,15> (9 instructions, 36 bytes at 0000020371DD3A30)
+1 param, 5 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; InitTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	LOADK    	3 -3	; 0.25
+	4	[-]	LOADBOOL 	4 1 0
+	5	[-]	CALL     	1 4 1
+	6	[-]	GETGLOBAL	1 -4	; WanderAlongPath
+	7	[-]	SELF     	1 1 -5	; "ComponentStart"
+	8	[-]	CALL     	1 2 1
+	9	[-]	RETURN   	0 1
+constants (5) for 0000020371DD3A30:
+	1	"InitTimer"
+	2	"TimerCallbackName"
+	3	0.25
+	4	"WanderAlongPath"
+	5	"ComponentStart"
+locals (0) for 0000020371DD3A30:
+upvalues (0) for 0000020371DD3A30:
+
+function <?:17,19> (4 instructions, 16 bytes at 0000020371DD42C0)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; ResetAndStartTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	CALL     	1 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 0000020371DD42C0:
+	1	"ResetAndStartTimer"
+	2	"TimerCallbackName"
+locals (0) for 0000020371DD42C0:
+upvalues (0) for 0000020371DD42C0:
+
+function <?:21,23> (4 instructions, 16 bytes at 0000020371DD4340)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; StopTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	CALL     	1 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 0000020371DD4340:
+	1	"StopTimer"
+	2	"TimerCallbackName"
+locals (0) for 0000020371DD4340:
+upvalues (0) for 0000020371DD4340:
+
+function <?:25,28> (7 instructions, 28 bytes at 0000020371DD43C0)
+1 param, 3 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; ResetAndStartTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	CALL     	1 2 1
+	4	[-]	GETGLOBAL	1 -3	; TurnOffAutoAttack
+	5	[-]	GETGLOBAL	2 -4	; STOPREASON_MOVING
+	6	[-]	CALL     	1 2 1
+	7	[-]	RETURN   	0 1
+constants (4) for 0000020371DD43C0:
+	1	"ResetAndStartTimer"
+	2	"TimerCallbackName"
+	3	"TurnOffAutoAttack"
+	4	"STOPREASON_MOVING"
+locals (0) for 0000020371DD43C0:
+upvalues (0) for 0000020371DD43C0:
+
+function <?:30,32> (4 instructions, 16 bytes at 0000020371DD4440)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; StopTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	CALL     	1 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 0000020371DD4440:
+	1	"StopTimer"
+	2	"TimerCallbackName"
+locals (0) for 0000020371DD4440:
+upvalues (0) for 0000020371DD4440:
+
+function <?:34,45> (22 instructions, 88 bytes at 0000020371DD44C0)
+0 params, 4 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; SetStateAndMove
+	8	[-]	GETGLOBAL	2 -4	; AI_MOVE
+	9	[-]	GETGLOBAL	3 -5	; GetWaypoint
+	10	[-]	CALL     	3 1 0
+	11	[-]	CALL     	1 0 1
+	12	[-]	GETGLOBAL	1 -6	; GetDist
+	13	[-]	GETGLOBAL	2 -7	; GetMyPos
+	14	[-]	CALL     	2 1 2
+	15	[-]	GETGLOBAL	3 -5	; GetWaypoint
+	16	[-]	CALL     	3 1 0
+	17	[-]	CALL     	1 0 2
+	18	[-]	LT       	0 1 -8	; - 300
+	19	[-]	JMP      	2	; to 22
+	20	[-]	GETGLOBAL	1 -9	; IncrementWaypoint
+	21	[-]	CALL     	1 1 1
+	22	[-]	RETURN   	0 1
+constants (9) for 0000020371DD44C0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"SetStateAndMove"
+	4	"AI_MOVE"
+	5	"GetWaypoint"
+	6	"GetDist"
+	7	"GetMyPos"
+	8	300
+	9	"IncrementWaypoint"
+locals (0) for 0000020371DD44C0:
+upvalues (0) for 0000020371DD44C0:

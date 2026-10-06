@@ -1,0 +1,17 @@
+<div>
+  <h4 class="heading">
+    {{tra.email_verification_error_heading}}
+  </>
+  <p class="email">
+    {{emailVerification.email}}
+  </>
+  <p class="spaced red heading">
+    {{payload.errorName}}
+  </>
+  <p class="body">
+    {{payload.errorDescription}}
+    <a {{action this "visitPlayerSupport"}}>
+      {{tra.email_verification_find_out_more}}
+    </>
+  </>
+</>

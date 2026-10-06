@@ -1,0 +1,26 @@
+<div class="champion-information-mask">
+  <div class="champion-heading">
+    <div class="heading-column">
+      <div class="champion-role-icon {{primaryRole}}">
+      </>
+    </>
+    <div class="heading-column">
+      <div class="champion-name">
+        {{champion.name}}
+      </>
+      <div class="champion-title">
+        {{champion.title}}
+      </>
+    </>
+  </>
+  <lol-uikit-content-block class="champion-description">
+    <lol-uikit-scrollable overflow-masks="disabled">
+      <p class="short-bio">
+        {{sanitize shortBio}}
+      </>
+    </>
+    <a href={{universeLink}} class="learn-more-link" target="_blank" onclick={{action this "learnMore" champion.id universeLink}}>
+      {{tra.patching_experience_champion_universe_link_text}}
+    </>
+  </>
+</>

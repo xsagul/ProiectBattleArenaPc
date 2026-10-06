@@ -1,0 +1,950 @@
+
+main <?:0,0> (85 instructions, 340 bytes at 00000207B44C32C0)
+0+ params, 21 slots, 0 upvalues, 0 locals, 61 constants, 22 functions
+	1	[-]	LOADK    	0 -2	; 2500
+	2	[-]	SETGLOBAL	0 -1	; MAX_ENGAGE_DISTANCE
+	3	[-]	LOADK    	0 -4	; 500
+	4	[-]	SETGLOBAL	0 -3	; FEAR_WANDER_DISTANCE
+	5	[-]	LOADK    	0 -6	; 0.25
+	6	[-]	SETGLOBAL	0 -5	; DELAY_FIND_ENEMIES
+	7	[-]	LOADK    	0 -8	; 1
+	8	[-]	SETGLOBAL	0 -7	; AI_TARGET_HEROES
+	9	[-]	LOADK    	0 -10	; 2
+	10	[-]	SETGLOBAL	0 -9	; AI_TARGET_MINIONS
+	11	[-]	LOADK    	0 -12	; 4
+	12	[-]	SETGLOBAL	0 -11	; AI_TARGET_TURRETS
+	13	[-]	LOADK    	0 -14	; 8
+	14	[-]	SETGLOBAL	0 -13	; AI_TARGET_DAMPENER
+	15	[-]	LOADK    	0 -16	; 16
+	16	[-]	SETGLOBAL	0 -15	; AI_TARGET_HQ
+	17	[-]	CLOSURE  	0 0	; 00000207B44C18A0
+	18	[-]	SETGLOBAL	0 -17	; OnTauntBegin
+	19	[-]	CLOSURE  	0 1	; 00000207B44C3C90
+	20	[-]	SETGLOBAL	0 -18	; OnTauntEnd
+	21	[-]	CLOSURE  	0 2	; 00000207B44C3E30
+	22	[-]	SETGLOBAL	0 -19	; TimerFindEnemies
+	23	[-]	CLOSURE  	0 3	; 00000207B44C51E0
+	24	[-]	SETGLOBAL	0 -20	; FindTargetOrMove
+	25	[-]	CLOSURE  	0 4	; 00000207B44C5C40
+	26	[-]	SETGLOBAL	0 -21	; TimerMoveForward
+	27	[-]	NEWTABLE 	0 18 1
+	28	[-]	SETTABLE 	0 -23 -24	; 0 "AI_IDLE"
+	29	[-]	LOADK    	1 -25	; "AI_SOFTATTACK"
+	30	[-]	LOADK    	2 -26	; "AI_HARDATTACK"
+	31	[-]	LOADK    	3 -27	; "AI_ATTACKMOVESTATE"
+	32	[-]	LOADK    	4 -28	; "AI_STANDING"
+	33	[-]	LOADK    	5 -29	; "AI_MOVE"
+	34	[-]	LOADK    	6 -30	; "AI_GUARD"
+	35	[-]	LOADK    	7 -31	; "AI_ATTACK"
+	36	[-]	LOADK    	8 -32	; "AI_RETREAT"
+	37	[-]	LOADK    	9 -33	; "AI_HARDIDLE"
+	38	[-]	LOADK    	10 -34	; "AI_HARDIDLE_ATTACKING"
+	39	[-]	LOADK    	11 -35	; "AI_TAUNTED"
+	40	[-]	LOADK    	12 -36	; "AI_BERSERK"
+	41	[-]	LOADK    	13 -37	; "AI_ATTACKMOVE_ATTACKING"
+	42	[-]	LOADK    	14 -38	; "AI_FEARED"
+	43	[-]	LOADK    	15 -39	; "AI_CHARMED"
+	44	[-]	LOADK    	16 -40	; "AI_FLEEING"
+	45	[-]	LOADK    	17 -41	; "AI_ATTACK_GOING_TO_LAST_KNOWN_LOCATION"
+	46	[-]	LOADK    	18 -42	; "AI_HALTED"
+	47	[-]	LOADK    	19 -43	; "AI_SIEGEATTACK"
+	48	[-]	LOADK    	20 -44	; "AI_LAST_NONPET_AI_STATE"
+	49	[-]	SETLIST  	0 20 1	; 1
+	50	[-]	SETGLOBAL	0 -22	; DEBUG_MINION_STATE_TABLE
+	51	[-]	CLOSURE  	0 5	; 00000207B44C6560
+	52	[-]	SETGLOBAL	0 -45	; OnInit
+	53	[-]	CLOSURE  	0 6	; 00000207B44C6780
+	54	[-]	SETGLOBAL	0 -46	; OnTargetLost
+	55	[-]	CLOSURE  	0 7	; 00000207B44C6870
+	56	[-]	SETGLOBAL	0 -47	; OnPathToTargetBlocked
+	57	[-]	CLOSURE  	0 8	; 00000207B44C6960
+	58	[-]	SETGLOBAL	0 -48	; OnCallForHelp
+	59	[-]	CLOSURE  	0 9	; 00000207B44C69E0
+	60	[-]	SETGLOBAL	0 -49	; OnFearBegin
+	61	[-]	CLOSURE  	0 10	; 00000207B44C6BA0
+	62	[-]	SETGLOBAL	0 -50	; OnFearEnd
+	63	[-]	CLOSURE  	0 11	; 00000207B44C6C20
+	64	[-]	SETGLOBAL	0 -51	; TimerFeared
+	65	[-]	CLOSURE  	0 12	; 00000207B44C6D30
+	66	[-]	SETGLOBAL	0 -52	; OnFleeBegin
+	67	[-]	CLOSURE  	0 13	; 00000207B44C6E60
+	68	[-]	SETGLOBAL	0 -53	; OnFleeEnd
+	69	[-]	CLOSURE  	0 14	; 00000207B44C7B30
+	70	[-]	SETGLOBAL	0 -54	; TimerFlee
+	71	[-]	CLOSURE  	0 15	; 00000207B44C7C30
+	72	[-]	SETGLOBAL	0 -55	; OnCanMove
+	73	[-]	CLOSURE  	0 16	; 00000207B44C7CB0
+	74	[-]	SETGLOBAL	0 -56	; OnCanAttack
+	75	[-]	CLOSURE  	0 17	; 00000207B44C7530
+	76	[-]	SETGLOBAL	0 -57	; TimerAntiKite
+	77	[-]	CLOSURE  	0 18	; 00000207B44C7BB0
+	78	[-]	SETGLOBAL	0 -58	; OnCollisionEnemy
+	79	[-]	CLOSURE  	0 19	; 00000207B44C72B0
+	80	[-]	SETGLOBAL	0 -59	; OnCollisionOther
+	81	[-]	CLOSURE  	0 20	; 00000207B44C7230
+	82	[-]	SETGLOBAL	0 -60	; OnReachedDestinationForGoingToLastLocation
+	83	[-]	CLOSURE  	0 21	; 00000207B44C7DB0
+	84	[-]	SETGLOBAL	0 -61	; HaltAI
+	85	[-]	RETURN   	0 1
+constants (61) for 00000207B44C32C0:
+	1	"MAX_ENGAGE_DISTANCE"
+	2	2500
+	3	"FEAR_WANDER_DISTANCE"
+	4	500
+	5	"DELAY_FIND_ENEMIES"
+	6	0.25
+	7	"AI_TARGET_HEROES"
+	8	1
+	9	"AI_TARGET_MINIONS"
+	10	2
+	11	"AI_TARGET_TURRETS"
+	12	4
+	13	"AI_TARGET_DAMPENER"
+	14	8
+	15	"AI_TARGET_HQ"
+	16	16
+	17	"OnTauntBegin"
+	18	"OnTauntEnd"
+	19	"TimerFindEnemies"
+	20	"FindTargetOrMove"
+	21	"TimerMoveForward"
+	22	"DEBUG_MINION_STATE_TABLE"
+	23	0
+	24	"AI_IDLE"
+	25	"AI_SOFTATTACK"
+	26	"AI_HARDATTACK"
+	27	"AI_ATTACKMOVESTATE"
+	28	"AI_STANDING"
+	29	"AI_MOVE"
+	30	"AI_GUARD"
+	31	"AI_ATTACK"
+	32	"AI_RETREAT"
+	33	"AI_HARDIDLE"
+	34	"AI_HARDIDLE_ATTACKING"
+	35	"AI_TAUNTED"
+	36	"AI_BERSERK"
+	37	"AI_ATTACKMOVE_ATTACKING"
+	38	"AI_FEARED"
+	39	"AI_CHARMED"
+	40	"AI_FLEEING"
+	41	"AI_ATTACK_GOING_TO_LAST_KNOWN_LOCATION"
+	42	"AI_HALTED"
+	43	"AI_SIEGEATTACK"
+	44	"AI_LAST_NONPET_AI_STATE"
+	45	"OnInit"
+	46	"OnTargetLost"
+	47	"OnPathToTargetBlocked"
+	48	"OnCallForHelp"
+	49	"OnFearBegin"
+	50	"OnFearEnd"
+	51	"TimerFeared"
+	52	"OnFleeBegin"
+	53	"OnFleeEnd"
+	54	"TimerFlee"
+	55	"OnCanMove"
+	56	"OnCanAttack"
+	57	"TimerAntiKite"
+	58	"OnCollisionEnemy"
+	59	"OnCollisionOther"
+	60	"OnReachedDestinationForGoingToLastLocation"
+	61	"HaltAI"
+locals (0) for 00000207B44C32C0:
+upvalues (0) for 00000207B44C32C0:
+
+function <?:11,23> (20 instructions, 80 bytes at 00000207B44C18A0)
+0 params, 4 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; GetTauntTarget
+	8	[-]	CALL     	1 1 2
+	9	[-]	SETGLOBAL	1 -3	; tauntTarget
+	10	[-]	GETGLOBAL	1 -3	; tauntTarget
+	11	[-]	EQ       	1 1 -5	; - nil
+	12	[-]	JMP      	7	; to 20
+	13	[-]	GETGLOBAL	1 -6	; SetStateAndCloseToTarget
+	14	[-]	GETGLOBAL	2 -7	; AI_TAUNTED
+	15	[-]	GETGLOBAL	3 -3	; tauntTarget
+	16	[-]	CALL     	1 3 1
+	17	[-]	GETGLOBAL	1 -8	; StopTimer
+	18	[-]	LOADK    	2 -9	; "TimerAntiKite"
+	19	[-]	CALL     	1 2 1
+	20	[-]	RETURN   	0 1
+constants (9) for 00000207B44C18A0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"tauntTarget"
+	4	"GetTauntTarget"
+	5	nil
+	6	"SetStateAndCloseToTarget"
+	7	"AI_TAUNTED"
+	8	"StopTimer"
+	9	"TimerAntiKite"
+locals (0) for 00000207B44C18A0:
+upvalues (0) for 00000207B44C18A0:
+
+function <?:26,41> (23 instructions, 92 bytes at 00000207B44C3C90)
+0 params, 4 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; GetTauntTarget
+	8	[-]	CALL     	1 1 2
+	9	[-]	SETGLOBAL	1 -3	; tauntTarget
+	10	[-]	GETGLOBAL	1 -3	; tauntTarget
+	11	[-]	EQ       	1 1 -5	; - nil
+	12	[-]	JMP      	8	; to 21
+	13	[-]	GETGLOBAL	1 -6	; SetStateAndCloseToTarget
+	14	[-]	GETGLOBAL	2 -7	; AI_ATTACKMOVE_ATTACKING
+	15	[-]	GETGLOBAL	3 -3	; tauntTarget
+	16	[-]	CALL     	1 3 1
+	17	[-]	GETGLOBAL	1 -8	; ResetAndStartTimer
+	18	[-]	LOADK    	2 -9	; "TimerAntiKite"
+	19	[-]	CALL     	1 2 1
+	20	[-]	JMP      	2	; to 23
+	21	[-]	GETGLOBAL	1 -10	; FindTargetOrMove
+	22	[-]	CALL     	1 1 1
+	23	[-]	RETURN   	0 1
+constants (10) for 00000207B44C3C90:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"tauntTarget"
+	4	"GetTauntTarget"
+	5	nil
+	6	"SetStateAndCloseToTarget"
+	7	"AI_ATTACKMOVE_ATTACKING"
+	8	"ResetAndStartTimer"
+	9	"TimerAntiKite"
+	10	"FindTargetOrMove"
+locals (0) for 00000207B44C3C90:
+upvalues (0) for 00000207B44C3C90:
+
+function <?:45,95> (88 instructions, 352 bytes at 00000207B44C3E30)
+0 params, 5 slots, 0 upvalues, 0 locals, 26 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; AI_ATTACKMOVESTATE
+	8	[-]	EQ       	0 0 1
+	9	[-]	JMP      	17	; to 27
+	10	[-]	GETGLOBAL	1 -4	; FindTargetInAcRWithFilter
+	11	[-]	GETGLOBAL	2 -5	; AI_TARGET_MINIONS
+	12	[-]	CALL     	1 2 2
+	13	[-]	EQ       	0 1 -6	; - nil
+	14	[-]	JMP      	4	; to 19
+	15	[-]	GETGLOBAL	2 -7	; TurnOffAutoAttack
+	16	[-]	GETGLOBAL	3 -8	; STOPREASON_TARGET_LOST
+	17	[-]	CALL     	2 2 1
+	18	[-]	RETURN   	0 1
+	19	[-]	GETGLOBAL	2 -9	; SetStateAndCloseToTarget
+	20	[-]	GETGLOBAL	3 -10	; AI_ATTACKMOVE_ATTACKING
+	21	[-]	MOVE     	4 1
+	22	[-]	CALL     	2 3 1
+	23	[-]	GETGLOBAL	2 -11	; ResetAndStartTimer
+	24	[-]	LOADK    	3 -12	; "TimerAntiKite"
+	25	[-]	CALL     	2 2 1
+	26	[-]	JMP      	12	; to 39
+	27	[-]	GETGLOBAL	1 -13	; AI_TAUNTED
+	28	[-]	EQ       	0 0 1
+	29	[-]	JMP      	9	; to 39
+	30	[-]	GETGLOBAL	1 -14	; GetTauntTarget
+	31	[-]	CALL     	1 1 2
+	32	[-]	EQ       	1 1 -6	; - nil
+	33	[-]	JMP      	5	; to 39
+	34	[-]	GETGLOBAL	1 -9	; SetStateAndCloseToTarget
+	35	[-]	GETGLOBAL	2 -13	; AI_TAUNTED
+	36	[-]	GETGLOBAL	3 -14	; GetTauntTarget
+	37	[-]	CALL     	3 1 0
+	38	[-]	CALL     	1 0 1
+	39	[-]	GETGLOBAL	1 -10	; AI_ATTACKMOVE_ATTACKING
+	40	[-]	EQ       	1 0 1
+	41	[-]	JMP      	6	; to 48
+	42	[-]	GETGLOBAL	1 -13	; AI_TAUNTED
+	43	[-]	EQ       	1 0 1
+	44	[-]	JMP      	3	; to 48
+	45	[-]	GETGLOBAL	1 -15	; AI_BERSERK
+	46	[-]	EQ       	0 0 1
+	47	[-]	JMP      	40	; to 88
+	48	[-]	GETGLOBAL	1 -16	; GetTarget
+	49	[-]	CALL     	1 1 2
+	50	[-]	EQ       	1 1 -6	; - nil
+	51	[-]	JMP      	7	; to 59
+	52	[-]	GETGLOBAL	1 -17	; DistanceBetweenMeAndObject
+	53	[-]	GETGLOBAL	2 -16	; GetTarget
+	54	[-]	CALL     	2 1 0
+	55	[-]	CALL     	1 0 2
+	56	[-]	GETGLOBAL	2 -18	; MAX_ENGAGE_DISTANCE
+	57	[-]	LT       	0 2 1
+	58	[-]	JMP      	2	; to 61
+	59	[-]	GETGLOBAL	1 -19	; FindTargetOrMove
+	60	[-]	CALL     	1 1 1
+	61	[-]	GETGLOBAL	1 -20	; TargetInAttackRange
+	62	[-]	CALL     	1 1 2
+	63	[-]	TEST     	1 0 0
+	64	[-]	JMP      	14	; to 79
+	65	[-]	GETGLOBAL	1 -13	; AI_TAUNTED
+	66	[-]	EQ       	1 0 1
+	67	[-]	JMP      	6	; to 74
+	68	[-]	GETGLOBAL	1 -15	; AI_BERSERK
+	69	[-]	EQ       	1 0 1
+	70	[-]	JMP      	3	; to 74
+	71	[-]	GETGLOBAL	1 -11	; ResetAndStartTimer
+	72	[-]	LOADK    	2 -12	; "TimerAntiKite"
+	73	[-]	CALL     	1 2 1
+	74	[-]	GETGLOBAL	1 -21	; TurnOnAutoAttack
+	75	[-]	GETGLOBAL	2 -16	; GetTarget
+	76	[-]	CALL     	2 1 0
+	77	[-]	CALL     	1 0 1
+	78	[-]	JMP      	9	; to 88
+	79	[-]	GETGLOBAL	1 -22	; TargetInCancelAttackRange
+	80	[-]	CALL     	1 1 2
+	81	[-]	EQ       	0 1 -23	; - false
+	82	[-]	JMP      	5	; to 88
+	83	[-]	GETGLOBAL	1 -7	; TurnOffAutoAttack
+	84	[-]	GETGLOBAL	2 -24	; STOPREASON_MOVING
+	85	[-]	CALL     	1 2 1
+	86	[-]	LOADK    	1 -26	; 0
+	87	[-]	SETGLOBAL	1 -25	; LastAttackScan
+	88	[-]	RETURN   	0 1
+constants (26) for 00000207B44C3E30:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"AI_ATTACKMOVESTATE"
+	4	"FindTargetInAcRWithFilter"
+	5	"AI_TARGET_MINIONS"
+	6	nil
+	7	"TurnOffAutoAttack"
+	8	"STOPREASON_TARGET_LOST"
+	9	"SetStateAndCloseToTarget"
+	10	"AI_ATTACKMOVE_ATTACKING"
+	11	"ResetAndStartTimer"
+	12	"TimerAntiKite"
+	13	"AI_TAUNTED"
+	14	"GetTauntTarget"
+	15	"AI_BERSERK"
+	16	"GetTarget"
+	17	"DistanceBetweenMeAndObject"
+	18	"MAX_ENGAGE_DISTANCE"
+	19	"FindTargetOrMove"
+	20	"TargetInAttackRange"
+	21	"TurnOnAutoAttack"
+	22	"TargetInCancelAttackRange"
+	23	false
+	24	"STOPREASON_MOVING"
+	25	"LastAttackScan"
+	26	0
+locals (0) for 00000207B44C3E30:
+upvalues (0) for 00000207B44C3E30:
+
+function <?:99,124> (38 instructions, 152 bytes at 00000207B44C51E0)
+0 params, 6 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; FindTargetInAcRWithFilter
+	8	[-]	GETGLOBAL	2 -4	; AI_TARGET_MINIONS
+	9	[-]	CALL     	1 2 2
+	10	[-]	TEST     	1 0 0
+	11	[-]	JMP      	18	; to 30
+	12	[-]	GETGLOBAL	2 -5	; LastAutoAttackFinished
+	13	[-]	CALL     	2 1 2
+	14	[-]	EQ       	0 2 -6	; - false
+	15	[-]	JMP      	6	; to 22
+	16	[-]	GETGLOBAL	2 -7	; InitTimer
+	17	[-]	LOADK    	3 -8	; "TimerFindEnemies"
+	18	[-]	GETGLOBAL	4 -9	; DELAY_FIND_ENEMIES
+	19	[-]	LOADBOOL 	5 1 0
+	20	[-]	CALL     	2 4 1
+	21	[-]	RETURN   	0 1
+	22	[-]	GETGLOBAL	2 -10	; SetStateAndCloseToTarget
+	23	[-]	GETGLOBAL	3 -11	; AI_ATTACKMOVE_ATTACKING
+	24	[-]	MOVE     	4 1
+	25	[-]	CALL     	2 3 1
+	26	[-]	GETGLOBAL	2 -12	; ResetAndStartTimer
+	27	[-]	LOADK    	3 -13	; "TimerAntiKite"
+	28	[-]	CALL     	2 2 1
+	29	[-]	JMP      	8	; to 38
+	30	[-]	GETGLOBAL	2 -14	; SetStateAndMoveToForwardNav
+	31	[-]	GETGLOBAL	3 -15	; AI_ATTACKMOVESTATE
+	32	[-]	CALL     	2 2 1
+	33	[-]	GETGLOBAL	2 -16	; StopTimer
+	34	[-]	LOADK    	3 -13	; "TimerAntiKite"
+	35	[-]	CALL     	2 2 1
+	36	[-]	LOADK    	2 -18	; 0
+	37	[-]	SETGLOBAL	2 -17	; LastAttackScan
+	38	[-]	RETURN   	0 1
+constants (18) for 00000207B44C51E0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"FindTargetInAcRWithFilter"
+	4	"AI_TARGET_MINIONS"
+	5	"LastAutoAttackFinished"
+	6	false
+	7	"InitTimer"
+	8	"TimerFindEnemies"
+	9	"DELAY_FIND_ENEMIES"
+	10	"SetStateAndCloseToTarget"
+	11	"AI_ATTACKMOVE_ATTACKING"
+	12	"ResetAndStartTimer"
+	13	"TimerAntiKite"
+	14	"SetStateAndMoveToForwardNav"
+	15	"AI_ATTACKMOVESTATE"
+	16	"StopTimer"
+	17	"LastAttackScan"
+	18	0
+locals (0) for 00000207B44C51E0:
+upvalues (0) for 00000207B44C51E0:
+
+function <?:128,142> (21 instructions, 84 bytes at 00000207B44C5C40)
+0 params, 3 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; AI_IDLE
+	8	[-]	EQ       	0 0 1
+	9	[-]	JMP      	3	; to 13
+	10	[-]	GETGLOBAL	1 -4	; FindTargetOrMove
+	11	[-]	CALL     	1 1 1
+	12	[-]	JMP      	8	; to 21
+	13	[-]	GETGLOBAL	1 -5	; AI_ATTACKMOVESTATE
+	14	[-]	EQ       	0 0 1
+	15	[-]	JMP      	5	; to 21
+	16	[-]	GETGLOBAL	1 -6	; SetStateAndMoveToForwardNav
+	17	[-]	GETGLOBAL	2 -5	; AI_ATTACKMOVESTATE
+	18	[-]	CALL     	1 2 1
+	19	[-]	LOADK    	1 -8	; 0
+	20	[-]	SETGLOBAL	1 -7	; LastAttackScan
+	21	[-]	RETURN   	0 1
+constants (8) for 00000207B44C5C40:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"AI_IDLE"
+	4	"FindTargetOrMove"
+	5	"AI_ATTACKMOVESTATE"
+	6	"SetStateAndMoveToForwardNav"
+	7	"LastAttackScan"
+	8	0
+locals (0) for 00000207B44C5C40:
+upvalues (0) for 00000207B44C5C40:
+
+function <?:177,189> (40 instructions, 160 bytes at 00000207B44C6560)
+0 params, 4 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SetState
+	2	[-]	GETGLOBAL	1 -2	; AI_IDLE
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -3	; InitTimer
+	5	[-]	LOADK    	1 -4	; "TimerFindEnemies"
+	6	[-]	GETGLOBAL	2 -5	; DELAY_FIND_ENEMIES
+	7	[-]	LOADBOOL 	3 1 0
+	8	[-]	CALL     	0 4 1
+	9	[-]	GETGLOBAL	0 -3	; InitTimer
+	10	[-]	LOADK    	1 -6	; "TimerMoveForward"
+	11	[-]	LOADK    	2 -7	; 0
+	12	[-]	LOADBOOL 	3 1 0
+	13	[-]	CALL     	0 4 1
+	14	[-]	GETGLOBAL	0 -3	; InitTimer
+	15	[-]	LOADK    	1 -8	; "TimerAntiKite"
+	16	[-]	LOADK    	2 -9	; 4
+	17	[-]	LOADBOOL 	3 0 0
+	18	[-]	CALL     	0 4 1
+	19	[-]	GETGLOBAL	0 -3	; InitTimer
+	20	[-]	LOADK    	1 -10	; "TimerFeared"
+	21	[-]	LOADK    	2 -11	; 1
+	22	[-]	LOADBOOL 	3 1 0
+	23	[-]	CALL     	0 4 1
+	24	[-]	GETGLOBAL	0 -3	; InitTimer
+	25	[-]	LOADK    	1 -12	; "TimerFlee"
+	26	[-]	LOADK    	2 -13	; 0.5
+	27	[-]	LOADBOOL 	3 1 0
+	28	[-]	CALL     	0 4 1
+	29	[-]	GETGLOBAL	0 -14	; StopTimer
+	30	[-]	LOADK    	1 -8	; "TimerAntiKite"
+	31	[-]	CALL     	0 2 1
+	32	[-]	GETGLOBAL	0 -14	; StopTimer
+	33	[-]	LOADK    	1 -10	; "TimerFeared"
+	34	[-]	CALL     	0 2 1
+	35	[-]	GETGLOBAL	0 -14	; StopTimer
+	36	[-]	LOADK    	1 -12	; "TimerFlee"
+	37	[-]	CALL     	0 2 1
+	38	[-]	LOADBOOL 	0 0 0
+	39	[-]	RETURN   	0 2
+	40	[-]	RETURN   	0 1
+constants (14) for 00000207B44C6560:
+	1	"SetState"
+	2	"AI_IDLE"
+	3	"InitTimer"
+	4	"TimerFindEnemies"
+	5	"DELAY_FIND_ENEMIES"
+	6	"TimerMoveForward"
+	7	0
+	8	"TimerAntiKite"
+	9	4
+	10	"TimerFeared"
+	11	1
+	12	"TimerFlee"
+	13	0.5
+	14	"StopTimer"
+locals (0) for 00000207B44C6560:
+upvalues (0) for 00000207B44C6560:
+
+function <?:193,205> (18 instructions, 72 bytes at 00000207B44C6780)
+0 params, 2 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; AI_ATTACKMOVE_ATTACKING
+	8	[-]	EQ       	1 0 1
+	9	[-]	JMP      	6	; to 16
+	10	[-]	GETGLOBAL	1 -4	; AI_TAUNTED
+	11	[-]	EQ       	1 0 1
+	12	[-]	JMP      	3	; to 16
+	13	[-]	GETGLOBAL	1 -5	; AI_BERSERK
+	14	[-]	EQ       	0 0 1
+	15	[-]	JMP      	2	; to 18
+	16	[-]	GETGLOBAL	1 -6	; FindTargetOrMove
+	17	[-]	CALL     	1 1 1
+	18	[-]	RETURN   	0 1
+constants (6) for 00000207B44C6780:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"AI_ATTACKMOVE_ATTACKING"
+	4	"AI_TAUNTED"
+	5	"AI_BERSERK"
+	6	"FindTargetOrMove"
+locals (0) for 00000207B44C6780:
+upvalues (0) for 00000207B44C6780:
+
+function <?:209,220> (15 instructions, 60 bytes at 00000207B44C6870)
+0 params, 3 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; AI_ATTACKMOVE_ATTACKING
+	8	[-]	EQ       	0 0 1
+	9	[-]	JMP      	5	; to 15
+	10	[-]	GETGLOBAL	1 -4	; AddToIgnore
+	11	[-]	LOADK    	2 -5	; 0.1
+	12	[-]	CALL     	1 2 1
+	13	[-]	GETGLOBAL	1 -6	; FindTargetOrMove
+	14	[-]	CALL     	1 1 1
+	15	[-]	RETURN   	0 1
+constants (6) for 00000207B44C6870:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"AI_ATTACKMOVE_ATTACKING"
+	4	"AddToIgnore"
+	5	0.1
+	6	"FindTargetOrMove"
+locals (0) for 00000207B44C6870:
+upvalues (0) for 00000207B44C6870:
+
+function <?:224,229> (7 instructions, 28 bytes at 00000207B44C6960)
+2 params, 4 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetState
+	2	[-]	CALL     	2 1 2
+	3	[-]	GETGLOBAL	3 -2	; AI_HALTED
+	4	[-]	EQ       	0 2 3
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	RETURN   	0 1
+constants (2) for 00000207B44C6960:
+	1	"GetState"
+	2	"AI_HALTED"
+locals (0) for 00000207B44C6960:
+upvalues (0) for 00000207B44C6960:
+
+function <?:237,247> (23 instructions, 92 bytes at 00000207B44C69E0)
+0 params, 4 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; MakeWanderPoint
+	8	[-]	GETGLOBAL	2 -5	; GetFearLeashPoint
+	9	[-]	CALL     	2 1 2
+	10	[-]	GETGLOBAL	3 -6	; FEAR_WANDER_DISTANCE
+	11	[-]	CALL     	1 3 2
+	12	[-]	SETGLOBAL	1 -3	; wanderPoint
+	13	[-]	GETGLOBAL	1 -7	; SetStateAndMove
+	14	[-]	GETGLOBAL	2 -8	; AI_FEARED
+	15	[-]	GETGLOBAL	3 -3	; wanderPoint
+	16	[-]	CALL     	1 3 1
+	17	[-]	GETGLOBAL	1 -9	; TurnOffAutoAttack
+	18	[-]	GETGLOBAL	2 -10	; STOPREASON_IMMEDIATELY
+	19	[-]	CALL     	1 2 1
+	20	[-]	GETGLOBAL	1 -11	; ResetAndStartTimer
+	21	[-]	LOADK    	2 -12	; "TimerFeared"
+	22	[-]	CALL     	1 2 1
+	23	[-]	RETURN   	0 1
+constants (12) for 00000207B44C69E0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"wanderPoint"
+	4	"MakeWanderPoint"
+	5	"GetFearLeashPoint"
+	6	"FEAR_WANDER_DISTANCE"
+	7	"SetStateAndMove"
+	8	"AI_FEARED"
+	9	"TurnOffAutoAttack"
+	10	"STOPREASON_IMMEDIATELY"
+	11	"ResetAndStartTimer"
+	12	"TimerFeared"
+locals (0) for 00000207B44C69E0:
+upvalues (0) for 00000207B44C69E0:
+
+function <?:251,262> (12 instructions, 48 bytes at 00000207B44C6BA0)
+0 params, 3 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; StopTimer
+	8	[-]	LOADK    	2 -4	; "TimerFeared"
+	9	[-]	CALL     	1 2 1
+	10	[-]	GETGLOBAL	1 -5	; FindTargetOrMove
+	11	[-]	CALL     	1 1 1
+	12	[-]	RETURN   	0 1
+constants (5) for 00000207B44C6BA0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"StopTimer"
+	4	"TimerFeared"
+	5	"FindTargetOrMove"
+locals (0) for 00000207B44C6BA0:
+upvalues (0) for 00000207B44C6BA0:
+
+function <?:266,276> (17 instructions, 68 bytes at 00000207B44C6C20)
+0 params, 4 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; MakeWanderPoint
+	8	[-]	GETGLOBAL	2 -5	; GetFearLeashPoint
+	9	[-]	CALL     	2 1 2
+	10	[-]	GETGLOBAL	3 -6	; FEAR_WANDER_DISTANCE
+	11	[-]	CALL     	1 3 2
+	12	[-]	SETGLOBAL	1 -3	; wanderPoint
+	13	[-]	GETGLOBAL	1 -7	; SetStateAndMove
+	14	[-]	GETGLOBAL	2 -8	; AI_FEARED
+	15	[-]	GETGLOBAL	3 -3	; wanderPoint
+	16	[-]	CALL     	1 3 1
+	17	[-]	RETURN   	0 1
+constants (8) for 00000207B44C6C20:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"wanderPoint"
+	4	"MakeWanderPoint"
+	5	"GetFearLeashPoint"
+	6	"FEAR_WANDER_DISTANCE"
+	7	"SetStateAndMove"
+	8	"AI_FEARED"
+locals (0) for 00000207B44C6C20:
+upvalues (0) for 00000207B44C6C20:
+
+function <?:279,288> (20 instructions, 80 bytes at 00000207B44C6D30)
+0 params, 4 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; MakeFleePoint
+	8	[-]	CALL     	1 1 2
+	9	[-]	SETGLOBAL	1 -3	; fleePoint
+	10	[-]	GETGLOBAL	1 -5	; SetStateAndMove
+	11	[-]	GETGLOBAL	2 -6	; AI_FLEEING
+	12	[-]	GETGLOBAL	3 -3	; fleePoint
+	13	[-]	CALL     	1 3 1
+	14	[-]	GETGLOBAL	1 -7	; TurnOffAutoAttack
+	15	[-]	GETGLOBAL	2 -8	; STOPREASON_IMMEDIATELY
+	16	[-]	CALL     	1 2 1
+	17	[-]	GETGLOBAL	1 -9	; ResetAndStartTimer
+	18	[-]	LOADK    	2 -10	; "TimerFlee"
+	19	[-]	CALL     	1 2 1
+	20	[-]	RETURN   	0 1
+constants (10) for 00000207B44C6D30:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"fleePoint"
+	4	"MakeFleePoint"
+	5	"SetStateAndMove"
+	6	"AI_FLEEING"
+	7	"TurnOffAutoAttack"
+	8	"STOPREASON_IMMEDIATELY"
+	9	"ResetAndStartTimer"
+	10	"TimerFlee"
+locals (0) for 00000207B44C6D30:
+upvalues (0) for 00000207B44C6D30:
+
+function <?:291,298> (12 instructions, 48 bytes at 00000207B44C6E60)
+0 params, 3 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; StopTimer
+	8	[-]	LOADK    	2 -4	; "TimerFlee"
+	9	[-]	CALL     	1 2 1
+	10	[-]	GETGLOBAL	1 -5	; FindTargetOrMove
+	11	[-]	CALL     	1 1 1
+	12	[-]	RETURN   	0 1
+constants (5) for 00000207B44C6E60:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"StopTimer"
+	4	"TimerFlee"
+	5	"FindTargetOrMove"
+locals (0) for 00000207B44C6E60:
+upvalues (0) for 00000207B44C6E60:
+
+function <?:301,308> (14 instructions, 56 bytes at 00000207B44C7B30)
+0 params, 4 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; MakeFleePoint
+	8	[-]	CALL     	1 1 2
+	9	[-]	SETGLOBAL	1 -3	; fleePoint
+	10	[-]	GETGLOBAL	1 -5	; SetStateAndMove
+	11	[-]	GETGLOBAL	2 -6	; AI_FLEEING
+	12	[-]	GETGLOBAL	3 -3	; fleePoint
+	13	[-]	CALL     	1 3 1
+	14	[-]	RETURN   	0 1
+constants (6) for 00000207B44C7B30:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"fleePoint"
+	4	"MakeFleePoint"
+	5	"SetStateAndMove"
+	6	"AI_FLEEING"
+locals (0) for 00000207B44C7B30:
+upvalues (0) for 00000207B44C7B30:
+
+function <?:311,321> (12 instructions, 48 bytes at 00000207B44C7C30)
+0 params, 3 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; NetSetState
+	8	[-]	GETGLOBAL	2 -4	; AI_IDLE
+	9	[-]	CALL     	1 2 1
+	10	[-]	GETGLOBAL	1 -5	; FindTargetOrMove
+	11	[-]	CALL     	1 1 1
+	12	[-]	RETURN   	0 1
+constants (5) for 00000207B44C7C30:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"NetSetState"
+	4	"AI_IDLE"
+	5	"FindTargetOrMove"
+locals (0) for 00000207B44C7C30:
+upvalues (0) for 00000207B44C7C30:
+
+function <?:325,335> (12 instructions, 48 bytes at 00000207B44C7CB0)
+0 params, 3 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; NetSetState
+	8	[-]	GETGLOBAL	2 -4	; AI_IDLE
+	9	[-]	CALL     	1 2 1
+	10	[-]	GETGLOBAL	1 -5	; FindTargetOrMove
+	11	[-]	CALL     	1 1 1
+	12	[-]	RETURN   	0 1
+constants (5) for 00000207B44C7CB0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"NetSetState"
+	4	"AI_IDLE"
+	5	"FindTargetOrMove"
+locals (0) for 00000207B44C7CB0:
+upvalues (0) for 00000207B44C7CB0:
+
+function <?:340,351> (21 instructions, 84 bytes at 00000207B44C7530)
+0 params, 3 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -1	; GetState
+	8	[-]	CALL     	1 1 2
+	9	[-]	GETGLOBAL	2 -3	; AI_ATTACKMOVE_ATTACKING
+	10	[-]	EQ       	0 1 2
+	11	[-]	JMP      	9	; to 21
+	12	[-]	GETGLOBAL	1 -4	; IsMoving
+	13	[-]	CALL     	1 1 2
+	14	[-]	TEST     	1 0 0
+	15	[-]	JMP      	5	; to 21
+	16	[-]	GETGLOBAL	1 -5	; AddToIgnore
+	17	[-]	LOADK    	2 -6	; 0.1
+	18	[-]	CALL     	1 2 1
+	19	[-]	GETGLOBAL	1 -7	; FindTargetOrMove
+	20	[-]	CALL     	1 1 1
+	21	[-]	RETURN   	0 1
+constants (7) for 00000207B44C7530:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"AI_ATTACKMOVE_ATTACKING"
+	4	"IsMoving"
+	5	"AddToIgnore"
+	6	0.1
+	7	"FindTargetOrMove"
+locals (0) for 00000207B44C7530:
+upvalues (0) for 00000207B44C7530:
+
+function <?:354,361> (9 instructions, 36 bytes at 00000207B44C7BB0)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetState
+	2	[-]	CALL     	1 1 2
+	3	[-]	GETGLOBAL	2 -2	; AI_HALTED
+	4	[-]	EQ       	0 1 2
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	LOADBOOL 	2 1 0
+	8	[-]	RETURN   	2 2
+	9	[-]	RETURN   	0 1
+constants (2) for 00000207B44C7BB0:
+	1	"GetState"
+	2	"AI_HALTED"
+locals (0) for 00000207B44C7BB0:
+upvalues (0) for 00000207B44C7BB0:
+
+function <?:364,377> (25 instructions, 100 bytes at 00000207B44C72B0)
+1 param, 3 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetState
+	2	[-]	CALL     	1 1 2
+	3	[-]	GETGLOBAL	2 -2	; AI_HALTED
+	4	[-]	EQ       	0 1 2
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	2 -3	; AI_TAUNTED
+	8	[-]	EQ       	1 1 2
+	9	[-]	JMP      	13	; to 23
+	10	[-]	GETGLOBAL	2 -4	; AI_BERSERK
+	11	[-]	EQ       	1 1 2
+	12	[-]	JMP      	10	; to 23
+	13	[-]	GETGLOBAL	2 -5	; AI_FEARED
+	14	[-]	EQ       	1 1 2
+	15	[-]	JMP      	7	; to 23
+	16	[-]	GETGLOBAL	2 -6	; AI_FLEEING
+	17	[-]	EQ       	1 1 2
+	18	[-]	JMP      	4	; to 23
+	19	[-]	GETGLOBAL	2 -7	; FindTargetOrMove
+	20	[-]	CALL     	2 1 1
+	21	[-]	LOADBOOL 	2 0 0
+	22	[-]	RETURN   	2 2
+	23	[-]	LOADBOOL 	2 1 0
+	24	[-]	RETURN   	2 2
+	25	[-]	RETURN   	0 1
+constants (7) for 00000207B44C72B0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"AI_TAUNTED"
+	4	"AI_BERSERK"
+	5	"AI_FEARED"
+	6	"AI_FLEEING"
+	7	"FindTargetOrMove"
+locals (0) for 00000207B44C72B0:
+upvalues (0) for 00000207B44C72B0:
+
+function <?:380,389> (14 instructions, 56 bytes at 00000207B44C7230)
+0 params, 3 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; NetSetState
+	8	[-]	GETGLOBAL	2 -4	; AI_IDLE
+	9	[-]	CALL     	1 2 1
+	10	[-]	GETGLOBAL	1 -5	; TimerDistanceScan
+	11	[-]	CALL     	1 1 1
+	12	[-]	GETGLOBAL	1 -6	; TimerCheckAttack
+	13	[-]	CALL     	1 1 1
+	14	[-]	RETURN   	0 1
+constants (6) for 00000207B44C7230:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"NetSetState"
+	4	"AI_IDLE"
+	5	"TimerDistanceScan"
+	6	"TimerCheckAttack"
+locals (0) for 00000207B44C7230:
+upvalues (0) for 00000207B44C7230:
+
+function <?:393,402> (19 instructions, 76 bytes at 00000207B44C7DB0)
+0 params, 2 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; StopTimer
+	2	[-]	LOADK    	1 -2	; "TimerFindEnemies"
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -1	; StopTimer
+	5	[-]	LOADK    	1 -3	; "TimerMoveForward"
+	6	[-]	CALL     	0 2 1
+	7	[-]	GETGLOBAL	0 -1	; StopTimer
+	8	[-]	LOADK    	1 -4	; "TimerAntiKite"
+	9	[-]	CALL     	0 2 1
+	10	[-]	GETGLOBAL	0 -1	; StopTimer
+	11	[-]	LOADK    	1 -5	; "TimerFeared"
+	12	[-]	CALL     	0 2 1
+	13	[-]	GETGLOBAL	0 -6	; TurnOffAutoAttack
+	14	[-]	GETGLOBAL	1 -7	; STOPREASON_IMMEDIATELY
+	15	[-]	CALL     	0 2 1
+	16	[-]	GETGLOBAL	0 -8	; NetSetState
+	17	[-]	GETGLOBAL	1 -9	; AI_HALTED
+	18	[-]	CALL     	0 2 1
+	19	[-]	RETURN   	0 1
+constants (9) for 00000207B44C7DB0:
+	1	"StopTimer"
+	2	"TimerFindEnemies"
+	3	"TimerMoveForward"
+	4	"TimerAntiKite"
+	5	"TimerFeared"
+	6	"TurnOffAutoAttack"
+	7	"STOPREASON_IMMEDIATELY"
+	8	"NetSetState"
+	9	"AI_HALTED"
+locals (0) for 00000207B44C7DB0:
+upvalues (0) for 00000207B44C7DB0:

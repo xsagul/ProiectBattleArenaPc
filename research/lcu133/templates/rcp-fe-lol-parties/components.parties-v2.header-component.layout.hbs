@@ -1,0 +1,59 @@
+<div class="lobby-header-overlay">
+</>
+<div class="lobby-header-content">
+  <div class="lobby-back-button-container">
+    <div class="lobby-back-button">
+      {{#uikit-tooltip tooltipPosition="right" type="system"}}
+        <lol-uikit-content-block type="tooltip-system">
+          <p>
+            {{tra.parties_button_change_mode}}
+          </>
+        </>
+      {{/uikit-tooltip}}
+      {{generic-button baseImgPath="/fe/lol-parties/button-back-arrow.png" overImgPath="/fe/lol-parties/button-back-arrow-over.png" downImgPath="/fe/lol-parties/button-back-arrow-down.png" disabledImgPath="/fe/lol-parties/button-back-arrow-disabled.png" onClickSound="/fe/lol-uikit/sfx-uikit-button-gold-click.ogg" onHoverSound="/fe/lol-uikit/sfx-uikit-button-gold-hover.ogg" onClick=(action this "cancelFlow") isEnabled=isGameModeSelectionEnabled}}
+    </>
+    <div class="lobby-header-vertical-line">
+    </>
+  </>
+  <div class="lobby-header-map-icon {{mapBackgroundClass}}">
+  </>
+  <div class="lobby-header-description">
+    {{#unless isTFT}}
+      <div class="lobby-header-detail">
+        {{mapNameShorthand}}
+      </>
+      <div class="lobby-header-separator">
+      </>
+    {{/unless}}
+    <div class="lobby-header-detail">
+      {{queueName}}
+    </>
+    {{#unless isTFT}}
+      <div class="lobby-header-separator">
+      </>
+      <div class="lobby-header-detail">
+        {{pickTypeName}}
+      </>
+    {{/unless}}
+  </>
+  {{#unless isTFT}}
+    <div class="lobby-header-tooltip">
+      {{v2-point-eligibility selected=selected mapBackgroundClass=mapBackgroundClass mapName=mapName queueName=queueName pickTypeName=pickTypeName}}
+    </>
+  {{/unless}}
+  {{#if hasGameModeTutorial}}
+    <lol-uikit-info-icon class="show-tutorial-button lobby-header-interactable" onclick={{action this "showGameModeTutorial"}}>
+    </>
+  {{/if}}
+  <div class="lobby-header-buttons-container">
+    {{#if patchNotesUrl}}
+      <a href="{{tftPatchNotesUrl}}" target="_new" class="patch-notes-button">
+        {{tra.tft_patch_notes}}
+      </>
+    {{/if}}
+    {{social-leaderboard-button selected=selected queueType=selected.queue.type currentPlayer=currentPlayer}}
+    {{#if lobbiesService.isOpenPartyEnabled}}
+      {{open-party-toggle showingState=showingState}}
+    {{/if}}
+  </>
+</>

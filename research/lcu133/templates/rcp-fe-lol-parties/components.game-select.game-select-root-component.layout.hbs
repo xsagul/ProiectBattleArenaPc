@@ -1,0 +1,16 @@
+<div class="parties-game-select-wrapper">
+  {{category-select currentCategory=currentCategory selected=selected queues=queues}}
+  {{#if needsAdditionalGameConfig}}
+    {{custom-game-setup showingState=showingState currentMode=currentMode selected=selected queues=queues}}
+  {{else}}
+    {{#if isJoiningCustomGame}}
+      {{custom-game-list}}
+    {{else}}
+      {{game-type-select showingState=showingState currentCategory=currentCategory selected=selected queues=queues}}
+    {{/if}}
+  {{/if}}
+</>
+{{game-select-footer showingState=showingState selected=selected}}
+<div style="display: none">
+  {{customGamesService.subcategoriesObserver}}
+</>

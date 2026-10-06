@@ -1,0 +1,15 @@
+<span class="first-pick {{if showFirstPick "visible" "removed"}}">
+  {{tra.first_pick}}
+</>
+<div class="party {{if shouldShow "visible" "hidden"}}">
+  {{#each summoners as |summoner|}}
+    <div class="summoner-wrapper {{if summoner.isPlaceholder "removed" "visible"}} {{if isLeft "left" "right"}}">
+      <div class="lines {{if showPositionAssignment "hidden" "visible"}}">
+      </>
+      {{summoner-object team=team summoner=summoner currentSummonerChampionName=currentSummoner.champion.name pickOrderSwappingEnabled=pickOrderSwappingEnabled inFinalizationPhase=inFinalizationPhase activeSwap=activeSwap activeTrade=activeTrade summonerId=summoner.summonerId uxSettings=uxSettings jmxSettings=jmxSettings showPositionAssignment=showPositionAssignment isLeft=isLeft viewSkin=viewSkin championChestAvailabilityMap=championChestAvailabilityMap shouldShowChestAvailability=shouldShowChestAvailability boosterSummonerName=boosterSummonerName isUILockedForGameStart=isUILockedForGameStart isCustomGame=isCustomGame recordDidRequestSucceed=recordDidRequestSucceed}}
+    </>
+  {{/each}}
+  <div class="summoner-timer-wrapper">
+    {{summoner-timer isInfinite=timer.isInfinite timerCellId=timerCellId hideSummonerTimer=hideSummonerTimer formattedTime=formattedTime isMyTeam=isLeft}}
+  </>
+</>

@@ -1,0 +1,393 @@
+
+main <?:0,0> (111 instructions, 444 bytes at 00000244EC8C33C0)
+0+ params, 31 slots, 0 upvalues, 0 locals, 91 constants, 5 functions
+	1	[-]	NEWTABLE 	0 0 3
+	2	[-]	NEWTABLE 	1 0 2
+	3	[-]	SETTABLE 	1 -3 -4	; "Creator" "rsweet"
+	4	[-]	NEWTABLE 	2 22 0
+	5	[-]	LOADK    	3 -6	; "EventType1"
+	6	[-]	LOADK    	4 -7	; "RewardType1"
+	7	[-]	LOADK    	5 -8	; "WinningTeam1"
+	8	[-]	LOADK    	6 -9	; "StartTime1"
+	9	[-]	LOADK    	7 -10	; "EndTime1"
+	10	[-]	LOADK    	8 -11	; "GoldDifferentialStart1"
+	11	[-]	LOADK    	9 -12	; "GoldDifferentialEnd1"
+	12	[-]	LOADK    	10 -13	; "EventType2"
+	13	[-]	LOADK    	11 -14	; "RewardType2"
+	14	[-]	LOADK    	12 -15	; "WinningTeam2"
+	15	[-]	LOADK    	13 -16	; "StartTime2"
+	16	[-]	LOADK    	14 -17	; "EndTime2"
+	17	[-]	LOADK    	15 -18	; "GoldDifferentialStart2"
+	18	[-]	LOADK    	16 -19	; "GoldDifferentialEnd2"
+	19	[-]	LOADK    	17 -20	; "EventType3"
+	20	[-]	LOADK    	18 -21	; "RewardType3"
+	21	[-]	LOADK    	19 -22	; "WinningTeam3"
+	22	[-]	LOADK    	20 -23	; "StartTime3"
+	23	[-]	LOADK    	21 -24	; "EndTime3"
+	24	[-]	LOADK    	22 -25	; "GoldDifferentialStart3"
+	25	[-]	LOADK    	23 -26	; "GoldDifferentialEnd3"
+	26	[-]	LOADK    	24 -27	; "EventType4"
+	27	[-]	LOADK    	25 -28	; "RewardType4"
+	28	[-]	LOADK    	26 -29	; "WinningTeam4"
+	29	[-]	LOADK    	27 -30	; "StartTime4"
+	30	[-]	LOADK    	28 -31	; "EndTime4"
+	31	[-]	LOADK    	29 -32	; "GoldDifferentialStart4"
+	32	[-]	LOADK    	30 -33	; "GoldDifferentialEnd4"
+	33	[-]	SETLIST  	2 28 1	; 1
+	34	[-]	SETTABLE 	1 -5 2	; "AccumulateVariables" -
+	35	[-]	SETTABLE 	0 -2 1	; "NexusBlitzEventsData" -
+	36	[-]	NEWTABLE 	1 0 2
+	37	[-]	SETTABLE 	1 -3 -4	; "Creator" "rsweet"
+	38	[-]	NEWTABLE 	2 20 0
+	39	[-]	LOADK    	3 -35	; "P01UltSelection"
+	40	[-]	LOADK    	4 -36	; "P01UltChoices"
+	41	[-]	LOADK    	5 -37	; "P02UltSelection"
+	42	[-]	LOADK    	6 -38	; "P02UltChoices"
+	43	[-]	LOADK    	7 -39	; "P03UltSelection"
+	44	[-]	LOADK    	8 -40	; "P03UltChoices"
+	45	[-]	LOADK    	9 -41	; "P04UltSelection"
+	46	[-]	LOADK    	10 -42	; "P04UltChoices"
+	47	[-]	LOADK    	11 -43	; "P05UltSelection"
+	48	[-]	LOADK    	12 -44	; "P05UltChoices"
+	49	[-]	LOADK    	13 -45	; "P06UltSelection"
+	50	[-]	LOADK    	14 -46	; "P06UltChoices"
+	51	[-]	LOADK    	15 -47	; "P07UltSelection"
+	52	[-]	LOADK    	16 -48	; "P07UltChoices"
+	53	[-]	LOADK    	17 -49	; "P08UltSelection"
+	54	[-]	LOADK    	18 -50	; "P08UltChoices"
+	55	[-]	LOADK    	19 -51	; "P09UltSelection"
+	56	[-]	LOADK    	20 -52	; "P09UltChoices"
+	57	[-]	LOADK    	21 -53	; "P10UltSelection"
+	58	[-]	LOADK    	22 -54	; "P10UltChoices"
+	59	[-]	LOADK    	23 -55	; "OrderDragonBuffDamage"
+	60	[-]	LOADK    	24 -56	; "ChaosDragonBuffDamage"
+	61	[-]	LOADK    	25 -57	; "OrderDragonSoulRevives"
+	62	[-]	LOADK    	26 -58	; "ChaosDragonSoulRevives"
+	63	[-]	SETLIST  	2 24 1	; 1
+	64	[-]	SETTABLE 	1 -5 2	; "AccumulateVariables" -
+	65	[-]	SETTABLE 	0 -34 1	; "UltBookGameData" -
+	66	[-]	NEWTABLE 	1 0 2
+	67	[-]	SETTABLE 	1 -3 -60	; "Creator" "dleaver"
+	68	[-]	NEWTABLE 	2 20 0
+	69	[-]	LOADK    	3 -61	; "Player1_TotalActionsPerformed"
+	70	[-]	LOADK    	4 -62	; "Player1_PermanentAFKProtectionEarned"
+	71	[-]	LOADK    	5 -63	; "Player1_PercentTimeSpentInactive"
+	72	[-]	LOADK    	6 -64	; "Player2_TotalActionsPerformed"
+	73	[-]	LOADK    	7 -65	; "Player2_PermanentAFKProtectionEarned"
+	74	[-]	LOADK    	8 -66	; "Player2_PercentTimeSpentInactive"
+	75	[-]	LOADK    	9 -67	; "Player3_TotalActionsPerformed"
+	76	[-]	LOADK    	10 -68	; "Player3_PermanentAFKProtectionEarned"
+	77	[-]	LOADK    	11 -69	; "Player3_PercentTimeSpentInactive"
+	78	[-]	LOADK    	12 -70	; "Player4_TotalActionsPerformed"
+	79	[-]	LOADK    	13 -71	; "Player4_PermanentAFKProtectionEarned"
+	80	[-]	LOADK    	14 -72	; "Player4_PercentTimeSpentInactive"
+	81	[-]	LOADK    	15 -73	; "Player5_TotalActionsPerformed"
+	82	[-]	LOADK    	16 -74	; "Player5_PermanentAFKProtectionEarned"
+	83	[-]	LOADK    	17 -75	; "Player5_PercentTimeSpentInactive"
+	84	[-]	LOADK    	18 -76	; "Player6_TotalActionsPerformed"
+	85	[-]	LOADK    	19 -77	; "Player6_PermanentAFKProtectionEarned"
+	86	[-]	LOADK    	20 -78	; "Player6_PercentTimeSpentInactive"
+	87	[-]	LOADK    	21 -79	; "Player7_TotalActionsPerformed"
+	88	[-]	LOADK    	22 -80	; "Player7_PermanentAFKProtectionEarned"
+	89	[-]	LOADK    	23 -81	; "Player7_PercentTimeSpentInactive"
+	90	[-]	LOADK    	24 -82	; "Player8_TotalActionsPerformed"
+	91	[-]	LOADK    	25 -83	; "Player8_PermanentAFKProtectionEarned"
+	92	[-]	LOADK    	26 -84	; "Player8_PercentTimeSpentInactive"
+	93	[-]	SETLIST  	2 24 1	; 1
+	94	[-]	SETTABLE 	1 -5 2	; "AccumulateVariables" -
+	95	[-]	SETTABLE 	0 -59 1	; "TFTPlayerAFKCheckExploration" -
+	96	[-]	SETGLOBAL	0 -1	; DataLoggingCategories
+	97	[-]	NEWTABLE 	0 0 0
+	98	[-]	SETGLOBAL	0 -85	; DataLoggingErroredCategories
+	99	[-]	CLOSURE  	0 0	; 00000244EC8C1950
+	100	[-]	SETGLOBAL	0 -86	; DataLoggingCategoryError
+	101	[-]	CLOSURE  	0 1	; 00000244EC8C1A40
+	102	[-]	SETGLOBAL	0 -87	; GetDataLoggingCategory
+	103	[-]	CLOSURE  	0 2	; 00000244EC8C1B20
+	104	[-]	SETGLOBAL	0 -88	; GetDataLoggingCategoryValueNames
+	105	[-]	CLOSURE  	0 3	; 00000244EC8C3DC0
+	106	[-]	SETGLOBAL	0 -89	; GetDataLoggingSampleValueNames
+	107	[-]	NEWTABLE 	0 0 0
+	108	[-]	SETGLOBAL	0 -90	; DataLoggingConstructedVariableNames
+	109	[-]	CLOSURE  	0 4	; 00000244EC8C3E40
+	110	[-]	SETGLOBAL	0 -91	; GetDataLoggingSampleVariableName
+	111	[-]	RETURN   	0 1
+constants (91) for 00000244EC8C33C0:
+	1	"DataLoggingCategories"
+	2	"NexusBlitzEventsData"
+	3	"Creator"
+	4	"rsweet"
+	5	"AccumulateVariables"
+	6	"EventType1"
+	7	"RewardType1"
+	8	"WinningTeam1"
+	9	"StartTime1"
+	10	"EndTime1"
+	11	"GoldDifferentialStart1"
+	12	"GoldDifferentialEnd1"
+	13	"EventType2"
+	14	"RewardType2"
+	15	"WinningTeam2"
+	16	"StartTime2"
+	17	"EndTime2"
+	18	"GoldDifferentialStart2"
+	19	"GoldDifferentialEnd2"
+	20	"EventType3"
+	21	"RewardType3"
+	22	"WinningTeam3"
+	23	"StartTime3"
+	24	"EndTime3"
+	25	"GoldDifferentialStart3"
+	26	"GoldDifferentialEnd3"
+	27	"EventType4"
+	28	"RewardType4"
+	29	"WinningTeam4"
+	30	"StartTime4"
+	31	"EndTime4"
+	32	"GoldDifferentialStart4"
+	33	"GoldDifferentialEnd4"
+	34	"UltBookGameData"
+	35	"P01UltSelection"
+	36	"P01UltChoices"
+	37	"P02UltSelection"
+	38	"P02UltChoices"
+	39	"P03UltSelection"
+	40	"P03UltChoices"
+	41	"P04UltSelection"
+	42	"P04UltChoices"
+	43	"P05UltSelection"
+	44	"P05UltChoices"
+	45	"P06UltSelection"
+	46	"P06UltChoices"
+	47	"P07UltSelection"
+	48	"P07UltChoices"
+	49	"P08UltSelection"
+	50	"P08UltChoices"
+	51	"P09UltSelection"
+	52	"P09UltChoices"
+	53	"P10UltSelection"
+	54	"P10UltChoices"
+	55	"OrderDragonBuffDamage"
+	56	"ChaosDragonBuffDamage"
+	57	"OrderDragonSoulRevives"
+	58	"ChaosDragonSoulRevives"
+	59	"TFTPlayerAFKCheckExploration"
+	60	"dleaver"
+	61	"Player1_TotalActionsPerformed"
+	62	"Player1_PermanentAFKProtectionEarned"
+	63	"Player1_PercentTimeSpentInactive"
+	64	"Player2_TotalActionsPerformed"
+	65	"Player2_PermanentAFKProtectionEarned"
+	66	"Player2_PercentTimeSpentInactive"
+	67	"Player3_TotalActionsPerformed"
+	68	"Player3_PermanentAFKProtectionEarned"
+	69	"Player3_PercentTimeSpentInactive"
+	70	"Player4_TotalActionsPerformed"
+	71	"Player4_PermanentAFKProtectionEarned"
+	72	"Player4_PercentTimeSpentInactive"
+	73	"Player5_TotalActionsPerformed"
+	74	"Player5_PermanentAFKProtectionEarned"
+	75	"Player5_PercentTimeSpentInactive"
+	76	"Player6_TotalActionsPerformed"
+	77	"Player6_PermanentAFKProtectionEarned"
+	78	"Player6_PercentTimeSpentInactive"
+	79	"Player7_TotalActionsPerformed"
+	80	"Player7_PermanentAFKProtectionEarned"
+	81	"Player7_PercentTimeSpentInactive"
+	82	"Player8_TotalActionsPerformed"
+	83	"Player8_PermanentAFKProtectionEarned"
+	84	"Player8_PercentTimeSpentInactive"
+	85	"DataLoggingErroredCategories"
+	86	"DataLoggingCategoryError"
+	87	"GetDataLoggingCategory"
+	88	"GetDataLoggingCategoryValueNames"
+	89	"GetDataLoggingSampleValueNames"
+	90	"DataLoggingConstructedVariableNames"
+	91	"GetDataLoggingSampleVariableName"
+locals (0) for 00000244EC8C33C0:
+upvalues (0) for 00000244EC8C33C0:
+
+function <?:108,113> (14 instructions, 56 bytes at 00000244EC8C1950)
+2 params, 7 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; DataLoggingErroredCategories
+	2	[-]	GETTABLE 	2 2 0
+	3	[-]	EQ       	0 2 -2	; - nil
+	4	[-]	JMP      	9	; to 14
+	5	[-]	GETGLOBAL	2 -1	; DataLoggingErroredCategories
+	6	[-]	SETTABLE 	2 0 -3	; - 1
+	7	[-]	GETGLOBAL	2 -4	; DebugPrintToChat
+	8	[-]	LOADK    	3 -5	; "DataLogging category "
+	9	[-]	MOVE     	4 0
+	10	[-]	LOADK    	5 -6	; ": "
+	11	[-]	MOVE     	6 1
+	12	[-]	CONCAT   	3 3 6
+	13	[-]	CALL     	2 2 1
+	14	[-]	RETURN   	0 1
+constants (6) for 00000244EC8C1950:
+	1	"DataLoggingErroredCategories"
+	2	nil
+	3	1
+	4	"DebugPrintToChat"
+	5	"DataLogging category "
+	6	": "
+locals (0) for 00000244EC8C1950:
+upvalues (0) for 00000244EC8C1950:
+
+function <?:115,126> (12 instructions, 48 bytes at 00000244EC8C1A40)
+1 param, 5 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; DataLoggingCategories
+	2	[-]	GETTABLE 	1 1 0
+	3	[-]	EQ       	1 1 -2	; - nil
+	4	[-]	JMP      	2	; to 7
+	5	[-]	SETTABLE 	1 -3 0	; "Name" -
+	6	[-]	JMP      	4	; to 11
+	7	[-]	GETGLOBAL	2 -4	; DataLoggingCategoryError
+	8	[-]	MOVE     	3 0
+	9	[-]	LOADK    	4 -5	; "Missing Category"
+	10	[-]	CALL     	2 3 1
+	11	[-]	RETURN   	1 2
+	12	[-]	RETURN   	0 1
+constants (5) for 00000244EC8C1A40:
+	1	"DataLoggingCategories"
+	2	nil
+	3	"Name"
+	4	"DataLoggingCategoryError"
+	5	"Missing Category"
+locals (0) for 00000244EC8C1A40:
+upvalues (0) for 00000244EC8C1A40:
+
+function <?:128,164> (62 instructions, 248 bytes at 00000244EC8C1B20)
+3 params, 16 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	NEWTABLE 	3 0 0
+	2	[-]	GETTABLE 	4 0 -1	; "AccumulateVariables"
+	3	[-]	EQ       	1 4 -2	; - nil
+	4	[-]	JMP      	17	; to 22
+	5	[-]	GETGLOBAL	4 -3	; ipairs
+	6	[-]	GETTABLE 	5 0 -1	; "AccumulateVariables"
+	7	[-]	CALL     	4 2 4
+	8	[-]	JMP      	11	; to 20
+	9	[-]	LEN      	9 3
+	10	[-]	LT       	0 9 1
+	11	[-]	JMP      	4	; to 16
+	12	[-]	LEN      	9 3
+	13	[-]	ADD      	9 9 -4	; - 1
+	14	[-]	SETTABLE 	3 9 8
+	15	[-]	JMP      	4	; to 20
+	16	[-]	GETGLOBAL	9 -5	; DataLoggingCategoryError
+	17	[-]	GETTABLE 	10 0 -6	; "Name"
+	18	[-]	LOADK    	11 -7	; "Too many variables"
+	19	[-]	CALL     	9 3 1
+	20	[-]	TFORLOOP 	4 2
+	21	[-]	JMP      	-13	; to 9
+	22	[-]	LOADK    	4 -8	; 0
+	23	[-]	GETTABLE 	5 0 -9	; "SampleVariables"
+	24	[-]	EQ       	1 5 -2	; - nil
+	25	[-]	JMP      	34	; to 60
+	26	[-]	LEN      	5 3
+	27	[-]	SUB      	5 1 5
+	28	[-]	GETTABLE 	6 0 -9	; "SampleVariables"
+	29	[-]	LEN      	6 6
+	30	[-]	LEN      	7 3
+	31	[-]	SETTABLE 	3 -10 7	; "SampleStartIndex" -
+	32	[-]	SETTABLE 	3 -11 6	; "SampleValueCount" -
+	33	[-]	LT       	0 4 2
+	34	[-]	JMP      	19	; to 54
+	35	[-]	LEN      	7 3
+	36	[-]	ADD      	7 7 6
+	37	[-]	LT       	0 7 1
+	38	[-]	JMP      	15	; to 54
+	39	[-]	ADD      	4 4 -4	; - 1
+	40	[-]	GETGLOBAL	7 -3	; ipairs
+	41	[-]	GETTABLE 	8 0 -9	; "SampleVariables"
+	42	[-]	CALL     	7 2 4
+	43	[-]	JMP      	7	; to 51
+	44	[-]	LEN      	12 3
+	45	[-]	ADD      	12 12 -4	; - 1
+	46	[-]	GETGLOBAL	13 -12	; GetDataLoggingSampleVariableName
+	47	[-]	MOVE     	14 11
+	48	[-]	MOVE     	15 4
+	49	[-]	CALL     	13 3 2
+	50	[-]	SETTABLE 	3 12 13
+	51	[-]	TFORLOOP 	7 2
+	52	[-]	JMP      	-9	; to 44
+	53	[-]	JMP      	-21	; to 33
+	54	[-]	EQ       	0 4 -8	; - 0
+	55	[-]	JMP      	4	; to 60
+	56	[-]	GETGLOBAL	7 -5	; DataLoggingCategoryError
+	57	[-]	GETTABLE 	8 0 -6	; "Name"
+	58	[-]	LOADK    	9 -13	; "No room for samples"
+	59	[-]	CALL     	7 3 1
+	60	[-]	SETTABLE 	3 -14 4	; "SampleCount" -
+	61	[-]	RETURN   	3 2
+	62	[-]	RETURN   	0 1
+constants (14) for 00000244EC8C1B20:
+	1	"AccumulateVariables"
+	2	nil
+	3	"ipairs"
+	4	1
+	5	"DataLoggingCategoryError"
+	6	"Name"
+	7	"Too many variables"
+	8	0
+	9	"SampleVariables"
+	10	"SampleStartIndex"
+	11	"SampleValueCount"
+	12	"GetDataLoggingSampleVariableName"
+	13	"No room for samples"
+	14	"SampleCount"
+locals (0) for 00000244EC8C1B20:
+upvalues (0) for 00000244EC8C1B20:
+
+function <?:166,176> (19 instructions, 76 bytes at 00000244EC8C3DC0)
+2 params, 12 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	NEWTABLE 	2 0 0
+	2	[-]	GETTABLE 	3 0 -1	; "SampleVariables"
+	3	[-]	EQ       	1 3 -2	; - nil
+	4	[-]	JMP      	13	; to 18
+	5	[-]	GETGLOBAL	3 -3	; ipairs
+	6	[-]	GETTABLE 	4 0 -1	; "SampleVariables"
+	7	[-]	CALL     	3 2 4
+	8	[-]	JMP      	7	; to 16
+	9	[-]	LEN      	8 2
+	10	[-]	ADD      	8 8 -4	; - 1
+	11	[-]	GETGLOBAL	9 -5	; GetDataLoggingSampleVariableName
+	12	[-]	MOVE     	10 7
+	13	[-]	MOVE     	11 1
+	14	[-]	CALL     	9 3 2
+	15	[-]	SETTABLE 	2 8 9
+	16	[-]	TFORLOOP 	3 2
+	17	[-]	JMP      	-9	; to 9
+	18	[-]	RETURN   	2 2
+	19	[-]	RETURN   	0 1
+constants (5) for 00000244EC8C3DC0:
+	1	"SampleVariables"
+	2	nil
+	3	"ipairs"
+	4	1
+	5	"GetDataLoggingSampleVariableName"
+locals (0) for 00000244EC8C3DC0:
+upvalues (0) for 00000244EC8C3DC0:
+
+function <?:181,188> (15 instructions, 60 bytes at 00000244EC8C3E40)
+2 params, 5 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	MOVE     	2 0
+	2	[-]	GETGLOBAL	3 -1	; tostring
+	3	[-]	MOVE     	4 1
+	4	[-]	CALL     	3 2 2
+	5	[-]	CONCAT   	2 2 3
+	6	[-]	GETGLOBAL	3 -2	; DataLoggingConstructedVariableNames
+	7	[-]	GETTABLE 	3 3 2
+	8	[-]	EQ       	0 3 -3	; - nil
+	9	[-]	JMP      	2	; to 12
+	10	[-]	GETGLOBAL	3 -2	; DataLoggingConstructedVariableNames
+	11	[-]	SETTABLE 	3 2 2
+	12	[-]	GETGLOBAL	3 -2	; DataLoggingConstructedVariableNames
+	13	[-]	GETTABLE 	3 3 2
+	14	[-]	RETURN   	3 2
+	15	[-]	RETURN   	0 1
+constants (3) for 00000244EC8C3E40:
+	1	"tostring"
+	2	"DataLoggingConstructedVariableNames"
+	3	nil
+locals (0) for 00000244EC8C3E40:
+upvalues (0) for 00000244EC8C3E40:

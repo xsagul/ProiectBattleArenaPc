@@ -1,0 +1,14 @@
+struct 0x8afc50
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 1478, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 1149, in learn
+    sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc).learn()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 160, in __init__
+    self.fields = self.split(r)
+                  ^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 211, in split
+    assert cursor == r.used, f'{self.fn:#x}: fields end at {cursor}, the reader used {r.used}'
+           ^^^^^^^^^^^^^^^^
+AssertionError: 0x8afc50: fields end at 9, the reader used 10

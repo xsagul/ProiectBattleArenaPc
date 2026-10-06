@@ -1,0 +1,21 @@
+{{#if displayLeftArrow}}
+  <lol-uikit-arrow-button direction="left" class="reward-tracker-scrollable-arrow reward-tracker-scrollable-arrow-left" onmousedown={{action this "startScrolling" "left"}} onmouseup={{action this "stopScrolling"}} onmouseleave={{action this "stopScrolling"}}>
+  </>
+{{/if}}
+<lol-uikit-scrollable class="reward-tracker-scrollable" direction="horizontal" side-scroll-wheel="">
+  <div class="reward-tracker-reward-track">
+    {{#if showZeroIndicator}}
+      {{reward-zero-indicator progress=rewardTrackProgress}}
+    {{/if}}
+    {{#each rewardTrackItems as |reward index|}}
+      {{reward-item reward=reward startIndex=rewardTrackLevelStartIndex itemIndex=index progress=rewardTrackProgress maxLevel=passMaxLevel itemMouseEnter=itemMouseEnter itemClick=itemClick additionalTooltipData=additionalTooltipData rewardItemTooltipComponent=rewardItemTooltipComponent rewardItemTooltipClassName=rewardItemTooltipClassName isDisabled=isDisabled lowSpecEnabled=lowSpecEnabled}}
+    {{/each}}
+    {{#if isRepeating}}
+      {{reward-bonus-track mainTrackCompleted=isCompleted displayCurrentBonusIteration=displayCurrentBonusIteration rewardTrackBonusItems=rewardTrackBonusItems rewardTrackBonusProgress=rewardTrackBonusProgress bonusMaxLevel=bonusMaxLevel itemMouseEnter=itemMouseEnter itemClick=itemClick bonusItemClick=bonusItemClick additionalTooltipData=additionalTooltipData rewardItemTooltipComponent=rewardItemTooltipComponent rewardItemTooltipClassName=rewardItemTooltipClassName isDisabled=isDisabled lowSpecEnabled=lowSpecEnabled}}
+    {{/if}}
+  </>
+</>
+{{#if displayRightArrow}}
+  <lol-uikit-arrow-button direction="right" class="reward-tracker-scrollable-arrow reward-tracker-scrollable-arrow-right" onmousedown={{action this "startScrolling" "right"}} onmouseup={{action this "stopScrolling"}} onmouseleave={{action this "stopScrolling"}}>
+  </>
+{{/if}}

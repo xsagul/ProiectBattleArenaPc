@@ -1,0 +1,181 @@
+{
+  "name": "MissileMovementSpec",
+  "hash": "0x6b2cfb7d",
+  "interface": true,
+  "value": false,
+  "bases": [],
+  "since": null,
+  "removedIn": null,
+  "properties": [
+    {
+      "name": "0x03046674",
+      "hash": "0x03046674",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "since": "14.21"
+    },
+    {
+      "name": "mOffsetInitialTargetHeight",
+      "hash": "0xf20fdeef",
+      "ft": "F32",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null
+    },
+    {
+      "name": "mStartBoneName",
+      "hash": "0xb886d871",
+      "ft": "String",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null
+    },
+    {
+      "name": "mStartBoneSkinOverrides",
+      "hash": "0xa6cb1fa4",
+      "ft": "Map",
+      "kt": "U32",
+      "vt": "String",
+      "kh": null,
+      "khName": null,
+      "khKind": null
+    },
+    {
+      "name": "mStartDelay",
+      "hash": "0xa6d8df53",
+      "ft": "F32",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null
+    },
+    {
+      "name": "mTargetBoneName",
+      "hash": "0x95bb67b8",
+      "ft": "String",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null
+    },
+    {
+      "name": "mTargetHeightAugment",
+      "hash": "0x90d578dd",
+      "ft": "F32",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null
+    },
+    {
+      "name": "mTracksTarget",
+      "hash": "0x2df5584d",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null
+    },
+    {
+      "name": "mUseHeightOffsetAtEnd",
+      "hash": "0xd6a12457",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null
+    },
+    {
+      "name": "mVisualsTrackHiddenTargets",
+      "hash": "0xaa44f99e",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null
+    }
+  ],
+  "ancestorLevels": [],
+  "descendantTree": [
+    {
+      "name": "0xe0f036ce",
+      "children": []
+    },
+    {
+      "name": "AcceleratingMovement",
+      "children": [
+        {
+          "name": "DecelToLocationMovement",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "CircleMovement",
+      "children": []
+    },
+    {
+      "name": "FixedSpeedMovement",
+      "children": []
+    },
+    {
+      "name": "FixedTimeMovement",
+      "children": []
+    },
+    {
+      "name": "GenericSplineMovementSpec",
+      "children": [
+        {
+          "name": "FixedSpeedSplineMovement",
+          "children": []
+        },
+        {
+          "name": "FixedTimeSplineMovement",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "NullMovement",
+      "children": []
+    },
+    {
+      "name": "ParametricMovement",
+      "children": []
+    },
+    {
+      "name": "PhysicsMovement",
+      "children": []
+    },
+    {
+      "name": "SelectorMovement",
+      "children": []
+    },
+    {
+      "name": "SyncCircleMovement",
+      "children": []
+    },
+    {
+      "name": "TrackMouseMovement",
+      "children": []
+    },
+    {
+      "name": "WallFollowMovement",
+      "children": []
+    }
+  ]
+}

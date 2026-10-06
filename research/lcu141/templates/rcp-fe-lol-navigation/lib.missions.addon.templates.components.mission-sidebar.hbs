@@ -1,0 +1,27 @@
+<lol-uikit-navigation-bar id="missions-tab-bar" type="tabbed" selectedindex={{selectedSeriesIndex}} direction="down">
+  <lol-uikit-navigation-item class="mission-sidebar-button" onclick={{action this "setCurrentSeriesName" allMissionsSeries.internalName}}>
+    <img src="{{allMissionsSeries.media.trackerIconUrl}}" class="mission-sidebar-button-icon">
+    </>
+    <div class="mission-sidebar-unread {{if allMissionsSeries.hasUnviewed "visible"}}">
+    </>
+  </>
+  {{#each series as |a_series|}}
+    <lol-uikit-navigation-item class="mission-sidebar-button" onclick={{action this "setCurrentSeriesName" a_series.internalName}}>
+      <img src="{{a_series.trackerIconUrl}}" onerror="this.src='/fe/lol-navigation/MissionIcon.svg';" class="mission-sidebar-button-icon">
+      </>
+      <div class="mission-sidebar-unread {{if a_series.hasUnviewed "visible"}}">
+      </>
+    </>
+  {{/each}}
+  <div class="spacer">
+  </>
+  <div class="mission-completed-button" {{action this "openMissionLog" on="click" bubbles=false}}>
+  </>
+</>
+{{#if loadMissionLog}}
+  <div style="display:none;">
+  </>
+  <div class="mission-log" style="display:none;">
+    {{mission-log missions=completedMissions closeMissionLog=(action this "closeMissionLog") callbackObject=callbackObject}}
+  </>
+{{/if}}

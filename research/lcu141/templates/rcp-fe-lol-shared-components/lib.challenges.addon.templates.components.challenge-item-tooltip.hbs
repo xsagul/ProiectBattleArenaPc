@@ -1,0 +1,234 @@
+<div class="challenge-item-tooltip-header-container">
+  {{#unless isLegacy}}
+    <div class="challenge-item-tooltip-points-container">
+      {{#if backgroundImagePath}}
+        <img class="challenge-item-points-background" src="{{backgroundImagePath}}">
+        </>
+      {{/if}}
+      <div class="challenge-item-points {{pointsContainerTextSize}}">
+        {{challengeData.pointsAwarded}}
+      </>
+    </>
+  {{/unless}}
+  <div class="challenge-item-tooltip-map-container {{if isLegacy "legacy"}}">
+    <div class="challenge-item-tooltip-map-icon {{headerIconPath}}">
+    </>
+    <div>
+      {{txtHeaderIcon}}
+    </>
+  </>
+</>
+<div class="tooltip-content-container">
+  <div class="tooltip-icon-container">
+    <img class="tooltip-icon {{if isUnranked "unranked"}}" src="{{iconPath}}">
+    </>
+  </>
+  <div class="tooltip-details-container">
+    <div class="tooltip-title">
+      {{txtTitle}}
+    </>
+    <div class="tooltip-tier">
+      {{localizedChallengeLevel}}
+    </>
+    {{#if txtPositionPercentile}}
+      <div class="tooltip-position-percentile {{if challengeData.isApex "apex"}}">
+        <div class="icon-people">
+        </>
+        <div>
+          {{txtPositionPercentile}}
+        </>
+      </>
+    {{/if}}
+  </>
+</>
+{{#if shouldDisplayIsRetiring}}
+  <div class="retiring-container">
+    <img class="clock-icon" src="/fe/lol-static-assets/images/challenges-shared/icon-clock.svg">
+    </>
+    {{txtIsRetiring}}
+  </>
+{{/if}}
+<div class="tooltip-description">
+  {{sanitize txtDescription}}
+</>
+<div class="challenges-progress-bar-container {{unless showProgressBar "hide"}}">
+  <div class="challenges-progress-bar">
+    {{#if willAnimate}}
+      <div class="challenges-animated-progress-meter-fill" style="transform: scaleX({{progressBarFill}}%)">
+        <lol-uikit-lottie class="challenges-lottie-progress-meter-fill" src="/fe/lol-static-assets/lottie/challenges/challenges-card-tooltip-meter-fill.json">
+        </>
+      </>
+    {{/if}}
+    <div class="challenges-progress-meter-fill" style="transform: scaleX({{progressBarFill}}%)">
+    </>
+    <div class="challenges-progress-text">
+      {{#if shouldShowAnimatedProgressText}}
+        {{animatedCurrentValueText}}
+      {{else}}
+        {{progressDisplayCurrentValue}}
+      {{/if}}
+      /
+      {{progressDisplayNextValue}}
+    </>
+  </>
+</>
+{{#if showAchievedTime}}
+  <div class="tooltip-achieved-time">
+    {{txtCurrentLevelAchievedTime}}
+  </>
+{{/if}}
+{{#if showLeaderboard}}
+  <div class="tooltip-leaderboard-container">
+    <uikit-state-machine state="preloading" will-animate={{if willAnimate "true" "false"}}>
+      <uikit-states>
+        <uikit-state name="preloading" synchronous="">
+          <!-- Preload video -->
+          <uikit-transition next-state="animated">
+            <uikit-condition-parameter name="will-animate" value="true">
+            </>
+          </>
+          <uikit-behavior-media selector=".leaderboard-video-intro" preloading="">
+          </>
+        </>
+        <uikit-state name="animated" synchronous="">
+          <uikit-behavior-media selector=".leaderboard-video-intro" playing="">
+          </>
+        </>
+      </>
+      <uikit-video visible-state="animated" class="leaderboard-video-intro" data-type="animated" src="/fe/lol-static-assets/videos/challenges/challenges-tooltip-leaderboard-video-intro.webm" preload="">
+      </>
+    </>
+    <div class="leaderboard-progress-bar">
+      <div class="leaderboard-progress-meter-fill {{if willAnimate "hidden"}}" style="width: {{leaderboardProgressBarWidth}}%">
+      </>
+      <div class="animated-leaderboard-progress-meter-fill" style="width:100%">
+      </>
+      {{#unless isChallengerLeaderboardLeader}}
+        <div class="leaderboard-node next">
+          <img class="node-image {{if isCurrentLevelChallenger "crown"}}" src="{{nextNodeImagePath}}">
+          </>
+          {{#unless isCurrentLevelChallenger}}
+            <div class="node-text">
+              {{leaderboardNextThreshold}}
+            </>
+          {{/unless}}
+        </>
+      {{/unless}}
+      <div class="leaderboard-node current">
+        <img class="node-image" src="{{currentNodeImagePath}}">
+        </>
+        <div class="node-text">
+          {{leaderboardCurrentThreshold}}
+        </>
+      </>
+      <div class="current-position-wrapper" style="left: {{leaderboardProgressBarWidth}}%">
+        <div class="summoner-icon-wrapper">
+          <img class="summoner-icon" src="{{summonerIconPath}}">
+          </>
+          <div class="summoner-icon-border">
+          </>
+        </>
+        {{#unless isChallengerLeaderboardLeader}}
+          <div class="current-position-text">
+            {{leaderboardCurrentValue}}
+          </>
+        {{/unless}}
+      </>
+      {{#if isChallengerLeaderboardLeader}}
+        <div class="leaderboard-node next">
+          <img class="node-image isLeader" src="{{nextNodeImagePath}}">
+          </>
+        </>
+      {{/if}}
+    </>
+    <div class="apex-ladder-update-time-container">
+      {{txtApexLadderUpdateTime}}
+    </>
+  </>
+{{/if}}
+{{#if hasCapstoneParent}}
+  <div class="capstone-container">
+    <img class="capstone-icon" src="/fe/lol-static-assets/images/challenges-shared/icon-capstone.svg">
+    </>
+    {{parentName}}
+  </>
+  {{#if showNextLevelRewards}}
+    <div class="divider">
+    </>
+  {{/if}}
+{{/if}}
+{{#if showFriendsToCompare}}
+  <div class="challenge-item-horizontal-line">
+  </>
+  <div class="challenge-item-friends-container">
+    <div class="challenge-item-friends-icon-container">
+      {{#each friendsForDetailedComparisonIcons as |iconPath|}}
+        <div class="friends-icon-wrapper">
+          <img class="friends-profile-icon" src="{{iconPath}}">
+          </>
+          <div class="friends-icon-border">
+          </>
+        </>
+      {{/each}}
+    </>
+    <div class="challenge-item-friends-text">
+      {{sanitize txtFriends}}
+    </>
+  </>
+{{/if}}
+{{#if showComparison}}
+  <div class="comparison-horizontal-line">
+  </>
+  <div class="comparison-summoner-name">
+    {{player-name format="full" puuid=localSummonerPuuid gameName=localSummonerGameName tagLine=localSummonerTagLine summonerName=localSummonerSummonerName}}
+  </>
+  <div class="tooltip-content-container">
+    <div class="tooltip-icon-container">
+      <img class="tooltip-icon {{if isLocalUnranked "unranked"}}" src="{{localPlayerIconPath}}">
+      </>
+    </>
+    <div class="tooltip-details-container">
+      <div class="tooltip-title">
+        {{txtTitle}}
+      </>
+      <div class="tooltip-tier">
+        {{localizedLocalChallengeLevel}}
+      </>
+      {{#if showTxtLocalPositionPercentile}}
+        <div class="tooltip-position-percentile {{if isLocalApex "apex"}}">
+          <div class="icon-people">
+          </>
+          <div>
+            {{txtLocalPositionPercentile}}
+          </>
+        </>
+      {{/if}}
+    </>
+  </>
+  <div class="tooltip-achieved-time">
+    {{txtLocalCurrentLevelAchievedTime}}
+  </>
+{{/if}}
+{{#if showNextLevelRewards}}
+  <div class="challenge-item-horizontal-line">
+  </>
+  <div class="challenge-item-next-rewards-container">
+    <div class="challenge-item-next-rewards-header">
+      {{tra.challenge_next_level_rewards}}
+    </>
+    {{#each (-each-in nextLevelRewards) as |index reward|}}
+      <div class="challenge-item-reward-container">
+        <div class="challenge-item-reward-icon-container">
+          <img class="challenge-item-reward-icon" src="/fe/lol-static-assets/images/challenges-shared/icon_reward_{{reward.category}}.svg">
+          </>
+        </>
+        <div class="challenge-item-reward-content">
+          <div class="challenge-item-reward-value">
+            {{reward.text}}
+          </>
+        </>
+      </>
+    {{/each}}
+  </>
+{{/if}}
+{{challenge-item-footer challengeData=challengeData showLevelText=true isHidden=showComparison}}

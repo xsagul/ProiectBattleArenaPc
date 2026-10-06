@@ -1,0 +1,22 @@
+<lol-uikit-content-block type="dialog-large">
+  <h4>
+    {{tra.parties_queue_error_queue_dodge_header}}
+  </>
+  <hr class="heading-spacer">
+  </>
+  <div class="parties-queue-error-body">
+    <p>
+      {{queueErrorMessage}}
+    </>
+  </>
+  <div class="queue-dodge-timer {{if hasTimeRemaining "" "hidden"}}">
+    <p>
+      <h6 class="queue-dodge-time-remaining-label subhead">
+        {{tra.parties_queue_dodge_timer}}
+      </>
+      <h6 class="queue-dodge-time-remaining subhead">
+        {{timeRemainingFormatted}}
+      </>
+    </>
+  </>
+</>

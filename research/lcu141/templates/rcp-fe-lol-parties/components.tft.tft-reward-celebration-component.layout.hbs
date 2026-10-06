@@ -1,0 +1,37 @@
+<div class="rewards-container">
+  {{#each rewards as |reward|}}
+    {{#if selectable}}
+      <div onclick={{action this "selectReward" reward}} class="reward selectable 
+          {{if reward.isSelected "selected"}} 
+          {{if softSelectionMade "selection-made"}}">
+        <div class="brightener-bg">
+        </>
+        <div class="dimmer-bg">
+        </>
+        <div class="radial-glow">
+        </>
+        <div class="reward-icon {{reward.rewardType}}">
+          <img src={{reward.iconUrl}}>
+          </>
+        </>
+        <div class="reward-description-wrapper">
+          <div class="reward-description">
+            {{reward.description}}
+          </>
+        </>
+      </>
+    {{else}}
+      <div class="reward">
+        <div class="reward-icon {{reward.rewardType}}">
+          <img src={{reward.iconUrl}}>
+          </>
+        </>
+        <div class="reward-description-wrapper">
+          <div class="reward-description">
+            {{reward.description}}
+          </>
+        </>
+      </>
+    {{/if}}
+  {{/each}}
+</>

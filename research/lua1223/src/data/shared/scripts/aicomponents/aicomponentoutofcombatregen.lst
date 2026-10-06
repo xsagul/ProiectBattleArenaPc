@@ -1,0 +1,159 @@
+
+main <?:0,0> (33 instructions, 132 bytes at 007A9A80)
+0+ params, 3 slots, 0 upvalues, 0 locals, 13 constants, 5 functions
+	1	[-]	GETGLOBAL	0 -1	; REGEN_PERCENT_PER_SECOND
+	2	[-]	EQ       	0 0 -2	; - nil
+	3	[-]	JMP      	2	; to 6
+	4	[-]	LOADK    	0 -3	; 0.035
+	5	[-]	SETGLOBAL	0 -1	; REGEN_PERCENT_PER_SECOND
+	6	[-]	LOADK    	0 -5	; 0.25
+	7	[-]	SETGLOBAL	0 -4	; INITIAL_REGEN_BOOST
+	8	[-]	NEWTABLE 	0 0 1
+	9	[-]	SETTABLE 	0 -7 -8	; "TimerCallbackName" "TimerRegen"
+	10	[-]	SETGLOBAL	0 -6	; OutOfCombatRegen
+	11	[-]	GETGLOBAL	0 -9	; RegisterForEvent
+	12	[-]	LOADK    	1 -10	; "ComponentInit"
+	13	[-]	GETGLOBAL	2 -6	; OutOfCombatRegen
+	14	[-]	CALL     	0 3 1
+	15	[-]	GETGLOBAL	0 -9	; RegisterForEvent
+	16	[-]	LOADK    	1 -11	; "ComponentHalt"
+	17	[-]	GETGLOBAL	2 -6	; OutOfCombatRegen
+	18	[-]	CALL     	0 3 1
+	19	[-]	GETGLOBAL	0 -6	; OutOfCombatRegen
+	20	[-]	CLOSURE  	1 0	; 007A9C40
+	21	[-]	SETTABLE 	0 -10 1	; "ComponentInit" -
+	22	[-]	GETGLOBAL	0 -6	; OutOfCombatRegen
+	23	[-]	CLOSURE  	1 1	; 007A9CF0
+	24	[-]	SETTABLE 	0 -11 1	; "ComponentHalt" -
+	25	[-]	CLOSURE  	0 2	; 007A9D48
+	26	[-]	SETGLOBAL	0 -8	; TimerRegen
+	27	[-]	GETGLOBAL	0 -6	; OutOfCombatRegen
+	28	[-]	CLOSURE  	1 3	; 007A9F00
+	29	[-]	SETTABLE 	0 -12 1	; "Start" -
+	30	[-]	GETGLOBAL	0 -6	; OutOfCombatRegen
+	31	[-]	CLOSURE  	1 4	; 007A9F58
+	32	[-]	SETTABLE 	0 -13 1	; "Stop" -
+	33	[-]	RETURN   	0 1
+constants (13) for 007A9A80:
+	1	"REGEN_PERCENT_PER_SECOND"
+	2	nil
+	3	0.035
+	4	"INITIAL_REGEN_BOOST"
+	5	0.25
+	6	"OutOfCombatRegen"
+	7	"TimerCallbackName"
+	8	"TimerRegen"
+	9	"RegisterForEvent"
+	10	"ComponentInit"
+	11	"ComponentHalt"
+	12	"Start"
+	13	"Stop"
+locals (0) for 007A9A80:
+upvalues (0) for 007A9A80:
+
+function <?:17,20> (9 instructions, 36 bytes at 007A9C40)
+4 params, 8 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	4 -1	; InitTimer
+	2	[-]	GETTABLE 	5 0 -2	; "TimerCallbackName"
+	3	[-]	LOADK    	6 -3	; 0.25
+	4	[-]	LOADBOOL 	7 1 0
+	5	[-]	CALL     	4 4 1
+	6	[-]	GETGLOBAL	4 -4	; OutOfCombatRegen
+	7	[-]	SELF     	4 4 -5	; "Stop"
+	8	[-]	CALL     	4 2 1
+	9	[-]	RETURN   	0 1
+constants (5) for 007A9C40:
+	1	"InitTimer"
+	2	"TimerCallbackName"
+	3	0.25
+	4	"OutOfCombatRegen"
+	5	"Stop"
+locals (0) for 007A9C40:
+upvalues (0) for 007A9C40:
+
+function <?:22,24> (4 instructions, 16 bytes at 007A9CF0)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; OutOfCombatRegen
+	2	[-]	SELF     	1 1 -2	; "Stop"
+	3	[-]	CALL     	1 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 007A9CF0:
+	1	"OutOfCombatRegen"
+	2	"Stop"
+locals (0) for 007A9CF0:
+upvalues (0) for 007A9CF0:
+
+function <?:26,47> (32 instructions, 128 bytes at 007A9D48)
+0 params, 8 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; GetCharVar
+	8	[-]	LOADK    	2 -4	; "StartBoostRegen"
+	9	[-]	CALL     	1 2 2
+	10	[-]	GETGLOBAL	2 -5	; GetMaxHP
+	11	[-]	CALL     	2 1 2
+	12	[-]	GETGLOBAL	3 -6	; REGEN_PERCENT_PER_SECOND
+	13	[-]	MUL      	3 2 3
+	14	[-]	LT       	0 -7 1	; 0 -
+	15	[-]	JMP      	8	; to 24
+	16	[-]	MUL      	4 1 -8	; - 3
+	17	[-]	ADD      	4 -9 4	; 1 -
+	18	[-]	MUL      	3 3 4
+	19	[-]	SUB      	1 1 -10	; - 0.2
+	20	[-]	GETGLOBAL	4 -11	; SetCharVar
+	21	[-]	LOADK    	5 -4	; "StartBoostRegen"
+	22	[-]	MOVE     	6 1
+	23	[-]	CALL     	4 3 1
+	24	[-]	GETGLOBAL	4 -12	; GetHP
+	25	[-]	CALL     	4 1 2
+	26	[-]	LT       	0 -7 4	; 0 -
+	27	[-]	JMP      	4	; to 32
+	28	[-]	ADD      	5 4 3
+	29	[-]	GETGLOBAL	6 -13	; SetHP
+	30	[-]	MOVE     	7 5
+	31	[-]	CALL     	6 2 1
+	32	[-]	RETURN   	0 1
+constants (13) for 007A9D48:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"GetCharVar"
+	4	"StartBoostRegen"
+	5	"GetMaxHP"
+	6	"REGEN_PERCENT_PER_SECOND"
+	7	0
+	8	3
+	9	1
+	10	0.2
+	11	"SetCharVar"
+	12	"GetHP"
+	13	"SetHP"
+locals (0) for 007A9D48:
+upvalues (0) for 007A9D48:
+
+function <?:49,51> (4 instructions, 16 bytes at 007A9F00)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; ResetAndStartTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	CALL     	1 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 007A9F00:
+	1	"ResetAndStartTimer"
+	2	"TimerCallbackName"
+locals (0) for 007A9F00:
+upvalues (0) for 007A9F00:
+
+function <?:53,55> (4 instructions, 16 bytes at 007A9F58)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; StopTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	CALL     	1 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 007A9F58:
+	1	"StopTimer"
+	2	"TimerCallbackName"
+locals (0) for 007A9F58:
+upvalues (0) for 007A9F58:

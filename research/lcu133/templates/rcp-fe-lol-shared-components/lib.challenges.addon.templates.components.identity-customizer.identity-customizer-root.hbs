@@ -1,0 +1,92 @@
+{{#if isVisible}}
+  <lol-uikit-full-page-backdrop>
+    <div class="backdrop-click" onclick={{action this "savePreferences"}}>
+    </>
+    <lol-uikit-dialog-frame>
+      <div class="challenges-identity-customizer-container">
+        <div class="update-icon-close-btn" {{action this "closeWindow"}}>
+        </>
+        <div class="challenges-identity-customizer-contents">
+          <div class="challenges-identity-customizer-left-container">
+            <div class="challenges-identity-customizer-banner-container">
+              <lol-regalia-identity-customizer-element summoner-id={{localSummonerId}} profile-icon={{selectedIconId}} crest-type={{selectedCrestType}} banner-id={{selectedBannerId}} banner-type={{selectedBannerType}} banner-rank={{lastSeasonHighestRank}} summoner-level={{summonerLevel}} prestige-crest-id={{selectedPrestigeCrest}} ranked-tier={{selectedBorder.tier}} ranked-division={{selectedBorder.division}} puuid={{puuid}}>
+              </>
+              <div class="banner-summoner-name">
+                {{localDisplayName}}
+              </>
+              <div class="banner-title {{if isTitlesTabSelected "title-tab-active"}}">
+                {{previewTitle}}
+              </>
+              <div class="banner-tokens-container">
+                {{#each previewTokens as |token index|}}
+                  <div class="banner-token">
+                    {{challenge-banner-token challengeData=token isLocalPlayer=true isInteractable=false}}
+                  </>
+                {{/each}}
+                <uikit-video class="video-preview-token slot-{{selectedTokenSlot}}" src="/fe/lol-static-assets/videos/challenges/customizer/preview-token.webm">
+                </>
+              </>
+              <uikit-video class="video-preview-icon" src="/fe/lol-static-assets/videos/challenges/customizer/preview-icon.webm">
+              </>
+              <uikit-video class="video-preview-border" src="/fe/lol-static-assets/videos/challenges/customizer/preview-border.webm">
+              </>
+              <uikit-video class="video-preview-border-ranked" src="/fe/lol-static-assets/videos/challenges/customizer/preview-border-ranked.webm">
+              </>
+              <uikit-video class="video-preview-title" src="/fe/lol-static-assets/videos/challenges/customizer/preview-title.webm">
+              </>
+              <uikit-video class="video-preview-banner" src="/fe/lol-static-assets/videos/challenges/customizer/preview-banner.webm">
+              </>
+            </>
+          </>
+          <div class="challenges-identity-customizer-right-container">
+            <div class="challenges-identity-customizer-title">
+              {{tra.challenges_identity_customizer_title}}
+            </>
+            <div class="challenges-identity-customizer-tabs">
+              <lol-uikit-navigation-bar type="nav-bar-secondary" class="challenges-identity-customizer-tab">
+                {{#each (-each-in tabs) as |index tab|}}
+                  <div class="customizer-nav-item-container" {{action this "selectTab" index}}>
+                    {{#if tab.showUnreadPip}}
+                      <div class="tab-unread-pip">
+                        {{call-to-action-pip}}
+                      </>
+                    {{/if}}
+                    <lol-uikit-navigation-item active="{{if tab.selected "true"}}">
+                      {{tab.nameLoc}}
+                    </>
+                  </>
+                {{/each}}
+              </>
+            </>
+            {{#if isTokensTabSelected}}
+              {{identity-customizer-tab-tokens challenges=challenges selectedTokens=selectedTokens selectedTokenId=selectedTokenId previewTokens=previewTokens summary=summary lastTokensVisitTime=lastTokensVisitTime selectToken=(action this "selectToken") selectTokenSlot=(action this "selectTokenSlot") setTokenLastVisitTime=(action this "setTokenLastVisitTime"}}
+            {{else}}
+              {{#if isTitlesTabSelected}}
+                {{identity-customizer-tab-titles ownedTitles=ownedTitles allTitles=allTitles challenges=challenges selectedTitle=selectedTitle selectTitle=(action this "selectTitle") setTitlesLastVisitTime=(action this "setTitlesLastVisitTime"}}
+              {{else}}
+                {{#if isIconsTabSelected}}
+                  {{identity-customizer-tab-icons icons=icons selectedIconId=selectedIconId lastIconsVisitTime=lastIconsVisitTime selectIcon=(action this "selectIcon") isTencentRegion=isTencentRegion setIconsLastVisitTime=(action this "setIconsLastVisitTime"}}
+                {{else}}
+                  {{#if isBordersTabSelected}}
+                    {{identity-customizer-tab-borders highestRankedEntry=highestRankedEntry summonerLevel=summonerLevel selectedCrestType=selectedCrestType selectedPrestigeCrest=selectedPrestigeCrest selectBorder=(action this "selectBorder"}}
+                  {{else}}
+                    {{#if isBannersTabSelected}}
+                      {{identity-customizer-tab-banners allBanners=allBanners lastSeasonHighestRank=lastSeasonHighestRank selectedBannerType=selectedBannerType selectedBannerId=selectedBannerId bannerSkinsEnabled=bannerSkinsEnabled selectBanner=(action this "selectBanner"}}
+                    {{/if}}
+                  {{/if}}
+                {{/if}}
+              {{/if}}
+            {{/if}}
+          </>
+        </>
+        <div class="challenges-identity-customizer-footer-container">
+          {{#if saveError}}
+            <div class="challenges-identity-customizer-error-container">
+              {{tra.challenges_identity_customizer_save_error}}
+            </>
+          {{/if}}
+        </>
+      </>
+    </>
+  </>
+{{/if}}

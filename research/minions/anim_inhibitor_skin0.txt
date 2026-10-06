@@ -1,0 +1,275 @@
+version 3, 1 entries, 0 links
+Characters/Inhibitor/Animations/Skin0 (animationGraphData)
+  mCascadeBlendValue: 0
+  mClipDataMap: {12}
+    key Idle_Normal1
+    AtomicClipData
+      mFlags: 2
+      mMaskDataName: base
+      mTrackDataName: Default
+      mEventDataMap: {1}
+        key {bd5d7a8f}
+        ParticleEventData
+          mName: {bd5d7a8f}
+          mEffectName: "SRUAP_Order_Inhibitor_Idle1_sound.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+          mIsLoop: 0
+      mTickDuration: 0.333333
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/Inhibitor/Skins/base/Animations/Inhibitor_idle1.anm"
+    key Death_Base
+    AtomicClipData
+      mFlags: 8
+      mMaskDataName: Destroyed
+      mTrackDataName: Default
+      mEventDataMap: {3}
+        key submesh
+        SubmeshVisibilityEventData
+          mName: submesh
+          mShowSubmeshList: [1]
+            Destroyed
+          mHideSubmeshList: [1]
+            pally_inhib_texture
+        key Audio_Death
+        ParticleEventData
+          mName: Audio_Death
+          mEffectName: "SRUAP_Order_Inhibitor_Death_sound.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+          mIsLoop: 0
+        key {8e6b3646}
+        ParticleEventData
+          mName: {8e6b3646}
+          mEffectName: "SRUAP_Order_Inhibitor_Death_Idle_sound.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+          mIsKillEvent: 0
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/Inhibitor/Skins/base/Animations/Inhibitor_death.anm"
+    key {e4cb0f58}
+    AtomicClipData
+      mFlags: 8
+      mMaskDataName: base
+      mTrackDataName: Default
+      mEventDataMap: {3}
+        key Activate
+        ParticleEventData
+          mName: Activate
+          mStartFrame: 31
+          mEffectName: "SRUAP_Order_Inhibitor_Activation_flash.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+              mBoneName: tower
+          mIsLoop: 0
+          mIsKillEvent: 0
+          mIsDetachable: 1
+        key Audio_Spawn
+        ParticleEventData
+          mName: Audio_Spawn
+          mEffectName: "SRUAP_Order_Inhibitor_Spawn_sound.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+        key Audio_Idle
+        ParticleEventData
+          mName: Audio_Idle
+          mStartFrame: 35
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+      mTickDuration: 0.25
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/Inhibitor/Skins/base/Animations/Inhibitor_spawn.anm"
+    key Spawn
+    SequencerClipData
+      mClipNameList: [1]
+        {e4cb0f58}
+    key Idle1
+    SequencerClipData
+      mClipNameList: [3]
+        Idle_Hold
+        {e4cb0f58}
+        Idle_Normal1
+    key {c3247102}
+    AtomicClipData
+      mFlags: 2
+      mMaskDataName: Destroyed
+      mTrackDataName: Default
+      mEventDataMap: {1}
+        key {8b2bdb93}
+        ParticleEventData
+          mName: {8b2bdb93}
+          mStartFrame: -50
+          mEffectName: "SRUAP_Order_Inhibitor_Death_Idle_sound.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+      mTickDuration: 0.25
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/Inhibitor/Skins/base/Animations/Inhibitor_idle_dead.anm"
+    key death
+    SequencerClipData
+      mClipNameList: [2]
+        Death_Base
+        {c3247102}
+    key Respawn_Base
+    AtomicClipData
+      mFlags: 4
+      mTrackDataName: Default
+      mEventDataMap: {4}
+        key submesh
+        SubmeshVisibilityEventData
+          mName: submesh
+          mStartFrame: 290
+          mShowSubmeshList: [1]
+            pally_inhib_texture
+          mHideSubmeshList: [1]
+            Destroyed
+        key audio_respawn
+        ParticleEventData
+          mName: audio_respawn
+          mStartFrame: 73
+          mEffectName: "SRUAP_Order_Inhibitor_Respawn_sound.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+          mIsKillEvent: 0
+        key Audio_Spawn
+        ParticleEventData
+          mName: Audio_Spawn
+          mEffectName: "SRUAP_Order_Inhibitor_Spawn_sound.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+        key {686f7e5b}
+        ParticleEventData
+          mName: {686f7e5b}
+          mEffectName: "SRUAP_Order_Inhibitor_Respawn.troy"
+          mParticleEventDataPairList: [1]
+            ParticleEventDataPair
+              mBoneName: tower
+          mIsLoop: 0
+          mIsKillEvent: 0
+          mIsDetachable: 1
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/Inhibitor/Skins/base/Animations/Inhibitor_respawn.anm"
+    key Idle_Normal2
+    AtomicClipData
+      mMaskDataName: base
+      mTrackDataName: Default
+      mTickDuration: 0.333333
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/Inhibitor/Skins/base/Animations/Inhibitor_idle2.anm"
+    key Idle_Normal3
+    AtomicClipData
+      mMaskDataName: base
+      mTrackDataName: Default
+      mTickDuration: 0.333333
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/Inhibitor/Skins/base/Animations/Inhibitor_idle3.anm"
+    key Idle_Hold
+    AtomicClipData
+      mMaskDataName: base
+      mTrackDataName: Default
+      mTickDuration: 1.33333
+      mAnimationResourceData: AnimationResourceData
+        mAnimationFilePath: "ASSETS/Characters/Inhibitor/Skins/base/Animations/Inhibitor_hold.anm"
+    key Respawn
+    SequencerClipData
+      mClipNameList: [2]
+        Respawn_Base
+        Idle_Normal1
+  mMaskDataMap: {2}
+    key base
+    MaskData
+      mWeightList: [25]
+        1
+        1
+        0
+        0
+        0
+        0
+        0
+        0
+        0
+        0
+        0
+        0
+        0
+        0
+        0
+        0
+        0
+        0
+        0
+        0
+        0
+        0
+        0
+        0
+        0
+    key Destroyed
+    MaskData
+      mId: 1
+      mWeightList: [25]
+        0
+        0
+        1
+        1
+        1
+        1
+        1
+        1
+        1
+        1
+        1
+        1
+        1
+        1
+        1
+        1
+        1
+        1
+        1
+        1
+        1
+        1
+        1
+        1
+        1
+  mTrackDataMap: {1}
+    key Default
+    TrackData
+  mBlendDataTable: {12}
+    key 1.50929e+18
+    TimeBlendData
+      mTime: 0
+    key 1.50929e+18
+    TimeBlendData
+      mTime: 0
+    key 1.50929e+18
+    TimeBlendData
+      mTime: 0
+    key 4.189e+18
+    TimeBlendData
+      mTime: 0
+    key 6.11546e+18
+    TimeBlendData
+      mTime: 0
+    key 1.13744e+19
+    TimeBlendData
+      mTime: 0
+    key 1.64863e+19
+    TimeBlendData
+      mTime: 0
+    key 1.64863e+19
+    TimeBlendData
+      mTime: 0
+    key 1.64863e+19
+    TimeBlendData
+      mTime: 0
+    key 1.64863e+19
+    TimeBlendData
+      mTime: 0
+    key 1.71105e+19
+    TimeBlendData
+      mTime: 0
+    key 1.71105e+19
+    TimeBlendData
+      mTime: 0

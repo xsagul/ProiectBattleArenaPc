@@ -1,0 +1,40 @@
+<div class="reward-bonus-track-repeatable-node
+    {{if isDisabled "reward-bonus-track-repeatble-node-disabled"}}
+    {{if displayCurrentBonusIteration "display-current-iteration"}}">
+  <div class="repeatable-node-progress-bar
+      {{if mainTrackCompleted "is-completed"}}
+      {{if firstBonusMilestoneCompleted "first-bonus-milestone-completed"}}
+      {{if isDisabled "repeatable-node-progress-bar-disabled"}}">
+    <div class="repeatable-node-line">
+    </>
+    <div class="repeatable-node-line">
+    </>
+    <div class="repeatable-node-line-arrow
+        {{if displayCurrentBonusIteration "display-current-iteration"}}
+        {{if isDisabled "repeatable-node-line-arrow-disabled"}}">
+      <svg class="repeatable-node-icon" viewBox="0 0 10 7">
+        <path class="repeatable-node-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M6.38908 1.77185V0.399902L3.9833 2.31037L6.38956 4.22084V2.85168C6.81026 2.85942 7.21055 3.02847 7.50237 3.32164C7.79419 3.61481 7.95364 4.00809 7.94565 4.41496C7.93765 4.82183 7.76286 5.20897 7.45972 5.4912C7.15659 5.77343 6.74995 5.92765 6.32925 5.91991H3.33337C2.91248 5.91991 2.50883 5.75821 2.21121 5.47037C1.9136 5.18254 1.7464 4.79215 1.7464 4.3851C1.7464 3.97804 1.9136 3.58765 2.21121 3.29982C2.50883 3.01199 2.91248 2.85028 3.33337 2.85028V1.77045C2.61636 1.77045 1.92872 2.04593 1.42171 2.53627C0.914713 3.02661 0.629883 3.69165 0.629883 4.3851C0.629883 5.07854 0.914713 5.74359 1.42171 6.23393C1.92872 6.72427 2.61636 6.99974 3.33337 6.99974H6.32925C6.68409 7.00357 7.03623 6.93977 7.36557 6.81198C7.69491 6.68419 7.995 6.49492 8.24871 6.25496C8.50242 6.01501 8.70477 5.72907 8.84422 5.41349C8.98367 5.0979 9.05748 4.75884 9.06144 4.41566C9.0654 4.07249 8.99943 3.73192 8.8673 3.4134C8.73517 3.09488 8.53947 2.80465 8.29136 2.55928C8.04325 2.31391 7.7476 2.1182 7.42129 1.98334C7.09498 1.84847 6.7444 1.77708 6.38956 1.77325L6.38908 1.77185Z" fill="#5b5a56">
+        </>
+      </>
+      {{#if displayCurrentBonusIteration}}
+        <span class="repeatable-node-line-iteration">
+          {{rewardTrackBonusProgress.iteration}}
+        </>
+      {{/if}}
+    </>
+  </>
+  {{#if rewardTrackBonusItems.length}}
+    <div class="reward-progress-bar {{if isDisabled "reward-item-disabled"}}">
+      {{#if firstBonusMilestoneCompleted}}
+        <div class="reward-progress-bar-fill completed">
+        </>
+      {{else}}
+        <div class="reward-progress-bar-fill current" style={{levelProgressWidth}}>
+        </>
+      {{/if}}
+    </>
+  {{/if}}
+</>
+{{#each rewardTrackBonusItems as |reward index|}}
+  {{reward-item reward=reward startIndex=startIndex itemIndex=index progress=rewardTrackBonusProgress maxLevel=bonusMaxLevel itemMouseEnter=itemMouseEnter itemClick=bonusItemClick additionalTooltipData=additionalTooltipData rewardItemTooltipComponent=rewardItemTooltipComponent rewardItemTooltipClassName=rewardItemTooltipClassName isDisabled=isDisabled}}
+{{/each}}

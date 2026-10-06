@@ -1,0 +1,44 @@
+{{#if showPendingIndicator}}
+  <div class="lol-pending-loader">
+    <div class="lol-pending-loader-segment">
+    </>
+    <div class="lol-pending-loader-segment">
+    </>
+    <div class="lol-pending-loader-segment">
+    </>
+  </>
+{{/if}}
+<span class="invite-info-name">
+  {{#if isNotTFT}}
+    {{#if isRecentlyHonored}}
+      <img src="/fe/lol-parties/recently-honored-default-icon.png" class="invite-info-recently-honored-icon">
+      </>
+      <img src="/fe/lol-parties/recently-honored-hover-icon.png" class="invite-info-recently-honored-hover-icon">
+      </>
+    {{else}}
+      {{#if isFriend}}
+        <img src="/fe/lol-parties/friend-default-icon.png" class="invite-info-friend-icon">
+        </>
+        <img src="/fe/lol-parties/friend-hover-icon.png" class="invite-info-friend-hover-icon">
+        </>
+      {{else}}
+        {{#if isRecentlyPlayed}}
+          <img src="/fe/lol-parties/recently-played-default-icon.png" class="invite-info-recently-played-icon">
+          </>
+          <img src="/fe/lol-parties/recently-played-hover-icon.png" class="invite-info-recently-played-hover-icon">
+          </>
+        {{/if}}
+      {{/if}}
+    {{/if}}
+  {{/if}}
+  {{player-name format="tooltip" summonerId=summonerId}}
+</>
+{{#if isSuggested}}
+  <button class="parties-remove-suggested-player" {{action this "remove" bubbles=false}}>
+  </>
+{{/if}}
+<!-- Work around for Ember.computed to act like an observer. -->
+<div style="display: none;">
+  {{recycle}}
+  {{errorObserver}}
+</>

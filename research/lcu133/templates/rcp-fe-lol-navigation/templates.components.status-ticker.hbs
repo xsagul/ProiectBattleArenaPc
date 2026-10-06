@@ -1,0 +1,11 @@
+<div class="ticker-button">
+  <div class="ticker-toggle" {{action this "toggleFlyout"}}>
+  </>
+</>
+{{#if loadStatusTickerContent}}
+  <div style="display:none;">
+  </>
+  <div style="display:none;">
+    {{status-ticker-content sortedIncidents=sortedIncidents statusUrl=statusUrl}}
+  </>
+{{/if}}

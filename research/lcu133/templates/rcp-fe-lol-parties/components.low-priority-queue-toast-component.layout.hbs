@@ -1,0 +1,12 @@
+<lol-uikit-content-block type="notification">
+  <p>
+    {{tra.low_priority_queue_notification_body}}
+  </>
+  <ul class="low-priority-player-list">
+    {{#each penalizedPlayerNames as |name|}}
+      <li class="low-priority-player-name">
+        {{name}}
+      </>
+    {{/each}}
+  </>
+</>

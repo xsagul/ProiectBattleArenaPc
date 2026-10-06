@@ -1,0 +1,22 @@
+<lol-uikit-framed-dropdown stylablecontent="" direction="upward" disabled={{disabled}} onclick={{action this "dropdownClicked"}} class="perks-page-dropdown">
+  {{#unless haveRuneRecommenderPage}}
+    <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" onclick={{action this "setRuneRecommenderAutoSelect"}} selected={{useRuneRecommenderAutoSelect}}>
+      <div class="perks-page-dropdown-option-content">
+        {{tra.rune_recommender_auto_select_option}}
+      </>
+    </>
+  {{/unless}}
+  {{#each sortedPages key="id" as |page index|}}
+    {{perks-page-dropdown-option showPresetPages=showPresetPages page=page currentPageId=selectedPageId index=index restrictedPageNamesEnabled=restrictedPageNamesEnabled pageRenamingDisabled=pageRenamingDisabled click=(action this "selectPage" page}}
+  {{/each}}
+</>
+{{#if shouldShowDropdownHighlight}}
+  <div class="framed-highlight-overlay">
+    <div class="framed-highlight-overlay-shadow">
+    </>
+    <div class="framed-highlight-overlay-border">
+    </>
+    <div class="framed-highlight-overlay-background">
+    </>
+  </>
+{{/if}}

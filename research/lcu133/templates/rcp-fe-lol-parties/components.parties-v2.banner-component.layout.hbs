@@ -1,0 +1,73 @@
+{{#unless isEmpty}}
+  <div class="lobby-banner-animation-container">
+    <lol-uikit-lottie src="/fe/lol-parties/lottie/parties-v2/intro-banner.json" autoplay="false">
+    </>
+  </>
+  <div class="lobby-banner {{if isLocalPlayer "local"}} {{if isEmpty "empty"}}">
+    <lol-regalia-parties-v2-element summoner-id={{member.summonerId}} puuid={{member.puuid}} queue={{queueType}} member-type={{memberType}} waiting-in-postgame={{waitingInPostgame}} animations={{animationsEnabled}}>
+      <div class="lobby-banner-contents">
+        <div class="banner-highlight">
+        </>
+        <div class="banner-spacer">
+        </>
+        <div class="player-identity-container">
+          {{#uikit-tooltip tooltipPosition="right" type="system"}}
+            {{identity-tooltip rankedData=rankedData selectedQueue=selected.queue player=member showRank=showRankTooltip challengesSummary=challengesSummary crystalImagePath=crystalImagePath lobbyChallengesEnabled=lobbyChallengesEnabled summonerRegalia=summonerRegalia}}
+          {{/uikit-tooltip}}
+        </>
+        {{#if isLocalPlayer}}
+          <div class="chat-restriction-warning-container">
+            {{chat-restriction-warning}}
+          </>
+        {{/if}}
+        <div class="player-details-spacer">
+        </>
+        <div class="player-name-container">
+          {{#if isLeader}}
+            <div class="leader-icon">
+            </>
+          {{/if}}
+          <div class="player-name">
+            {{member.summonerName}}
+          </>
+        </>
+        <div class="player-achievements-container {{if isEmpty "hide"}}">
+          {{challenge-banner-token-container puuid=puuid isLocalPlayer=isLocalPlayer chatConversationId=chatConversationId allowPresenceUpdates=allowPresenceUpdates showTitleOnly=waitingInPostgame}}
+        </>
+        {{#if showPositionSelector}}
+          <div class="position-icons-container {{if showSinglePosition "single-selector"}}">
+            <div class="position-element secondary">
+              {{v2-banner-position-icon position=secondaryPosition isPrimary=false}}
+              {{#uikit-tooltip tooltipConfig=secondaryTooltipConfig}}
+                <lol-uikit-content-block class="position-tooltip" type="tooltip-system">
+                  {{tra.parties_secondary_position}}
+                  <br>
+                  </>
+                  <h5>
+                    {{secondaryPositionText}}
+                  </>
+                </>
+              {{/uikit-tooltip}}
+            </>
+            <div class="position-element primary">
+              {{v2-banner-position-icon position=primaryPosition isPrimary=true}}
+              {{#uikit-tooltip tooltipConfig=primaryTooltipConfig}}
+                <lol-uikit-content-block class="position-tooltip" type="tooltip-system">
+                  {{primaryPositionLabelText}}
+                  <h5>
+                    {{primaryPositionText}}
+                  </>
+                </>
+              {{/uikit-tooltip}}
+            </>
+          </>
+        {{/if}}
+        {{v2-player-party-controls member=member isLeader=isLeader isMe=isLocalPlayer}}
+      </>
+    </>
+  </>
+  <div class="player-identity-animation-container {{if isLocalPlayer "local"}} {{if isNotLocalPlayer "member"}}">
+    <lol-uikit-video class="player-identity-gem-animation" fade-in="0" fade-out="0" src="{{gemAnimVideoPath}}" preload="">
+    </>
+  </>
+{{/unless}}

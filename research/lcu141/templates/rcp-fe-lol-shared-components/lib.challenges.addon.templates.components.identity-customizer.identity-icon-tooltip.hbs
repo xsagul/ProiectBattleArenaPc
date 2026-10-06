@@ -1,0 +1,34 @@
+{{#if icon}}
+  <div class="identity-customizer-icon-tooltip">
+    <div class="icon-tooltip-header">
+      {{#if icon.rarityIconSrc}}
+        <img class="icon-tooltip-rarity-icon" src="{{icon.rarityIconSrc}}">
+        </>
+      {{/if}}
+      <div class="icon-tooltip-header-title">
+        {{icon.title}}
+      </>
+    </>
+    {{#if hasContent}}
+      <div class="icon-tooltip-line">
+      </>
+    {{/if}}
+    {{#if icon.desc}}
+      <div class="icon-tooltip-desc">
+        {{icon.desc}}
+      </>
+    {{/if}}
+    {{#if icon.purchaseDate}}
+      <div class="icon-tooltip-date">
+        {{acquiredDateText}}
+      </>
+    {{/if}}
+    {{#if showLegacy}}
+      <div class="icon-tooltip-legacy-section">
+        <img class="icon-tooltip-rarity-icon" src="/fe/lol-static-assets/images/summoner-icon/icon-legacy.png">
+        </>
+        {{tra.identity_customizer_icon_legacy}}
+      </>
+    {{/if}}
+  </>
+{{/if}}

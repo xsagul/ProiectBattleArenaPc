@@ -1,0 +1,134 @@
+{{isEnabledObserver}}
+{{triggerSelectedObserver}}
+<div class="generic-button-root" {{action this "onHoverLeave" on="mouseLeave"}} {{action this "onHover" on="mouseEnter"}} {{action this "beginClick" on="mouseDown"}} {{action this "endClick" on="mouseUp"}}>
+  <div class="generic-button-state up {{if isSelected "selected"}} {{if isState_up "active"}}" style={{upStyle}}>
+    {{#if upBgPathInternal}}
+      <img src="{{upBgPathInternal}}">
+      </>
+    {{/if}}
+    <div class="generic-button-primary-img-container {{if upBgPathInternal "has-bg"}}">
+      {{#if upImgPathInternal}}
+        <img src="{{upImgPathInternal}}" style={{iconSizeModifierStyle}}>
+        </>
+      {{/if}}
+    </>
+    {{#if text}}
+      <div class="generic-button-text">
+        {{text}}
+      </>
+    {{else}}
+      {{#if upText}}
+        <div class="generic-button-text">
+          {{upText}}
+        </>
+      {{/if}}
+    {{/if}}
+    {{#if useCustomContent}}
+      <div class="generic-button-custom-content">
+        {{yield customContentUp}}
+      </>
+    {{/if}}
+  </>
+  <div class="generic-button-state over {{if isSelected "selected"}} {{if isState_over "active"}}" style={{overStyle}}>
+    {{#if overBgPathInternal}}
+      <img src="{{overBgPathInternal}}">
+      </>
+    {{/if}}
+    <div class="generic-button-primary-img-container {{if overBgPathInternal "has-bg"}}">
+      {{#if overImgPathInternal}}
+        <img src="{{overImgPathInternal}}" style={{iconSizeModifierStyle}}>
+        </>
+      {{/if}}
+    </>
+    {{#if text}}
+      <div class="generic-button-text">
+        {{text}}
+      </>
+    {{else}}
+      {{#if overText}}
+        <div class="generic-button-text">
+          {{overText}}
+        </>
+      {{/if}}
+    {{/if}}
+    {{#if useCustomContent}}
+      <div class="generic-button-custom-content">
+        {{yield customContentOver}}
+      </>
+    {{/if}}
+    {{#if tooltipText}}
+      {{#uikit-tooltip tooltipPosition=tooltipPosition type=tooltipType}}
+        <lol-uikit-content-block type="tooltip-system">
+          <p>
+            {{tooltipText}}
+          </>
+        </>
+      {{/uikit-tooltip}}
+    {{/if}}
+  </>
+  <div class="generic-button-state down {{if isSelected "selected"}} {{if isState_down "active"}}" style={{downStyle}}>
+    {{#if downBgPathInternal}}
+      <img src="{{downBgPathInternal}}">
+      </>
+    {{/if}}
+    <div class="generic-button-primary-img-container {{if downBgPathInternal "has-bg"}}">
+      {{#if downImgPathInternal}}
+        <img src="{{downImgPathInternal}}" style={{iconSizeModifierStyle}}>
+        </>
+      {{/if}}
+    </>
+    {{#if text}}
+      <div class="generic-button-text">
+        {{text}}
+      </>
+    {{else}}
+      {{#if downText}}
+        <div class="generic-button-text">
+          {{downText}}
+        </>
+      {{/if}}
+    {{/if}}
+    {{#if useCustomContent}}
+      <div class="generic-button-custom-content">
+        {{yield customContentDown}}
+      </>
+    {{/if}}
+  </>
+  <div class="generic-button-state disabled {{if isSelected "selected"}} {{if isState_disabled "active"}}" style={{disabledStyle}}>
+    {{#if disabledBgPathInternal}}
+      <img src="{{disabledBgPathInternal}}">
+      </>
+    {{/if}}
+    <div class="generic-button-primary-img-container {{if disabledBgPathInternal "has-bg"}}">
+      {{#if disabledImgPathInternal}}
+        <img src="{{disabledImgPathInternal}}" style={{iconSizeModifierStyle}}>
+        </>
+      {{/if}}
+    </>
+    {{#if text}}
+      <div class="generic-button-text">
+        {{text}}
+      </>
+    {{else}}
+      {{#if disabledText}}
+        <div class="generic-button-text">
+          {{disabledText}}
+        </>
+      {{/if}}
+    {{/if}}
+    {{#if useCustomContent}}
+      <div class="generic-button-custom-content">
+        {{yield customContentDisabled}}
+      </>
+    {{/if}}
+    {{#if disabledTooltipText}}
+      {{#uikit-tooltip tooltipPosition=disabledTooltipPosition type=disabledTooltipType}}
+        <lol-uikit-content-block type="tooltip-system">
+          <p>
+            {{disabledTooltipText}}
+          </>
+        </>
+      {{/uikit-tooltip}}
+    {{/if}}
+  </>
+</>

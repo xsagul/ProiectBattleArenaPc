@@ -1,0 +1,13 @@
+<div class="unlock-skin-hit-area" class="{{unless showSkinPurchaseButton "hidden"}} {{if disabled "disabled" "enabled"}} {{unless isSkinSelectVisible "skin-select-not-visible"}}" {{action this "showSkinPurchaseModal"}}>
+  <div class="locked-state">
+  </>
+  {{#if disabled}}
+    {{#uikit-tooltip tooltipPosition="top" type="system"}}
+      <lol-uikit-content-block type="tooltip-system" class="champ-select-skin-purchase-unavailable-tooltip">
+        <p>
+          {{tra.skin_purchase_unavailable_tooltip}}
+        </>
+      </>
+    {{/uikit-tooltip}}
+  {{/if}}
+</>

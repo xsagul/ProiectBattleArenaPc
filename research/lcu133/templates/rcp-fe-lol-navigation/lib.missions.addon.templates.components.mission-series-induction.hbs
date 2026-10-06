@@ -1,0 +1,26 @@
+<div class="series-induction-background" style="background-image: url({{backgroundImage}});">
+</>
+<div class="series-induction-root">
+  <div class="series-induction-title">
+    {{sanitize title}}
+  </>
+  <div class="series-induction-description">
+    {{description}}
+  </>
+  <div class="series-induction-buttons">
+    {{#each inductableSeries as |a_series index|}}
+      {{#if useImageInductionButtons}}
+        {{mission-series-induction-button series=a_series click=(action this "optIn" a_series}}
+      {{else}}
+        {{#if index}}
+          <div class="series-induction-buttons-or">
+            {{tra.mission_objective_or}}
+          </>
+        {{/if}}
+        <lol-uikit-flat-button onclick={{action this "optIn" a_series}} style="box-shadow: 0px 0px 16px 0px {{a_series.media.accentColor}}" class="induction-accept">
+          {{a_series.optInButtonText}}
+        </>
+      {{/if}}
+    {{/each}}
+  </>
+</>

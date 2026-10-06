@@ -1,0 +1,75 @@
+<div class="collection-grid-row-wrapper">
+  <div class="collection-grid-row-group-background {{challenge.currentLevel}}">
+  </>
+  <div class="collection-grid-row-group-tier {{challenge.currentLevel}}">
+  </>
+  <div class="collection-grid-row-group-overlay">
+  </>
+  <div class="collection-grid-row-container">
+    <div class="collection-grid-row-icon-container">
+      <img class="challenge-icon" src="{{iconPath}}">
+      </>
+      {{#uikit-tooltip tooltipPosition="right" type="system"}}
+        {{challenge-item-tooltip puuid=puuid challengeData=challenge apexLadderUpdateTime=summary.apexLadderUpdateTime animationsEnabled=false}}
+      {{/uikit-tooltip}}
+    </>
+    <div class="collection-grid-row-content">
+      <div class="collection-grid-row-title-container">
+        <div class="capstone-grid-row-title-wrapper">
+          <div class="group-icon-container">
+            <div class="challenges-icon medal">
+            </>
+          </>
+          <div>
+            {{challenge.name}}
+          </>
+        </>
+        <div class="reward-text">
+          {{#if nextMilestoneRewardText}}
+            <div class="milestone-icon-container">
+              <div class="challenges-icon title">
+              </>
+            </>
+            <div class="title-container">
+              {{nextMilestoneRewardText}}
+            </>
+            <div class="level-icon-container">
+              <img class="level-icon" src="/fe/lol-static-assets/images/challenges-shared/icon-token-{{nextMilestoneReward.level}}.png">
+              </>
+            </>
+          {{/if}}
+        </>
+      </>
+      <div class="challenges-progress-bar-container">
+        <div class="challenges-progress-bar">
+          <div class="challenges-progress-meter-fill" style="transform: scaleX({{progressBarFill}}%)">
+          </>
+          <div class="challenges-progress-text">
+            {{progressCurrentValue}}
+            /
+            {{progressNextValue}}
+          </>
+        </>
+      </>
+      <div class="collection-grid-row-description">
+        {{tra.challenge_group_capstone_description}}
+      </>
+    </>
+  </>
+  <div class="collection-grid-individual-challenges">
+    {{#each challengesList as |entry|}}
+      <div class="collection-grid-group-card">
+        {{challenge-item challengeData=entry.challenge apexLadderUpdateTime=summary.apexLadderUpdateTime animationsEnabled=animationsEnabled}}
+      </>
+    {{/each}}
+  </>
+  <div class="challenge-card-points-container">
+    {{#if pointsContainerImagePath}}
+      <img class="challenge-card-points-container-background" src={{pointsContainerImagePath}}>
+      </>
+    {{/if}}
+    <div class="challenge-card-points">
+      {{pointsAwarded}}
+    </>
+  </>
+</>

@@ -1,0 +1,13 @@
+<div class="chat-restriction-warning-component">
+  {{#if isWarningShown}}
+    <div class="chat-restriction-icon">
+    </>
+    {{#uikit-tooltip type="system" tooltipPosition="top"}}
+      <lol-uikit-content-block type="tooltip-large">
+        <p>
+          {{warningTooltipText}}
+        </>
+      </>
+    {{/uikit-tooltip}}
+  {{/if}}
+</>

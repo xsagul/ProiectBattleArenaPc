@@ -1,0 +1,35 @@
+<div class="player-title-tooltip-container {{if titleData.backgroundImagePath "has-bg"}}" style="background-image: url({{if titleData.backgroundImagePath titleData.backgroundImagePath}})">
+  <div class="player-title-info">
+    <div class="player-title-acquisition-header">
+      <div class="acquisition-method-icon acquisition-icon-type-{{titleAcquisitionMethod}}">
+      </>
+    </>
+    <div class="player-title-body">
+      <div class="player-title-acquisition-info">
+        {{#if titleData.iconPath}}
+          <div class="player-title-acquisition-icon">
+            <img class="player-title-icon" src={{titleData.iconPath}}>
+            </>
+          </>
+        {{/if}}
+        <div class="player-title-acquisition-details">
+          <div class="player-title-acquisition-name">
+            {{titleData.titleAcquisitionName}}
+          </>
+          <div class="player-title-requirements-description">
+            {{titleRequirementDescription}}
+          </>
+        </>
+      </>
+    </>
+  </>
+  <div class="player-title-footer">
+    <div class="title-reward-icon-container">
+      <img class="title-reward-icon" src="/fe/lol-static-assets/images/challenges-shared/icon_reward_title.svg">
+      </>
+      <div class="player-title-name">
+        {{titleData.name}}
+      </>
+    </>
+  </>
+</>

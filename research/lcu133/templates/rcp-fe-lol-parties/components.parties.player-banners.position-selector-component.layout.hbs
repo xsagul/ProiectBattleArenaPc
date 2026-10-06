@@ -1,0 +1,127 @@
+<lol-uikit-full-page-backdrop>
+  <div class="parties-position-selector">
+    <div class="parties-position-selector-small-backdrop">
+      <div class="parties-position-selector-hextech-dashed-ring">
+        <div class="position-selection-icons">
+          <div class="position-selection-icon parties-position-icon-utility">
+            <div class="parties-position-text position-text-utility hidden">
+              {{tra.parties_position_utility}}
+            </>
+          </>
+          <div class="position-selection-icon parties-position-icon-middle">
+            <div class="parties-position-text position-text-middle hidden">
+              {{tra.parties_position_middle}}
+            </>
+          </>
+          <div class="position-selection-icon parties-position-icon-jungle">
+            <div class="parties-position-text position-text-jungle hidden">
+              <div class="sr-text">
+                {{tra.parties_position_jungle}}
+              </>
+              <div class="map21-text">
+                {{tra.parties_position_jungle}}
+                <div class="map21-position-count">
+                  (
+                  {{map21ExpectedJunglerCount}}
+                  )
+                </>
+              </>
+            </>
+          </>
+          <div class="position-selection-icon parties-position-icon-bottom">
+            <div class="parties-position-text position-text-bottom hidden">
+              <div class="sr-text">
+                {{tra.parties_position_bottom}}
+              </>
+              <div class="map21-text">
+                {{tra.parties_position_lane}}
+                <div class="map21-position-count">
+                  (
+                  {{map21ExpectedLanerCount}}
+                  )
+                </>
+              </>
+            </>
+          </>
+          <div class="position-selection-icon parties-position-icon-fill">
+            <div class="parties-position-text position-text-fill hidden">
+              {{tra.parties_position_fill}}
+            </>
+          </>
+          <div class="position-selection-icon parties-position-icon-top">
+            <div class="parties-position-text position-text-top hidden">
+              {{tra.parties_position_top}}
+            </>
+          </>
+        </>
+        <div class="position-selection-pointers">
+          <div class="position-selection-pointer parties-position-pointer-unselected">
+          </>
+          <div class="position-selection-pointer parties-position-pointer-utility hidden">
+          </>
+          <div class="position-selection-pointer parties-position-pointer-middle hidden">
+          </>
+          <div class="position-selection-pointer parties-position-pointer-jungle hidden">
+          </>
+          <div class="position-selection-pointer parties-position-pointer-bottom hidden">
+          </>
+          <div class="position-selection-pointer parties-position-pointer-fill hidden">
+          </>
+          <div class="position-selection-pointer parties-position-pointer-top hidden">
+          </>
+        </>
+        <ul class="parties-position-selector-pie">
+          {{#if isMap21}}
+            <li class="position-selection position-jungle" {{action this "positionHoverIn" "jungle" on="mouseEnter"}} {{action this "positionHoverOut" "jungle" on="mouseLeave"}} {{action this "positionSelected" "jungle" on="mouseUp"}} {{action this "positionSelected" "jungle"}}>
+              <div class="position-selection-proxy">
+              </>
+            </>
+            <li class="position-selection position-bottom" {{action this "positionHoverIn" "bottom" on="mouseEnter"}} {{action this "positionHoverOut" "bottom" on="mouseLeave"}} {{action this "positionSelected" "bottom" on="mouseUp"}} {{action this "positionSelected" "bottom"}}>
+              <div class="position-selection-proxy">
+              </>
+            </>
+            <li class="position-selection position-fill" {{action this "positionHoverIn" "fill" on="mouseEnter"}} {{action this "positionHoverOut" "fill" on="mouseLeave"}} {{action this "positionSelected" "fill" on="mouseUp"}} {{action this "positionSelected" "fill"}}>
+              <div class="position-selection-proxy">
+              </>
+            </>
+          {{else}}
+            <li class="position-selection position-jungle" {{action this "positionHoverIn" "jungle" on="mouseEnter"}} {{action this "positionHoverOut" "jungle" on="mouseLeave"}} {{action this "positionSelected" "jungle" on="mouseUp"}} {{action this "positionSelected" "jungle"}}>
+              <div class="position-selection-proxy">
+              </>
+            </>
+            <li class="position-selection position-middle" {{action this "positionHoverIn" "middle" on="mouseEnter"}} {{action this "positionHoverOut" "middle" on="mouseLeave"}} {{action this "positionSelected" "middle" on="mouseUp"}} {{action this "positionSelected" "middle"}}>
+              <div class="position-selection-proxy">
+              </>
+            </>
+            <li class="position-selection position-bottom" {{action this "positionHoverIn" "bottom" on="mouseEnter"}} {{action this "positionHoverOut" "bottom" on="mouseLeave"}} {{action this "positionSelected" "bottom" on="mouseUp"}} {{action this "positionSelected" "bottom"}}>
+              <div class="position-selection-proxy">
+              </>
+            </>
+            <li class="position-selection position-utility" {{action this "positionHoverIn" "utility" on="mouseEnter"}} {{action this "positionHoverOut" "utility" on="mouseLeave"}} {{action this "positionSelected" "utility" on="mouseUp"}} {{action this "positionSelected" "utility"}}>
+              <div class="position-selection-proxy">
+              </>
+            </>
+            <li class="position-selection position-fill" {{action this "positionHoverIn" "fill" on="mouseEnter"}} {{action this "positionHoverOut" "fill" on="mouseLeave"}} {{action this "positionSelected" "fill" on="mouseUp"}} {{action this "positionSelected" "fill"}}>
+              <div class="position-selection-proxy">
+              </>
+            </>
+            <li class="position-selection position-fill" {{action this "positionHoverIn" "fill" on="mouseEnter"}} {{action this "positionHoverOut" "fill" on="mouseLeave"}} {{action this "positionSelected" "fill" on="mouseUp"}} {{action this "positionSelected" "fill"}}>
+              <div class="position-selection-proxy">
+              </>
+            </>
+            <li class="position-selection position-fill" {{action this "positionHoverIn" "fill" on="mouseEnter"}} {{action this "positionHoverOut" "fill" on="mouseLeave"}} {{action this "positionSelected" "fill" on="mouseUp"}} {{action this "positionSelected" "fill"}}>
+              <div class="position-selection-proxy">
+              </>
+            </>
+            <li class="position-selection position-top" {{action this "positionHoverIn" "top" on="mouseEnter"}} {{action this "positionHoverOut" "top" on="mouseLeave"}} {{action this "positionSelected" "top" on="mouseUp"}} {{action this "positionSelected" "top"}}>
+              <div class="position-selection-proxy">
+              </>
+            </>
+          {{/if}}
+        </>
+        <div class="parties-current-position-icon" {{action this "positionSelected" "unselected"}} {{action this "positionHoverIn" "unselected" on="mouseEnter"}}>
+        </>
+      </>
+    </>
+  </>
+</>

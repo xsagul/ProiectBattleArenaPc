@@ -1,0 +1,28 @@
+<div class="overall-progress-container">
+  <div class="overall-challenge-level-image-container">
+    <img class="overall-challenge-level-image" src="{{crystalImagePath}}">
+    </>
+  </>
+  <div class="overall-challenge-details-container">
+    <div class="overall-header-container">
+      <div class="overall-title">
+        {{localizedChallengeLevel}}
+      </>
+      <div class="overall-header-separator">
+      </>
+      <div class="overall-percentile">
+        {{toolTipPositionText}}
+      </>
+    </>
+    <div class="per-category-progress-container">
+      {{#each categories as |categoryProgress|}}
+        <div class="category-progress-radial-container">
+          <div class="category-progress-border">
+          </>
+          <div class="category-icon {{categoryProgress.category}} color-{{categoryProgress.level}}">
+          </>
+        </>
+      {{/each}}
+    </>
+  </>
+</>

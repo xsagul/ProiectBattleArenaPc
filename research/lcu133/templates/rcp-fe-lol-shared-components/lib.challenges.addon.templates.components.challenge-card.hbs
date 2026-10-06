@@ -1,0 +1,35 @@
+<div class="challenge-card-content-container">
+  <div class="challenge-card-solid-background">
+  </>
+  {{#unless isEternal}}
+    {{#if backgroundImagePath}}
+      <img class="challenge-card-background" src={{backgroundImagePath}}>
+      </>
+    {{/if}}
+    {{#if showAnimatedHover}}
+      <div class="challenge-card-lottie-container">
+        <lol-uikit-lottie id="challenge-card-lottie-bg-animation" src="/fe/lol-static-assets/lottie/challenges/challenges-card-hover-bg.json" autoplay="" loop="">
+        </>
+      </>
+    {{/if}}
+  {{/unless}}
+  <div class="challenge-card-content">
+    <div class="challenge-card-border">
+    </>
+    {{#if isEmpty}}
+      <div class="challenge-card-empty">
+      </>
+    {{else}}
+      {{yield }}
+    {{/if}}
+  </>
+</>
+<div class="challenge-card-points-container">
+  {{#if pointsContainerImagePath}}
+    <img class="challenge-card-points-container-background" src={{pointsContainerImagePath}}>
+    </>
+  {{/if}}
+  <div class="challenge-card-points {{pointsContainerTextSize}}">
+    {{pointsAwarded}}
+  </>
+</>

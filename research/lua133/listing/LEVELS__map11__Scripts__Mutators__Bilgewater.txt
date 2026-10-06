@@ -1,0 +1,79 @@
+
+main <?:0,0> (5 instructions, 20 bytes at 000001FA00D83420)
+0+ params, 2 slots, 0 upvalues, 0 locals, 2 constants, 2 functions
+	1	[-]	CLOSURE  	0 0	; 000001FA00D834A0
+	2	[-]	SETGLOBAL	0 -1	; OnInitClient
+	3	[-]	CLOSURE  	0 1	; 000001FA00D83690
+	4	[-]	SETGLOBAL	0 -2	; OnInitServer
+	5	[-]	RETURN   	0 1
+constants (2) for 000001FA00D83420:
+	1	"OnInitClient"
+	2	"OnInitServer"
+locals (0) for 000001FA00D83420:
+upvalues (0) for 000001FA00D83420:
+
+function <?:1,15> (34 instructions, 136 bytes at 000001FA00D834A0)
+0 params, 2 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; PreloadSpell
+	2	[-]	LOADK    	1 -2	; "BWPlayerBuff"
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -3	; PreloadCharacter
+	5	[-]	LOADK    	1 -4	; "BilgeLaneMelee_Order"
+	6	[-]	CALL     	0 2 1
+	7	[-]	GETGLOBAL	0 -3	; PreloadCharacter
+	8	[-]	LOADK    	1 -5	; "BilgeLaneMelee_Chaos"
+	9	[-]	CALL     	0 2 1
+	10	[-]	GETGLOBAL	0 -3	; PreloadCharacter
+	11	[-]	LOADK    	1 -6	; "BilgeLaneRanged_Order"
+	12	[-]	CALL     	0 2 1
+	13	[-]	GETGLOBAL	0 -3	; PreloadCharacter
+	14	[-]	LOADK    	1 -7	; "BilgeLaneRanged_Chaos"
+	15	[-]	CALL     	0 2 1
+	16	[-]	GETGLOBAL	0 -3	; PreloadCharacter
+	17	[-]	LOADK    	1 -8	; "BilgeLaneCannon_Order"
+	18	[-]	CALL     	0 2 1
+	19	[-]	GETGLOBAL	0 -3	; PreloadCharacter
+	20	[-]	LOADK    	1 -9	; "BilgeLaneCannon_Chaos"
+	21	[-]	CALL     	0 2 1
+	22	[-]	GETGLOBAL	0 -3	; PreloadCharacter
+	23	[-]	LOADK    	1 -10	; "BW_Razorfin"
+	24	[-]	CALL     	0 2 1
+	25	[-]	GETGLOBAL	0 -3	; PreloadCharacter
+	26	[-]	LOADK    	1 -11	; "BW_Ironback"
+	27	[-]	CALL     	0 2 1
+	28	[-]	GETGLOBAL	0 -3	; PreloadCharacter
+	29	[-]	LOADK    	1 -12	; "BW_Plundercrab"
+	30	[-]	CALL     	0 2 1
+	31	[-]	GETGLOBAL	0 -3	; PreloadCharacter
+	32	[-]	LOADK    	1 -13	; "BW_Ocklepod"
+	33	[-]	CALL     	0 2 1
+	34	[-]	RETURN   	0 1
+constants (13) for 000001FA00D834A0:
+	1	"PreloadSpell"
+	2	"BWPlayerBuff"
+	3	"PreloadCharacter"
+	4	"BilgeLaneMelee_Order"
+	5	"BilgeLaneMelee_Chaos"
+	6	"BilgeLaneRanged_Order"
+	7	"BilgeLaneRanged_Chaos"
+	8	"BilgeLaneCannon_Order"
+	9	"BilgeLaneCannon_Chaos"
+	10	"BW_Razorfin"
+	11	"BW_Ironback"
+	12	"BW_Plundercrab"
+	13	"BW_Ocklepod"
+locals (0) for 000001FA00D834A0:
+upvalues (0) for 000001FA00D834A0:
+
+function <?:17,19> (5 instructions, 20 bytes at 000001FA00D83690)
+0 params, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; ApplyPersistentBuffToAllChampions
+	2	[-]	LOADK    	1 -2	; "BWPlayerBuff"
+	3	[-]	LOADBOOL 	2 0 0
+	4	[-]	CALL     	0 3 1
+	5	[-]	RETURN   	0 1
+constants (2) for 000001FA00D83690:
+	1	"ApplyPersistentBuffToAllChampions"
+	2	"BWPlayerBuff"
+locals (0) for 000001FA00D83690:
+upvalues (0) for 000001FA00D83690:

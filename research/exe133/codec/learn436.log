@@ -1,0 +1,21 @@
+struct 0x8a04b0
+  0x8a04b0 field 0: bits 4..6 +0xa 1 B 0:fixed 1:fixed 2:const 3:const 4:const 5:fixed 6:const 7:fixed
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 1478, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 1149, in learn
+    sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc).learn()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 361, in learn
+    fl = self.learn_field(k)
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 404, in learn_field
+    mode = self.learn_mode(k, m, r, seg, res, d)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 477, in learn_mode
+    return self.learn_text(k, m, res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 643, in learn_text
+    one = L.index(1)
+          ^^^^^^^^^^
+ValueError: 1 is not in list

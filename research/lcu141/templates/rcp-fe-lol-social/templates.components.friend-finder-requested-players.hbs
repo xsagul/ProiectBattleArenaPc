@@ -1,0 +1,8 @@
+<div class="header">
+  {{tra.friend_finder_modal_requested_summoners}}
+</>
+<div id="requested-players-list" overflow-masks="enabled">
+  {{#each sentFriendRequests key="idToUse" as |player|}}
+    {{friend-finder-requested-player player=player closeModal=closeModal}}
+  {{/each}}
+</>

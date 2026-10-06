@@ -1,0 +1,272 @@
+
+main <?:0,0> (30 instructions, 120 bytes at 012698A8)
+0+ params, 7 slots, 0 upvalues, 0 locals, 20 constants, 6 functions
+	1	[-]	LOADK    	0 -2	; 500
+	2	[-]	SETGLOBAL	0 -1	; MIN_DIST_TO_SHOP
+	3	[-]	LOADK    	0 -4	; 0
+	4	[-]	SETGLOBAL	0 -3	; AI_MOVE
+	5	[-]	LOADK    	0 -6	; 1
+	6	[-]	SETGLOBAL	0 -5	; AI_SHOP
+	7	[-]	NEWTABLE 	0 6 0
+	8	[-]	LOADK    	1 -8	; 1001
+	9	[-]	LOADK    	2 -9	; 2003
+	10	[-]	LOADK    	3 -10	; 1006
+	11	[-]	LOADK    	4 -11	; 1042
+	12	[-]	LOADK    	5 -12	; 1028
+	13	[-]	LOADK    	6 -13	; 1029
+	14	[-]	SETLIST  	0 6 1	; 1
+	15	[-]	SETGLOBAL	0 -7	; ITEMS_TO_BUY
+	16	[-]	LOADK    	0 -6	; 1
+	17	[-]	SETGLOBAL	0 -14	; BUY_INDEX
+	18	[-]	CLOSURE  	0 0	; 01269AC8
+	19	[-]	SETGLOBAL	0 -15	; ChangeItemToBuy
+	20	[-]	CLOSURE  	0 1	; 01269B20
+	21	[-]	SETGLOBAL	0 -16	; GetNextItemToBuy
+	22	[-]	CLOSURE  	0 2	; 01269B78
+	23	[-]	SETGLOBAL	0 -17	; UpdatePriority
+	24	[-]	CLOSURE  	0 3	; 01269E10
+	25	[-]	SETGLOBAL	0 -18	; BeginTask
+	26	[-]	CLOSURE  	0 4	; 01267F90
+	27	[-]	SETGLOBAL	0 -19	; Tick
+	28	[-]	CLOSURE  	0 5	; 01267FE8
+	29	[-]	SETGLOBAL	0 -20	; OnTargetLost
+	30	[-]	RETURN   	0 1
+constants (20) for 012698A8:
+	1	"MIN_DIST_TO_SHOP"
+	2	500
+	3	"AI_MOVE"
+	4	0
+	5	"AI_SHOP"
+	6	1
+	7	"ITEMS_TO_BUY"
+	8	1001
+	9	2003
+	10	1006
+	11	1042
+	12	1028
+	13	1029
+	14	"BUY_INDEX"
+	15	"ChangeItemToBuy"
+	16	"GetNextItemToBuy"
+	17	"UpdatePriority"
+	18	"BeginTask"
+	19	"Tick"
+	20	"OnTargetLost"
+locals (0) for 012698A8:
+upvalues (0) for 012698A8:
+
+function <?:19,24> (9 instructions, 36 bytes at 01269AC8)
+1 param, 2 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; BUY_INDEX
+	2	[-]	ADD      	1 1 -2	; - 1
+	3	[-]	SETGLOBAL	1 -1	; BUY_INDEX
+	4	[-]	GETGLOBAL	1 -1	; BUY_INDEX
+	5	[-]	LT       	0 -3 1	; 6 -
+	6	[-]	JMP      	2	; to 9
+	7	[-]	LOADK    	1 -2	; 1
+	8	[-]	SETGLOBAL	1 -1	; BUY_INDEX
+	9	[-]	RETURN   	0 1
+constants (3) for 01269AC8:
+	1	"BUY_INDEX"
+	2	1
+	3	6
+locals (0) for 01269AC8:
+upvalues (0) for 01269AC8:
+
+function <?:26,28> (5 instructions, 20 bytes at 01269B20)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; ITEMS_TO_BUY
+	2	[-]	GETGLOBAL	2 -2	; BUY_INDEX
+	3	[-]	GETTABLE 	1 1 2
+	4	[-]	RETURN   	1 2
+	5	[-]	RETURN   	0 1
+constants (2) for 01269B20:
+	1	"ITEMS_TO_BUY"
+	2	"BUY_INDEX"
+locals (0) for 01269B20:
+upvalues (0) for 01269B20:
+
+function <?:31,84> (63 instructions, 252 bytes at 01269B78)
+1 param, 8 slots, 0 upvalues, 0 locals, 19 constants, 0 functions
+	1	[-]	GETTABLE 	1 0 -1	; "ItemToBuy"
+	2	[-]	EQ       	0 1 -2	; - nil
+	3	[-]	JMP      	3	; to 7
+	4	[-]	GETGLOBAL	1 -3	; GetNextItemToBuy
+	5	[-]	CALL     	1 1 2
+	6	[-]	SETTABLE 	0 -1 1	; "ItemToBuy" -
+	7	[-]	GETGLOBAL	1 -4	; GetNumInvSlotsAvailable
+	8	[-]	CALL     	1 1 2
+	9	[-]	LT       	0 1 -5	; - 1
+	10	[-]	JMP      	2	; to 13
+	11	[-]	SETTABLE 	0 -6 -7	; "Priority" 0
+	12	[-]	RETURN   	0 1
+	13	[-]	GETGLOBAL	1 -8	; GetGold
+	14	[-]	CALL     	1 1 2
+	15	[-]	GETGLOBAL	2 -9	; GetItemPrice
+	16	[-]	GETTABLE 	3 0 -1	; "ItemToBuy"
+	17	[-]	CALL     	2 2 2
+	18	[-]	LOADK    	3 -5	; 1
+	19	[-]	GETGLOBAL	4 -10	; GetRegroupPos
+	20	[-]	CALL     	4 1 2
+	21	[-]	GETGLOBAL	5 -11	; GetDist
+	22	[-]	MOVE     	6 4
+	23	[-]	GETGLOBAL	7 -12	; GetPos
+	24	[-]	CALL     	7 1 0
+	25	[-]	CALL     	5 0 2
+	26	[-]	LT       	0 1 2
+	27	[-]	JMP      	2	; to 30
+	28	[-]	SETTABLE 	0 -6 -7	; "Priority" 0
+	29	[-]	JMP      	22	; to 52
+	30	[-]	LE       	0 2 1
+	31	[-]	JMP      	20	; to 52
+	32	[-]	MUL      	6 -13 2	; 2 -
+	33	[-]	LT       	0 6 1
+	34	[-]	JMP      	1	; to 36
+	35	[-]	LOADK    	3 -14	; 1.1
+	36	[-]	LT       	0 5 -15	; - 3000
+	37	[-]	JMP      	3	; to 41
+	38	[-]	MUL      	6 -16 3	; 0.8 -
+	39	[-]	SETTABLE 	0 -6 6	; "Priority" -
+	40	[-]	JMP      	11	; to 52
+	41	[-]	LT       	0 -15 5	; 3000 -
+	42	[-]	JMP      	7	; to 50
+	43	[-]	LT       	0 5 -17	; - 6000
+	44	[-]	JMP      	5	; to 50
+	45	[-]	DIV      	6 -17 5	; 6000 -
+	46	[-]	MUL      	6 6 -18	; - 0.2
+	47	[-]	MUL      	6 6 3
+	48	[-]	SETTABLE 	0 -6 6	; "Priority" -
+	49	[-]	JMP      	2	; to 52
+	50	[-]	MUL      	6 -18 3	; 0.2 -
+	51	[-]	SETTABLE 	0 -6 6	; "Priority" -
+	52	[-]	GETTABLE 	6 0 -6	; "Priority"
+	53	[-]	LT       	0 -19 6	; 0.9 -
+	54	[-]	JMP      	1	; to 56
+	55	[-]	SETTABLE 	0 -6 -19	; "Priority" 0.9
+	56	[-]	GETGLOBAL	6 -9	; GetItemPrice
+	57	[-]	GETTABLE 	7 0 -1	; "ItemToBuy"
+	58	[-]	CALL     	6 2 2
+	59	[-]	EQ       	0 6 -7	; - 0
+	60	[-]	JMP      	2	; to 63
+	61	[-]	SETTABLE 	0 -6 -7	; "Priority" 0
+	62	[-]	SETTABLE 	0 -1 -2	; "ItemToBuy" nil
+	63	[-]	RETURN   	0 1
+constants (19) for 01269B78:
+	1	"ItemToBuy"
+	2	nil
+	3	"GetNextItemToBuy"
+	4	"GetNumInvSlotsAvailable"
+	5	1
+	6	"Priority"
+	7	0
+	8	"GetGold"
+	9	"GetItemPrice"
+	10	"GetRegroupPos"
+	11	"GetDist"
+	12	"GetPos"
+	13	2
+	14	1.1
+	15	3000
+	16	0.8
+	17	6000
+	18	0.2
+	19	0.9
+locals (0) for 01269B78:
+upvalues (0) for 01269B78:
+
+function <?:86,90> (7 instructions, 28 bytes at 01269E10)
+1 param, 3 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; TurnOffAutoAttack
+	2	[-]	GETGLOBAL	2 -2	; STOPREASON_IMMEDIATELY
+	3	[-]	CALL     	1 2 1
+	4	[-]	GETGLOBAL	1 -3	; SetState
+	5	[-]	GETGLOBAL	2 -4	; AI_SHOP
+	6	[-]	CALL     	1 2 1
+	7	[-]	RETURN   	0 1
+constants (4) for 01269E10:
+	1	"TurnOffAutoAttack"
+	2	"STOPREASON_IMMEDIATELY"
+	3	"SetState"
+	4	"AI_SHOP"
+locals (0) for 01269E10:
+upvalues (0) for 01269E10:
+
+function <?:92,119> (50 instructions, 200 bytes at 01267F90)
+1 param, 6 slots, 0 upvalues, 0 locals, 17 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetRegroupPos
+	2	[-]	CALL     	1 1 2
+	3	[-]	GETGLOBAL	2 -2	; GetDist
+	4	[-]	MOVE     	3 1
+	5	[-]	GETGLOBAL	4 -3	; GetPos
+	6	[-]	CALL     	4 1 0
+	7	[-]	CALL     	2 0 2
+	8	[-]	GETGLOBAL	3 -4	; GetState
+	9	[-]	CALL     	3 1 2
+	10	[-]	GETGLOBAL	4 -5	; AI_SHOP
+	11	[-]	EQ       	0 3 4
+	12	[-]	JMP      	7	; to 20
+	13	[-]	GETGLOBAL	3 -6	; MIN_DIST_TO_SHOP
+	14	[-]	LT       	0 3 2
+	15	[-]	JMP      	4	; to 20
+	16	[-]	GETGLOBAL	3 -7	; SetStateAndMove
+	17	[-]	GETGLOBAL	4 -8	; AI_MOVE
+	18	[-]	MOVE     	5 1
+	19	[-]	CALL     	3 3 1
+	20	[-]	GETGLOBAL	3 -6	; MIN_DIST_TO_SHOP
+	21	[-]	LE       	0 2 3
+	22	[-]	JMP      	27	; to 50
+	23	[-]	GETGLOBAL	3 -4	; GetState
+	24	[-]	CALL     	3 1 2
+	25	[-]	GETGLOBAL	4 -8	; AI_MOVE
+	26	[-]	EQ       	0 3 4
+	27	[-]	JMP      	5	; to 33
+	28	[-]	GETGLOBAL	3 -9	; StopMove
+	29	[-]	CALL     	3 1 1
+	30	[-]	GETGLOBAL	3 -10	; SetState
+	31	[-]	GETGLOBAL	4 -5	; AI_SHOP
+	32	[-]	CALL     	3 2 1
+	33	[-]	GETGLOBAL	3 -11	; GetGold
+	34	[-]	CALL     	3 1 2
+	35	[-]	GETGLOBAL	4 -12	; GetItemPrice
+	36	[-]	GETTABLE 	5 0 -13	; "ItemToBuy"
+	37	[-]	CALL     	4 2 2
+	38	[-]	LT       	0 4 3
+	39	[-]	JMP      	10	; to 50
+	40	[-]	GETGLOBAL	3 -14	; BuyItem
+	41	[-]	GETTABLE 	4 0 -13	; "ItemToBuy"
+	42	[-]	CALL     	3 2 1
+	43	[-]	SELF     	3 0 -15	; "ChangeItemToBuy"
+	44	[-]	CALL     	3 2 1
+	45	[-]	GETGLOBAL	3 -16	; GetNextItemToBuy
+	46	[-]	CALL     	3 1 2
+	47	[-]	SETTABLE 	0 -13 3	; "ItemToBuy" -
+	48	[-]	SELF     	3 0 -17	; "UpdatePriority"
+	49	[-]	CALL     	3 2 1
+	50	[-]	RETURN   	0 1
+constants (17) for 01267F90:
+	1	"GetRegroupPos"
+	2	"GetDist"
+	3	"GetPos"
+	4	"GetState"
+	5	"AI_SHOP"
+	6	"MIN_DIST_TO_SHOP"
+	7	"SetStateAndMove"
+	8	"AI_MOVE"
+	9	"StopMove"
+	10	"SetState"
+	11	"GetGold"
+	12	"GetItemPrice"
+	13	"ItemToBuy"
+	14	"BuyItem"
+	15	"ChangeItemToBuy"
+	16	"GetNextItemToBuy"
+	17	"UpdatePriority"
+locals (0) for 01267F90:
+upvalues (0) for 01267F90:
+
+function <?:121,123> (1 instruction, 4 bytes at 01267FE8)
+1 param, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 01267FE8:
+locals (0) for 01267FE8:
+upvalues (0) for 01267FE8:

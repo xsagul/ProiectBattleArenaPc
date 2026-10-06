@@ -1,0 +1,82 @@
+<uikit-state-machine class="ready-check-state-machine-timer" state="timer-hidden" ready-check-state-machine-state={{readyCheck.stateMachineState}} ready-check-low-spec-mode="true">
+  <uikit-states>
+    <uikit-state name="timer-hidden">
+      <uikit-transition next-state="countdown">
+        <uikit-condition-parameter name="ready-check-state-machine-state" value="in-progress">
+        </>
+      </>
+      <uikit-transition next-state="accepted-intro">
+        <uikit-condition-parameter name="ready-check-state-machine-state" value="accepted">
+        </>
+      </>
+      <uikit-transition next-state="declined">
+        <uikit-condition-parameter name="ready-check-state-machine-state" value="declined">
+        </>
+      </>
+      <uikit-behavior-media selector=".ready-check-timer-countdown" preloading="">
+      </>
+      <uikit-behavior-media selector=".ready-check-timer-accepted-intro" preloading="">
+      </>
+      <uikit-behavior-media selector=".ready-check-timer-accepted-idle" preloading="">
+      </>
+      <uikit-behavior-media selector=".ready-check-timer-declined" preloading="">
+      </>
+    </>
+    <uikit-state name="countdown">
+      <uikit-transition next-state="timer-hidden">
+        <uikit-condition-parameter name="ready-check-state-machine-state" not-value="in-progress">
+        </>
+        <uikit-condition-parameter name="ready-check-state-machine-state" not-value="accepted">
+        </>
+        <uikit-condition-parameter name="ready-check-state-machine-state" not-value="declined">
+        </>
+      </>
+      <uikit-transition next-state="accepted-intro">
+        <uikit-condition-parameter name="ready-check-state-machine-state" value="accepted">
+        </>
+      </>
+      <uikit-transition next-state="declined">
+        <uikit-condition-parameter name="ready-check-state-machine-state" value="declined">
+        </>
+      </>
+      <uikit-behavior-media selector=".ready-check-timer-countdown" playing="">
+      </>
+    </>
+    <uikit-state name="accepted-intro">
+      <uikit-transition next-state="timer-hidden">
+        <uikit-condition-parameter name="ready-check-state-machine-state" not-value="accepted">
+        </>
+      </>
+      <uikit-transition next-state="accepted-idle">
+        <uikit-condition-media selector=".ready-check-timer-accepted-intro" ended="">
+        </>
+      </>
+      <uikit-behavior-media selector=".ready-check-timer-accepted-intro" playing="">
+      </>
+    </>
+    <uikit-state name="accepted-idle">
+      <uikit-transition next-state="timer-hidden">
+        <uikit-condition-parameter name="ready-check-state-machine-state" not-value="accepted">
+        </>
+      </>
+      <uikit-behavior-media selector=".ready-check-timer-accepted-idle" playing="">
+      </>
+    </>
+    <uikit-state name="declined">
+      <uikit-transition next-state="timer-hidden">
+        <uikit-condition-parameter name="ready-check-state-machine-state" not-value="declined">
+        </>
+      </>
+      <uikit-behavior-media selector=".ready-check-timer-declined" playing="">
+      </>
+    </>
+  </>
+  <uikit-video class="ready-check-timer-countdown" src="/fe/lol-static-assets/videos/timer-countdown.webm" cache-name="rcp-fe-lol-ready-check" visible-state="countdown">
+  </>
+  <uikit-video class="ready-check-timer-accepted-intro" src="/fe/lol-static-assets/videos/timer-accepted-intro.webm" cache-name="rcp-fe-lol-ready-check" visible-state="accepted-intro">
+  </>
+  <uikit-video class="ready-check-timer-accepted-idle" src="/fe/lol-static-assets/videos/timer-accepted-idle.webm" cache-name="rcp-fe-lol-ready-check" visible-state="accepted-idle" loop="loop">
+  </>
+  <uikit-video class="ready-check-timer-declined" src="/fe/lol-static-assets/videos/timer-declined.webm" cache-name="rcp-fe-lol-ready-check" visible-state="declined">
+  </>
+</>

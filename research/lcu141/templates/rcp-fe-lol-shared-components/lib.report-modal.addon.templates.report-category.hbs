@@ -1,0 +1,17 @@
+<div class="report-category-checkbox">
+  <lol-uikit-flat-checkbox class="report-category-flat-checkbox">
+    {{input slot="input" type="checkbox" id=categoryCheckboxId checked=category.isChecked disabled=category.isDisabled}}
+    <label slot="label" class="flat-checkbox-label" for="{{categoryCheckboxId}}">
+      <span class="flat-checkbox-span">
+      </>
+      <span class="report-category-text-title">
+        {{title}}
+      </>
+    </>
+  </>
+</>
+{{#if hasDescription}}
+  <span class="report-category-text-description">
+    {{description}}
+  </>
+{{/if}}

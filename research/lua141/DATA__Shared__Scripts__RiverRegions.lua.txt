@@ -1,0 +1,435 @@
+
+main <?:0,0> (9 instructions, 36 bytes at 0000016610BF3700)
+0+ params, 2 slots, 0 upvalues, 0 locals, 4 constants, 4 functions
+	1	[-]	CLOSURE  	0 0	; 0000016610BF3780
+	2	[-]	SETGLOBAL	0 -1	; CreateRiverRegions
+	3	[-]	CLOSURE  	0 1	; 0000016610BF40B0
+	4	[-]	SETGLOBAL	0 -2	; GetWaypoint
+	5	[-]	CLOSURE  	0 2	; 0000016610BF4130
+	6	[-]	SETGLOBAL	0 -3	; IncrementWaypoint
+	7	[-]	CLOSURE  	0 3	; 0000016610BF42A0
+	8	[-]	SETGLOBAL	0 -4	; SeekWaypoint
+	9	[-]	RETURN   	0 1
+constants (4) for 0000016610BF3700:
+	1	"CreateRiverRegions"
+	2	"GetWaypoint"
+	3	"IncrementWaypoint"
+	4	"SeekWaypoint"
+locals (0) for 0000016610BF3700:
+upvalues (0) for 0000016610BF3700:
+
+function <?:1,96> (236 instructions, 944 bytes at 0000016610BF3780)
+0 params, 13 slots, 0 upvalues, 0 locals, 78 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; Make3DPoint
+	2	[-]	LOADK    	1 -2	; 10500
+	3	[-]	LOADK    	2 -3	; 0
+	4	[-]	LOADK    	3 -4	; 5000
+	5	[-]	CALL     	0 4 2
+	6	[-]	GETGLOBAL	1 -1	; Make3DPoint
+	7	[-]	LOADK    	2 -5	; 4200
+	8	[-]	LOADK    	3 -3	; 0
+	9	[-]	LOADK    	4 -6	; 9800
+	10	[-]	CALL     	1 4 2
+	11	[-]	GETGLOBAL	2 -7	; GetMyPos
+	12	[-]	CALL     	2 1 2
+	13	[-]	SUB      	2 2 0
+	14	[-]	SELF     	2 2 -8	; "lengthSq"
+	15	[-]	CALL     	2 2 2
+	16	[-]	GETGLOBAL	3 -7	; GetMyPos
+	17	[-]	CALL     	3 1 2
+	18	[-]	SUB      	3 3 1
+	19	[-]	SELF     	3 3 -8	; "lengthSq"
+	20	[-]	CALL     	3 2 2
+	21	[-]	LT       	0 3 2
+	22	[-]	JMP      	102	; to 125
+	23	[-]	NEWTABLE 	2 0 8
+	24	[-]	GETGLOBAL	3 -1	; Make3DPoint
+	25	[-]	LOADK    	4 -11	; 3150
+	26	[-]	LOADK    	5 -3	; 0
+	27	[-]	LOADK    	6 -12	; 11500
+	28	[-]	CALL     	3 4 2
+	29	[-]	SETTABLE 	2 -10 3	; "StartPos" -
+	30	[-]	GETGLOBAL	3 -1	; Make3DPoint
+	31	[-]	LOADK    	4 -14	; 6400
+	32	[-]	LOADK    	5 -3	; 0
+	33	[-]	LOADK    	6 -15	; 8400
+	34	[-]	CALL     	3 4 2
+	35	[-]	SETTABLE 	2 -13 3	; "EndPos" -
+	36	[-]	SETTABLE 	2 -16 -17	; "Dest" 4
+	37	[-]	SETTABLE 	2 -18 -19	; "Dir" -1
+	38	[-]	NEWTABLE 	3 4 0
+	39	[-]	GETGLOBAL	4 -1	; Make3DPoint
+	40	[-]	LOADK    	5 -21	; 3720
+	41	[-]	LOADK    	6 -3	; 0
+	42	[-]	LOADK    	7 -22	; 9920
+	43	[-]	CALL     	4 4 2
+	44	[-]	GETGLOBAL	5 -1	; Make3DPoint
+	45	[-]	LOADK    	6 -23	; 4030
+	46	[-]	LOADK    	7 -3	; 0
+	47	[-]	LOADK    	8 -24	; 9460
+	48	[-]	CALL     	5 4 2
+	49	[-]	GETGLOBAL	6 -1	; Make3DPoint
+	50	[-]	LOADK    	7 -25	; 4710
+	51	[-]	LOADK    	8 -3	; 0
+	52	[-]	LOADK    	9 -26	; 9190
+	53	[-]	CALL     	6 4 2
+	54	[-]	GETGLOBAL	7 -1	; Make3DPoint
+	55	[-]	LOADK    	8 -27	; 5240
+	56	[-]	LOADK    	9 -3	; 0
+	57	[-]	LOADK    	10 -28	; 8950
+	58	[-]	CALL     	7 4 2
+	59	[-]	GETGLOBAL	8 -1	; Make3DPoint
+	60	[-]	LOADK    	9 -29	; 5890
+	61	[-]	LOADK    	10 -3	; 0
+	62	[-]	LOADK    	11 -30	; 8810
+	63	[-]	CALL     	8 4 0
+	64	[-]	SETLIST  	3 0 1	; 1
+	65	[-]	SETTABLE 	2 -20 3	; "Path" -
+	66	[-]	NEWTABLE 	3 4 0
+	67	[-]	GETGLOBAL	4 -1	; Make3DPoint
+	68	[-]	LOADK    	5 -32	; 2840
+	69	[-]	LOADK    	6 -3	; 0
+	70	[-]	LOADK    	7 -33	; 11270
+	71	[-]	CALL     	4 4 2
+	72	[-]	GETGLOBAL	5 -1	; Make3DPoint
+	73	[-]	LOADK    	6 -34	; 3100
+	74	[-]	LOADK    	7 -3	; 0
+	75	[-]	LOADK    	8 -12	; 11500
+	76	[-]	CALL     	5 4 2
+	77	[-]	GETGLOBAL	6 -1	; Make3DPoint
+	78	[-]	LOADK    	7 -35	; 3800
+	79	[-]	LOADK    	8 -3	; 0
+	80	[-]	LOADK    	9 -36	; 11000
+	81	[-]	CALL     	6 4 2
+	82	[-]	GETGLOBAL	7 -1	; Make3DPoint
+	83	[-]	LOADK    	8 -37	; 4500
+	84	[-]	LOADK    	9 -3	; 0
+	85	[-]	LOADK    	10 -38	; 9900
+	86	[-]	CALL     	7 4 2
+	87	[-]	GETGLOBAL	8 -1	; Make3DPoint
+	88	[-]	LOADK    	9 -39	; 6750
+	89	[-]	LOADK    	10 -3	; 0
+	90	[-]	LOADK    	11 -40	; 8650
+	91	[-]	CALL     	8 4 0
+	92	[-]	SETLIST  	3 0 1	; 1
+	93	[-]	SETTABLE 	2 -31 3	; "TopBorder" -
+	94	[-]	SETTABLE 	2 -41 1	; "CenterPos" -
+	95	[-]	NEWTABLE 	3 4 0
+	96	[-]	GETGLOBAL	4 -1	; Make3DPoint
+	97	[-]	LOADK    	5 -32	; 2840
+	98	[-]	LOADK    	6 -3	; 0
+	99	[-]	LOADK    	7 -33	; 11270
+	100	[-]	CALL     	4 4 2
+	101	[-]	GETGLOBAL	5 -1	; Make3DPoint
+	102	[-]	LOADK    	6 -43	; 3600
+	103	[-]	LOADK    	7 -3	; 0
+	104	[-]	LOADK    	8 -44	; 9700
+	105	[-]	CALL     	5 4 2
+	106	[-]	GETGLOBAL	6 -1	; Make3DPoint
+	107	[-]	LOADK    	7 -45	; 4700
+	108	[-]	LOADK    	8 -3	; 0
+	109	[-]	LOADK    	9 -46	; 8900
+	110	[-]	CALL     	6 4 2
+	111	[-]	GETGLOBAL	7 -1	; Make3DPoint
+	112	[-]	LOADK    	8 -47	; 6115
+	113	[-]	LOADK    	9 -3	; 0
+	114	[-]	LOADK    	10 -48	; 8100
+	115	[-]	CALL     	7 4 2
+	116	[-]	GETGLOBAL	8 -1	; Make3DPoint
+	117	[-]	LOADK    	9 -49	; 6800
+	118	[-]	LOADK    	10 -3	; 0
+	119	[-]	LOADK    	11 -50	; 8600
+	120	[-]	CALL     	8 4 0
+	121	[-]	SETLIST  	3 0 1	; 1
+	122	[-]	SETTABLE 	2 -42 3	; "BottomBorder" -
+	123	[-]	SETGLOBAL	2 -9	; River
+	124	[-]	JMP      	111	; to 236
+	125	[-]	NEWTABLE 	2 0 8
+	126	[-]	GETGLOBAL	3 -1	; Make3DPoint
+	127	[-]	LOADK    	4 -12	; 11500
+	128	[-]	LOADK    	5 -3	; 0
+	129	[-]	LOADK    	6 -51	; 4000
+	130	[-]	CALL     	3 4 2
+	131	[-]	SETTABLE 	2 -10 3	; "StartPos" -
+	132	[-]	GETGLOBAL	3 -1	; Make3DPoint
+	133	[-]	LOADK    	4 -52	; 8500
+	134	[-]	LOADK    	5 -3	; 0
+	135	[-]	LOADK    	6 -53	; 6300
+	136	[-]	CALL     	3 4 2
+	137	[-]	SETTABLE 	2 -13 3	; "EndPos" -
+	138	[-]	SETTABLE 	2 -16 -17	; "Dest" 4
+	139	[-]	SETTABLE 	2 -18 -19	; "Dir" -1
+	140	[-]	NEWTABLE 	3 4 0
+	141	[-]	GETGLOBAL	4 -1	; Make3DPoint
+	142	[-]	LOADK    	5 -54	; 11190
+	143	[-]	LOADK    	6 -3	; 0
+	144	[-]	LOADK    	7 -55	; 4660
+	145	[-]	CALL     	4 4 2
+	146	[-]	GETGLOBAL	5 -1	; Make3DPoint
+	147	[-]	LOADK    	6 -56	; 11020
+	148	[-]	LOADK    	7 -3	; 0
+	149	[-]	LOADK    	8 -57	; 5130
+	150	[-]	CALL     	5 4 2
+	151	[-]	GETGLOBAL	6 -1	; Make3DPoint
+	152	[-]	LOADK    	7 -58	; 10440
+	153	[-]	LOADK    	8 -3	; 0
+	154	[-]	LOADK    	9 -59	; 5520
+	155	[-]	CALL     	6 4 2
+	156	[-]	GETGLOBAL	7 -1	; Make3DPoint
+	157	[-]	LOADK    	8 -60	; 9830
+	158	[-]	LOADK    	9 -3	; 0
+	159	[-]	LOADK    	10 -61	; 5780
+	160	[-]	CALL     	7 4 2
+	161	[-]	GETGLOBAL	8 -1	; Make3DPoint
+	162	[-]	LOADK    	9 -26	; 9190
+	163	[-]	LOADK    	10 -3	; 0
+	164	[-]	LOADK    	11 -62	; 6030
+	165	[-]	CALL     	8 4 0
+	166	[-]	SETLIST  	3 0 1	; 1
+	167	[-]	SETTABLE 	2 -20 3	; "Path" -
+	168	[-]	SETTABLE 	2 -41 0	; "CenterPos" -
+	169	[-]	NEWTABLE 	3 5 0
+	170	[-]	GETGLOBAL	4 -1	; Make3DPoint
+	171	[-]	LOADK    	5 -63	; 8150
+	172	[-]	LOADK    	6 -3	; 0
+	173	[-]	LOADK    	7 -64	; 6100
+	174	[-]	CALL     	4 4 2
+	175	[-]	GETGLOBAL	5 -1	; Make3DPoint
+	176	[-]	LOADK    	6 -65	; 8850
+	177	[-]	LOADK    	7 -3	; 0
+	178	[-]	LOADK    	8 -66	; 6650
+	179	[-]	CALL     	5 4 2
+	180	[-]	GETGLOBAL	6 -1	; Make3DPoint
+	181	[-]	LOADK    	7 -67	; 9500
+	182	[-]	LOADK    	8 -3	; 0
+	183	[-]	LOADK    	9 -68	; 6200
+	184	[-]	CALL     	6 4 2
+	185	[-]	GETGLOBAL	7 -1	; Make3DPoint
+	186	[-]	LOADK    	8 -69	; 10800
+	187	[-]	LOADK    	9 -3	; 0
+	188	[-]	LOADK    	10 -70	; 5500
+	189	[-]	CALL     	7 4 2
+	190	[-]	GETGLOBAL	8 -1	; Make3DPoint
+	191	[-]	LOADK    	9 -71	; 11300
+	192	[-]	LOADK    	10 -3	; 0
+	193	[-]	LOADK    	11 -72	; 4900
+	194	[-]	CALL     	8 4 2
+	195	[-]	GETGLOBAL	9 -1	; Make3DPoint
+	196	[-]	LOADK    	10 -73	; 11900
+	197	[-]	LOADK    	11 -3	; 0
+	198	[-]	LOADK    	12 -51	; 4000
+	199	[-]	CALL     	9 4 0
+	200	[-]	SETLIST  	3 0 1	; 1
+	201	[-]	SETTABLE 	2 -31 3	; "TopBorder" -
+	202	[-]	NEWTABLE 	3 5 0
+	203	[-]	GETGLOBAL	4 -1	; Make3DPoint
+	204	[-]	LOADK    	5 -63	; 8150
+	205	[-]	LOADK    	6 -3	; 0
+	206	[-]	LOADK    	7 -64	; 6100
+	207	[-]	CALL     	4 4 2
+	208	[-]	GETGLOBAL	5 -1	; Make3DPoint
+	209	[-]	LOADK    	6 -67	; 9500
+	210	[-]	LOADK    	7 -3	; 0
+	211	[-]	LOADK    	8 -74	; 5300
+	212	[-]	CALL     	5 4 2
+	213	[-]	GETGLOBAL	6 -1	; Make3DPoint
+	214	[-]	LOADK    	7 -75	; 10200
+	215	[-]	LOADK    	8 -3	; 0
+	216	[-]	LOADK    	9 -76	; 4800
+	217	[-]	CALL     	6 4 2
+	218	[-]	GETGLOBAL	7 -1	; Make3DPoint
+	219	[-]	LOADK    	8 -36	; 11000
+	220	[-]	LOADK    	9 -3	; 0
+	221	[-]	LOADK    	10 -77	; 4100
+	222	[-]	CALL     	7 4 2
+	223	[-]	GETGLOBAL	8 -1	; Make3DPoint
+	224	[-]	LOADK    	9 -71	; 11300
+	225	[-]	LOADK    	10 -3	; 0
+	226	[-]	LOADK    	11 -78	; 3900
+	227	[-]	CALL     	8 4 2
+	228	[-]	GETGLOBAL	9 -1	; Make3DPoint
+	229	[-]	LOADK    	10 -73	; 11900
+	230	[-]	LOADK    	11 -3	; 0
+	231	[-]	LOADK    	12 -51	; 4000
+	232	[-]	CALL     	9 4 0
+	233	[-]	SETLIST  	3 0 1	; 1
+	234	[-]	SETTABLE 	2 -42 3	; "BottomBorder" -
+	235	[-]	SETGLOBAL	2 -9	; River
+	236	[-]	RETURN   	0 1
+constants (78) for 0000016610BF3780:
+	1	"Make3DPoint"
+	2	10500
+	3	0
+	4	5000
+	5	4200
+	6	9800
+	7	"GetMyPos"
+	8	"lengthSq"
+	9	"River"
+	10	"StartPos"
+	11	3150
+	12	11500
+	13	"EndPos"
+	14	6400
+	15	8400
+	16	"Dest"
+	17	4
+	18	"Dir"
+	19	-1
+	20	"Path"
+	21	3720
+	22	9920
+	23	4030
+	24	9460
+	25	4710
+	26	9190
+	27	5240
+	28	8950
+	29	5890
+	30	8810
+	31	"TopBorder"
+	32	2840
+	33	11270
+	34	3100
+	35	3800
+	36	11000
+	37	4500
+	38	9900
+	39	6750
+	40	8650
+	41	"CenterPos"
+	42	"BottomBorder"
+	43	3600
+	44	9700
+	45	4700
+	46	8900
+	47	6115
+	48	8100
+	49	6800
+	50	8600
+	51	4000
+	52	8500
+	53	6300
+	54	11190
+	55	4660
+	56	11020
+	57	5130
+	58	10440
+	59	5520
+	60	9830
+	61	5780
+	62	6030
+	63	8150
+	64	6100
+	65	8850
+	66	6650
+	67	9500
+	68	6200
+	69	10800
+	70	5500
+	71	11300
+	72	4900
+	73	11900
+	74	5300
+	75	10200
+	76	4800
+	77	4100
+	78	3900
+locals (0) for 0000016610BF3780:
+upvalues (0) for 0000016610BF3780:
+
+function <?:98,100> (7 instructions, 28 bytes at 0000016610BF40B0)
+0 params, 2 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; River
+	2	[-]	GETTABLE 	0 0 -2	; "Path"
+	3	[-]	GETGLOBAL	1 -1	; River
+	4	[-]	GETTABLE 	1 1 -3	; "Dest"
+	5	[-]	GETTABLE 	0 0 1
+	6	[-]	RETURN   	0 2
+	7	[-]	RETURN   	0 1
+constants (3) for 0000016610BF40B0:
+	1	"River"
+	2	"Path"
+	3	"Dest"
+locals (0) for 0000016610BF40B0:
+upvalues (0) for 0000016610BF40B0:
+
+function <?:102,115> (28 instructions, 112 bytes at 0000016610BF4130)
+0 params, 3 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; River
+	2	[-]	GETTABLE 	0 0 -2	; "Dir"
+	3	[-]	EQ       	0 0 -3	; - 1
+	4	[-]	JMP      	10	; to 15
+	5	[-]	GETGLOBAL	0 -1	; River
+	6	[-]	GETTABLE 	0 0 -4	; "Dest"
+	7	[-]	GETGLOBAL	1 -1	; River
+	8	[-]	GETTABLE 	1 1 -5	; "Path"
+	9	[-]	LEN      	1 1
+	10	[-]	EQ       	0 0 1
+	11	[-]	JMP      	9	; to 21
+	12	[-]	GETGLOBAL	0 -1	; River
+	13	[-]	SETTABLE 	0 -2 -6	; "Dir" -1
+	14	[-]	JMP      	6	; to 21
+	15	[-]	GETGLOBAL	0 -1	; River
+	16	[-]	GETTABLE 	0 0 -4	; "Dest"
+	17	[-]	EQ       	0 0 -3	; - 1
+	18	[-]	JMP      	2	; to 21
+	19	[-]	GETGLOBAL	0 -1	; River
+	20	[-]	SETTABLE 	0 -2 -3	; "Dir" 1
+	21	[-]	GETGLOBAL	0 -1	; River
+	22	[-]	GETGLOBAL	1 -1	; River
+	23	[-]	GETTABLE 	1 1 -4	; "Dest"
+	24	[-]	GETGLOBAL	2 -1	; River
+	25	[-]	GETTABLE 	2 2 -2	; "Dir"
+	26	[-]	ADD      	1 1 2
+	27	[-]	SETTABLE 	0 -4 1	; "Dest" -
+	28	[-]	RETURN   	0 1
+constants (6) for 0000016610BF4130:
+	1	"River"
+	2	"Dir"
+	3	1
+	4	"Dest"
+	5	"Path"
+	6	-1
+locals (0) for 0000016610BF4130:
+upvalues (0) for 0000016610BF4130:
+
+function <?:117,132> (28 instructions, 112 bytes at 0000016610BF42A0)
+0 params, 7 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetMyPos
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; GetDistSquared
+	4	[-]	MOVE     	2 0
+	5	[-]	GETGLOBAL	3 -3	; River
+	6	[-]	GETTABLE 	3 3 -4	; "Path"
+	7	[-]	GETTABLE 	3 3 -5	; 1
+	8	[-]	CALL     	1 3 2
+	9	[-]	LOADK    	2 -5	; 1
+	10	[-]	LOADK    	3 -6	; 2
+	11	[-]	GETGLOBAL	4 -3	; River
+	12	[-]	GETTABLE 	4 4 -4	; "Path"
+	13	[-]	LEN      	4 4
+	14	[-]	LE       	0 3 4
+	15	[-]	JMP      	12	; to 28
+	16	[-]	GETGLOBAL	4 -2	; GetDistSquared
+	17	[-]	MOVE     	5 0
+	18	[-]	GETGLOBAL	6 -3	; River
+	19	[-]	GETTABLE 	6 6 -4	; "Path"
+	20	[-]	GETTABLE 	6 6 3
+	21	[-]	CALL     	4 3 2
+	22	[-]	LT       	0 4 1
+	23	[-]	JMP      	2	; to 26
+	24	[-]	MOVE     	2 3
+	25	[-]	MOVE     	1 4
+	26	[-]	ADD      	3 3 -5	; - 1
+	27	[-]	JMP      	-17	; to 11
+	28	[-]	RETURN   	0 1
+constants (6) for 0000016610BF42A0:
+	1	"GetMyPos"
+	2	"GetDistSquared"
+	3	"River"
+	4	"Path"
+	5	1
+	6	2
+locals (0) for 0000016610BF42A0:
+upvalues (0) for 0000016610BF42A0:

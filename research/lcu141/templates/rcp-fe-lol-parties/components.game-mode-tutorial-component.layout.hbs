@@ -1,0 +1,45 @@
+<lol-uikit-backdrop-magic class="game-mode-tutorial-background">
+</>
+<div class="game-mode-tutorial-content">
+  <div class="game-mode-tutorial-carousel">
+    {{#each tutorialItems as |tutorialItem index|}}
+      <div class="game-mode-tutorial-carousel-item" class={{tutorialItem.className}} {{action this "selectItem" index}}>
+        <lol-uikit-dialog-frame appearance="">
+          <div class="game-mode-tutorial-carousel-item-content" style="background-image:url('{{tutorialItem.imagePath}}')">
+            <div class="top-block">
+              <div class="step-block">
+                <div class="step">
+                  {{tutorialItem.step}}
+                </>
+              </>
+              <div class="text-block">
+                <div class="title">
+                  {{tutorialItem.header}}
+                </>
+                <div class="description">
+                  {{tutorialItem.description}}
+                </>
+              </>
+            </>
+            <div class="footer">
+              {{tutorialItem.footer}}
+            </>
+          </>
+        </>
+      </>
+    {{/each}}
+  </>
+  <div class="game-mode-tutorial-navigation">
+    {{#each tutorialItems as |tutorialItem index|}}
+      <div class="navigation-pip" {{action this "selectItem" index}}>
+      </>
+    {{/each}}
+  </>
+  <lol-uikit-flat-button class="game-mode-tutorial-confirm-button" onclick={{action this "confirmClicked"}}>
+    {{if isViewingLastItem tra.tutorial_confirm_button_text tra.tutorial_next_button_text}}
+  </>
+  <lol-uikit-arrow-button class="game-mode-tutorial-carousel-arrow left-arrow" direction="left" disabled={{leftArrowDisabled}} click-sfx-src={{carouselSfxUrl}} onclick={{action this "advanceItem" -1}}>
+  </>
+  <lol-uikit-arrow-button class="game-mode-tutorial-carousel-arrow right-arrow" direction="right" disabled={{rightArrowDisabled}} click-sfx-src={{carouselSfxUrl}} onclick={{action this "advanceItem" 1}}>
+  </>
+</>

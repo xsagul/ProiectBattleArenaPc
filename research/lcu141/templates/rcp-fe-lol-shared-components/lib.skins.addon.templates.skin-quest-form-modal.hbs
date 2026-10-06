@@ -1,0 +1,19 @@
+<div class="quest-forms icon {{unless showQuestFormButton "hidden"}} {{unless enabled "disabled"}}" onClick={{action this "showQuestFormsFlyout"}}>
+</>
+<lc-flyout class="shared-quest-forms-flyout" open={{isFlyoutOpen}} onHide={{action this "hideQuestFormsFlyout"}} uiKitOptionOverrides={{flyoutSettings}}>
+  <lc-flyout-content>
+    <div class="shared-quest-form-content">
+      {{#each questForms as |tier|}}
+        <div class="quest-form-tier
+          {{if (eq tier.id selectedForm.id) "selected"}}
+          {{if tier.unlocked "unlocked"}}" onClick={{action this "setSkin" tier}}>
+          <span class="quest-form-tier-name">
+            {{tier.shortName}}
+          </>
+          <span class="quest-form-tier-status">
+          </>
+        </>
+      {{/each}}
+    </>
+  </>
+</>

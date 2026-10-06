@@ -1,0 +1,7 @@
+{{#if showBanHeader}}
+  <div class="bans-wrapper-header">
+    {{tra.bans_header}}
+  </>
+{{/if}}
+{{team-bans hasSimultaneousBans=hasSimultaneousBans banActions=myTeamBanActions numBans=numBans isMyTeam=true gameMode=gameMode}}
+{{team-bans hasSimultaneousBans=session.hasSimultaneousBans banActions=theirTeamBanActions numBans=numBans isMyTeam=false gameMode=gameMode}}

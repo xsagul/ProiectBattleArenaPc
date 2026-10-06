@@ -1,0 +1,20 @@
+<div class="challenges-breakdown-container">
+  {{#each (-each-in challengesByLevelList) as |index level|}}
+    <div class="challenges-breakdown {{if level.isHidden "hidden"}}" onclick={{action this "onClick" level.level}}>
+      <div class="challenges-breakdown-icon-container">
+        <img class="challenges-breakdown-icon" src="/fe/lol-static-assets/images/challenges-shared/icon-token-{{level.level}}.png">
+        </>
+        {{#uikit-tooltip offsetY=4 tooltipPosition="top" type="system"}}
+          <lol-uikit-content-block type="tooltip-system">
+            <p>
+              {{level.name}}
+            </>
+          </>
+        {{/uikit-tooltip}}
+      </>
+      <div class="challenges-breakdown-value">
+        {{level.value}}
+      </>
+    </>
+  {{/each}}
+</>

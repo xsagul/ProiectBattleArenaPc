@@ -1,0 +1,149 @@
+{
+  "name": "UiPositionRect",
+  "hash": "0x44600fb6",
+  "interface": false,
+  "value": false,
+  "bases": [
+    "UiPositionBase"
+  ],
+  "since": null,
+  "removedIn": null,
+  "properties": [
+    {
+      "name": "0x3b6daffe",
+      "hash": "0x3b6daffe",
+      "ft": "U8",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "since": "16.9",
+      "defaultValue": "0"
+    },
+    {
+      "name": "0x92944b54",
+      "hash": "0x92944b54",
+      "ft": "U8",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "since": "16.9",
+      "defaultValue": "0"
+    },
+    {
+      "name": "Anchors",
+      "hash": "0x23563745",
+      "ft": "Pointer",
+      "kt": null,
+      "vt": null,
+      "kh": "0x7f0a1e81",
+      "khName": "AnchorBase",
+      "khKind": "class",
+      "defaultValue": "{}"
+    },
+    {
+      "name": "DisablePixelSnappingX",
+      "hash": "0xd8348057",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "false"
+    },
+    {
+      "name": "DisablePixelSnappingY",
+      "hash": "0xd7347ec4",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "false"
+    },
+    {
+      "name": "DisableResolutionDownscale",
+      "hash": "0xe7b6c70d",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "false"
+    },
+    {
+      "name": "IgnoreGlobalScale",
+      "hash": "0x487fcd1a",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "false"
+    },
+    {
+      "name": "IgnoreSafeZone",
+      "hash": "0x981fbd00",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "false"
+    },
+    {
+      "name": "MaxSize",
+      "hash": "0x80ba1308",
+      "ft": "Vec2",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "since": "16.9",
+      "defaultValue": "[1000000,1000000]"
+    },
+    {
+      "name": "MinSize",
+      "hash": "0xeaebcf6e",
+      "ft": "Vec2",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "since": "16.9",
+      "defaultValue": "[0,0]"
+    },
+    {
+      "name": "UIRect",
+      "hash": "0x3a8bfbed",
+      "ft": "Embed",
+      "kt": null,
+      "vt": null,
+      "kh": "0x4eb9ba4f",
+      "khName": "UiElementRect",
+      "khKind": "class",
+      "defaultValue": "{\"Size\":[0,0],\"Position\":[0,0],\"SourceResolutionHeight\":0,\"SourceResolutionWidth\":0}"
+    }
+  ],
+  "ancestorLevels": [
+    [
+      "UiPositionBase"
+    ]
+  ],
+  "descendantTree": [
+    {
+      "name": "UiPositionPolygon",
+      "children": []
+    }
+  ]
+}

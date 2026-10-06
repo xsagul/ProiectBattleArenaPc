@@ -1,0 +1,16 @@
+<div class="progress-bar-container">
+  <div class="global-mask {{if endPointMask "active"}}">
+    <div class="progress-bar-mask" style={{sanitize progressBarStyle}}>
+      <div class="video-wrapper">
+        {{patcher-video-state class="main" srcLoop=srcMainLoop}}
+        {{patcher-video-state class="border" srcLoop=srcBorderLoop}}
+      </>
+    </>
+    <div class="endpoint-container">
+      <div class="video-wrapper">
+        {{patcher-video-state class="endpoint" srcIntro=srcTipIntro srcLoop=srcTipLoop action="endpointState"}}
+      </>
+    </>
+    {{yield }}
+  </>
+</>

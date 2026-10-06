@@ -1,0 +1,48 @@
+<div class="snrd-transition-modal__main">
+  <div class="snrd-transition-modal__header">
+    <h1 class="snrd-transition-modal__title">
+      {{titleText}}
+    </>
+    <p>
+      {{sanitize bodyText}}
+    </>
+  </>
+  <div class="snrd-transition-modal__content">
+    <div class="snrd-transition-modal__generic">
+      {{gameName}}
+      #
+      {{tagLine}}
+    </>
+    <div class="snrd-transition-modal__examples">
+      <div class="snrd-transition-modal__social-panel">
+        <div class="snrd-transition-modal__social-panel-player">
+          <span class="snrd-transition-modal__social-panel--inline">
+            {{gameName}}
+          </>
+          <br>
+          </>
+          <span class="snrd-transition-modal__social-panel-status">
+            {{tra.snrd_transition_modal_social_online}}
+          </>
+        </>
+      </>
+      <div class="snrd-transition-modal__in-game">
+        <span class="snrd-transition-modal__in-game--inline">
+          {{gameName}}
+        </>
+      </>
+    </>
+  </>
+  <div class="snrd-transition-modal__footer">
+    <div class="snrd-transition-modal__footer-left">
+      <a href={{faqUrl}} target="_blank">
+        {{tra.snrd_transition_modal_learn_more}}
+      </>
+    </>
+    <div class="snrd-transition-modal__footer-right">
+      <a href={{riotIdChangeUrl}} target="_blank">
+        {{tra.snrd_transition_modal_change_riot_id}}
+      </>
+    </>
+  </>
+</>

@@ -1,0 +1,142 @@
+{
+  "name": "ParticleEventData",
+  "hash": "0x0542d41d",
+  "interface": false,
+  "value": false,
+  "bases": [
+    "BaseEventData"
+  ],
+  "since": null,
+  "removedIn": null,
+  "properties": [
+    {
+      "name": "0x4fce52ba",
+      "hash": "0x4fce52ba",
+      "ft": "Pointer",
+      "kt": null,
+      "vt": null,
+      "kh": "0x01c0e452",
+      "khName": null,
+      "khKind": "class",
+      "since": "15.23",
+      "defaultValue": "null"
+    },
+    {
+      "name": "SkipIfPastEndFrame",
+      "hash": "0xa3826203",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "false"
+    },
+    {
+      "name": "mEffectKey",
+      "hash": "0xf6386280",
+      "ft": "Hash",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "\"0x0\""
+    },
+    {
+      "name": "mEffectName",
+      "hash": "0x5a3dd1c2",
+      "ft": "String",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "\"\""
+    },
+    {
+      "name": "mEnemyEffectKey",
+      "hash": "0x98df0fb4",
+      "ft": "Hash",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "\"0x0\""
+    },
+    {
+      "name": "mIsDetachable",
+      "hash": "0x41f9b163",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "false"
+    },
+    {
+      "name": "mIsKillEvent",
+      "hash": "0x72a03ff8",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "true"
+    },
+    {
+      "name": "mIsLoop",
+      "hash": "0xd91e32ee",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "true"
+    },
+    {
+      "name": "mParticleEventDataPairList",
+      "hash": "0x60645d6a",
+      "ft": "List",
+      "kt": null,
+      "vt": "Embed",
+      "kh": "0x5dd693f9",
+      "khName": "ParticleEventDataPair",
+      "khKind": "class",
+      "defaultValue": "[]"
+    },
+    {
+      "name": "mScalePlaySpeedWithAnimation",
+      "hash": "0x8c16993f",
+      "ft": "Bool",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "false"
+    },
+    {
+      "name": "scale",
+      "hash": "0x82971c71",
+      "ft": "F32",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "since": "13.19",
+      "defaultValue": "1"
+    }
+  ],
+  "ancestorLevels": [
+    [
+      "BaseEventData"
+    ]
+  ],
+  "descendantTree": []
+}

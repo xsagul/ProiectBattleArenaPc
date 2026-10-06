@@ -1,0 +1,43 @@
+{{#lower-section currentPlayer=currentPlayer}}
+  <div class="upper-right-container">
+    {{disband-countdown}}
+  </>
+  {{#if inParty}}
+    <div class="parties-player-banners">
+      {{#if currentPlayer}}
+        {{player-banner tagName="parties-main-banner" member=currentPlayer isMe=true isInQueue=isInQueue selected=selected positionSelectorEmberApp=positionSelectorEmberApp positionSelectorData=positionSelectorData cachePositionSelector=(action this cachePositionSelector}}
+      {{/if}}
+      {{#each otherPartyMembers as |member|}}
+        {{player-banner member=member isInQueue=isInQueue selected=selected}}
+      {{/each}}
+      {{#each playerPlaceholders as |placeholder|}}
+        {{placeholder-banner placeholder=placeholder isInQueue=isInQueue partyInvitesAllowed=partyInvitesAllowed showInviteModal="showInviteModal"}}
+      {{/each}}
+    </>
+  {{/if}}
+  {{parties-footer-notifications positionError=positionError positionWarning=positionWarning readyWarning=readyWarning readyWarningTooltip=readyWarningTooltip autoFillEligible=autoFillEligible autoFillProtectedForStreaking=autoFillProtectedForStreaking autoFillProtectedForPromos=autoFillProtectedForPromos autoFillProtectedForSoloing=autoFillProtectedForSoloing premadeSizeAllowed=premadeSizeAllowed allowablePremadeSizes=allowablePremadeSizes currentPartySize=currentPartySize isCurrentPlayerPartyLeader=isCurrentPlayerPartyLeader}}
+  {{parties-footer showingState=showingState selected=selected readyWarning=readyWarning}}
+  {{invite-info-panel currentPlayerCanInvite=currentPlayerCanInvite}}
+  <div class="parties-chat-room">
+    <lol-social-chat-room type="lobby" disabled-when-connecting="">
+    </>
+  </>
+{{/lower-section}}
+<div class="header-text-gradient">
+</>
+<div class="parties-header-button-container">
+  {{social-leaderboard-button selected=selected queueType=selected.queue.type currentPlayer=currentPlayer}}
+  <div class="back-button-container {{backButtonContainerClass}}">
+    <lol-uikit-flat-button class="parties-back-button" onclick={{action this "backButtonClick"}} disabled={{backButtonDisabled}}>
+      {{tra.parties_button_change_mode}}
+    </>
+    <div class="eligibility-loading-spinner">
+    </>
+  </>
+  {{#if lobbiesService.isOpenPartyEnabled}}
+    {{open-party-toggle showingState=showingState}}
+  {{/if}}
+</>
+<div style="display: none;">
+  {{invitationsObserver}}
+</>

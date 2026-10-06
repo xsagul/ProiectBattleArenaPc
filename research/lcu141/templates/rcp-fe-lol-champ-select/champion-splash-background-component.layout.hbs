@@ -1,0 +1,100 @@
+<div class="background-vignette-container
+  {{if splashDefocus "defocussed" "focussed"}}
+  {{if largeAreaAnimationsEnabled "animated" "static"}}
+  {{if hideSplashBackground "hidden" "visible"}}">
+  {{uikit-background-switcher class=backgroundSwitcherClasses src=throttledSplashPath transitionType=transitionType}}
+  <div class="{{if throttledSplashPath "champ-select-bg-darken"}}">
+  </>
+</>
+{{#if showEmblems}}
+  <div class="champion-splash-emblem-overlay">
+    {{#each emblems as |emblem|}}
+      <img src="{{emblem.emblemPath.large}}">
+      </>
+    {{/each}}
+  </>
+{{/if}}
+<div id="champion-splash-ban-container" class="{{if isShowingSelectedScreen "removed"}}">
+  <img id="champion-splash-ban-image" src={{lastSelectedSplash}}>
+  </>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="champion-splash-ban-component" width="538" height="538" viewBox="0 0 538 538">
+    <defs>
+      <style>
+        @keyframes rotatePlayer {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(45deg); }
+        }
+
+        @keyframes rotateEnemy {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(-45deg); }
+        }
+
+        @keyframes fadeToGrayscale {
+          from { -webkit-filter: grayscale(0); }
+          to { -webkit-filter: grayscale(100%); }
+        }
+
+        @keyframes sliceMaskPlayer {
+          from { transform: translateX(-100%); }
+          to { transform: translateX(0); }
+        }
+
+        @keyframes sliceMaskEnemy {
+          from { transform: translateX(100%); }
+          to { transform: translateX(0); }
+        }
+
+        @keyframes sliceRight {
+          from { transform: translateX(0); }
+          to { transform: translateX(35px); }
+        }
+
+        @keyframes sliceLeft {
+          from { transform: translateX(0); }
+          to { transform: translateX(-35px); }
+        }
+      </>
+      <mask id="slash-ban-circle-container-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+        <circle cx="269" cy="269" r="269" fill="#fff">
+        </>
+        <g class="container-slice-rotation">
+          <rect id="rect-container-slice" x="-2" y="264" width="542" height="12" fill="#000">
+          </>
+        </>
+      </>
+      <mask id="rect-container-mask-top" maskUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+        <g class="container-slice-rotation">
+          <rect x="0" y="0" width="100%" height="50%" fill="#fff">
+          </>
+          <rect x="0" y="50%" width="100%" height="50%" fill="#000">
+          </>
+        </>
+      </>
+      <mask id="rect-container-mask-bottom" maskUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+        <g class="container-slice-rotation">
+          <rect x="0" y="50%" width="100%" height="50%" fill="#fff">
+          </>
+          <rect x="0" y="0" width="100%" height="50%" fill="#000">
+          </>
+        </>
+      </>
+      <image id="champion-splash-image" xlink:href="" x="-371" y="-21" width="1280" height="720">
+      </>
+    </>
+    <g mask="url(#slash-ban-circle-container-mask)">
+      <g mask="url(#rect-container-mask-top)">
+        <use id="image-top" xlink:href="#champion-splash-image">
+        </>
+      </>
+      <g mask="url(#rect-container-mask-bottom)">
+        <use id="image-bottom" xlink:href="#champion-splash-image">
+        </>
+      </>
+    </>
+  </>
+</>
+<div class="ban-background-overlay-container">
+</>
+<div class="background-edge-backlight {{pickSnipeBanEnemyActionIndexClass}}">
+</>

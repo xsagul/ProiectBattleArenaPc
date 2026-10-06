@@ -1,0 +1,834 @@
+
+main <?:0,0> (31 instructions, 124 bytes at 008CBF90)
+0+ params, 2 slots, 0 upvalues, 0 locals, 16 constants, 14 functions
+	1	[-]	LOADK    	0 -2	; 500
+	2	[-]	SETGLOBAL	0 -1	; FEAR_WANDER_DISTANCE
+	3	[-]	CLOSURE  	0 0	; 008C99D8
+	4	[-]	SETGLOBAL	0 -3	; OnInit
+	5	[-]	CLOSURE  	0 1	; 008C9B70
+	6	[-]	SETGLOBAL	0 -4	; OnOrder
+	7	[-]	CLOSURE  	0 2	; 008C7F78
+	8	[-]	SETGLOBAL	0 -5	; OnTargetLost
+	9	[-]	CLOSURE  	0 3	; 008C7FD0
+	10	[-]	SETGLOBAL	0 -6	; OnFearBegin
+	11	[-]	CLOSURE  	0 4	; 008C8028
+	12	[-]	SETGLOBAL	0 -7	; OnFearEnd
+	13	[-]	CLOSURE  	0 5	; 008CD358
+	14	[-]	SETGLOBAL	0 -8	; TimerFeared
+	15	[-]	CLOSURE  	0 6	; 008CD488
+	16	[-]	SETGLOBAL	0 -9	; OnFleeBegin
+	17	[-]	CLOSURE  	0 7	; 008CD5E0
+	18	[-]	SETGLOBAL	0 -10	; OnFleeEnd
+	19	[-]	CLOSURE  	0 8	; 008CD6B0
+	20	[-]	SETGLOBAL	0 -11	; TimerFlee
+	21	[-]	CLOSURE  	0 9	; 008CD7B0
+	22	[-]	SETGLOBAL	0 -12	; OnCanMove
+	23	[-]	CLOSURE  	0 10	; 008CD860
+	24	[-]	SETGLOBAL	0 -13	; OnCanAttack
+	25	[-]	CLOSURE  	0 11	; 008CD910
+	26	[-]	SETGLOBAL	0 -14	; TimerScanDistance
+	27	[-]	CLOSURE  	0 12	; 008CE088
+	28	[-]	SETGLOBAL	0 -15	; TimerFindEnemies
+	29	[-]	CLOSURE  	0 13	; 008CDB08
+	30	[-]	SETGLOBAL	0 -16	; HaltAI
+	31	[-]	RETURN   	0 1
+constants (16) for 008CBF90:
+	1	"FEAR_WANDER_DISTANCE"
+	2	500
+	3	"OnInit"
+	4	"OnOrder"
+	5	"OnTargetLost"
+	6	"OnFearBegin"
+	7	"OnFearEnd"
+	8	"TimerFeared"
+	9	"OnFleeBegin"
+	10	"OnFleeEnd"
+	11	"TimerFlee"
+	12	"OnCanMove"
+	13	"OnCanAttack"
+	14	"TimerScanDistance"
+	15	"TimerFindEnemies"
+	16	"HaltAI"
+locals (0) for 008CBF90:
+upvalues (0) for 008CBF90:
+
+function <?:3,14> (32 instructions, 128 bytes at 008C99D8)
+0 params, 4 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SetState
+	2	[-]	GETGLOBAL	1 -2	; AI_PET_IDLE
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -3	; InitTimer
+	5	[-]	LOADK    	1 -4	; "TimerScanDistance"
+	6	[-]	LOADK    	2 -5	; 0.15
+	7	[-]	LOADBOOL 	3 1 0
+	8	[-]	CALL     	0 4 1
+	9	[-]	GETGLOBAL	0 -3	; InitTimer
+	10	[-]	LOADK    	1 -6	; "TimerFindEnemies"
+	11	[-]	LOADK    	2 -5	; 0.15
+	12	[-]	LOADBOOL 	3 1 0
+	13	[-]	CALL     	0 4 1
+	14	[-]	GETGLOBAL	0 -3	; InitTimer
+	15	[-]	LOADK    	1 -7	; "TimerFeared"
+	16	[-]	LOADK    	2 -8	; 1
+	17	[-]	LOADBOOL 	3 1 0
+	18	[-]	CALL     	0 4 1
+	19	[-]	GETGLOBAL	0 -3	; InitTimer
+	20	[-]	LOADK    	1 -9	; "TimerFlee"
+	21	[-]	LOADK    	2 -10	; 0.5
+	22	[-]	LOADBOOL 	3 1 0
+	23	[-]	CALL     	0 4 1
+	24	[-]	GETGLOBAL	0 -11	; StopTimer
+	25	[-]	LOADK    	1 -7	; "TimerFeared"
+	26	[-]	CALL     	0 2 1
+	27	[-]	GETGLOBAL	0 -11	; StopTimer
+	28	[-]	LOADK    	1 -9	; "TimerFlee"
+	29	[-]	CALL     	0 2 1
+	30	[-]	LOADBOOL 	0 0 0
+	31	[-]	RETURN   	0 2
+	32	[-]	RETURN   	0 1
+constants (11) for 008C99D8:
+	1	"SetState"
+	2	"AI_PET_IDLE"
+	3	"InitTimer"
+	4	"TimerScanDistance"
+	5	0.15
+	6	"TimerFindEnemies"
+	7	"TimerFeared"
+	8	1
+	9	"TimerFlee"
+	10	0.5
+	11	"StopTimer"
+locals (0) for 008C99D8:
+upvalues (0) for 008C99D8:
+
+function <?:18,102> (133 instructions, 532 bytes at 008C9B70)
+2 params, 6 slots, 0 upvalues, 0 locals, 31 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetState
+	2	[-]	CALL     	2 1 2
+	3	[-]	GETGLOBAL	3 -2	; AI_HALTED
+	4	[-]	EQ       	0 2 3
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	3 -3	; AI_TAUNTED
+	8	[-]	EQ       	1 2 3
+	9	[-]	JMP      	9	; to 19
+	10	[-]	GETGLOBAL	3 -4	; AI_BERSERK
+	11	[-]	EQ       	1 2 3
+	12	[-]	JMP      	6	; to 19
+	13	[-]	GETGLOBAL	3 -5	; AI_FEARED
+	14	[-]	EQ       	1 2 3
+	15	[-]	JMP      	3	; to 19
+	16	[-]	GETGLOBAL	3 -6	; AI_FLEEING
+	17	[-]	EQ       	0 2 3
+	18	[-]	JMP      	1	; to 20
+	19	[-]	RETURN   	0 1
+	20	[-]	GETGLOBAL	3 -7	; AI_PET_HARDATTACK
+	21	[-]	EQ       	1 2 3
+	22	[-]	JMP      	15	; to 38
+	23	[-]	GETGLOBAL	3 -8	; AI_PET_HARDMOVE
+	24	[-]	EQ       	1 2 3
+	25	[-]	JMP      	12	; to 38
+	26	[-]	GETGLOBAL	3 -9	; AI_PET_HARDIDLE
+	27	[-]	EQ       	1 2 3
+	28	[-]	JMP      	9	; to 38
+	29	[-]	GETGLOBAL	3 -10	; AI_PET_HARDIDLE_ATTACKING
+	30	[-]	EQ       	1 2 3
+	31	[-]	JMP      	6	; to 38
+	32	[-]	GETGLOBAL	3 -11	; AI_PET_HARDRETURN
+	33	[-]	EQ       	1 2 3
+	34	[-]	JMP      	3	; to 38
+	35	[-]	GETGLOBAL	3 -12	; AI_PET_HARDSTOP
+	36	[-]	EQ       	0 2 3
+	37	[-]	JMP      	14	; to 52
+	38	[-]	GETGLOBAL	3 -13	; ORDER_ATTACKTO
+	39	[-]	EQ       	1 0 3
+	40	[-]	JMP      	9	; to 50
+	41	[-]	GETGLOBAL	3 -14	; ORDER_MOVETO
+	42	[-]	EQ       	1 0 3
+	43	[-]	JMP      	6	; to 50
+	44	[-]	GETGLOBAL	3 -15	; ORDER_ATTACKMOVE
+	45	[-]	EQ       	1 0 3
+	46	[-]	JMP      	3	; to 50
+	47	[-]	GETGLOBAL	3 -16	; ORDER_STOP
+	48	[-]	EQ       	0 0 3
+	49	[-]	JMP      	2	; to 52
+	50	[-]	LOADBOOL 	3 1 0
+	51	[-]	RETURN   	3 2
+	52	[-]	GETGLOBAL	3 -18	; GetOwner
+	53	[-]	CALL     	3 1 2
+	54	[-]	SETGLOBAL	3 -17	; owner
+	55	[-]	GETGLOBAL	3 -17	; owner
+	56	[-]	EQ       	0 3 -19	; - nil
+	57	[-]	JMP      	5	; to 63
+	58	[-]	GETGLOBAL	3 -20	; Die
+	59	[-]	GETGLOBAL	4 -21	; me
+	60	[-]	CALL     	3 2 1
+	61	[-]	LOADBOOL 	3 0 0
+	62	[-]	RETURN   	3 2
+	63	[-]	GETGLOBAL	3 -13	; ORDER_ATTACKTO
+	64	[-]	EQ       	0 0 3
+	65	[-]	JMP      	2	; to 68
+	66	[-]	LOADBOOL 	3 1 0
+	67	[-]	RETURN   	3 2
+	68	[-]	GETGLOBAL	3 -14	; ORDER_MOVETO
+	69	[-]	EQ       	0 0 3
+	70	[-]	JMP      	2	; to 73
+	71	[-]	LOADBOOL 	3 1 0
+	72	[-]	RETURN   	3 2
+	73	[-]	GETGLOBAL	3 -15	; ORDER_ATTACKMOVE
+	74	[-]	EQ       	0 0 3
+	75	[-]	JMP      	2	; to 78
+	76	[-]	LOADBOOL 	3 1 0
+	77	[-]	RETURN   	3 2
+	78	[-]	GETGLOBAL	3 -16	; ORDER_STOP
+	79	[-]	EQ       	0 0 3
+	80	[-]	JMP      	2	; to 83
+	81	[-]	LOADBOOL 	3 1 0
+	82	[-]	RETURN   	3 2
+	83	[-]	GETGLOBAL	3 -22	; ORDER_PETHARDSTOP
+	84	[-]	EQ       	0 0 3
+	85	[-]	JMP      	9	; to 95
+	86	[-]	GETGLOBAL	3 -23	; TurnOffAutoAttack
+	87	[-]	GETGLOBAL	4 -24	; STOPREASON_TARGET_LOST
+	88	[-]	CALL     	3 2 1
+	89	[-]	GETGLOBAL	3 -25	; SetStateAndCloseToTarget
+	90	[-]	GETGLOBAL	4 -12	; AI_PET_HARDSTOP
+	91	[-]	GETGLOBAL	5 -21	; me
+	92	[-]	CALL     	3 3 1
+	93	[-]	LOADBOOL 	3 1 0
+	94	[-]	RETURN   	3 2
+	95	[-]	GETGLOBAL	3 -26	; ORDER_PETHARDATTACK
+	96	[-]	EQ       	0 0 3
+	97	[-]	JMP      	13	; to 111
+	98	[-]	EQ       	0 1 -19	; - nil
+	99	[-]	JMP      	2	; to 102
+	100	[-]	LOADBOOL 	3 0 0
+	101	[-]	RETURN   	3 2
+	102	[-]	GETGLOBAL	3 -23	; TurnOffAutoAttack
+	103	[-]	GETGLOBAL	4 -24	; STOPREASON_TARGET_LOST
+	104	[-]	CALL     	3 2 1
+	105	[-]	GETGLOBAL	3 -25	; SetStateAndCloseToTarget
+	106	[-]	GETGLOBAL	4 -7	; AI_PET_HARDATTACK
+	107	[-]	MOVE     	5 1
+	108	[-]	CALL     	3 3 1
+	109	[-]	LOADBOOL 	3 1 0
+	110	[-]	RETURN   	3 2
+	111	[-]	GETGLOBAL	3 -27	; ORDER_PETHARDMOVE
+	112	[-]	EQ       	0 0 3
+	113	[-]	JMP      	5	; to 119
+	114	[-]	GETGLOBAL	3 -28	; SetStateAndMoveInPos
+	115	[-]	GETGLOBAL	4 -8	; AI_PET_HARDMOVE
+	116	[-]	CALL     	3 2 1
+	117	[-]	LOADBOOL 	3 1 0
+	118	[-]	RETURN   	3 2
+	119	[-]	GETGLOBAL	3 -29	; ORDER_PETHARDRETURN
+	120	[-]	EQ       	0 0 3
+	121	[-]	JMP      	6	; to 128
+	122	[-]	GETGLOBAL	3 -25	; SetStateAndCloseToTarget
+	123	[-]	GETGLOBAL	4 -11	; AI_PET_HARDRETURN
+	124	[-]	GETGLOBAL	5 -17	; owner
+	125	[-]	CALL     	3 3 1
+	126	[-]	LOADBOOL 	3 1 0
+	127	[-]	RETURN   	3 2
+	128	[-]	GETGLOBAL	3 -30	; Say
+	129	[-]	LOADK    	4 -31	; "BAD ORDER DUDE! "
+	130	[-]	CALL     	3 2 1
+	131	[-]	LOADBOOL 	3 0 0
+	132	[-]	RETURN   	3 2
+	133	[-]	RETURN   	0 1
+constants (31) for 008C9B70:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"AI_TAUNTED"
+	4	"AI_BERSERK"
+	5	"AI_FEARED"
+	6	"AI_FLEEING"
+	7	"AI_PET_HARDATTACK"
+	8	"AI_PET_HARDMOVE"
+	9	"AI_PET_HARDIDLE"
+	10	"AI_PET_HARDIDLE_ATTACKING"
+	11	"AI_PET_HARDRETURN"
+	12	"AI_PET_HARDSTOP"
+	13	"ORDER_ATTACKTO"
+	14	"ORDER_MOVETO"
+	15	"ORDER_ATTACKMOVE"
+	16	"ORDER_STOP"
+	17	"owner"
+	18	"GetOwner"
+	19	nil
+	20	"Die"
+	21	"me"
+	22	"ORDER_PETHARDSTOP"
+	23	"TurnOffAutoAttack"
+	24	"STOPREASON_TARGET_LOST"
+	25	"SetStateAndCloseToTarget"
+	26	"ORDER_PETHARDATTACK"
+	27	"ORDER_PETHARDMOVE"
+	28	"SetStateAndMoveInPos"
+	29	"ORDER_PETHARDRETURN"
+	30	"Say"
+	31	"BAD ORDER DUDE! "
+locals (0) for 008C9B70:
+upvalues (0) for 008C9B70:
+
+function <?:106,155> (102 instructions, 408 bytes at 008C7F78)
+0 params, 4 slots, 0 upvalues, 0 locals, 27 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; AI_PET_HARDMOVE
+	8	[-]	EQ       	1 0 1
+	9	[-]	JMP      	12	; to 22
+	10	[-]	GETGLOBAL	1 -4	; AI_PET_HARDRETURN
+	11	[-]	EQ       	1 0 1
+	12	[-]	JMP      	9	; to 22
+	13	[-]	GETGLOBAL	1 -5	; AI_FEARED
+	14	[-]	EQ       	1 0 1
+	15	[-]	JMP      	6	; to 22
+	16	[-]	GETGLOBAL	1 -6	; AI_FLEEING
+	17	[-]	EQ       	1 0 1
+	18	[-]	JMP      	3	; to 22
+	19	[-]	GETGLOBAL	1 -7	; AI_PET_HARDSTOP
+	20	[-]	EQ       	0 0 1
+	21	[-]	JMP      	2	; to 24
+	22	[-]	LOADBOOL 	1 1 0
+	23	[-]	RETURN   	1 2
+	24	[-]	GETGLOBAL	1 -9	; FindTargetInAcR
+	25	[-]	CALL     	1 1 2
+	26	[-]	SETGLOBAL	1 -8	; newTarget
+	27	[-]	GETGLOBAL	1 -8	; newTarget
+	28	[-]	EQ       	0 1 -10	; - nil
+	29	[-]	JMP      	40	; to 70
+	30	[-]	GETGLOBAL	1 -12	; GetOwner
+	31	[-]	CALL     	1 1 2
+	32	[-]	SETGLOBAL	1 -11	; owner
+	33	[-]	GETGLOBAL	1 -11	; owner
+	34	[-]	EQ       	0 1 -10	; - nil
+	35	[-]	JMP      	5	; to 41
+	36	[-]	GETGLOBAL	1 -13	; Die
+	37	[-]	GETGLOBAL	2 -14	; me
+	38	[-]	CALL     	1 2 1
+	39	[-]	LOADBOOL 	1 0 0
+	40	[-]	RETURN   	1 2
+	41	[-]	GETGLOBAL	1 -15	; AI_PET_HARDIDLE_ATTACKING
+	42	[-]	EQ       	0 0 1
+	43	[-]	JMP      	6	; to 50
+	44	[-]	GETGLOBAL	1 -16	; NetSetState
+	45	[-]	GETGLOBAL	2 -17	; AI_PET_HARDIDLE
+	46	[-]	CALL     	1 2 1
+	47	[-]	LOADBOOL 	1 1 0
+	48	[-]	RETURN   	1 2
+	49	[-]	JMP      	47	; to 97
+	50	[-]	GETGLOBAL	1 -18	; AI_PET_RETURN_ATTACKING
+	51	[-]	EQ       	0 0 1
+	52	[-]	JMP      	7	; to 60
+	53	[-]	GETGLOBAL	1 -19	; SetStateAndCloseToTarget
+	54	[-]	GETGLOBAL	2 -20	; AI_PET_RETURN
+	55	[-]	GETGLOBAL	3 -11	; owner
+	56	[-]	CALL     	1 3 1
+	57	[-]	LOADBOOL 	1 1 0
+	58	[-]	RETURN   	1 2
+	59	[-]	JMP      	37	; to 97
+	60	[-]	GETGLOBAL	1 -21	; AI_PET_ATTACKMOVE_ATTACKING
+	61	[-]	EQ       	0 0 1
+	62	[-]	JMP      	34	; to 97
+	63	[-]	GETGLOBAL	1 -19	; SetStateAndCloseToTarget
+	64	[-]	GETGLOBAL	2 -22	; AI_PET_ATTACKMOVE
+	65	[-]	GETGLOBAL	3 -11	; owner
+	66	[-]	CALL     	1 3 1
+	67	[-]	LOADBOOL 	1 1 0
+	68	[-]	RETURN   	1 2
+	69	[-]	JMP      	27	; to 97
+	70	[-]	GETGLOBAL	1 -23	; AI_PET_HARDATTACK
+	71	[-]	EQ       	1 0 1
+	72	[-]	JMP      	6	; to 79
+	73	[-]	GETGLOBAL	1 -24	; AI_TAUNTED
+	74	[-]	EQ       	1 0 1
+	75	[-]	JMP      	3	; to 79
+	76	[-]	GETGLOBAL	1 -25	; AI_BERSERK
+	77	[-]	EQ       	0 0 1
+	78	[-]	JMP      	7	; to 86
+	79	[-]	GETGLOBAL	1 -19	; SetStateAndCloseToTarget
+	80	[-]	GETGLOBAL	2 -26	; AI_PET_ATTACK
+	81	[-]	GETGLOBAL	3 -8	; newTarget
+	82	[-]	CALL     	1 3 1
+	83	[-]	LOADBOOL 	1 1 0
+	84	[-]	RETURN   	1 2
+	85	[-]	JMP      	11	; to 97
+	86	[-]	GETGLOBAL	1 -15	; AI_PET_HARDIDLE_ATTACKING
+	87	[-]	EQ       	0 0 1
+	88	[-]	JMP      	8	; to 97
+	89	[-]	GETGLOBAL	1 -16	; NetSetState
+	90	[-]	GETGLOBAL	2 -15	; AI_PET_HARDIDLE_ATTACKING
+	91	[-]	CALL     	1 2 1
+	92	[-]	GETGLOBAL	1 -27	; SetTarget
+	93	[-]	GETGLOBAL	2 -8	; newTarget
+	94	[-]	CALL     	1 2 1
+	95	[-]	LOADBOOL 	1 1 0
+	96	[-]	RETURN   	1 2
+	97	[-]	GETGLOBAL	1 -16	; NetSetState
+	98	[-]	GETGLOBAL	2 -17	; AI_PET_HARDIDLE
+	99	[-]	CALL     	1 2 1
+	100	[-]	LOADBOOL 	1 1 0
+	101	[-]	RETURN   	1 2
+	102	[-]	RETURN   	0 1
+constants (27) for 008C7F78:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"AI_PET_HARDMOVE"
+	4	"AI_PET_HARDRETURN"
+	5	"AI_FEARED"
+	6	"AI_FLEEING"
+	7	"AI_PET_HARDSTOP"
+	8	"newTarget"
+	9	"FindTargetInAcR"
+	10	nil
+	11	"owner"
+	12	"GetOwner"
+	13	"Die"
+	14	"me"
+	15	"AI_PET_HARDIDLE_ATTACKING"
+	16	"NetSetState"
+	17	"AI_PET_HARDIDLE"
+	18	"AI_PET_RETURN_ATTACKING"
+	19	"SetStateAndCloseToTarget"
+	20	"AI_PET_RETURN"
+	21	"AI_PET_ATTACKMOVE_ATTACKING"
+	22	"AI_PET_ATTACKMOVE"
+	23	"AI_PET_HARDATTACK"
+	24	"AI_TAUNTED"
+	25	"AI_BERSERK"
+	26	"AI_PET_ATTACK"
+	27	"SetTarget"
+locals (0) for 008C7F78:
+upvalues (0) for 008C7F78:
+
+function <?:196,208> (23 instructions, 92 bytes at 008C7FD0)
+0 params, 4 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; MakeWanderPoint
+	8	[-]	GETGLOBAL	2 -5	; GetFearLeashPoint
+	9	[-]	CALL     	2 1 2
+	10	[-]	GETGLOBAL	3 -6	; FEAR_WANDER_DISTANCE
+	11	[-]	CALL     	1 3 2
+	12	[-]	SETGLOBAL	1 -3	; wanderPoint
+	13	[-]	GETGLOBAL	1 -7	; SetStateAndMove
+	14	[-]	GETGLOBAL	2 -8	; AI_FEARED
+	15	[-]	GETGLOBAL	3 -3	; wanderPoint
+	16	[-]	CALL     	1 3 1
+	17	[-]	GETGLOBAL	1 -9	; TurnOffAutoAttack
+	18	[-]	GETGLOBAL	2 -10	; STOPREASON_IMMEDIATELY
+	19	[-]	CALL     	1 2 1
+	20	[-]	GETGLOBAL	1 -11	; ResetAndStartTimer
+	21	[-]	LOADK    	2 -12	; "TimerFeared"
+	22	[-]	CALL     	1 2 1
+	23	[-]	RETURN   	0 1
+constants (12) for 008C7FD0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"wanderPoint"
+	4	"MakeWanderPoint"
+	5	"GetFearLeashPoint"
+	6	"FEAR_WANDER_DISTANCE"
+	7	"SetStateAndMove"
+	8	"AI_FEARED"
+	9	"TurnOffAutoAttack"
+	10	"STOPREASON_IMMEDIATELY"
+	11	"ResetAndStartTimer"
+	12	"TimerFeared"
+locals (0) for 008C7FD0:
+upvalues (0) for 008C7FD0:
+
+function <?:212,223> (15 instructions, 60 bytes at 008C8028)
+0 params, 3 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; StopTimer
+	8	[-]	LOADK    	2 -4	; "TimerFeared"
+	9	[-]	CALL     	1 2 1
+	10	[-]	GETGLOBAL	1 -5	; NetSetState
+	11	[-]	GETGLOBAL	2 -6	; AI_PET_HARDIDLE
+	12	[-]	CALL     	1 2 1
+	13	[-]	GETGLOBAL	1 -7	; TimerFindEnemies
+	14	[-]	CALL     	1 1 1
+	15	[-]	RETURN   	0 1
+constants (7) for 008C8028:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"StopTimer"
+	4	"TimerFeared"
+	5	"NetSetState"
+	6	"AI_PET_HARDIDLE"
+	7	"TimerFindEnemies"
+locals (0) for 008C8028:
+upvalues (0) for 008C8028:
+
+function <?:227,237> (17 instructions, 68 bytes at 008CD358)
+0 params, 4 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; MakeWanderPoint
+	8	[-]	GETGLOBAL	2 -5	; GetFearLeashPoint
+	9	[-]	CALL     	2 1 2
+	10	[-]	GETGLOBAL	3 -6	; FEAR_WANDER_DISTANCE
+	11	[-]	CALL     	1 3 2
+	12	[-]	SETGLOBAL	1 -3	; wanderPoint
+	13	[-]	GETGLOBAL	1 -7	; SetStateAndMove
+	14	[-]	GETGLOBAL	2 -8	; AI_FEARED
+	15	[-]	GETGLOBAL	3 -3	; wanderPoint
+	16	[-]	CALL     	1 3 1
+	17	[-]	RETURN   	0 1
+constants (8) for 008CD358:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"wanderPoint"
+	4	"MakeWanderPoint"
+	5	"GetFearLeashPoint"
+	6	"FEAR_WANDER_DISTANCE"
+	7	"SetStateAndMove"
+	8	"AI_FEARED"
+locals (0) for 008CD358:
+upvalues (0) for 008CD358:
+
+function <?:240,250> (20 instructions, 80 bytes at 008CD488)
+0 params, 4 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; MakeFleePoint
+	8	[-]	CALL     	1 1 2
+	9	[-]	SETGLOBAL	1 -3	; fleePoint
+	10	[-]	GETGLOBAL	1 -5	; SetStateAndMove
+	11	[-]	GETGLOBAL	2 -6	; AI_FLEEING
+	12	[-]	GETGLOBAL	3 -3	; fleePoint
+	13	[-]	CALL     	1 3 1
+	14	[-]	GETGLOBAL	1 -7	; TurnOffAutoAttack
+	15	[-]	GETGLOBAL	2 -8	; STOPREASON_IMMEDIATELY
+	16	[-]	CALL     	1 2 1
+	17	[-]	GETGLOBAL	1 -9	; ResetAndStartTimer
+	18	[-]	LOADK    	2 -10	; "TimerFlee"
+	19	[-]	CALL     	1 2 1
+	20	[-]	RETURN   	0 1
+constants (10) for 008CD488:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"fleePoint"
+	4	"MakeFleePoint"
+	5	"SetStateAndMove"
+	6	"AI_FLEEING"
+	7	"TurnOffAutoAttack"
+	8	"STOPREASON_IMMEDIATELY"
+	9	"ResetAndStartTimer"
+	10	"TimerFlee"
+locals (0) for 008CD488:
+upvalues (0) for 008CD488:
+
+function <?:253,262> (15 instructions, 60 bytes at 008CD5E0)
+0 params, 3 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; StopTimer
+	8	[-]	LOADK    	2 -4	; "TimerFlee"
+	9	[-]	CALL     	1 2 1
+	10	[-]	GETGLOBAL	1 -5	; NetSetState
+	11	[-]	GETGLOBAL	2 -6	; AI_PET_HARDIDLE
+	12	[-]	CALL     	1 2 1
+	13	[-]	GETGLOBAL	1 -7	; TimerFindEnemies
+	14	[-]	CALL     	1 1 1
+	15	[-]	RETURN   	0 1
+constants (7) for 008CD5E0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"StopTimer"
+	4	"TimerFlee"
+	5	"NetSetState"
+	6	"AI_PET_HARDIDLE"
+	7	"TimerFindEnemies"
+locals (0) for 008CD5E0:
+upvalues (0) for 008CD5E0:
+
+function <?:265,272> (14 instructions, 56 bytes at 008CD6B0)
+0 params, 4 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; MakeFleePoint
+	8	[-]	CALL     	1 1 2
+	9	[-]	SETGLOBAL	1 -3	; fleePoint
+	10	[-]	GETGLOBAL	1 -5	; SetStateAndMove
+	11	[-]	GETGLOBAL	2 -6	; AI_FLEEING
+	12	[-]	GETGLOBAL	3 -3	; fleePoint
+	13	[-]	CALL     	1 3 1
+	14	[-]	RETURN   	0 1
+constants (6) for 008CD6B0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"fleePoint"
+	4	"MakeFleePoint"
+	5	"SetStateAndMove"
+	6	"AI_FLEEING"
+locals (0) for 008CD6B0:
+upvalues (0) for 008CD6B0:
+
+function <?:275,283> (12 instructions, 48 bytes at 008CD7B0)
+0 params, 3 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; NetSetState
+	8	[-]	GETGLOBAL	2 -4	; AI_PET_HARDIDLE
+	9	[-]	CALL     	1 2 1
+	10	[-]	GETGLOBAL	1 -5	; TimerFindEnemies
+	11	[-]	CALL     	1 1 1
+	12	[-]	RETURN   	0 1
+constants (5) for 008CD7B0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"NetSetState"
+	4	"AI_PET_HARDIDLE"
+	5	"TimerFindEnemies"
+locals (0) for 008CD7B0:
+upvalues (0) for 008CD7B0:
+
+function <?:287,295> (12 instructions, 48 bytes at 008CD860)
+0 params, 3 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; NetSetState
+	8	[-]	GETGLOBAL	2 -4	; AI_PET_HARDIDLE
+	9	[-]	CALL     	1 2 1
+	10	[-]	GETGLOBAL	1 -5	; TimerFindEnemies
+	11	[-]	CALL     	1 1 1
+	12	[-]	RETURN   	0 1
+constants (5) for 008CD860:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"NetSetState"
+	4	"AI_PET_HARDIDLE"
+	5	"TimerFindEnemies"
+locals (0) for 008CD860:
+upvalues (0) for 008CD860:
+
+function <?:299,324> (38 instructions, 152 bytes at 008CD910)
+0 params, 3 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; GetOwner
+	8	[-]	CALL     	1 1 2
+	9	[-]	SETGLOBAL	1 -3	; tempOwner
+	10	[-]	GETGLOBAL	1 -3	; tempOwner
+	11	[-]	EQ       	0 1 -5	; - nil
+	12	[-]	JMP      	4	; to 17
+	13	[-]	GETGLOBAL	1 -6	; Die
+	14	[-]	GETGLOBAL	2 -7	; me
+	15	[-]	CALL     	1 2 1
+	16	[-]	RETURN   	0 1
+	17	[-]	GETGLOBAL	1 -8	; IsMoving
+	18	[-]	CALL     	1 1 2
+	19	[-]	TEST     	1 0 1
+	20	[-]	JMP      	7	; to 28
+	21	[-]	GETGLOBAL	1 -9	; AI_PET_HARDMOVE
+	22	[-]	EQ       	0 0 1
+	23	[-]	JMP      	4	; to 28
+	24	[-]	GETGLOBAL	1 -10	; NetSetState
+	25	[-]	GETGLOBAL	2 -11	; AI_PET_HARDIDLE
+	26	[-]	CALL     	1 2 1
+	27	[-]	RETURN   	0 1
+	28	[-]	GETGLOBAL	1 -12	; AI_PET_SPAWNING
+	29	[-]	EQ       	0 0 1
+	30	[-]	JMP      	7	; to 38
+	31	[-]	GETGLOBAL	1 -13	; IsNetworkLocal
+	32	[-]	CALL     	1 1 2
+	33	[-]	TEST     	1 0 0
+	34	[-]	JMP      	3	; to 38
+	35	[-]	GETGLOBAL	1 -10	; NetSetState
+	36	[-]	GETGLOBAL	2 -11	; AI_PET_HARDIDLE
+	37	[-]	CALL     	1 2 1
+	38	[-]	RETURN   	0 1
+constants (13) for 008CD910:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"tempOwner"
+	4	"GetOwner"
+	5	nil
+	6	"Die"
+	7	"me"
+	8	"IsMoving"
+	9	"AI_PET_HARDMOVE"
+	10	"NetSetState"
+	11	"AI_PET_HARDIDLE"
+	12	"AI_PET_SPAWNING"
+	13	"IsNetworkLocal"
+locals (0) for 008CD910:
+upvalues (0) for 008CD910:
+
+function <?:328,380> (73 instructions, 292 bytes at 008CE088)
+0 params, 3 slots, 0 upvalues, 0 locals, 25 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; GetOwner
+	8	[-]	CALL     	1 1 2
+	9	[-]	EQ       	0 1 -4	; - nil
+	10	[-]	JMP      	4	; to 15
+	11	[-]	GETGLOBAL	1 -5	; Die
+	12	[-]	GETGLOBAL	2 -6	; me
+	13	[-]	CALL     	1 2 1
+	14	[-]	RETURN   	0 1
+	15	[-]	GETGLOBAL	1 -1	; GetState
+	16	[-]	CALL     	1 1 2
+	17	[-]	MOVE     	0 1
+	18	[-]	GETGLOBAL	1 -7	; AI_PET_HARDMOVE
+	19	[-]	EQ       	1 0 1
+	20	[-]	JMP      	3	; to 24
+	21	[-]	GETGLOBAL	1 -8	; AI_PET_HARDSTOP
+	22	[-]	EQ       	0 0 1
+	23	[-]	JMP      	1	; to 25
+	24	[-]	RETURN   	0 1
+	25	[-]	GETGLOBAL	1 -9	; AI_PET_HARDIDLE
+	26	[-]	EQ       	0 0 1
+	27	[-]	JMP      	16	; to 44
+	28	[-]	GETGLOBAL	1 -11	; FindTargetInAcR
+	29	[-]	CALL     	1 1 2
+	30	[-]	SETGLOBAL	1 -10	; newTarget
+	31	[-]	GETGLOBAL	1 -10	; newTarget
+	32	[-]	EQ       	0 1 -4	; - nil
+	33	[-]	JMP      	4	; to 38
+	34	[-]	GETGLOBAL	1 -12	; TurnOffAutoAttack
+	35	[-]	GETGLOBAL	2 -13	; STOPREASON_TARGET_LOST
+	36	[-]	CALL     	1 2 1
+	37	[-]	RETURN   	0 1
+	38	[-]	GETGLOBAL	1 -14	; NetSetState
+	39	[-]	GETGLOBAL	2 -15	; AI_PET_HARDIDLE_ATTACKING
+	40	[-]	CALL     	1 2 1
+	41	[-]	GETGLOBAL	1 -16	; SetTarget
+	42	[-]	GETGLOBAL	2 -10	; newTarget
+	43	[-]	CALL     	1 2 1
+	44	[-]	GETGLOBAL	1 -17	; AI_PET_HARDATTACK
+	45	[-]	EQ       	1 0 1
+	46	[-]	JMP      	9	; to 56
+	47	[-]	GETGLOBAL	1 -15	; AI_PET_HARDIDLE_ATTACKING
+	48	[-]	EQ       	1 0 1
+	49	[-]	JMP      	6	; to 56
+	50	[-]	GETGLOBAL	1 -18	; AI_TAUNTED
+	51	[-]	EQ       	1 0 1
+	52	[-]	JMP      	3	; to 56
+	53	[-]	GETGLOBAL	1 -19	; AI_BERSERK
+	54	[-]	EQ       	0 0 1
+	55	[-]	JMP      	17	; to 73
+	56	[-]	GETGLOBAL	1 -20	; TargetInAttackRange
+	57	[-]	CALL     	1 1 2
+	58	[-]	TEST     	1 0 0
+	59	[-]	JMP      	5	; to 65
+	60	[-]	GETGLOBAL	1 -21	; TurnOnAutoAttack
+	61	[-]	GETGLOBAL	2 -22	; GetTarget
+	62	[-]	CALL     	2 1 0
+	63	[-]	CALL     	1 0 1
+	64	[-]	JMP      	7	; to 72
+	65	[-]	GETGLOBAL	1 -23	; TargetInCancelAttackRange
+	66	[-]	CALL     	1 1 2
+	67	[-]	EQ       	0 1 -24	; - false
+	68	[-]	JMP      	3	; to 72
+	69	[-]	GETGLOBAL	1 -12	; TurnOffAutoAttack
+	70	[-]	GETGLOBAL	2 -25	; STOPREASON_MOVING
+	71	[-]	CALL     	1 2 1
+	72	[-]	RETURN   	0 1
+	73	[-]	RETURN   	0 1
+constants (25) for 008CE088:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"GetOwner"
+	4	nil
+	5	"Die"
+	6	"me"
+	7	"AI_PET_HARDMOVE"
+	8	"AI_PET_HARDSTOP"
+	9	"AI_PET_HARDIDLE"
+	10	"newTarget"
+	11	"FindTargetInAcR"
+	12	"TurnOffAutoAttack"
+	13	"STOPREASON_TARGET_LOST"
+	14	"NetSetState"
+	15	"AI_PET_HARDIDLE_ATTACKING"
+	16	"SetTarget"
+	17	"AI_PET_HARDATTACK"
+	18	"AI_TAUNTED"
+	19	"AI_BERSERK"
+	20	"TargetInAttackRange"
+	21	"TurnOnAutoAttack"
+	22	"GetTarget"
+	23	"TargetInCancelAttackRange"
+	24	false
+	25	"STOPREASON_MOVING"
+locals (0) for 008CE088:
+upvalues (0) for 008CE088:
+
+function <?:384,392> (16 instructions, 64 bytes at 008CDB08)
+0 params, 2 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; StopTimer
+	2	[-]	LOADK    	1 -2	; "TimerScanDistance"
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -1	; StopTimer
+	5	[-]	LOADK    	1 -3	; "TimerFindEnemies"
+	6	[-]	CALL     	0 2 1
+	7	[-]	GETGLOBAL	0 -1	; StopTimer
+	8	[-]	LOADK    	1 -4	; "TimerFeared"
+	9	[-]	CALL     	0 2 1
+	10	[-]	GETGLOBAL	0 -5	; TurnOffAutoAttack
+	11	[-]	GETGLOBAL	1 -6	; STOPREASON_IMMEDIATELY
+	12	[-]	CALL     	0 2 1
+	13	[-]	GETGLOBAL	0 -7	; NetSetState
+	14	[-]	GETGLOBAL	1 -8	; AI_HALTED
+	15	[-]	CALL     	0 2 1
+	16	[-]	RETURN   	0 1
+constants (8) for 008CDB08:
+	1	"StopTimer"
+	2	"TimerScanDistance"
+	3	"TimerFindEnemies"
+	4	"TimerFeared"
+	5	"TurnOffAutoAttack"
+	6	"STOPREASON_IMMEDIATELY"
+	7	"NetSetState"
+	8	"AI_HALTED"
+locals (0) for 008CDB08:
+upvalues (0) for 008CDB08:

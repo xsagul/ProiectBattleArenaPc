@@ -1,0 +1,42 @@
+<div class="champion-grid-header">
+  <div class="filter-icons">
+    {{#each filters as |filter|}}
+      <div class="filter {{filter.name}} {{if filter.value "active"}}" {{action this "toggleFilter" filter}}>
+        {{#uikit-tooltip tooltipPosition="top" restrictArea="whole-window" type="system" offsetY=-5}}
+          <lol-uikit-content-block padding="small" type="tooltip-system">
+            <p class="filter-label">
+              {{filter.displayName}}
+            </>
+          </>
+        {{/uikit-tooltip}}
+      </>
+    {{/each}}
+  </>
+  <div class="spacer">
+  </>
+  {{#unless gridSortDisabled}}
+    <lol-uikit-framed-dropdown class="champ-select-sort-dropdown">
+      {{#if favoritesEnabled}}
+        <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{sortByFavorite}} onclick={{action this "sort" "favorite"}}>
+          {{tra.sort_by_favorite}}
+        </>
+      {{/if}}
+      <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" class="sort-by-name" selected={{sortByName}} onclick={{action this "sort" "name"}}>
+        {{tra.sort_by_name}}
+      </>
+      <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{sortByMastery}} onclick={{action this "sort" "mastery"}}>
+        {{tra.sort_by_mastery}}
+      </>
+    </>
+  {{/unless}}
+  <lol-uikit-flat-input>
+    {{input class="champion-input" type="search" maxlength=25 value=searchText name="searchText" placeholder=tra.search}}
+  </>
+</>
+<div class="champions {{if isChampionGridDisabled "champions-disabled"}}">
+  {{#if hasChampionConfigurationsSorted}}
+    {{#ember-collection class="champion-container" estimated-width=gridEstimatedClientWidth estimated-height=gridEstimatedClientHeight scroll-top=gridScrollTop items=championConfigurationsSorted cell-layout=gridChampionLayout as |championConfiguration index|}}
+      {{champion-grid-champion championConfiguration=championConfiguration isRGM=isRGM UseNewLoyaltyIcon=UseNewLoyaltyIcon showDisabledTooltip="showDisabledTooltip" select="select" toggleFavorite="toggleFavorite"}}
+    {{/ember-collection}}
+  {{/if}}
+</>

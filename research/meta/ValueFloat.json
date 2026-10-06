@@ -1,0 +1,64 @@
+{
+  "name": "ValueFloat",
+  "hash": "0x04300058",
+  "interface": false,
+  "value": false,
+  "bases": [],
+  "since": null,
+  "removedIn": null,
+  "properties": [
+    {
+      "name": "constantValue",
+      "hash": "0xb4b427aa",
+      "ft": "F32",
+      "kt": null,
+      "vt": null,
+      "kh": null,
+      "khName": null,
+      "khKind": null,
+      "defaultValue": "0"
+    },
+    {
+      "name": "dynamics",
+      "hash": "0xbc037de7",
+      "ft": "Pointer",
+      "kt": null,
+      "vt": null,
+      "kh": "0x5c4922b6",
+      "khName": "VfxFloatBase",
+      "khKind": "class",
+      "defaultValue": "null",
+      "history": [
+        {
+          "since": "13.15",
+          "until": "13.15",
+          "ft": "Pointer",
+          "kt": null,
+          "vt": null,
+          "kh": "0xfe064c88",
+          "khName": "VfxAnimatedFloatVariableData",
+          "khKind": "class",
+          "defaultValue": "null"
+        },
+        {
+          "since": "13.16",
+          "until": null,
+          "ft": "Pointer",
+          "kt": null,
+          "vt": null,
+          "kh": "0x5c4922b6",
+          "khName": "VfxFloatBase",
+          "khKind": "class",
+          "defaultValue": "null"
+        }
+      ]
+    }
+  ],
+  "ancestorLevels": [],
+  "descendantTree": [
+    {
+      "name": "IntegratedValueFloat",
+      "children": []
+    }
+  ]
+}

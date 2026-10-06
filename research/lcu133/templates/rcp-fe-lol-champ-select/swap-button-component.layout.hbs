@@ -1,0 +1,20 @@
+{{#if summonerHasActiveSwap}}
+  {{#uikit-framed-icon class="position-swap-button" interactive=true borderWidth=2 disabled=disabled}}
+    <div class="icon">
+    </>
+  {{/uikit-framed-icon}}
+  <div class="pick-order-swap-ring-spinner {{if uxSettings.largeAreaAnimationsEnabled "animated" "not-animated"}}">
+  </>
+{{else}}
+  {{#uikit-framed-icon onclick=(action this "swap") class="position-swap-button" interactive=true borderWidth=2 disabled=disabled}}
+    <div class="icon">
+    </>
+    {{#uikit-tooltip tooltipPosition="top" type="system"}}
+      <lol-uikit-content-block type="tooltip-system" class="champ-select-swap-button-tooltip">
+        <p>
+          {{swapTooltipText}}
+        </>
+      </>
+    {{/uikit-tooltip}}
+  {{/uikit-framed-icon}}
+{{/if}}

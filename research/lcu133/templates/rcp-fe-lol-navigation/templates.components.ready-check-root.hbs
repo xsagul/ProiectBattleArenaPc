@@ -1,0 +1,150 @@
+<uikit-state-machine class="ready-check-state-machine" state="hidden" ready-check-data-state={{readyCheck.decoratedDataState}} ready-check-data-player-response={{readyCheck.playerResponse}} ready-check-data-suppress-ux="{{readyCheck.suppressUx}}" ready-check-low-spec-mode="true">
+  <uikit-states>
+    <uikit-state name="hidden">
+      <uikit-transition next-state="intro">
+        <uikit-condition-all>
+          <uikit-condition-parameter name="ready-check-data-state" value="InProgress">
+          </>
+          <uikit-condition-parameter name="ready-check-data-suppress-ux" value="false">
+          </>
+        </>
+      </>
+    </>
+    <uikit-state name="intro">
+      <uikit-transition next-state="hidden">
+        <uikit-condition-parameter name="ready-check-data-suppress-ux" value="true">
+        </>
+      </>
+      <uikit-transition next-state="in-progress">
+        <uikit-condition-parameter name="ready-check-low-spec-mode" value="true">
+        </>
+      </>
+    </>
+    <uikit-state name="in-progress" synchronous="">
+      <uikit-transition next-state="hidden">
+        <uikit-condition-any>
+          <uikit-condition-all>
+            <uikit-condition-parameter name="ready-check-data-state" not-value="InProgress">
+            </>
+            <uikit-condition-parameter name="ready-check-data-state" not-value="PartyNotReady">
+            </>
+            <uikit-condition-parameter name="ready-check-data-player-response" not-value="Declined">
+            </>
+            <uikit-condition-parameter name="ready-check-data-player-response" not-value="Accepted">
+            </>
+          </>
+          <uikit-condition-parameter name="ready-check-data-suppress-ux" value="true">
+          </>
+        </>
+      </>
+      <uikit-transition next-state="declined">
+        <uikit-condition-parameter name="ready-check-data-player-response" value="Declined">
+        </>
+      </>
+      <uikit-transition next-state="accepted">
+        <uikit-condition-parameter name="ready-check-data-player-response" value="Accepted">
+        </>
+      </>
+      <uikit-transition next-state="failure-outro">
+        <uikit-condition-parameter name="ready-check-data-state" value="PartyNotReady">
+        </>
+      </>
+    </>
+    <uikit-state name="accepted" synchronous="">
+      <uikit-transition next-state="hidden">
+        <uikit-condition-any>
+          <uikit-condition-all>
+            <uikit-condition-parameter name="ready-check-data-state" not-value="InProgress">
+            </>
+            <uikit-condition-parameter name="ready-check-data-state" not-value="EveryoneReady">
+            </>
+            <uikit-condition-parameter name="ready-check-data-state" not-value="StrangerNotReady">
+            </>
+            <uikit-condition-parameter name="ready-check-data-state" not-value="PartyNotReady">
+            </>
+          </>
+          <uikit-condition-parameter name="ready-check-data-player-response" not-value="Accepted">
+          </>
+          <uikit-condition-parameter name="ready-check-data-suppress-ux" value="true">
+          </>
+        </>
+      </>
+      <uikit-transition next-state="success-outro">
+        <uikit-condition-parameter name="ready-check-data-state" value="EveryoneReady">
+        </>
+      </>
+      <uikit-transition next-state="failure-outro">
+        <uikit-condition-any>
+          <uikit-condition-parameter name="ready-check-data-state" value="StrangerNotReady">
+          </>
+          <uikit-condition-parameter name="ready-check-data-state" value="PartyNotReady">
+          </>
+        </>
+      </>
+    </>
+    <uikit-state name="declined" synchronous="">
+      <uikit-transition next-state="hidden">
+        <uikit-condition-any>
+          <uikit-condition-all>
+            <uikit-condition-parameter name="ready-check-data-state" not-value="InProgress">
+            </>
+            <uikit-condition-parameter name="ready-check-data-state" not-value="EveryoneReady">
+            </>
+            <uikit-condition-parameter name="ready-check-data-state" not-value="StrangerNotReady">
+            </>
+            <uikit-condition-parameter name="ready-check-data-state" not-value="PartyNotReady">
+            </>
+          </>
+          <uikit-condition-parameter name="ready-check-data-player-response" not-value="Declined">
+          </>
+          <uikit-condition-parameter name="ready-check-data-suppress-ux" value="true">
+          </>
+        </>
+      </>
+      <uikit-transition next-state="success-outro">
+        <uikit-condition-parameter name="ready-check-data-state" value="EveryoneReady">
+        </>
+      </>
+      <uikit-transition next-state="failure-outro">
+        <uikit-condition-any>
+          <uikit-condition-parameter name="ready-check-data-state" value="StrangerNotReady">
+          </>
+          <uikit-condition-parameter name="ready-check-data-state" value="PartyNotReady">
+          </>
+        </>
+      </>
+    </>
+    <uikit-state name="success-outro">
+      <uikit-transition next-state="hidden">
+        <uikit-condition-any>
+          <uikit-condition-parameter name="ready-check-low-spec-mode" value="true">
+          </>
+          <uikit-condition-parameter name="ready-check-data-suppress-ux" value="true">
+          </>
+        </>
+      </>
+    </>
+    <uikit-state name="failure-outro">
+      <uikit-transition next-state="hidden">
+        <uikit-condition-any>
+          <uikit-condition-parameter name="ready-check-low-spec-mode" value="true">
+          </>
+          <uikit-condition-parameter name="ready-check-data-suppress-ux" value="true">
+          </>
+        </>
+      </>
+    </>
+  </>
+  <div class="ready-check-visible-state-hack" visible-state="hidden,intro,in-progress,declined,accepted,declined-outro,accepted-outro">
+    {{ready-check-map-background}}
+    <div class="ready-check-frame-element">
+    </>
+    {{ready-check-timer}}
+    {{ready-check-icon}}
+    {{ready-check-status-text}}
+    <div class="ready-check-buttons-element">
+      {{ready-check-button-accept}}
+      {{ready-check-button-decline}}
+    </>
+  </>
+</>

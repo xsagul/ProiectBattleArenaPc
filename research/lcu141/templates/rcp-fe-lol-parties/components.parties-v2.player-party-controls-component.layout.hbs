@@ -1,0 +1,23 @@
+{{#if isNotMe}}
+  <div class="player-party-tools {{if isMultiteamLobby "player-party-tools__is-multiteam-lobby"}}">
+    {{#if showPlayerOptionsTools}}
+      {{#v2-player-management-button type="options" action="openPlayerMenu"}}
+        <lol-uikit-content-block type="tooltip-system">
+          <p>
+            {{playerControlTooltipText}}
+          </>
+        </>
+      {{/v2-player-management-button}}
+    {{/if}}
+  </>
+{{/if}}
+{{#if shouldShowGhostedBanner}}
+  <div class="lol-not-ready-loader">
+    <div class="lol-not-ready-loader-segment">
+    </>
+    <div class="lol-not-ready-loader-segment">
+    </>
+    <div class="lol-not-ready-loader-segment">
+    </>
+  </>
+{{/if}}

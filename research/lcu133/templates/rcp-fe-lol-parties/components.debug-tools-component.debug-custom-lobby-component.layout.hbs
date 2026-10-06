@@ -1,0 +1,92 @@
+<div class="parties-debug-custom-lobby">
+  <div class="parties-debug-custom-game-config">
+    <lol-uikit-scrollable>
+      <label for="parties-debug-maps-dropdown">
+        Map
+      </>
+      <lol-uikit-framed-dropdown id="parties-debug-maps-dropdown">
+        {{#each supportedMapSummaries as |mapSummary|}}
+          <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{mapSummary.selected}} onclick={{action this "selectMap" mapSummary.mapId on="click"}}>
+            {{mapSummary.mapName}}
+          </>
+        {{/each}}
+      </>
+      {{#if selectedMapSummary}}
+        <label for="parties-debug-modes-dropdown">
+          Mode
+        </>
+        <lol-uikit-framed-dropdown id="parties-debug-modes-dropdown">
+          {{#each selectedMapSummary.supportedModes as |modeSummary|}}
+            <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{modeSummary.selected}} onclick={{action this "selectMode" modeSummary.id on="click"}}>
+              {{#unless modeSummary.enabled}}
+                <span class="parties-debug-mode-disabled">
+                  DISABLED -
+                </>
+              {{/unless}}
+              <span>
+                {{modeSummary.gameMode}}
+              </>
+            </>
+          {{/each}}
+        </>
+      {{/if}}
+      {{#if selectedModeSummary}}
+        <label for="parties-debug-teamsize-dropdown">
+          Team Size
+        </>
+        <lol-uikit-framed-dropdown id="parties-debug-teamsize-dropdown">
+          {{#each teamSizeOptions as |sizeOption|}}
+            <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{sizeOption.selected}} onclick={{action this "selectTeamSize" sizeOption.value}}>
+              {{sizeOption.value}}
+            </>
+          {{/each}}
+        </>
+        <label for="parties-debug-pick-format-dropdown">
+          Pick Format
+        </>
+        <lol-uikit-framed-dropdown id="parties-debug-pick-format-dropdown">
+          {{#each champSelectStrategyOptions as |champSelectOption|}}
+            <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected={{champSelectOption.selected}} onclick={{action this "selectChampSelectId" champSelectOption.id}}>
+              {{champSelectOption.name}}
+            </>
+          {{/each}}
+        </>
+      {{/if}}
+    </>
+  </>
+  <label for="parties-debug-game-name-input">
+    Game Name
+  </>
+  <lol-uikit-flat-input id="parties-debug-game-name-input">
+    <input type="text" name="debug-custom-game-name" id="debug-custom-game-name" value="{{defaultGameName}}" maxlength="30">
+    </>
+  </>
+  <label for="parties-debug-advanced-options" {{action this "toggleAdvancedOptions" on="click"}}>
+    Show Advanced Options
+  </>
+  <div class="parties-debug-advanced-options hidden">
+    <label for="parties-debug-game-server-region-dropdown">
+      Game Region
+    </>
+    <lol-uikit-framed-dropdown id="parties-debug-game-server-region-dropdown">
+      <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" selected="true" onclick={{action this "selectGameServerRegion" "default"}}>
+        Default
+      </>
+      {{#each gameServerRegionOptions as |gameServerRegionOption|}}
+        <lol-uikit-dropdown-option slot="lol-uikit-dropdown-option" onclick={{action this "selectGameServerRegion" gameServerRegionOption.value}}>
+          {{gameServerRegionOption.value}}
+        </>
+      {{/each}}
+    </>
+  </>
+  {{#if errorText}}
+    <div class="parties-debug-custom-lobby-error">
+      <lol-uikit-scrollable>
+        {{errorText}}
+      </>
+    </>
+  {{/if}}
+  <lol-uikit-flat-button disabled={{if createButtonEnabled null true}} onclick={{action this "createDebugLobby"}}>
+    Create Lobby
+  </>
+</>

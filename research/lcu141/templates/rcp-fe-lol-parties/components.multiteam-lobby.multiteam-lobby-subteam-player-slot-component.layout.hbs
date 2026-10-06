@@ -1,0 +1,82 @@
+<div class="player-slot__container {{if hasPlayer "player-slot__container-has-player"}} {{if isSearching "player-slot__container-is-searching"}}" onmouseenter={{action this "onMouseEnterBannerTooltipTrigger"}} onmouseleave={{action this "onMouseLeaveBannerTooltipTrigger"}}>
+  {{#if isLocalPlayer}}
+    <div class="player-slot__local-player-highlight">
+    </>
+  {{/if}}
+  <div class="player-slot__swap-local-player-glow {{if isSwapLocalPlayerGlowAnimating "player-slot__swap-local-player-glow-animation"}}">
+  </>
+  <div class="player-slot__swap-glow {{if isSwapGlowAnimating "player-slot__swap-glow-animation"}}">
+  </>
+  <div class="player-slot__hover-glow">
+  </>
+  {{#if hasPlayer}}
+    <div class="player-slot__summoner-container">
+      <div class="player-slot__crest-wrapper">
+        <lol-regalia-crest-v2-element voice-puuid={{playerSlotData.puuid}} profile-icon={{profileIconId}} crest-sizing="small" crest-type="none">
+        </>
+      </>
+      <div class="player-slot__summoner-details-container {{if isSwapSummonerDetailsAnimating "player-slot__swap-summoner-details-animation"}}">
+        <div class="player-slot__summoner-header-row">
+          {{#if isLeader}}
+            <img src="/fe/lol-parties/icon-crown.png" class="player-slot__leader-icon">
+            </>
+          {{/if}}
+          <div class="player-slot__summoner-name {{if isLocalPlayer "player-slot__summoner-name-local-player"}}">
+            {{player-name format="short" puuid=playerSlotData.puuid summonerName=playerSlotData.summonerName}}
+          </>
+        </>
+        {{cherry-rating rankedData=rankedData queueType=queueType tooltipEnabled=false}}
+      </>
+    </>
+    {{#unless isReadyOrSearching}}
+      <div class="lol-not-ready-loader">
+        <div class="lol-not-ready-loader-segment">
+        </>
+        <div class="lol-not-ready-loader-segment">
+        </>
+        <div class="lol-not-ready-loader-segment">
+        </>
+      </>
+    {{/unless}}
+  {{/if}}
+  <div class="player-slot__banner-container" onmouseenter={{action this "onMouseEnterBannerTooltipTrigger"}} onmouseleave={{action this "onMouseLeaveBannerTooltipTrigger"}}>
+    {{v2-banner member=playerSlotData puuid=playerSlotData.puuid summonerId=playerSlotData.summonerId animationsEnabled="false" selected=selected isPlayerPartyControlsDisabled="true"}}
+  </>
+  <button class="player-slot__invite-button" onclick={{action this "showInviteModal"}} onmouseenter={{action this "onHoverButton"}}>
+    {{#uikit-tooltip tooltipPosition="top" type="system"}}
+      <lol-uikit-content-block type="tooltip-system">
+        <p>
+          {{tra.parties_invite_button}}
+        </>
+      </>
+    {{/uikit-tooltip}}
+    <div class="player-slot__invite-icon">
+    </>
+  </>
+  <div class="player-slot__side-buttons-container {{if isLocalPlayer "player-slot__side-buttons-container-is-local-player"}} {{if hasPlayer "player-slot__side-buttons-container-has-player"}}">
+    {{#if hasPlayer}}
+      <div class="player-slot__player-party-controls-wrapper">
+        {{v2-player-party-controls member=playerSlotData isLeader=isLeader isMe=isLocalPlayer isMultiteamLobby="true"}}
+      </>
+    {{/if}}
+    <button class="player-slot__swap-button {{unless isSwapButtonClickable "player-slot__swap-button-disabled"}}" onclick={{action this "onSwapButtonClicked"}} onmouseenter={{action this "onHoverButton"}}>
+      {{#uikit-tooltip tooltipPosition="top" type="system"}}
+        <lol-uikit-content-block type="tooltip-system">
+          <p>
+            {{tra.parties_swap_button}}
+          </>
+        </>
+      {{/uikit-tooltip}}
+      <div class="player-slot__swap-icon">
+      </>
+      <div class="player-slot__swap-button-cooldown">
+        <div class="player-slot__swap-button-cooldown-left-half-mask">
+          <div class="player-slot__swap-button-cooldown-left-half">
+          </>
+        </>
+        <div class="player-slot__swap-button-cooldown-right-half">
+        </>
+      </>
+    </>
+  </>
+</>

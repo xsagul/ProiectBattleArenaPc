@@ -1,0 +1,57 @@
+<div class="quick-play-skin-carousel">
+  {{#if showArrows}}
+    <lol-uikit-arrow-button direction="left" class="prev-button" onClick={{action this "moveSkinSelection" -1}} click-sfx-src="/fe/lol-collections/audio/sfx-collection-browse-left-click.ogg">
+    </>
+  {{/if}}
+  <div class="carousel-track-container" style="width:{{carouselWidth}}px">
+    <div class="carousel-track" style="transform: translateX({{carouselOffset}}px)">
+      {{#each skins key="id" as |skin index|}}
+        <div class="thumbnail-wrapper
+          {{if skin.purchaseEnabled "purchase-available"}}
+          {{if (eq index selectingSkinIndex) "active-skin"}}
+          {{unless skin.unlocked "unowned"}}
+          {{if skin.ownership.loyaltyReward "loyalty-reward"}}
+          {{if skin.ownership.rental.rented "rental"}}">
+          <div class="skin-purchase-button-container {{if (eq index selectingSkinIndex) "visible"}}">
+            {{skin-purchase-button skin=skin openPawModal=(action this "showSkinPurchaseModal"}}
+          </>
+          {{#if (eq index selectingSkinIndex)}}
+            <div class="skin-thumbnail-img" style="background-image:url({{if skin.questSkinInfo.tilePath selectedForm.tilePath skin.tilePath}})" onClick={{action this "skinThumbnailClicked" index}}>
+            </>
+          {{else}}
+            <div class="skin-thumbnail-img" style="background-image:url({{if skin.questSkinInfo.tilePath skin.questSkinInfo.tilePath skin.tilePath}})" onClick={{action this "skinThumbnailClicked" index}}>
+            </>
+          {{/if}}
+          {{#if skin.rarityGemPath}}
+            <div class="gem-overlay">
+              <img src="{{skin.rarityGemPath}}">
+              </>
+            </>
+          {{/if}}
+          <div class="related">
+            {{#if skin.unlocked}}
+              {{skin-quest-form-modal baseSkin=skin questForms=skin.questSkinInfo.tiers selectedForm=selectedForm skinIsOwned=skin.unlocked enabled=(eq index selectingSkinIndex) setSkin="setChildSkin" openPawModal=(action this "showSkinPurchaseModal"}}
+              {{skin-chroma-modal baseSkin=skin chromas=skin.chromas selectedChroma=selectedChroma skinIsOwned=skin.unlocked enabled=(eq index selectingSkinIndex) setSkin="setChildSkin" openPawModal=(action this "showSkinPurchaseModal"}}
+            {{/if}}
+          </>
+        </>
+      {{/each}}
+    </>
+  </>
+  {{#if showArrows}}
+    <lol-uikit-arrow-button direction="right" class="next-button" onClick={{action this "moveSkinSelection" 1}} click-sfx-src="/fe/lol-collections/audio/sfx-collection-browse-right-click.ogg">
+    </>
+  {{/if}}
+</>
+<div class="quick-play-skin-selection-indicator">
+  <div class="line line-left">
+  </>
+  <ul class="skin-selection-indicator-list">
+    {{#each skins as |skin index|}}
+      <li class="skin-pip {{if (eq selectingSkinIndex index) "skin-pip-selected"}}" onClick={{action this "skinThumbnailClicked" index}}>
+      </>
+    {{/each}}
+  </>
+  <div class="line line-right">
+  </>
+</>

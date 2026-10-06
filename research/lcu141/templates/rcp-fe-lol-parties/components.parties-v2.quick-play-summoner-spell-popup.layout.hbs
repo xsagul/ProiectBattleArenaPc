@@ -1,0 +1,27 @@
+<div class="spell-information">
+  <div class="spell-title">
+    {{contextSpell.name}}
+  </>
+  {{#if contextSpell.isDisabled}}
+    <div class="spell-locked-description">
+      {{contextSpellLockedDescription}}
+    </>
+  {{/if}}
+  <div class="spell-description">
+    {{contextSpell.description}}
+  </>
+  <div class="spell-cooldown">
+    {{contextSpellCooldownDescription}}
+  </>
+</>
+<div class="spell-divider">
+</>
+<lol-uikit-scrollable class="summoner-spells">
+  {{#each spells as |spell|}}
+    <div class="summoner-spell-container">
+      {{quick-play-summoner-spell-renderer isDisabled=spell.isDisabled spell=spell onRendererMouseOver="onFlyoutSpellHover" onRendererClicked=(action this "onSummonerSpellClicked" spell}}
+      <div class="quick-play-summoner-spell-selected-border-overlay {{if (eq spell.id changingSpell.id) "" "hidden"}}">
+      </>
+    </>
+  {{/each}}
+</>

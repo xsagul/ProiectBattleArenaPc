@@ -1,0 +1,322 @@
+{
+ "champion": "Talon",
+ "spell": "6693Active",
+ "caster": 1073741856,
+ "target": null,
+ "t": 770.9903330078216,
+ "casts": 6,
+ "sequence": [
+  516,
+  49,
+  65,
+  578
+ ],
+ "sequence_cases": 4,
+ "sequences": 3,
+ "packets": [
+  {
+   "pid": 516,
+   "ch": 1,
+   "who": "caster",
+   "values": {
+    "+0xc": "ee88004612ea65c2c134d545",
+    "+0x18": "27000040",
+    "+0x1c": "02"
+   },
+   "raw": null
+  },
+  {
+   "pid": 49,
+   "ch": 1,
+   "who": "caster",
+   "values": {
+    "+0xc": {
+     "+0x4": "00000000",
+     "+0x8": [
+      {
+       "+0x4": "27000040",
+       "+0x8": "00"
+      }
+     ],
+     "+0x14": "000080bf",
+     "+0x18": "bdff53d5",
+     "+0x1c": "b0670040",
+     "+0x20": "00000000",
+     "+0x24": "9a99193e",
+     "+0x28": "55f367bf00000000eca7d83e",
+     "+0x34": "08",
+     "+0x36": "ffff",
+     "+0x38": "00",
+     "+0x3c": "20000040",
+     "+0x40": "0100",
+     "+0x42": "0000",
+     "+0x44": "00000000",
+     "+0x48": "0000803f",
+     "+0x4c": "ee88004612ea65c2c134d545",
+     "+0x58": "0000803f",
+     "+0x5c": "20000040",
+     "+0x60": "01860046307b8ec28d68c945",
+     "+0x6c": "000000000000000000000000",
+     "+0x78": "62bf4044",
+     "+0x7c": "00",
+     "+0x80": "ed150000",
+     "+0x84": "00000000",
+     "+0x88": "00000000",
+     "+0x8c": {
+      "+0x4": {
+       "text": ""
+      },
+      "+0x10": "fcc84044",
+      "+0x14": "05497909",
+      "+0x18": "1d00",
+      "+0x1c": "42bd0000",
+      "+0x20": "1d00",
+      "+0x22": "0800",
+      "+0x24": {
+       "text": "54616c6f6e"
+      }
+     },
+     "+0xbc": "05497909",
+     "+0xc0": "00000000",
+     "+0xc4": "af670040",
+     "+0xc8": "00000000",
+     "+0xcc": "0000"
+    },
+    "+0xdc": "00",
+    "+0xe0": "00000000"
+   },
+   "raw": null
+  },
+  {
+   "pid": 65,
+   "ch": 1,
+   "who": "caster",
+   "values": {
+    "+0xa": "01",
+    "+0xc": {
+     "text": "41747461636b31"
+    },
+    "+0x18": "01",
+    "+0x1c": "0000803f",
+    "+0x20": "00",
+    "+0x24": "00000000",
+    "+0x28": "00",
+    "+0x2c": "9a99193e",
+    "+0x30": "00",
+    "+0x31": "00"
+   },
+   "raw": null
+  },
+  {
+   "pid": 578,
+   "ch": 1,
+   "who": "caster",
+   "values": {
+    "+0xc": "abaaaa3d",
+    "+0x10": "8ac7fd3a8736153d61d47f3f",
+    "+0x1c": "00"
+   },
+   "raw": null
+  }
+ ],
+ "fixed": {
+  "0": [
+   "+0x1c"
+  ],
+  "1": [
+   "+0xc+0x14",
+   "+0xc+0x18",
+   "+0xc+0x20",
+   "+0xc+0x24",
+   "+0xc+0x34",
+   "+0xc+0x36",
+   "+0xc+0x38",
+   "+0xc+0x3c",
+   "+0xc+0x4",
+   "+0xc+0x40",
+   "+0xc+0x42",
+   "+0xc+0x44",
+   "+0xc+0x48",
+   "+0xc+0x58",
+   "+0xc+0x5c",
+   "+0xc+0x6c",
+   "+0xc+0x7c",
+   "+0xc+0x84",
+   "+0xc+0x88",
+   "+0xc+0x8c+0x14",
+   "+0xc+0x8c+0x18",
+   "+0xc+0x8c+0x20",
+   "+0xc+0x8c+0x22",
+   "+0xc+0x8c+0x24",
+   "+0xc+0x8c+0x4",
+   "+0xc+0xbc",
+   "+0xc+0xc0",
+   "+0xc+0xc8",
+   "+0xc+0xcc",
+   "+0xdc",
+   "+0xe0"
+  ],
+  "2": [
+   "+0x18",
+   "+0x1c",
+   "+0x20",
+   "+0x24",
+   "+0x28",
+   "+0x2c",
+   "+0x30",
+   "+0x31",
+   "+0xa",
+   "+0xc"
+  ],
+  "3": [
+   "+0x1c",
+   "+0xc"
+  ]
+ },
+ "varying": {
+  "0": [
+   "+0x18",
+   "+0xc"
+  ],
+  "1": [
+   "+0xc+0x1c",
+   "+0xc+0x28",
+   "+0xc+0x4c",
+   "+0xc+0x60",
+   "+0xc+0x78",
+   "+0xc+0x8",
+   "+0xc+0x80",
+   "+0xc+0x8c+0x10",
+   "+0xc+0x8c+0x1c",
+   "+0xc+0xc4"
+  ],
+  "2": [],
+  "3": [
+   "+0x10"
+  ]
+ },
+ "damage_delays": [
+  [
+   0.99,
+   4
+  ],
+  [
+   0.33,
+   3
+  ],
+  [
+   0.73,
+   2
+  ],
+  [
+   0.79,
+   2
+  ],
+  [
+   0.6,
+   2
+  ],
+  [
+   0.17,
+   1
+  ],
+  [
+   0.26,
+   1
+  ],
+  [
+   0.89,
+   1
+  ]
+ ],
+ "damage_types": {
+  "0": 26,
+  "2": 1
+ },
+ "applies": [
+  [
+   "other",
+   "6693Amp",
+   3,
+   3.0,
+   6
+  ],
+  [
+   "other",
+   "574b5906",
+   11,
+   1.0,
+   4
+  ],
+  [
+   "other",
+   "TalonPassiveStack",
+   3,
+   6.0,
+   2
+  ],
+  [
+   "other",
+   "SummonerDot",
+   13,
+   5.0,
+   2
+  ],
+  [
+   "other",
+   "GrievousWound",
+   3,
+   5.0,
+   2
+  ],
+  [
+   "self",
+   "ASSETS/Perks/Styles/Sorcery/NimbusCloak/NimbusCloakBuff.lua",
+   2,
+   2.0,
+   1
+  ],
+  [
+   "self",
+   "ASSETS/Perks/Styles/Domination/Electrocute/PerkElectrocuteLockout.lua",
+   3,
+   22.941,
+   1
+  ],
+  [
+   "other",
+   "TalonPassiveBleed",
+   3,
+   2.0,
+   1
+  ],
+  [
+   "other",
+   "ASSETS/Perks/Styles/Domination/Electrocute/PerkElectrocuteLockout.lua",
+   3,
+   22.353,
+   1
+  ],
+  [
+   "self",
+   "ASSETS/Perks/Styles/Domination/TasteOfBlood/TasteOfBloodTemp.lua",
+   2,
+   25000.0,
+   1
+  ],
+  [
+   "self",
+   "ASSETS/Perks/Styles/Domination/TasteOfBlood/TasteOfBloodLockout.lua",
+   3,
+   20.0,
+   1
+  ],
+  [
+   "self",
+   "ASSETS/Perks/Styles/Domination/Electrocute/PerkElectrocuteLockout.lua",
+   3,
+   21.177,
+   1
+  ]
+ ]
+}

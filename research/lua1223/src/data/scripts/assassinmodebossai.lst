@@ -1,0 +1,1643 @@
+
+main <?:0,0> (123 instructions, 492 bytes at 008E7F28)
+0+ params, 4 slots, 0 upvalues, 0 locals, 70 constants, 24 functions
+	1	[-]	LOADK    	0 -2	; 2
+	2	[-]	SETGLOBAL	0 -1	; RUN_IN_FEAR
+	3	[-]	LOADK    	0 -4	; 1
+	4	[-]	SETGLOBAL	0 -3	; HOSTILE
+	5	[-]	LOADK    	0 -6	; 0
+	6	[-]	SETGLOBAL	0 -5	; INACTIVE
+	7	[-]	LOADK    	0 -8	; 6
+	8	[-]	SETGLOBAL	0 -7	; LEASH_COUNTER_THRESHOLD
+	9	[-]	LOADK    	0 -10	; 0.05
+	10	[-]	SETGLOBAL	0 -9	; DEFAULT_FRUSTRATION_SEARCH_TIME
+	11	[-]	LOADK    	0 -12	; 0.6
+	12	[-]	SETGLOBAL	0 -11	; DELAY_BETWEEN_FRUSTRATION_SEARCH_TIME
+	13	[-]	LOADK    	0 -14	; 400
+	14	[-]	SETGLOBAL	0 -13	; AGGRESSION_FIRST_SWEEP_RANGE
+	15	[-]	LOADK    	0 -16	; 100
+	16	[-]	SETGLOBAL	0 -15	; LEASH_PROTECTION_BARRIER
+	17	[-]	LOADK    	0 -18	; 700
+	18	[-]	SETGLOBAL	0 -17	; INNER_RANGE_BEFORE_CAMP_RELEASES
+	19	[-]	LOADK    	0 -20	; 250
+	20	[-]	SETGLOBAL	0 -19	; OUTER_RANGE_BOUND
+	21	[-]	LOADK    	0 -22	; 1150
+	22	[-]	SETGLOBAL	0 -21	; ATTACKER_RANGE_BEFORE_RELEASH
+	23	[-]	LOADK    	0 -24	; 25
+	24	[-]	SETGLOBAL	0 -23	; CURRENT_TARGET_TO_ATTACKER_SWITCH_RANGE
+	25	[-]	LOADK    	0 -26	; 500
+	26	[-]	SETGLOBAL	0 -25	; FEAR_WANDER_DISTANCE
+	27	[-]	GETGLOBAL	0 -27	; DoLuaShared
+	28	[-]	LOADK    	1 -28	; "AIComponentSystem"
+	29	[-]	CALL     	0 2 1
+	30	[-]	GETGLOBAL	0 -27	; DoLuaShared
+	31	[-]	LOADK    	1 -29	; "ObjectTags"
+	32	[-]	CALL     	0 2 1
+	33	[-]	GETGLOBAL	0 -30	; AddComponent
+	34	[-]	LOADK    	1 -31	; "OutOfCombatRegen"
+	35	[-]	CALL     	0 2 1
+	36	[-]	GETGLOBAL	0 -30	; AddComponent
+	37	[-]	LOADK    	1 -32	; "DefaultCharmBehavior"
+	38	[-]	CALL     	0 2 1
+	39	[-]	GETGLOBAL	0 -30	; AddComponent
+	40	[-]	LOADK    	1 -33	; "DefaultFearBehavior"
+	41	[-]	CALL     	0 2 1
+	42	[-]	GETGLOBAL	0 -30	; AddComponent
+	43	[-]	LOADK    	1 -34	; "DefaultFleeBehavior"
+	44	[-]	CALL     	0 2 1
+	45	[-]	GETGLOBAL	0 -30	; AddComponent
+	46	[-]	LOADK    	1 -35	; "DefaultTauntBehavior"
+	47	[-]	CALL     	0 2 1
+	48	[-]	NEWTABLE 	0 3 0
+	49	[-]	GETGLOBAL	1 -37	; UnitTagIndicies
+	50	[-]	GETTABLE 	1 1 -38	; "Minion"
+	51	[-]	GETGLOBAL	2 -37	; UnitTagIndicies
+	52	[-]	GETTABLE 	2 2 -39	; "Monster"
+	53	[-]	GETGLOBAL	3 -37	; UnitTagIndicies
+	54	[-]	GETTABLE 	3 3 -40	; "Champion"
+	55	[-]	SETLIST  	0 3 1	; 1
+	56	[-]	SETGLOBAL	0 -36	; MONSTER_ANY_INCLUDED_TAG
+	57	[-]	NEWTABLE 	0 3 0
+	58	[-]	GETGLOBAL	1 -37	; UnitTagIndicies
+	59	[-]	GETTABLE 	1 1 -42	; "Structure"
+	60	[-]	GETGLOBAL	2 -37	; UnitTagIndicies
+	61	[-]	GETTABLE 	2 2 -43	; "Minion_Lane"
+	62	[-]	GETGLOBAL	3 -37	; UnitTagIndicies
+	63	[-]	GETTABLE 	3 3 -44	; "Special_EpicMonsterIgnores"
+	64	[-]	SETLIST  	0 3 1	; 1
+	65	[-]	SETGLOBAL	0 -41	; MONSTER_EPIC_EXCLUDED_TAG
+	66	[-]	NEWTABLE 	0 3 0
+	67	[-]	GETGLOBAL	1 -37	; UnitTagIndicies
+	68	[-]	GETTABLE 	1 1 -42	; "Structure"
+	69	[-]	GETGLOBAL	2 -37	; UnitTagIndicies
+	70	[-]	GETTABLE 	2 2 -43	; "Minion_Lane"
+	71	[-]	GETGLOBAL	3 -37	; UnitTagIndicies
+	72	[-]	GETTABLE 	3 3 -46	; "Special_MonsterIgnores"
+	73	[-]	SETLIST  	0 3 1	; 1
+	74	[-]	SETGLOBAL	0 -45	; MONSTER_NONEPIC_EXCLUDED_TAG
+	75	[-]	CLOSURE  	0 0	; 008E7FE8
+	76	[-]	SETGLOBAL	0 -47	; OnInit
+	77	[-]	CLOSURE  	0 1	; 008E8040
+	78	[-]	SETGLOBAL	0 -48	; OnOrder
+	79	[-]	CLOSURE  	0 2	; 008EA338
+	80	[-]	SETGLOBAL	0 -49	; LeashedCallForHelp
+	81	[-]	CLOSURE  	0 3	; 008EDB28
+	82	[-]	SETGLOBAL	0 -50	; OnTargetLost
+	83	[-]	CLOSURE  	0 4	; 008E9FA8
+	84	[-]	SETGLOBAL	0 -51	; TimerRetreat
+	85	[-]	CLOSURE  	0 5	; 008EA068
+	86	[-]	SETGLOBAL	0 -52	; AttackTarget
+	87	[-]	CLOSURE  	0 6	; 008EE210
+	88	[-]	SETGLOBAL	0 -53	; Retreat
+	89	[-]	CLOSURE  	0 7	; 008EE378
+	90	[-]	SETGLOBAL	0 -54	; IncreaseFrustration
+	91	[-]	CLOSURE  	0 8	; 008EE610
+	92	[-]	SETGLOBAL	0 -55	; TargetWithinWalkBounds
+	93	[-]	CLOSURE  	0 9	; 008EE668
+	94	[-]	SETGLOBAL	0 -56	; FindNearestAggressor
+	95	[-]	CLOSURE  	0 10	; 008EE918
+	96	[-]	SETGLOBAL	0 -57	; OnTakeDamage
+	97	[-]	CLOSURE  	0 11	; 008EE970
+	98	[-]	SETGLOBAL	0 -58	; RespondToAggression
+	99	[-]	CLOSURE  	0 12	; 008EEF18
+	100	[-]	SETGLOBAL	0 -59	; TimerFrustrationSearch
+	101	[-]	CLOSURE  	0 13	; 008EF8F0
+	102	[-]	SETGLOBAL	0 -60	; TimerReturningHome
+	103	[-]	CLOSURE  	0 14	; 008EF370
+	104	[-]	SETGLOBAL	0 -61	; TimerAttack
+	105	[-]	CLOSURE  	0 15	; 008EF948
+	106	[-]	SETGLOBAL	0 -62	; AggressionSweep
+	107	[-]	CLOSURE  	0 16	; 008EF738
+	108	[-]	SETGLOBAL	0 -63	; FindNewTarget
+	109	[-]	CLOSURE  	0 17	; 008EF688
+	110	[-]	SETGLOBAL	0 -64	; HaltAI
+	111	[-]	CLOSURE  	0 18	; 008EF9A0
+	112	[-]	SETGLOBAL	0 -65	; StopLeashing
+	113	[-]	CLOSURE  	0 19	; 008EF7E8
+	114	[-]	SETGLOBAL	0 -66	; StartLeashing
+	115	[-]	CLOSURE  	0 20	; 008EF898
+	116	[-]	SETGLOBAL	0 -67	; TurnOffRegeneration
+	117	[-]	CLOSURE  	0 21	; 008EF9F8
+	118	[-]	SETGLOBAL	0 -68	; TurnOnRegeneration
+	119	[-]	CLOSURE  	0 22	; 008EF5D8
+	120	[-]	SETGLOBAL	0 -69	; EnterStasis
+	121	[-]	CLOSURE  	0 23	; 008EF420
+	122	[-]	SETGLOBAL	0 -70	; ExitStasis
+	123	[-]	RETURN   	0 1
+constants (70) for 008E7F28:
+	1	"RUN_IN_FEAR"
+	2	2
+	3	"HOSTILE"
+	4	1
+	5	"INACTIVE"
+	6	0
+	7	"LEASH_COUNTER_THRESHOLD"
+	8	6
+	9	"DEFAULT_FRUSTRATION_SEARCH_TIME"
+	10	0.05
+	11	"DELAY_BETWEEN_FRUSTRATION_SEARCH_TIME"
+	12	0.6
+	13	"AGGRESSION_FIRST_SWEEP_RANGE"
+	14	400
+	15	"LEASH_PROTECTION_BARRIER"
+	16	100
+	17	"INNER_RANGE_BEFORE_CAMP_RELEASES"
+	18	700
+	19	"OUTER_RANGE_BOUND"
+	20	250
+	21	"ATTACKER_RANGE_BEFORE_RELEASH"
+	22	1150
+	23	"CURRENT_TARGET_TO_ATTACKER_SWITCH_RANGE"
+	24	25
+	25	"FEAR_WANDER_DISTANCE"
+	26	500
+	27	"DoLuaShared"
+	28	"AIComponentSystem"
+	29	"ObjectTags"
+	30	"AddComponent"
+	31	"OutOfCombatRegen"
+	32	"DefaultCharmBehavior"
+	33	"DefaultFearBehavior"
+	34	"DefaultFleeBehavior"
+	35	"DefaultTauntBehavior"
+	36	"MONSTER_ANY_INCLUDED_TAG"
+	37	"UnitTagIndicies"
+	38	"Minion"
+	39	"Monster"
+	40	"Champion"
+	41	"MONSTER_EPIC_EXCLUDED_TAG"
+	42	"Structure"
+	43	"Minion_Lane"
+	44	"Special_EpicMonsterIgnores"
+	45	"MONSTER_NONEPIC_EXCLUDED_TAG"
+	46	"Special_MonsterIgnores"
+	47	"OnInit"
+	48	"OnOrder"
+	49	"LeashedCallForHelp"
+	50	"OnTargetLost"
+	51	"TimerRetreat"
+	52	"AttackTarget"
+	53	"Retreat"
+	54	"IncreaseFrustration"
+	55	"TargetWithinWalkBounds"
+	56	"FindNearestAggressor"
+	57	"OnTakeDamage"
+	58	"RespondToAggression"
+	59	"TimerFrustrationSearch"
+	60	"TimerReturningHome"
+	61	"TimerAttack"
+	62	"AggressionSweep"
+	63	"FindNewTarget"
+	64	"HaltAI"
+	65	"StopLeashing"
+	66	"StartLeashing"
+	67	"TurnOffRegeneration"
+	68	"TurnOnRegeneration"
+	69	"EnterStasis"
+	70	"ExitStasis"
+locals (0) for 008E7F28:
+upvalues (0) for 008E7F28:
+
+function <?:40,56> (47 instructions, 188 bytes at 008E7FE8)
+1 param, 5 slots, 0 upvalues, 0 locals, 21 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; Event
+	2	[-]	LOADK    	2 -2	; "ComponentInit"
+	3	[-]	CALL     	1 2 1
+	4	[-]	GETGLOBAL	1 -3	; SetState
+	5	[-]	GETGLOBAL	2 -4	; AI_ATTACK
+	6	[-]	CALL     	1 2 1
+	7	[-]	GETGLOBAL	1 -5	; SetCharVar
+	8	[-]	LOADK    	2 -6	; "WillBeFrustrated"
+	9	[-]	LOADK    	3 -7	; 0
+	10	[-]	CALL     	1 3 1
+	11	[-]	GETGLOBAL	1 -5	; SetCharVar
+	12	[-]	LOADK    	2 -8	; "StartBoostRegen"
+	13	[-]	LOADK    	3 -7	; 0
+	14	[-]	CALL     	1 3 1
+	15	[-]	GETGLOBAL	1 -5	; SetCharVar
+	16	[-]	LOADK    	2 -9	; "inStasis"
+	17	[-]	LOADK    	3 -7	; 0
+	18	[-]	CALL     	1 3 1
+	19	[-]	GETGLOBAL	1 -10	; OutOfCombatRegen
+	20	[-]	SELF     	1 1 -11	; "Start"
+	21	[-]	CALL     	1 2 1
+	22	[-]	GETGLOBAL	1 -12	; SetMyLeashedPos
+	23	[-]	CALL     	1 1 1
+	24	[-]	GETGLOBAL	1 -13	; SetMyLeashedOrientation
+	25	[-]	CALL     	1 1 1
+	26	[-]	GETGLOBAL	1 -14	; InitTimer
+	27	[-]	LOADK    	2 -15	; "TimerFrustrationSearch"
+	28	[-]	GETGLOBAL	3 -16	; DEFAULT_FRUSTRATION_SEARCH_TIME
+	29	[-]	LOADBOOL 	4 1 0
+	30	[-]	CALL     	1 4 1
+	31	[-]	GETGLOBAL	1 -14	; InitTimer
+	32	[-]	LOADK    	2 -17	; "TimerAttack"
+	33	[-]	LOADK    	3 -18	; 0.25
+	34	[-]	LOADBOOL 	4 1 0
+	35	[-]	CALL     	1 4 1
+	36	[-]	GETGLOBAL	1 -14	; InitTimer
+	37	[-]	LOADK    	2 -19	; "TimerReturningHome"
+	38	[-]	LOADK    	3 -20	; 0.05
+	39	[-]	LOADBOOL 	4 1 0
+	40	[-]	CALL     	1 4 1
+	41	[-]	GETGLOBAL	1 -21	; StopTimer
+	42	[-]	LOADK    	2 -15	; "TimerFrustrationSearch"
+	43	[-]	CALL     	1 2 1
+	44	[-]	GETGLOBAL	1 -21	; StopTimer
+	45	[-]	LOADK    	2 -19	; "TimerReturningHome"
+	46	[-]	CALL     	1 2 1
+	47	[-]	RETURN   	0 1
+constants (21) for 008E7FE8:
+	1	"Event"
+	2	"ComponentInit"
+	3	"SetState"
+	4	"AI_ATTACK"
+	5	"SetCharVar"
+	6	"WillBeFrustrated"
+	7	0
+	8	"StartBoostRegen"
+	9	"inStasis"
+	10	"OutOfCombatRegen"
+	11	"Start"
+	12	"SetMyLeashedPos"
+	13	"SetMyLeashedOrientation"
+	14	"InitTimer"
+	15	"TimerFrustrationSearch"
+	16	"DEFAULT_FRUSTRATION_SEARCH_TIME"
+	17	"TimerAttack"
+	18	0.25
+	19	"TimerReturningHome"
+	20	0.05
+	21	"StopTimer"
+locals (0) for 008E7FE8:
+upvalues (0) for 008E7FE8:
+
+function <?:59,72> (20 instructions, 80 bytes at 008E8040)
+2 params, 5 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetState
+	2	[-]	CALL     	2 1 2
+	3	[-]	GETGLOBAL	3 -2	; AI_HALTED
+	4	[-]	EQ       	0 2 3
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	3 -3	; ORDER_ATTACKTO
+	8	[-]	EQ       	0 0 3
+	9	[-]	JMP      	5	; to 15
+	10	[-]	GETGLOBAL	3 -4	; AttackTarget
+	11	[-]	MOVE     	4 1
+	12	[-]	CALL     	3 2 1
+	13	[-]	LOADBOOL 	3 1 0
+	14	[-]	RETURN   	3 2
+	15	[-]	GETGLOBAL	3 -5	; Error
+	16	[-]	LOADK    	4 -6	; "Unsupported Order"
+	17	[-]	CALL     	3 2 1
+	18	[-]	LOADBOOL 	3 0 0
+	19	[-]	RETURN   	3 2
+	20	[-]	RETURN   	0 1
+constants (6) for 008E8040:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"ORDER_ATTACKTO"
+	4	"AttackTarget"
+	5	"Error"
+	6	"Unsupported Order"
+locals (0) for 008E8040:
+upvalues (0) for 008E8040:
+
+function <?:74,115> (51 instructions, 204 bytes at 008EA338)
+2 params, 11 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetState
+	2	[-]	CALL     	2 1 2
+	3	[-]	GETGLOBAL	3 -2	; AI_HALTED
+	4	[-]	EQ       	0 2 3
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	3 -3	; GetTarget
+	8	[-]	CALL     	3 1 2
+	9	[-]	GETGLOBAL	4 -4	; RespondToAggression
+	10	[-]	MOVE     	5 1
+	11	[-]	CALL     	4 2 1
+	12	[-]	GETGLOBAL	4 -1	; GetState
+	13	[-]	CALL     	4 1 2
+	14	[-]	GETGLOBAL	5 -5	; AI_RETREAT
+	15	[-]	EQ       	0 4 5
+	16	[-]	JMP      	34	; to 51
+	17	[-]	GETGLOBAL	4 -6	; GetLeashCounter
+	18	[-]	CALL     	4 1 2
+	19	[-]	GETGLOBAL	5 -7	; LEASH_COUNTER_THRESHOLD
+	20	[-]	LT       	0 4 5
+	21	[-]	JMP      	29	; to 51
+	22	[-]	GETGLOBAL	4 -8	; GetMaxHP
+	23	[-]	CALL     	4 1 2
+	24	[-]	GETGLOBAL	5 -9	; GetHP
+	25	[-]	CALL     	5 1 2
+	26	[-]	GETGLOBAL	6 -10	; GetCampLeashPos
+	27	[-]	CALL     	6 1 2
+	28	[-]	GETGLOBAL	7 -11	; WalkDistanceBetweenObjectCenterAndPoint
+	29	[-]	MOVE     	8 1
+	30	[-]	MOVE     	9 6
+	31	[-]	CALL     	7 3 2
+	32	[-]	GETGLOBAL	8 -12	; GetWalkDistToLeashedPos
+	33	[-]	CALL     	8 1 2
+	34	[-]	GETGLOBAL	9 -13	; GetCampLeashRadius
+	35	[-]	CALL     	9 1 2
+	36	[-]	LE       	0 7 9
+	37	[-]	JMP      	4	; to 42
+	38	[-]	GETGLOBAL	9 -14	; AttackTarget
+	39	[-]	MOVE     	10 1
+	40	[-]	CALL     	9 2 1
+	41	[-]	JMP      	9	; to 51
+	42	[-]	GETGLOBAL	9 -15	; INNER_RANGE_BEFORE_CAMP_RELEASES
+	43	[-]	LE       	0 8 9
+	44	[-]	JMP      	6	; to 51
+	45	[-]	GETGLOBAL	9 -16	; ATTACKER_RANGE_BEFORE_RELEASH
+	46	[-]	LE       	0 7 9
+	47	[-]	JMP      	3	; to 51
+	48	[-]	GETGLOBAL	9 -14	; AttackTarget
+	49	[-]	MOVE     	10 1
+	50	[-]	CALL     	9 2 1
+	51	[-]	RETURN   	0 1
+constants (16) for 008EA338:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"GetTarget"
+	4	"RespondToAggression"
+	5	"AI_RETREAT"
+	6	"GetLeashCounter"
+	7	"LEASH_COUNTER_THRESHOLD"
+	8	"GetMaxHP"
+	9	"GetHP"
+	10	"GetCampLeashPos"
+	11	"WalkDistanceBetweenObjectCenterAndPoint"
+	12	"GetWalkDistToLeashedPos"
+	13	"GetCampLeashRadius"
+	14	"AttackTarget"
+	15	"INNER_RANGE_BEFORE_CAMP_RELEASES"
+	16	"ATTACKER_RANGE_BEFORE_RELEASH"
+locals (0) for 008EA338:
+upvalues (0) for 008EA338:
+
+function <?:117,147> (40 instructions, 160 bytes at 008EDB28)
+2 params, 6 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; TurnOffAutoAttack
+	2	[-]	GETGLOBAL	3 -2	; STOPREASON_MOVING
+	3	[-]	CALL     	2 2 1
+	4	[-]	GETGLOBAL	2 -3	; GetState
+	5	[-]	CALL     	2 1 2
+	6	[-]	GETGLOBAL	3 -4	; AI_HALTED
+	7	[-]	EQ       	1 2 3
+	8	[-]	JMP      	3	; to 12
+	9	[-]	GETGLOBAL	3 -5	; AI_RETREAT
+	10	[-]	EQ       	0 2 3
+	11	[-]	JMP      	2	; to 14
+	12	[-]	LOADBOOL 	3 1 0
+	13	[-]	RETURN   	3 2
+	14	[-]	GETGLOBAL	3 -6	; GetCharVar
+	15	[-]	LOADK    	4 -7	; "inStasis"
+	16	[-]	CALL     	3 2 2
+	17	[-]	LT       	0 -8 3	; 1 -
+	18	[-]	JMP      	2	; to 21
+	19	[-]	LOADBOOL 	3 0 0
+	20	[-]	RETURN   	3 2
+	21	[-]	GETGLOBAL	3 -9	; GetOwner
+	22	[-]	MOVE     	4 1
+	23	[-]	CALL     	3 2 2
+	24	[-]	EQ       	0 3 -10	; - nil
+	25	[-]	JMP      	4	; to 30
+	26	[-]	GETGLOBAL	4 -11	; GetGoldRedirectTarget
+	27	[-]	MOVE     	5 1
+	28	[-]	CALL     	4 2 2
+	29	[-]	MOVE     	3 4
+	30	[-]	EQ       	1 3 -10	; - nil
+	31	[-]	JMP      	4	; to 36
+	32	[-]	GETGLOBAL	4 -12	; AttackTarget
+	33	[-]	MOVE     	5 3
+	34	[-]	CALL     	4 2 1
+	35	[-]	JMP      	2	; to 38
+	36	[-]	GETGLOBAL	4 -13	; FindNewTarget
+	37	[-]	CALL     	4 1 1
+	38	[-]	LOADBOOL 	4 1 0
+	39	[-]	RETURN   	4 2
+	40	[-]	RETURN   	0 1
+constants (13) for 008EDB28:
+	1	"TurnOffAutoAttack"
+	2	"STOPREASON_MOVING"
+	3	"GetState"
+	4	"AI_HALTED"
+	5	"AI_RETREAT"
+	6	"GetCharVar"
+	7	"inStasis"
+	8	1
+	9	"GetOwner"
+	10	nil
+	11	"GetGoldRedirectTarget"
+	12	"AttackTarget"
+	13	"FindNewTarget"
+locals (0) for 008EDB28:
+upvalues (0) for 008EDB28:
+
+function <?:149,158> (13 instructions, 52 bytes at 008E9FA8)
+0 params, 4 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetLeashCounter
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; LEASH_COUNTER_THRESHOLD
+	4	[-]	LT       	0 0 1
+	5	[-]	JMP      	7	; to 13
+	6	[-]	GETGLOBAL	1 -3	; SetTimerDelay
+	7	[-]	LOADK    	2 -4	; "TimerFrustrationSearch"
+	8	[-]	GETGLOBAL	3 -5	; DELAY_BETWEEN_FRUSTRATION_SEARCH_TIME
+	9	[-]	CALL     	1 3 1
+	10	[-]	GETGLOBAL	1 -6	; ResetAndStartTimer
+	11	[-]	LOADK    	2 -4	; "TimerFrustrationSearch"
+	12	[-]	CALL     	1 2 1
+	13	[-]	RETURN   	0 1
+constants (6) for 008E9FA8:
+	1	"GetLeashCounter"
+	2	"LEASH_COUNTER_THRESHOLD"
+	3	"SetTimerDelay"
+	4	"TimerFrustrationSearch"
+	5	"DELAY_BETWEEN_FRUSTRATION_SEARCH_TIME"
+	6	"ResetAndStartTimer"
+locals (0) for 008E9FA8:
+upvalues (0) for 008E9FA8:
+
+function <?:163,186> (38 instructions, 152 bytes at 008EA068)
+1 param, 5 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetLeashCounter
+	2	[-]	CALL     	1 1 2
+	3	[-]	LT       	0 -2 1	; 0 -
+	4	[-]	JMP      	11	; to 16
+	5	[-]	GETGLOBAL	2 -3	; SetTimerDelay
+	6	[-]	LOADK    	3 -4	; "TimerFrustrationSearch"
+	7	[-]	GETGLOBAL	4 -5	; DELAY_BETWEEN_FRUSTRATION_SEARCH_TIME
+	8	[-]	CALL     	2 3 1
+	9	[-]	GETGLOBAL	2 -6	; StartTimer
+	10	[-]	LOADK    	3 -4	; "TimerFrustrationSearch"
+	11	[-]	CALL     	2 2 1
+	12	[-]	GETGLOBAL	2 -6	; StartTimer
+	13	[-]	LOADK    	3 -7	; "TimerAttack"
+	14	[-]	CALL     	2 2 1
+	15	[-]	JMP      	10	; to 26
+	16	[-]	GETGLOBAL	2 -3	; SetTimerDelay
+	17	[-]	LOADK    	3 -4	; "TimerFrustrationSearch"
+	18	[-]	GETGLOBAL	4 -8	; DEFAULT_FRUSTRATION_SEARCH_TIME
+	19	[-]	CALL     	2 3 1
+	20	[-]	GETGLOBAL	2 -9	; ResetAndStartTimer
+	21	[-]	LOADK    	3 -4	; "TimerFrustrationSearch"
+	22	[-]	CALL     	2 2 1
+	23	[-]	GETGLOBAL	2 -6	; StartTimer
+	24	[-]	LOADK    	3 -7	; "TimerAttack"
+	25	[-]	CALL     	2 2 1
+	26	[-]	EQ       	1 0 -10	; - nil
+	27	[-]	JMP      	10	; to 38
+	28	[-]	GETGLOBAL	2 -11	; OutOfCombatRegen
+	29	[-]	SELF     	2 2 -12	; "Stop"
+	30	[-]	CALL     	2 2 1
+	31	[-]	GETGLOBAL	2 -13	; SetStateAndCloseToTarget
+	32	[-]	GETGLOBAL	3 -14	; AI_ATTACK
+	33	[-]	MOVE     	4 0
+	34	[-]	CALL     	2 3 1
+	35	[-]	GETGLOBAL	2 -15	; SetRoamState
+	36	[-]	GETGLOBAL	3 -16	; HOSTILE
+	37	[-]	CALL     	2 2 1
+	38	[-]	RETURN   	0 1
+constants (16) for 008EA068:
+	1	"GetLeashCounter"
+	2	0
+	3	"SetTimerDelay"
+	4	"TimerFrustrationSearch"
+	5	"DELAY_BETWEEN_FRUSTRATION_SEARCH_TIME"
+	6	"StartTimer"
+	7	"TimerAttack"
+	8	"DEFAULT_FRUSTRATION_SEARCH_TIME"
+	9	"ResetAndStartTimer"
+	10	nil
+	11	"OutOfCombatRegen"
+	12	"Stop"
+	13	"SetStateAndCloseToTarget"
+	14	"AI_ATTACK"
+	15	"SetRoamState"
+	16	"HOSTILE"
+locals (0) for 008EA068:
+upvalues (0) for 008EA068:
+
+function <?:188,196> (19 instructions, 76 bytes at 008EE210)
+0 params, 2 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; StopTimer
+	2	[-]	LOADK    	1 -2	; "TimerFrustrationSearch"
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -3	; StartTimer
+	5	[-]	LOADK    	1 -4	; "TimerReturningHome"
+	6	[-]	CALL     	0 2 1
+	7	[-]	GETGLOBAL	0 -5	; SetGhosted
+	8	[-]	LOADBOOL 	1 1 0
+	9	[-]	CALL     	0 2 1
+	10	[-]	GETGLOBAL	0 -6	; SetStateAndMoveToLeashedPos
+	11	[-]	GETGLOBAL	1 -7	; AI_RETREAT
+	12	[-]	CALL     	0 2 1
+	13	[-]	GETGLOBAL	0 -8	; TurnOffAutoAttack
+	14	[-]	GETGLOBAL	1 -9	; STOPREASON_MOVING
+	15	[-]	CALL     	0 2 1
+	16	[-]	GETGLOBAL	0 -10	; OutOfCombatRegen
+	17	[-]	SELF     	0 0 -11	; "Start"
+	18	[-]	CALL     	0 2 1
+	19	[-]	RETURN   	0 1
+constants (11) for 008EE210:
+	1	"StopTimer"
+	2	"TimerFrustrationSearch"
+	3	"StartTimer"
+	4	"TimerReturningHome"
+	5	"SetGhosted"
+	6	"SetStateAndMoveToLeashedPos"
+	7	"AI_RETREAT"
+	8	"TurnOffAutoAttack"
+	9	"STOPREASON_MOVING"
+	10	"OutOfCombatRegen"
+	11	"Start"
+locals (0) for 008EE210:
+upvalues (0) for 008EE210:
+
+function <?:198,219> (67 instructions, 268 bytes at 008EE378)
+1 param, 10 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetLeashCounter
+	2	[-]	CALL     	1 1 2
+	3	[-]	ADD      	1 1 0
+	4	[-]	GETGLOBAL	2 -2	; SetLeashCounter
+	5	[-]	MOVE     	3 1
+	6	[-]	CALL     	2 2 1
+	7	[-]	LOADK    	2 -3	; 0
+	8	[-]	LT       	0 2 0
+	9	[-]	JMP      	13	; to 23
+	10	[-]	GETGLOBAL	3 -4	; AIScriptSpellBuffStackingAdd
+	11	[-]	GETGLOBAL	4 -5	; GetThis
+	12	[-]	CALL     	4 1 2
+	13	[-]	GETGLOBAL	5 -5	; GetThis
+	14	[-]	CALL     	5 1 2
+	15	[-]	LOADK    	6 -6	; "JungleFrustration"
+	16	[-]	LOADK    	7 -7	; 1
+	17	[-]	GETGLOBAL	8 -8	; LEASH_COUNTER_THRESHOLD
+	18	[-]	ADD      	8 8 -7	; - 1
+	19	[-]	LOADK    	9 -9	; 25000
+	20	[-]	CALL     	3 7 1
+	21	[-]	ADD      	2 2 -7	; - 1
+	22	[-]	JMP      	-15	; to 8
+	23	[-]	GETGLOBAL	3 -8	; LEASH_COUNTER_THRESHOLD
+	24	[-]	LT       	0 3 1
+	25	[-]	JMP      	34	; to 60
+	26	[-]	GETGLOBAL	3 -4	; AIScriptSpellBuffStackingAdd
+	27	[-]	GETGLOBAL	4 -5	; GetThis
+	28	[-]	CALL     	4 1 2
+	29	[-]	GETGLOBAL	5 -5	; GetThis
+	30	[-]	CALL     	5 1 2
+	31	[-]	LOADK    	6 -6	; "JungleFrustration"
+	32	[-]	LOADK    	7 -7	; 1
+	33	[-]	GETGLOBAL	8 -8	; LEASH_COUNTER_THRESHOLD
+	34	[-]	ADD      	8 8 -7	; - 1
+	35	[-]	LOADK    	9 -9	; 25000
+	36	[-]	CALL     	3 7 1
+	37	[-]	GETGLOBAL	3 -4	; AIScriptSpellBuffStackingAdd
+	38	[-]	GETGLOBAL	4 -5	; GetThis
+	39	[-]	CALL     	4 1 2
+	40	[-]	GETGLOBAL	5 -5	; GetThis
+	41	[-]	CALL     	5 1 2
+	42	[-]	LOADK    	6 -10	; "JungleFrustrationReturn"
+	43	[-]	LOADK    	7 -7	; 1
+	44	[-]	GETGLOBAL	8 -8	; LEASH_COUNTER_THRESHOLD
+	45	[-]	ADD      	8 8 -7	; - 1
+	46	[-]	LOADK    	9 -9	; 25000
+	47	[-]	CALL     	3 7 1
+	48	[-]	GETGLOBAL	3 -11	; AIScriptSpellBuffRemove
+	49	[-]	GETGLOBAL	4 -5	; GetThis
+	50	[-]	CALL     	4 1 2
+	51	[-]	LOADK    	5 -6	; "JungleFrustration"
+	52	[-]	CALL     	3 3 1
+	53	[-]	GETGLOBAL	3 -12	; SetCharVar
+	54	[-]	LOADK    	4 -13	; "StartBoostRegen"
+	55	[-]	LOADK    	5 -7	; 1
+	56	[-]	CALL     	3 3 1
+	57	[-]	GETGLOBAL	3 -14	; Retreat
+	58	[-]	CALL     	3 1 1
+	59	[-]	JMP      	7	; to 67
+	60	[-]	GETGLOBAL	3 -15	; SetTimerDelay
+	61	[-]	LOADK    	4 -16	; "TimerFrustrationSearch"
+	62	[-]	GETGLOBAL	5 -17	; DELAY_BETWEEN_FRUSTRATION_SEARCH_TIME
+	63	[-]	CALL     	3 3 1
+	64	[-]	GETGLOBAL	3 -18	; ResetTimer
+	65	[-]	LOADK    	4 -16	; "TimerFrustrationSearch"
+	66	[-]	CALL     	3 2 1
+	67	[-]	RETURN   	0 1
+constants (18) for 008EE378:
+	1	"GetLeashCounter"
+	2	"SetLeashCounter"
+	3	0
+	4	"AIScriptSpellBuffStackingAdd"
+	5	"GetThis"
+	6	"JungleFrustration"
+	7	1
+	8	"LEASH_COUNTER_THRESHOLD"
+	9	25000
+	10	"JungleFrustrationReturn"
+	11	"AIScriptSpellBuffRemove"
+	12	"SetCharVar"
+	13	"StartBoostRegen"
+	14	"Retreat"
+	15	"SetTimerDelay"
+	16	"TimerFrustrationSearch"
+	17	"DELAY_BETWEEN_FRUSTRATION_SEARCH_TIME"
+	18	"ResetTimer"
+locals (0) for 008EE378:
+upvalues (0) for 008EE378:
+
+function <?:221,238> (18 instructions, 72 bytes at 008EE610)
+2 params, 6 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; GetCampLeashPos
+	2	[-]	CALL     	2 1 2
+	3	[-]	GETGLOBAL	3 -2	; WalkDistanceBetweenObjectCenterAndPoint
+	4	[-]	MOVE     	4 0
+	5	[-]	MOVE     	5 2
+	6	[-]	CALL     	3 3 2
+	7	[-]	EQ       	0 0 -3	; - nil
+	8	[-]	JMP      	2	; to 11
+	9	[-]	LOADBOOL 	4 0 0
+	10	[-]	RETURN   	4 2
+	11	[-]	LT       	0 1 3
+	12	[-]	JMP      	3	; to 16
+	13	[-]	LOADBOOL 	4 0 0
+	14	[-]	RETURN   	4 2
+	15	[-]	JMP      	2	; to 18
+	16	[-]	LOADBOOL 	4 1 0
+	17	[-]	RETURN   	4 2
+	18	[-]	RETURN   	0 1
+constants (3) for 008EE610:
+	1	"GetCampLeashPos"
+	2	"WalkDistanceBetweenObjectCenterAndPoint"
+	3	nil
+locals (0) for 008EE610:
+upvalues (0) for 008EE610:
+
+function <?:240,282> (85 instructions, 340 bytes at 008EE668)
+2 params, 11 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; MONSTER_ANY_INCLUDED_TAG
+	2	[-]	GETGLOBAL	3 -2	; MONSTER_NONEPIC_EXCLUDED_TAG
+	3	[-]	GETGLOBAL	4 -3	; HasUnitTag
+	4	[-]	GETGLOBAL	5 -4	; GetThis
+	5	[-]	CALL     	5 1 2
+	6	[-]	NEWTABLE 	6 1 0
+	7	[-]	GETGLOBAL	7 -5	; UnitTagIndicies
+	8	[-]	GETTABLE 	7 7 -6	; "Monster_Epic"
+	9	[-]	SETLIST  	6 1 1	; 1
+	10	[-]	CALL     	4 3 2
+	11	[-]	TEST     	4 0 0
+	12	[-]	JMP      	1	; to 14
+	13	[-]	GETGLOBAL	3 -7	; MONSTER_EPIC_EXCLUDED_TAG
+	14	[-]	GETGLOBAL	4 -8	; GetCampLeashRadius
+	15	[-]	CALL     	4 1 2
+	16	[-]	MUL      	4 4 -9	; - 1.1
+	17	[-]	GETGLOBAL	5 -10	; FindTargetWithFilter
+	18	[-]	GETGLOBAL	6 -11	; AGGRESSION_FIRST_SWEEP_RANGE
+	19	[-]	MOVE     	7 2
+	20	[-]	MOVE     	8 3
+	21	[-]	CALL     	5 4 2
+	22	[-]	EQ       	1 5 -12	; - nil
+	23	[-]	JMP      	6	; to 30
+	24	[-]	GETGLOBAL	6 -13	; TargetWithinWalkBounds
+	25	[-]	MOVE     	7 5
+	26	[-]	MOVE     	8 4
+	27	[-]	CALL     	6 3 2
+	28	[-]	TEST     	6 0 1
+	29	[-]	JMP      	9	; to 39
+	30	[-]	GETGLOBAL	6 -10	; FindTargetWithFilter
+	31	[-]	GETGLOBAL	7 -8	; GetCampLeashRadius
+	32	[-]	CALL     	7 1 2
+	33	[-]	GETGLOBAL	8 -14	; OUTER_RANGE_BOUND
+	34	[-]	ADD      	7 7 8
+	35	[-]	MOVE     	8 2
+	36	[-]	MOVE     	9 3
+	37	[-]	CALL     	6 4 2
+	38	[-]	MOVE     	5 6
+	39	[-]	EQ       	1 5 -12	; - nil
+	40	[-]	JMP      	6	; to 47
+	41	[-]	GETGLOBAL	6 -13	; TargetWithinWalkBounds
+	42	[-]	MOVE     	7 5
+	43	[-]	MOVE     	8 4
+	44	[-]	CALL     	6 3 2
+	45	[-]	TEST     	6 0 1
+	46	[-]	JMP      	17	; to 64
+	47	[-]	GETGLOBAL	6 -15	; FindTargetNearPositionWithFilter
+	48	[-]	MOVE     	7 0
+	49	[-]	GETGLOBAL	8 -8	; GetCampLeashRadius
+	50	[-]	CALL     	8 1 2
+	51	[-]	MOVE     	9 2
+	52	[-]	MOVE     	10 3
+	53	[-]	CALL     	6 5 2
+	54	[-]	MOVE     	5 6
+	55	[-]	EQ       	1 5 -12	; - nil
+	56	[-]	JMP      	6	; to 63
+	57	[-]	GETGLOBAL	6 -13	; TargetWithinWalkBounds
+	58	[-]	MOVE     	7 5
+	59	[-]	MOVE     	8 4
+	60	[-]	CALL     	6 3 2
+	61	[-]	TEST     	6 0 1
+	62	[-]	JMP      	1	; to 64
+	63	[-]	MOVE     	5 1
+	64	[-]	EQ       	1 5 -12	; - nil
+	65	[-]	JMP      	6	; to 72
+	66	[-]	GETGLOBAL	6 -13	; TargetWithinWalkBounds
+	67	[-]	MOVE     	7 5
+	68	[-]	MOVE     	8 4
+	69	[-]	CALL     	6 3 2
+	70	[-]	TEST     	6 0 1
+	71	[-]	JMP      	12	; to 84
+	72	[-]	LOADNIL  	5 5
+	73	[-]	GETGLOBAL	6 -10	; FindTargetWithFilter
+	74	[-]	GETGLOBAL	7 -8	; GetCampLeashRadius
+	75	[-]	CALL     	7 1 2
+	76	[-]	GETGLOBAL	8 -14	; OUTER_RANGE_BOUND
+	77	[-]	ADD      	7 7 8
+	78	[-]	MOVE     	8 2
+	79	[-]	MOVE     	9 3
+	80	[-]	CALL     	6 4 2
+	81	[-]	MOVE     	5 6
+	82	[-]	RETURN   	5 2
+	83	[-]	JMP      	1	; to 85
+	84	[-]	RETURN   	5 2
+	85	[-]	RETURN   	0 1
+constants (15) for 008EE668:
+	1	"MONSTER_ANY_INCLUDED_TAG"
+	2	"MONSTER_NONEPIC_EXCLUDED_TAG"
+	3	"HasUnitTag"
+	4	"GetThis"
+	5	"UnitTagIndicies"
+	6	"Monster_Epic"
+	7	"MONSTER_EPIC_EXCLUDED_TAG"
+	8	"GetCampLeashRadius"
+	9	1.1
+	10	"FindTargetWithFilter"
+	11	"AGGRESSION_FIRST_SWEEP_RANGE"
+	12	nil
+	13	"TargetWithinWalkBounds"
+	14	"OUTER_RANGE_BOUND"
+	15	"FindTargetNearPositionWithFilter"
+locals (0) for 008EE668:
+upvalues (0) for 008EE668:
+
+function <?:284,287> (3 instructions, 12 bytes at 008EE918)
+1 param, 2 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetState
+	2	[-]	CALL     	1 1 2
+	3	[-]	RETURN   	0 1
+constants (1) for 008EE918:
+	1	"GetState"
+locals (0) for 008EE918:
+upvalues (0) for 008EE918:
+
+function <?:290,379> (175 instructions, 700 bytes at 008EE970)
+1 param, 16 slots, 0 upvalues, 0 locals, 40 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; IsDead
+	2	[-]	CALL     	1 1 2
+	3	[-]	TEST     	1 0 0
+	4	[-]	JMP      	1	; to 6
+	5	[-]	RETURN   	0 1
+	6	[-]	GETGLOBAL	1 -2	; MONSTER_ANY_INCLUDED_TAG
+	7	[-]	GETGLOBAL	2 -3	; MONSTER_NONEPIC_EXCLUDED_TAG
+	8	[-]	GETGLOBAL	3 -4	; HasUnitTag
+	9	[-]	GETGLOBAL	4 -5	; GetThis
+	10	[-]	CALL     	4 1 2
+	11	[-]	NEWTABLE 	5 1 0
+	12	[-]	GETGLOBAL	6 -6	; UnitTagIndicies
+	13	[-]	GETTABLE 	6 6 -7	; "Monster_Epic"
+	14	[-]	SETLIST  	5 1 1	; 1
+	15	[-]	CALL     	3 3 2
+	16	[-]	TEST     	3 0 0
+	17	[-]	JMP      	1	; to 19
+	18	[-]	GETGLOBAL	2 -8	; MONSTER_EPIC_EXCLUDED_TAG
+	19	[-]	GETGLOBAL	3 -9	; GetMyPos
+	20	[-]	CALL     	3 1 2
+	21	[-]	GETGLOBAL	4 -10	; GetState
+	22	[-]	CALL     	4 1 2
+	23	[-]	GETGLOBAL	5 -11	; GetRoamState
+	24	[-]	CALL     	5 1 2
+	25	[-]	GETGLOBAL	6 -12	; INACTIVE
+	26	[-]	EQ       	0 5 6
+	27	[-]	JMP      	44	; to 72
+	28	[-]	GETGLOBAL	5 -13	; AI_RETREAT
+	29	[-]	EQ       	1 4 5
+	30	[-]	JMP      	41	; to 72
+	31	[-]	GETGLOBAL	5 -14	; AI_TAUNTED
+	32	[-]	EQ       	1 4 5
+	33	[-]	JMP      	38	; to 72
+	34	[-]	GETGLOBAL	5 -15	; AI_BERSERK
+	35	[-]	EQ       	1 4 5
+	36	[-]	JMP      	35	; to 72
+	37	[-]	GETGLOBAL	5 -16	; AI_FEARED
+	38	[-]	EQ       	1 4 5
+	39	[-]	JMP      	32	; to 72
+	40	[-]	GETGLOBAL	5 -17	; AI_FLEEING
+	41	[-]	EQ       	1 4 5
+	42	[-]	JMP      	29	; to 72
+	43	[-]	GETGLOBAL	5 -18	; GetMaxHP
+	44	[-]	CALL     	5 1 2
+	45	[-]	GETGLOBAL	6 -19	; GetHP
+	46	[-]	CALL     	6 1 2
+	47	[-]	GETGLOBAL	7 -20	; GetLeashCounter
+	48	[-]	CALL     	7 1 2
+	49	[-]	GETGLOBAL	8 -4	; HasUnitTag
+	50	[-]	MOVE     	9 0
+	51	[-]	MOVE     	10 1
+	52	[-]	CALL     	8 3 2
+	53	[-]	EQ       	0 8 -21	; - true
+	54	[-]	JMP      	13	; to 68
+	55	[-]	GETGLOBAL	8 -4	; HasUnitTag
+	56	[-]	MOVE     	9 0
+	57	[-]	MOVE     	10 2
+	58	[-]	CALL     	8 3 2
+	59	[-]	EQ       	0 8 -22	; - false
+	60	[-]	JMP      	7	; to 68
+	61	[-]	GETGLOBAL	8 -23	; LEASH_COUNTER_THRESHOLD
+	62	[-]	LT       	0 7 8
+	63	[-]	JMP      	4	; to 68
+	64	[-]	GETGLOBAL	8 -24	; AttackTarget
+	65	[-]	MOVE     	9 0
+	66	[-]	CALL     	8 2 1
+	67	[-]	JMP      	107	; to 175
+	68	[-]	GETGLOBAL	8 -25	; OutOfCombatRegen
+	69	[-]	SELF     	8 8 -26	; "Start"
+	70	[-]	CALL     	8 2 1
+	71	[-]	JMP      	103	; to 175
+	72	[-]	GETGLOBAL	5 -11	; GetRoamState
+	73	[-]	CALL     	5 1 2
+	74	[-]	GETGLOBAL	6 -27	; HOSTILE
+	75	[-]	EQ       	0 5 6
+	76	[-]	JMP      	98	; to 175
+	77	[-]	GETGLOBAL	5 -28	; AI_ATTACK
+	78	[-]	EQ       	0 4 5
+	79	[-]	JMP      	95	; to 175
+	80	[-]	GETGLOBAL	5 -29	; IsValidEnemyWithFilter
+	81	[-]	MOVE     	6 0
+	82	[-]	MOVE     	7 1
+	83	[-]	MOVE     	8 2
+	84	[-]	CALL     	5 4 2
+	85	[-]	TEST     	5 0 0
+	86	[-]	JMP      	88	; to 175
+	87	[-]	GETGLOBAL	5 -31	; GetTarget
+	88	[-]	CALL     	5 1 2
+	89	[-]	SETGLOBAL	5 -30	; target
+	90	[-]	GETGLOBAL	5 -30	; target
+	91	[-]	EQ       	1 5 -32	; - nil
+	92	[-]	JMP      	55	; to 148
+	93	[-]	GETGLOBAL	5 -30	; target
+	94	[-]	EQ       	1 5 0
+	95	[-]	JMP      	52	; to 148
+	96	[-]	GETGLOBAL	5 -9	; GetMyPos
+	97	[-]	CALL     	5 1 2
+	98	[-]	GETGLOBAL	6 -25	; OutOfCombatRegen
+	99	[-]	SELF     	6 6 -33	; "Stop"
+	100	[-]	CALL     	6 2 1
+	101	[-]	GETGLOBAL	6 -34	; DistanceBetweenObjectCenterAndPoint
+	102	[-]	GETGLOBAL	7 -30	; target
+	103	[-]	MOVE     	8 5
+	104	[-]	CALL     	6 3 2
+	105	[-]	GETGLOBAL	7 -35	; GetCampLeashPos
+	106	[-]	CALL     	7 1 2
+	107	[-]	GETGLOBAL	8 -36	; WalkDistanceBetweenObjectCenterAndPoint
+	108	[-]	GETGLOBAL	9 -30	; target
+	109	[-]	MOVE     	10 7
+	110	[-]	CALL     	8 3 2
+	111	[-]	GETGLOBAL	9 -37	; GetCampLeashRadius
+	112	[-]	CALL     	9 1 2
+	113	[-]	GETGLOBAL	10 -34	; DistanceBetweenObjectCenterAndPoint
+	114	[-]	MOVE     	11 0
+	115	[-]	MOVE     	12 5
+	116	[-]	CALL     	10 3 2
+	117	[-]	GETGLOBAL	11 -36	; WalkDistanceBetweenObjectCenterAndPoint
+	118	[-]	MOVE     	12 0
+	119	[-]	MOVE     	13 7
+	120	[-]	CALL     	11 3 2
+	121	[-]	GETGLOBAL	12 -37	; GetCampLeashRadius
+	122	[-]	CALL     	12 1 2
+	123	[-]	MUL      	12 12 -38	; - 1.25
+	124	[-]	GETGLOBAL	13 -39	; CURRENT_TARGET_TO_ATTACKER_SWITCH_RANGE
+	125	[-]	ADD      	13 10 13
+	126	[-]	LT       	0 13 6
+	127	[-]	JMP      	10	; to 138
+	128	[-]	GETGLOBAL	13 -40	; TargetWithinWalkBounds
+	129	[-]	MOVE     	14 0
+	130	[-]	MOVE     	15 12
+	131	[-]	CALL     	13 3 2
+	132	[-]	TEST     	13 0 0
+	133	[-]	JMP      	41	; to 175
+	134	[-]	GETGLOBAL	13 -24	; AttackTarget
+	135	[-]	MOVE     	14 0
+	136	[-]	CALL     	13 2 1
+	137	[-]	JMP      	37	; to 175
+	138	[-]	GETGLOBAL	13 -40	; TargetWithinWalkBounds
+	139	[-]	GETGLOBAL	14 -30	; target
+	140	[-]	MOVE     	15 12
+	141	[-]	CALL     	13 3 2
+	142	[-]	TEST     	13 0 1
+	143	[-]	JMP      	31	; to 175
+	144	[-]	GETGLOBAL	13 -24	; AttackTarget
+	145	[-]	MOVE     	14 0
+	146	[-]	CALL     	13 2 1
+	147	[-]	JMP      	27	; to 175
+	148	[-]	GETGLOBAL	5 -30	; target
+	149	[-]	EQ       	1 5 -32	; - nil
+	150	[-]	JMP      	14	; to 165
+	151	[-]	GETGLOBAL	5 -28	; AI_ATTACK
+	152	[-]	EQ       	0 4 5
+	153	[-]	JMP      	11	; to 165
+	154	[-]	GETGLOBAL	5 -29	; IsValidEnemyWithFilter
+	155	[-]	MOVE     	6 0
+	156	[-]	MOVE     	7 1
+	157	[-]	MOVE     	8 2
+	158	[-]	CALL     	5 4 2
+	159	[-]	TEST     	5 0 0
+	160	[-]	JMP      	4	; to 165
+	161	[-]	GETGLOBAL	5 -24	; AttackTarget
+	162	[-]	MOVE     	6 0
+	163	[-]	CALL     	5 2 1
+	164	[-]	JMP      	10	; to 175
+	165	[-]	GETGLOBAL	5 -29	; IsValidEnemyWithFilter
+	166	[-]	MOVE     	6 0
+	167	[-]	MOVE     	7 1
+	168	[-]	MOVE     	8 2
+	169	[-]	CALL     	5 4 2
+	170	[-]	TEST     	5 0 0
+	171	[-]	JMP      	3	; to 175
+	172	[-]	GETGLOBAL	5 -24	; AttackTarget
+	173	[-]	MOVE     	6 0
+	174	[-]	CALL     	5 2 1
+	175	[-]	RETURN   	0 1
+constants (40) for 008EE970:
+	1	"IsDead"
+	2	"MONSTER_ANY_INCLUDED_TAG"
+	3	"MONSTER_NONEPIC_EXCLUDED_TAG"
+	4	"HasUnitTag"
+	5	"GetThis"
+	6	"UnitTagIndicies"
+	7	"Monster_Epic"
+	8	"MONSTER_EPIC_EXCLUDED_TAG"
+	9	"GetMyPos"
+	10	"GetState"
+	11	"GetRoamState"
+	12	"INACTIVE"
+	13	"AI_RETREAT"
+	14	"AI_TAUNTED"
+	15	"AI_BERSERK"
+	16	"AI_FEARED"
+	17	"AI_FLEEING"
+	18	"GetMaxHP"
+	19	"GetHP"
+	20	"GetLeashCounter"
+	21	true
+	22	false
+	23	"LEASH_COUNTER_THRESHOLD"
+	24	"AttackTarget"
+	25	"OutOfCombatRegen"
+	26	"Start"
+	27	"HOSTILE"
+	28	"AI_ATTACK"
+	29	"IsValidEnemyWithFilter"
+	30	"target"
+	31	"GetTarget"
+	32	nil
+	33	"Stop"
+	34	"DistanceBetweenObjectCenterAndPoint"
+	35	"GetCampLeashPos"
+	36	"WalkDistanceBetweenObjectCenterAndPoint"
+	37	"GetCampLeashRadius"
+	38	1.25
+	39	"CURRENT_TARGET_TO_ATTACKER_SWITCH_RANGE"
+	40	"TargetWithinWalkBounds"
+locals (0) for 008EE970:
+upvalues (0) for 008EE970:
+
+function <?:383,474> (104 instructions, 416 bytes at 008EEF18)
+0 params, 14 slots, 0 upvalues, 0 locals, 29 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; GetRoamState
+	4	[-]	CALL     	1 1 2
+	5	[-]	GETGLOBAL	2 -3	; GetCharVar
+	6	[-]	LOADK    	3 -4	; "WillBeFrustrated"
+	7	[-]	CALL     	2 2 2
+	8	[-]	GETGLOBAL	3 -5	; INACTIVE
+	9	[-]	EQ       	1 1 3
+	10	[-]	JMP      	11	; to 22
+	11	[-]	GETGLOBAL	3 -6	; RUN_IN_FEAR
+	12	[-]	EQ       	1 1 3
+	13	[-]	JMP      	8	; to 22
+	14	[-]	GETGLOBAL	3 -7	; AI_HALTED
+	15	[-]	EQ       	1 0 3
+	16	[-]	JMP      	5	; to 22
+	17	[-]	GETGLOBAL	3 -3	; GetCharVar
+	18	[-]	LOADK    	4 -8	; "inStasis"
+	19	[-]	CALL     	3 2 2
+	20	[-]	LT       	0 -9 3	; 1 -
+	21	[-]	JMP      	1	; to 23
+	22	[-]	RETURN   	0 1
+	23	[-]	GETGLOBAL	3 -10	; SetTimerDelay
+	24	[-]	LOADK    	4 -11	; "TimerFrustrationSearch"
+	25	[-]	GETGLOBAL	5 -12	; DEFAULT_FRUSTRATION_SEARCH_TIME
+	26	[-]	CALL     	3 3 1
+	27	[-]	GETGLOBAL	3 -13	; GetLeashCounter
+	28	[-]	CALL     	3 1 2
+	29	[-]	LOADBOOL 	4 0 0
+	30	[-]	LE       	0 -9 2	; 1 -
+	31	[-]	JMP      	5	; to 37
+	32	[-]	LOADBOOL 	4 1 0
+	33	[-]	GETGLOBAL	5 -14	; SetCharVar
+	34	[-]	LOADK    	6 -4	; "WillBeFrustrated"
+	35	[-]	LOADK    	7 -15	; 0
+	36	[-]	CALL     	5 3 1
+	37	[-]	GETGLOBAL	5 -16	; GetTarget
+	38	[-]	CALL     	5 1 2
+	39	[-]	GETGLOBAL	6 -17	; GetCampLeashRadius
+	40	[-]	CALL     	6 1 2
+	41	[-]	GETGLOBAL	7 -18	; GetMyLeashedPos
+	42	[-]	CALL     	7 1 2
+	43	[-]	GETGLOBAL	8 -19	; GetCampLeashPos
+	44	[-]	CALL     	8 1 2
+	45	[-]	GETGLOBAL	9 -20	; GetDistToLeashedPos
+	46	[-]	CALL     	9 1 2
+	47	[-]	ADD      	10 6 -9	; - 1
+	48	[-]	EQ       	1 5 -21	; - nil
+	49	[-]	JMP      	6	; to 56
+	50	[-]	GETGLOBAL	11 -22	; WalkDistanceBetweenObjectCenterAndPoint
+	51	[-]	MOVE     	12 5
+	52	[-]	MOVE     	13 8
+	53	[-]	CALL     	11 3 2
+	54	[-]	MOVE     	10 11
+	55	[-]	JMP      	8	; to 64
+	56	[-]	GETGLOBAL	11 -23	; FindNewTarget
+	57	[-]	CALL     	11 1 1
+	58	[-]	GETGLOBAL	11 -16	; GetTarget
+	59	[-]	CALL     	11 1 2
+	60	[-]	MOVE     	5 11
+	61	[-]	EQ       	0 5 -21	; - nil
+	62	[-]	JMP      	1	; to 64
+	63	[-]	LOADBOOL 	4 1 0
+	64	[-]	GETGLOBAL	11 -13	; GetLeashCounter
+	65	[-]	CALL     	11 1 2
+	66	[-]	GETGLOBAL	12 -24	; LEASH_PROTECTION_BARRIER
+	67	[-]	SUB      	12 6 12
+	68	[-]	LT       	0 12 9
+	69	[-]	JMP      	16	; to 86
+	70	[-]	LT       	0 9 6
+	71	[-]	JMP      	14	; to 86
+	72	[-]	LT       	0 6 10
+	73	[-]	JMP      	12	; to 86
+	74	[-]	GETGLOBAL	12 -25	; AI_RETREAT
+	75	[-]	EQ       	1 0 12
+	76	[-]	JMP      	9	; to 86
+	77	[-]	GETGLOBAL	12 -26	; LEASH_COUNTER_THRESHOLD
+	78	[-]	LT       	0 11 12
+	79	[-]	JMP      	6	; to 86
+	80	[-]	MOVE     	12 5
+	81	[-]	GETGLOBAL	13 -23	; FindNewTarget
+	82	[-]	CALL     	13 1 1
+	83	[-]	GETGLOBAL	13 -16	; GetTarget
+	84	[-]	CALL     	13 1 2
+	85	[-]	MOVE     	5 13
+	86	[-]	GETGLOBAL	12 -27	; OUTER_RANGE_BOUND
+	87	[-]	ADD      	12 6 12
+	88	[-]	LT       	0 12 10
+	89	[-]	JMP      	4	; to 94
+	90	[-]	GETGLOBAL	12 -25	; AI_RETREAT
+	91	[-]	EQ       	1 0 12
+	92	[-]	JMP      	1	; to 94
+	93	[-]	LOADBOOL 	4 1 0
+	94	[-]	GETGLOBAL	12 -27	; OUTER_RANGE_BOUND
+	95	[-]	ADD      	12 6 12
+	96	[-]	LT       	0 12 9
+	97	[-]	JMP      	1	; to 99
+	98	[-]	LOADBOOL 	4 1 0
+	99	[-]	EQ       	0 4 -28	; - true
+	100	[-]	JMP      	3	; to 104
+	101	[-]	GETGLOBAL	12 -29	; IncreaseFrustration
+	102	[-]	LOADK    	13 -9	; 1
+	103	[-]	CALL     	12 2 1
+	104	[-]	RETURN   	0 1
+constants (29) for 008EEF18:
+	1	"GetState"
+	2	"GetRoamState"
+	3	"GetCharVar"
+	4	"WillBeFrustrated"
+	5	"INACTIVE"
+	6	"RUN_IN_FEAR"
+	7	"AI_HALTED"
+	8	"inStasis"
+	9	1
+	10	"SetTimerDelay"
+	11	"TimerFrustrationSearch"
+	12	"DEFAULT_FRUSTRATION_SEARCH_TIME"
+	13	"GetLeashCounter"
+	14	"SetCharVar"
+	15	0
+	16	"GetTarget"
+	17	"GetCampLeashRadius"
+	18	"GetMyLeashedPos"
+	19	"GetCampLeashPos"
+	20	"GetDistToLeashedPos"
+	21	nil
+	22	"WalkDistanceBetweenObjectCenterAndPoint"
+	23	"FindNewTarget"
+	24	"LEASH_PROTECTION_BARRIER"
+	25	"AI_RETREAT"
+	26	"LEASH_COUNTER_THRESHOLD"
+	27	"OUTER_RANGE_BOUND"
+	28	true
+	29	"IncreaseFrustration"
+locals (0) for 008EEF18:
+upvalues (0) for 008EEF18:
+
+function <?:476,510> (90 instructions, 360 bytes at 008EF8F0)
+0 params, 12 slots, 0 upvalues, 0 locals, 38 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; GetRoamState
+	4	[-]	CALL     	1 1 2
+	5	[-]	GETGLOBAL	2 -3	; INACTIVE
+	6	[-]	EQ       	1 1 2
+	7	[-]	JMP      	11	; to 19
+	8	[-]	GETGLOBAL	2 -4	; RUN_IN_FEAR
+	9	[-]	EQ       	1 1 2
+	10	[-]	JMP      	8	; to 19
+	11	[-]	GETGLOBAL	2 -5	; AI_HALTED
+	12	[-]	EQ       	1 0 2
+	13	[-]	JMP      	5	; to 19
+	14	[-]	GETGLOBAL	2 -6	; GetCharVar
+	15	[-]	LOADK    	3 -7	; "inStasis"
+	16	[-]	CALL     	2 2 2
+	17	[-]	LT       	0 -8 2	; 1 -
+	18	[-]	JMP      	1	; to 20
+	19	[-]	RETURN   	0 1
+	20	[-]	GETGLOBAL	2 -9	; GetMaxHP
+	21	[-]	CALL     	2 1 2
+	22	[-]	GETGLOBAL	3 -10	; GetHP
+	23	[-]	CALL     	3 1 2
+	24	[-]	GETGLOBAL	4 -11	; GetDistToRetreat
+	25	[-]	CALL     	4 1 2
+	26	[-]	GETGLOBAL	5 -12	; SetCharVar
+	27	[-]	LOADK    	6 -13	; "DistanceToHome"
+	28	[-]	MOVE     	7 4
+	29	[-]	CALL     	5 3 1
+	30	[-]	GETGLOBAL	5 -14	; SetGhosted
+	31	[-]	LOADBOOL 	6 1 0
+	32	[-]	CALL     	5 2 1
+	33	[-]	GETGLOBAL	5 -15	; AI_RETREAT
+	34	[-]	EQ       	0 0 5
+	35	[-]	JMP      	49	; to 85
+	36	[-]	GETGLOBAL	5 -16	; IsMovementStopped
+	37	[-]	CALL     	5 1 2
+	38	[-]	EQ       	0 5 -17	; - true
+	39	[-]	JMP      	45	; to 85
+	40	[-]	LT       	0 4 -18	; - 25
+	41	[-]	JMP      	43	; to 85
+	42	[-]	GETGLOBAL	5 -19	; StopTimer
+	43	[-]	LOADK    	6 -20	; "TimerReturningHome"
+	44	[-]	CALL     	5 2 1
+	45	[-]	GETGLOBAL	5 -21	; SetLeashOrientation
+	46	[-]	CALL     	5 1 1
+	47	[-]	GETGLOBAL	5 -22	; AIScriptSpellBuffRemove
+	48	[-]	GETGLOBAL	6 -23	; GetThis
+	49	[-]	CALL     	6 1 2
+	50	[-]	LOADK    	7 -24	; "JungleFrustration"
+	51	[-]	CALL     	5 3 1
+	52	[-]	GETGLOBAL	5 -22	; AIScriptSpellBuffRemove
+	53	[-]	GETGLOBAL	6 -23	; GetThis
+	54	[-]	CALL     	6 1 2
+	55	[-]	LOADK    	7 -25	; "JungleFrustrationReturn"
+	56	[-]	CALL     	5 3 1
+	57	[-]	GETGLOBAL	5 -26	; SetLeashCounter
+	58	[-]	LOADK    	6 -27	; 0
+	59	[-]	CALL     	5 2 1
+	60	[-]	GETGLOBAL	5 -28	; AIScriptSpellBuffStackingAdd
+	61	[-]	GETGLOBAL	6 -23	; GetThis
+	62	[-]	CALL     	6 1 2
+	63	[-]	GETGLOBAL	7 -23	; GetThis
+	64	[-]	CALL     	7 1 2
+	65	[-]	LOADK    	8 -29	; "JungleFrustrationReset"
+	66	[-]	LOADK    	9 -27	; 0
+	67	[-]	LOADK    	10 -8	; 1
+	68	[-]	LOADK    	11 -30	; 25000
+	69	[-]	CALL     	5 7 1
+	70	[-]	GETGLOBAL	5 -14	; SetGhosted
+	71	[-]	LOADBOOL 	6 0 0
+	72	[-]	CALL     	5 2 1
+	73	[-]	GETGLOBAL	5 -31	; SetState
+	74	[-]	GETGLOBAL	6 -32	; AI_ATTACK
+	75	[-]	CALL     	5 2 1
+	76	[-]	GETGLOBAL	5 -33	; SetRoamState
+	77	[-]	GETGLOBAL	6 -34	; GetOriginalState
+	78	[-]	CALL     	6 1 0
+	79	[-]	CALL     	5 0 1
+	80	[-]	GETGLOBAL	5 -35	; SetTimerDelay
+	81	[-]	LOADK    	6 -36	; "TimerFrustrationSearch"
+	82	[-]	GETGLOBAL	7 -37	; DEFAULT_FRUSTRATION_SEARCH_TIME
+	83	[-]	CALL     	5 3 1
+	84	[-]	JMP      	5	; to 90
+	85	[-]	LE       	0 -18 4	; 25 -
+	86	[-]	JMP      	3	; to 90
+	87	[-]	GETGLOBAL	5 -38	; SetStateAndMoveToLeashedPos
+	88	[-]	GETGLOBAL	6 -15	; AI_RETREAT
+	89	[-]	CALL     	5 2 1
+	90	[-]	RETURN   	0 1
+constants (38) for 008EF8F0:
+	1	"GetState"
+	2	"GetRoamState"
+	3	"INACTIVE"
+	4	"RUN_IN_FEAR"
+	5	"AI_HALTED"
+	6	"GetCharVar"
+	7	"inStasis"
+	8	1
+	9	"GetMaxHP"
+	10	"GetHP"
+	11	"GetDistToRetreat"
+	12	"SetCharVar"
+	13	"DistanceToHome"
+	14	"SetGhosted"
+	15	"AI_RETREAT"
+	16	"IsMovementStopped"
+	17	true
+	18	25
+	19	"StopTimer"
+	20	"TimerReturningHome"
+	21	"SetLeashOrientation"
+	22	"AIScriptSpellBuffRemove"
+	23	"GetThis"
+	24	"JungleFrustration"
+	25	"JungleFrustrationReturn"
+	26	"SetLeashCounter"
+	27	0
+	28	"AIScriptSpellBuffStackingAdd"
+	29	"JungleFrustrationReset"
+	30	25000
+	31	"SetState"
+	32	"AI_ATTACK"
+	33	"SetRoamState"
+	34	"GetOriginalState"
+	35	"SetTimerDelay"
+	36	"TimerFrustrationSearch"
+	37	"DEFAULT_FRUSTRATION_SEARCH_TIME"
+	38	"SetStateAndMoveToLeashedPos"
+locals (0) for 008EF8F0:
+upvalues (0) for 008EF8F0:
+
+function <?:513,558> (74 instructions, 296 bytes at 008EF370)
+0 params, 4 slots, 0 upvalues, 0 locals, 26 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; GetCharVar
+	8	[-]	LOADK    	2 -4	; "inStasis"
+	9	[-]	CALL     	1 2 2
+	10	[-]	LT       	0 -5 1	; 1 -
+	11	[-]	JMP      	1	; to 13
+	12	[-]	RETURN   	0 1
+	13	[-]	GETGLOBAL	1 -6	; GetRoamState
+	14	[-]	CALL     	1 1 2
+	15	[-]	GETGLOBAL	2 -7	; INACTIVE
+	16	[-]	EQ       	1 1 2
+	17	[-]	JMP      	8	; to 26
+	18	[-]	GETGLOBAL	1 -6	; GetRoamState
+	19	[-]	CALL     	1 1 2
+	20	[-]	GETGLOBAL	2 -8	; RUN_IN_FEAR
+	21	[-]	EQ       	1 1 2
+	22	[-]	JMP      	3	; to 26
+	23	[-]	GETGLOBAL	1 -9	; AI_RETREAT
+	24	[-]	EQ       	0 0 1
+	25	[-]	JMP      	1	; to 27
+	26	[-]	RETURN   	0 1
+	27	[-]	GETGLOBAL	1 -10	; AI_ATTACK
+	28	[-]	EQ       	1 0 1
+	29	[-]	JMP      	6	; to 36
+	30	[-]	GETGLOBAL	1 -11	; AI_TAUNTED
+	31	[-]	EQ       	1 0 1
+	32	[-]	JMP      	3	; to 36
+	33	[-]	GETGLOBAL	1 -12	; AI_BERSERK
+	34	[-]	EQ       	0 0 1
+	35	[-]	JMP      	38	; to 74
+	36	[-]	GETGLOBAL	1 -13	; StartTimer
+	37	[-]	LOADK    	2 -14	; "TimerFrustrationSearch"
+	38	[-]	CALL     	1 2 1
+	39	[-]	GETGLOBAL	1 -15	; GetTarget
+	40	[-]	CALL     	1 1 2
+	41	[-]	EQ       	1 1 -16	; - nil
+	42	[-]	JMP      	23	; to 66
+	43	[-]	GETGLOBAL	2 -17	; TargetInAttackRange
+	44	[-]	CALL     	2 1 2
+	45	[-]	TEST     	2 0 0
+	46	[-]	JMP      	4	; to 51
+	47	[-]	GETGLOBAL	2 -18	; TurnOnAutoAttack
+	48	[-]	MOVE     	3 1
+	49	[-]	CALL     	2 2 1
+	50	[-]	JMP      	7	; to 58
+	51	[-]	GETGLOBAL	2 -19	; TargetInCancelAttackRange
+	52	[-]	CALL     	2 1 2
+	53	[-]	EQ       	0 2 -20	; - false
+	54	[-]	JMP      	3	; to 58
+	55	[-]	GETGLOBAL	2 -21	; TurnOffAutoAttack
+	56	[-]	GETGLOBAL	3 -22	; STOPREASON_MOVING
+	57	[-]	CALL     	2 2 1
+	58	[-]	GETGLOBAL	2 -23	; IsMovementStopped
+	59	[-]	CALL     	2 1 2
+	60	[-]	EQ       	0 2 -24	; - true
+	61	[-]	JMP      	12	; to 74
+	62	[-]	GETGLOBAL	2 -25	; AttackTarget
+	63	[-]	MOVE     	3 1
+	64	[-]	CALL     	2 2 1
+	65	[-]	JMP      	8	; to 74
+	66	[-]	GETGLOBAL	2 -10	; AI_ATTACK
+	67	[-]	EQ       	0 0 2
+	68	[-]	JMP      	5	; to 74
+	69	[-]	GETGLOBAL	2 -26	; FindNewTarget
+	70	[-]	CALL     	2 1 1
+	71	[-]	GETGLOBAL	2 -15	; GetTarget
+	72	[-]	CALL     	2 1 2
+	73	[-]	MOVE     	1 2
+	74	[-]	RETURN   	0 1
+constants (26) for 008EF370:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"GetCharVar"
+	4	"inStasis"
+	5	1
+	6	"GetRoamState"
+	7	"INACTIVE"
+	8	"RUN_IN_FEAR"
+	9	"AI_RETREAT"
+	10	"AI_ATTACK"
+	11	"AI_TAUNTED"
+	12	"AI_BERSERK"
+	13	"StartTimer"
+	14	"TimerFrustrationSearch"
+	15	"GetTarget"
+	16	nil
+	17	"TargetInAttackRange"
+	18	"TurnOnAutoAttack"
+	19	"TargetInCancelAttackRange"
+	20	false
+	21	"TurnOffAutoAttack"
+	22	"STOPREASON_MOVING"
+	23	"IsMovementStopped"
+	24	true
+	25	"AttackTarget"
+	26	"FindNewTarget"
+locals (0) for 008EF370:
+upvalues (0) for 008EF370:
+
+function <?:560,593> (40 instructions, 160 bytes at 008EF948)
+0 params, 8 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -1	; GetState
+	8	[-]	CALL     	1 1 2
+	9	[-]	GETGLOBAL	2 -3	; AI_RETREAT
+	10	[-]	EQ       	0 1 2
+	11	[-]	JMP      	4	; to 16
+	12	[-]	GETGLOBAL	1 -4	; TurnOffAutoAttack
+	13	[-]	GETGLOBAL	2 -5	; STOPREASON_MOVING
+	14	[-]	CALL     	1 2 1
+	15	[-]	RETURN   	0 1
+	16	[-]	LOADK    	1 -6	; 650
+	17	[-]	GETGLOBAL	2 -7	; GetMyLeashedPos
+	18	[-]	CALL     	2 1 2
+	19	[-]	GETGLOBAL	3 -8	; GetTarget
+	20	[-]	CALL     	3 1 2
+	21	[-]	LOADNIL  	4 4
+	22	[-]	EQ       	1 3 -9	; - nil
+	23	[-]	JMP      	6	; to 30
+	24	[-]	GETGLOBAL	5 -10	; FindNearestAggressor
+	25	[-]	MOVE     	6 2
+	26	[-]	MOVE     	7 3
+	27	[-]	CALL     	5 3 2
+	28	[-]	MOVE     	4 5
+	29	[-]	JMP      	5	; to 35
+	30	[-]	GETGLOBAL	5 -10	; FindNearestAggressor
+	31	[-]	MOVE     	6 2
+	32	[-]	LOADNIL  	7 7
+	33	[-]	CALL     	5 3 2
+	34	[-]	MOVE     	4 5
+	35	[-]	EQ       	1 4 -9	; - nil
+	36	[-]	JMP      	3	; to 40
+	37	[-]	GETGLOBAL	5 -11	; AttackTarget
+	38	[-]	MOVE     	6 4
+	39	[-]	CALL     	5 2 1
+	40	[-]	RETURN   	0 1
+constants (11) for 008EF948:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"AI_RETREAT"
+	4	"TurnOffAutoAttack"
+	5	"STOPREASON_MOVING"
+	6	650
+	7	"GetMyLeashedPos"
+	8	"GetTarget"
+	9	nil
+	10	"FindNearestAggressor"
+	11	"AttackTarget"
+locals (0) for 008EF948:
+upvalues (0) for 008EF948:
+
+function <?:595,627> (51 instructions, 204 bytes at 008EF738)
+0 params, 8 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; GetRoamState
+	8	[-]	CALL     	1 1 2
+	9	[-]	GETGLOBAL	2 -4	; INACTIVE
+	10	[-]	EQ       	1 1 2
+	11	[-]	JMP      	10	; to 22
+	12	[-]	GETGLOBAL	1 -3	; GetRoamState
+	13	[-]	CALL     	1 1 2
+	14	[-]	GETGLOBAL	2 -5	; RUN_IN_FEAR
+	15	[-]	EQ       	1 1 2
+	16	[-]	JMP      	5	; to 22
+	17	[-]	GETGLOBAL	1 -1	; GetState
+	18	[-]	CALL     	1 1 2
+	19	[-]	GETGLOBAL	2 -6	; AI_RETREAT
+	20	[-]	EQ       	0 1 2
+	21	[-]	JMP      	4	; to 26
+	22	[-]	GETGLOBAL	1 -7	; TurnOffAutoAttack
+	23	[-]	GETGLOBAL	2 -8	; STOPREASON_MOVING
+	24	[-]	CALL     	1 2 1
+	25	[-]	RETURN   	0 1
+	26	[-]	GETGLOBAL	1 -9	; GetCampLeashRadius
+	27	[-]	CALL     	1 1 2
+	28	[-]	GETGLOBAL	2 -10	; GetCampLeashPos
+	29	[-]	CALL     	2 1 2
+	30	[-]	GETGLOBAL	3 -11	; GetTarget
+	31	[-]	CALL     	3 1 2
+	32	[-]	LOADNIL  	4 4
+	33	[-]	EQ       	1 3 -12	; - nil
+	34	[-]	JMP      	6	; to 41
+	35	[-]	GETGLOBAL	5 -13	; FindNearestAggressor
+	36	[-]	MOVE     	6 2
+	37	[-]	MOVE     	7 3
+	38	[-]	CALL     	5 3 2
+	39	[-]	MOVE     	4 5
+	40	[-]	JMP      	5	; to 46
+	41	[-]	GETGLOBAL	5 -13	; FindNearestAggressor
+	42	[-]	MOVE     	6 2
+	43	[-]	LOADNIL  	7 7
+	44	[-]	CALL     	5 3 2
+	45	[-]	MOVE     	4 5
+	46	[-]	EQ       	1 4 -12	; - nil
+	47	[-]	JMP      	3	; to 51
+	48	[-]	GETGLOBAL	5 -14	; AttackTarget
+	49	[-]	MOVE     	6 4
+	50	[-]	CALL     	5 2 1
+	51	[-]	RETURN   	0 1
+constants (14) for 008EF738:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"GetRoamState"
+	4	"INACTIVE"
+	5	"RUN_IN_FEAR"
+	6	"AI_RETREAT"
+	7	"TurnOffAutoAttack"
+	8	"STOPREASON_MOVING"
+	9	"GetCampLeashRadius"
+	10	"GetCampLeashPos"
+	11	"GetTarget"
+	12	nil
+	13	"FindNearestAggressor"
+	14	"AttackTarget"
+locals (0) for 008EF738:
+upvalues (0) for 008EF738:
+
+function <?:631,640> (16 instructions, 64 bytes at 008EF688)
+0 params, 2 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; Event
+	2	[-]	LOADK    	1 -2	; "ComponentHalt"
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -3	; StopTimer
+	5	[-]	LOADK    	1 -4	; "TimerFrustrationSearch"
+	6	[-]	CALL     	0 2 1
+	7	[-]	GETGLOBAL	0 -3	; StopTimer
+	8	[-]	LOADK    	1 -5	; "TimerAttack"
+	9	[-]	CALL     	0 2 1
+	10	[-]	GETGLOBAL	0 -6	; TurnOffAutoAttack
+	11	[-]	GETGLOBAL	1 -7	; STOPREASON_IMMEDIATELY
+	12	[-]	CALL     	0 2 1
+	13	[-]	GETGLOBAL	0 -8	; NetSetState
+	14	[-]	GETGLOBAL	1 -9	; AI_HALTED
+	15	[-]	CALL     	0 2 1
+	16	[-]	RETURN   	0 1
+constants (9) for 008EF688:
+	1	"Event"
+	2	"ComponentHalt"
+	3	"StopTimer"
+	4	"TimerFrustrationSearch"
+	5	"TimerAttack"
+	6	"TurnOffAutoAttack"
+	7	"STOPREASON_IMMEDIATELY"
+	8	"NetSetState"
+	9	"AI_HALTED"
+locals (0) for 008EF688:
+upvalues (0) for 008EF688:
+
+function <?:643,652> (7 instructions, 28 bytes at 008EF9A0)
+0 params, 2 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; StopTimer
+	2	[-]	LOADK    	1 -2	; "TimerFrustrationSearch"
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -1	; StopTimer
+	5	[-]	LOADK    	1 -3	; "TimerAttack"
+	6	[-]	CALL     	0 2 1
+	7	[-]	RETURN   	0 1
+constants (3) for 008EF9A0:
+	1	"StopTimer"
+	2	"TimerFrustrationSearch"
+	3	"TimerAttack"
+locals (0) for 008EF9A0:
+upvalues (0) for 008EF9A0:
+
+function <?:654,664> (12 instructions, 48 bytes at 008EF7E8)
+0 params, 2 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetLeashCounter
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; LEASH_COUNTER_THRESHOLD
+	4	[-]	LT       	0 0 1
+	5	[-]	JMP      	6	; to 12
+	6	[-]	GETGLOBAL	0 -3	; ResetAndStartTimer
+	7	[-]	LOADK    	1 -4	; "TimerFrustrationSearch"
+	8	[-]	CALL     	0 2 1
+	9	[-]	GETGLOBAL	0 -5	; StartTimer
+	10	[-]	LOADK    	1 -6	; "TimerAttack"
+	11	[-]	CALL     	0 2 1
+	12	[-]	RETURN   	0 1
+constants (6) for 008EF7E8:
+	1	"GetLeashCounter"
+	2	"LEASH_COUNTER_THRESHOLD"
+	3	"ResetAndStartTimer"
+	4	"TimerFrustrationSearch"
+	5	"StartTimer"
+	6	"TimerAttack"
+locals (0) for 008EF7E8:
+upvalues (0) for 008EF7E8:
+
+function <?:666,668> (4 instructions, 16 bytes at 008EF898)
+0 params, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; OutOfCombatRegen
+	2	[-]	SELF     	0 0 -2	; "Stop"
+	3	[-]	CALL     	0 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 008EF898:
+	1	"OutOfCombatRegen"
+	2	"Stop"
+locals (0) for 008EF898:
+upvalues (0) for 008EF898:
+
+function <?:670,672> (4 instructions, 16 bytes at 008EF9F8)
+0 params, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; OutOfCombatRegen
+	2	[-]	SELF     	0 0 -2	; "Start"
+	3	[-]	CALL     	0 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 008EF9F8:
+	1	"OutOfCombatRegen"
+	2	"Start"
+locals (0) for 008EF9F8:
+upvalues (0) for 008EF9F8:
+
+function <?:676,678> (5 instructions, 20 bytes at 008EF5D8)
+0 params, 3 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SetCharVar
+	2	[-]	LOADK    	1 -2	; "inStasis"
+	3	[-]	LOADK    	2 -3	; 1.01
+	4	[-]	CALL     	0 3 1
+	5	[-]	RETURN   	0 1
+constants (3) for 008EF5D8:
+	1	"SetCharVar"
+	2	"inStasis"
+	3	1.01
+locals (0) for 008EF5D8:
+upvalues (0) for 008EF5D8:
+
+function <?:680,683> (5 instructions, 20 bytes at 008EF420)
+0 params, 3 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SetCharVar
+	2	[-]	LOADK    	1 -2	; "inStasis"
+	3	[-]	LOADK    	2 -3	; 0
+	4	[-]	CALL     	0 3 1
+	5	[-]	RETURN   	0 1
+constants (3) for 008EF420:
+	1	"SetCharVar"
+	2	"inStasis"
+	3	0
+locals (0) for 008EF420:
+upvalues (0) for 008EF420:

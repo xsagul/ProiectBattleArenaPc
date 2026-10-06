@@ -1,0 +1,23 @@
+struct 0x89fcb0
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 1478, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 1149, in learn
+    sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc).learn()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 361, in learn
+    fl = self.learn_field(k)
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 404, in learn_field
+    mode = self.learn_mode(k, m, r, seg, res, d)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 481, in learn_mode
+    return self.learn_bytes(k, m, res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 551, in learn_bytes
+    return self.learn_fixed(k, m, res, counts.pop())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 573, in learn_fixed
+    assert len(changed) == 1, f'{self.fn:#x} field {k} mode {m}: wire byte {j} moves field bytes {changed}'
+           ^^^^^^^^^^^^^^^^^
+AssertionError: 0x89fcb0 field 0 mode 0: wire byte 1 moves field bytes [2, 3, 4]

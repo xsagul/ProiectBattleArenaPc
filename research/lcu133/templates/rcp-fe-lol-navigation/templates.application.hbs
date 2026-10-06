@@ -1,0 +1,27 @@
+<div class="fake-ember-application">
+  <div id="fake-application-template">
+    {{ready-check-root}}
+  </>
+  {{loading-tab}}
+</>
+<div class="navbar_backdrop">
+  {{#if shouldRenderLegalRatingScreen}}
+    {{legal-rating-screen}}
+  {{/if}}
+  {{patcher-and-play-button}}
+  {{navigation-root}}
+  {{outlet}}
+  <lc-alert-modal okText="{{tra.tft_season_start_btn}}" onOk={{action this "navigateToTft"}} dismissible={{true}} open={{tft.showSeasonStart}} dismissibleType="inside">
+    <lc-modal-content>
+      <div class="tft-season-start" style="background-image: url({{get tft.media "background--season-start-modal"}})">
+        <div class="tft-season-start-title">
+          {{tra.tft_season_start_title}}
+        </>
+        <div class="tft-season-start-body">
+          {{tra.tft_season_start_body}}
+        </>
+      </>
+    </>
+  </>
+</>
+{{uikit-toast-celebration celebrations.rewardToasts}}

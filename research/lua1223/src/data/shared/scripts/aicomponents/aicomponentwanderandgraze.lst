@@ -1,0 +1,289 @@
+
+main <?:0,0> (67 instructions, 268 bytes at 00929A80)
+0+ params, 3 slots, 0 upvalues, 0 locals, 19 constants, 10 functions
+	1	[-]	NEWTABLE 	0 0 1
+	2	[-]	SETTABLE 	0 -2 -3	; "TimerCallbackName" "TimerWander"
+	3	[-]	SETGLOBAL	0 -1	; WanderAndGraze
+	4	[-]	LOADK    	0 -5	; "Wandering"
+	5	[-]	SETGLOBAL	0 -4	; WanderingStateName
+	6	[-]	LOADK    	0 -7	; "Grazing"
+	7	[-]	SETGLOBAL	0 -6	; GrazingStateName
+	8	[-]	GETGLOBAL	0 -4	; WanderingStateName
+	9	[-]	SETGLOBAL	0 -8	; AIMode
+	10	[-]	LOADBOOL 	0 0 0
+	11	[-]	SETGLOBAL	0 -9	; Enabled
+	12	[-]	GETGLOBAL	0 -10	; RegisterForEvent
+	13	[-]	LOADK    	1 -11	; "ComponentInit"
+	14	[-]	GETGLOBAL	2 -1	; WanderAndGraze
+	15	[-]	CALL     	0 3 1
+	16	[-]	GETGLOBAL	0 -10	; RegisterForEvent
+	17	[-]	LOADK    	1 -12	; "ComponentStart"
+	18	[-]	GETGLOBAL	2 -1	; WanderAndGraze
+	19	[-]	CALL     	0 3 1
+	20	[-]	GETGLOBAL	0 -10	; RegisterForEvent
+	21	[-]	LOADK    	1 -13	; "WanderPause"
+	22	[-]	GETGLOBAL	2 -1	; WanderAndGraze
+	23	[-]	CALL     	0 3 1
+	24	[-]	GETGLOBAL	0 -10	; RegisterForEvent
+	25	[-]	LOADK    	1 -14	; "WanderResume"
+	26	[-]	GETGLOBAL	2 -1	; WanderAndGraze
+	27	[-]	CALL     	0 3 1
+	28	[-]	GETGLOBAL	0 -10	; RegisterForEvent
+	29	[-]	LOADK    	1 -15	; "ComponentHalt"
+	30	[-]	GETGLOBAL	2 -1	; WanderAndGraze
+	31	[-]	CALL     	0 3 1
+	32	[-]	GETGLOBAL	0 -10	; RegisterForEvent
+	33	[-]	LOADK    	1 -16	; "GrazeStart"
+	34	[-]	GETGLOBAL	2 -1	; WanderAndGraze
+	35	[-]	CALL     	0 3 1
+	36	[-]	GETGLOBAL	0 -10	; RegisterForEvent
+	37	[-]	LOADK    	1 -17	; "GrazeStop"
+	38	[-]	GETGLOBAL	2 -1	; WanderAndGraze
+	39	[-]	CALL     	0 3 1
+	40	[-]	GETGLOBAL	0 -1	; WanderAndGraze
+	41	[-]	CLOSURE  	1 0	; 00929D28
+	42	[-]	SETTABLE 	0 -11 1	; "ComponentInit" -
+	43	[-]	GETGLOBAL	0 -1	; WanderAndGraze
+	44	[-]	CLOSURE  	1 1	; 00929DF8
+	45	[-]	SETTABLE 	0 -12 1	; "ComponentStart" -
+	46	[-]	GETGLOBAL	0 -1	; WanderAndGraze
+	47	[-]	CLOSURE  	1 2	; 00928090
+	48	[-]	SETTABLE 	0 -13 1	; "WanderPause" -
+	49	[-]	GETGLOBAL	0 -1	; WanderAndGraze
+	50	[-]	CLOSURE  	1 3	; 00928150
+	51	[-]	SETTABLE 	0 -14 1	; "WanderResume" -
+	52	[-]	GETGLOBAL	0 -1	; WanderAndGraze
+	53	[-]	CLOSURE  	1 4	; 0092A0E0
+	54	[-]	SETTABLE 	0 -16 1	; "GrazeStart" -
+	55	[-]	GETGLOBAL	0 -1	; WanderAndGraze
+	56	[-]	CLOSURE  	1 5	; 0092A1C0
+	57	[-]	SETTABLE 	0 -17 1	; "GrazeStop" -
+	58	[-]	GETGLOBAL	0 -1	; WanderAndGraze
+	59	[-]	CLOSURE  	1 6	; 0092A218
+	60	[-]	SETTABLE 	0 -15 1	; "ComponentHalt" -
+	61	[-]	CLOSURE  	0 7	; 0092A270
+	62	[-]	SETGLOBAL	0 -3	; TimerWander
+	63	[-]	CLOSURE  	0 8	; 0092C7C0
+	64	[-]	SETGLOBAL	0 -18	; FoundFood
+	65	[-]	CLOSURE  	0 9	; 0092C818
+	66	[-]	SETGLOBAL	0 -19	; StopEating
+	67	[-]	RETURN   	0 1
+constants (19) for 00929A80:
+	1	"WanderAndGraze"
+	2	"TimerCallbackName"
+	3	"TimerWander"
+	4	"WanderingStateName"
+	5	"Wandering"
+	6	"GrazingStateName"
+	7	"Grazing"
+	8	"AIMode"
+	9	"Enabled"
+	10	"RegisterForEvent"
+	11	"ComponentInit"
+	12	"ComponentStart"
+	13	"WanderPause"
+	14	"WanderResume"
+	15	"ComponentHalt"
+	16	"GrazeStart"
+	17	"GrazeStop"
+	18	"FoundFood"
+	19	"StopEating"
+locals (0) for 00929A80:
+upvalues (0) for 00929A80:
+
+function <?:19,23> (10 instructions, 40 bytes at 00929D28)
+1 param, 5 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; InitTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	LOADK    	3 -3	; 0.25
+	4	[-]	LOADBOOL 	4 1 0
+	5	[-]	CALL     	1 4 1
+	6	[-]	SETTABLE 	0 -4 -5	; "Enabled" true
+	7	[-]	GETGLOBAL	1 -6	; WanderAndGraze
+	8	[-]	SELF     	1 1 -7	; "ComponentStart"
+	9	[-]	CALL     	1 2 1
+	10	[-]	RETURN   	0 1
+constants (7) for 00929D28:
+	1	"InitTimer"
+	2	"TimerCallbackName"
+	3	0.25
+	4	"Enabled"
+	5	true
+	6	"WanderAndGraze"
+	7	"ComponentStart"
+locals (0) for 00929D28:
+upvalues (0) for 00929D28:
+
+function <?:25,27> (4 instructions, 16 bytes at 00929DF8)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; ResetAndStartTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	CALL     	1 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 00929DF8:
+	1	"ResetAndStartTimer"
+	2	"TimerCallbackName"
+locals (0) for 00929DF8:
+upvalues (0) for 00929DF8:
+
+function <?:29,33> (7 instructions, 28 bytes at 00928090)
+1 param, 3 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; StopTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	CALL     	1 2 1
+	4	[-]	GETGLOBAL	1 -4	; WanderingStateName
+	5	[-]	SETGLOBAL	1 -3	; AIMode
+	6	[-]	SETTABLE 	0 -5 -6	; "Enabled" false
+	7	[-]	RETURN   	0 1
+constants (6) for 00928090:
+	1	"StopTimer"
+	2	"TimerCallbackName"
+	3	"AIMode"
+	4	"WanderingStateName"
+	5	"Enabled"
+	6	false
+locals (0) for 00928090:
+upvalues (0) for 00928090:
+
+function <?:35,40> (10 instructions, 40 bytes at 00928150)
+1 param, 3 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; ResetAndStartTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	CALL     	1 2 1
+	4	[-]	GETGLOBAL	1 -3	; TurnOffAutoAttack
+	5	[-]	GETGLOBAL	2 -4	; STOPREASON_MOVING
+	6	[-]	CALL     	1 2 1
+	7	[-]	GETGLOBAL	1 -6	; WanderingStateName
+	8	[-]	SETGLOBAL	1 -5	; AIMode
+	9	[-]	SETTABLE 	0 -7 -8	; "Enabled" true
+	10	[-]	RETURN   	0 1
+constants (8) for 00928150:
+	1	"ResetAndStartTimer"
+	2	"TimerCallbackName"
+	3	"TurnOffAutoAttack"
+	4	"STOPREASON_MOVING"
+	5	"AIMode"
+	6	"WanderingStateName"
+	7	"Enabled"
+	8	true
+locals (0) for 00928150:
+upvalues (0) for 00928150:
+
+function <?:42,47> (16 instructions, 64 bytes at 0092A0E0)
+1 param, 4 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -2	; GrazingStateName
+	2	[-]	SETGLOBAL	1 -1	; AIMode
+	3	[-]	GETGLOBAL	1 -3	; GetDistXZ
+	4	[-]	GETGLOBAL	2 -4	; GetMyPos
+	5	[-]	CALL     	2 1 2
+	6	[-]	GETGLOBAL	3 -5	; GetOrderPosition
+	7	[-]	CALL     	3 1 0
+	8	[-]	CALL     	1 0 2
+	9	[-]	LT       	0 -6 1	; 250 -
+	10	[-]	JMP      	5	; to 16
+	11	[-]	GETGLOBAL	1 -7	; ServerCastSpellOnPos
+	12	[-]	LOADK    	2 -8	; 0
+	13	[-]	GETGLOBAL	3 -5	; GetOrderPosition
+	14	[-]	CALL     	3 1 0
+	15	[-]	CALL     	1 0 1
+	16	[-]	RETURN   	0 1
+constants (8) for 0092A0E0:
+	1	"AIMode"
+	2	"GrazingStateName"
+	3	"GetDistXZ"
+	4	"GetMyPos"
+	5	"GetOrderPosition"
+	6	250
+	7	"ServerCastSpellOnPos"
+	8	0
+locals (0) for 0092A0E0:
+upvalues (0) for 0092A0E0:
+
+function <?:49,51> (3 instructions, 12 bytes at 0092A1C0)
+1 param, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -2	; WanderingStateName
+	2	[-]	SETGLOBAL	1 -1	; AIMode
+	3	[-]	RETURN   	0 1
+constants (2) for 0092A1C0:
+	1	"AIMode"
+	2	"WanderingStateName"
+locals (0) for 0092A1C0:
+upvalues (0) for 0092A1C0:
+
+function <?:53,55> (4 instructions, 16 bytes at 0092A218)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; StopTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	CALL     	1 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 0092A218:
+	1	"StopTimer"
+	2	"TimerCallbackName"
+locals (0) for 0092A218:
+upvalues (0) for 0092A218:
+
+function <?:57,68> (25 instructions, 100 bytes at 0092A270)
+0 params, 4 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; AIMode
+	8	[-]	EQ       	0 1 -4	; - "Wandering"
+	9	[-]	JMP      	15	; to 25
+	10	[-]	GETGLOBAL	1 -5	; SetStateAndMove
+	11	[-]	GETGLOBAL	2 -6	; AI_MOVE
+	12	[-]	GETGLOBAL	3 -7	; GetWaypoint
+	13	[-]	CALL     	3 1 0
+	14	[-]	CALL     	1 0 1
+	15	[-]	GETGLOBAL	1 -8	; GetDist
+	16	[-]	GETGLOBAL	2 -9	; GetMyPos
+	17	[-]	CALL     	2 1 2
+	18	[-]	GETGLOBAL	3 -7	; GetWaypoint
+	19	[-]	CALL     	3 1 0
+	20	[-]	CALL     	1 0 2
+	21	[-]	LT       	0 1 -10	; - 400
+	22	[-]	JMP      	2	; to 25
+	23	[-]	GETGLOBAL	1 -11	; IncrementWaypoint
+	24	[-]	CALL     	1 1 1
+	25	[-]	RETURN   	0 1
+constants (11) for 0092A270:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"AIMode"
+	4	"Wandering"
+	5	"SetStateAndMove"
+	6	"AI_MOVE"
+	7	"GetWaypoint"
+	8	"GetDist"
+	9	"GetMyPos"
+	10	400
+	11	"IncrementWaypoint"
+locals (0) for 0092A270:
+upvalues (0) for 0092A270:
+
+function <?:70,72> (4 instructions, 16 bytes at 0092C7C0)
+0 params, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; Event
+	2	[-]	LOADK    	1 -2	; "GrazeStart"
+	3	[-]	CALL     	0 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 0092C7C0:
+	1	"Event"
+	2	"GrazeStart"
+locals (0) for 0092C7C0:
+upvalues (0) for 0092C7C0:
+
+function <?:74,76> (4 instructions, 16 bytes at 0092C818)
+0 params, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; Event
+	2	[-]	LOADK    	1 -2	; "GrazeStop"
+	3	[-]	CALL     	0 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 0092C818:
+	1	"Event"
+	2	"GrazeStop"
+locals (0) for 0092C818:
+upvalues (0) for 0092C818:

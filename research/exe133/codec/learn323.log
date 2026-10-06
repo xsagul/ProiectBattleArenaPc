@@ -1,0 +1,13 @@
+struct 0x8a0dc0
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 1478, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 1149, in learn
+    sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc).learn()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 167, in __init__
+    self.bitmap()
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\tools\sponge\pkt_schema.py", line 258, in bitmap
+    assert f['key'][0] == 'i', f'{self.fn:#x}: header bits {bits} change getbits field {k}'
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: 0x8a0dc0: header bits [4, 5, 6] change getbits field 1

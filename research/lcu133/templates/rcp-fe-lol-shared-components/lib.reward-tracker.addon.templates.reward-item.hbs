@@ -1,0 +1,42 @@
+{{#unless atMaxLevel}}
+  <div class="reward-progress-bar {{instantClass}} {{showingFutureProgressClass}} {{disabledClass}}">
+    {{#if isCurrentLevel}}
+      <div class="reward-progress-bar-fill current" style="width: {{levelProgress}}%">
+      </>
+    {{else}}
+      {{#if isCompleted}}
+        <div class="reward-progress-bar-fill completed">
+        </>
+      {{/if}}
+    {{/if}}
+    <div class="reward-progress-bar-fill future" style="width: {{futureProgress}}%">
+    </>
+  </>
+{{/unless}}
+<div class="reward-options-wrapper">
+  {{#each optionItems as |optionItem index|}}
+    <div class="reward-option-wrapper {{multipleClass}}">
+      {{reward-option isRare=isRare state=optionItem.state headerType=optionItem.headerType footerText=optionItem.footerText thumbIconPath=optionItem.thumbIconPath isChoiceReward=isChoiceReward isDisabled=isDisabled lowSpecEnabled=lowSpecEnabled}}
+      <div class="reward-option-hover-area" onclick={{action this "click" index}} onmouseenter={{action this "rewardHover" index}}>
+        {{#if rewardItemTooltipComponent}}
+          {{#uikit-tooltip tooltipPosition="top"}}
+            <lol-uikit-content-block type="tooltip-system" class="{{rewardItemTooltipClassName}}">
+              {{component rewardItemTooltipComponent reward=reward rewardItem=optionItem additionalTooltipData=additionalTooltipData levelNumber=levelNumber}}
+            </>
+          {{/uikit-tooltip}}
+        {{/if}}
+      </>
+    </>
+  {{/each}}
+</>
+<div class="reward-level {{multipleClass}} {{disabledClass}}">
+  <div class="label-cap left {{levelClass}}">
+  </>
+  <div class="reward-level-text {{levelClass}}">
+    {{levelContent}}
+  </>
+  <div class="label-cap right {{levelClass}}">
+  </>
+</>
+<img class="reward-item-selected-mask" src="/fe/lol-static-assets/images/reward-tracker/active-selection.png">
+</>

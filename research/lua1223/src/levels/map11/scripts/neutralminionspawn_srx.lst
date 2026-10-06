@@ -1,0 +1,35 @@
+
+main <?:0,0> (10 instructions, 40 bytes at 013699B0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 5 constants, 2 functions
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "SR_NeutralMinionSpawn"
+	3	[-]	CALL     	0 2 1
+	4	[-]	CLOSURE  	0 0	; 0136A268
+	5	[-]	SETGLOBAL	0 -3	; OverrideNeutralMinionSpawnDefaults
+	6	[-]	CLOSURE  	0 1	; 0136A2C0
+	7	[-]	SETGLOBAL	0 -4	; NeutralMinionOverride
+	8	[-]	GETGLOBAL	0 -5	; NeutralMinionSpawnInit
+	9	[-]	CALL     	0 1 1
+	10	[-]	RETURN   	0 1
+constants (5) for 013699B0:
+	1	"DoLuaShared"
+	2	"SR_NeutralMinionSpawn"
+	3	"OverrideNeutralMinionSpawnDefaults"
+	4	"NeutralMinionOverride"
+	5	"NeutralMinionSpawnInit"
+locals (0) for 013699B0:
+upvalues (0) for 013699B0:
+
+function <?:6,7> (1 instruction, 4 bytes at 0136A268)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0136A268:
+locals (0) for 0136A268:
+upvalues (0) for 0136A268:
+
+function <?:9,10> (1 instruction, 4 bytes at 0136A2C0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0136A2C0:
+locals (0) for 0136A2C0:
+upvalues (0) for 0136A2C0:

@@ -1,0 +1,27 @@
+<div class="social-leaderboard-table-container">
+  <table class="social-leaderboard-table">
+    <thead>
+      <tr class="social-leaderboard-table-header">
+        <th>
+          {{tra.social_leaderboard_position_column_header}}
+        </>
+        <th>
+          {{tra.social_leaderboard_rank_column_header}}
+        </>
+        <th>
+          {{tra.social_leaderboard_summoners_column_header}}
+        </>
+        <th>
+          {{tra.social_leaderboard_wins_column_header}}
+        </>
+      </>
+    </>
+    <body class="social-leaderboard-table-body">
+      <lol-uikit-scrollable>
+        {{#each leaderboardData as |leaderboardRowData index|}}
+          {{social-leaderboard-row leaderboardPosition=leaderboardRowData.leaderboardPosition leaderboardRowIndex=index division=leaderboardRowData.division tier=leaderboardRowData.tier leaguePoints=leaderboardRowData.leaguePoints summonerName=leaderboardRowData.summonerName summonerId=leaderboardRowData.summonerId puuid=leaderboardRowData.puuid wins=leaderboardRowData.wins profileIconId=leaderboardRowData.profileIconId playerAvailability=leaderboardRowData.availability isGiftable=leaderboardRowData.isGiftable currentSummonerName=currentSummonerName closeSocialLeaderboard=closeSocialLeaderboard}}
+        {{/each}}
+      </>
+    </>
+  </>
+</>
