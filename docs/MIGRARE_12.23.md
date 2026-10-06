@@ -17,8 +17,8 @@ Abilitățile campionilor rămân stub-uri și în 12.23 (fișiere de ~300 octe�
 server. Pentru ele: datele spell-urilor 12.23 + Wiki la data patch-ului 12.23 (live 2022-12-07 .. 2023-01-10) +
 verificare pe replay (`CastSpellAns`, `UnitApplyDamage`).
 
-Unelte: `build-tools/unluac.jar` (cu JRE-ul portabil din `toolchain/jdk-*-jre`) decompilează orice `.luabin`;
-listele/sursele sunt în `research/lua1223/src/` (153 de scripturi). `build-tools/luac51_x86.exe -l -l` dă listarea.
+Unelte: `tools/bin/unluac.jar` (cu JRE-ul portabil din `toolchain/jdk-*-jre`) decompilează orice `.luabin`;
+listele/sursele sunt în `data/lua1223/src/` (153 de scripturi). `tools/bin/luac51_x86.exe -l -l` dă listarea.
 
 ## Diferențe de format găsite
 
@@ -69,7 +69,7 @@ listele/sursele sunt în `research/lua1223/src/` (153 de scripturi). `build-tool
 
 ## Buretele 1: comparatorul cu pachetele reale (`tools/replay_facts.py`)
 
-Din `research/replays1223/batch_001.jsonl.gz`, meciul 0 (23 852 lovituri `UnitApplyDamage`, 1062 minioni):
+Din `data/replays1223/batch_001.jsonl.gz`, meciul 0 (23 852 lovituri `UnitApplyDamage`, 1062 minioni):
 
 - daunele casterului = record (23) + **partea întreagă** a `DamageBonus` din scriptul de nivel: valul 1 → 24
   (nu 24,5), valurile 4–6 → 26, 7–9 → 27, 10–12 → 29, 13–15 → 30, 16+ → 35 (cu `DamageUpgradeLate`). Potrivire 1,000
@@ -90,19 +90,19 @@ Uneltele pentru buretele 2 sunt în `toolchain/procmon` (Process Monitor, cere a
 
 ## Buretele 2: clientul Riot rulând un replay (2026-10-03)
 
-- Clientul 13.3 (`Desktop\lol13.3`, build 13.3.491.0366) rulează replay-ul `research/rofl/KR-6363178603_13.3.rofl`
+- Clientul 13.3 (`ProiectBattleArenaPc\game`, build 13.3.491.0366) rulează replay-ul `data/rofl/KR-6363178603_13.3.rofl`
   offline: `"League of Legends.exe" "<rofl>" "-GameBaseDir=<joc>" -SkipRads -SkipBuild -EnableLNP "-UseDX11=1:1"
   -Locale=en_US`. Fără `-UseDX11=1:1` pornește pe DX9. `Config/game.cfg` [General] `EnableReplayApi=1` deschide
   Replay API pe https://127.0.0.1:2999 (`/replay/playback` sărit în timp/viteză, `/replay/render` camera,
   `/replay/particles`, `/replay/recording`). 12.23 cu un replay 12.3 rămâne la ecran negru (versiune).
 - Clientul e pe 32 de biți și protejat (`stub.dll`): RenderDoc nu se poate atașa (IAT read-only) și e omorât dacă e
   încărcat din interior.
-- **Buretele GPU propriu** (`tools/sponge/d3d11_proxy.c` → `lol13.3\d3d11.dll`, cu `d3d11_real.dll` copia celui de
+- **Buretele GPU propriu** (`tools/gpu_sponge/d3d11_proxy.c` → `lol13.3\d3d11.dll`, cu `d3d11_real.dll` copia celui de
   sistem): patch pe tabelele de metode ale device-ului, contextului și swapchain-ului. Runtime-ul D3D11 își rescrie
   singur intrările de desen din tabelul contextului (variante după stare) — burete le reface după fiecare apel.
   Înregistrează: bytecode-ul fiecărui shader, fiecare textură/buffer/stare creată (cu hash-ul datelor), iar la cerere
   (`sponge_capture.txt`) fiecare desen cu tot ce era legat și fiecare scriere în buffere.
-  `tools/sponge/run_replay.sh start|seek|capture|stop`, `tools/sponge/read_sponge.py`, `tools/sponge/shader_index.py`
+  `tools/run_replay.sh start|seek|capture|stop`, `tools/read_sponge.py`, `tools/shader_index.py`
   (numește shaderele prinse după ShaderCache.dx11).
 - Primul cadru (replay la 2,7 s): 575 de desene, toate shaderele numite. Ordinea Riot: harta (`srx_blend_master`,
   `defaultenv_flat[_alphatest]`, `flickeralpha_flipbook`), personaje (`lit_uber`, `darkstar`), particule (`quad`, `mesh`,
@@ -112,7 +112,7 @@ Uneltele pentru buretele 2 sunt în `toolchain/procmon` (Process Monitor, cere a
 
 ## Buretele 2: ce s-a măsurat pe clientul 13.3 (2026-10-03, după restart)
 
-Unelte noi în `tools/sponge/`: `texture_index.py` (hash de textură GPU -> fișier din WAD), `explain_draw.py` (un desen:
+Unelte noi în `tools/`: `texture_index.py` (hash de textură GPU -> fișier din WAD), `explain_draw.py` (un desen:
 permutarea shaderului, stările de amestec / adâncime / raster, fiecare constantă pe numele din shader),
 `run_replay.sh cam | pause | play | only` (camera liberă a Replay API ține poziția doar în modul `fps`; `only` ascunde
 toate sistemele de particule în afară de cele numite). Buretele citește acum înapoi de pe GPU și bufferele de constante
@@ -120,7 +120,7 @@ care nu au fost scrise în cadrul capturat (efectele statice). În clientul nost
 clientului Riot: ochi la 1911,85 deasupra, 1289,5 în spate, înclinare 56, FOV 40), `BA_VFX_DUMP=<fișier>` (fiecare desen
 de particule al ultimului cadru), `BA_VFX_ONLY=<nume>`.
 
-Capturi păstrate: `research/sponge/t005` (râu, 17 s), `t007` / `t010` (baza roșie), `t011` (baza roșie doar cu efectele
+Capturi păstrate: `data/sponge/t005` (râu, 17 s), `t007` / `t010` (baza roșie), `t011` (baza roșie doar cu efectele
 statuii și ale apei).
 
 | Ce | Măsurat | Unde e aplicat |
@@ -150,7 +150,7 @@ ecran complet; când își pierde focusul fereastra ajunge la 1x1 și imaginea s
 Stâlpii cu cristale din jurul turnurilor exterioare nu sunt o animație a turnului: sunt o unitate separată,
 `PreSeason_Turret_Shield`.
 
-- **Serverul** [măsurat: pachetele unui meci real 12.23, `research/replays1223`, meciul 0]: la timpul 0 apare câte un
+- **Serverul** [măsurat: pachetele unui meci real 12.23, `data/replays1223`, meciul 0]: la timpul 0 apare câte un
   `SpawnMinion` cu acest nume pe poziția fiecăruia dintre cele 6 turnuri exterioare, neselectabil, orientat spre punctul
   de apariție al echipei lui (`position2 - position1` e vectorul unitate spre `__Spawn_T1` / `__Spawn_T2`, pe toate
   șase); cele rămase mor la 845,06 s. Niciun script din datele clientului nu o creează. La noi:
@@ -169,13 +169,13 @@ Stâlpii cu cristale din jurul turnurilor exterioare nu sunt o animație a turnu
   [dedus]. La noi: `CharacterInstance::add_clip` + `Clip::additive` (`client/src/Character.*`), logica în `main.cpp`.
   `ShutdownN` (căderea plăcilor la minutul 14) nu e redat încă.
 
-Potrivitorul de poziții: `python tools/sponge/palette.py <captură> <desen> pal.txt`, apoi
+Potrivitorul de poziții: `python tools/palette.py <captură> <desen> pal.txt`, apoi
 `client.exe --champion <personaj> --dump-skin <n> --match-pose pal.txt` scrie `pose_match.txt`: animația și momentul
 care reproduc oasele din captură, plus poziția, orientarea și scara unității.
 
 ## Buretele 3: decodorul de pachete al exe-ului 13.3 (2026-10-03)
 
-Sursa: imaginea din memorie a clientului 13.3 în timp ce rula replay-ul (`research/exe133/exe_image_t900.bin`, bază
+Sursa: imaginea din memorie a clientului 13.3 în timp ce rula replay-ul (`client-src/exe_image_t900.bin`, bază
 0x580000). La prima trecere 1178 din 4010 pagini de cod rămâneau criptate (Riot le decriptează la cerere, abia când
 codul lor e folosit prima oară), dar tot codul de rețea folosit de replay era deja în clar.
 
@@ -185,19 +185,19 @@ codul lor e folosit prima oară), dar tot codul de rețea folosit de replay era 
 gestionarul lui de excepții decriptează pagina pe loc și o lasă `PAGE_EXECUTE_READ`. Buretele face acum chiar asta,
 fără să modifice nimic din proces: pe cererea fișierului `sponge_touch.txt` (format `mod primul număr`) citește câte un
 octet din fiecare pagină blocată din `.text`, exact cum ar face jocul la prima folosire, și lasă împachetătorul să o
-servească. `tools/sponge/run_replay.sh touch <mod> [primul count]`: **mod 0** doar numără paginile blocate; **mod 1**
+servească. `tools/run_replay.sh touch <mod> [primul count]`: **mod 0** doar numără paginile blocate; **mod 1**
 citește din codul buretelui; **mod 2** citește printr-o instrucțiune `mov al, [ecx]; ret` care face parte din codul
 jocului (rva 0x243bdc, verificată înainte). Un gestionar de excepții vectorizat prins ultimul (`touch_veh`) prinde
 cazul în care împachetătorul *nu* servește pagina și o sare — pagina rămâne blocată, jocul merge mai departe. (Prima
 oară, cu citirea din DLL-ul nostru pe toate cele 4010 pagini deodată, clientul a rămas blocat pe un thread și a trebuit
 oprit; servit pagină cu pagină, în tranșe, cu verificarea `/replay/playback` între ele, s-a desfășurat fără incident.)
 
-Rezultat (`research/exe133/exe_image_unpacked.bin`, dump complet după atingere; `..._pages.txt` = regiunile si
+Rezultat (`client-src/exe_image_unpacked.bin`, dump complet după atingere; `..._pages.txt` = regiunile si
 permisiunile lor de memorie): **toate cele 1178 de pagini deschise, 0 neservite**. Dintre cele 1177 nou-apărute (una era goală și în
 imaginea veche), **1046 se dezasamblează curat** ca și cod — acoperirea curată urcă de la 2832 la **3683 din 4010
 pagini**. Codul nou cuprinde primitivele OpenSSL CRYPTOGAMS (RC4, ChaCha20, Camellia pentru x86) și buclele de
 de-obfuscare a câmpurilor pe care `packet_emu.py` le reconstruise (ex. rva 0x14b000: `xor 0xab`, căutare în tabela de
-la rva 0xfb5850, `sub`, `ror`, `ror`, scriere — acum vizibile ca sursă Riot). `tools/sponge/exe_dis.py` folosește acum
+la rva 0xfb5850, `sub`, `ror`, `ror`, scriere — acum vizibile ca sursă Riot). `server/exe_dis.py` folosește acum
 `exe_image_unpacked.bin` (suprascriere cu `BA_EXE_IMG=`).
 
 **Corectat pe 2026-10-04:** blocul de la rva 0x1c000..0x41000, despre care scria aici că „rămâne criptat”, nu e
@@ -207,19 +207,19 @@ lipsește din imagine.
 - **Recepția** [citit în cod, rva 0x351c60]: citește un ID de pachet u16, cere obiectul de la fabrică, apoi apelează
   `vtable[1](&cursor, end)` = deserializarea; la eșec scrie în log `SEJ-A56A09C4 {#PacketID}`.
 - **Fabrica** [rva 0x7fc950]: `switch (id - 2)` pe 0x315 cazuri (tabel de salt la rva 0x804ddc); fiecare caz =
-  `new(mărime)` + constructor. **556 de tipuri de pachete** în 13.3, tabelul complet în `research/exe133/packet_table.txt`
-  (id, mărimea obiectului, constructor, vtable, deserializator); `tools/sponge/packet_table.py` îl reface.
+  `new(mărime)` + constructor. **556 de tipuri de pachete** în 13.3, tabelul complet în `data/exe133/packet_table.txt`
+  (id, mărimea obiectului, constructor, vtable, deserializator); `tools/packet_table.py` îl reface.
 - **Trimiterea** [rva 0x36ef80]: `vtable[0]` = serializarea; peste 0xffff octeți scrie `SEJ-J72G92B`.
 - **Formatul pe fir**: `[id u16][netID u32][corp]`; replay-ul ține id-ul și netID-ul în antetul blocului, corpul e
   identic.
 - **Obfuscarea câmpurilor**: fiecare câmp e citit din biții de pe fir (cu tabele de substituție per câmp), apoi e
   ascuns pe loc în obiect, octet cu octet (o buclă `mov byte [r], al; inc r; cmp r, end; jne`); citirea lui în joc îl
   decodează la loc. Valoarea în clar = conținutul câmpului chiar înainte de bucla care îl ascunde.
-- **Emulatorul** (`tools/sponge/packet_emu.py`, Unicorn): rulează constructorul și deserializatorul Riot pe pachetele
+- **Emulatorul** (`server/packet_emu.py`, Unicorn): rulează constructorul și deserializatorul Riot pe pachetele
   replay-ului. `check` → **toate cele 1.399.917 pachete ale replay-ului 13.3 (173 de tipuri) sunt acceptate și citite
-  exact până la ultimul octet** (`research/exe133/emu_check.txt`). `fields <id> [n]` arată câmpurile în clar ale primelor
+  exact până la ultimul octet** (`data/exe133/emu_check.txt`). `fields <id> [n]` arată câmpurile în clar ale primelor
   n pachete; `decode <out.jsonl.gz> [k/N]` scrie tot replay-ul cu câmpurile în clar (făcut, cu regulile
-  corectate: 8 părți `research/exe133/decoded_13.3_part0..7.jsonl.gz`, după poziția în flux `% 8`, câmpul `i` =
+  corectate: 8 părți `data/exe133/decoded_13.3_part0..7.jsonl.gz`, după poziția în flux `% 8`, câmpul `i` =
   poziția; 1.399.917 pachete, 0 eșuate, 95 MB). Alocatorii jocului (operator new,
   rva 0x9bb8d0; pool-ul de la rva 0x9d4570) sunt înlocuiți; TEB-ul are slotul TLS plin, ca statice MSVC să fie văzute
   inițializate.
@@ -230,7 +230,7 @@ lipsește din imagine.
   elemente polimorfe de 152 octeți (vtable rva 0x15bf6e8).
 - **Numele tipurilor**: legătura id → funcția de tratare se face la rulare (hărți FNV-1a după netID și id, rva
   0x352610), nu stă static în imagine. Numirea se face potrivind câmpurile în clar cu pachetele 12.23 cu nume
-  (`research/replays1223`, setul maknee). Mostre din fiecare tip: `research/exe133/kinds_sample.txt`.
+  (`data/replays1223`, setul maknee). Mostre din fiecare tip: `data/exe133/kinds_sample.txt`.
   - 98 = `BarrackSpawnUnit` [măsurat: aceleași netID-uri de barăci ca în 12.23, ora 65,04, valul 1].
   - [dedus, de confirmat] 506 = `DoSetCooldown` (slot 0/1/2, display −1 la t 0); 387 = `LeaveFog` (511k, 1 octet);
     595 = `Replication` (149k pe canalul 2; confirmat, vezi mai jos); 68 = ~~crearea turnurilor~~ **greșit**: e
@@ -240,7 +240,7 @@ lipsește din imagine.
 - Vectorii 3D: deserializatorul trece bucla de ascundere o dată peste câmpul gol, apoi îl citește și îl ascunde din
   nou; valoarea în clar = starea dinaintea **ultimei** treceri (rezolvat). Șirurile ies octet cu octet.
 
-### Fluxul nostru lângă al lui Riot (`tools/sponge/netlog_compare.py`)
+### Fluxul nostru lângă al lui Riot (`tools/netlog_compare.py`)
 
 `server.exe --netlog <f.banl>` (în meci sau cu `--simulate S`) scrie fiecare mesaj trimis; construirea mesajelor unui
 tick e acum o singură funcție (`emit_tick`, `server/src/main.cpp`), folosită și de rețea și de simulare.
@@ -275,7 +275,7 @@ distanța la care începe atacul la Riot variază 76…237 → între intrarea �
 de 0…~0,19 s (IA-ul minionilor nu caută ținta la fiecare cadru?). Perioada nu se poate stabili fără pozițiile în timp:
 pachetul de mișcare 552 ține un tampon comprimat (decodat acum în clar, formatul încă necitit).
 
-**Pachetul de mișcare 552 (`WaypointGroup`), citit** (`tools/sponge/waypoints.py`) [măsurat: toate cele 42.706 de
+**Pachetul de mișcare 552 (`WaypointGroup`), citit** (`server/waypoints.py`) [măsurat: toate cele 42.706 de
 tampoane ale replay-ului se citesc până la ultimul octet]: obiectul are +0x0a numărul de intrări, +0x0c un contor,
 +0x10 tamponul. Fiecare intrare: u8 = 2 × numărul de puncte (+1 dacă urmează un octet „teleport id”), u8 flaguri,
 u32 netID, f32 viteza, [u8 teleport id], câte un bit pe coordonată după primul punct (1 = delta pe un octet cu semn,
@@ -301,7 +301,7 @@ scriere), iar o buclă care scrie octet cu octet dar citește din altă parte (d
 ## Harta completă a secțiunii de cod (2026-10-04)
 
 Întrebarea: ce e în fiecare din cele 4010 pagini ale `.text` și lipsește ceva? Răspuns: **nu lipsește cod**. Unealta
-`tools/sponge/code_map.py` dă fiecărui octet din `.text` (16.424.960 de octeți) o clasă și verifică singură rezultatul.
+`tools/code_map.py` dă fiecărui octet din `.text` (16.424.960 de octeți) o clasă și verifică singură rezultatul.
 
 Cum merge (`code_map.py build`, 25 s):
 - **semințe**: punctul de intrare, tabela de exporturi și fiecare adresă relocată din `.rdata` / `.data` care arată în
@@ -327,7 +327,7 @@ Rezultat [măsurat]:
 | pagină goală (rva 0x1000) | 4.096 | 0,02% |
 | **neexplicat** | **8.192** | **0,05%** |
 
-- **4008 din 4010 pagini au fiecare octet explicat.** 57.499 de începuturi de funcții (`research/exe133/functions.txt`).
+- **4008 din 4010 pagini au fiecare octet explicat.** 57.499 de începuturi de funcții (`client-src/functions.txt`).
 - Verificarea hărții (`code_map.py audit`): din 4.787.371 de instrucțiuni marcate drept cod, doar 11 sunt de un fel pe
   care codul compilat nu îl are, și toate 11 sunt legitime (`int 0x29` = oprirea rapidă a CRT-ului, `xlatb` în
   funcțiile matematice scrise de mână, `loop` în asamblarea OpenSSL). Zero conflicte de decodare (niciun drum nu
@@ -337,7 +337,7 @@ Rezultat [măsurat]:
 
 **Blocul de 37 de pagini (rva 0x1c000..0x41000) nu e criptat** [măsurat]: e `ecp_nistz256_precomputed` din OpenSSL,
 tabela de 37 × 64 de puncte ale curbei P-256 (64 de octeți fiecare = 151.552 de octeți = exact 37 de pagini), aliniată
-la pagină, urmată imediat de constanta `RR = 3, 0, −1, −5, −2, −1, −3, 4` a aceluiași fișier. `tools/sponge/
+la pagină, urmată imediat de constanta `RR = 3, 0, −1, −5, −2, −1, −3, 4` a aceluiași fișier. `tools/
 nistz256_table.py` o recalculează din ecuația curbei (intrarea [i][j] = (j+1)·2^(7i)·G, în formă Montgomery) și, după
 transpunerea pe octeți pe care o folosește varianta x86 (octetul i al intrării n stă la i·64 + n), **toate cele 37 de
 pagini sunt egale octet cu octet cu imaginea**. Entropia mare (7,95 biți/octet) vine din faptul că sunt numere de
@@ -366,17 +366,17 @@ Despre împachetător, aflat pe drum [măsurat]:
 
 Legătura nu stă într-o tabelă statică, dar codul care o construiește da [citit în cod]:
 - **`RegisterHandler`** (rva 0x3710a0): argumente = obiectul, id-ul pachetului (constantă), un `std::function`. Are 260
-  de apeluri; `tools/sponge/handlers.py table` scoate din fiecare id-ul și funcția membru →
-  `research/exe133/handler_table.txt`.
+  de apeluri; `tools/handlers.py table` scoate din fiecare id-ul și funcția membru →
+  `client-src/handler_table.txt`.
 - **Ascultătorii generali** (lista de la +0x198 a clientului de rețea, `vtable[1](pachet, timp)`): funcții care fac
-  singure `switch` pe id. `tools/sponge/listeners.py` le găsește și le citește cazurile: rva 0x355f80 (lumea: 185
+  singure `switch` pe id. `tools/listeners.py` le găsește și le citește cazurile: rva 0x355f80 (lumea: 185
   de id-uri, între ele 98 apariția minionilor, 552 mișcarea, 595 replicarea, 367), 0x562a80 (37), 0x3554e0 (16,
   sincronizare / conexiune), 0x3601d0 (9).
 - Acoperire: **171 din cele 173 de tipuri din replay** au funcția de tratare localizată (lipsesc 213 și 215); 497 din
-  cele 556 de id-uri ale fabricii. `handlers.py digest` → `research/exe133/handler_digest.txt` (tip, număr, funcție,
+  cele 556 de id-uri ale fabricii. `handlers.py digest` → `client-src/handler_digest.txt` (tip, număr, funcție,
   șirurile la care ajunge codul ei).
 
-### Numele din șirurile pachetelor (`tools/sponge/kind_strings.py` → `research/exe133/kind_strings.txt`) [măsurat]
+### Numele din șirurile pachetelor (`tools/kind_strings.py` → `data/exe133/kind_strings.txt`) [măsurat]
 
 - **71 = lista de înlocuiri de animație a unei unități** (perechi „animația nouă, animația înlocuită”; pachetul
   poartă lista întreagă de fiecare dată când se schimbă; listă goală = fără înlocuiri). Exemple: `Run_Fast` ← `RUN`,
@@ -407,7 +407,7 @@ La fiecare treaptă serverul trimite două pachete în aceeași clipă: 65 (red�
 `Destroyed_seq`, tranziția) și 71 (`STATE2` / `State3` / `Destroyed` înlocuiește `IDLE1`, bucla de după). Pragurile de
 viață nu se pot scoate din pachetul de daune 263 (nu cuprinde daunele minionilor); trebuie viața din replicare.
 
-### Pachetul de replicare 595, citit (`tools/sponge/replication.py`) [măsurat]
+### Pachetul de replicare 595, citit (`server/replication.py`) [măsurat]
 
 Toate cele 74.543 de tampoane se citesc până la ultimul octet: `u8` mască de grupe, `u32` netID, apoi pe grupă `u32`
 mască de valori, `u8` mărime, valorile. O valoare e fie un float (4 octeți; `0xff` singur = zero; `0xfe` + 4 octeți),
@@ -418,11 +418,11 @@ Același conținut apare de mai multe ori la rând (câte o copie pe spectator):
 ## Trecerea pe 13.3 și modul de replay (2026-10-04)
 
 **Criteriul de reușită, stabilit cu utilizatorul:** clientul nostru, pus pe replay-ul 13.3
-(`research/rofl/KR-6363178603_13.3.rofl`), îl redă cap-coadă și scoate prin bureți același lucru ca al lui Riot. Asta
+(`data/rofl/KR-6363178603_13.3.rofl`), îl redă cap-coadă și scoate prin bureți același lucru ca al lui Riot. Asta
 acoperă drumul replay-ului (cel mult ~70% din cod: jocul însuși deschisese 2832 din 4010 pagini după 900 s de
 replay); ce face doar un jucător (comenzi, magazin, trimiterea de pachete) se verifică separat.
 
-**Datele sunt acum 13.3** (`data-path.txt` → `C:\Users\Sorin\Desktop\lol13.3`; vechea valoare în
+**Datele sunt acum 13.3** (`data-path.txt` → `C:\Users\Sorin\Desktop\ProiectBattleArenaPc\game`; vechea valoare în
 `data-path.12.23.bak`). Verificat [măsurat]: simularea de 130 s dă exact același meci ca pe 12.23 (aceleași atacuri,
 proiectile, morți); cei 5 campioni își lansează abilitățile fără erori noi (avertismentele lui Tryndamere despre
 valori lipsă existau identic și pe 12.23).
@@ -450,7 +450,7 @@ pe toate (`packet_emu.py key 1 decode …`, 0 eșuate, acum pe imaginea cu toate
 ### Clientul nostru redă replay-ul (`client/src/Replay.cpp`)
 
 `client.exe --replay <fișier.barp> --offline-start <secunda>`; lansator: `Reda replay 13.3.cmd [secunda]`.
-- **Etapa 1 (făcută):** fișierul `.barp` (`tools/sponge/export_replay.py`, 125 MB) ține pachetele cu câmpurile în clar,
+- **Etapa 1 (făcută):** fișierul `.barp` (`tools/export_replay.py`, 125 MB) ține pachetele cu câmpurile în clar,
   citite de deserializatoarele Riot în emulator: întâi primul cadru-cheie, apoi bucățile. Fiecare tip tratat în
   `Replay::apply` face lumii clientului ce face funcția de tratare a lui Riot.
 - **Etapa 2 (nefăcută):** clientul citește direct `.rofl` (Blowfish, gzip, apoi cititoarele noastre de câmpuri,
@@ -478,7 +478,7 @@ noi. Exe-ul merge la fiecare pas; scorul = câte din cele 57.499 de funcții sun
 replay raportează timpul înaintând, iar buretele GPU a numărat peste 1,2 milioane de desene în primele 3000 de cadre.
 Lansator: `Porneste 13.3 despachetat.cmd`.
 
-Cum e asamblat (`tools/sponge/build_unpacked.py`):
+Cum e asamblat (`client-src/build_unpacked.py`):
 - antetele și secțiunile de date vin din fișierul de pe disc (sunt în clar); `.text` vine din imaginea decriptată;
 - codul a fost relocat de împachetător la baza 0x580000, iar lista acelor relocări o ține doar el, așa că noul exe
   are baza fixă 0x580000: datele sunt relocate o singură dată, cu tabela de relocări a fișierului (82.898 de intrări,
@@ -493,10 +493,10 @@ Cum e asamblat (`tools/sponge/build_unpacked.py`):
 
 **Importurile** [măsurat]: împachetătorul scosese lista funcțiilor Windows; la pornire pune în fiecare din cele 430 de
 sloturi (rva 0xfab000..0xfab708) adresa unui mic cod al lui, care calculează adresa reală (`push eax; mov eax, K;`
-câteva `rol` / `bswap` / `add`; `ret 4`). `tools/sponge/read_stubs.py` le-a citit din procesul viu (doar citire, din
+câteva `rol` / `bswap` / `add`; `ret 4`). `client-src/read_stubs.py` le-a citit din procesul viu (doar citire, din
 afară), iar `resolve_imports.py` le-a rulat în emulator și a găsit pentru fiecare modulul și funcția:
-`research/exe133/import_table.txt`, 430 din 430 numite (KERNEL32 188, USER32 58, WS2_32 43, advapi32 35 …).
-`tools/sponge/ba_host.c` (biblioteca noastră, 32 de biți) umple sloturile la pornire.
+`client-src/import_table.txt`, 430 din 430 numite (KERNEL32 188, USER32 58, WS2_32 43, advapi32 35 …).
+`client-src/ba_host.c` (biblioteca noastră, 32 de biți) umple sloturile la pornire.
 
 **Neumplut, cu bună știință:** 25 de sloturi la rva 0xfb2808..0xfb2884 prin care jocul cheamă servicii ale
 împachetătorului însuși. Funcțiile jocului care le folosesc verifică dacă slotul e gol și întorc „indisponibil”;
@@ -516,11 +516,11 @@ deducem din ce cere clientul și din fluxul replay-ului.
 [măsurat] Pornit cu `"127.0.0.1 5119 <cheie> <id jucător>" -Product=LoL -PlayerID=1 -GameID=1 -GameBaseDir=…`
 (primul argument = adresa serverului în locul fișierului `.rofl`), clientul intră în mod de meci: scrie în log
 `Connecting to address (127.0.0.1) port (5119)`, `Waiting for response from game server...`, iar după 30 s fără
-răspuns arată fereastra „Failed to Connect”. `tools/sponge/udp_listen.py` (un ascultător care nu răspunde nimic) a
+răspuns arată fereastra „Failed to Connect”. `tools/udp_listen.py` (un ascultător care nu răspunde nimic) a
 prins ce trimite: datagrame UDP de 515 octeți, una la 0,1 s, toate cu aceiași primi 8 octeți (`44cdc6edede36b43`),
 restul cifrat, câteva variante care se repetă. La fel cu și fără `-EnableLNP`: 13.3 are un singur protocol de
 transport, cel nou al lui Riot (în imagine nu există niciun șir „ENet”). Capturi:
-`research/exe133/client_hello_lnp.txt`, `client_hello_enet.txt`.
+`data/exe133/client_hello_lnp.txt`, `client_hello_enet.txt`.
 
 Unde e codul de transport [citit în cod]: o singură funcție cheamă `sendto` (rva 0x2ef720), una singură `recvfrom`
 (rva 0x2ed590); socketul e creat la rva 0x2eb010.
@@ -540,7 +540,7 @@ Straturile serverului și ce știm despre fiecare:
 4. comenzile jucătorului client → server: nestudiate;
 5. logica de joc: serverul nostru de acum (valuri, turnuri, abilități), care ar hrăni stratul 3.
 
-### Transportul complet și primul pachet Riot primit de client (2026-10-04, `tools/sponge/lnp_server.py`) [măsurat]
+### Transportul complet și primul pachet Riot primit de client (2026-10-04, `server/lnp_server.py`) [măsurat]
 
 Serverul de test (Python) vorbește acum protocolul de transport al clientului 13.3 cap-coadă; clientul despachetat
 se conectează, primește pachetul 574 din replay, afișează lista celor 10 jucători reali și încarcă meciul.
@@ -576,7 +576,7 @@ clientul rămâne pe ecranul de încărcare (captură prin buretele GPU): lipse�
 719, 739, 743, 760 — candidații pentru el.
 
 Rulare (≤ 40 s, fereastra clientului apare pe ecran):
-`bash tools/sponge/run_match.sh 40 <nume> python tools/sponge/lnp_server.py --replay-574 --stream research/rofl/KR-6363178603_13.3.rofl`.
+`bash tools/run_match.sh 40 <nume> python server/lnp_server.py --replay-574 --stream data/rofl/KR-6363178603_13.3.rofl`.
 Sondele din `ba_host.dll` urmează acum și lanțuri de pointeri: `probe.py <rva>=nume@44,0` (de la ecx) sau
 `nume@s1,0` (de la al doilea cuvânt de pe stivă).
 
@@ -597,27 +597,27 @@ clientul îl decodează la rva 0x36489d (rulat în emulator pe toate cele 256 de
 lasă clientul fără conexiune. Cu `--slot 1` clientul intră în joc ca Darius: „Welcome to Summoner's Rift”, ceasul
 merge, HUD-ul lui Darius, minimapa și chatul cu semnalele reale din meci; în 34 s de joc 10 617 pachete trimise.
 
-`bash tools/sponge/run_match.sh 40 <nume> python tools/sponge/lnp_server.py --replay-574 --slot 1 --stream research/rofl/KR-6363178603_13.3.rofl`
+`bash tools/run_match.sh 40 <nume> python server/lnp_server.py --replay-574 --slot 1 --stream data/rofl/KR-6363178603_13.3.rofl`
 
-### Darius la click (2026-10-04, `tools/sponge/lol_packets.py`) [măsurat]
+### Darius la click (2026-10-04, `server/lol_packets.py`) [măsurat]
 
 Comanda de mișcare a clientului: 3 click-uri dreapta automate au produs exact 3 mesaje noi, **pachetul 491**
 (39 de octeți, canal 1, net id = eroul). Constructorul lui (rva 0x13cbd0, vtable rva 0xfb5970) și scriitorul
-(`vtable[0]`, rva 0x94b3d0) rulează în emulator (`tools/sponge/c2s_emu.py`; `rand()` cere datele firului CRT, rva
+(`vtable[0]`, rva 0x94b3d0) rulează în emulator (`server/c2s_emu.py`; `rand()` cere datele firului CRT, rva
 0xf7f84c, înlocuite cu un bloc al nostru). Obiectul real, prins cu o sondă pe scriitor în clientul viu și refăcut în
 emulator, dă exact octeții capturați. Formatul: octet aleator, octet de steaguri (tipul ordinului 0/1/2 împachetat în
 el ca 2/5/7; altfel un octet separat), câmpurile prezente, apoi **drumul calculat de client**: varint lungime +
-octeții în ordine inversă, fiecare printr-o substituție (`research/exe133/c2s_491_bytemap.txt`), în același format de
+octeții în ordine inversă, fiecare printr-o substituție (`data/exe133/c2s_491_bytemap.txt`), în același format de
 intrare ca 552. Tipul 2 = mișcare; drumul = [poziția eroului, punctul clicat] (ex. din (681, 680) în (1099, 576)).
 
 Pachetul de mișcare **552**: antet `b0 b1 b2 [un octet în plus pentru unele b0]` + varint lungime, apoi bufferul
-prin substituția H (`research/exe133/s2c_552_bytemap.json`). Verificat pe 400 de pachete din replay; un 552 real al
+prin substituția H (`data/exe133/s2c_552_bytemap.json`). Verificat pe 400 de pachete din replay; un 552 real al
 lui Darius se reface octet cu octet. Serverul (`--hero 4000001e`) scoate intrările eroului din toate 552-urile
 replay-ului (1500 verificate prin cititorul lui Riot, 0 greșeli) și, la fiecare 491 de mișcare, îi trimite un 552 cu
 drumul cerut. Rezultat: Darius pleacă din bază și merge unde dai click, iar următorul drum calculat de client pornește
 din punctul unde l-am dus noi.
 
-`bash tools/sponge/run_match.sh 30 <nume> python tools/sponge/lnp_server.py --replay-574 --slot 1 --hero 4000001e --stream research/rofl/KR-6363178603_13.3.rofl`
+`bash tools/run_match.sh 30 <nume> python server/lnp_server.py --replay-574 --slot 1 --hero 4000001e --stream data/rofl/KR-6363178603_13.3.rofl`
 
 ### Abilități: creșterea și primul Q al lui Darius (2026-10-04) [măsurat]
 
@@ -625,7 +625,7 @@ din punctul unde l-am dus noi.
   (rva 0x94b9e0) rulate în emulator dau Q = `e5` (identic cu captura), W = `e0`, E = `e6`, R = `e47f`.
 - **Răspunsul = 676** (câmpuri în clar: slot, 1, nivelul nou, 0). În spectator 606 = nivelul campionului (nivel nou,
   +1 punct). Corpurile 676/606 pentru fiecare combinație, luate din replay:
-  `research/exe133/s2c_676_606_bodies.json`. Keyframe-ul 1 conține câte patru 676 per erou (inițializarea
+  `data/exe133/s2c_676_606_bodies.json`. Keyframe-ul 1 conține câte patru 676 per erou (inițializarea
   abilităților); acelea trebuie păstrate, se scot doar cele din timpul jocului.
 - Cu Q la nivel 1, clientul tot refuza („You cannot cast that right now!”): biții de lansare vin de la server prin
   replicare, **595 grupul 0 bitul 3 = `mReplicatedSpellCanCastBitsLower1`** (numele variabilelor replicate, în
@@ -641,7 +641,7 @@ din punctul unde l-am dus noi.
   0x40000232 omorât de acel Q în replay, pachetul 453). Următorul pas: construirea acestor pachete de server (câmpurile
   lui 49 decodate), apoi W/E/R și atacul.
 
-### Pachetul 79 scris de serverul nostru (2026-10-05, `tools/sponge/pkt_codec.py`, `create_hero.py`) [măsurat]
+### Pachetul 79 scris de serverul nostru (2026-10-05, `server/pkt_codec.py`, `create_hero.py`) [măsurat]
 
 79 = crearea unui campion. Funcția clientului care îl tratează (ascultătorul rva 0x355f80, cazul 79 → rva 0x365650)
 scrie în jurnal „Spawn Champion Request {ChampionName} [{#SummonerName}] SkinID({SkinID}) NetID({NetID})”.
@@ -660,7 +660,7 @@ testat direct în cod.
 
 **`pkt_codec.py learn 79`** învață singur toate modurile tuturor câmpurilor, rulând cititorul Riot în emulator pe
 corpuri construite de el (fiecare octet de pe fir încercat cu toate cele 256 de valori; text: lungimi 1–7, ordinea
-dedusă) → `research/exe133/codec/79.json`; `show 79` le afișează. Scriitorul (`encode`) alege ca serverul: un mod
+dedusă) → `data/exe133/codec/79.json`; `show 79` le afișează. Scriitorul (`encode`) alege ca serverul: un mod
 constant când valoarea e chiar constanta lui, altfel primul mod citit. Instrumentul nu are nimic specific lui 79 în
 afară de bitul testat direct (`INLINE`), deci se aplică la fel celorlalte pachete.
 
@@ -693,14 +693,14 @@ câmpuri (10 din 10); 200 din 200 de pachete cu valori aleatoare (toate modurile
 Interpretări neverificate încă: state = 2 ar fi „mort la conectare” cu timpii morții; mastery = nivelul de măiestrie.
 
 **În client:** `lnp_server.py --own-79` trimite toate cele 10 creări construite de noi din
-`research/exe133/s2c_79_heroes.json` (câmpuri cu nume); `--set79 "1.skin=0"` schimbă un câmp. Cu skinul lui Darius
+`data/exe133/s2c_79_heroes.json` (câmpuri cu nume); `--set79 "1.skin=0"` schimbă un câmp. Cu skinul lui Darius
 schimbat 15 → 0, clientul intră în joc (GAMELOOP) și Darius apare în skinul clasic, cu portretul clasic în HUD
-(captura `research/exe133/match_own79skin/frames/compare_skin15_vs_skin0.png`: stânga 79 din replay, dreapta al
-nostru). Capturi din meci: `tools/sponge/match_shots.sh <nume> <secunde...>` lângă `run_match.sh`.
+(captura `data/exe133/match_own79skin/frames/compare_skin15_vs_skin0.png`: stânga 79 din replay, dreapta al
+nostru). Capturi din meci: `tools/match_shots.sh <nume> <secunde...>` lângă `run_match.sh`.
 
-`bash tools/sponge/run_match.sh 34 <nume> python tools/sponge/lnp_server.py --replay-574 --slot 1 --hero 4000001e --own-79 --set79 "1.skin=0" --stream research/rofl/KR-6363178603_13.3.rofl`
+`bash tools/run_match.sh 34 <nume> python server/lnp_server.py --replay-574 --slot 1 --hero 4000001e --own-79 --set79 "1.skin=0" --stream data/rofl/KR-6363178603_13.3.rofl`
 
-### Pachetul 574 scris de serverul nostru (2026-10-05, `tools/sponge/pkt_tree.py`, `pkt_schema.py`, `game_info.py`) [măsurat]
+### Pachetul 574 scris de serverul nostru (2026-10-05, `server/pkt_tree.py`, `pkt_schema.py`, `game_info.py`) [măsurat]
 
 574 = informațiile meciului: clientul scrie „Game Info Received”, apoi câte o linie „ROST” pe jucător (echipă,
 nume, campion, skin, rol, PUUID). Spre deosebire de 79, e imbricat: obiectul pachetului conține alte obiecte, fiecare
@@ -742,19 +742,19 @@ valide); 40 din 40 de variații aleatoare (texte, numere, liste, jucători scoș
 scriitorul le trimite doar în modul implicit / goale.
 
 **În client:** `lnp_server.py --own-574 [--set574 "1.name=BattleArena;1.skin=0"]` trimite 574 construit de noi din
-valorile replay-ului (`research/exe133/codec/574.values.json`), cu slotul local pus prin codec (nu mai e nevoie de
+valorile replay-ului (`data/exe133/codec/574.values.json`), cu slotul local pus prin codec (nu mai e nevoie de
 tabelul `SLOT_BYTE`). Cu `--own-79` împreună: jurnalul clientului scrie
 `'BattleArena' **LOCAL** - Champion(Darius) SkinID(0)`, intră în GAMELOOP, iar Darius apare în skinul clasic
-(`research/exe133/match_own574/frames/s26.png`).
+(`data/exe133/match_own574/frames/s26.png`).
 
-`bash tools/sponge/run_match.sh 32 <nume> python tools/sponge/lnp_server.py --replay-574 --own-574 --set574 "1.name=BattleArena;1.skin=0" --slot 1 --hero 4000001e --own-79 --set79 "1.skin=0" --stream research/rofl/KR-6363178603_13.3.rofl`
+`bash tools/run_match.sh 32 <nume> python server/lnp_server.py --replay-574 --own-574 --set574 "1.name=BattleArena;1.skin=0" --slot 1 --hero 4000001e --own-79 --set79 "1.skin=0" --stream data/rofl/KR-6363178603_13.3.rofl`
 
 Învățarea (`pkt_schema.py learn 574`) durează ~2 ore și se reia de unde a rămas (structurile învățate sunt păstrate
-în `research/exe133/codec/574.tree.json`).
+în `data/exe133/codec/574.tree.json`).
 
 ### Pachetul 49 (lansarea unei abilități) scris de serverul nostru (2026-10-05) [măsurat]
 
-49 = o lansare (5198 în replay). Imbricat, 4 tipuri de structuri (`research/exe133/codec/49.tree.json`): rădăcina
+49 = o lansare (5198 în replay). Imbricat, 4 tipuri de structuri (`data/exe133/codec/49.tree.json`): rădăcina
 (rva 0x850f50, 3 câmpuri) → informația lansării (rva 0x813050, 32 de câmpuri) → lista țintelor (elemente rva
 0x817db0) și o sub-structură (rva 0x818170, 8 câmpuri).
 
@@ -773,7 +773,7 @@ lansării pus la ora jocului și skinul eroului nostru); `--auto-q <secundă>` f
 singur (fără taste: scriptul de taste nu mai ajungea în joc când altă fereastră era în prim-plan, deci l-am
 oprit). Dovada că 49-ul nostru e citit: cu sonde pe cititorul lui (rva 0x850f50) și pe cele două funcții care îl
 tratează (rva 0x546bc0, 0x164ae0), datagrama noastră de 134 de octeți sosește la tick 175242812, iar la 175242828
-rulează toate trei (`research/exe133/match_q49probe/ba_net.log`). Darius face Decimate (capturi
+rulează toate trei (`data/exe133/match_q49probe/ba_net.log`). Darius face Decimate (capturi
 `match_q49own/frames`). Schimbarea skinului 15 → 0 în 49 nu se vede în efectul lui Q.
 
 **Ce a mai învățat instrumentul pe drum** (aplicat și la 574, reverificat):
@@ -806,7 +806,7 @@ de variații aleatoare se citesc identic; și **toate pachetele din meci**: 11 2
 **În client:** `lnp_server.py --own-cast [--q-cooldown 3]` rescrie toate pachetele învățate ale răspunsului la Q
 (49, 271, 65, 693) din valorile replay-ului; restul (406 ×10, 522, 63, 453, 220) vin încă din replay. Cu cooldown-ul
 din 271 pus la 3 s, HUD-ul arată Q-ul 3 → 2 → 0,2, față de 9 → 8 → 7 cu 271 din replay
-(`research/exe133/match_castown/frames/compare_cooldown.png`, Q lansat de server cu `--auto-q 10`).
+(`data/exe133/match_castown/frames/compare_cooldown.png`, Q lansat de server cu `--auto-q 10`).
 
 ### Pachetele 406, 522, 63, 453 și 220: tot răspunsul la Q scris de noi (2026-10-05) [măsurat]
 
@@ -826,7 +826,7 @@ identice (1, 0x34).
 
 **În client:** cu `--own-cast` serverul scrie acum toate cele 20 de pachete ale răspunsului la Q (9 tipuri: 49, 271,
 65, 693, 522, 63, 453, 220, 406), din valorile replay-ului; `--q-gold 77` schimbă suma din 453: pe ecran apare „+77”
-cu monedă în loc de „+21” (`research/exe133/match_castown2/frames/compare_gold.png`).
+cu monedă în loc de „+21” (`data/exe133/match_castown2/frames/compare_gold.png`).
 
 ### Pachetele 263 (daune) și 61 (moarte) scrise de serverul nostru (2026-10-05) [măsurat]
 
@@ -841,7 +841,7 @@ Din valorile minionului 0x40000232, omorât de primul Q al lui Darius:
 
 **În client:** `--q-kill <net id>` (cu `--own-cast`): la Q, serverul trimite 263 și 61 construite de noi din cele
 ale minionului, cu ținta schimbată. Cu Alistar (0x40000022, aliat în bază): apare „127” deasupra lui, bara de viață
-se sparge, iar Alistar rămâne mort pe jos (`research/exe133/match_qkill/frames/qkill_strip.png`). Viața lui din
+se sparge, iar Alistar rămâne mort pe jos (`data/exe133/match_qkill/frames/qkill_strip.png`). Viața lui din
 replicare (595) vine încă din replay.
 
 ### Pachetul 595 (replicarea) scris de serverul nostru, valorile pe nume (2026-10-05) [măsurat]
@@ -858,8 +858,8 @@ fiecare variabilă intră cu `mov ecx, <tabela>; push <nume>; push <variabilă>;
 0x19ccc0`. Funcția de înregistrare scrie în tabelă: +0 numărul, +8+4i deplasamentul variabilei, +0x88+4i numele,
 iar la +4 un bit per variabilă = **float (1) sau întreg împachetat (0)**. Bitul din 595 = indicele i. Tabelele se
 umplu la construirea primei unități din clasă, deci le citim dintr-o imagine luată din clientul nostru la secunda
-~78 de joc (`research/exe133/exe_image_match78.bin`, minionii ieșiți): `repl_names.py` →
-`research/exe133/repl_names.json`.
+~78 de joc (`client-src/exe_image_match78.bin`, minionii ieșiți): `repl_names.py` →
+`data/exe133/repl_names.json`.
 
 | clasa (înregistrare) | grupuri folosite |
 |---|---|
@@ -874,7 +874,7 @@ umplu la construirea primei unități din clasă, deci le citim dintr-o imagine 
 de cititorul Riot.
 
 **În client:** `lnp_server.py --hero-set "mGold=9999"` trimite la fiecare 2 s un 595 al nostru pentru erou, cu
-valorile pe nume: HUD-ul arată **9999** de aur (`research/exe133/match_hero595/frames/gold_hud.png`). Măsurat: cu
+valorile pe nume: HUD-ul arată **9999** de aur (`data/exe133/match_hero595/frames/gold_hud.png`). Măsurat: cu
 contorul +0x20 = 1 valoarea nu apare, cu 1 000 000 apare (pare o verificare de „pachet mai vechi”; necitită în cod).
 
 Rămase: varianta 1 a minionului (alt fel de unitate AI) și clasa rva 0x1ce4c0 au tabelele goale în imaginile noastre
@@ -896,10 +896,10 @@ Pasul 1 din planul „orice campion, orice abilitate”. Fără nicio modificare
 
 Rezultat: clientul scrie `'BattleArena' **LOCAL** - Champion(Garen)`, intră în joc cu modelul, portretul și pasiva lui
 Garen. Doar cu 574 + 79, iconițele Q/W/E/R erau negre; cu id-ul în 574 tot negre; cu cele patru 259 ale noastre apar
-iconițele lui Garen (`research/exe133/match_garen2/frames/hud.png`). Rămas greșit: viața (732) și restul valorilor
+iconițele lui Garen (`data/exe133/match_garen2/frames/hud.png`). Rămas greșit: viața (732) și restul valorilor
 replicate vin încă din 595-urile lui Darius din replay.
 
-`bash tools/sponge/run_match.sh 30 <nume> python tools/sponge/lnp_server.py --replay-574 --own-574 --set574 "1.champion=Garen;1.champion_id=86;1.skin=0;1.name=BattleArena" --slot 1 --hero 4000001e --own-79 --set79 "1.champion=Garen;1.skin=0" --hero-spells "GarenQ,GarenW,GarenE,GarenR" --stream research/rofl/KR-6363178603_13.3.rofl`
+`bash tools/run_match.sh 30 <nume> python server/lnp_server.py --replay-574 --own-574 --set574 "1.champion=Garen;1.champion_id=86;1.skin=0;1.name=BattleArena" --slot 1 --hero 4000001e --own-79 --set79 "1.champion=Garen;1.skin=0" --hero-spells "GarenQ,GarenW,GarenE,GarenR" --stream data/rofl/KR-6363178603_13.3.rofl`
 
 ### Pasul 2: cererea de lansare a clientului (16) citită de server, câmpurile lui 49 (2026-10-05) [măsurat]
 
@@ -908,9 +908,9 @@ replicate vin încă din 595-urile lui Darius din replay.
 rva 0xfb357c): constructorul rva 0x5359a0, vtable rva 0x15a04ac, scriitorul rva 0x94a990. Scriitorul are forma
 cititoarelor (3 octeți de antet cu modurile câmpurilor, apoi câmpurile) și alege între modurile echivalente cu
 `rand() % 6` (starea lui rand la +0x18 în blocul per-fir al CRT, rva 0xf6ab25).
-`tools/sponge/c2s_codec.py` învață decodorul din scriitor: construiește obiectul cu valorile noastre (scrise în câmp
+`server/c2s_codec.py` învață decodorul din scriitor: construiește obiectul cu valorile noastre (scrise în câmp
 imediat după ce constructorul îl pune la 0 și înainte de bucla care îl ascunde), rulează scriitorul cu sămânța
-noastră și deduce modurile, tabelele de octeți și ordinea câmpurilor (`research/exe133/codec/c2s_16.json`).
+noastră și deduce modurile, tabelele de octeți și ordinea câmpurilor (`data/exe133/codec/c2s_16.json`).
 Verificare: 300 din 300 de pachete scrise de scriitorul clientului din valori și semințe aleatoare sunt citite înapoi
 identic.
 
@@ -921,7 +921,7 @@ abilității** (Q: `elf("dariuscleave")` = 0x0f4a2805; W: `elf("dariusnoxiantact
 `lnp_server.py` scrie acum la fiecare 16 slotul, abilitatea, ținta și poziția.
 
 **49 pe 40 de lansări diferite** (8 campioni, Q/W/E/R, Recall, atacuri speciale;
-`research/exe133/codec/casts49_sample.txt`). Sigure (verificate cu numele / valorile cunoscute):
+`data/exe133/codec/casts49_sample.txt`). Sigure (verificate cu numele / valorile cunoscute):
 - +0xc+0x8c+0x14 (= +0xc+0xbc) = hash-ul ELF al abilității (Recall: 0x078b982c = `elf("recall")`);
 - +0xc+0x8c+0x24 = numele personajului (inclusiv „nidaleecougar” în forma de puma); +0xc+0x8c+0x18 = skinul (Nidalee
   6, Azir 14, Talon 29, Alistar 19 — aceleași ca în 574);
@@ -941,7 +941,7 @@ fără taste) serverul răspunde cu propriile pachete, construite peste primul Q
 - **65** cu animația abilității din date (Garen: Spell1, Spell2, —, Spell4; E nu are animație în date);
 - **271** cu cooldown-ul slotului, după timpul de pregătire.
 
-Rezultat în client (cadre în `research/exe133/match_garencast/frames`, `match_garenr/frames`): Garen face Q, W și R
+Rezultat în client (cadre în `data/exe133/match_garencast/frames`, `match_garenr/frames`): Garen face Q, W și R
 (pozele se văd), iar HUD-ul arată cooldown-urile 8 (Q), 23 (W), 9 (E), 120 (R) care scad. R la nivelul 1 nu apare pe HUD
 (slotul rămâne negru, ca în joc: R cere nivelul 6); cu `--hero-set "mLevelRef=6"` (595 al nostru) portretul și bara arată
 nivelul 6 și R pornește cu 120 pe HUD.
@@ -953,9 +953,9 @@ date; Darius Q are 0,234 în replay față de 0 în date, deci sensul exact al c
 
 ### Pasul 4, bucla 1: buff-urile (693, 522, 220) și animația ținută (65 +0x24) (2026-10-05) [măsurat + dedus]
 
-**Toate pachetele 693, 522, 220, 63 și 65 din meci decodate** (`tools/sponge/pkt_dump_all.py <id>` →
-`research/exe133/codec/<id>.all.jsonl`), iar hash-urile citite cu un dicționar construit din fișierele jocului
-(`tools/sponge/name_hashes.py`: toate textele din binurile campionilor din replay + Garen, Global, Map11, hash-uite ELF
+**Toate pachetele 693, 522, 220, 63 și 65 din meci decodate** (`tools/pkt_dump_all.py <id>` →
+`data/exe133/codec/<id>.all.jsonl`), iar hash-urile citite cu un dicționar construit din fișierele jocului
+(`server/name_hashes.py`: toate textele din binurile campionilor din replay + Garen, Global, Map11, hash-uite ELF
 și FNV-1a; 4,1 M intrări). Ce reiese (măsurat pe valori):
 - **693 = buff pus**: obiectul = unitatea care îl primește, +0x10 = **hash-ul ELF al numelui buff-ului** (DariusHemo,
   KalistaESlow, Stun, Recall…), +0x44 = sursa, +0x15 = slotul buff-ului pe unitate (0..65 în meci), +0x18 = durata (s),
@@ -968,18 +968,18 @@ date; Darius Q are 0,234 în replay față de 0 în date, deci sensul exact al c
 - **65 +0x24 = cât e ținut clipul** (crab_hide 5,0 s, Spell3 al lui Jax 2,25 s, Idle 1,0), +0x31 des 1.
 
 **Efectele vizuale ale abilităților nu vin printr-un pachet cu nume de particule:** scanarea câmpurilor în clar ale
-tuturor tipurilor de pachete (`tools/sponge/hash_scan.py`, emulatorul cititorului Riot) după hash-uri de nume de
+tuturor tipurilor de pachete (`tools/hash_scan.py`, emulatorul cititorului Riot) după hash-uri de nume de
 particule nu dă nimic în afară de coincidențe. Animațiile lui Garen au `ParticleEventData` în clipuri, deci
 particulele legate de clip pornesc odată cu 65.
 
-**Buff-urile lui Garen** (`tools/sponge/spell_effects.py`, sursele acolo): numele din scripturile 13.3
-(`Scripts.wad`, `research/lua133`: GarenQ → BuffName „GarenQBuff”, GarenQHaste, GarenW, GarenE cu SpellToggleSlot),
+**Buff-urile lui Garen** (`server/spell_effects.py`, sursele acolo): numele din scripturile 13.3
+(`Scripts.wad`, `data/lua133`: GarenQ → BuffName „GarenQBuff”, GarenQHaste, GarenW, GarenE cu SpellToggleSlot),
 duratele din valorile pe rang ale vrăjii (`spell_info.py` citește acum și mDataValues): Q MovementSpeedDuration 1 s
 (haste) și AttackWindow 4,5 s, W DRDuration 2 s, E Duration 3 s. Tipul și +0x16 nu sunt în date: luate prin analogie
 cu buff-urile pe sine ale lui Jax la lansare (tip 2, +0x16 = 3) și cu haste-urile din meci (tip 15) — **de verificat
 cu jocul real**. Rotirea lui E: 65 „Spell3” (clipul parametric al rotirii din graful de animație) ținut 3 s.
 
-**În client** (`research/exe133/match_garenfx2/frames`, `buffbar.png`, `e_strip.png`; cadrele legate de oră prin
+**În client** (`data/exe133/match_garenfx2/frames`, `buffbar.png`, `e_strip.png`; cadrele legate de oră prin
 linia nouă „capture asked” din jurnalul serverului):
 - iconițele buff-urilor apar deasupra portretului, cu cronometrul circular: Q (dispare între +0,8 și +1,5 s =
   haste-ul de 1 s), W (2 s), E (3 s);
@@ -990,9 +990,9 @@ linia nouă „capture asked” din jurnalul serverului):
 ### Cine animă o abilitate: clientul singur sau serverul (2026-10-05) [măsurat]
 
 Întrebarea utilizatorului: exe-ul 13.3 știe toată partea vizuală, serverul doar spune ce abilitate. Măsurat:
-- **Test fără niciun 65 de la noi** (`lnp_server.py --no-anim`, `research/exe133/match_garennoanim2/frames/sheet.png`):
+- **Test fără niciun 65 de la noi** (`lnp_server.py --no-anim`, `data/exe133/match_garennoanim2/frames/sheet.png`):
   R-ul lui Garen se animă complet singur din 49 (săritura, sabia de lumină care cade din cer); Q, W, E nu.
-- **În replay** (toate cele 5198 de 49 decodate, `research/exe133/codec/49.all.jsonl`): doar 1073 din 4016 lansări ale
+- **În replay** (toate cele 5198 de 49 decodate, `data/exe133/codec/49.all.jsonl`): doar 1073 din 4016 lansări ale
   campionilor au un 65 în aceeași clipă, iar asta depinde de vrajă, nu de lansare. Regula: câmpul `flags` al vrăjii
   (SpellDataResource) **fără bitul 4** → clientul animă singur (24 din 27 de vrăji: JhinW, RocketGrab, JavelinToss…;
   excepție Alistar R); **cu bitul 4** (vrăji conduse de scriptul serverului) → animația vine de la server: 14 vrăji
@@ -1023,7 +1023,7 @@ pachet: `PKT_LONGEST=1`, primul avea lista goală), 326 (13 960/13 960), 750 (62
   înapoi la normal), **721** = numele lui W + 0,1, **326** = actualizarea unui buff (durată, stack-uri, slot, sursă);
 - 693 +0x2c este aceeași valoare ca 49 +0xc+0x18 a lansatorului (Darius 0x05f176c4), nu un hash al sursei.
 
-**Ce trimite serverul real la W** (`tools/sponge/spell_replies.py`: toate cele 96 de lansări au aceeași secvență,
+**Ce trimite serverul real la W** (`tools/spell_replies.py`: toate cele 96 de lansări au aceeași secvență,
 cu valori fixe; doar timpii, id-urile și ținta variază):
 - la lansare: 49, 271, 693 (DariusNoxianTacticsONH, 4 s, tip 2), 721, 259, 118 (45), 465, 4×71, 65
   „Spell2_Activate”, 592 (atacul cu vraja din slotul 45), 516;
@@ -1032,9 +1032,9 @@ cu valori fixe; doar timpii, id-urile și ținta variază):
   (daunele); la ucidere: 453 (aur), 606, 61 (moartea, cu vraja ONHAttack ca ucigaș), un 271 cu cooldown-ul
   înjumătățit (rambursarea lui W).
 
-**Serverul nostru** (`tools/sponge/spell_templates.py cut` taie tick-ul de lansare și pe cel de lovire din replay în
-`research/exe133/templates/`; `lnp_server.py --auto-w "12:40000022"` le rescrie cu id-urile, contorul de lansări,
-timpii și pozițiile noastre). În client (`research/exe133/match_dariusw/frames/wide.png`): Darius ridică și rotește
+**Serverul nostru** (`server/spell_templates.py cut` taie tick-ul de lansare și pe cel de lovire din replay în
+`data/exe133/templates/`; `lnp_server.py --auto-w "12:40000022"` le rescrie cu id-urile, contorul de lansări,
+timpii și pozițiile noastre). În client (`data/exe133/match_dariusw/frames/wide.png`): Darius ridică și rotește
 toporul cu strălucirea lui W, iar pe Alistar apare „113”.
 
 Încă din replay, nu calculat: daunele (113,4), ținta și poziția ei (Alistar lângă fântână, fără verificarea razei);
@@ -1043,7 +1043,7 @@ lipsesc atacul de bază obișnuit, ținta aleasă de jucător (491 cu tipul ordi
 
 ### Atacul de bază al lui Darius (2026-10-05) [măsurat]
 
-**În replay** (392 de 592 ai lui Darius, `research/exe133/codec/592.all.jsonl`; 592 verificat pe tot meciul:
+**În replay** (392 de 592 ai lui Darius, `data/exe133/codec/592.all.jsonl`; 592 verificat pe tot meciul:
 4179 / 4179 identice): un atac = **592** (slotul 0x40 BasicAttack sau 0x41 BasicAttack2, alternate la întâmplare
 ~50/50 cum spun `basicAttack` / `extraAttacks.mAttackProbability` 0,5; 0x2d = atacul lui W) + **516** (ținta și
 poziția ei); la lovire **263** (daunele) și **693 DariusHemo** pe țintă; la ucidere 453 (aur) și 61 („DariusBasicAttack”).
@@ -1058,12 +1058,12 @@ poziția ei); la lovire **263** (daunele) și **693 DariusHemo** pe țintă; la 
 **Serverul nostru**: `--auto-attack "12:40000022"` (sau un 491 cu tipul 3 și o țintă; tipul 2 oprește) trimite 592 + 516
 din atacul tăiat din replay (`templates/darius_aa.json`) la fiecare perioadă, iar 263 (+ Hemo la prima lovire) pe
 tick-ul calculat, cu daunele AD × 100 / (100 + armura țintei din datele ei). În client
-(`research/exe133/match_dariusaa/frames/aa.png`): Darius balansează toporul, pe Alistar apare scânteia loviturii
+(`data/exe133/match_dariusaa/frames/aa.png`): Darius balansează toporul, pe Alistar apare scânteia loviturii
 (pusă de client singur) și „44” (64 × 100 / 144) la fiecare atac, la 1,6 s.
 
 ### Input real în client: click dreapta pe un inamic, Ctrl+W, W (2026-10-05) [măsurat]
 
-Utilizatorul a permis trimiterea de taste și clickuri în joc. `tools/sponge/game_input.ps1 "<plan>"` (ex.
+Utilizatorul a permis trimiterea de taste și clickuri în joc. `tools/game_input.ps1 "<plan>"` (ex.
 `"14:rclick:735,375;15.5:key:ctrl+w;18:key:w"`, secunde de la apariția ferestrei, coordonate în cadrul de 1920×1080)
 trimite input **numai când fereastra jocului e în față** (verificat înaintea fiecărei acțiuni). Motivul pentru care
 tastele de mai demult nu mai ajungeau: structura INPUT a lui `SendInput` era cea de 32 de biți (28 de octeți); în
@@ -1073,7 +1073,7 @@ PowerShell pe 64 de biți e de 40 (uniunea la offset 8), iar `SendInput` o refuz
 aleator); 300/300 de pachete scrise de client citite identic pentru +0x10 (tipul ordinului), +0x14 (ținta, varint),
 +0x18 (punctul clicat, 2 float-uri). Click pe teren → tipul 2; click pe un inamic → **tipul 3 cu ținta**.
 
-**Test** (`research/exe133/match_dariusclick/sheet.png`; Alistar trecut în echipa adversă cu
+**Test** (`data/exe133/match_dariusclick/sheet.png`; Alistar trecut în echipa adversă cu
 `--own-79 --set79 "5.team_order=0"`, bara lui devine roșie): click dreapta pe Alistar → 491 tip 3, ținta 0x40000022 →
 atacurile lui Darius la 1,6 s, „44” pe Alistar, conturul roșu de țintă; Ctrl+W → 384 → 676 (W nivel 1); W → 16 (slot
 1, hash-ul lui W) → răspunsul W cu resetarea atacului: „62” (1,4 × 44,44); click pe teren → 491 tip 2 → atacul se
@@ -1081,7 +1081,7 @@ oprește. Lipsesc: raza de atac și mersul până la țintă (Darius lovește de
 
 ### Raza de atac și mersul până la țintă (2026-10-05) [măsurat + aproximat]
 
-**Pozițiile** (`tools/sponge/positions.py`): fiecare 552 din replay dă unei unități un drum (primul punct = unde stă) și
+**Pozițiile** (`server/positions.py`): fiecare 552 din replay dă unei unități un drum (primul punct = unde stă) și
 o viteză; între pachete unitatea merge pe drum. Control: Darius la 125,825 s e la x 2522,6, iar 592 al lui are
 +0x3c = (2522, 12470) — **592 +0x3c = poziția atacatorului (x, z)**, +0xc+0x24 = poziția țintei (x, y, z).
 
@@ -1098,7 +1098,7 @@ o viteză; între pachete unitatea merge pe drum. Control: Darius la 125,825 s e
 **Serverul nostru**: ține poziția eroului (pornește din punctul de spawn al lui 79, merge pe drumurile trimise de el
 cu baseMoveSpeed); la un ordin de atac, dacă ținta e în rază → oprire (552 cu un punct) și atac; altfel drum drept
 spre țintă, refăcut când ținta s-a mutat (cel mult la 0,25 s). Pozițiile din 592 / 516 / 49 sunt acum cele reale.
-În client (`research/exe133/match_dariuschase/`): Darius lovește pe Alistar cât e lângă el, apoi iese din fântână
+În client (`data/exe133/match_dariuschase/`): Darius lovește pe Alistar cât e lângă el, apoi iese din fântână
 după el (Alistar, cu viteza mărită la ieșirea din bază, se îndepărtează).
 
 Aproximări: drum în linie dreaptă (fără navgrid), ritmul refacerii drumului, raza implicită 65, înălțimea 171.
@@ -1120,7 +1120,7 @@ primesc 61 (acela e doar pentru minioni / monștri). **Moartea campionilor în r
 **Serverul nostru** (`templates/darius_kill_champion.json`, tăiat cu `WITH_GLOBAL=1` ca să ia și pachetele obiectului 0;
 id-urile din blob-urile 750 schimbate și ele): la viața 0 trimite uciderea, aurul eroului (595 `mGold` / `mGoldTotal`,
 500 → 800), rambursarea W (271 cu cooldown-ul înjumătățit) când ucide W-ul, și oprește pachetele replay-ului pentru
-unitatea moartă. În client (`research/exe133/match_dariuskill/kill.png`, `stacks.png`): „FIRST BLOOD!”, „+300” aur,
+unitatea moartă. În client (`data/exe133/match_dariuskill/kill.png`, `stacks.png`): „FIRST BLOOD!”, „+300” aur,
 scorul 1–0 și KDA 1/0/0, kill feed-ul, mesajul din chat, Alistar mort; aurul din HUD 800.
 
 **Sângerarea** (DariusHemoMarker): în replay, prima lovitură pune 693 DariusHemo (5,1 s), fiecare lovitură următoare
@@ -1140,11 +1140,11 @@ Lipsesc: reînvierea, Noxian Might (5 stack-uri), uciderea minionilor (61), XP-u
 date și verificate pe replay, iar tot ce e copiat dintr-un singur moment trebuie văzut.
 
 **Unealta**: `lnp_server.py` notează la fiecare pachet trimis dintr-un șablon ce câmpuri a schimbat ca id-uri și ce
-câmpuri a calculat (`research/exe133/audit_runtime.json`); `tools/sponge/template_audit.py` compară fiecare câmp cu
+câmpuri a calculat (`data/exe133/audit_runtime.json`); `tools/template_audit.py` compară fiecare câmp cu
 toate cazurile comparabile din replay (același pachet, același rol, aceeași cheie — vraja, buff-ul, animația, slotul —,
 aceleași momente: tick-urile lansărilor W, ale atacurilor, ale morților de campion..., aceeași poziție în tick) și îl
 clasează: FIXED (același în toate cazurile = fapt de protocol), id, calculat, **COPIED** (copiat deși variază în
-replay = hardcodat). Raport: `research/exe133/template_audit.md`. Prima trecere: 148 FIXED, 31 id, 22 calculate,
+replay = hardcodat). Raport: `data/exe133/template_audit.md`. Prima trecere: 148 FIXED, 31 id, 22 calculate,
 **52 COPIED**; după corecturile de mai jos: 152 / 28 / 30 / **31** (unele „copiate” sunt de fapt calculate cu aceeași
 valoare ca în șablon — unealta vede doar ce se schimbă).
 
@@ -1161,7 +1161,7 @@ valoare ca în șablon — unealta vede doar ce se schimbă).
   ucigașului, +0x18 = echipa lui (0x64 / 0xc8), +0xc / +0x10 = un hash pe **personaj** (victimă / ucigaș; Nidalee are
   altul în forma de puma) — luat dintr-un tabel măsurat, funcția lui necunoscută (nu e ELF / FNV / CRC al numelor);
 - **recap-ul 190 și blob-urile 750 nu se mai trimit**: fără ele clientul arată la fel „FIRST BLOOD!”, „+400”, scorul,
-  KDA-ul și mesajul din chat (`research/exe133/match_dariuskill2/kill.png`); recap-ul e al victimei.
+  KDA-ul și mesajul din chat (`data/exe133/match_dariuskill2/kill.png`); recap-ul e al victimei.
 
 **Încă copiat** (din raport): sloturile buff-urilor (serverul real ia cel mai mic slot liber, dar printre ocupate sunt
 și buff-uri interne netrimise clientului — Darius cu {0, 5, 6, 14, 15} primește 17), duratele unor buff-uri, 49 +0x28
@@ -1190,7 +1190,7 @@ calculate (`fix.declared`), ca auditul să le vadă și când ies egale cu șabl
 buff-uri interne netrimise clientului; nu se poate reproduce exact din replay), 693 +0x1d la DariusHemo (1 stack în 290
 de cazuri, 5 în 6 — alt mecanism), 326 +0xc / +0x10 (pe slotul sângerării: 5,1 și 0 în toate cele 131 de cazuri —
 fix în realitate, auditul nu poate lega 326 de buff), încetinirea W 1 s (o singură excepție de 2 s, pe un minion la
-1608,9 s). În client (`research/exe133/match_dariusaudit/final.png`): FIRST BLOOD, +400, aur 900, cooldown-ul W
+1608,9 s). În client (`data/exe133/match_dariusaudit/final.png`): FIRST BLOOD, +400, aur 900, cooldown-ul W
 de 5 s care scade pe HUD.
 
 ### Accelerare: motor generic de abilități din date, pentru toți campionii (2026-10-05) [măsurat + aproximat]
@@ -1198,18 +1198,18 @@ de 5 s care scade pe HUD.
 Decizia utilizatorului: în loc de abilitate cu abilitate, un motor condus de datele jocului pentru toți cei 163 de
 campioni (648 de vrăji Q/W/E/R), aproximările marcate; campionii din replay (10) ajung 1:1 prin extragere automată.
 
-**Recensământ** (`research/exe133/spell_census.json`): 582 de vrăji au formule (`mSpellCalculations`), 397 proiectil,
+**Recensământ** (`data/exe133/spell_census.json`): 582 de vrăji au formule (`mSpellCalculations`), 397 proiectil,
 546 tip de țintire, 306 sunt conduse de script (flags & 4).
 
 **Unelte noi**:
-- `tools/sponge/bin_tree.py`: dump-ul `bainfo bin` transformat în structuri Python (liste, map-uri, structuri imbricate);
-- `tools/sponge/spell_calc.py`: evaluatorul formulelor (Number, EffectValue, NamedDataValue, StatByCoefficient,
+- `server/bin_tree.py`: dump-ul `bainfo bin` transformat în structuri Python (liste, map-uri, structuri imbricate);
+- `server/spell_calc.py`: evaluatorul formulelor (Number, EffectValue, NamedDataValue, StatByCoefficient,
   StatByNamedDataValue, StatBySubPart, Sum, Product, ByCharLevelInterpolation / Breakpoints / Formula, Clamp,
   BuffCounter, CooldownMultiplier, AbilityResource, GameCalculationModified / Conditional); **571 / 582** de vrăji se
   evaluează complet; numele calculelor (TotalDamage, BladeDamage…) din token-urile `@Nume@` ale tabelei de texte
   engleze (`Localized/Global.en_US.wad.client`, 11 669 de nume, hash FNV-1a). **Verificat**: Darius Q BladeDamage la rang
   1 cu AD 77,4 = 50 + 1,0 × 77,4 = **127,4 = exact 263 din replay** (113,76 s); W 1,4 × AD = 113,4 (167,2 s);
-- `tools/sponge/spell_engine.py`: forma vrăjii din date (țintire, castRange / castRangeDisplayOverride, castRadius,
+- `server/spell_engine.py`: forma vrăjii din date (țintire, castRange / castRangeDisplayOverride, castRadius,
   mLineWidth, con, missileSpeed), țintele nimerite (cerc pe sine / la punct, linie cu oprire la primul inamic, con,
   țintă cea mai apropiată de punctul țintit), daunele (calculul TotalDamage / Damage / …Damage; fizic dacă folosește AD,
   altfel magic dacă folosește AP — aproximare), momentul (pregătirea + drumul proiectilului);
@@ -1219,12 +1219,12 @@ campioni (648 de vrăji Q/W/E/R), aproximările marcate; campionii din replay (1
 vrăjile lui în sloturi; la orice 16 → 49 / 65 / 271 + motorul (lovituri, 263 cu tipul daunelor, viață, ucidere cu
 sursa {11, vraja, 2ac90000, slot, tip}); atacul de bază folosește datele campionului jucat.
 
-**Test cu Garen** (nu e în replay; `research/exe133/match_garenengine/sheet.png`, input real): Q / W / E / R în sloturi,
+**Test cu Garen** (nu e în replay; `data/exe133/match_garenengine/sheet.png`, input real): Q / W / E / R în sloturi,
 Ctrl+Q crește Q (la nivelul 1 un singur punct, ca în joc), click dreapta pe Alistar → atacuri cu AD-ul lui Garen (66,
 pregătire 0,3 s) „45”, Q → motorul: pe sine, rază 210, 129 brut → 89,6 după armură, apoi **FIRST BLOOD cu portretul
 lui Garen**, „+400”, Alistar mort.
 
-**Învățare automată în fundal** (`tools/sponge/batch_learn.sh`, rezultate în `research/exe133/codec/batch_learn.txt`):
+**Învățare automată în fundal** (`tools/batch_learn.sh`, rezultate în `data/exe133/codec/batch_learn.txt`):
 137 de tipuri de pachete din replay încă neînvățate; primele 16 învățate și verificate 100 % (98, 345, 578, 773, 790,
 387, 43, 774…); 117 și 730 au eșuat (de reluat).
 
@@ -1234,11 +1234,11 @@ primul inamic, mecanicile speciale ale vrăjilor conduse de script (dash-uri, tr
 
 ### Extragere automată din replay pentru toți cei 10 campioni (2026-10-05) [măsurat]
 
-`tools/sponge/auto_templates.py` face automat, pentru fiecare (campion, vrajă) lansată de cel puțin 3 ori, ce s-a
+`tools/auto_templates.py` face automat, pentru fiecare (campion, vrajă) lansată de cel puțin 3 ori, ce s-a
 făcut de mână la Darius W: pachetele lansatorului din tick-ul lansării, secvența cea mai frecventă ca șablon, fiecare
 câmp clasat FIXED / variabil pe toate lansările, plus efectele în secunda următoare (buff-uri puse de lansator: nume,
-tip, durată; daune: întârziere, tip). Ieșire: `research/exe133/templates/auto/<Campion>/<Vrajă>.json` +
-`index.json`; jurnal `research/exe133/auto_templates.log`. Pentru toți cei 10 campioni, inclusiv summoneri, obiecte,
+tip, durată; daune: întârziere, tip). Ieșire: `data/exe133/templates/auto/<Campion>/<Vrajă>.json` +
+`index.json`; jurnal `data/exe133/auto_templates.log`. Pentru toți cei 10 campioni, inclusiv summoneri, obiecte,
 trinket-uri. Exemple: Blitzcrank Q = [516, 49] (35 / 36), W = [49, 693, 65] (41 / 42), E = [49, 693, 259, 118, 465,
 271]; Jax E = [693, 49, 65, 693, 721, 467, 271]; Azir Q = [49, 259, 516, 49, 578, 271] (învelișul + vraja); Flash =
 [49, 578]. Plus **atacurile** fiecărui campion (592 pe slot și vrajă de atac: 0x40 / 0x41 de bază, 0x42 / 0x43 Lee Sin,
@@ -1253,7 +1253,7 @@ lansare armează atacul următor (cu resetare dacă eroul atacă), atacul folose
 campionului, daunele vin din calculul vrăjii, iar la lovire pleacă eliberarea; atacurile normale folosesc șabloanele
 de atac ale campionului. Tipul daunelor: fizic dacă formula folosește AD, altfel magic dacă folosește AP (aproximare).
 
-**Test cu Blitzcrank** (input real, `research/exe133/match_blitz_sheet.png`, `match_blitzarmed/powerfist.png`): Q
+**Test cu Blitzcrank** (input real, `data/exe133/match_blitz_sheet.png`, `match_blitzarmed/powerfist.png`): Q
 (RocketGrab: șablonul [516, 49] + motorul: proiectil 1800, „79” magic albastru), W (Overdrive [49, 693, 65]), E în
 timpul atacului → armat PowerFistAttack (0x2e), resetare, lovitura „82” cu efectul electric, eliberarea (522 pe slotul
 nostru, 118 înapoi). Ocolire de test: `--auto-skill "1,2"` (clientul nu cere creșterea lui W / E pentru alți campioni
@@ -1286,10 +1286,10 @@ din replay; lansarea = șablonul automat al vrăjii de la oricare campion (summo
 client (input real): F → Darius sare 400 spre cursor (clientul raportează apoi exact noua poziție), cooldown 300 pe HUD;
 D → Ghost. Notă: la începutul jocului D / F sunt în cooldown câteva secunde (clientul nu trimite nimic).
 
-**Minionii** (`tools/sponge/minions_table.py` → `research/exe133/minions.json`, `minion_hp.pkl`): 2349 de minioni; tipul
+**Minionii** (`tools/minions_table.py` → `data/exe133/minions.json`, `minion_hp.pkl`): 2349 de minioni; tipul
 din 98 +0x14 (04 corp la corp → 21 aur, 05 la distanță → 14 în 453 din replay; tun 57 din SR_LevelScript), +0x15 =
 valul, echipa după partea hărții unde apar, viața din replicarea replay-ului (grupul 3 bit 0). Serverul îi pune ca ținte
 (motorul de vrăji și atacul la click), viața pornește de la cea din replay în momentul loviturii și e apoi a noastră
 (grupul 3 al minionului scos din 595-urile replay-ului), moartea = 61 (cu ucigașul și sursa reală) + aurul pe tip.
-Test (`research/exe133/match_dariusminion/sheet.png`; ajutoare de test `--speed 3`, `--teleport "88:7150,7150"`, tasta
+Test (`data/exe133/match_dariusminion/sheet.png`; ajutoare de test `--speed 3`, `--teleport "88:7150,7150"`, tasta
 Y = camera blocată pe erou): Darius la mijloc, atacuri „64” (armură 0), sângerare, minionul 265 → 0, 21 de aur.

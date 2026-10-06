@@ -5,7 +5,7 @@ Fiecare comportament vine dintr-una din sursele de mai jos, în ordinea asta:
 
 1. **Datele jocului:** fișierele League (`.bin`, `.anm`, `.skl`, `.skn`, `.mapgeo`, `.aimesh_ngrid`, `.tex`), citite de parserele noastre,
    plus **metadatele claselor** (numele, tipurile și valorile implicite ale câmpurilor din `.bin`), extrase din joc de
-   comunitate (lol-meta-classes, servite de meta-api.leaguetoolkit.dev; copiile folosite sunt în `research/meta/`).
+   comunitate (lol-meta-classes, servite de meta-api.leaguetoolkit.dev; copiile folosite sunt în `data/meta/`).
 2. **Shader-ele jocului:** bytecode-ul DX11 compilat de Riot din `ShaderCache.dx11`. Fie îl dezasamblăm și reproducem formula, fie îl rulăm ca atare.
 3. **Măsurători pe jocul real:** înregistrări sau capturi din LoL, comparate cadru cu cadru.
 4. **Alegere proprie:** doar unde 1–3 nu spun nimic, marcată în cod și în tabelul de mai jos, cu motivul.
@@ -96,7 +96,7 @@ Unelte care nu definesc comportament (descărcarea wad-urilor prin `lolcdn.py`, 
 | Efectul de lovire: `mHitEffectKey` pe osul `mHitBoneName` al țintei, la momentul trimis de server | date | fidel; orientarea (`mHitEffectOrientType` 1/2) și dacă urmează osul: **de măsurat** |
 | Particulele rămase după oprire (`RenderParticlesAfterDestroy` implicit adevărat) | meta | fidel |
 | Dârele (`VfxPrimitiveArbitraryTrail` / `CameraTrail`): panglică prin particule în ordinea nașterii, lățimea din scara x, textura repetată la `mBirthTilingSize.x` | date + meta | sensul lui u, `mCutoff`, `mMode`: **de măsurat** |
-| `colorLookUpType`: 1 = viața particulei, 3 = aleator, 0 = niciuna, 2 = viața emițătorului | dedus din date (`research/lookup_stats.py`: emițătorii în buclă cu tipul 1 folosesc curbe de apariție-dispariție; tipul 3 apare la texturi „RandomRamp”) | corectat (înainte era 0 = viața, 1 = emițătorul, 2 = aleator, 3 = niciuna); tipul 2 **de măsurat** |
+| `colorLookUpType`: 1 = viața particulei, 3 = aleator, 0 = niciuna, 2 = viața emițătorului | dedus din date (`data/lookup_stats.py`: emițătorii în buclă cu tipul 1 folosesc curbe de apariție-dispariție; tipul 3 apare la texturi „RandomRamp”) | corectat (înainte era 0 = viața, 1 = emițătorul, 2 = aleator, 3 = niciuna); tipul 2 **de măsurat** |
 | Viteza de redare a clipului de atac = `spellCastTime` / windup (momentul autorat al loviturii cade la sfârșitul windup-ului) | lectura noastră a câmpurilor (`useAnimatorFramerate` implicit fals sugerează scalarea) | **neverificat → măsurătoare**; `castFrame` (Garen: 10) nu e folosit încă |
 | Clipul de atac rulează până la capăt, apoi unitatea revine la Idle/Run | date (lungimea .anm, fără `EndFrame`) | fidel la date; legătura cu cronometrul atacului **de măsurat** |
 | Moartea: clipul `Death` ținut pe ultimul cadru; păpușa moartă rămâne moartă | numele din graf; comportamentul după moarte e alegere proprie | **neverificat → măsurătoare** (în Practice Tool) |
@@ -113,7 +113,7 @@ Unelte care nu definesc comportament (descărcarea wad-urilor prin `lolcdn.py`, 
 | Piesa | Sursa | Stare |
 |---|---|---|
 | Codul shader-elor (VS + PS, toate cele 20 de `srx_blend_*`, `defaultenv*`, `vertexdeform`) | `ShaderCache.dx11.wad.client` din 14.1, rulat ca atare | fidel: nicio formulă rescrisă |
-| Alegerea variantei compilate | cuprinsul `TOC3.0`: cheia = XXH64 al definițiilor `NUME=VALOARE` sortate, lipite (găsită prin căutare, `research/toc_hash_search.py`; 4.096/4.096 chei decodate, 12.288 de verificări pe conținut fără nepotriviri, `tools/shader_toc.py`) | fidel |
+| Alegerea variantei compilate | cuprinsul `TOC3.0`: cheia = XXH64 al definițiilor `NUME=VALOARE` sortate, lipite (găsită prin căutare, `data/toc_hash_search.py`; 4.096/4.096 chei decodate, 12.288 de verificări pe conținut fără nepotriviri, `tools/shader_toc.py`) | fidel |
 | Definițiile: `featureDefines`, comutatoarele statice (`onByDefault`, suprascrise de `StaticMaterialSwitchDef`), `shaderMacros` ale materialului și ale pass-ului | `data/shaders/shaders.bin` (Shaders.wad) + materialul | fidel |
 | Starea motorului în definiții: fără ceața vederii (`DISABLE_FOW`) și fără hărți de umbre (`DISABLE_SHADOWS`), calitate maximă (fără `LOW_QUALITY_MODE`) | alegere proprie, până le implementăm | **temporar** |
 | Parametrii: `ParameterN` din definiție, cu valorile numite ale materialului puse în componentele măștii `fields` (1 x, 2 y, 4 z, 8 w, în ordine) | date + lectura noastră a măștii | dedus |
@@ -136,7 +136,7 @@ Regulile serverului nu sunt în client. Ordinea surselor a rămas aceeași: înt
 
 | Piesa | Sursa | Stare |
 |---|---|---|
-| Constantele modului de joc: rapoartele de daune între eroi, unități și clădiri (`dr_UnitToHero` 0,5, `dr_UnitToBuilding` 0,5), limitele întârzierii de atac (`gcd_AttackMinDelay` 0,4 s, `gcd_AttackMaxDelay` 5 s, deci viteza de atac 0,2–2,5), procentul de windup (`gcd_AttackDelayCastPercent` 0,3), viața inhibitorului (`bar_MaxHP` 4000), vindecarea platformei (`sp_*`) | date: `GameModeConstants` ale modului CLASSIC din `map11.bin` (141 de constante, lista în `research/m141/constants_classic.txt`) | fidel; plafonul de 3,003 pentru viteza de atac era din documentația de azi, acum vine din date |
+| Constantele modului de joc: rapoartele de daune între eroi, unități și clădiri (`dr_UnitToHero` 0,5, `dr_UnitToBuilding` 0,5), limitele întârzierii de atac (`gcd_AttackMinDelay` 0,4 s, `gcd_AttackMaxDelay` 5 s, deci viteza de atac 0,2–2,5), procentul de windup (`gcd_AttackDelayCastPercent` 0,3), viața inhibitorului (`bar_MaxHP` 4000), vindecarea platformei (`sp_*`) | date: `GameModeConstants` ale modului CLASSIC din `map11.bin` (141 de constante, lista în `data/m141/constants_classic.txt`) | fidel; plafonul de 3,003 pentru viteza de atac era din documentația de azi, acum vine din date |
 | Clădirile: poziții, benzi, niveluri (exterior, interior, de inhibitor, de nexus), înregistrarea fiecărui tip de turn | date: obiectele hărții (`GdsMapObject`), blocurile `SpawnAiTurret` ale scriptului de nivel, `objectcfg_srx.cfg` | fidel; turnurile de nexus iau înregistrarea `SR_Nexus` (dedus), cele de fântână `SRUAP_Turret_Order5/Chaos5` (dedus) |
 | Valurile: primul la 13 s, apoi la 30 s, 0,8 s între minioni, tunul la fiecare al 3-lea val (de la 850 s la al 2-lea, de la 1500 s la fiecare), super-minionii după inhibitori | date: `BarracksLevelController` | fidel; de la ce moment se numără cele 13 s (aici: intrarea primului campion) **de măsurat** |
 | Câți minioni corp la corp și cu baghetă are un val: datele spun `SpawnCount` 2, valul are 3 | documentat (3 de fiecare) + scriptul de nivel 4.20 (`DefaultNumPerWave` 3) | folosim 3; ce numără `SpawnCount` **de măsurat** |
@@ -267,7 +267,7 @@ opțiuni doar de test, ca „level up” și „teleport” din Practice Tool) �
 
 `DATA/FINAL/Scripts.wad.client` are 29.747 intrări: un manifest cu 18.924 de căi (`DATA/...lua`, intrarea de 1 MB; hash-ul căii =
 XXH64 al căii cu litere mici și extensia `.luabin64`), 18.924 de scripturi Lua 5.1 pe 64 de biți și 10.821 de fișiere `PreL`.
-Citire: `tools/wadx.py`, listare: `build-tools/luac51_x64.exe -l -l -p`; listările scripturilor de AI și de nivel sunt în `research/lua141/`.
+Citire: `tools/wadx.py`, listare: `tools/bin/luac51_x64.exe -l -l -p`; listările scripturilor de AI și de nivel sunt în `data/lua141/`.
 
 - **Vrăji și buff-uri** (`Characters/<Campion>/Spells/*.lua`, 11.882 de scripturi): doar steaguri și chei de efect (`BuffName`,
   `AutoBuffActivateEffect[N]` + `AutoBuffActivateAttachBoneName[N]`, `SpellFXOverrideSkins`, `PersistsThroughDeath`...). Doar 5 trec de 1000 de
@@ -282,8 +282,8 @@ Citire: `tools/wadx.py`, listare: `build-tools/luac51_x64.exe -l -l -p`; listăr
 Toate cele 365 de wad-uri, fiecare fișier după semnătura lui: ~400.000 de texturi DDS, 40.660 `.scb`, 38.602 `.anm`, 32.100 binuri,
 18.996 scripturi Lua, 15.272 `.tex`, 8.303 schelete + mesh-uri, 5.412 bănci de sunet Wwise, ~700 `.inibin`/`.troybin` vechi (DATA.wad),
 fișiere de comportament ale boților (`DATA/Characters/<C>/Scripts/<C>Bot.dat`, DATA2.wad), bytecode de shader DX9/DX11.
-Recensământul claselor din toate binurile (509 clase, 274.496 de intrări) e în `research/m141/class_census_141.txt`.
-Nume pentru câmpuri și clase: `research/hashes/` (din baza meta `research/meta/db.json`); `bainfo bin <wad> "{hash}" "" research/hashes`.
+Recensământul claselor din toate binurile (509 clase, 274.496 de intrări) e în `data/m141/class_census_141.txt`.
+Nume pentru câmpuri și clase: `data/hashes/` (din baza meta `data/meta/db.json`); `bainfo bin <wad> "{hash}" "" data/hashes`.
 
 Date de gameplay găsite și încă nefolosite (lista de lucru):
 - **Iteme**: binul de 4,9 MB din Global.wad (`{1d720f4f42640c18}`): 501 `ItemData`, 424 `SpellObject` ale itemelor, 224 `ItemGroup`;

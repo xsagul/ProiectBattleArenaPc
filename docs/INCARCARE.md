@@ -3,7 +3,7 @@
 ## Ce face clientul League (dovezi)
 
 **Ordinea reală, din jurnalul clientului Riot.** Clientul 4.20 de pe Desktop (`Desktop\4.20\Client\...\Logs\Game - R3d Logs\
-2026-10-02T02-30-23_r3dlog.txt`, rulat pe 2026-10-02) își scrie singur pașii (rezumat în `research/lcu141/r3dlog420_load.txt`):
+2026-10-02T02-30-23_r3dlog.txt`, rulat pe 2026-10-02) își scrie singur pașii (rezumat în `data/lcu141/r3dlog420_load.txt`):
 
 | t (s) | pas din jurnal | ce înseamnă |
 |---|---|---|
@@ -23,7 +23,7 @@
 
 Valorile de timp sunt din 2014 (clientul 4.20); ordinea și arhitectura sunt ce folosim, nu cifrele.
 
-**Ecranul însuși, în 14.1** (UI.wad.client, `research/m141/loading/`):
+**Ecranul însuși, în 14.1** (UI.wad.client, `data/m141/loading/`):
 - `loadingscreen.bin`: starea de client „LoadingScreen”; pentru CLASSIC / PRACTICETOOL / ARAM ... încarcă trei
   view controllere: `LoadingScreenClassic`, `PlayerCards/PlayerCardsClassic`, `PlayerCardSwitcher`.
 - `loadingscreen.loadingscreenclassic.bin` (LoadingScreenClassicViewController): fundalul (al modului), bara de progres și

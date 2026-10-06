@@ -1,11 +1,11 @@
-"""Reads the page layouts out of a client plugin's script (lcu-data/<patch>/plugins/<plugin>/global/default/<plugin>.js).
+"""Reads the page layouts out of a client plugin's script (data/lcu/<patch>/plugins/<plugin>/global/default/<plugin>.js).
 
 Riot's out-of-game client is made of Ember components; each component's layout (its .hbs template) ships compiled into
 the plugin's script as data: Ember.HTMLBars.template({id, block: '<JSON>'}) where the JSON lists the statements of the
 template (open-element, static-attr, dynamic-attr, text, append, block ...). This turns each one back into readable
 Handlebars text, so the pages can be rebuilt with the same elements, classes and texts:
 
-    python tools/lcu_templates.py <plugin>          writes research/lcu141/templates/<plugin>/<component>.hbs
+    python tools/lcu_templates.py <plugin>          writes data/lcu141/templates/<plugin>/<component>.hbs
 
 The component's name is taken from the template-path comment Riot's build leaves in each template.
 """
@@ -17,8 +17,8 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 PATCH = os.environ.get('LCU_PATCH', '14.1')         # LCU_PATCH=13.3 for the 13.3 client's plugins
-PLUGINS = os.path.join(ROOT, 'lcu-data', PATCH, 'plugins')
-OUT = os.path.join(ROOT, 'research', 'lcu' + PATCH.replace('.', ''), 'templates')
+PLUGINS = os.path.join(ROOT, 'data', 'lcu', PATCH, 'plugins')
+OUT = os.path.join(ROOT, 'data', 'lcu' + PATCH.replace('.', ''), 'templates')
 
 
 def path(p):

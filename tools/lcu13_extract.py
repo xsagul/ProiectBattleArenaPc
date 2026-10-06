@@ -1,5 +1,5 @@
 """The League Client 13.3 front-end files (rcp-fe-* plugins, and rcp-be-lol-game-data's assets) out of the local
-install (Desktop\\lol13.3-clients\\LeagueClient\\Plugins\\<plugin>\\assets.wad), into lcu-data/13.3/plugins/<plugin>/
+install (Desktop\\lol13.3-clients\\LeagueClient\\Plugins\\<plugin>\\assets.wad), into data/lcu/13.3/plugins/<plugin>/
 global/default/... -- the same layout lobby.exe serves.
 
 The wads name their entries by xxh64 of the path "plugins/<plugin>/global/default/<file>" (checked: index.html,
@@ -19,11 +19,12 @@ import xxhash
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, '..')
 sys.path.insert(0, HERE)
+sys.path.insert(0, os.path.join(HERE, '..', 'server'))
 from wadx import Wad  # noqa: E402
 
 LCU = r'C:\Users\Sorin\Desktop\lol13.3-clients\LeagueClient\Plugins'
-OUT = os.path.join(ROOT, 'lcu-data', '13.3', 'plugins')
-CACHE = os.path.join(ROOT, 'research', 'clients133', 'cdragon_lists')
+OUT = os.path.join(ROOT, 'data', 'lcu', '13.3', 'plugins')
+CACHE = os.path.join(ROOT, 'data', 'clients133', 'cdragon_lists')
 
 
 def cdragon_list(version, plugin):
@@ -53,7 +54,7 @@ def cdragon_list(version, plugin):
 
 
 def local_141(plugin):
-    base = os.path.join(ROOT, 'lcu-data', '14.1', 'plugins', plugin, 'global', 'default')
+    base = os.path.join(ROOT, 'data', 'lcu', '14.1', 'plugins', plugin, 'global', 'default')
     out = []
     for d, _, fs in os.walk(base):
         for f in fs:

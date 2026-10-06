@@ -1,6 +1,6 @@
 // The League Client 13.3 shadow-DOM elements (<lol-uikit-*> in rcp-fe-lol-uikit, <lol-regalia-*> and others in
 // rcp-fe-lol-shared-components): each element's template and style sheet ship inside the plugin's script as small
-// webpack modules. This lists them as data (lobby/www13/uikit/elements*.json: tag -> {template, css, attrs}) so the
+// webpack modules. This lists them as data (launcher/www/uikit/elements*.json: tag -> {template, css, attrs}) so the
 // page can attach the same shadow content with its own element classes.
 // Only the string modules are evaluated (a template module is e.exports='...'; a style module pushes a CSS string
 // built from literals and asset modules, e.exports=publicPath+'file.png' or a data: URL), with a stub require; the
@@ -10,8 +10,8 @@ const fs = require('fs');
 const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const PLUGIN = process.argv[2] || 'rcp-fe-lol-uikit';
-const SRC = path.join(ROOT, `lcu-data/13.3/plugins/${PLUGIN}/global/default/${PLUGIN}.js`);
-const OUT = path.join(ROOT, 'lobby/www13/uikit', PLUGIN === 'rcp-fe-lol-uikit' ? 'elements.json' : `elements-${PLUGIN.replace('rcp-fe-lol-', '')}.json`);
+const SRC = path.join(ROOT, `data/lcu/13.3/plugins/${PLUGIN}/global/default/${PLUGIN}.js`);
+const OUT = path.join(ROOT, 'launcher/www/uikit', PLUGIN === 'rcp-fe-lol-uikit' ? 'elements.json' : `elements-${PLUGIN.replace('rcp-fe-lol-', '')}.json`);
 const s = fs.readFileSync(SRC, 'utf8');
 // "(function(e){...bootstrap...;t.p='/fe/<name>/',...})([modules])": keep the array, read the public path
 const end = s.indexOf('})([');

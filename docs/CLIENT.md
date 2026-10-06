@@ -11,7 +11,7 @@ plugin-runner, lock-and-load, skins-picker, audio, kickout, plus din `rcp-be-lol
 campioni (`champion-summary.json`, `champions/<id>.json`, iconițe, splash-uri, replici la alegere).
 
 **Paginile:** fiecare componentă Ember își are layout-ul (.hbs) compilat în scriptul pluginului, ca date.
-`tools/lcu_templates.py <plugin>` le scrie înapoi ca text în `research/lcu141/templates/<plugin>/` (60 pentru
+`tools/lcu_templates.py <plugin>` le scrie înapoi ca text în `data/lcu141/templates/<plugin>/` (60 pentru
 champ-select, 119 parties, 65 navigation, 39 social, 76 shared-components). Clasele de stare ale fiecărei componente
 (`classNameBindings`) se citesc din același script.
 

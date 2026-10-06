@@ -1,7 +1,7 @@
 """Minion facts from real Riot server replays (maknee's decoded packets, patch 13.2): wave spawn timing, minion vs
 minion / champion / turret damage values and the time between one minion's hits, turret shots on minions.
 
-    python tools/replay13_minions.py research/replays/maknee13_2/batch_001.jsonl.gz [matches]
+    python tools/replay13_minions.py data/replays/maknee13_2/batch_001.jsonl.gz [matches]
 """
 import collections
 import gzip
