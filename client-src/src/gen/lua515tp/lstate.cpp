@@ -1,0 +1,4 @@
+// Lua 5.1.5 (lua.org), compiled by Riot as C++ (default standard: C++14): lstate.c, the functions of it that are in the client (tools/match_objs.py).
+// match: c17e50 ?lua_close@@YAXPAUlua_State@@@Z -O2
+// match: c18010 ?preinit_state@@YAXPAUlua_State@@PAUglobal_State@@@Z -O2
+#include "../../../../tools/third_party/lua-5.1.5/src/lstate.c"

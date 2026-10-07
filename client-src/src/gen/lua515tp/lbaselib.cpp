@@ -1,0 +1,35 @@
+// Lua 5.1.5 (lua.org), compiled by Riot as C++ (default standard: C++14): lbaselib.c, the functions of it that are in the client (tools/match_objs.py).
+// match: c22890 ?luaB_error@@YAHPAUlua_State@@@Z -O2
+// match: c228f0 ?luaB_getmetatable@@YAHPAUlua_State@@@Z -O2
+// match: c22940 ?luaB_setmetatable@@YAHPAUlua_State@@@Z -O2
+// match: c229c0 ?luaB_getfenv@@YAHPAUlua_State@@@Z -O2
+// match: c22ab0 ?luaB_rawequal@@YAHPAUlua_State@@@Z -O2
+// match: c22ae0 ?luaB_rawget@@YAHPAUlua_State@@@Z -O2
+// match: c22b20 ?luaB_rawset@@YAHPAUlua_State@@@Z -O2
+// match: c22b60 ?luaB_gcinfo@@YAHPAUlua_State@@@Z -O2
+// match: c22c40 ?luaB_type@@YAHPAUlua_State@@@Z -O2
+// match: c22c70 ?luaB_next@@YAHPAUlua_State@@@Z -O2
+// match: c22cb0 ?luaB_loadstring@@YAHPAUlua_State@@@Z -O2
+// match: c22d10 ?luaB_loadfile@@YAHPAUlua_State@@@Z -O2
+// match: c22d50 ?luaB_load@@YAHPAUlua_State@@@Z -O2
+// match: c22db0 ?luaB_dofile@@YAHPAUlua_State@@@Z -O2
+// match: c22e00 ?luaB_assert@@YAHPAUlua_State@@@Z -O2
+// match: c22e50 ?luaB_unpack@@YAHPAUlua_State@@@Z -O2
+// match: c22ef0 ?luaB_select@@YAHPAUlua_State@@@Z -O2
+// match: c22f70 ?luaB_pcall@@YAHPAUlua_State@@@Z -O2
+// match: c22fc0 ?luaB_xpcall@@YAHPAUlua_State@@@Z -O2
+// match: c23120 ?luaB_costatus@@YAHPAUlua_State@@@Z -O2
+// match: c23170 ?luaB_coresume@@YAHPAUlua_State@@@Z -O2
+// match: c231f0 ?luaB_cocreate@@YAHPAUlua_State@@@Z -O2
+// match: c23250 ?luaB_cowrap@@YAHPAUlua_State@@@Z -O2
+// match: c232c0 ?luaB_yield@@YAHPAUlua_State@@@Z -O2
+// match: c232e0 ?luaB_corunning@@YAHPAUlua_State@@@Z -O2
+// match: c23310 ?auxresume@@YAHPAUlua_State@@0H@Z -O2
+// match: c233e0 ?costatus@@YAHPAUlua_State@@0@Z -O2
+// match: c234a0 ?generic_reader@@YAPBDPAUlua_State@@PAXPAI@Z -O2
+// match: c23520 ?getfunc@@YAXPAUlua_State@@H@Z -O2
+// match: c236b0 ?luaB_ipairs@@YAHPAUlua_State@@@Z -O2
+// match: c236f0 ?luaB_newproxy@@YAHPAUlua_State@@@Z -O2
+// match: c237d0 ?luaB_pairs@@YAHPAUlua_State@@@Z -O2
+// match: c23810 ?luaopen_base@@YAHPAUlua_State@@@Z -O2
+#include "../../../../tools/third_party/lua-5.1.5/src/lbaselib.c"

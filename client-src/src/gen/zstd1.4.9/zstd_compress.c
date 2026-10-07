@@ -1,0 +1,30 @@
+// zstd 1.4.9 (facebook/zstd), compiled by Riot as C: zstd_compress.c, the functions of it that are in the client (tools/match_objs.py).
+// match: c4c6f0 _ZSTD_adjustCParams_internal -O2
+// match: c4caa0 _ZSTD_clearAllDicts -O2
+// match: c4cb90 _ZSTD_compressBlock_internal -O2
+// match: c4ccc0 _ZSTD_compressCCtx -O2
+// match: c4cde0 _ZSTD_compressContinue_internal -O2
+// match: c4cf70 _ZSTD_compressEnd -O2
+// match: c4d0a0 _ZSTD_compress_frameChunk -O2
+// match: c4d3d0 _ZSTD_copyBlockSequences -O2
+// match: c4d670 _ZSTD_createCStream -O2
+// match: c4d6e0 _ZSTD_cwksp_reserve_aligned -O2
+// match: c4d740 _ZSTD_entropyCompressSequences -O2
+// match: c4d7c0 _ZSTD_entropyCompressSequences_internal -O2
+// match: c4dce0 _ZSTD_estimateCCtxSize_usingCCtxParams_internal -O2
+// match: c4de50 _ZSTD_freeCStream -O2
+// match: c4dec0 _ZSTD_freeCCtxContent -O2
+// match: c4df10 _ZSTD_getCParams_internal -O2
+// match: c4e0d0 _ZSTD_initCCtx -O2
+// match: c4e170 _ZSTD_isRLE -O2
+// match: c4e270 _ZSTD_overflowCorrectIfNeeded -O2
+// match: c4e3f0 _ZSTD_reduceTable -O2
+// match: c4e440 _ZSTD_resetCCtx_internal -O2
+// match: c4ed20 _ZSTD_resetSeqStore -O2
+// match: c4ed40 _ZSTD_reset_compressedBlockState -O2
+// match: c4ed90 _ZSTD_reset_matchState -O2
+// match: c4f000 _ZSTD_rleCompressBlock -O2
+// match: c4f040 _ZSTD_selectBlockCompressor -O2
+// match: c4f060 _ZSTD_seqToCodes -O2
+// match: c4f200 _ZSTD_writeFrameHeader -O2
+#include "../../../../tools/third_party/zstd-1.4.9/lib/compress/zstd_compress.c"

@@ -1293,3 +1293,380 @@ valul, echipa după partea hărții unde apar, viața din replicarea replay-ului
 (grupul 3 al minionului scos din 595-urile replay-ului), moartea = 61 (cu ucigașul și sursa reală) + aurul pe tip.
 Test (`data/exe133/match_dariusminion/sheet.png`; ajutoare de test `--speed 3`, `--teleport "88:7150,7150"`, tasta
 Y = camera blocată pe erou): Darius la mijloc, atacuri „64” (armură 0), sângerare, minionul 265 → 0, 21 de aur.
+
+## Reconstrucția sursei: Ghidra, compilatorul lui Riot, prima funcție identică (2026-10-06)
+
+**Spațiul de lucru Ghidra.** `tools/ghidra.sh import|decomp|names` (Ghidra 12.1.4 fără interfață) ține exe-ul despachetat în
+`client-src/ghidra/BA13.gpr`, cu numele noastre din `client-src/names.tsv` (1.331 de funcții și 910 etichete, doar nume
+măsurate; `tools/ghidra_names.py`). Exportul pseudo-C: `client-src/decomp/text_<rva>.c` + `index.tsv`, 60.454 de funcții,
+13 eșuate. E material de citit, nu se compilează.
+
+**Compilatorul, măsurat din Rich header-ul lui `game/League of Legends.exe`** (link 2023-02-06, linker 14.32):
+
+| Ce | Build | Obiecte |
+|---|---|---|
+| codul lui Riot + linker, export, resurse | 31328 | 90 C, 62 C++ |
+| biblioteca VC legată static (libcmt / libvcruntime / libcpmt) | 30818 | 23 C, 94 C++, 35 MASM, 5 alias |
+| ucrt legat static | 27412 | 53 C, 220 C++, 55 MASM |
+| biblioteci gata compilate | 30709 (561 C), 31106, 27031, 27702, 29333, VS 2003-2008 | |
+
+Fără intrări LTCG. Niciun DLL de CRT printre cele 430 de importuri. Build 31328 este exact Visual Studio 2022 **17.2.0**
+(pachetul Tools 14.32.31328); `tools/get_msvc.py` îl aduce din canalul fix al lui Microsoft pentru 17.2.0 în
+`toolchain/msvc-14.32.31328` (`cl` 19.32.31328, `link` 14.32.31328; bibliotecile lui au build 30818, ca în exe). Prima
+descărcare (LTSC 17.2 la zi, build 31342) era alt build și a fost ștearsă. SDK-ul Windows al lui Riot nu e încă
+identificat: cele instalate au ucrt cu build 30795 (22621) și 33145 (26100), nu 27412.
+
+**Prima funcție identică.** `client-src/src/LNP_Crc32.cpp` (rva 0x2de720), compilată cu `cl -O2`, dă exact cei 474 de octeți
+ai clientului (`python tools/match_func.py client-src/src/LNP_Crc32.cpp Crc@LnpDatagram 2de720 -O2`; octeții acoperiți de
+relocări, 80 aici, nu se compară). Ce arată funcția asta despre opțiuni:
+
+| Opțiune | Rezultat |
+|---|---|
+| `-O2`, `-Ox` | identic (nu le deosebește) |
+| `-O1`, `-Od` | diferit (182 / 245 de octeți) |
+| `-Oy-` (cu frame pointer) | diferit: Riot omite frame pointer-ul |
+| `-arch:IA32` | diferit (4 octeți); implicitul SSE2 și `-arch:AVX2` sunt identice aici |
+| `-GS-`, `-Gy -Gw`, `-fp:fast`, `-GR-`, `-MT`/`-MD`, `-std:c++17/20`, `-Ob1`/`-Ob3`, `-Zi` | fără efect pe funcția asta: nemăsurate |
+
+Octeți identici dovedesc compilatorul și opțiunile, nu și scrierea sursei: forma găsită (suma ținută într-un obiect mic,
+contorul ultimei bucle inițializat înaintea pointerului) e una care dă aceiași octeți; cu suma într-o variabilă simplă
+ies 464 de octeți, cu contorul declarat după pointer diferă un octet. În Git Bash opțiunile se dau cu `-`, nu cu `/`
+(`/O2` e transformat în cale).
+
+**Scorul (2026-10-06, seara).** `python tools/match_all.py` compilează tot ce e în `client-src/src/` și compară fiecare
+funcție declarată cu `// match: <rva> <simbol>`: 6 din 6 identice.
+
+| rva | Octeți | Sursă | Ce a arătat în plus |
+|---|---|---|---|
+| 0x146910 | 5 | `Game_SmallPredicates.cpp` (`C2SPacket::Read`) | |
+| 0x19ccc0 | 149 | `Replication_RegisterClass.cpp` | bitul se calculează o dată, înaintea ramurii; ordinea a două declarații contează |
+| 0x2de720 | 474 | `LNP_Crc32.cpp` | `-O2`, fără frame pointer |
+| 0x3630c0 | 29 | `Game_SmallPredicates.cpp` (`GameClient::HasLocalSlot`) | în `names.tsv` se numește `Game_OnConnected`, dar e un predicat: octetul +0x1a8 pus și slotul +0x1a7 în 1..51 |
+| 0x370810 | 191 | `Net_PerFrame.cpp` | **`-arch:SSE2`** exact (`-arch:AVX`, `-arch:SSE`, `-arch:IA32` diferă); `-fp:precise/fast/strict` dau aceiași octeți aici |
+| 0x9d42e0 | 221 | `Pool_Free.cpp` | lista `{ a, b }` din `for` (cadru de 16 octeți); a doua citire a pointerului de layout e una pe care compilatorul nu are voie s-o unească cu prima (volatile / atomic) |
+
+Metoda când nu iese din prima: o grilă generată de forme de sursă, compilate într-un singur fișier și ordonate după
+primul octet diferit (funcțiile ajutătoare cu `__forceinline`, altfel compilatorul nu le mai pune inline când au zeci de
+apelanți în fișierul de test).
+
+**Compilatoarele de pe sistem.** Visual Studio Build Tools 2022 17.14 (MSVC 14.44) și Windows SDK 22621 / 26100 au fost
+dezinstalate (cu acordul utilizatorului); pe PC rămân doar `toolchain/msvc-14.32.31328` (compilatorul lui Riot) și
+`toolchain/llvm-mingw` (pentru `ba_host.dll`, buretele `d3d11.dll`, `bainfo`). Fără SDK nu există anteturi Windows /
+ucrt: sursele reconstruite își declară singure ce folosesc (`initializer_list_min.h`), până identificăm SDK-ul lui Riot
+(ucrt cu build 27412).
+
+**SDK-ul lui Riot, biblioteca standard și codul de bibliotecă (2026-10-06, mai târziu).**
+
+- *SDK-ul Windows*: `tools/get_winsdk.py get <versiune>` despachetează părți ale unui SDK din pachetele Microsoft în
+  `toolchain/` (`msiexec /a`, fără instalare), iar `check` citește build-ul compilatorului din `libucrt.lib`: 10.0.18362
+  → 26715, **10.0.19041 → 27412**, exact cât au obiectele ucrt din exe (22621 → 30795, 26100 → 33145). În proiect e
+  `toolchain/winsdk-10.0.19041` (doar partea ucrt: anteturi, biblioteci, surse); 20348 și 22000 nu au fost verificate.
+  Anteturile Windows propriu-zise (`um`, `shared`) nu sunt încă aduse: `get_winsdk.py get 10.0.19041 headers`.
+- *Biblioteca standard se potrivește singură*: instanțiate din anteturile MSVC 14.32, `std::map<i64, T*>::operator[]`
+  (rva 0x2d9f00, 140 de octeți), `_Find_lower_bound` (0x2d3f40, 85), `_Insert_node` (0x124b60, 489) și
+  `_Throw_tree_length_error` (0x125680, 10) ies identice cu `-O2`. Cu `-EHsc`, `operator[]` are 197 de octeți și un cadru
+  de excepții pe care clientul nu-l are: **codul ăsta e compilat fără `/EH`**. `/GS` e pornit: funcția de la
+  rva 0x324f50 (tampon de 260 de octeți) își pune cookie-ul de la rva 0x18d5504.
+- *Contextul fișierului contează la inline*: singură într-un fișier, `Write` primește `operator[]` inline (554 de octeți);
+  cu încă un utilizator al aceluiași `operator[]` în fișier rămâne apel, ca la Riot.
+- *Cod de bibliotecă găsit prin octeți* (`tools/match_libs.py` → `client-src/lib_functions.tsv`): fiecare funcție din
+  `libcmt`, `libvcruntime`, `libcpmt` (MSVC 14.32) și `libucrt` (SDK 19041) comparată cu funcțiile clientului, fără
+  octeții relocați: **1.384 de funcții ale clientului sunt cod de bibliotecă** (236.017 octeți; ucrt 903, libcpmt 366,
+  libvcruntime 68, libcmt 47). De exemplu rva 0xf5e4f9 = `free`, 0xf59b30 = `memmove`. Pragul e de 16 octeți, iar
+  funcțiile cu relocare în primii 4 octeți sunt sărite, deci numărul real e mai mare.
+- *Scor*: `match_all.py` → 11 din 12 identice (cele 6 de mai sus, `LnpBuffer::Reserve` 0x2ee3a0 - numărătorul de
+  referințe e `std::atomic` -, și cele 4 din `std::map`). `LNP_WriteDatagram` (0x2efe50) are structura corectă
+  (aceleași apeluri, în aceeași ordine: CRC, număr, sumă, octet de steag, masca de confirmări dacă numărul e negativ,
+  conținut, apoi cifru - inversare - cifru) dar încă nu e identică: 408 octeți față de 437.
+- *Nume corectate*: 0x3630c0 = `Game_IsConnected` (predicat; apelantul 0x324f50 scrie „Game Server Connection
+  Established"), iar funcția obiectelor de hartă începe la 0x2e8f80 (`MapObjects_AssignNetIds`), 0x2e9090 fiind doar
+  bucla ei de CRC. `ApplyNames.java` știe acum să desfacă un început de funcție greșit (`unfunc`).
+
+**Verificarea țintelor și codul de bibliotecă lărgit (2026-10-06, seara târziu).**
+
+- `match_func.py` nu mai compară doar octeții: unde clientul apelează sau adresează ceva care are nume în
+  `client-src/names.tsv` (cod de bibliotecă, importuri, funcții numite de mână), simbolul din obiectul nostru trebuie să
+  fie același. Octeții relocați ascundeau greșeli reale: `Net_PerFrame` apela `__ltod3` (cu semn) unde clientul are
+  `__ultod3` - contorul de timp e fără semn; `Crt_Free` al nostru era `free` din ucrt. Corectate; scorul rămâne 11 din 12.
+- `match_libs.py`, lărgit: prag de 8 octeți nerelocați, candidați aleși după primii 4 octeți nerelocați (nu doar de la
+  început), funcțiile din asamblare tăiate doar la simboluri de funcție, și capătul funcției trebuie să cadă pe
+  umplutură sau pe începutul funcției următoare. **1.687 de funcții ale clientului sunt cod de bibliotecă** (283.158
+  octeți); `lib_functions.tsv` ține și toate simbolurile care au aceiași octeți (ex. 0xf59b30 = `memcpy` și `memmove`,
+  1.396 de octeți). Numele sunt în `names.tsv` (3.930 de intrări cu nume) și aplicate în Ghidra.
+- `LNP_WriteDatagram` (0x2efe50): 437 de octeți ca la client, 235 identici. Ce a contat: toate adăugările trec prin
+  aceeași funcție generică de octeți a tamponului (cu verificarea de lungime zero); steagul se dă prin valoare; masca de
+  confirmări e copiată înainte de mărirea tamponului; criptarea e o funcție inline care primește id-ul peer-ului prin
+  valoare. Rămase: copierea numărului (`mov ax` la client, `movzx` la noi) și păstrarea lungimii în registru după mască.
+  La căutările pe funcții mari, scorul util e asemănarea instrucțiunilor (`difflib`), nu primul octet diferit.
+
+**Cititorul de datagrame și fișierul comun (2026-10-06, noaptea).**
+
+- `client-src/src/LnpDatagram.cpp` ține acum împreună suma de control, scrierea și citirea. Cu amândouă în același
+  fișier, `operator[]` al `std::map` rămâne apel în ambele, ca în client, fără utilizatorul de umplutură de înainte
+  (singură într-un fișier, fiecare îl primea inline): Riot le avea în același fișier.
+- `LNP_ReadDatagram` (rva 0x2dceb0): **497 de octeți din 497, 493 identici**. Ce a arătat potrivirea:
+  - tamponul are un cursor de citire (`u16` la +8), iar citirile sunt „dacă încape: citește, avansează, adevărat";
+  - masca de confirmări este un `std::bitset<64>`: doar cu el înregistrarea temporară primește cei 8 octeți puși pe
+    zero ca bloc (`movq`) înainte de atribuire, ca în client; cu un număr simplu compilatorul elimină zeroul
+    (491 de octeți);
+  - la +0x18 e o înregistrare de 16 octeți {`short` numărul confirmat = minus numărul datagramei, masca}, copiată
+    întreagă;
+  - decriptarea întoarce devreme când criptarea e oprită; rezultatele se adună cu `&=`, iar rezultatul final e o
+    variabilă separată (`ReadBuffer(...) & ok`); suma se compară ca `crc == Crc()`.
+  - Cei 4 octeți rămași sunt în bucla de inversare a octeților: clientul adresează `[body + index]`, noi
+    `[index + body]`. Aceeași buclă e și în `Write`, cu aceeași diferență. 25 de forme de sursă ale buclei dau
+    același cod; `std::reverse` nu e (devine apel de bibliotecă).
+- `LNP_WriteDatagram` scrie masca direct din `ack.mask.to_ullong()` (un temporar, de aceea e citită înainte de
+  mărirea tamponului). Rămâne la 235 din 437.
+- Scor: 11 identice din 13. La aplicarea numelor în Ghidra, 194 de nume de bibliotecă au fost respinse (motivul nu
+  e încă văzut: scriptul înghite excepția).
+
+**Tamponul, mesajul și corecția la codul de bibliotecă (2026-10-06 spre 07).**
+
+- `LnpBuffer::ReadBuffer` (rva 0x2ed2f0): identică, 102 octeți (`LnpBuffer_Read.cpp`; în același fișier cu `Reserve`,
+  compilatorul o pune pe aceasta inline, iar clientul o apelează).
+- Constructorul de copiere al mesajului (rva 0x2d5c00): identic, 151 de octeți, scris de compilator din membri
+  (`LnpMessage.cpp`: `= default` în afara clasei). A fixat structura mesajului (0x34 octeți, tamponul la +0x24) și
+  faptul că tamponul are constructor de copiere care împarte blocul și crește numărătorul, și destructor.
+  `LnpBuffer::Release` (scade numărătorul, eliberează la zero) e folosită și de `Reserve`, și de destructor.
+- `LNP_AppQueueObserver` (rva 0x2e0cd0): 114 octeți ca la client, 90 identici. Un mesaj cu conținut devine un eveniment
+  de tip 2 în coada de la +0x80. Diferă ordinea în care sunt scrise primele câmpuri ale evenimentului și felul în care
+  sunt puși pe zero cei doi octeți de la +0x10.
+- `LNP_SetupChannels` (rva 0x2edff0): amânată; atinge patru containere ale căror tipuri nu le știm încă.
+- **Corecție la codul de bibliotecă.** Din cele 1.687 de funcții găsite, doar **1.236** se potrivesc cu o funcție de
+  bibliotecă întâlnită o singură dată în client. Restul de 451 sunt aceeași formă de cod la mai multe adrese (de
+  exemplu `std::use_facet<...>` la 32 de adrese): cod de șablon care diferă doar prin ce indică relocările, deci
+  simbolul găsit e „unul ca acesta", nu neapărat cel real. În `names.tsv` acestea poartă sufixul `__x<N>_<rva>`, iar
+  `match_func.py` nu le folosește la verificarea țintelor. `lib_functions.tsv` are coloana 8 = la câte adrese apare.
+- Scor: 13 identice din 16.
+
+**Runda cu funcțiile vecine (2026-10-07).** Scor: `match_all.py` → 19 identice din 22.
+
+- Observatorul cozii (rva 0x2e0cd0) e acum identic: funcția vecină (coada, rva 0x2ed000) copiază octeții de la +0x10 și
+  +0x11 ai evenimentului unul câte unul, deci sunt două câmpuri de un octet, nu un `u16`; cu ele compilatorul scrie
+  zeroul ca la client. Lecția: când o structură nu iese, citește funcțiile vecine care o copiază.
+- Atribuirea prin mutare a mesajului (rva 0x2d98c0, 182 de octeți) e identică, scrisă de compilator din membri;
+  mutarea tamponului: eliberează blocul propriu, ia câmpurile, apoi golește sursa (`data = nullptr` primul).
+  Adresa numărătorului se formează acolo pas cu pas dintr-un pointer testat (`--count`), altfel compilatorul scrie
+  `add ecx, -4` în loc de `sub ecx, 4`.
+- Pompa transportului văzută de joc (rva 0x2dbdc0, 3 instrucțiuni) și trei funcții mici (`Transport_Small.cpp`: rva
+  0x2dbe90, 0x2f05f0, 0x2d08d0) sunt identice. A patra, rva 0x2e4990 (obiectul are ceva la +0x74 și
+  `[General] EnableReplayApi` e pus), e la 27 din 35.
+- `match_func.py` compară acum și constantele: un literal de șir sau o valoare în virgulă mobilă din obiectul nostru
+  trebuie să aibă aceiași octeți ca ținta din client.
+- Deschise, de reluat când înțelegem mai mult: `LNP_WriteDatagram` (235/437), `LNP_ReadDatagram` (493/497), rva
+  0x2e4990 (27/35), `LNP_SetupChannels`, coada de evenimente rva 0x2ed000 (memorie pe fir, coadă fără lacăt).
+
+**Mesajele: scriere, citire și adăugarea generică (2026-10-07, continuare).** Scor: 22 identice din 26.
+
+- `tools/callers.py <rva>` listează cine apelează o funcție (cu mărimi și nume): așa au ieșit la iveală scriitorul
+  și cititorul de mesaje.
+- Adăugarea generică în tampon există și ca funcție separată (rva 0x2d2d60, 62 de octeți): identică; întoarce mereu
+  adevărat. `std::_Destroy_range` pentru mesaje (rva 0x2d2da0, 57 de octeți) e identică și a fixat forma
+  destructorului de tampon (`Drop`: pointer testat, apoi `--count`), aceeași care potrivește și mutarea.
+- **Scriitorul de mesaje (rva 0x2efcc0, 391 de octeți): identic.** Antetul de 16 biți = lungimea conținutului << 3 |
+  bit 2 „același canal ca mesajul dinainte" | bit 1 „numărul e cel dinainte plus unu" | bit 0 „fragment"; urmează doar
+  ce nu spune antetul: canalul, numărul, id-ul / numărul / indexul fragmentului, apoi conținutul. E exact formatul
+  măsurat pe fir la transport. Antetul e scris ca octeți (adăugarea generică), câmpurile ca valori tipizate (`Put`):
+  amândouă formele există în codul lui Riot. Câmpurile mesajului au acum nume: număr (+8), canal (+0xb), fragment
+  (+0x18, +0x1a, +0x1b), text (+0x30).
+- Cititorul de mesaje (rva 0x2dcd40): 282 din 360 (clientul are 357). Instrucțiunile sunt cele ale clientului; diferă
+  ce ține compilatorul în registru (noi `previous`, clientul lungimea tamponului).
+- Cele 194 de nume „respinse" de Ghidra nu erau o problemă: excepția spune că numele exista deja la acea adresă,
+  adică analiza proprie a lui Ghidra recunoscuse aceleași funcții de bibliotecă - o confirmare independentă.
+- `LNP_WriteDatagram` rămâne la 235: 72 de combinații între adăugarea tipizată și cea generică nu schimbă nimic.
+
+**Reluarea celor patru funcții deschise (2026-10-07).** Scor: 23 identice din 26.
+
+- **`LNP_ReadDatagram` (rva 0x2dceb0): identică, 497 de octeți.** Cheia: octeții dați cifrului sunt o mică
+  înregistrare `LnpBytes { u16 size; u8* data; }` trecută prin valoare, nu doi parametri. Doar așa compilatorul adresează
+  octeții din bucla de inversare ca `[start + index]`; cu lungimea scrisă înaintea pointerului ies și registrele
+  clientului. Drumul până acolo: un fișier de probă cu 12 forme ale buclei arătat prin ce se schimbă ordinea bază / index
+  (pointerul trebuie *încărcat* după ce contoarele sunt inițializate - o copie nu contează).
+- `match_func.py`: o țintă care e ea însăși o funcție reconstruită (`// match:`) se verifică față de simbolul nostru,
+  nu față de numele pus de mână în `names.tsv`.
+- Cititorul de mesaje (rva 0x2dcd40), 282 din 360: **cauza e găsită, forma de sursă nu.** Noi ținem `previous` într-un
+  registru și reîncărcăm lungimea tamponului; clientul ține lungimea și ia `previous` din stivă la fiecare folosire.
+  Cu cele două folosiri înlocuite de constante, codul nostru e exact al clientului; cu `previous` citit printr-un
+  pointer volatil ies 346 din 360.
+- `LNP_WriteDatagram` (rva 0x2efe50): 239 din 437 (de la 235, datorită înregistrării). 144 + 72 de combinații noi
+  (tipul lui `start`, cum e umplută înregistrarea, steagul, numărul, masca) dau toate același cod.
+- rva 0x2e4990: neschimbat, 27 din 35; nici opțiunile de compilare nu contează (13 încercate).
+
+**Observatorii transportului (2026-10-07, continuare).** Scor: 32 identice din 35.
+
+| rva | Octeți | Sursă | Ce face |
+|---|---|---|---|
+| 0x2df4e0, 0x2df810 | 169, 172 | `LnpAppObserver.cpp` | evenimentele 0 și 1 (id de peer + unul sau doi octeți) puse în coada aplicației |
+| 0x2e2a70, 0x2e2020 | 147, 97 | `LnpCompression.cpp` | comprimă / decomprimă conținutul unei datagrame (zstd din client) |
+| 0x2e2b10 | 68 | `LnpTimeObserver.cpp` | ține, pe peer, maximul dintre timpul datagramei (+0x38) plus un număr al obiectului |
+| 0x2df590, 0x2df9d0, 0x2e2780 | 25, 25, 118 | `LnpAddressObserver.cpp` | evenimentul 0 pune, evenimentul 1 șterge un steag al peer-ului; o datagramă îi reține adresa |
+| 0x2da4d0 | 252 | `LnpAddressObserver.cpp` | `std::map<i64, LnpPeerEntry>::operator[]`, scris de compilator |
+
+Ce s-a aflat despre date:
+- **Evenimentul** (0x50 de octeți) e o structură simplă umplută pe loc (`{ tip, peer, octet, octet, mesaj }`), fără
+  constructor; **mesajul** are valori inițiale pe fiecare membru (toate zero) și niciun constructor scris de mână.
+- **Datagrama**: octetul de la +0x40 înseamnă „conținut comprimat" (îl pune comprimarea, îl citește decomprimarea);
+  +0x38 și +0x48 sunt două numere `double` (timpi); +0x5c e adresa de unde a venit (28 de octeți).
+- **Comprimarea** urmează `[Network]` din `game.cfg`: pornită (+0x468), mărime minimă (+0x46c), nivel (+0x470);
+  tamponul de lucru are 0x44c octeți. Se comprimă doar datagrame cu număr pozitiv și doar dacă rezultatul e mai mic.
+- **Adresa** (`LnpAddress`): 16 octeți de gazdă curățați în corpul constructorului, apoi 0, 0, 1 - ordinea se vede în
+  `operator[]`. **Intrarea de peer** are 0x38 de octeți: adresa, două numere de 64 de biți, două steaguri.
+- Evenimentul 0 pornește un peer și evenimentul 1 îl oprește (steagul de la +0x31): după toate aparențele
+  „conectat" / „deconectat".
+- Rezultatul unui observator nu e doar adevărat / fals: observatorul de adrese întoarce 3 pentru un peer necunoscut.
+
+**Datagrama întreagă (2026-10-07, continuare).** Scor: 36 identice din 39.
+
+Constructorul (rva 0x2d6700, 102 octeți), destructorul (rva 0x2d8ef0, 113) și atribuirea prin mutare (rva 0x2d9a40,
+246) ale datagramei sunt identice. Niciuna nu e scrisă de mână: sunt `= default` în `LnpDatagram_Life.cpp`, iar
+compilatorul le scrie din membri și din valorile lor inițiale (`LnpDatagram.h`). Împreună fixează toată structura
+de 0x78 octeți:
+
+| Offset | Membru | Valoare inițială |
+|---|---|---|
+| +0x00 | id-ul peer-ului (64 de biți) | 0 |
+| +0x08 | numărul (`short`; negativ = confirmare) | 0 |
+| +0x0a, +0x0c, +0x10 | un octet și două numere de 32 de biți, neînțelese încă | 0 |
+| +0x18 | confirmarea: număr + mască `std::bitset<64>` | 0 și toți biții puși |
+| +0x28 | `std::vector` cu elemente de 16 octeți (probabil confirmări) | gol |
+| +0x38, +0x48 | doi timpi (`double`); +0x38 e pus din ceas când datagrama intră în coada firului de lucru | 0 |
+| +0x40 | „conținut comprimat" | 0 |
+| +0x50 | conținutul (`LnpBuffer`) | gol |
+| +0x5c | adresa (28 de octeți) | zero, ultimul membru 1 |
+
+- Masca pornește cu toți biții puși printr-un `std::bitset<64>` dat constructorului confirmării (dată ca număr de 64
+  de biți, compilatorul scrie aceleași instrucțiuni în altă ordine).
+- `std::vector<Ack>::_Tidy` (rva 0x2f2bb0) e identică; destructorul datagramei o are inline, mutarea o apelează, ca în
+  client, fără nicio funcție de umplutură.
+- Văzut, nereconstruit încă: comanda firului de lucru (0x100 octeți: peer, doi octeți, tip, o datagramă la +0x10, un
+  bloc de 40 de octeți, un mesaj la +0xb0, un bloc de 24) cu constructorul la rva 0x2d5ae0 și mutarea la rva 0x2d9820;
+  funcțiile rva 0x2dd660 / 0x2dd440 pun în coada de la +0x40 comenzi de tip 4 (o datagramă) și 7 (un mesaj).
+
+**Comenzile firului de lucru și coada fără lacăt (2026-10-07, continuare).** Scor: 49 identice din 54.
+
+- **Opțiune nouă măsurată: C++17.** Blocurile cozii sunt aliniate la 64 de octeți și clientul le alocă cu
+  `operator new` aliniat (două argumente: mărime și aliniere), pe care compilatorul îl folosește doar de la C++17.
+  `-O2 -std:c++17` e acum setul implicit din `match_func.py`; toate funcțiile de până acum rămân identice cu el.
+- **Comanda** (`LnpCommand.h`, 0x100 octeți): id de peer, doi octeți, tipul (+0xc, neinițializat), o datagramă (+0x10),
+  o parte de 40 de octeți (+0x88: peer, `u16`, `u8`, trei `double`), un mesaj (+0xb0), o parte de 24 de octeți (+0xe8:
+  peer, `u32`, `double`). Constructorul (rva 0x2d5ae0, 189 octeți) și mutarea (rva 0x2d9820, 149) sunt identice,
+  scrise de compilator.
+- **Cele nouă funcții care pun comenzi în coadă** (`LnpWorker_Post.cpp`), câte una pe tip 0..8: construiesc comanda,
+  mută în ea datagrama / mesajul / partea, o ștampilează cu ceasul (tipurile 0-4 și 6) și o pun în coada de la +0x40.
+  Identice: tipurile 0, 3, 4, 5, 6, 7, 8. Tipurile 1 și 2 (rva 0x2dd220, 0x2dd2d0): 145/172 și 153/183 - aceleași
+  instrucțiuni, două dintre ele în altă ordine; nicio ordine a instrucțiunilor din sursă nu o reproduce.
+  Timpul mesajului e la +0x10 în mesaj; al datagramei la +0x38.
+- **Coada** (`LnpQueue.h/.cpp`, șablon pe tipul elementului): `Push` e identică pentru comenzi (rva 0x2ed120, 252
+  octeți) și pentru evenimente (rva 0x2ed000, 278), la fel constructorii blocurilor (rva 0x2d6a10, 0x2d69b0). Orice
+  fir poate adăuga fără lacăt: fiecare fir are un bloc propriu de ~64 KiB (`static thread_local`, 244 de comenzi sau
+  734 de evenimente), ia următorul nod, îl leagă după ultimul cu un schimb atomic (`last.exchange`), scrie legătura
+  cu `memory_order_release` și trezește cititorul (`std::condition_variable` la +0x30, după un `std::mutex`).
+- Ceasul transportului: funcția rva 0xa2c930 pe obiectul de la +0x20 al celui indicat de rva 0x18d9adc.
+
+**Partea de joc a transportului (2026-10-07, continuare).** Scor: 49 identice din 55.
+
+- Ce în `functions.txt` apare ca o funcție de 2320 de octeți la rva 0x2ec560 sunt de fapt trei: un ajutor de jurnal
+  (0x2ec560, 151 de octeți), **`LnpAppObserver::Update` (0x2ec600, 511 octeți)** - la ea sare pompa rva 0x2dbdc0 - și
+  bucla unui fir (0x2ec800, 1648 de octeți). `functions.txt` nu are începuturile 0x2ec600 și 0x2ec800.
+- `Update` (firul jocului, o dată pe cadru): scoate fiecare eveniment din coadă (`LnpQueue::Pop`, inline) și îl dă
+  unui callback `std::function` al obiectului: un mesaj (tip 2) → `onMessage(peer, canal, timp, octeți, lungime)` de la
+  +0x1e8; tipurile 0 și 1 → `onPeer(peer, tip == 0, octet, octet)` de la +0x1c0. Semnăturile sunt citite din ordinea și
+  mărimea copiilor pe care codul le face înaintea apelului (`_Do_call`, a treia intrare din tabela virtuală).
+- `LnpQueue::Pop`: citește nodul de după primul, mută valoarea, avansează; blocul din care venea nodul vechi e
+  eliberat când i s-au citit toate nodurile (`delete` aliniat cu mărime: 0xfd00, 0x40).
+- Stare: 509 octeți față de 511, aceleași instrucțiuni, altă așezare a variabilelor pe stivă (cadrul clientului e cu
+  8 octeți mai mare). Forma buclei și 26 de seturi de opțiuni nu o schimbă. `-MD` dă alt cod (apel prin import la
+  `free`), deci runtime-ul static (`-MT`) e confirmat și de cod.
+- Bucla de la rva 0x2ec800 e un fir care, pentru fiecare peer dintr-o hartă, scoate datagrame din cozi cu așteptare
+  (`_Mtx_lock`, `_Cnd_wait`) și le dă mai departe după o întârziere configurată: nereconstruită.
+
+**Evidența întregului cod (2026-10-07).**
+
+- `tools/function_starts.py`: `functions.txt` fusese făcut din țintele de apel și îi lipseau funcțiile la care se ajunge
+  doar prin salt sau printr-un pointer din date. Regula (țintă de `jmp` din afara funcției sau pointer relocat din
+  date, aliniată la 16, precedată de `int3`) a găsit 935 de începuturi noi, dintre care 910 sunt funcții și în
+  exportul Ghidra. Lista are acum **58.434** de începuturi.
+- `tools/progress.py` (funcții și octeți de cod):
+
+  | | Funcții | Octeți | Din cod |
+  |---|---|---|---|
+  | reconstruite, identice cu clientul | 49 | 7.402 | 0,05% |
+  | reconstruite, încă neidentice | 6 | 1.696 | 0,01% |
+  | cod de bibliotecă, găsit într-un singur loc | 1.244 | 215.864 | 1,35% |
+  | formă de cod de bibliotecă, în mai multe locuri | 451 | 73.478 | 0,46% |
+  | neatinse | 56.684 | 15.611.824 | 97,67% |
+  | total | 58.434 | 15.984.696 | |
+
+- Biblioteci străine văzute după șirurile lor: OpenSSL 1.1.x, Wwise v2019.1.10, libVorbis 1.3.6 (20180316), libvpx
+  (VP9) v1.8.0, zstd, Lua 5.1, msgpack. Sunt compilate cu alte build-uri de compilator (Rich header: 30709, 27031,
+  31106...) și ar trebui potrivite din sursele lor publice, nu rescrise.
+- `match_all.py` scrie acum `client-src/symbols.tsv`: pentru fiecare simbol folosit de funcțiile identice, adresa din
+  client pe care ar trebui s-o pună linkerul acolo. **92 de simboluri, fiecare la o singură adresă** în toate
+  folosirile (de ex. `__security_check_cookie` → rva 0xf411ba): octeții relocați nu mai sunt „necomparați", ci
+  verificați între ei. Tabela e harta de legare de care are nevoie o construire a surselor noastre împotriva
+  clientului.
+
+**Generatoare în loc de potrivire de mână (2026-10-07).** Scor: 9.127 de funcții identice, 2,77% din octeții de cod
+(de la 141 / 0,07%). Metoda: funcțiile pe care compilatorul le repetă (inițializatorii globalelor, reflecția, destructorii
+unor baze comune) sunt citite din client după tipare și sursa lor e scrisă de un program; fiecare funcție are linia ei
+`// match:` și e dovedită de `match_all.py` ca orice funcție scrisă de mână.
+
+- `tools/shapes.py` grupează funcțiile după octeți cu adresele mascate (13.800 de funcții, 1,2 MB în grupuri de 2+).
+- `tools/function_starts.py` ia acum și adresele de cod împinse cu `push imm32` (callback-urile atexit): `functions.txt`
+  are 66.825 de începuturi (toată zona `.text$yd` de la rva 0xf9b720 era văzută ca o singură funcție).
+- `client-src/initializers.txt`: tabela CRT a inițializatorilor dinamici (rva 0xfab710, 3.815 funcții `??__E`);
+  2.900+ sunt reconstruite.
+- `tools/gen_sources.py [fișier]` scrie `client-src/src/gen/<fișier>`. Unele tipare sunt **speculative**: generatorul
+  propune, compilatorul verifică, `prune()` scoate ce nu iese identic.
+
+| Fișier generat | Ce conține | Funcții |
+|---|---|---|
+| RStringGlobals.cpp | `RString g("literal")` (RString.h: tipul de șir al lui Riot, bitul 0 al capacității = memorie proprie) | 766 |
+| ElfKeys.cpp | `ElfKey g("Name")` = hash ELF (PJW) pe litere mici, prin `std::string` (ElfKey.h, rva 0x120eb0) | 610 |
+| HashGlobals.cpp | `u32 g = Fnv1aLower("...")` / `Fnv1Lower` / `ElfHashLower` (Hashes.h) și tablouri de astfel de valori | 122 |
+| MapGlobals.cpp | `std::map<Enum, const char*> g = {{0, "Unknown"}, ...}` (tabele enum → nume; fiecare hartă are cheia ei, de aceea constructorul e inline) | 34 |
+| GlobalInstances.cpp | destructorii bazei `GlobalInstance<T>` (obiectele unice) | 343 |
+| MetaClasses.h/.cpp, MetaMembers.cpp, MetaGetters.cpp, BinClasses.h, MetaFunctions.cpp | reflecția claselor `.bin` | ~6.900 |
+
+**Reflecția (`Meta.h`, `tools/gen_meta.py`).** Fiecare clasă pe care o pot conține fișierele `.bin` are o descriere
+globală `MetaClass` (0x50 de octeți; constructor rva 0x9b9a60, destructor rva 0x9bb6c0, `AddMember` rva 0x9bd410).
+Hash-urile din ea sunt FNV-1a pe litere mici, deci **numele reale ale claselor și membrilor** vin din `data/hashes`
+(`ContextualConditionChanceToPlay`, `mPercentChanceToPlay`...). Forma de sursă care dă codul clientului: o clasă proprie
+pe descriere, cu constructor inline care face `unknown00 = 0; parent = ...; AddMember<T>(HASH("nume"), offset, 0)...`;
+`AddMember<T>` sunt funcții separate în client (instanțieri explicite în alt fișier), la fel getter-ele descrierilor.
+Codul de tip `.bin` al membrului dă tipul C++ (1 bool, 3 u8, 6 int, 7 u32, 0xa float, 0x10 RString, 0x11 hash,
+0x82 pointer, 0x83 obiect inclus, 0x84 legătură, 0x80 / 0x81 liste, 0x85 opțional, 0x86 hartă); listele și hărțile
+primesc un obiect de „elemente" (cod + mărime + tabelă virtuală). Toate cele 1.944 de descrieri sunt găsite; 1.872 au
+inițializatorul refăcut. Clasele descrise sunt deocamdată schelete (bază, mărime, aliniere, virtual sau nu, constructor /
+destructor unde clientul le are separat) - destul pentru `MetaCreate/Construct/Destroy/Destruct` a ~1.400 de clase.
+Slotul 2 al tabelei virtuale (apelat de funcția de la +0x18 a descrierii) e gol în majoritatea claselor.
+
+Reguli noi ale verificatorului (`match_func.py`): `// same: <rva> <simbol>` = alt nume al aceleiași funcții (plierea de
+cod identic a linker-ului dă o adresă mai multor funcții); constantele adresate cu deplasament se compară de la
+deplasament. Observații: placement-new trebuie să fie cel din `<new>` (al nostru adăuga un test de null); funcțiile
+„ScalarDeletingDestructor" scrise de mână în ZoneB/C/D sunt imitații - forma reală e o clasă cu destructor virtual
+(compilatorul scrie `??_G`), corectat la rva 0x2db8b0.
+
+Ce nu se poate fără descărcări: bibliotecile străine (libcurl 7.78.0, zlib 1.2.11, libvpx 1.8.0, libVorbis 1.3.6,
+zstd, Lua 5.1, msgpack, libyaml; Wwise 2019.1.10 fără sursă) sunt compilate cu alte build-uri de compilator (Rich header:
+30709, 31106, 27031, 27702, 29333). zstd 1.5.6 cu compilatorul lui Riot potrivește doar 74 de funcții mici: trebuie
+versiunea exactă și compilatorul ei.
+
+**Continuare (2026-10-07).** Scor: 9.911 identice.
+- Generatoare noi (toate verificate; `gen_sources.py` verifică acum orice fișier generat și îl rescrie fără funcțiile
+  care nu ies identice): `HashTables.cpp` (`std::unordered_map<u32, int>` din liste {hash, număr}, ex. TOP / JUNGLE /
+  MIDDLE / BOTTOM / UTILITY), `StringGlobals.cpp` (`std::string g;` goale: doar destructorul se înregistrează),
+  `MapGlobals.cpp` și pentru valori de un octet. Funcțiile de hash: `Hashes.h/.cpp` (FNV-1a cu start, FNV-1, ELF ASCII)
+  și `ElfKey.h/.cpp` (ELF prin `tolower` din CRT) - identice.
+- Clasele simple ale reflecției (doar membri primitivi, fără goluri) au acum definiția completă în `BinClasses.h`, cu
+  numele reale ale membrilor și valorile inițiale citite din `MetaCreate` (pentru o bază abstractă: din `MetaCreate` a
+  unui descendent); `MetaCreate/MetaConstruct` inline, destructorii virtuali (`??_G`) și `GetClass` ale lor sunt
+  identice. Rădăcina `BinObject` are destructorul inline și gol.
+- **Lua 5.1.5 e compilat de Riot ca C++ cu propriul compilator, dar fără `-std:c++17`** (standardul implicit, C++14 -
+  măsurat pe `luaZ_fill`, rva 0xc19690: cu C++17 alocarea registrelor diferă). `gen/lua515tp/*.cpp` includ sursele
+  publice din `tools/third_party/lua-5.1.5` și numesc 276 de funcții identice; restul (ex. `auxgetinfo`, `luaV_execute`)
+  diferă - de aflat dacă Riot a modificat Lua.
+- Harta codului (cine apelează alocatorul lui Riot vs. `malloc`/`free`): codul Riot e cam rva 0x60000-0xbc0000,
+  bibliotecile străine și CRT-ul restul până la 0xf40000 (~3,5 MB, ~22% din cod; OpenSSL ~0xd7d000+, curl ~0xb6e000,
+  yaml ~0xb29000 / 0xb3d000, Lua 0xc16000+).

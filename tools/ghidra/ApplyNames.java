@@ -34,11 +34,28 @@ public class ApplyNames extends GhidraScript {
                             f.setName(p[2], SourceType.USER_DEFINED);
                             named++;
                         }
+                    } else if (p[1].equals("unfunc")) {
+                        // not a function start: drop the function made there and rebuild the one before it, whose
+                        // body the wrong start had cut short
+                        Function f = getFunctionAt(a);
+                        if (f != null) {
+                            removeFunction(f);
+                            Function outer = getFunctionBefore(a);
+                            if (outer != null) {
+                                Address start = outer.getEntryPoint();
+                                String name = outer.getName();
+                                SourceType source = outer.getSymbol().getSource();
+                                removeFunction(outer);
+                                Function again = createFunction(start, null);
+                                if (again != null && source == SourceType.USER_DEFINED) again.setName(name, source);
+                            }
+                        }
                     } else if (!p[2].isEmpty()) {
                         createLabel(a, p[2], true, SourceType.USER_DEFINED);
                         labels++;
                     }
                 } catch (Exception e) {
+                    if (failed < 8) println("ApplyNames: " + p[0] + " " + p[2] + ": " + e);
                     failed++;
                 }
             }
