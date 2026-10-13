@@ -1,0 +1,49 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 000001EE96A13530)
+0+ params, 2 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; 0.115
+	8	[-]	SETGLOBAL	0 -4	; CastTime
+	9	[-]	LOADK    	0 -7	; "ApolloPassiveActive"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; "DATA/Particles/JaycePassiveReady.troy"
+	12	[-]	SETGLOBAL	0 -8	; AutoBuffActivateEffect
+	13	[-]	LOADK    	0 -11	; "BUFFBONE_CSTM_WEAPON_1"
+	14	[-]	SETGLOBAL	0 -10	; AutoBuffActivateAttachBoneName
+	15	[-]	LOADK    	0 -9	; "DATA/Particles/JaycePassiveReady.troy"
+	16	[-]	SETGLOBAL	0 -12	; AutoBuffActivateEffect2
+	17	[-]	LOADK    	0 -14	; "BUFFBONE_CSTM_WEAPON_GAP_1"
+	18	[-]	SETGLOBAL	0 -13	; AutoBuffActivateAttachBoneName2
+	19	[-]	LOADK    	0 -9	; "DATA/Particles/JaycePassiveReady.troy"
+	20	[-]	SETGLOBAL	0 -15	; AutoBuffActivateEffect3
+	21	[-]	LOADK    	0 -17	; "BUFFBONE_CSTM_WEAPON_GAP_2"
+	22	[-]	SETGLOBAL	0 -16	; AutoBuffActivateAttachBoneName3
+	23	[-]	LOADBOOL 	0 0 0
+	24	[-]	SETGLOBAL	0 -18	; IsDamagingSpell
+	25	[-]	RETURN   	0 1
+constants (18) for 000001EE96A13530:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastTime"
+	5	0.115
+	6	"BuffName"
+	7	"ApolloPassiveActive"
+	8	"AutoBuffActivateEffect"
+	9	"DATA/Particles/JaycePassiveReady.troy"
+	10	"AutoBuffActivateAttachBoneName"
+	11	"BUFFBONE_CSTM_WEAPON_1"
+	12	"AutoBuffActivateEffect2"
+	13	"AutoBuffActivateAttachBoneName2"
+	14	"BUFFBONE_CSTM_WEAPON_GAP_1"
+	15	"AutoBuffActivateEffect3"
+	16	"AutoBuffActivateAttachBoneName3"
+	17	"BUFFBONE_CSTM_WEAPON_GAP_2"
+	18	"IsDamagingSpell"
+locals (0) for 000001EE96A13530:
+upvalues (0) for 000001EE96A13530:

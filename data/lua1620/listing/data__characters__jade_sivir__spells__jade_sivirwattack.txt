@@ -1,0 +1,37 @@
+
+main <?:0,0> (20 instructions, 80 bytes at 0000024825FD3600)
+0+ params, 7 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	NEWTABLE 	0 0 6
+	6	[-]	NEWTABLE 	1 5 0
+	7	[-]	LOADK    	2 -5	; 1
+	8	[-]	LOADK    	3 -5	; 1
+	9	[-]	LOADK    	4 -5	; 1
+	10	[-]	LOADK    	5 -5	; 1
+	11	[-]	LOADK    	6 -5	; 1
+	12	[-]	SETLIST  	1 5 1	; 1
+	13	[-]	SETTABLE 	0 -4 1	; "MaximumHits" -
+	14	[-]	SETTABLE 	0 -6 -7	; "CanHitCaster" 0
+	15	[-]	SETTABLE 	0 -8 -7	; "CanHitSameTarget" 0
+	16	[-]	SETTABLE 	0 -9 -7	; "CanHitSameTargetConsecutively" 0
+	17	[-]	SETTABLE 	0 -10 -5	; "CanHitEnemies" 1
+	18	[-]	SETTABLE 	0 -11 -7	; "CanHitFriends" 0
+	19	[-]	SETGLOBAL	0 -3	; ChainMissileParameters
+	20	[-]	RETURN   	0 1
+constants (11) for 0000024825FD3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"ChainMissileParameters"
+	4	"MaximumHits"
+	5	1
+	6	"CanHitCaster"
+	7	0
+	8	"CanHitSameTarget"
+	9	"CanHitSameTargetConsecutively"
+	10	"CanHitEnemies"
+	11	"CanHitFriends"
+locals (0) for 0000024825FD3600:
+upvalues (0) for 0000024825FD3600:

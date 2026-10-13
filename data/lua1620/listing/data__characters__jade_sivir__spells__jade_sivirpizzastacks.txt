@@ -1,0 +1,54 @@
+
+main <?:0,0> (30 instructions, 120 bytes at 0000013F58D83600)
+0+ params, 7 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 0 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "SivirPizzaStacks"
+	10	[-]	SETGLOBAL	0 -5	; BuffName
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -7	; PersistsThroughDeath
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -8	; IsDamagingSpell
+	15	[-]	NEWTABLE 	0 0 6
+	16	[-]	NEWTABLE 	1 5 0
+	17	[-]	LOADK    	2 -11	; 10
+	18	[-]	LOADK    	3 -11	; 10
+	19	[-]	LOADK    	4 -11	; 10
+	20	[-]	LOADK    	5 -11	; 10
+	21	[-]	LOADK    	6 -11	; 10
+	22	[-]	SETLIST  	1 5 1	; 1
+	23	[-]	SETTABLE 	0 -10 1	; "MaximumHits" -
+	24	[-]	SETTABLE 	0 -12 -13	; "CanHitCaster" 0
+	25	[-]	SETTABLE 	0 -14 -13	; "CanHitSameTarget" 0
+	26	[-]	SETTABLE 	0 -15 -13	; "CanHitSameTargetConsecutively" 0
+	27	[-]	SETTABLE 	0 -16 -17	; "CanHitEnemies" 1
+	28	[-]	SETTABLE 	0 -18 -13	; "CanHitFriends" 0
+	29	[-]	SETGLOBAL	0 -9	; ChainMissileParameters
+	30	[-]	RETURN   	0 1
+constants (18) for 0000013F58D83600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffName"
+	6	"SivirPizzaStacks"
+	7	"PersistsThroughDeath"
+	8	"IsDamagingSpell"
+	9	"ChainMissileParameters"
+	10	"MaximumHits"
+	11	10
+	12	"CanHitCaster"
+	13	0
+	14	"CanHitSameTarget"
+	15	"CanHitSameTargetConsecutively"
+	16	"CanHitEnemies"
+	17	1
+	18	"CanHitFriends"
+locals (0) for 0000013F58D83600:
+upvalues (0) for 0000013F58D83600:

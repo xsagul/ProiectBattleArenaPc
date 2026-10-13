@@ -73,8 +73,10 @@ def evaluate(spell, calc_key, rank=1, level=1, stats=None, _depth=0):
     sd = spell['mSpell']
     calcs = sd.get('mSpellCalculations', {})
     effects = sd.get('mEffectAmount', [])
-    dvals = {f'{{{fnv(dv["mName"]):08x}}}': dv.get('mValues', [0] * 7) for dv in sd.get('mDataValues', [])
-             if isinstance(dv, dict) and 'mName' in dv}
+    # 13.3: mDataValues [{mName, mValues}]; 16.20: DataValues [{name, values}]
+    dvals = {f'{{{fnv(dv.get("mName") or dv.get("name")):08x}}}': dv.get('mValues') or dv.get('values') or [0] * 7
+             for dv in (sd.get('mDataValues') or sd.get('DataValues') or [])
+             if isinstance(dv, dict) and (dv.get('mName') or dv.get('name'))}
 
     def dv(ref):
         """a data value by reference: bainfo writes it as {hash} or, when it knows the name, as the name"""
@@ -121,6 +123,8 @@ def evaluate(spell, calc_key, rank=1, level=1, stats=None, _depth=0):
             return v
         if t == 'GameCalculation':
             return calc(p)
+        if t == '{f3cbe7b2}':             # 16.20 BotData: another calculation of the spell, by its key
+            return evaluate(spell, p.get('mSpellCalculationKey'), rank, level, stats, _depth + 1)
         if t == 'CooldownMultiplierCalculationPart':
             return 100.0 / (100.0 + stats.v.get('haste', 0.0))
         if t in ('BuffCounterByNamedDataValueCalculationPart', 'BuffCounterByCoefficientCalculationPart'):

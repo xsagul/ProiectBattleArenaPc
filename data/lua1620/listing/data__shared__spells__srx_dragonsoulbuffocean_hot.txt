@@ -1,0 +1,56 @@
+
+main <?:0,0> (31 instructions, 124 bytes at 00000286D87A35F0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 19 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "DragonSoulIconOcean.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "SRX_DragonSoulBuffOcean_HoT"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -7	; PersistsThroughDeath
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -8	; NonDispellable
+	13	[-]	LOADK    	0 -10	; 6
+	14	[-]	SETGLOBAL	0 -9	; OnPreDamagePriority
+	15	[-]	LOADK    	0 -12	; 1
+	16	[-]	SETGLOBAL	0 -11	; DeathEventType
+	17	[-]	NEWTABLE 	0 1 0
+	18	[-]	LOADK    	1 -14	; "JannaForecast"
+	19	[-]	SETLIST  	0 1 1	; 1
+	20	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	21	[-]	NEWTABLE 	0 1 0
+	22	[-]	LOADK    	1 -14	; "JannaForecast"
+	23	[-]	SETLIST  	0 1 1	; 1
+	24	[-]	SETGLOBAL	0 -15	; SpellVOOverrideSkins
+	25	[-]	LOADBOOL 	0 1 0
+	26	[-]	SETGLOBAL	0 -16	; IsDamagingSpell
+	27	[-]	LOADBOOL 	0 1 0
+	28	[-]	SETGLOBAL	0 -17	; DoOnPreDamageInExpirationOrder
+	29	[-]	LOADK    	0 -19	; "DATA/Shared/Particles/deathscaress_buf.troy"
+	30	[-]	SETGLOBAL	0 -18	; AutoBuffActivateEvent
+	31	[-]	RETURN   	0 1
+constants (19) for 00000286D87A35F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"DragonSoulIconOcean.dds"
+	5	"BuffName"
+	6	"SRX_DragonSoulBuffOcean_HoT"
+	7	"PersistsThroughDeath"
+	8	"NonDispellable"
+	9	"OnPreDamagePriority"
+	10	6
+	11	"DeathEventType"
+	12	1
+	13	"SpellFXOverrideSkins"
+	14	"JannaForecast"
+	15	"SpellVOOverrideSkins"
+	16	"IsDamagingSpell"
+	17	"DoOnPreDamageInExpirationOrder"
+	18	"AutoBuffActivateEvent"
+	19	"DATA/Shared/Particles/deathscaress_buf.troy"
+locals (0) for 00000286D87A35F0:
+upvalues (0) for 00000286D87A35F0:

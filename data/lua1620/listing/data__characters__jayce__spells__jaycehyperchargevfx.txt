@@ -1,0 +1,44 @@
+
+main <?:0,0> (22 instructions, 88 bytes at 0000026F110835F0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; "ApolloWRbuff"
+	2	[-]	SETGLOBAL	0 -1	; BuffName
+	3	[-]	LOADK    	0 -4	; 2
+	4	[-]	SETGLOBAL	0 -3	; SpellToggleSlot
+	5	[-]	LOADK    	0 -6	; 3
+	6	[-]	SETGLOBAL	0 -5	; OnPreDamagePriority
+	7	[-]	NEWTABLE 	0 0 6
+	8	[-]	NEWTABLE 	1 5 0
+	9	[-]	LOADK    	2 -9	; 4
+	10	[-]	LOADK    	3 -9	; 4
+	11	[-]	LOADK    	4 -9	; 4
+	12	[-]	LOADK    	5 -9	; 4
+	13	[-]	LOADK    	6 -9	; 4
+	14	[-]	SETLIST  	1 5 1	; 1
+	15	[-]	SETTABLE 	0 -8 1	; "MaximumHits" -
+	16	[-]	SETTABLE 	0 -10 -11	; "CanHitCaster" 0
+	17	[-]	SETTABLE 	0 -12 -11	; "CanHitSameTarget" 0
+	18	[-]	SETTABLE 	0 -13 -11	; "CanHitSameTargetConsecutively" 0
+	19	[-]	SETTABLE 	0 -14 -15	; "CanHitEnemies" 1
+	20	[-]	SETTABLE 	0 -16 -11	; "CanHitFriends" 0
+	21	[-]	SETGLOBAL	0 -7	; ChainMissileParameters
+	22	[-]	RETURN   	0 1
+constants (16) for 0000026F110835F0:
+	1	"BuffName"
+	2	"ApolloWRbuff"
+	3	"SpellToggleSlot"
+	4	2
+	5	"OnPreDamagePriority"
+	6	3
+	7	"ChainMissileParameters"
+	8	"MaximumHits"
+	9	4
+	10	"CanHitCaster"
+	11	0
+	12	"CanHitSameTarget"
+	13	"CanHitSameTargetConsecutively"
+	14	"CanHitEnemies"
+	15	1
+	16	"CanHitFriends"
+locals (0) for 0000026F110835F0:
+upvalues (0) for 0000026F110835F0:

@@ -1,0 +1,95 @@
+
+main <?:0,0> (16 instructions, 64 bytes at 0000014B628F34C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 8 constants, 5 functions
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "SR_LevelScript"
+	3	[-]	CALL     	0 2 1
+	4	[-]	CLOSURE  	0 0	; 0000014B628F35D0
+	5	[-]	SETGLOBAL	0 -3	; OverrideDefaultDefines
+	6	[-]	CLOSURE  	0 1	; 0000014B628F3740
+	7	[-]	SETGLOBAL	0 -4	; OverrideDefaultMinionInfo
+	8	[-]	CLOSURE  	0 2	; 0000014B628F37C0
+	9	[-]	SETGLOBAL	0 -5	; OverrideDefaultTables
+	10	[-]	CLOSURE  	0 3	; 0000014B628F3860
+	11	[-]	SETGLOBAL	0 -6	; OverrideMinionSpawnInfo
+	12	[-]	CLOSURE  	0 4	; 0000014B628F3900
+	13	[-]	SETGLOBAL	0 -7	; DoAdditionalPreloads
+	14	[-]	GETGLOBAL	0 -8	; Init
+	15	[-]	CALL     	0 1 1
+	16	[-]	RETURN   	0 1
+constants (8) for 0000014B628F34C0:
+	1	"DoLuaShared"
+	2	"SR_LevelScript"
+	3	"OverrideDefaultDefines"
+	4	"OverrideDefaultMinionInfo"
+	5	"OverrideDefaultTables"
+	6	"OverrideMinionSpawnInfo"
+	7	"DoAdditionalPreloads"
+	8	"Init"
+locals (0) for 0000014B628F34C0:
+upvalues (0) for 0000014B628F34C0:
+
+function <?:6,18> (17 instructions, 68 bytes at 0000014B628F35D0)
+0 params, 2 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; 600
+	2	[-]	SETGLOBAL	0 -1	; INCREASE_CANNON_RATE_TIMER
+	3	[-]	LOADK    	0 -4	; 1080
+	4	[-]	SETGLOBAL	0 -3	; INCREASE_CANNON_RATE_TIMER2
+	5	[-]	LOADK    	0 -6	; 150
+	6	[-]	SETGLOBAL	0 -5	; NEXT_MINION_MOVE_SPEED_INCREASE_TIME
+	7	[-]	LOADK    	0 -8	; 6
+	8	[-]	SETGLOBAL	0 -7	; MAX_MINION_MOVE_SPEED_INCREMENT
+	9	[-]	LOADK    	0 -4	; 1080
+	10	[-]	SETGLOBAL	0 -9	; LATE_SPAWN_RATE_TIMER
+	11	[-]	LOADK    	0 -11	; 25000
+	12	[-]	SETGLOBAL	0 -10	; LATE_WAVE_SPAWN_RATE
+	13	[-]	LOADK    	0 -13	; 45
+	14	[-]	SETGLOBAL	0 -12	; UPGRADE_MINION_TIMER
+	15	[-]	LOADK    	0 -8	; 6
+	16	[-]	SETGLOBAL	0 -14	; UPGRADE_MINION_ITERATIONS_FOR_LATE_SCALING
+	17	[-]	RETURN   	0 1
+constants (14) for 0000014B628F35D0:
+	1	"INCREASE_CANNON_RATE_TIMER"
+	2	600
+	3	"INCREASE_CANNON_RATE_TIMER2"
+	4	1080
+	5	"NEXT_MINION_MOVE_SPEED_INCREASE_TIME"
+	6	150
+	7	"MAX_MINION_MOVE_SPEED_INCREMENT"
+	8	6
+	9	"LATE_SPAWN_RATE_TIMER"
+	10	"LATE_WAVE_SPAWN_RATE"
+	11	25000
+	12	"UPGRADE_MINION_TIMER"
+	13	45
+	14	"UPGRADE_MINION_ITERATIONS_FOR_LATE_SCALING"
+locals (0) for 0000014B628F35D0:
+upvalues (0) for 0000014B628F35D0:
+
+function <?:20,30> (1 instruction, 4 bytes at 0000014B628F3740)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000014B628F3740:
+locals (0) for 0000014B628F3740:
+upvalues (0) for 0000014B628F3740:
+
+function <?:32,33> (1 instruction, 4 bytes at 0000014B628F37C0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000014B628F37C0:
+locals (0) for 0000014B628F37C0:
+upvalues (0) for 0000014B628F37C0:
+
+function <?:35,36> (1 instruction, 4 bytes at 0000014B628F3860)
+3 params, 3 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000014B628F3860:
+locals (0) for 0000014B628F3860:
+upvalues (0) for 0000014B628F3860:
+
+function <?:38,39> (1 instruction, 4 bytes at 0000014B628F3900)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000014B628F3900:
+locals (0) for 0000014B628F3900:
+upvalues (0) for 0000014B628F3900:

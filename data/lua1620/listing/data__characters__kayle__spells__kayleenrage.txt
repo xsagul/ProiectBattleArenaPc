@@ -1,0 +1,38 @@
+
+main <?:0,0> (20 instructions, 80 bytes at 000001AE64BD35C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Kayle/HUD/Icons2D/Kayle_P.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "KayleEnrage"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	NEWTABLE 	0 2 0
+	14	[-]	LOADK    	1 -10	; "MetalWingedJudicator"
+	15	[-]	LOADK    	2 -11	; "KayleSkin07"
+	16	[-]	SETLIST  	0 2 1	; 1
+	17	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	18	[-]	LOADBOOL 	0 1 0
+	19	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	20	[-]	RETURN   	0 1
+constants (12) for 000001AE64BD35C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Kayle/HUD/Icons2D/Kayle_P.dds"
+	7	"BuffName"
+	8	"KayleEnrage"
+	9	"SpellFXOverrideSkins"
+	10	"MetalWingedJudicator"
+	11	"KayleSkin07"
+	12	"IsDamagingSpell"
+locals (0) for 000001AE64BD35C0:
+upvalues (0) for 000001AE64BD35C0:

@@ -1,0 +1,34 @@
+struct 0xec1630
+    0xec1630 field 0 mode 1: not a text (0xec1630 field 0 mode 1: no length-1 byte; lengths read [0]); trying a seq of numbers
+  instance 0 of 1: 0xec1630 field 0 mode 1: no one-byte element found
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 492, in learn_mode
+    return self.learn_text(k, m, res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 739, in learn_text
+    assert 1 in L, f'{self.fn:#x} field {k} mode {m}: no length-1 byte; lengths read {sorted({x for x in L if x is not None})[:12]}'
+           ^^^^^^
+AssertionError: 0xec1630 field 0 mode 1: no length-1 byte; lengths read [0]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1779, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1438, in learn
+    sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc, k=k).learn()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 366, in learn
+    fl = self.learn_field(k)
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 410, in learn_field
+    mode = self.learn_mode(k, m, r, seg, res, d)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 495, in learn_mode
+    return self.learn_numbers(k, m, res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 524, in learn_numbers
+    assert found is not None, f'{self.fn:#x} field {k} mode {m}: no one-byte element found'
+           ^^^^^^^^^^^^^^^^^
+AssertionError: 0xec1630 field 0 mode 1: no one-byte element found
+exit 1

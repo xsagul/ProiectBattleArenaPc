@@ -1,0 +1,53 @@
+
+main <?:0,0> (29 instructions, 116 bytes at 000001EF454B3590)
+0+ params, 6 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "3060_Banner_of_Command.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "ItemPromote"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "DATA/Particles/Global_Item_BoC_Buf.troy"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -10	; "scroll"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName
+	13	[-]	LOADK    	0 -8	; "DATA/Particles/Global_Item_BoC_Buf.troy"
+	14	[-]	SETGLOBAL	0 -11	; AutoBuffActivateEffect2
+	15	[-]	LOADK    	0 -13	; "Buffbone_Cstm_Weapon_1"
+	16	[-]	SETGLOBAL	0 -12	; AutoBuffActivateAttachBoneName2
+	17	[-]	NEWTABLE 	0 5 0
+	18	[-]	LOADK    	1 -15	; 16
+	19	[-]	LOADK    	2 -15	; 16
+	20	[-]	LOADK    	3 -15	; 16
+	21	[-]	LOADK    	4 -15	; 16
+	22	[-]	LOADK    	5 -15	; 16
+	23	[-]	SETLIST  	0 5 1	; 1
+	24	[-]	SETGLOBAL	0 -14	; AutoCooldownByLevel
+	25	[-]	LOADK    	0 -17	; 2
+	26	[-]	SETGLOBAL	0 -16	; OnPreDamagePriority
+	27	[-]	LOADBOOL 	0 1 0
+	28	[-]	SETGLOBAL	0 -18	; DoOnPreDamageInExpirationOrder
+	29	[-]	RETURN   	0 1
+constants (18) for 000001EF454B3590:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"3060_Banner_of_Command.dds"
+	5	"BuffName"
+	6	"ItemPromote"
+	7	"AutoBuffActivateEffect"
+	8	"DATA/Particles/Global_Item_BoC_Buf.troy"
+	9	"AutoBuffActivateAttachBoneName"
+	10	"scroll"
+	11	"AutoBuffActivateEffect2"
+	12	"AutoBuffActivateAttachBoneName2"
+	13	"Buffbone_Cstm_Weapon_1"
+	14	"AutoCooldownByLevel"
+	15	16
+	16	"OnPreDamagePriority"
+	17	2
+	18	"DoOnPreDamageInExpirationOrder"
+locals (0) for 000001EF454B3590:
+upvalues (0) for 000001EF454B3590:

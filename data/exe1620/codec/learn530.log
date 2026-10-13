@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1517, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1173, in learn
+    T = PT.Tree(pid)
+        ^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_tree.py", line 32, in __init__
+    self.body = PM.packets(pid)[k]
+                ~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range

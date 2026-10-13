@@ -1,0 +1,20 @@
+local L0_1, L1_1, L2_1
+L0_1 = "Yeti_FrostNova.dds"
+BuffTextureName = L0_1
+L0_1 = "Visionary"
+BuffName = L0_1
+L0_1 = true
+PersistsThroughDeath = L0_1
+L0_1 = true
+NonDispellable = L0_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBSetVarInTable
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.DestVar = "HitCount"
+L2_1.DestVarTable = "CharVars"
+L2_1.SrcValue = 0
+L1_1.Params = L2_1
+L0_1[1] = L1_1
+OnBuffActivateBuildingBlocks = L0_1

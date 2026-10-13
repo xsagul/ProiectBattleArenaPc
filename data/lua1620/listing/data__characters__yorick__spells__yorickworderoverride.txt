@@ -1,0 +1,45 @@
+
+main <?:0,0> (24 instructions, 96 bytes at 000001E895773600)
+0+ params, 7 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "game_floatingtext_Rooted"
+	6	[-]	SETGLOBAL	0 -3	; PopupMessage1
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -5	; IsDamagingSpell
+	9	[-]	NEWTABLE 	0 0 6
+	10	[-]	NEWTABLE 	1 5 0
+	11	[-]	LOADK    	2 -8	; 4
+	12	[-]	LOADK    	3 -8	; 4
+	13	[-]	LOADK    	4 -8	; 4
+	14	[-]	LOADK    	5 -8	; 4
+	15	[-]	LOADK    	6 -8	; 4
+	16	[-]	SETLIST  	1 5 1	; 1
+	17	[-]	SETTABLE 	0 -7 1	; "MaximumHits" -
+	18	[-]	SETTABLE 	0 -9 -10	; "CanHitCaster" 0
+	19	[-]	SETTABLE 	0 -11 -10	; "CanHitSameTarget" 0
+	20	[-]	SETTABLE 	0 -12 -10	; "CanHitSameTargetConsecutively" 0
+	21	[-]	SETTABLE 	0 -13 -14	; "CanHitEnemies" 1
+	22	[-]	SETTABLE 	0 -15 -10	; "CanHitFriends" 0
+	23	[-]	SETGLOBAL	0 -6	; ChainMissileParameters
+	24	[-]	RETURN   	0 1
+constants (15) for 000001E895773600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"PopupMessage1"
+	4	"game_floatingtext_Rooted"
+	5	"IsDamagingSpell"
+	6	"ChainMissileParameters"
+	7	"MaximumHits"
+	8	4
+	9	"CanHitCaster"
+	10	0
+	11	"CanHitSameTarget"
+	12	"CanHitSameTargetConsecutively"
+	13	"CanHitEnemies"
+	14	1
+	15	"CanHitFriends"
+locals (0) for 000001E895773600:
+upvalues (0) for 000001E895773600:

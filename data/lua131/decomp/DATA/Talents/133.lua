@@ -1,0 +1,25 @@
+local L0_1, L1_1, L2_1, L3_1, L4_1, L5_1, L6_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBSetVarInTable
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.DestVar = "Level"
+L2_1.SrcVar = "TalentLevel"
+L1_1.Params = L2_1
+L2_1 = {}
+L3_1 = BBSetVarInTable
+L2_1.Function = L3_1
+L3_1 = {}
+L3_1.DestVar = "HealCooldownBonus"
+L3_1.DestVarTable = "AvatarVars"
+L4_1 = {}
+L5_1 = 30
+L6_1 = 30
+L4_1[1] = L5_1
+L4_1[2] = L6_1
+L3_1.SrcValueByLevel = L4_1
+L2_1.Params = L3_1
+L0_1[1] = L1_1
+L0_1[2] = L2_1
+SetVarsByLevelBuildingBlocks = L0_1

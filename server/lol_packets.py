@@ -97,13 +97,37 @@ TEMPLATE_HEAD = bytes.fromhex('0e6045')   # b0 b1 b2 of a replay 552 with a 4-by
 SYNC_FLOOR = 150000   # above the values the replay's start state / spawn packets give units (sync552.py)
 
 
+def split_entries(buffer):
+    """the raw entries of a movement buffer, in order"""
+    out, at = [], 0
+    while at < len(buffer):
+        size, n = buffer[at], buffer[at] >> 1
+        nflag = (2 * (n - 1) + 7) // 8 if n > 1 else 0
+        ln = 10 + (size & 1)
+        bits = int.from_bytes(buffer[at + ln:at + ln + nflag], 'little')
+        ln += nflag + 4
+        for k in range(2 * (n - 1)):
+            ln += 1 if bits >> k & 1 else 2
+        out.append(buffer[at:at + ln])
+        at += ln
+    return out
+
+
 def encode_552(buffer, head=None):
-    """head None: the next value of our increasing movement sequence (sync552.py: the client rejects a unit's path
-    whose header value is below the unit's last one)"""
+    """head None: a header of ours for exactly the units in the buffer (the client moves only as many units as the
+    header says) with the next value of our movement sequence (sync552.py: the client rejects a unit's path whose
+    header value is below the unit's last one). At most sync552.MAX_ENTRIES units: bodies_552 splits longer ones."""
     if head is None:
         import sync552
-        head = sync552.next_head(SYNC_FLOOR)[0]
+        head = sync552.next_head(SYNC_FLOOR, len(split_entries(buffer)))[0]
     return head + _len_bytes(len(buffer)) + bytes(H[b] for b in buffer)
+
+
+def bodies_552(buffer):
+    """the 552 bodies that move every unit of a buffer: groups of at most sync552.MAX_ENTRIES"""
+    import sync552
+    ents = split_entries(buffer)
+    return [encode_552(b''.join(ents[i:i + sync552.MAX_ENTRIES])) for i in range(0, len(ents), sync552.MAX_ENTRIES)]
 
 
 def split_552(body):

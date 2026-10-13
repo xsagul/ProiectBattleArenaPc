@@ -18,4 +18,6 @@
 // match: e526d0 _recode_wnaf
 // match: e52890 _sub_niels_from_pt
 // match: e52a30 _x448_int
+#define OPENSSL_FILE "crypto\\ec\\curve448\\curve448.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/ec/curve448/curve448.c"

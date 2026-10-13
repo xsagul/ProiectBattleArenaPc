@@ -1,0 +1,38 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 000001FCFC9C3610)
+0+ params, 2 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "Nasus_Q.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "SiphoningStrike"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -7	; IsDeathRecapSource
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -8	; PersistsThroughDeath
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -10	; "NasusSkin05"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	17	[-]	NEWTABLE 	0 1 0
+	18	[-]	LOADK    	1 -10	; "NasusSkin05"
+	19	[-]	SETLIST  	0 1 1	; 1
+	20	[-]	SETGLOBAL	0 -11	; SpellVOOverrideSkins
+	21	[-]	RETURN   	0 1
+constants (11) for 000001FCFC9C3610:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"Nasus_Q.dds"
+	5	"BuffName"
+	6	"SiphoningStrike"
+	7	"IsDeathRecapSource"
+	8	"PersistsThroughDeath"
+	9	"SpellFXOverrideSkins"
+	10	"NasusSkin05"
+	11	"SpellVOOverrideSkins"
+locals (0) for 000001FCFC9C3610:
+upvalues (0) for 000001FCFC9C3610:

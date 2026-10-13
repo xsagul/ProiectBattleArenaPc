@@ -1,0 +1,53 @@
+
+main <?:0,0> (27 instructions, 108 bytes at 00000167F5DF3600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 20 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; 2.5
+	10	[-]	SETGLOBAL	0 -5	; ChannelDuration
+	11	[-]	LOADK    	0 -8	; "ASSETS/Characters/Elise/HUD/Icons2D/EliseSpiderE.dds"
+	12	[-]	SETGLOBAL	0 -7	; BuffTextureName
+	13	[-]	LOADK    	0 -10	; "BuffEliseRappelBites"
+	14	[-]	SETGLOBAL	0 -9	; BuffName
+	15	[-]	LOADK    	0 -12	; "r:Elise_E_buf_01"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateEffect
+	17	[-]	LOADK    	0 -14	; "L_Buffbone_Glb_Hand_Loc"
+	18	[-]	SETGLOBAL	0 -13	; AutoBuffActivateAttachBoneName
+	19	[-]	LOADK    	0 -12	; "r:Elise_E_buf_01"
+	20	[-]	SETGLOBAL	0 -15	; AutoBuffActivateEffect2
+	21	[-]	LOADK    	0 -17	; "R_Buffbone_Glb_Hand_Loc"
+	22	[-]	SETGLOBAL	0 -16	; AutoBuffActivateAttachBoneName2
+	23	[-]	LOADK    	0 -19	; 3
+	24	[-]	SETGLOBAL	0 -18	; SpellToggleSlot
+	25	[-]	LOADBOOL 	0 1 0
+	26	[-]	SETGLOBAL	0 -20	; IsDamagingSpell
+	27	[-]	RETURN   	0 1
+constants (20) for 00000167F5DF3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"ChannelDuration"
+	6	2.5
+	7	"BuffTextureName"
+	8	"ASSETS/Characters/Elise/HUD/Icons2D/EliseSpiderE.dds"
+	9	"BuffName"
+	10	"BuffEliseRappelBites"
+	11	"AutoBuffActivateEffect"
+	12	"r:Elise_E_buf_01"
+	13	"AutoBuffActivateAttachBoneName"
+	14	"L_Buffbone_Glb_Hand_Loc"
+	15	"AutoBuffActivateEffect2"
+	16	"AutoBuffActivateAttachBoneName2"
+	17	"R_Buffbone_Glb_Hand_Loc"
+	18	"SpellToggleSlot"
+	19	3
+	20	"IsDamagingSpell"
+locals (0) for 00000167F5DF3600:
+upvalues (0) for 00000167F5DF3600:

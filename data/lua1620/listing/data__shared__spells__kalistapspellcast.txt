@@ -1,0 +1,37 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 000002343B2735C0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "Black Shield"
+	6	[-]	SETGLOBAL	0 -3	; BuffName
+	7	[-]	NEWTABLE 	0 5 0
+	8	[-]	LOADK    	1 -6	; 16
+	9	[-]	LOADK    	2 -6	; 16
+	10	[-]	LOADK    	3 -6	; 16
+	11	[-]	LOADK    	4 -6	; 16
+	12	[-]	LOADK    	5 -6	; 16
+	13	[-]	SETLIST  	0 5 1	; 1
+	14	[-]	SETGLOBAL	0 -5	; AutoCooldownByLevel
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -7	; PersistsThroughDeath
+	17	[-]	LOADK    	0 -9	; 2
+	18	[-]	SETGLOBAL	0 -8	; OnPreDamagePriority
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -10	; DoOnPreDamageInExpirationOrder
+	21	[-]	RETURN   	0 1
+constants (10) for 000002343B2735C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffName"
+	4	"Black Shield"
+	5	"AutoCooldownByLevel"
+	6	16
+	7	"PersistsThroughDeath"
+	8	"OnPreDamagePriority"
+	9	2
+	10	"DoOnPreDamageInExpirationOrder"
+locals (0) for 000002343B2735C0:
+upvalues (0) for 000002343B2735C0:

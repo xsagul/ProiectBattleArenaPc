@@ -1,0 +1,176 @@
+
+main <?:0,0> (5 instructions, 20 bytes at 000002A1DEBA34C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 2 constants, 2 functions
+	1	[-]	CLOSURE  	0 0	; 000002A1DEBA3540
+	2	[-]	SETGLOBAL	0 -1	; CreateLevelProps
+	3	[-]	CLOSURE  	0 1	; 000002A1DEBA1990
+	4	[-]	SETGLOBAL	0 -2	; CreateLevelPropsTutorial
+	5	[-]	RETURN   	0 1
+constants (2) for 000002A1DEBA34C0:
+	1	"CreateLevelProps"
+	2	"CreateLevelPropsTutorial"
+locals (0) for 000002A1DEBA34C0:
+upvalues (0) for 000002A1DEBA34C0:
+
+function <?:1,14> (81 instructions, 324 bytes at 000002A1DEBA3540)
+0 params, 7 slots, 0 upvalues, 0 locals, 25 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	2	[-]	LOADK    	1 -2	; "Turret_T1_C_08"
+	3	[-]	LOADK    	2 -3	; "Turret"
+	4	[-]	LOADK    	3 -4	; "HA_Outer"
+	5	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	6	[-]	LOADK    	5 -6	; 3
+	7	[-]	LOADK    	6 -7	; 1
+	8	[-]	CALL     	0 7 1
+	9	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	10	[-]	LOADK    	1 -8	; "Turret_T1_C_07"
+	11	[-]	LOADK    	2 -3	; "Turret"
+	12	[-]	LOADK    	3 -9	; "HA_Inhibitor"
+	13	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	14	[-]	LOADK    	5 -7	; 1
+	15	[-]	LOADK    	6 -7	; 1
+	16	[-]	CALL     	0 7 1
+	17	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	18	[-]	LOADK    	1 -10	; "Turret_T1_C_09"
+	19	[-]	LOADK    	2 -3	; "Turret"
+	20	[-]	LOADK    	3 -11	; "HA_Nexus"
+	21	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	22	[-]	LOADK    	5 -12	; 4
+	23	[-]	LOADK    	6 -7	; 1
+	24	[-]	CALL     	0 7 1
+	25	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	26	[-]	LOADK    	1 -13	; "Turret_T1_C_010"
+	27	[-]	LOADK    	2 -3	; "Turret"
+	28	[-]	LOADK    	3 -11	; "HA_Nexus"
+	29	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	30	[-]	LOADK    	5 -14	; 5
+	31	[-]	LOADK    	6 -7	; 1
+	32	[-]	CALL     	0 7 1
+	33	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	34	[-]	LOADK    	1 -15	; "Turret_T2_L_01"
+	35	[-]	LOADK    	2 -3	; "Turret"
+	36	[-]	LOADK    	3 -4	; "HA_Outer"
+	37	[-]	GETGLOBAL	4 -16	; TEAM_CHAOS
+	38	[-]	LOADK    	5 -6	; 3
+	39	[-]	LOADK    	6 -7	; 1
+	40	[-]	CALL     	0 7 1
+	41	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	42	[-]	LOADK    	1 -17	; "Turret_T2_L_02"
+	43	[-]	LOADK    	2 -3	; "Turret"
+	44	[-]	LOADK    	3 -9	; "HA_Inhibitor"
+	45	[-]	GETGLOBAL	4 -16	; TEAM_CHAOS
+	46	[-]	LOADK    	5 -7	; 1
+	47	[-]	LOADK    	6 -7	; 1
+	48	[-]	CALL     	0 7 1
+	49	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	50	[-]	LOADK    	1 -18	; "Turret_T2_L_03"
+	51	[-]	LOADK    	2 -3	; "Turret"
+	52	[-]	LOADK    	3 -11	; "HA_Nexus"
+	53	[-]	GETGLOBAL	4 -16	; TEAM_CHAOS
+	54	[-]	LOADK    	5 -12	; 4
+	55	[-]	LOADK    	6 -7	; 1
+	56	[-]	CALL     	0 7 1
+	57	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	58	[-]	LOADK    	1 -19	; "Turret_T2_L_04"
+	59	[-]	LOADK    	2 -3	; "Turret"
+	60	[-]	LOADK    	3 -11	; "HA_Nexus"
+	61	[-]	GETGLOBAL	4 -16	; TEAM_CHAOS
+	62	[-]	LOADK    	5 -14	; 5
+	63	[-]	LOADK    	6 -7	; 1
+	64	[-]	CALL     	0 7 1
+	65	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	66	[-]	LOADK    	1 -20	; "Turret_OrderTurretShrine"
+	67	[-]	LOADK    	2 -21	; "HA_AP_OrderShrineTurret"
+	68	[-]	LOADK    	3 -22	; ""
+	69	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	70	[-]	LOADK    	5 -23	; 0
+	71	[-]	LOADK    	6 -7	; 1
+	72	[-]	CALL     	0 7 1
+	73	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	74	[-]	LOADK    	1 -24	; "Turret_ChaosTurretShrine"
+	75	[-]	LOADK    	2 -25	; "HA_AP_ChaosTurretShrine"
+	76	[-]	LOADK    	3 -22	; ""
+	77	[-]	GETGLOBAL	4 -16	; TEAM_CHAOS
+	78	[-]	LOADK    	5 -23	; 0
+	79	[-]	LOADK    	6 -7	; 1
+	80	[-]	CALL     	0 7 1
+	81	[-]	RETURN   	0 1
+constants (25) for 000002A1DEBA3540:
+	1	"CreateChildTurret"
+	2	"Turret_T1_C_08"
+	3	"Turret"
+	4	"HA_Outer"
+	5	"TEAM_ORDER"
+	6	3
+	7	1
+	8	"Turret_T1_C_07"
+	9	"HA_Inhibitor"
+	10	"Turret_T1_C_09"
+	11	"HA_Nexus"
+	12	4
+	13	"Turret_T1_C_010"
+	14	5
+	15	"Turret_T2_L_01"
+	16	"TEAM_CHAOS"
+	17	"Turret_T2_L_02"
+	18	"Turret_T2_L_03"
+	19	"Turret_T2_L_04"
+	20	"Turret_OrderTurretShrine"
+	21	"HA_AP_OrderShrineTurret"
+	22	""
+	23	0
+	24	"Turret_ChaosTurretShrine"
+	25	"HA_AP_ChaosTurretShrine"
+locals (0) for 000002A1DEBA3540:
+upvalues (0) for 000002A1DEBA3540:
+
+function <?:16,22> (33 instructions, 132 bytes at 000002A1DEBA1990)
+0 params, 7 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	2	[-]	LOADK    	1 -2	; "Turret"
+	3	[-]	LOADK    	2 -3	; "HA_Tutorial"
+	4	[-]	LOADK    	3 -4	; ""
+	5	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	6	[-]	LOADK    	5 -6	; 4
+	7	[-]	LOADK    	6 -7	; 1
+	8	[-]	CALL     	0 7 1
+	9	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	10	[-]	LOADK    	1 -2	; "Turret"
+	11	[-]	LOADK    	2 -3	; "HA_Tutorial"
+	12	[-]	LOADK    	3 -4	; ""
+	13	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	14	[-]	LOADK    	5 -8	; 3
+	15	[-]	LOADK    	6 -7	; 1
+	16	[-]	CALL     	0 7 1
+	17	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	18	[-]	LOADK    	1 -2	; "Turret"
+	19	[-]	LOADK    	2 -3	; "HA_Tutorial"
+	20	[-]	LOADK    	3 -4	; ""
+	21	[-]	GETGLOBAL	4 -9	; TEAM_CHAOS
+	22	[-]	LOADK    	5 -6	; 4
+	23	[-]	LOADK    	6 -7	; 1
+	24	[-]	CALL     	0 7 1
+	25	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	26	[-]	LOADK    	1 -10	; "Turret_OrderTurretShrine"
+	27	[-]	LOADK    	2 -11	; "HA_AP_OrderShrineTurret"
+	28	[-]	LOADK    	3 -4	; ""
+	29	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	30	[-]	LOADK    	5 -12	; 0
+	31	[-]	LOADK    	6 -7	; 1
+	32	[-]	CALL     	0 7 1
+	33	[-]	RETURN   	0 1
+constants (12) for 000002A1DEBA1990:
+	1	"CreateChildTurret"
+	2	"Turret"
+	3	"HA_Tutorial"
+	4	""
+	5	"TEAM_ORDER"
+	6	4
+	7	1
+	8	3
+	9	"TEAM_CHAOS"
+	10	"Turret_OrderTurretShrine"
+	11	"HA_AP_OrderShrineTurret"
+	12	0
+locals (0) for 000002A1DEBA1990:
+upvalues (0) for 000002A1DEBA1990:

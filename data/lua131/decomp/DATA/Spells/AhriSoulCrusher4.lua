@@ -1,0 +1,24 @@
+local L0_1, L1_1, L2_1
+L0_1 = "3017_Egitai_Twinsoul.dds"
+BuffTextureName = L0_1
+L0_1 = "AhriSoulCrusher"
+BuffName = L0_1
+L0_1 = "PotionofElusiveness_itm.troy"
+AutoBuffActivateEffect = L0_1
+L0_1 = "PotionofBrilliance_itm.troy"
+AutoBuffActivateEffect2 = L0_1
+L0_1 = "PotionofGiantStrength_itm.troy"
+AutoBuffActivateEffect3 = L0_1
+L0_1 = true
+PersistsThroughDeath = L0_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBSetVarInTable
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.DestVar = "FoxFireIsActive"
+L2_1.DestVarTable = "CharVars"
+L2_1.SrcValue = 0
+L1_1.Params = L2_1
+L0_1[1] = L1_1
+OnBuffDeactivateBuildingBlocks = L0_1

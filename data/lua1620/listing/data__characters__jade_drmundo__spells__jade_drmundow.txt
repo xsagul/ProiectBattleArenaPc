@@ -1,0 +1,36 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 0000022FF0B63600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/UX/Jade/S3Icons/SameSized/Jade_DrMundo_BurningAgony.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Jade_DrMundoW"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "r:Jade_DrMundo_W_cas_01"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -10	; "root"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName2
+	13	[-]	LOADK    	0 -12	; 2
+	14	[-]	SETGLOBAL	0 -11	; SpellToggleSlot
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -13	; IsDamagingSpell
+	17	[-]	RETURN   	0 1
+constants (13) for 0000022FF0B63600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/UX/Jade/S3Icons/SameSized/Jade_DrMundo_BurningAgony.dds"
+	5	"BuffName"
+	6	"Jade_DrMundoW"
+	7	"AutoBuffActivateEffect"
+	8	"r:Jade_DrMundo_W_cas_01"
+	9	"AutoBuffActivateAttachBoneName2"
+	10	"root"
+	11	"SpellToggleSlot"
+	12	2
+	13	"IsDamagingSpell"
+locals (0) for 0000022FF0B63600:
+upvalues (0) for 0000022FF0B63600:

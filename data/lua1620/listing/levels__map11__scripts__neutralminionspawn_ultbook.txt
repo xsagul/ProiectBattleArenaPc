@@ -1,0 +1,152 @@
+
+main <?:0,0> (10 instructions, 40 bytes at 00000163928934C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 5 constants, 2 functions
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "SR_NeutralMinionSpawn"
+	3	[-]	CALL     	0 2 1
+	4	[-]	CLOSURE  	0 0	; 00000163928935A0
+	5	[-]	SETGLOBAL	0 -3	; OverrideNeutralMinionSpawnDefaults
+	6	[-]	CLOSURE  	0 1	; 00000163928938C0
+	7	[-]	SETGLOBAL	0 -4	; NeutralMinionOverride
+	8	[-]	GETGLOBAL	0 -5	; NeutralMinionSpawnInit
+	9	[-]	CALL     	0 1 1
+	10	[-]	RETURN   	0 1
+constants (5) for 00000163928934C0:
+	1	"DoLuaShared"
+	2	"SR_NeutralMinionSpawn"
+	3	"OverrideNeutralMinionSpawnDefaults"
+	4	"NeutralMinionOverride"
+	5	"NeutralMinionSpawnInit"
+locals (0) for 00000163928934C0:
+upvalues (0) for 00000163928934C0:
+
+function <?:7,20> (54 instructions, 216 bytes at 00000163928935A0)
+0 params, 8 slots, 0 upvalues, 0 locals, 27 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; 34
+	2	[-]	SETGLOBAL	0 -1	; START_OF_GAME_ADDITIONAL_DELAY_CRAB
+	3	[-]	GETGLOBAL	0 -4	; MINION_SPAWN_START_TIME
+	4	[-]	SUB      	0 -5 0	; 240 -
+	5	[-]	SETGLOBAL	0 -3	; DRAGON_SPAWN_TIME
+	6	[-]	LOADK    	0 -7	; 210
+	7	[-]	SETGLOBAL	0 -6	; ELEMENTAL_DRAGON_SPAWN_RATE
+	8	[-]	LOADK    	0 -9	; 270
+	9	[-]	SETGLOBAL	0 -8	; ELDER_DRAGON_SPAWN_RATE
+	10	[-]	NEWTABLE 	0 0 16
+	11	[-]	NEWTABLE 	1 0 0
+	12	[-]	SETTABLE 	0 -11 1	; 1 -
+	13	[-]	NEWTABLE 	1 0 0
+	14	[-]	SETTABLE 	0 -12 1	; 2 -
+	15	[-]	NEWTABLE 	1 0 0
+	16	[-]	SETTABLE 	0 -13 1	; 3 -
+	17	[-]	NEWTABLE 	1 0 0
+	18	[-]	SETTABLE 	0 -14 1	; 4 -
+	19	[-]	NEWTABLE 	1 0 0
+	20	[-]	SETTABLE 	0 -15 1	; 5 -
+	21	[-]	NEWTABLE 	1 0 0
+	22	[-]	SETTABLE 	0 -16 1	; 6 -
+	23	[-]	NEWTABLE 	1 0 0
+	24	[-]	SETTABLE 	0 -17 1	; 7 -
+	25	[-]	NEWTABLE 	1 0 0
+	26	[-]	SETTABLE 	0 -18 1	; 8 -
+	27	[-]	NEWTABLE 	1 0 0
+	28	[-]	SETTABLE 	0 -19 1	; 9 -
+	29	[-]	NEWTABLE 	1 0 0
+	30	[-]	SETTABLE 	0 -20 1	; 10 -
+	31	[-]	NEWTABLE 	1 0 0
+	32	[-]	SETTABLE 	0 -21 1	; 11 -
+	33	[-]	NEWTABLE 	1 0 0
+	34	[-]	SETTABLE 	0 -22 1	; 12 -
+	35	[-]	NEWTABLE 	1 0 0
+	36	[-]	SETTABLE 	0 -23 1	; 13 -
+	37	[-]	NEWTABLE 	1 0 0
+	38	[-]	SETTABLE 	0 -24 1	; 14 -
+	39	[-]	NEWTABLE 	1 0 0
+	40	[-]	SETTABLE 	0 -25 1	; 15 -
+	41	[-]	NEWTABLE 	1 0 0
+	42	[-]	SETTABLE 	0 -26 1	; 16 -
+	43	[-]	SETGLOBAL	0 -10	; NeutralMinionCamps
+	44	[-]	NEWTABLE 	0 7 0
+	45	[-]	LOADK    	1 -11	; 1
+	46	[-]	LOADK    	2 -14	; 4
+	47	[-]	LOADK    	3 -16	; 6
+	48	[-]	LOADK    	4 -17	; 7
+	49	[-]	LOADK    	5 -20	; 10
+	50	[-]	LOADK    	6 -25	; 15
+	51	[-]	LOADK    	7 -26	; 16
+	52	[-]	SETLIST  	0 7 1	; 1
+	53	[-]	SETGLOBAL	0 -27	; CampsWithInitialMinimapUI
+	54	[-]	RETURN   	0 1
+constants (27) for 00000163928935A0:
+	1	"START_OF_GAME_ADDITIONAL_DELAY_CRAB"
+	2	34
+	3	"DRAGON_SPAWN_TIME"
+	4	"MINION_SPAWN_START_TIME"
+	5	240
+	6	"ELEMENTAL_DRAGON_SPAWN_RATE"
+	7	210
+	8	"ELDER_DRAGON_SPAWN_RATE"
+	9	270
+	10	"NeutralMinionCamps"
+	11	1
+	12	2
+	13	3
+	14	4
+	15	5
+	16	6
+	17	7
+	18	8
+	19	9
+	20	10
+	21	11
+	22	12
+	23	13
+	24	14
+	25	15
+	26	16
+	27	"CampsWithInitialMinimapUI"
+locals (0) for 00000163928935A0:
+upvalues (0) for 00000163928935A0:
+
+function <?:22,36> (29 instructions, 116 bytes at 00000163928938C0)
+0 params, 3 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; NeutralMinionCamps
+	2	[-]	GETTABLE 	0 0 -2	; 2
+	3	[-]	GETGLOBAL	1 -4	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	4	[-]	GETGLOBAL	2 -5	; CAMP_TIME_OFFSET
+	5	[-]	MUL      	2 2 -2	; - 2
+	6	[-]	ADD      	1 1 2
+	7	[-]	SETTABLE 	0 -3 1	; "GroupDelaySpawnTime" -
+	8	[-]	GETGLOBAL	0 -1	; NeutralMinionCamps
+	9	[-]	GETTABLE 	0 0 -6	; 3
+	10	[-]	GETGLOBAL	1 -4	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	11	[-]	GETGLOBAL	2 -5	; CAMP_TIME_OFFSET
+	12	[-]	MUL      	2 2 -7	; - 1
+	13	[-]	ADD      	1 1 2
+	14	[-]	SETTABLE 	0 -3 1	; "GroupDelaySpawnTime" -
+	15	[-]	GETGLOBAL	0 -1	; NeutralMinionCamps
+	16	[-]	GETTABLE 	0 0 -8	; 8
+	17	[-]	GETGLOBAL	1 -4	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	18	[-]	GETGLOBAL	2 -5	; CAMP_TIME_OFFSET
+	19	[-]	MUL      	2 2 -2	; - 2
+	20	[-]	ADD      	1 1 2
+	21	[-]	SETTABLE 	0 -3 1	; "GroupDelaySpawnTime" -
+	22	[-]	GETGLOBAL	0 -1	; NeutralMinionCamps
+	23	[-]	GETTABLE 	0 0 -9	; 9
+	24	[-]	GETGLOBAL	1 -4	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	25	[-]	GETGLOBAL	2 -5	; CAMP_TIME_OFFSET
+	26	[-]	MUL      	2 2 -7	; - 1
+	27	[-]	ADD      	1 1 2
+	28	[-]	SETTABLE 	0 -3 1	; "GroupDelaySpawnTime" -
+	29	[-]	RETURN   	0 1
+constants (9) for 00000163928938C0:
+	1	"NeutralMinionCamps"
+	2	2
+	3	"GroupDelaySpawnTime"
+	4	"START_OF_GAME_MONSTER_SPAWN_DELAY"
+	5	"CAMP_TIME_OFFSET"
+	6	3
+	7	1
+	8	8
+	9	9
+locals (0) for 00000163928938C0:
+upvalues (0) for 00000163928938C0:

@@ -5,4 +5,8 @@
 // match: dd9920 _RSA_meth_set_sign
 // match: dd9950 _RSA_meth_set_keygen
 // match: dd99d0 _RSA_meth_set_verify
+// match: e37430 _RSA_meth_free
+// match: e37460 _RSA_meth_new
+#define OPENSSL_FILE "crypto\\rsa\\rsa_meth.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/rsa/rsa_meth.c"

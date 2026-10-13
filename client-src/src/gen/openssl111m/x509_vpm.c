@@ -3,14 +3,24 @@
 // flags: -MT -Zl -Gs0 -GF -Gy -W3 -wd4090 -O2 -Itools/third_party/openssl-1.1.1m -Itools/third_party/openssl-1.1.1m/include -Itools/third_party/openssl-1.1.1m/crypto/modes -Itools/third_party/openssl-1.1.1m/crypto/ec/curve448 -Itools/third_party/openssl-1.1.1m/crypto/ec/curve448/arch_32 -DL_ENDIAN -DOPENSSL_PIC -DOPENSSL_CPUID_OBJ -DOPENSSL_BN_ASM_PART_WORDS -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DRC4_ASM -DMD5_ASM -DRMD160_ASM -DAESNI_ASM -DVPAES_ASM -DWHIRLPOOL_ASM -DGHASH_ASM -DECP_NISTZ256_ASM -DPOLY1305_ASM -DOPENSSL_SYS_WIN32 -DWIN32_LEAN_AND_MEAN -DUNICODE -D_UNICODE -D_CRT_SECURE_NO_DEPRECATE -D_WINSOCK_DEPRECATED_NO_WARNINGS -DNDEBUG
 // match: dbe530 _X509_VERIFY_PARAM_get_auth_level
 // match: dbec40 _X509_VERIFY_PARAM_set_auth_level
+// match: dc5b70 _X509_VERIFY_PARAM_free
 // match: dc5be0 _X509_VERIFY_PARAM_get_depth
+// match: dc5bf0 _X509_VERIFY_PARAM_inherit
 // match: dc5f30 _X509_VERIFY_PARAM_lookup
+// match: dc5f90 _X509_VERIFY_PARAM_move_peername
+// match: dc5fe0 _X509_VERIFY_PARAM_new
 // match: dc6030 _X509_VERIFY_PARAM_set1
+// match: dc6080 _X509_VERIFY_PARAM_set1_ip
+// match: dc6110 _X509_VERIFY_PARAM_set1_ip_asc
 // match: dc61d0 _X509_VERIFY_PARAM_set_depth
 // match: dc61e0 _X509_VERIFY_PARAM_set_flags
 // match: dc6210 _X509_VERIFY_PARAM_set_hostflags
+// match: dc6220 _int_x509_param_set_hosts
+// match: dc6360 _str_free
 // match: dc6380 _table_cmp_BSEARCH_CMP_FN
 // match: dc8c00 _X509_VERIFY_PARAM_set_inh_flags
 // match: dcbfb0 _X509_VERIFY_PARAM_get_hostflags
 // match: e0bec0 _X509_VERIFY_PARAM_table_cleanup
+#define OPENSSL_FILE "crypto\\x509\\x509_vpm.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/x509/x509_vpm.c"

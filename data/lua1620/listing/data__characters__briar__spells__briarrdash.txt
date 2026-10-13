@@ -1,0 +1,42 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 000001B378FC35C0)
+0+ params, 4 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; "ASSETS/Characters/Briar/HUD/Icons2D/BriarWBuff.dds"
+	2	[-]	SETGLOBAL	0 -1	; BuffTextureName
+	3	[-]	LOADK    	0 -4	; "BriarRSelf"
+	4	[-]	SETGLOBAL	0 -3	; BuffName
+	5	[-]	NEWTABLE 	0 3 0
+	6	[-]	LOADK    	1 -6	; 160
+	7	[-]	LOADK    	2 -7	; 140
+	8	[-]	LOADK    	3 -8	; 120
+	9	[-]	SETLIST  	0 3 1	; 1
+	10	[-]	SETGLOBAL	0 -5	; AutoCooldownByLevel
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -9	; NonDispellable
+	13	[-]	LOADK    	0 -11	; 4
+	14	[-]	SETGLOBAL	0 -10	; OnPreDamagePriority
+	15	[-]	LOADK    	0 -13	; 1
+	16	[-]	SETGLOBAL	0 -12	; DeathEventType
+	17	[-]	NEWTABLE 	0 1 0
+	18	[-]	LOADK    	1 -15	; "ZileanSkin05"
+	19	[-]	SETLIST  	0 1 1	; 1
+	20	[-]	SETGLOBAL	0 -14	; SpellFXOverrideSkins
+	21	[-]	RETURN   	0 1
+constants (15) for 000001B378FC35C0:
+	1	"BuffTextureName"
+	2	"ASSETS/Characters/Briar/HUD/Icons2D/BriarWBuff.dds"
+	3	"BuffName"
+	4	"BriarRSelf"
+	5	"AutoCooldownByLevel"
+	6	160
+	7	140
+	8	120
+	9	"NonDispellable"
+	10	"OnPreDamagePriority"
+	11	4
+	12	"DeathEventType"
+	13	1
+	14	"SpellFXOverrideSkins"
+	15	"ZileanSkin05"
+locals (0) for 000001B378FC35C0:
+upvalues (0) for 000001B378FC35C0:

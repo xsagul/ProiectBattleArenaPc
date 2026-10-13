@@ -1,0 +1,37 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 000002AD94413600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/UX/Jade/S3Icons/SameSized/Jade_DrMundo_Sadism.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Jade_DrMundoR"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "r:Jade_DrMundo_R_Heal_01"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -9	; NonDispellable
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -11	; "CorporateMundo"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -10	; SpellVOOverrideSkins
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	19	[-]	RETURN   	0 1
+constants (12) for 000002AD94413600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/UX/Jade/S3Icons/SameSized/Jade_DrMundo_Sadism.dds"
+	5	"BuffName"
+	6	"Jade_DrMundoR"
+	7	"AutoBuffActivateEffect"
+	8	"r:Jade_DrMundo_R_Heal_01"
+	9	"NonDispellable"
+	10	"SpellVOOverrideSkins"
+	11	"CorporateMundo"
+	12	"IsDamagingSpell"
+locals (0) for 000002AD94413600:
+upvalues (0) for 000002AD94413600:

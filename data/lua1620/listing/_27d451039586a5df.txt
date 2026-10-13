@@ -1,0 +1,65 @@
+
+main <?:0,0> (16 instructions, 64 bytes at 0000025B665B34C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 8 constants, 5 functions
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "SR_LevelScript"
+	3	[-]	CALL     	0 2 1
+	4	[-]	CLOSURE  	0 0	; 0000025B665B35D0
+	5	[-]	SETGLOBAL	0 -3	; OverrideDefaultDefines
+	6	[-]	CLOSURE  	0 1	; 0000025B665B3650
+	7	[-]	SETGLOBAL	0 -4	; OverrideDefaultMinionInfo
+	8	[-]	CLOSURE  	0 2	; 0000025B665B36F0
+	9	[-]	SETGLOBAL	0 -5	; OverrideDefaultTables
+	10	[-]	CLOSURE  	0 3	; 0000025B665B3790
+	11	[-]	SETGLOBAL	0 -6	; OverrideMinionSpawnInfo
+	12	[-]	CLOSURE  	0 4	; 0000025B665B3830
+	13	[-]	SETGLOBAL	0 -7	; DoAdditionalPreloads
+	14	[-]	GETGLOBAL	0 -8	; Init
+	15	[-]	CALL     	0 1 1
+	16	[-]	RETURN   	0 1
+constants (8) for 0000025B665B34C0:
+	1	"DoLuaShared"
+	2	"SR_LevelScript"
+	3	"OverrideDefaultDefines"
+	4	"OverrideDefaultMinionInfo"
+	5	"OverrideDefaultTables"
+	6	"OverrideMinionSpawnInfo"
+	7	"DoAdditionalPreloads"
+	8	"Init"
+locals (0) for 0000025B665B34C0:
+upvalues (0) for 0000025B665B34C0:
+
+function <?:6,7> (1 instruction, 4 bytes at 0000025B665B35D0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000025B665B35D0:
+locals (0) for 0000025B665B35D0:
+upvalues (0) for 0000025B665B35D0:
+
+function <?:9,10> (1 instruction, 4 bytes at 0000025B665B3650)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000025B665B3650:
+locals (0) for 0000025B665B3650:
+upvalues (0) for 0000025B665B3650:
+
+function <?:12,13> (1 instruction, 4 bytes at 0000025B665B36F0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000025B665B36F0:
+locals (0) for 0000025B665B36F0:
+upvalues (0) for 0000025B665B36F0:
+
+function <?:15,16> (1 instruction, 4 bytes at 0000025B665B3790)
+3 params, 3 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000025B665B3790:
+locals (0) for 0000025B665B3790:
+upvalues (0) for 0000025B665B3790:
+
+function <?:18,19> (1 instruction, 4 bytes at 0000025B665B3830)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000025B665B3830:
+locals (0) for 0000025B665B3830:
+upvalues (0) for 0000025B665B3830:

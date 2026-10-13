@@ -1,0 +1,15 @@
+struct 0xf94f80
+  instance 0 of 1: 0xf94f80: fields end at 4, the reader used 5
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1691, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1350, in learn
+    sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc, k=k).learn()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 165, in __init__
+    self.fields = self.split(r)
+                  ^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 216, in split
+    assert cursor == r.used, f'{self.fn:#x}: fields end at {cursor}, the reader used {r.used}'
+           ^^^^^^^^^^^^^^^^
+AssertionError: 0xf94f80: fields end at 4, the reader used 5

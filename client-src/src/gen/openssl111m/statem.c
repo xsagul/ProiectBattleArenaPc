@@ -13,5 +13,10 @@
 // match: d8a0f0 _ossl_statem_set_in_init
 // match: d8a100 _ossl_statem_set_renegotiate
 // match: d8a120 _ossl_statem_skip_early_data
+// match: d8a150 _read_state_machine
+// match: d8a4d0 _state_machine
 // match: d8a860 _statem_flush
+// match: d8a8a0 _write_state_machine
+#define OPENSSL_FILE "ssl\\statem\\statem.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/ssl/statem/statem.c"

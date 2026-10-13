@@ -1,0 +1,46 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 000001B347B734D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Items/Icons2D/3430_RiteOfRuin.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "123430Shield"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; 3
+	10	[-]	SETGLOBAL	0 -7	; OnPreDamagePriority
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -10	; "JannaForecast"
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	15	[-]	NEWTABLE 	0 1 0
+	16	[-]	LOADK    	1 -10	; "JannaForecast"
+	17	[-]	SETLIST  	0 1 1	; 1
+	18	[-]	SETGLOBAL	0 -11	; SpellVOOverrideSkins
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	21	[-]	LOADBOOL 	0 1 0
+	22	[-]	SETGLOBAL	0 -13	; DoOnPreDamageInExpirationOrder
+	23	[-]	LOADK    	0 -15	; "DATA/Shared/Particles/deathscaress_buf.troy"
+	24	[-]	SETGLOBAL	0 -14	; AutoBuffActivateEvent
+	25	[-]	RETURN   	0 1
+constants (15) for 000001B347B734D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Items/Icons2D/3430_RiteOfRuin.dds"
+	5	"BuffName"
+	6	"123430Shield"
+	7	"OnPreDamagePriority"
+	8	3
+	9	"SpellFXOverrideSkins"
+	10	"JannaForecast"
+	11	"SpellVOOverrideSkins"
+	12	"IsDamagingSpell"
+	13	"DoOnPreDamageInExpirationOrder"
+	14	"AutoBuffActivateEvent"
+	15	"DATA/Shared/Particles/deathscaress_buf.troy"
+locals (0) for 000001B347B734D0:
+upvalues (0) for 000001B347B734D0:

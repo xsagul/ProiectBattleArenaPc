@@ -1,0 +1,46 @@
+
+main <?:0,0> (24 instructions, 96 bytes at 000001C5FD9E34C0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Velkoz/HUD/Icons2D/UltBook_Velkoz_R.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "UltBook_VelkozR"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	NEWTABLE 	0 5 0
+	10	[-]	LOADK    	1 -8	; 12
+	11	[-]	LOADK    	2 -9	; 11
+	12	[-]	LOADK    	3 -10	; 10
+	13	[-]	LOADK    	4 -11	; 9
+	14	[-]	LOADK    	5 -12	; 8
+	15	[-]	SETLIST  	0 5 1	; 1
+	16	[-]	SETGLOBAL	0 -7	; AutoCooldownByLevel
+	17	[-]	NEWTABLE 	0 2 0
+	18	[-]	LOADK    	1 -14	; "UltBook_VelkozSkin01"
+	19	[-]	LOADK    	2 -15	; "UltBook_VelkozSkin02"
+	20	[-]	SETLIST  	0 2 1	; 1
+	21	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	22	[-]	LOADBOOL 	0 1 0
+	23	[-]	SETGLOBAL	0 -16	; IsDamagingSpell
+	24	[-]	RETURN   	0 1
+constants (16) for 000001C5FD9E34C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Velkoz/HUD/Icons2D/UltBook_Velkoz_R.dds"
+	5	"BuffName"
+	6	"UltBook_VelkozR"
+	7	"AutoCooldownByLevel"
+	8	12
+	9	11
+	10	10
+	11	9
+	12	8
+	13	"SpellFXOverrideSkins"
+	14	"UltBook_VelkozSkin01"
+	15	"UltBook_VelkozSkin02"
+	16	"IsDamagingSpell"
+locals (0) for 000001C5FD9E34C0:
+upvalues (0) for 000001C5FD9E34C0:

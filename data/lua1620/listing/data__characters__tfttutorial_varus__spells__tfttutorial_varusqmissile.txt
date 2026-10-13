@@ -1,0 +1,40 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 0000021BD33E36A0)
+0+ params, 4 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "KogMaw_VoidOoze.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "EzrealEssenceFluxDebuff"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	NEWTABLE 	0 3 0
+	12	[-]	LOADK    	1 -9	; "TFTTutorial_VarusAscended"
+	13	[-]	LOADK    	2 -10	; "TFTTutorial_VarusSkin03"
+	14	[-]	LOADK    	3 -11	; "TFTTutorial_VarusSkin04"
+	15	[-]	SETLIST  	0 3 1	; 1
+	16	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -13	; TriggersSpellCasts
+	21	[-]	RETURN   	0 1
+constants (13) for 0000021BD33E36A0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"KogMaw_VoidOoze.dds"
+	6	"BuffName"
+	7	"EzrealEssenceFluxDebuff"
+	8	"SpellFXOverrideSkins"
+	9	"TFTTutorial_VarusAscended"
+	10	"TFTTutorial_VarusSkin03"
+	11	"TFTTutorial_VarusSkin04"
+	12	"IsDamagingSpell"
+	13	"TriggersSpellCasts"
+locals (0) for 0000021BD33E36A0:
+upvalues (0) for 0000021BD33E36A0:

@@ -1,0 +1,40 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 00000188629934C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Nocturne/HUD/Icons2D/Nocturne_Paranoia.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "UltBook_NocturneR"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; 4
+	14	[-]	SETGLOBAL	0 -9	; SpellToggleSlot
+	15	[-]	NEWTABLE 	0 1 0
+	16	[-]	LOADK    	1 -12	; "CyberNocturne"
+	17	[-]	SETLIST  	0 1 1	; 1
+	18	[-]	SETGLOBAL	0 -11	; SpellFXOverrideSkins
+	19	[-]	LOADBOOL 	0 0 0
+	20	[-]	SETGLOBAL	0 -13	; IsDamagingSpell
+	21	[-]	RETURN   	0 1
+constants (13) for 00000188629934C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Nocturne/HUD/Icons2D/Nocturne_Paranoia.dds"
+	7	"BuffName"
+	8	"UltBook_NocturneR"
+	9	"SpellToggleSlot"
+	10	4
+	11	"SpellFXOverrideSkins"
+	12	"CyberNocturne"
+	13	"IsDamagingSpell"
+locals (0) for 00000188629934C0:
+upvalues (0) for 00000188629934C0:

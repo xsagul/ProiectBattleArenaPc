@@ -4,4 +4,6 @@
 // match: dbfbb0 _SHA224_Init
 // match: dbfc20 _SHA256_Final
 // match: dbff00 _SHA256_Init
+#define OPENSSL_FILE "crypto\\sha\\sha256.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/sha/sha256.c"

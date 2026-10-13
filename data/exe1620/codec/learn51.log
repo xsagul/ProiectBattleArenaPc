@@ -1,0 +1,83 @@
+struct 0x1021720
+  0x1021720 field 0: bits 0..0 +0x10 52 B 0:const 1:struct(0x1019860)
+struct 0x1019860
+  0x1019860 field 0: bits 6..8 +0x8 4 B 0:varint 1:varint 2:varint 3:const 4:const 5:const 6:varint 7:const
+  0x1019860 field 1: bits 12..14 +0xc 1 B 0:fixed 1:const 2:fixed 3:const 4:fixed 5:fixed 6:const 7:const
+  0x1019860 field 2: bits 3..5 +0xd 1 B 0:const 1:const 2:fixed 3:fixed 4:fixed 5:fixed 6:const 7:const
+  0x1019860 field 3: bits 15..15 +0x10 12 B 0:fixed 1:const
+  0x1019860 field 4: bits 0..2 +0x1c 4 B 0:varint 1:const 2:varint 3:varint 4:varint 5:varint 6:varint 7:const
+  0x1019860 field 5: bits 9..11 +0x20 4 B 0:varint 1:const 2:varint 3:varint 4:varint 5:const 6:varint 7:varint
+    0x1019860 field 6 mode 0: count bytes [0, 48] for counts [0, 10] left unknown
+    0x1019860 field 6: fewer than three different elements in the replay, order taken as fwd (unverified)
+  0x1019860 field 6: bits 16..16 +0x28 16 B 0:seq(struct) 1:const
+struct 0x1012ba0
+    0x1012ba0 field 0 mode 1: count bytes [0, 113] for counts [0, 20] left unknown
+    0x1012ba0 field 0: fewer than three different elements in the replay, order taken as fwd (unverified)
+  0x1012ba0 field 0: bits 95..95 +0x8 16 B 0:const 1:seq(struct)
+  0x1012ba0 field 1: bits 56..58 +0x18 4 B 0:varint 1:const 2:const 3:varint 4:varint 5:const 6:const 7:varint
+  0x1012ba0 field 2: bits 16..18 +0x1c 4 B 0:const 1:fixed 2:fixed 3:fixed 4:const 5:const 6:const 7:fixed
+  0x1012ba0 field 3: bits 88..90 +0x20 2 B 0:const 1:varint 2:const 3:const 4:const 5:varint 6:varint 7:varint
+  0x1012ba0 field 4: bits 3..5 +0x24 4 B 0:fixed 1:const 2:fixed 3:const 4:const 5:fixed 6:fixed 7:const
+  0x1012ba0 field 5: bits 69..71 +0x28 4 B 0:const 1:const 2:fixed 3:const 4:fixed 5:const 6:fixed 7:fixed
+    0x1012ba0 field 6 mode 1: left unlearnt (ValueError: 1 is not in list)
+  0x1012ba0 field 6: bits 87..87 +0x30 16 B 0:const 1:unknown
+  0x1012ba0 field 7: bits 94..94 +0x40 12 B 0:const 1:fixed
+  0x1012ba0 field 8: bits 13..15 +0x4c 4 B 0:const 1:fixed 2:fixed 3:const 4:const 5:const 6:fixed 7:fixed
+  0x1012ba0 field 9: bits 96..96 +0x50 16 B 0:const 1:text
+  0x1012ba0 field 10: bits 6..8 +0x60 1 B 0:fixed 1:const 2:const 3:fixed 4:fixed 5:const 6:const 7:fixed
+  0x1012ba0 field 11: bits 29..31 +0x64 4 B 0:fixed 1:fixed 2:const 3:const 4:fixed 5:const 6:const 7:fixed
+  0x1012ba0 field 12: bits 78..80 +0x68 4 B 0:fixed 1:fixed 2:const 3:const 4:const 5:fixed 6:const 7:fixed
+    0x1012ba0 field 13 mode 3: left unlearnt (AssertionError: 0x1012ba0 field 13 mode 3: varint table)
+    0x1012ba0 field 13 mode 4: left unlearnt (AssertionError: 0x1012ba0 field 13 mode 4: varint table)
+    0x1012ba0 field 13 mode 5: left unlearnt (AssertionError: 0x1012ba0 field 13 mode 5: varint table)
+    0x1012ba0 field 13 mode 6: left unlearnt (AssertionError: 0x1012ba0 field 13 mode 6: varint table)
+  0x1012ba0 field 13: bits 49..51 +0x6c 4 B 0:const 1:const 2:const 3:unknown 4:unknown 5:unknown 6:unknown 7:const
+  0x1012ba0 field 14: bits 35..37 +0x70 1 B 0:fixed 1:const 2:fixed 3:const 4:const 5:const 6:fixed 7:fixed
+  0x1012ba0 field 15: bits 72..74 +0x74 4 B 0:const 1:const 2:fixed 3:const 4:const 5:fixed 6:fixed 7:fixed
+  0x1012ba0 field 16: bits 45..47 +0x78 4 B 0:varint 1:varint 2:const 3:varint 4:varint 5:varint 6:const 7:varint
+  0x1012ba0 field 17: bits 75..77 +0x7c 4 B 0:varint 1:varint 2:const 3:const 4:varint 5:const 6:const 7:varint
+  0x1012ba0 field 18: bits 23..25 +0x80 4 B 0:fixed 1:const 2:const 3:const 4:fixed 5:fixed 6:const 7:fixed
+  0x1012ba0 field 19: bits 55..55 +0x84 1 B 0:const 1:const
+  0x1012ba0 field 20: bits 26..28 +0x88 4 B 0:varint 1:varint 2:varint 3:varint 4:const 5:varint 6:const 7:varint
+  0x1012ba0 field 21: bits 32..34 +0x8c 4 B 0:varint 1:const 2:const 3:varint 4:const 5:const 6:varint 7:varint
+  0x1012ba0 field 22: bits 41..41 +0x90 12 B 0:const 1:fixed
+  0x1012ba0 field 23: bits 22..22 +0x9c 1 B 0:const 1:const
+  0x1012ba0 field 24: bits 38..40 +0xa0 4 B 0:const 1:const 2:varint 3:varint 4:varint 5:const 6:const 7:varint
+  0x1012ba0 field 25: bits 0..2 +0xa4 1 B 0:const 1:const 2:fixed 3:fixed 4:const 5:const 6:fixed 7:fixed
+  0x1012ba0 field 26: bits 42..44 +0xa8 4 B 0:fixed 1:fixed 2:fixed 3:fixed 4:const 5:const 6:const 7:const
+  0x1012ba0 field 27: bits 68..68 +0xac 12 B 0:fixed 1:const
+  0x1012ba0 field 28: bits 59..61 +0xb8 1 B 0:const 1:const 2:const 3:const 4:fixed 5:fixed 6:fixed 7:fixed
+  0x1012ba0 field 29: bits 84..86 +0xbc 4 B 0:varint 1:const 2:varint 3:const 4:varint 5:varint 6:varint 7:varint
+  0x1012ba0 field 30: bits 65..67 +0xc0 4 B 0:fixed 1:const 2:const 3:const 4:fixed 5:const 6:fixed 7:fixed
+    0x1012ba0 field 31 mode 0: left unlearnt (AssertionError: 0x1012ba0 field 31 mode 0: varint table)
+    0x1012ba0 field 31 mode 1: left unlearnt (AssertionError: 0x1012ba0 field 31 mode 1: varint table)
+    0x1012ba0 field 31 mode 2: left unlearnt (AssertionError: 0x1012ba0 field 31 mode 2: varint table)
+    0x1012ba0 field 31 mode 3: left unlearnt (AssertionError: 0x1012ba0 field 31 mode 3: varint table)
+    0x1012ba0 field 31 mode 4: left unlearnt (AssertionError: 0x1012ba0 field 31 mode 4: varint table)
+    0x1012ba0 field 31 mode 6: left unlearnt (AssertionError: 0x1012ba0 field 31 mode 6: varint table)
+  0x1012ba0 field 31: bits 9..11 +0xc4 4 B 0:unknown 1:unknown 2:unknown 3:unknown 4:unknown 5:const 6:unknown 7:const
+  0x1012ba0 field 32: bits 91..93 +0xc8 2 B 0:varint 1:const 2:varint 3:varint 4:const 5:const 6:varint 7:const
+  0x1012ba0 field 33: bits 48..48 +0xd0 72 B 0:const 1:struct(0x1018170)
+  0x1012ba0 field 34: bits 81..83 +0x118 2 B 0:varint 1:varint 2:varint 3:const 4:varint 5:const 6:const 7:const
+  0x1012ba0 field 35: bits 62..64 +0x11c 4 B 0:fixed 1:fixed 2:fixed 3:const 4:const 5:const 6:fixed 7:const
+  0x1012ba0 field 36: bits 19..21 +0x120 2 B 0:const 1:varint 2:varint 3:const 4:const 5:const 6:varint 7:varint
+  0x1012ba0 field 37: bits 12..12 +0x124 12 B 0:const 1:fixed
+  0x1012ba0 field 38: bits 52..54 +0x130 4 B 0:fixed 1:const 2:const 3:fixed 4:const 5:fixed 6:const 7:fixed
+struct 0x1017e60
+  0x1017e60 field 0: bits 3..5 +0x8 4 B 0:varint 1:const 2:varint 3:varint 4:varint 5:const 6:varint 7:varint
+  0x1017e60 field 1: bits 0..2 +0xc 1 B 0:fixed 1:const 2:fixed 3:const 4:fixed 5:fixed 6:const 7:const
+struct 0x1018170
+  0x1018170 field 0: bits 18..18 +0x8 4 B 0:varint 1:const
+  0x1018170 field 1: bits 0..2 +0xc 2 B 0:varint 1:const 2:const 3:varint 4:varint 5:const 6:const 7:varint
+  0x1018170 field 2: bits 6..7 +0x10 16 B 0:const 1:text 2:text 3:text
+  0x1018170 field 3: bits 11..13 +0x20 4 B 0:varint 1:const 2:varint 3:varint 4:const 5:const 6:varint 7:const
+  0x1018170 field 4: bits 21..21 +0x24 4 B 0:varint 1:const
+  0x1018170 field 5: bits 19..20 +0x28 16 B 0:text 1:const 2:text 3:text
+  0x1018170 field 6: bits 8..10 +0x38 4 B 0:varint 1:varint 2:const 3:const 4:varint 5:const 6:const 7:varint
+  0x1018170 field 7: bits 14..16 +0x3c 4 B 0:fixed 1:const 2:const 3:fixed 4:const 5:const 6:fixed 7:fixed
+  0x1018170 field 8: bits 3..5 +0x40 2 B 0:const 1:const 2:varint 3:varint 4:const 5:const 6:varint 7:varint
+  0x1018170 field 9: bits 22..24 +0x42 2 B 0:const 1:varint 2:varint 3:varint 4:const 5:const 6:varint 7:const
+  0x1018170 field 10: bits 17..17 +0x44 4 B 0:const 1:varint
+-> C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\..\data\exe1620\codec\51.tree.json
+('+0x10', '+0x28'): order None
+('+0x10', '+0x28', 0, '+0x8'): order None

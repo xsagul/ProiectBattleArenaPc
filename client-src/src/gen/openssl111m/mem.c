@@ -8,4 +8,6 @@
 // match: dce1c0 _CRYPTO_clear_realloc
 // match: dce2e0 _CRYPTO_get_mem_functions
 // match: dce310 _CRYPTO_zalloc
+#define OPENSSL_FILE "crypto\\mem.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/mem.c"

@@ -1,0 +1,66 @@
+
+main <?:0,0> (35 instructions, 140 bytes at 0000027935A435F0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 25 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Olaf/HUD/Icons2D/Olaf_W.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "OlafFrenziedStrikes"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "r:Olaf_W_cas"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect
+	15	[-]	LOADK    	0 -12	; "L_BUFFBONE_GLB_HAND_LOC"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateAttachBoneName
+	17	[-]	LOADK    	0 -10	; "r:Olaf_W_cas"
+	18	[-]	SETGLOBAL	0 -13	; AutoBuffActivateEffect2
+	19	[-]	LOADK    	0 -15	; "R_BUFFBONE_GLB_HAND_LOC"
+	20	[-]	SETGLOBAL	0 -14	; AutoBuffActivateAttachBoneName2
+	21	[-]	LOADK    	0 -17	; "r:Olaf_W_buf_blood"
+	22	[-]	SETGLOBAL	0 -16	; AutoBuffActivateEffect3
+	23	[-]	LOADK    	0 -19	; "BUFFBONE_CSTM_WEAPON_4"
+	24	[-]	SETGLOBAL	0 -18	; AutoBuffActivateAttachBoneName3
+	25	[-]	LOADK    	0 -17	; "r:Olaf_W_buf_blood"
+	26	[-]	SETGLOBAL	0 -20	; AutoBuffActivateEffect4
+	27	[-]	LOADK    	0 -22	; "BUFFBONE_CSTM_WEAPON_2"
+	28	[-]	SETGLOBAL	0 -21	; AutoBuffActivateAttachBoneName4
+	29	[-]	NEWTABLE 	0 1 0
+	30	[-]	LOADK    	1 -24	; "BroOlaf"
+	31	[-]	SETLIST  	0 1 1	; 1
+	32	[-]	SETGLOBAL	0 -23	; SpellVOOverrideSkins
+	33	[-]	LOADBOOL 	0 0 0
+	34	[-]	SETGLOBAL	0 -25	; IsDamagingSpell
+	35	[-]	RETURN   	0 1
+constants (25) for 0000027935A435F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Olaf/HUD/Icons2D/Olaf_W.dds"
+	7	"BuffName"
+	8	"OlafFrenziedStrikes"
+	9	"AutoBuffActivateEffect"
+	10	"r:Olaf_W_cas"
+	11	"AutoBuffActivateAttachBoneName"
+	12	"L_BUFFBONE_GLB_HAND_LOC"
+	13	"AutoBuffActivateEffect2"
+	14	"AutoBuffActivateAttachBoneName2"
+	15	"R_BUFFBONE_GLB_HAND_LOC"
+	16	"AutoBuffActivateEffect3"
+	17	"r:Olaf_W_buf_blood"
+	18	"AutoBuffActivateAttachBoneName3"
+	19	"BUFFBONE_CSTM_WEAPON_4"
+	20	"AutoBuffActivateEffect4"
+	21	"AutoBuffActivateAttachBoneName4"
+	22	"BUFFBONE_CSTM_WEAPON_2"
+	23	"SpellVOOverrideSkins"
+	24	"BroOlaf"
+	25	"IsDamagingSpell"
+locals (0) for 0000027935A435F0:
+upvalues (0) for 0000027935A435F0:

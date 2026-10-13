@@ -1,0 +1,36 @@
+
+main <?:0,0> (20 instructions, 80 bytes at 0000013AB2F535C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	NEWTABLE 	0 2 0
+	10	[-]	LOADK    	1 -6	; "SejuaniSkin04"
+	11	[-]	LOADK    	2 -7	; "SejuaniSkin05"
+	12	[-]	SETLIST  	0 2 1	; 1
+	13	[-]	SETGLOBAL	0 -5	; SpellFXOverrideSkins
+	14	[-]	NEWTABLE 	0 1 0
+	15	[-]	LOADK    	1 -9	; "SejuaniClassic"
+	16	[-]	SETLIST  	0 1 1	; 1
+	17	[-]	SETGLOBAL	0 -8	; SpellVOOverrideSkins
+	18	[-]	LOADBOOL 	0 1 0
+	19	[-]	SETGLOBAL	0 -10	; IsDamagingSpell
+	20	[-]	RETURN   	0 1
+constants (10) for 0000013AB2F535C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"SpellFXOverrideSkins"
+	6	"SejuaniSkin04"
+	7	"SejuaniSkin05"
+	8	"SpellVOOverrideSkins"
+	9	"SejuaniClassic"
+	10	"IsDamagingSpell"
+locals (0) for 0000013AB2F535C0:
+upvalues (0) for 0000013AB2F535C0:

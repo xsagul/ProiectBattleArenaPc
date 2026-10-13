@@ -1,0 +1,31 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 000002FB57843600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -5	; PersistsThroughDeath
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -7	; "MissFortuneSkin07"
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -6	; SpellFXOverrideSkins
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -8	; IsDamagingSpell
+	17	[-]	RETURN   	0 1
+constants (8) for 000002FB57843600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"PersistsThroughDeath"
+	6	"SpellFXOverrideSkins"
+	7	"MissFortuneSkin07"
+	8	"IsDamagingSpell"
+locals (0) for 000002FB57843600:
+upvalues (0) for 000002FB57843600:

@@ -1,0 +1,311 @@
+
+main <?:0,0> (9 instructions, 36 bytes at 0000025AA08335D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 4 constants, 4 functions
+	1	[-]	CLOSURE  	0 0	; 0000025AA0833650
+	2	[-]	SETGLOBAL	0 -1	; CreateRiverRegions
+	3	[-]	CLOSURE  	0 1	; 0000025AA0831A70
+	4	[-]	SETGLOBAL	0 -2	; GetWaypoint
+	5	[-]	CLOSURE  	0 2	; 0000025AA0831AF0
+	6	[-]	SETGLOBAL	0 -3	; IncrementWaypoint
+	7	[-]	CLOSURE  	0 3	; 0000025AA0835030
+	8	[-]	SETGLOBAL	0 -4	; SeekWaypoint
+	9	[-]	RETURN   	0 1
+constants (4) for 0000025AA08335D0:
+	1	"CreateRiverRegions"
+	2	"GetWaypoint"
+	3	"IncrementWaypoint"
+	4	"SeekWaypoint"
+locals (0) for 0000025AA08335D0:
+upvalues (0) for 0000025AA08335D0:
+
+function <?:1,79> (144 instructions, 576 bytes at 0000025AA0833650)
+0 params, 11 slots, 0 upvalues, 0 locals, 46 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; Get3DPointPosition
+	2	[-]	LOADK    	1 -2	; "DragonScuttle_Center"
+	3	[-]	CALL     	0 2 2
+	4	[-]	GETGLOBAL	1 -1	; Get3DPointPosition
+	5	[-]	LOADK    	2 -3	; "BaronScuttle_Center"
+	6	[-]	CALL     	1 2 2
+	7	[-]	GETGLOBAL	2 -4	; GetMyPos
+	8	[-]	CALL     	2 1 2
+	9	[-]	SUB      	2 2 0
+	10	[-]	SELF     	2 2 -5	; "lengthSq"
+	11	[-]	CALL     	2 2 2
+	12	[-]	GETGLOBAL	3 -4	; GetMyPos
+	13	[-]	CALL     	3 1 2
+	14	[-]	SUB      	3 3 1
+	15	[-]	SELF     	3 3 -5	; "lengthSq"
+	16	[-]	CALL     	3 2 2
+	17	[-]	LT       	0 3 2
+	18	[-]	JMP      	60	; to 79
+	19	[-]	NEWTABLE 	2 0 6
+	20	[-]	SETTABLE 	2 -7 -8	; "Dest" 4
+	21	[-]	SETTABLE 	2 -9 -10	; "Dir" -1
+	22	[-]	NEWTABLE 	3 4 0
+	23	[-]	GETGLOBAL	4 -1	; Get3DPointPosition
+	24	[-]	LOADK    	5 -12	; "BaronScuttle_Path1"
+	25	[-]	CALL     	4 2 2
+	26	[-]	GETGLOBAL	5 -1	; Get3DPointPosition
+	27	[-]	LOADK    	6 -13	; "BaronScuttle_Path2"
+	28	[-]	CALL     	5 2 2
+	29	[-]	GETGLOBAL	6 -1	; Get3DPointPosition
+	30	[-]	LOADK    	7 -14	; "BaronScuttle_Path3"
+	31	[-]	CALL     	6 2 2
+	32	[-]	GETGLOBAL	7 -1	; Get3DPointPosition
+	33	[-]	LOADK    	8 -15	; "BaronScuttle_Path4"
+	34	[-]	CALL     	7 2 2
+	35	[-]	GETGLOBAL	8 -1	; Get3DPointPosition
+	36	[-]	LOADK    	9 -16	; "BaronScuttle_Path5"
+	37	[-]	CALL     	8 2 0
+	38	[-]	SETLIST  	3 0 1	; 1
+	39	[-]	SETTABLE 	2 -11 3	; "Path" -
+	40	[-]	NEWTABLE 	3 4 0
+	41	[-]	GETGLOBAL	4 -1	; Get3DPointPosition
+	42	[-]	LOADK    	5 -18	; "BaronScuttle_TopBorder1"
+	43	[-]	CALL     	4 2 2
+	44	[-]	GETGLOBAL	5 -1	; Get3DPointPosition
+	45	[-]	LOADK    	6 -19	; "BaronScuttle_TopBorder2"
+	46	[-]	CALL     	5 2 2
+	47	[-]	GETGLOBAL	6 -1	; Get3DPointPosition
+	48	[-]	LOADK    	7 -20	; "BaronScuttle_TopBorder3"
+	49	[-]	CALL     	6 2 2
+	50	[-]	GETGLOBAL	7 -1	; Get3DPointPosition
+	51	[-]	LOADK    	8 -21	; "BaronScuttle_TopBorder4"
+	52	[-]	CALL     	7 2 2
+	53	[-]	GETGLOBAL	8 -1	; Get3DPointPosition
+	54	[-]	LOADK    	9 -22	; "BaronScuttle_TopBorder5"
+	55	[-]	CALL     	8 2 0
+	56	[-]	SETLIST  	3 0 1	; 1
+	57	[-]	SETTABLE 	2 -17 3	; "TopBorder" -
+	58	[-]	SETTABLE 	2 -23 1	; "CenterPos" -
+	59	[-]	NEWTABLE 	3 4 0
+	60	[-]	GETGLOBAL	4 -1	; Get3DPointPosition
+	61	[-]	LOADK    	5 -25	; "BaronScuttle_BottomBorder1"
+	62	[-]	CALL     	4 2 2
+	63	[-]	GETGLOBAL	5 -1	; Get3DPointPosition
+	64	[-]	LOADK    	6 -26	; "BaronScuttle_BottomBorder2"
+	65	[-]	CALL     	5 2 2
+	66	[-]	GETGLOBAL	6 -1	; Get3DPointPosition
+	67	[-]	LOADK    	7 -27	; "BaronScuttle_BottomBorder3"
+	68	[-]	CALL     	6 2 2
+	69	[-]	GETGLOBAL	7 -1	; Get3DPointPosition
+	70	[-]	LOADK    	8 -28	; "BaronScuttle_BottomBorder4"
+	71	[-]	CALL     	7 2 2
+	72	[-]	GETGLOBAL	8 -1	; Get3DPointPosition
+	73	[-]	LOADK    	9 -29	; "BaronScuttle_BottomBorder5"
+	74	[-]	CALL     	8 2 0
+	75	[-]	SETLIST  	3 0 1	; 1
+	76	[-]	SETTABLE 	2 -24 3	; "BottomBorder" -
+	77	[-]	SETGLOBAL	2 -6	; River
+	78	[-]	JMP      	65	; to 144
+	79	[-]	NEWTABLE 	2 0 6
+	80	[-]	SETTABLE 	2 -7 -8	; "Dest" 4
+	81	[-]	SETTABLE 	2 -9 -10	; "Dir" -1
+	82	[-]	NEWTABLE 	3 4 0
+	83	[-]	GETGLOBAL	4 -1	; Get3DPointPosition
+	84	[-]	LOADK    	5 -30	; "DragonScuttle_Path1"
+	85	[-]	CALL     	4 2 2
+	86	[-]	GETGLOBAL	5 -1	; Get3DPointPosition
+	87	[-]	LOADK    	6 -31	; "DragonScuttle_Path2"
+	88	[-]	CALL     	5 2 2
+	89	[-]	GETGLOBAL	6 -1	; Get3DPointPosition
+	90	[-]	LOADK    	7 -32	; "DragonScuttle_Path3"
+	91	[-]	CALL     	6 2 2
+	92	[-]	GETGLOBAL	7 -1	; Get3DPointPosition
+	93	[-]	LOADK    	8 -33	; "DragonScuttle_Path4"
+	94	[-]	CALL     	7 2 2
+	95	[-]	GETGLOBAL	8 -1	; Get3DPointPosition
+	96	[-]	LOADK    	9 -34	; "DragonScuttle_Path5"
+	97	[-]	CALL     	8 2 0
+	98	[-]	SETLIST  	3 0 1	; 1
+	99	[-]	SETTABLE 	2 -11 3	; "Path" -
+	100	[-]	SETTABLE 	2 -23 0	; "CenterPos" -
+	101	[-]	NEWTABLE 	3 5 0
+	102	[-]	GETGLOBAL	4 -1	; Get3DPointPosition
+	103	[-]	LOADK    	5 -35	; "DragonScuttle_TopBorder1"
+	104	[-]	CALL     	4 2 2
+	105	[-]	GETGLOBAL	5 -1	; Get3DPointPosition
+	106	[-]	LOADK    	6 -36	; "DragonScuttle_TopBorder2"
+	107	[-]	CALL     	5 2 2
+	108	[-]	GETGLOBAL	6 -1	; Get3DPointPosition
+	109	[-]	LOADK    	7 -37	; "DragonScuttle_TopBorder3"
+	110	[-]	CALL     	6 2 2
+	111	[-]	GETGLOBAL	7 -1	; Get3DPointPosition
+	112	[-]	LOADK    	8 -38	; "DragonScuttle_TopBorder4"
+	113	[-]	CALL     	7 2 2
+	114	[-]	GETGLOBAL	8 -1	; Get3DPointPosition
+	115	[-]	LOADK    	9 -39	; "DragonScuttle_TopBorder5"
+	116	[-]	CALL     	8 2 2
+	117	[-]	GETGLOBAL	9 -1	; Get3DPointPosition
+	118	[-]	LOADK    	10 -40	; "DragonScuttle_TopBorder6"
+	119	[-]	CALL     	9 2 0
+	120	[-]	SETLIST  	3 0 1	; 1
+	121	[-]	SETTABLE 	2 -17 3	; "TopBorder" -
+	122	[-]	NEWTABLE 	3 5 0
+	123	[-]	GETGLOBAL	4 -1	; Get3DPointPosition
+	124	[-]	LOADK    	5 -41	; "DragonScuttle_BottomBorder1"
+	125	[-]	CALL     	4 2 2
+	126	[-]	GETGLOBAL	5 -1	; Get3DPointPosition
+	127	[-]	LOADK    	6 -42	; "DragonScuttle_BottomBorder2"
+	128	[-]	CALL     	5 2 2
+	129	[-]	GETGLOBAL	6 -1	; Get3DPointPosition
+	130	[-]	LOADK    	7 -43	; "DragonScuttle_BottomBorder3"
+	131	[-]	CALL     	6 2 2
+	132	[-]	GETGLOBAL	7 -1	; Get3DPointPosition
+	133	[-]	LOADK    	8 -44	; "DragonScuttle_BottomBorder4"
+	134	[-]	CALL     	7 2 2
+	135	[-]	GETGLOBAL	8 -1	; Get3DPointPosition
+	136	[-]	LOADK    	9 -45	; "DragonScuttle_BottomBorder5"
+	137	[-]	CALL     	8 2 2
+	138	[-]	GETGLOBAL	9 -1	; Get3DPointPosition
+	139	[-]	LOADK    	10 -46	; "DragonScuttle_BottomBorder6"
+	140	[-]	CALL     	9 2 0
+	141	[-]	SETLIST  	3 0 1	; 1
+	142	[-]	SETTABLE 	2 -24 3	; "BottomBorder" -
+	143	[-]	SETGLOBAL	2 -6	; River
+	144	[-]	RETURN   	0 1
+constants (46) for 0000025AA0833650:
+	1	"Get3DPointPosition"
+	2	"DragonScuttle_Center"
+	3	"BaronScuttle_Center"
+	4	"GetMyPos"
+	5	"lengthSq"
+	6	"River"
+	7	"Dest"
+	8	4
+	9	"Dir"
+	10	-1
+	11	"Path"
+	12	"BaronScuttle_Path1"
+	13	"BaronScuttle_Path2"
+	14	"BaronScuttle_Path3"
+	15	"BaronScuttle_Path4"
+	16	"BaronScuttle_Path5"
+	17	"TopBorder"
+	18	"BaronScuttle_TopBorder1"
+	19	"BaronScuttle_TopBorder2"
+	20	"BaronScuttle_TopBorder3"
+	21	"BaronScuttle_TopBorder4"
+	22	"BaronScuttle_TopBorder5"
+	23	"CenterPos"
+	24	"BottomBorder"
+	25	"BaronScuttle_BottomBorder1"
+	26	"BaronScuttle_BottomBorder2"
+	27	"BaronScuttle_BottomBorder3"
+	28	"BaronScuttle_BottomBorder4"
+	29	"BaronScuttle_BottomBorder5"
+	30	"DragonScuttle_Path1"
+	31	"DragonScuttle_Path2"
+	32	"DragonScuttle_Path3"
+	33	"DragonScuttle_Path4"
+	34	"DragonScuttle_Path5"
+	35	"DragonScuttle_TopBorder1"
+	36	"DragonScuttle_TopBorder2"
+	37	"DragonScuttle_TopBorder3"
+	38	"DragonScuttle_TopBorder4"
+	39	"DragonScuttle_TopBorder5"
+	40	"DragonScuttle_TopBorder6"
+	41	"DragonScuttle_BottomBorder1"
+	42	"DragonScuttle_BottomBorder2"
+	43	"DragonScuttle_BottomBorder3"
+	44	"DragonScuttle_BottomBorder4"
+	45	"DragonScuttle_BottomBorder5"
+	46	"DragonScuttle_BottomBorder6"
+locals (0) for 0000025AA0833650:
+upvalues (0) for 0000025AA0833650:
+
+function <?:81,83> (7 instructions, 28 bytes at 0000025AA0831A70)
+0 params, 2 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; River
+	2	[-]	GETTABLE 	0 0 -2	; "Path"
+	3	[-]	GETGLOBAL	1 -1	; River
+	4	[-]	GETTABLE 	1 1 -3	; "Dest"
+	5	[-]	GETTABLE 	0 0 1
+	6	[-]	RETURN   	0 2
+	7	[-]	RETURN   	0 1
+constants (3) for 0000025AA0831A70:
+	1	"River"
+	2	"Path"
+	3	"Dest"
+locals (0) for 0000025AA0831A70:
+upvalues (0) for 0000025AA0831A70:
+
+function <?:85,98> (28 instructions, 112 bytes at 0000025AA0831AF0)
+0 params, 3 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; River
+	2	[-]	GETTABLE 	0 0 -2	; "Dir"
+	3	[-]	EQ       	0 0 -3	; - 1
+	4	[-]	JMP      	10	; to 15
+	5	[-]	GETGLOBAL	0 -1	; River
+	6	[-]	GETTABLE 	0 0 -4	; "Dest"
+	7	[-]	GETGLOBAL	1 -1	; River
+	8	[-]	GETTABLE 	1 1 -5	; "Path"
+	9	[-]	LEN      	1 1
+	10	[-]	EQ       	0 0 1
+	11	[-]	JMP      	9	; to 21
+	12	[-]	GETGLOBAL	0 -1	; River
+	13	[-]	SETTABLE 	0 -2 -6	; "Dir" -1
+	14	[-]	JMP      	6	; to 21
+	15	[-]	GETGLOBAL	0 -1	; River
+	16	[-]	GETTABLE 	0 0 -4	; "Dest"
+	17	[-]	EQ       	0 0 -3	; - 1
+	18	[-]	JMP      	2	; to 21
+	19	[-]	GETGLOBAL	0 -1	; River
+	20	[-]	SETTABLE 	0 -2 -3	; "Dir" 1
+	21	[-]	GETGLOBAL	0 -1	; River
+	22	[-]	GETGLOBAL	1 -1	; River
+	23	[-]	GETTABLE 	1 1 -4	; "Dest"
+	24	[-]	GETGLOBAL	2 -1	; River
+	25	[-]	GETTABLE 	2 2 -2	; "Dir"
+	26	[-]	ADD      	1 1 2
+	27	[-]	SETTABLE 	0 -4 1	; "Dest" -
+	28	[-]	RETURN   	0 1
+constants (6) for 0000025AA0831AF0:
+	1	"River"
+	2	"Dir"
+	3	1
+	4	"Dest"
+	5	"Path"
+	6	-1
+locals (0) for 0000025AA0831AF0:
+upvalues (0) for 0000025AA0831AF0:
+
+function <?:100,115> (28 instructions, 112 bytes at 0000025AA0835030)
+0 params, 7 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetMyPos
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; GetDistSquared
+	4	[-]	MOVE     	2 0
+	5	[-]	GETGLOBAL	3 -3	; River
+	6	[-]	GETTABLE 	3 3 -4	; "Path"
+	7	[-]	GETTABLE 	3 3 -5	; 1
+	8	[-]	CALL     	1 3 2
+	9	[-]	LOADK    	2 -5	; 1
+	10	[-]	LOADK    	3 -6	; 2
+	11	[-]	GETGLOBAL	4 -3	; River
+	12	[-]	GETTABLE 	4 4 -4	; "Path"
+	13	[-]	LEN      	4 4
+	14	[-]	LE       	0 3 4
+	15	[-]	JMP      	12	; to 28
+	16	[-]	GETGLOBAL	4 -2	; GetDistSquared
+	17	[-]	MOVE     	5 0
+	18	[-]	GETGLOBAL	6 -3	; River
+	19	[-]	GETTABLE 	6 6 -4	; "Path"
+	20	[-]	GETTABLE 	6 6 3
+	21	[-]	CALL     	4 3 2
+	22	[-]	LT       	0 4 1
+	23	[-]	JMP      	2	; to 26
+	24	[-]	MOVE     	2 3
+	25	[-]	MOVE     	1 4
+	26	[-]	ADD      	3 3 -5	; - 1
+	27	[-]	JMP      	-17	; to 11
+	28	[-]	RETURN   	0 1
+constants (6) for 0000025AA0835030:
+	1	"GetMyPos"
+	2	"GetDistSquared"
+	3	"River"
+	4	"Path"
+	5	1
+	6	2
+locals (0) for 0000025AA0835030:
+upvalues (0) for 0000025AA0835030:

@@ -1,0 +1,16 @@
+struct 0xf95160
+  0xf95160 field 0: bits 0..0 +0x10 172 B 0:const 1:struct(0xfcca30)
+struct 0xfcca30
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1528, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1192, in learn
+    sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc).learn()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 165, in __init__
+    self.fields = self.split(r)
+                  ^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 213, in split
+    assert p == cursor, f'{self.fn:#x}: field {k} starts at {p}, expected {cursor}'
+           ^^^^^^^^^^^
+AssertionError: 0xfcca30: field 1 starts at 6, expected 5

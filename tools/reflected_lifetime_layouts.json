@@ -1,0 +1,559 @@
+[
+  {
+    "name": "AudioStatusEvents",
+    "size": 36,
+    "align": 4,
+    "members": [
+      {
+        "offset": 0,
+        "code": 16,
+        "type": "MetaString",
+        "name": "rtpcName",
+        "hash": 16944333,
+        "wrapper": 994016
+      },
+      {
+        "offset": 12,
+        "code": 16,
+        "type": "MetaString",
+        "name": "startEvent",
+        "hash": 2202629181,
+        "wrapper": 994016
+      },
+      {
+        "offset": 24,
+        "code": 16,
+        "type": "MetaString",
+        "name": "stopEvent",
+        "hash": 1943255615,
+        "wrapper": 994016
+      }
+    ],
+    "initializers": {},
+    "globals": [],
+    "native_ctor": null,
+    "native_ctor_body": null,
+    "callbacks": {
+      "destroy": 1949696,
+      "destruct": 1211248
+    },
+    "bodies": {
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1dc02b\nlea ecx, [esi + 0x18]\ncall 0x9bab90\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\ncall 0x9bab90\npush 0x24\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "push esi\nmov esi, dword ptr [esp + 8]\nlea ecx, [esi + 0x18]\ncall 0x9bab90\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\npop esi\njmp 0x9bab90"
+    }
+  },
+  {
+    "name": "CursorData",
+    "size": 56,
+    "align": 4,
+    "members": [
+      {
+        "offset": 0,
+        "code": 11,
+        "type": "Vector2",
+        "name": "mHotSpot",
+        "hash": 2987032723,
+        "wrapper": 3423968
+      },
+      {
+        "offset": 8,
+        "code": 16,
+        "type": "MetaString",
+        "name": "mTextureName",
+        "hash": 4185004664,
+        "wrapper": 994016
+      },
+      {
+        "offset": 20,
+        "code": 16,
+        "type": "MetaString",
+        "name": "mColorblindTextureName",
+        "hash": 1703356166,
+        "wrapper": 994016
+      },
+      {
+        "offset": 32,
+        "code": 16,
+        "type": "MetaString",
+        "name": "mTargetChampionsOnlyTextureName",
+        "hash": 3527462479,
+        "wrapper": 994016
+      },
+      {
+        "offset": 44,
+        "code": 16,
+        "type": "MetaString",
+        "name": "mColorblindTargetChampionsOnlyTextureName",
+        "hash": 4132662353,
+        "wrapper": 994016
+      }
+    ],
+    "initializers": {
+      "mHotSpot": "{0,0}"
+    },
+    "globals": [],
+    "native_ctor": 6404496,
+    "native_ctor_body": "mov dword ptr [ecx], 0\nmov dword ptr [ecx + 4], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [ecx + 8], eax\nmov dword ptr [ecx + 0xc], 0\nmov dword ptr [ecx + 0x10], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [ecx + 0x14], eax\nmov dword ptr [ecx + 0x18], 0\nmov dword ptr [ecx + 0x1c], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [ecx + 0x20], eax\nmov dword ptr [ecx + 0x24], 0\nmov dword ptr [ecx + 0x28], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [ecx + 0x2c], eax\nmov eax, ecx\nmov dword ptr [ecx + 0x30], 0\nmov dword ptr [ecx + 0x34], 0\nret",
+    "callbacks": {
+      "destroy": 6370816,
+      "destruct": 6370880
+    },
+    "bodies": {
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x613634\nlea ecx, [esi + 0x2c]\ncall 0x9bab90\nlea ecx, [esi + 0x20]\ncall 0x9bab90\nlea ecx, [esi + 0x14]\ncall 0x9bab90\nlea ecx, [esi + 8]\ncall 0x9bab90\npush 0x38\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "push esi\nmov esi, dword ptr [esp + 8]\nlea ecx, [esi + 0x2c]\ncall 0x9bab90\nlea ecx, [esi + 0x20]\ncall 0x9bab90\nlea ecx, [esi + 0x14]\ncall 0x9bab90\nlea ecx, [esi + 8]\npop esi\njmp 0x9bab90"
+    }
+  },
+  {
+    "name": "ESportTeamEntry",
+    "size": 36,
+    "align": 4,
+    "members": [
+      {
+        "offset": 0,
+        "code": 16,
+        "type": "MetaString",
+        "name": "teamName",
+        "hash": 1504895559,
+        "wrapper": 994016
+      },
+      {
+        "offset": 12,
+        "code": 16,
+        "type": "MetaString",
+        "name": "leagueName",
+        "hash": 390952403,
+        "wrapper": 994016
+      },
+      {
+        "offset": 24,
+        "code": 16,
+        "type": "MetaString",
+        "name": "TextureName",
+        "hash": 3004290287,
+        "wrapper": 994016
+      }
+    ],
+    "initializers": {},
+    "globals": [],
+    "native_ctor": null,
+    "native_ctor_body": null,
+    "callbacks": {
+      "destroy": 1949696,
+      "destruct": 1211248
+    },
+    "bodies": {
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1dc02b\nlea ecx, [esi + 0x18]\ncall 0x9bab90\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\ncall 0x9bab90\npush 0x24\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "push esi\nmov esi, dword ptr [esp + 8]\nlea ecx, [esi + 0x18]\ncall 0x9bab90\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\npop esi\njmp 0x9bab90"
+    }
+  },
+  {
+    "name": "FontLocaleType",
+    "size": 36,
+    "align": 4,
+    "members": [
+      {
+        "offset": 0,
+        "code": 16,
+        "type": "MetaString",
+        "name": "localeName",
+        "hash": 446645588,
+        "wrapper": 994016
+      },
+      {
+        "offset": 12,
+        "code": 16,
+        "type": "MetaString",
+        "name": "mFontFilePath",
+        "hash": 2271524388,
+        "wrapper": 994016
+      },
+      {
+        "offset": 24,
+        "code": 16,
+        "type": "MetaString",
+        "name": "FontFilePathBold",
+        "hash": 281301214,
+        "wrapper": 994016
+      }
+    ],
+    "initializers": {
+      "localeName": "{\"en_us\"}"
+    },
+    "globals": [
+      {
+        "va": 28202136,
+        "bytes": "656e5f757300"
+      }
+    ],
+    "native_ctor": null,
+    "native_ctor_body": null,
+    "callbacks": {
+      "create": 10704400,
+      "construct": 10704736,
+      "destroy": 1949696,
+      "destruct": 1211248
+    },
+    "bodies": {
+      "create": "push esi\npush 0x24\ncall 0x9bb8d0\nmov esi, eax\nadd esp, 4\ntest esi, esi\nje 0xa3565e\npush 0x1ae5498\nmov ecx, esi\ncall 0x9b78e0\nmov ecx, dword ptr [0x1b467f0]\nmov dword ptr [esi + 0xc], ecx\nmov dword ptr [esi + 0x10], 0\nmov dword ptr [esi + 0x14], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [esi + 0x18], eax\nmov eax, esi\nmov dword ptr [esi + 0x1c], 0\nmov dword ptr [esi + 0x20], 0\npop esi\nret\nxor eax, eax\npop esi\nret",
+      "construct": "push esi\nmov esi, dword ptr [esp + 8]\nmov ecx, esi\npush 0x1ae5498\ncall 0x9b78e0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [esi + 0xc], eax\nmov dword ptr [esi + 0x10], 0\nmov dword ptr [esi + 0x14], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [esi + 0x18], eax\nmov dword ptr [esi + 0x1c], 0\nmov dword ptr [esi + 0x20], 0\npop esi\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1dc02b\nlea ecx, [esi + 0x18]\ncall 0x9bab90\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\ncall 0x9bab90\npush 0x24\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "push esi\nmov esi, dword ptr [esp + 8]\nlea ecx, [esi + 0x18]\ncall 0x9bab90\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\npop esi\njmp 0x9bab90"
+    }
+  },
+  {
+    "name": "JungleLocationMapInformation",
+    "size": 28,
+    "align": 4,
+    "members": [
+      {
+        "offset": 0,
+        "code": 16,
+        "type": "MetaString",
+        "name": "name",
+        "hash": 2369371622,
+        "wrapper": 994016
+      },
+      {
+        "offset": 12,
+        "code": 12,
+        "type": "Vector3",
+        "name": "Position",
+        "hash": 2471448074,
+        "wrapper": 994112
+      },
+      {
+        "offset": 24,
+        "code": 3,
+        "type": "u8",
+        "name": "Index",
+        "hash": 151693739,
+        "wrapper": 992704
+      },
+      {
+        "offset": 25,
+        "code": 3,
+        "type": "u8",
+        "name": "Location",
+        "hash": 200649126,
+        "wrapper": 992704
+      }
+    ],
+    "initializers": {
+      "Position": "g_JungleDefaultPosition",
+      "Index": "0",
+      "Location": "0"
+    },
+    "globals": [
+      {
+        "va": 57761648,
+        "bytes": "000000000000000000000000"
+      }
+    ],
+    "native_ctor": null,
+    "native_ctor_body": null,
+    "callbacks": {
+      "create": 988752,
+      "construct": 988864,
+      "destroy": 988832,
+      "destruct": 988928
+    },
+    "bodies": {
+      "create": "push 0x1c\ncall 0x9bb8d0\nmov edx, eax\nadd esp, 4\ntest edx, edx\nje 0xf1694\nmov ecx, dword ptr [0x1b467f0]\nmov dword ptr [edx], ecx\nmov dword ptr [edx + 4], 0\nmov dword ptr [edx + 8], 0\nmovq xmm0, qword ptr [0x3715f70]\nmovq qword ptr [edx + 0xc], xmm0\nmov eax, dword ptr [0x3715f78]\nmov dword ptr [edx + 0x14], eax\nmov eax, edx\nmov word ptr [edx + 0x18], 0\nret\nxor eax, eax\nret",
+      "construct": "mov ecx, dword ptr [esp + 4]\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [ecx], eax\nmov dword ptr [ecx + 4], 0\nmov dword ptr [ecx + 8], 0\nmovq xmm0, qword ptr [0x3715f70]\nmovq qword ptr [ecx + 0xc], xmm0\nmov eax, dword ptr [0x3715f78]\nmov dword ptr [ecx + 0x14], eax\nmov word ptr [ecx + 0x18], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0xf16bb\nmov ecx, esi\ncall 0x9bab90\npush 0x1c\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov ecx, dword ptr [esp + 4]\njmp 0x9bab90"
+    }
+  },
+  {
+    "name": "MasteryData",
+    "size": 36,
+    "align": 4,
+    "members": [
+      {
+        "offset": 0,
+        "code": 16,
+        "type": "MetaString",
+        "name": "texture",
+        "hash": 1013213428,
+        "wrapper": 994016
+      },
+      {
+        "offset": 12,
+        "code": 16,
+        "type": "MetaString",
+        "name": "LevelTraKey",
+        "hash": 3077895061,
+        "wrapper": 994016
+      },
+      {
+        "offset": 24,
+        "code": 16,
+        "type": "MetaString",
+        "name": "DetailsTraKey",
+        "hash": 3729097533,
+        "wrapper": 994016
+      }
+    ],
+    "initializers": {},
+    "globals": [],
+    "native_ctor": null,
+    "native_ctor_body": null,
+    "callbacks": {
+      "destroy": 1949696,
+      "destruct": 1211248
+    },
+    "bodies": {
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1dc02b\nlea ecx, [esi + 0x18]\ncall 0x9bab90\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\ncall 0x9bab90\npush 0x24\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "push esi\nmov esi, dword ptr [esp + 8]\nlea ecx, [esi + 0x18]\ncall 0x9bab90\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\npop esi\njmp 0x9bab90"
+    }
+  },
+  {
+    "name": "NeutralMinionSpawnConfig",
+    "size": 36,
+    "align": 4,
+    "members": [
+      {
+        "offset": 0,
+        "code": 16,
+        "type": "MetaString",
+        "name": "MapObjectName",
+        "hash": 3355339821,
+        "wrapper": 994016
+      },
+      {
+        "offset": 12,
+        "code": 16,
+        "type": "MetaString",
+        "name": "m_2b88e11e",
+        "hash": 730390814,
+        "wrapper": 994016
+      },
+      {
+        "offset": 24,
+        "code": 16,
+        "type": "MetaString",
+        "name": "SpawnAnimationName",
+        "hash": 3521122901,
+        "wrapper": 994016
+      }
+    ],
+    "initializers": {},
+    "globals": [],
+    "native_ctor": null,
+    "native_ctor_body": null,
+    "callbacks": {
+      "destroy": 1949696,
+      "destruct": 1211248
+    },
+    "bodies": {
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1dc02b\nlea ecx, [esi + 0x18]\ncall 0x9bab90\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\ncall 0x9bab90\npush 0x24\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "push esi\nmov esi, dword ptr [esp + 8]\nlea ecx, [esi + 0x18]\ncall 0x9bab90\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\npop esi\njmp 0x9bab90"
+    }
+  },
+  {
+    "name": "StealthVfx",
+    "size": 60,
+    "align": 4,
+    "members": [
+      {
+        "offset": 0,
+        "code": 16,
+        "type": "MetaString",
+        "name": "effectName",
+        "hash": 1209207887,
+        "wrapper": 994016
+      },
+      {
+        "offset": 12,
+        "code": 16,
+        "type": "MetaString",
+        "name": "EffectNameForOtherTeam",
+        "hash": 2097191505,
+        "wrapper": 994016
+      },
+      {
+        "offset": 24,
+        "code": 16,
+        "type": "MetaString",
+        "name": "boneName",
+        "hash": 516659084,
+        "wrapper": 994016
+      },
+      {
+        "offset": 36,
+        "code": 3,
+        "type": "u8",
+        "name": "FowTeam",
+        "hash": 4099356782,
+        "wrapper": 992704
+      },
+      {
+        "offset": 37,
+        "code": 3,
+        "type": "u8",
+        "name": "SpecificTeamOnly",
+        "hash": 1261723994,
+        "wrapper": 992704
+      },
+      {
+        "offset": 38,
+        "code": 1,
+        "type": "bool",
+        "name": "HidefromSpectator",
+        "hash": 3874680066,
+        "wrapper": 994160
+      },
+      {
+        "offset": 40,
+        "code": 10,
+        "type": "float",
+        "name": "FowVisibilityRadius",
+        "hash": 441623625,
+        "wrapper": 992896
+      },
+      {
+        "offset": 44,
+        "code": 1,
+        "type": "bool",
+        "name": "UseOwnerFacing",
+        "hash": 286055373,
+        "wrapper": 994160
+      },
+      {
+        "offset": 45,
+        "code": 1,
+        "type": "bool",
+        "name": "UseTargetObject",
+        "hash": 1920586386,
+        "wrapper": 994160
+      },
+      {
+        "offset": 46,
+        "code": 1,
+        "type": "bool",
+        "name": "UseKeywordObject",
+        "hash": 2592244940,
+        "wrapper": 994160
+      },
+      {
+        "offset": 47,
+        "code": 1,
+        "type": "bool",
+        "name": "OnlySendToOwner",
+        "hash": 3839231175,
+        "wrapper": 994160
+      },
+      {
+        "offset": 48,
+        "code": 10,
+        "type": "float",
+        "name": "scale",
+        "hash": 2190941297,
+        "wrapper": 992896
+      },
+      {
+        "offset": 52,
+        "code": 10,
+        "type": "float",
+        "name": "TimeoutInFow",
+        "hash": 1786515705,
+        "wrapper": 992896
+      },
+      {
+        "offset": 56,
+        "code": 1,
+        "type": "bool",
+        "name": "PersistentThroughReconnect",
+        "hash": 223087490,
+        "wrapper": 994160
+      },
+      {
+        "offset": 57,
+        "code": 1,
+        "type": "bool",
+        "name": "AttachToCamera",
+        "hash": 2569752198,
+        "wrapper": 994160
+      },
+      {
+        "offset": 58,
+        "code": 1,
+        "type": "bool",
+        "name": "UseAttachmentForMeshOnly",
+        "hash": 2921085443,
+        "wrapper": 994160
+      },
+      {
+        "offset": 59,
+        "code": 1,
+        "type": "bool",
+        "name": "SendIfOnScreenOrDiscard",
+        "hash": 3815847794,
+        "wrapper": 994160
+      }
+    ],
+    "initializers": {},
+    "globals": [],
+    "native_ctor": null,
+    "native_ctor_body": null,
+    "callbacks": {
+      "destroy": 1211200,
+      "destruct": 1211248
+    },
+    "bodies": {
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x127b6b\nlea ecx, [esi + 0x18]\ncall 0x9bab90\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\ncall 0x9bab90\npush 0x3c\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "push esi\nmov esi, dword ptr [esp + 8]\nlea ecx, [esi + 0x18]\ncall 0x9bab90\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\npop esi\njmp 0x9bab90"
+    }
+  },
+  {
+    "name": "TftMapItemData",
+    "size": 40,
+    "align": 4,
+    "members": [
+      {
+        "offset": 0,
+        "code": 16,
+        "type": "MetaString",
+        "name": "name",
+        "hash": 2369371622,
+        "wrapper": 994016
+      },
+      {
+        "offset": 12,
+        "code": 16,
+        "type": "MetaString",
+        "name": "NameId",
+        "hash": 2183362171,
+        "wrapper": 994016
+      },
+      {
+        "offset": 24,
+        "code": 7,
+        "type": "u32",
+        "name": "itemID",
+        "hash": 331209851,
+        "wrapper": 992848
+      },
+      {
+        "offset": 28,
+        "code": 16,
+        "type": "MetaString",
+        "name": "IconPath",
+        "hash": 1999062871,
+        "wrapper": 994016
+      }
+    ],
+    "initializers": {},
+    "globals": [],
+    "native_ctor": null,
+    "native_ctor_body": null,
+    "callbacks": {
+      "destroy": 5568304,
+      "destruct": 5568352
+    },
+    "bodies": {
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x54f75b\nlea ecx, [esi + 0x1c]\ncall 0x9bab90\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\ncall 0x9bab90\npush 0x28\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "push esi\nmov esi, dword ptr [esp + 8]\nlea ecx, [esi + 0x1c]\ncall 0x9bab90\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\npop esi\njmp 0x9bab90"
+    }
+  }
+]

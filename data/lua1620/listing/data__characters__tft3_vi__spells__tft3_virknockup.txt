@@ -1,0 +1,37 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 000002012F9635F0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Vi/HUD/Icons2D/ViR.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "ViR"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; 1
+	12	[-]	SETGLOBAL	0 -8	; SpellDamageRatio
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -11	; "ViSkin02"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -10	; SpellFXOverrideSkins
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	19	[-]	RETURN   	0 1
+constants (12) for 000002012F9635F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Vi/HUD/Icons2D/ViR.dds"
+	6	"BuffName"
+	7	"ViR"
+	8	"SpellDamageRatio"
+	9	1
+	10	"SpellFXOverrideSkins"
+	11	"ViSkin02"
+	12	"IsDamagingSpell"
+locals (0) for 000002012F9635F0:
+upvalues (0) for 000002012F9635F0:

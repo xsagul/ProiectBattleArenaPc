@@ -1,0 +1,36 @@
+
+main <?:0,0> (20 instructions, 80 bytes at 00000190699D34C0)
+0+ params, 4 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "game_floatingtext_Snared"
+	6	[-]	SETGLOBAL	0 -3	; PopupMessage1
+	7	[-]	NEWTABLE 	0 3 0
+	8	[-]	LOADK    	1 -6	; "UltBook_VarusAscended"
+	9	[-]	LOADK    	2 -7	; "UltBook_VarusSkin03"
+	10	[-]	LOADK    	3 -8	; "UltBook_VarusSkin04"
+	11	[-]	SETLIST  	0 3 1	; 1
+	12	[-]	SETGLOBAL	0 -5	; SpellFXOverrideSkins
+	13	[-]	NEWTABLE 	0 2 0
+	14	[-]	LOADK    	1 -6	; "UltBook_VarusAscended"
+	15	[-]	LOADK    	2 -8	; "UltBook_VarusSkin04"
+	16	[-]	SETLIST  	0 2 1	; 1
+	17	[-]	SETGLOBAL	0 -9	; SpellVOOverrideSkins
+	18	[-]	LOADBOOL 	0 1 0
+	19	[-]	SETGLOBAL	0 -10	; IsDamagingSpell
+	20	[-]	RETURN   	0 1
+constants (10) for 00000190699D34C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"PopupMessage1"
+	4	"game_floatingtext_Snared"
+	5	"SpellFXOverrideSkins"
+	6	"UltBook_VarusAscended"
+	7	"UltBook_VarusSkin03"
+	8	"UltBook_VarusSkin04"
+	9	"SpellVOOverrideSkins"
+	10	"IsDamagingSpell"
+locals (0) for 00000190699D34C0:
+upvalues (0) for 00000190699D34C0:

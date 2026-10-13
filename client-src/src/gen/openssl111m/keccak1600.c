@@ -5,4 +5,6 @@
 // match: e68ad0 _Round
 // match: e69290 _SHA3_absorb
 // match: e694a0 _SHA3_squeeze
+#define OPENSSL_FILE "crypto\\sha\\keccak1600.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/sha/keccak1600.c"

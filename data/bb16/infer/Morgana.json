@@ -1,0 +1,17981 @@
+{
+ "sr_2026_s1_rolebound_top_quest": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 705.346,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    559
+   ],
+   [
+    "#6a4229fc",
+    421
+   ],
+   [
+    "#00000000",
+    117
+   ],
+   [
+    "morganabasicattack",
+    68
+   ],
+   [
+    "morganabasicattack2",
+    68
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "4641wardplacementcounter": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganabasicattack2",
+    6
+   ],
+   [
+    "morganabasicattack",
+    5
+   ],
+   [
+    "morganaq",
+    3
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "challengeschampiontrackerbuff": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganabasicattack2",
+    6
+   ],
+   [
+    "morganabasicattack",
+    5
+   ],
+   [
+    "morganaq",
+    3
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua": {
+  "n": 165,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    165
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "#01701b21"
+    ],
+    0.976
+   ],
+   [
+    [
+     "none"
+    ],
+    0.867
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.109
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.048
+   ],
+   [
+    [
+     "end",
+     "morganapassivehealvfx"
+    ],
+    0.036
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.036
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.491
+   ],
+   [
+    [
+     "my hit",
+     "morganaq"
+    ],
+    0.304
+   ],
+   [
+    [
+     "other"
+    ],
+    0.081
+   ],
+   [
+    [
+     "my hit",
+     "#f86f3d33"
+    ],
+    0.062
+   ],
+   [
+    [
+     "my hit",
+     "morganar"
+    ],
+    0.056
+   ]
+  ],
+  "lived_med": 20.709,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    1231
+   ],
+   [
+    "#00000000",
+    716
+   ],
+   [
+    "#6a4229fc",
+    283
+   ],
+   [
+    "morganabasicattack",
+    231
+   ],
+   [
+    "morganabasicattack2",
+    227
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.115
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.036
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.024
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.024
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.024
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.521
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.455
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.073
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    0.073
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3876AllyBuffMissile"
+    ],
+    0.067
+   ]
+  ]
+ },
+ "#0eab29c1": {
+  "n": 40,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    40
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "#02eb3801"
+    ],
+    0.9
+   ],
+   [
+    [
+     "none"
+    ],
+    0.825
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.225
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.15
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.025
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.025
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.45
+   ],
+   [
+    [
+     "my hit",
+     "morganaq"
+    ],
+    0.45
+   ],
+   [
+    [
+     "my hit",
+     "#f86f3d33"
+    ],
+    0.05
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.025
+   ],
+   [
+    [
+     "my hit",
+     "morganar"
+    ],
+    0.025
+   ]
+  ],
+  "lived_med": 36.342,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    175
+   ],
+   [
+    "#6a4229fc",
+    111
+   ],
+   [
+    "morganabasicattack2",
+    70
+   ],
+   [
+    "morganabasicattack",
+    68
+   ],
+   [
+    "morganaq",
+    26
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.15
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.075
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.225
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.45
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.4
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.025
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    0.025
+   ]
+  ]
+ },
+ "srhomeguardspeed": {
+  "n": 66,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    25000.0,
+    66
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "recall"
+    ],
+    0.091
+   ],
+   [
+    [
+     "end",
+     "#01701b21"
+    ],
+    0.015
+   ],
+   [
+    [
+     "end",
+     "exaltedwithminibaronnashor_recall"
+    ],
+    0.015
+   ],
+   [
+    [
+     "end",
+     "malzahare"
+    ],
+    0.015
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 16.67,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.591
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.985
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.015
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.061
+   ]
+  ]
+ },
+ "s4spawnlockspeed": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    16.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 23.786,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "#0cf347e6": {
+  "n": 51,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    51
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.341,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.039
+   ]
+  ]
+ },
+ "sharedwardbuff": {
+  "n": 116,
+  "games": 4,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    150.0,
+    98
+   ],
+   [
+    90.0,
+    3
+   ],
+   [
+    96.0,
+    1
+   ],
+   [
+    100.765,
+    1
+   ],
+   [
+    101.471,
+    1
+   ],
+   [
+    104.294,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.845
+   ],
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    0.155
+   ],
+   [
+    [
+     "hit",
+     "s5_summonersmiteplayerganker"
+    ],
+    0.009
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.009
+   ],
+   [
+    [
+     "end",
+     "trinketsweeperlvl3"
+    ],
+    0.009
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "itemghostward"
+    ],
+    0.431
+   ],
+   [
+    [
+     "time"
+    ],
+    0.404
+   ],
+   [
+    [
+     "death"
+    ],
+    0.165
+   ]
+  ],
+  "lived_med": 103.081,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.569
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.224
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.155
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.009
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.155
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.086
+   ]
+  ]
+ },
+ "sharedstealthwardbuff": {
+  "n": 116,
+  "games": 4,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    116
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.845
+   ],
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    0.155
+   ],
+   [
+    [
+     "hit",
+     "s5_summonersmiteplayerganker"
+    ],
+    0.009
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.009
+   ],
+   [
+    [
+     "end",
+     "trinketsweeperlvl3"
+    ],
+    0.009
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "death"
+    ],
+    0.569
+   ],
+   [
+    [
+     "my cast",
+     "itemghostward"
+    ],
+    0.431
+   ]
+  ],
+  "lived_med": 103.081,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.569
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.224
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.155
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.009
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.155
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.086
+   ]
+  ]
+ },
+ "relicyellowward": {
+  "n": 18,
+  "games": 4,
+  "self": 0.0,
+  "type": 6,
+  "durations": [
+   [
+    90.0,
+    3
+   ],
+   [
+    96.0,
+    1
+   ],
+   [
+    100.765,
+    1
+   ],
+   [
+    101.471,
+    1
+   ],
+   [
+    104.294,
+    1
+   ],
+   [
+    106.059,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.944
+   ],
+   [
+    [
+     "death"
+    ],
+    0.056
+   ]
+  ],
+  "lived_med": 101.495,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.444
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.056
+   ]
+  ]
+ },
+ "morganaw": {
+  "n": 325,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    5.0,
+    325
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.991
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.194
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.055
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.043
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.04
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.015
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.975
+   ],
+   [
+    [
+     "other"
+    ],
+    0.015
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.006
+   ],
+   [
+    [
+     "my hit",
+     "#00000000"
+    ],
+    0.003
+   ]
+  ],
+  "lived_med": 5.128,
+  "ticks": 2905,
+  "period_med": 0.53,
+  "on_hit": [
+   [
+    "#00000000",
+    948
+   ],
+   [
+    "#6a4229fc",
+    380
+   ],
+   [
+    "#f86f3d33",
+    154
+   ],
+   [
+    "morganabasicattack2",
+    131
+   ],
+   [
+    "morganabasicattack",
+    125
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.72
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.129
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.126
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.028
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.012
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3876AllyBuffMissile"
+    ],
+    0.006
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.126
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.009
+   ]
+  ]
+ },
+ "morganawdamage": {
+  "n": 861,
+  "games": 4,
+  "self": 0.0,
+  "type": 3,
+  "durations": [
+   [
+    2.0,
+    861
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.618
+   ],
+   [
+    [
+     "none"
+    ],
+    0.316
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.211
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.078
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.027
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.023
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.596
+   ],
+   [
+    [
+     "death"
+    ],
+    0.266
+   ],
+   [
+    [
+     "time"
+    ],
+    0.13
+   ],
+   [
+    [
+     "my cast",
+     "morganaq"
+    ],
+    0.005
+   ],
+   [
+    [
+     "my cast",
+     "morganaw"
+    ],
+    0.002
+   ]
+  ],
+  "lived_med": 1.469,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.367
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.6
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.106
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.014
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.013
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.006
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.477
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.006
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.005
+   ],
+   [
+    [
+     "fx",
+     75680508
+    ],
+    0.003
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.001
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SRX_DragonBuffChemtech"
+    ],
+    0.001
+   ]
+  ]
+ },
+ "#0f1b5ee1": {
+  "n": 15,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    4.0,
+    15
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.8
+   ],
+   [
+    [
+     "cast",
+     "morganae"
+    ],
+    0.067
+   ],
+   [
+    [
+     "cast",
+     "summonerhaste"
+    ],
+    0.067
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.067
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.8
+   ],
+   [
+    [
+     "time"
+    ],
+    0.133
+   ],
+   [
+    [
+     "my hit",
+     "morganaq"
+    ],
+    0.067
+   ]
+  ],
+  "lived_med": 2.973,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    17
+   ],
+   [
+    "morganaw",
+    16
+   ],
+   [
+    "#00000000",
+    15
+   ],
+   [
+    "morganabasicattack2",
+    8
+   ],
+   [
+    "#f86f3d33",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.067
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.8
+   ]
+  ]
+ },
+ "teemoedot": {
+  "n": 15,
+  "games": 4,
+  "self": 1.0,
+  "type": 24,
+  "durations": [
+   [
+    4.5,
+    15
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.8
+   ],
+   [
+    [
+     "cast",
+     "morganae"
+    ],
+    0.067
+   ],
+   [
+    [
+     "cast",
+     "summonerhaste"
+    ],
+    0.067
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.067
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.733
+   ],
+   [
+    [
+     "time"
+    ],
+    0.267
+   ]
+  ],
+  "lived_med": 7.482,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    56
+   ],
+   [
+    "#00000000",
+    56
+   ],
+   [
+    "#6a4229fc",
+    50
+   ],
+   [
+    "morganabasicattack2",
+    17
+   ],
+   [
+    "morganabasicattack",
+    16
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.067
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.133
+   ]
+  ]
+ },
+ "#01701b21": {
+  "n": 161,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    15.765,
+    13
+   ],
+   [
+    15.059,
+    13
+   ],
+   [
+    16.471,
+    12
+   ],
+   [
+    17.176,
+    11
+   ],
+   [
+    14.353,
+    11
+   ],
+   [
+    12.941,
+    11
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.82
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.795
+   ],
+   [
+    [
+     "hit",
+     "morganaq"
+    ],
+    0.323
+   ],
+   [
+    [
+     "end",
+     "#0eab29c1"
+    ],
+    0.211
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.205
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 14.433,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    1157
+   ],
+   [
+    "#00000000",
+    330
+   ],
+   [
+    "#6a4229fc",
+    226
+   ],
+   [
+    "#f86f3d33",
+    176
+   ],
+   [
+    "morganabasicattack2",
+    131
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.466
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    1.112
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.534
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.466
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.075
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    0.075
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.118
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.006
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.006
+   ]
+  ]
+ },
+ "morganapassivehealvfx": {
+  "n": 370,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    0.7,
+    370
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    1.073
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.451
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.397
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.327
+   ],
+   [
+    [
+     "hit",
+     "morganaq"
+    ],
+    0.276
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.119
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.486
+   ],
+   [
+    [
+     "time"
+    ],
+    0.4
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.07
+   ],
+   [
+    [
+     "my hit",
+     "#00000000"
+    ],
+    0.024
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.008
+   ]
+  ],
+  "lived_med": 1.337,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    1280
+   ],
+   [
+    "#00000000",
+    514
+   ],
+   [
+    "#6a4229fc",
+    136
+   ],
+   [
+    "#f86f3d33",
+    120
+   ],
+   [
+    "perks_arcanecomet_mis",
+    72
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.049
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    1.122
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.222
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.176
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.103
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.076
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.259
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.016
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.003
+   ]
+  ]
+ },
+ "#02eb3801": {
+  "n": 36,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    15.0,
+    36
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "#0eab29c1"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.917
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.833
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.806
+   ],
+   [
+    [
+     "hit",
+     "morganaq"
+    ],
+    0.528
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.472
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 15.23,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    376
+   ],
+   [
+    "#6a4229fc",
+    175
+   ],
+   [
+    "morganabasicattack",
+    50
+   ],
+   [
+    "morganabasicattack2",
+    48
+   ],
+   [
+    "#f86f3d33",
+    41
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.278
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    1.028
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.417
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.417
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.167
+   ]
+  ]
+ },
+ "#0d398291": {
+  "n": 190,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    190
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.8
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.121
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.058
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.037
+   ],
+   [
+    [
+     "end",
+     "#01701b21"
+    ],
+    0.037
+   ],
+   [
+    [
+     "cast",
+     "morganaq"
+    ],
+    0.026
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.527
+   ],
+   [
+    [
+     "my hit",
+     "morganaq"
+    ],
+    0.269
+   ],
+   [
+    [
+     "my hit",
+     "#f86f3d33"
+    ],
+    0.065
+   ],
+   [
+    [
+     "other"
+    ],
+    0.065
+   ],
+   [
+    [
+     "my hit",
+     "morganar"
+    ],
+    0.054
+   ]
+  ],
+  "lived_med": 15.262,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    1347
+   ],
+   [
+    "#00000000",
+    715
+   ],
+   [
+    "#6a4229fc",
+    352
+   ],
+   [
+    "morganabasicattack",
+    236
+   ],
+   [
+    "morganabasicattack2",
+    228
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.205
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.068
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.037
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.011
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.111
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.379
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.316
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3876AllyBuffMissile"
+    ],
+    0.063
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.058
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    0.053
+   ]
+  ]
+ },
+ "morganaq": {
+  "n": 181,
+  "games": 4,
+  "self": 0.0,
+  "type": 12,
+  "durations": [
+   [
+    3.0,
+    74
+   ],
+   [
+    2.0,
+    19
+   ],
+   [
+    2.75,
+    17
+   ],
+   [
+    2.25,
+    13
+   ],
+   [
+    2.5,
+    11
+   ],
+   [
+    1.7,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganaq"
+    ],
+    0.972
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.304
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.293
+   ],
+   [
+    [
+     "end",
+     "#0eab29c1"
+    ],
+    0.105
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.088
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.061
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.558
+   ],
+   [
+    [
+     "death"
+    ],
+    0.271
+   ],
+   [
+    [
+     "other"
+    ],
+    0.171
+   ]
+  ],
+  "lived_med": 1.905,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.343
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.945
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.829
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.171
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.122
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3876AllyBuffMissile"
+    ],
+    0.039
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.149
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.017
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.006
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.006
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.006
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.006
+   ]
+  ]
+ },
+ "item2003": {
+  "n": 12,
+  "games": 4,
+  "self": 1.0,
+  "type": 14,
+  "durations": [
+   [
+    14.75,
+    12
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "item2003"
+    ],
+    0.833
+   ],
+   [
+    [
+     "cast",
+     "item2010"
+    ],
+    0.083
+   ],
+   [
+    [
+     "none"
+    ],
+    0.083
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.917
+   ],
+   [
+    [
+     "other"
+    ],
+    0.083
+   ]
+  ],
+  "lived_med": 14.88,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    44
+   ],
+   [
+    "morganabasicattack2",
+    16
+   ],
+   [
+    "morganabasicattack",
+    12
+   ],
+   [
+    "#6a4229fc",
+    7
+   ],
+   [
+    "morganaq",
+    6
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.083
+   ]
+  ]
+ },
+ "recall": {
+  "n": 71,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    7.9,
+    71
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.986
+   ],
+   [
+    [
+     "end",
+     "nunupbloodboil"
+    ],
+    0.014
+   ],
+   [
+    [
+     "cast",
+     "trinketsweeperlvl3"
+    ],
+    0.014
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.479
+   ],
+   [
+    [
+     "other"
+    ],
+    0.479
+   ],
+   [
+    [
+     "my cast",
+     "morganaw"
+    ],
+    0.028
+   ],
+   [
+    [
+     "my cast",
+     "morganaq"
+    ],
+    0.014
+   ]
+  ],
+  "lived_med": 6.603,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    7
+   ],
+   [
+    "#00000000",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.718
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.197
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.028
+   ]
+  ]
+ },
+ "morganae": {
+  "n": 128,
+  "games": 4,
+  "self": 0.461,
+  "type": 16,
+  "durations": [
+   [
+    5.0,
+    128
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "morganae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.023
+   ],
+   [
+    [
+     "hit",
+     "morganabasicattack"
+    ],
+    0.016
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.016
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.547
+   ],
+   [
+    [
+     "other"
+    ],
+    0.414
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.023
+   ],
+   [
+    [
+     "my hit",
+     "#00000000"
+    ],
+    0.016
+   ]
+  ],
+  "lived_med": 5.004,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    110
+   ],
+   [
+    "#00000000",
+    62
+   ],
+   [
+    "#6a4229fc",
+    56
+   ],
+   [
+    "#f86f3d33",
+    17
+   ],
+   [
+    "morganabasicattack",
+    17
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.039
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.016
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.648
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.023
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    0.008
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.008
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.008
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.008
+   ]
+  ]
+ },
+ "2508burn": {
+  "n": 69,
+  "games": 4,
+  "self": 0.043,
+  "type": 13,
+  "durations": [
+   [
+    2.9,
+    69
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    2.696
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    2.696
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.159
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.145
+   ],
+   [
+    [
+     "end",
+     "#0eab29c1"
+    ],
+    0.116
+   ],
+   [
+    [
+     "hit",
+     "morganaq"
+    ],
+    0.072
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "death"
+    ],
+    0.42
+   ],
+   [
+    [
+     "time"
+    ],
+    0.362
+   ],
+   [
+    [
+     "other"
+    ],
+    0.203
+   ],
+   [
+    [
+     "my cast",
+     "morganae"
+    ],
+    0.014
+   ]
+  ],
+  "lived_med": 2.672,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.942
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.406
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.507
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.13
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.043
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    0.029
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.319
+   ],
+   [
+    [
+     "fx",
+     75680508
+    ],
+    0.043
+   ]
+  ]
+ },
+ "teemoq": {
+  "n": 7,
+  "games": 4,
+  "self": 1.0,
+  "type": 26,
+  "durations": [
+   [
+    2.0,
+    4
+   ],
+   [
+    2.25,
+    2
+   ],
+   [
+    2.75,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.714
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.571
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.571
+   ],
+   [
+    [
+     "end",
+     "morganarhaste"
+    ],
+    0.143
+   ],
+   [
+    [
+     "end",
+     "dariushemo"
+    ],
+    0.143
+   ],
+   [
+    [
+     "end",
+     "burning"
+    ],
+    0.143
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.857
+   ],
+   [
+    [
+     "other"
+    ],
+    0.143
+   ]
+  ],
+  "lived_med": 2.004,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    16
+   ],
+   [
+    "morganaw",
+    15
+   ],
+   [
+    "#00000000",
+    8
+   ],
+   [
+    "morganabasicattack2",
+    3
+   ],
+   [
+    "morganaq",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.286
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.143
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.429
+   ]
+  ]
+ },
+ "summonerhaste": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    10.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerhaste"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 10.153,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    43
+   ],
+   [
+    "#00000000",
+    29
+   ],
+   [
+    "#6a4229fc",
+    23
+   ],
+   [
+    "#f86f3d33",
+    8
+   ],
+   [
+    "morganabasicattack",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "morganar": {
+  "n": 34,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    3.0,
+    34
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganar"
+    ],
+    1.265
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.265
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.235
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.088
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.059
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.059
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.5
+   ],
+   [
+    [
+     "other"
+    ],
+    0.471
+   ],
+   [
+    [
+     "my cast",
+     "morganaq"
+    ],
+    0.029
+   ]
+  ],
+  "lived_med": 3.006,
+  "ticks": 19,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    61
+   ],
+   [
+    "#00000000",
+    29
+   ],
+   [
+    "#f86f3d33",
+    16
+   ],
+   [
+    "#6a4229fc",
+    12
+   ],
+   [
+    "morganabasicattack",
+    7
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    7.176
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.676
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    1.324
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    1.294
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    1.294
+   ],
+   [
+    [
+     "fx_until_end",
+     78637603
+    ],
+    0.853
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.265
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.265
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.029
+   ]
+  ]
+ },
+ "morganarslow": {
+  "n": 45,
+  "games": 4,
+  "self": 0.0,
+  "type": 11,
+  "durations": [
+   [
+    25000.0,
+    28
+   ],
+   [
+    21250.0,
+    6
+   ],
+   [
+    17500.0,
+    3
+   ],
+   [
+    14875.001,
+    3
+   ],
+   [
+    23500.0,
+    2
+   ],
+   [
+    14875.002,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganar"
+    ],
+    1.533
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.267
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.244
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.133
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.089
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.089
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.978
+   ],
+   [
+    [
+     "my cast",
+     "summonerflash"
+    ],
+    0.022
+   ]
+  ],
+  "lived_med": 1.67,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    8.311
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    3.111
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    1.622
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    1.6
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    1.556
+   ],
+   [
+    [
+     "fx_until_end",
+     78637603
+    ],
+    1.244
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.4
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.622
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.022
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.022
+   ]
+  ]
+ },
+ "morganardebuff": {
+  "n": 45,
+  "games": 4,
+  "self": 0.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    45
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganar"
+    ],
+    1.533
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.267
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.244
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.133
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.089
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.089
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.556
+   ],
+   [
+    [
+     "time"
+    ],
+    0.422
+   ],
+   [
+    [
+     "my cast",
+     "summonerflash"
+    ],
+    0.022
+   ]
+  ],
+  "lived_med": 1.772,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    8.311
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    3.244
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    1.622
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    1.6
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    1.556
+   ],
+   [
+    [
+     "fx_until_end",
+     78637603
+    ],
+    1.289
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.622
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.622
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.022
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.022
+   ]
+  ]
+ },
+ "globaltruesight": {
+  "n": 68,
+  "games": 4,
+  "self": 0.059,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    45
+   ],
+   [
+    2.0,
+    8
+   ],
+   [
+    1.75,
+    5
+   ],
+   [
+    1.5,
+    5
+   ],
+   [
+    1.275,
+    2
+   ],
+   [
+    1.487,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganar"
+    ],
+    1.353
+   ],
+   [
+    [
+     "end",
+     "morganar"
+    ],
+    0.265
+   ],
+   [
+    [
+     "end",
+     "morganarhaste"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.191
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.176
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.118
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.5
+   ],
+   [
+    [
+     "other"
+    ],
+    0.456
+   ],
+   [
+    [
+     "my hit",
+     "#00000000"
+    ],
+    0.015
+   ],
+   [
+    [
+     "my cast",
+     "summonerflash"
+    ],
+    0.015
+   ],
+   [
+    [
+     "my cast",
+     "morganaq"
+    ],
+    0.015
+   ]
+  ],
+  "lived_med": 1.603,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    2
+   ],
+   [
+    "morganaw",
+    2
+   ],
+   [
+    "perks_arcanecomet_mis",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    7.235
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.853
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    1.412
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    1.074
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    1.059
+   ],
+   [
+    [
+     "fx_until_end",
+     78637603
+    ],
+    0.853
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.735
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.456
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.015
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.015
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.015
+   ]
+  ]
+ },
+ "morganarhaste": {
+  "n": 113,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    0.25,
+    113
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.522
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.407
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.142
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.115
+   ],
+   [
+    [
+     "end",
+     "morganapassivehealvfx"
+    ],
+    0.08
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.071
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.832
+   ],
+   [
+    [
+     "other"
+    ],
+    0.071
+   ],
+   [
+    [
+     "my hit",
+     "morganar"
+    ],
+    0.053
+   ],
+   [
+    [
+     "my hit",
+     "#f86f3d33"
+    ],
+    0.035
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.009
+   ]
+  ],
+  "lived_med": 0.267,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    55
+   ],
+   [
+    "#00000000",
+    26
+   ],
+   [
+    "#f86f3d33",
+    15
+   ],
+   [
+    "morganar",
+    12
+   ],
+   [
+    "#6a4229fc",
+    11
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.823
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.018
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.257
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.035
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    0.027
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.018
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.186
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.088
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.018
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.009
+   ]
+  ]
+ },
+ "summonerdot": {
+  "n": 7,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    5.0,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.857
+   ],
+   [
+    [
+     "cast",
+     "morganaq"
+    ],
+    0.143
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.857
+   ],
+   [
+    [
+     "other"
+    ],
+    0.143
+   ]
+  ],
+  "lived_med": 5.144,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    29
+   ],
+   [
+    "#6a4229fc",
+    22
+   ],
+   [
+    "#00000000",
+    8
+   ],
+   [
+    "#f86f3d33",
+    4
+   ],
+   [
+    "morganabasicattack",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.714
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.857
+   ]
+  ],
+  "at_end": []
+ },
+ "grievouswound": {
+  "n": 34,
+  "games": 4,
+  "self": 0.206,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    27
+   ],
+   [
+    5.0,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.765
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.324
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.324
+   ],
+   [
+    [
+     "none"
+    ],
+    0.206
+   ],
+   [
+    [
+     "hit",
+     "morganaq"
+    ],
+    0.176
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.118
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.706
+   ],
+   [
+    [
+     "time"
+    ],
+    0.265
+   ],
+   [
+    [
+     "my cast",
+     "morganaq"
+    ],
+    0.029
+   ]
+  ],
+  "lived_med": 4.809,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    29
+   ],
+   [
+    "#6a4229fc",
+    22
+   ],
+   [
+    "#00000000",
+    8
+   ],
+   [
+    "#f86f3d33",
+    4
+   ],
+   [
+    "morganabasicattack",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.529
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.324
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    1.147
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.235
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.088
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.059
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.794
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.059
+   ]
+  ]
+ },
+ "morganarstun": {
+  "n": 19,
+  "games": 4,
+  "self": 0.0,
+  "type": 5,
+  "durations": [
+   [
+    1.75,
+    5
+   ],
+   [
+    1.5,
+    5
+   ],
+   [
+    2.0,
+    4
+   ],
+   [
+    1.275,
+    2
+   ],
+   [
+    1.487,
+    1
+   ],
+   [
+    0.893,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganar"
+    ],
+    1.211
+   ],
+   [
+    [
+     "end",
+     "morganar"
+    ],
+    0.947
+   ],
+   [
+    [
+     "end",
+     "morganarhaste"
+    ],
+    0.895
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.211
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.158
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.105
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.737
+   ],
+   [
+    [
+     "other"
+    ],
+    0.211
+   ],
+   [
+    [
+     "my cast",
+     "morganaq"
+    ],
+    0.053
+   ]
+  ],
+  "lived_med": 1.603,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.789
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.211
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    1.368
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.053
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.053
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.053
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.895
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.053
+   ]
+  ]
+ },
+ "nunupbloodboil": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    4.0,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.875
+   ],
+   [
+    [
+     "cast",
+     "morganaq"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.199,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    40
+   ],
+   [
+    "#00000000",
+    29
+   ],
+   [
+    "#6a4229fc",
+    17
+   ],
+   [
+    "s5_summonersmiteplayerganker",
+    9
+   ],
+   [
+    "#f86f3d33",
+    7
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    4.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.375
+   ]
+  ]
+ },
+ "itemglory": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "talentreaperpersistenteffects"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "morganar"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "hecarimdefilelifeleech"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "stun"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 974.353,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    798
+   ],
+   [
+    "#00000000",
+    560
+   ],
+   [
+    "#6a4229fc",
+    121
+   ],
+   [
+    "morganabasicattack2",
+    89
+   ],
+   [
+    "morganabasicattack",
+    87
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.75
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.25
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.25
+   ]
+  ],
+  "at_end": []
+ },
+ "itemlostchapter": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    3.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    3.0
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    3.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.242,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "srt_2024_horde_dot": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    32
+   ],
+   [
+    "#00000000",
+    14
+   ],
+   [
+    "morganabasicattack2",
+    8
+   ],
+   [
+    "#6a4229fc",
+    7
+   ],
+   [
+    "morganabasicattack",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SRT_2024_Horde_DoT"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "FaelightSeenByWardBuffBar": {
+  "n": 39,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    39
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.718
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.154
+   ],
+   [
+    [
+     "cast",
+     "morganae"
+    ],
+    0.051
+   ],
+   [
+    [
+     "cast",
+     "morganaq"
+    ],
+    0.051
+   ],
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.026
+   ],
+   [
+    [
+     "end",
+     "morganaw"
+    ],
+    0.026
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.846
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.103
+   ],
+   [
+    [
+     "my hit",
+     "#f86f3d33"
+    ],
+    0.026
+   ],
+   [
+    [
+     "my hit",
+     "perks_arcanecomet_mis_arc"
+    ],
+    0.026
+   ]
+  ],
+  "lived_med": 1.336,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    28
+   ],
+   [
+    "morganabasicattack2",
+    15
+   ],
+   [
+    "morganabasicattack",
+    11
+   ],
+   [
+    "morganaq",
+    7
+   ],
+   [
+    "#6a4229fc",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.41
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.154
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.051
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.41
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.026
+   ]
+  ]
+ },
+ "2503burn": {
+  "n": 297,
+  "games": 4,
+  "self": 0.121,
+  "type": 13,
+  "durations": [
+   [
+    2.9,
+    297
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    2.178
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    2.131
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.111
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.104
+   ],
+   [
+    [
+     "none"
+    ],
+    0.104
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "death"
+    ],
+    0.569
+   ],
+   [
+    [
+     "other"
+    ],
+    0.259
+   ],
+   [
+    [
+     "time"
+    ],
+    0.162
+   ],
+   [
+    [
+     "my cast",
+     "summonerhaste"
+    ],
+    0.003
+   ],
+   [
+    [
+     "my cast",
+     "morganaq"
+    ],
+    0.003
+   ]
+  ],
+  "lived_med": 2.138,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    108
+   ],
+   [
+    "morganaq",
+    11
+   ],
+   [
+    "hallucinatefull",
+    10
+   ],
+   [
+    "morganabasicattack2",
+    7
+   ],
+   [
+    "morganabasicattack",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    6.838
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.869
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.616
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.064
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.061
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.051
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.946
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.007
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.007
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.007
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.003
+   ]
+  ]
+ },
+ "teemordot": {
+  "n": 9,
+  "games": 4,
+  "self": 1.0,
+  "type": 24,
+  "durations": [
+   [
+    4.0,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.778
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.444
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.222
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.111
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.889
+   ],
+   [
+    [
+     "other"
+    ],
+    0.111
+   ]
+  ],
+  "lived_med": 4.079,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    32
+   ],
+   [
+    "morganaw",
+    20
+   ],
+   [
+    "morganabasicattack",
+    6
+   ],
+   [
+    "#f86f3d33",
+    4
+   ],
+   [
+    "#6a4229fc",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.222
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "slow": {
+  "n": 92,
+  "games": 4,
+  "self": 0.543,
+  "type": 11,
+  "durations": [
+   [
+    1.5,
+    33
+   ],
+   [
+    2.0,
+    16
+   ],
+   [
+    3.0,
+    11
+   ],
+   [
+    4.0,
+    7
+   ],
+   [
+    0.892,
+    4
+   ],
+   [
+    0.3,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.957
+   ],
+   [
+    [
+     "end",
+     "3869shield"
+    ],
+    0.457
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.043
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.022
+   ],
+   [
+    [
+     "end",
+     "morganapassivehealvfx"
+    ],
+    0.022
+   ],
+   [
+    [
+     "hit",
+     "morganaq"
+    ],
+    0.011
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.793
+   ],
+   [
+    [
+     "other"
+    ],
+    0.12
+   ],
+   [
+    [
+     "death"
+    ],
+    0.054
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.022
+   ],
+   [
+    [
+     "my cast",
+     "morganaq"
+    ],
+    0.011
+   ]
+  ],
+  "lived_med": 1.745,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    56
+   ],
+   [
+    "#00000000",
+    39
+   ],
+   [
+    "morganaq",
+    10
+   ],
+   [
+    "morganabasicattack",
+    7
+   ],
+   [
+    "#f86f3d33",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.207
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.152
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.098
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.022
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.011
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.011
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.554
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.011
+   ]
+  ]
+ },
+ "morganarbreaksound": {
+  "n": 26,
+  "games": 4,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    0.5,
+    26
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.885
+   ],
+   [
+    [
+     "end",
+     "morganarhaste"
+    ],
+    0.385
+   ],
+   [
+    [
+     "end",
+     "morganar"
+    ],
+    0.346
+   ],
+   [
+    [
+     "end",
+     "talentreaperpersistenteffects"
+    ],
+    0.115
+   ],
+   [
+    [
+     "end",
+     "3147stackcounter"
+    ],
+    0.115
+   ],
+   [
+    [
+     "end",
+     "3147enragebuff"
+    ],
+    0.115
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.643,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.038
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    1.077
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.154
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.077
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.077
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.038
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.654
+   ]
+  ]
+ },
+ "srt_2024_horde_dot_buff": {
+  "n": 7,
+  "games": 4,
+  "self": 0.0,
+  "type": 13,
+  "durations": [
+   [
+    4.6,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganabasicattack2"
+    ],
+    0.857
+   ],
+   [
+    [
+     "hit",
+     "morganabasicattack"
+    ],
+    0.429
+   ],
+   [
+    [
+     "end",
+     "#01701b21"
+    ],
+    0.143
+   ],
+   [
+    [
+     "hit",
+     "vaynebasicattack"
+    ],
+    0.143
+   ],
+   [
+    [
+     "hit",
+     "s5_summonersmiteplayerganker"
+    ],
+    0.143
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 6.045,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.429
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.143
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "sr_2026_s1_rolebound_top_questcompleted": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "sr_2026_s1_rolebound_top_quest"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    117
+   ],
+   [
+    "morganaw",
+    88
+   ],
+   [
+    "s5_summonersmiteplayerganker",
+    17
+   ],
+   [
+    "#6a4229fc",
+    8
+   ],
+   [
+    "morganabasicattack2",
+    8
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "s12_summonerteleportmanager": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.0,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "srx_dragonsoulbuffcloud_preview": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    33
+   ],
+   [
+    "morganaw",
+    25
+   ],
+   [
+    "morganabasicattack2",
+    3
+   ],
+   [
+    "morganabasicattack",
+    3
+   ],
+   [
+    "#f86f3d33",
+    3
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "burning": {
+  "n": 17,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    3.0,
+    17
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.706
+   ],
+   [
+    [
+     "cast",
+     "morganae"
+    ],
+    0.176
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.059
+   ],
+   [
+    [
+     "end",
+     "summonerhealcheck"
+    ],
+    0.059
+   ],
+   [
+    [
+     "end",
+     "slow"
+    ],
+    0.059
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardelderslow"
+    ],
+    0.059
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.412
+   ],
+   [
+    [
+     "time"
+    ],
+    0.294
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.235
+   ],
+   [
+    [
+     "my hit",
+     "#f86f3d33"
+    ],
+    0.059
+   ]
+  ],
+  "lived_med": 3.24,
+  "ticks": 1,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    64
+   ],
+   [
+    "#00000000",
+    50
+   ],
+   [
+    "#f86f3d33",
+    7
+   ],
+   [
+    "morganabasicattack",
+    7
+   ],
+   [
+    "morganaq",
+    7
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.941
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.059
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.824
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.118
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.059
+   ]
+  ]
+ },
+ "dariushemo": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    5.1,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.833
+   ],
+   [
+    [
+     "cast",
+     "morganae"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.833
+   ],
+   [
+    [
+     "time"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 7.97,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    80
+   ],
+   [
+    "morganaw",
+    46
+   ],
+   [
+    "#f86f3d33",
+    8
+   ],
+   [
+    "morganabasicattack2",
+    6
+   ],
+   [
+    "morganabasicattack",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.167
+   ]
+  ]
+ },
+ "srx_cloudzonespeedbuff": {
+  "n": 13,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    13
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.846
+   ],
+   [
+    [
+     "my hit",
+     "#f86f3d33"
+    ],
+    0.077
+   ],
+   [
+    [
+     "my hit",
+     "#00000000"
+    ],
+    0.077
+   ]
+  ],
+  "lived_med": 4.041,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    44
+   ],
+   [
+    "morganaw",
+    14
+   ],
+   [
+    "#f86f3d33",
+    5
+   ],
+   [
+    "morganabasicattack2",
+    2
+   ],
+   [
+    "perks_arcanecomet_mis",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.231
+   ]
+  ]
+ },
+ "planthawkshotbuff": {
+  "n": 62,
+  "games": 4,
+  "self": 0.226,
+  "type": 3,
+  "durations": [
+   [
+    12.0,
+    33
+   ],
+   [
+    3.0,
+    29
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.839
+   ],
+   [
+    [
+     "hit",
+     "planthawkshotchemtech"
+    ],
+    0.048
+   ],
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.032
+   ],
+   [
+    [
+     "cast",
+     "morganar"
+    ],
+    0.016
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.016
+   ],
+   [
+    [
+     "hit",
+     "hecarimrapidslash"
+    ],
+    0.016
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.677
+   ],
+   [
+    [
+     "death"
+    ],
+    0.161
+   ],
+   [
+    [
+     "time"
+    ],
+    0.097
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.032
+   ],
+   [
+    [
+     "my hit",
+     "s5_summonersmiteplayerganker"
+    ],
+    0.016
+   ]
+  ],
+  "lived_med": 3.952,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    36
+   ],
+   [
+    "s5_summonersmiteplayerganker",
+    10
+   ],
+   [
+    "#00000000",
+    4
+   ],
+   [
+    "morganabasicattack",
+    4
+   ],
+   [
+    "#f86f3d33",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.194
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.145
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.161
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.016
+   ]
+  ]
+ },
+ "leblancqmark": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.5,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.5
+   ],
+   [
+    [
+     "time"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 3.581,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#f86f3d33",
+    1
+   ],
+   [
+    "morganaw",
+    1
+   ],
+   [
+    "#00000000",
+    1
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ]
+ },
+ "leblancqdetonate": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    2.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "leblancqmark"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.004,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    2
+   ],
+   [
+    "#00000000",
+    2
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.0
+   ]
+  ],
+  "at_end": []
+ },
+ "leblancrqmark": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "leblancqmark"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.607,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    2
+   ],
+   [
+    "#00000000",
+    2
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "howlinggalespell": {
+  "n": 5,
+  "games": 4,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    0.5,
+    3
+   ],
+   [
+    0.533,
+    1
+   ],
+   [
+    0.508,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.8
+   ],
+   [
+    [
+     "cast",
+     "morganaq"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.668,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    4
+   ],
+   [
+    "morganaq",
+    1
+   ],
+   [
+    "morganaw",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     497252
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.6
+   ]
+  ],
+  "at_end": []
+ },
+ "plantsatchelknockback": {
+  "n": 8,
+  "games": 4,
+  "self": 0.75,
+  "type": 31,
+  "durations": [
+   [
+    1.5,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.802,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.875
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.125
+   ]
+  ],
+  "at_end": []
+ },
+ "3116slow": {
+  "n": 281,
+  "games": 4,
+  "self": 0.007,
+  "type": 11,
+  "durations": [
+   [
+    1.0,
+    241
+   ],
+   [
+    0.7,
+    35
+   ],
+   [
+    0.85,
+    4
+   ],
+   [
+    2.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    1.883
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    1.399
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.217
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.185
+   ],
+   [
+    [
+     "hit",
+     "morganaq"
+    ],
+    0.157
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.114
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.381
+   ],
+   [
+    [
+     "death"
+    ],
+    0.335
+   ],
+   [
+    [
+     "time"
+    ],
+    0.281
+   ],
+   [
+    [
+     "my cast",
+     "morganae"
+    ],
+    0.004
+   ]
+  ],
+  "lived_med": 1.603,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    8.327
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.804
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.883
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.11
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.075
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.064
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.068
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.011
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.007
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.004
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.004
+   ]
+  ]
+ },
+ "srx_dragonbuffcloud": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    53
+   ],
+   [
+    "morganaw",
+    37
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    4
+   ],
+   [
+    "morganaq",
+    3
+   ],
+   [
+    "#f86f3d33",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "samirapcooldown": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    10.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 10.09,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    32
+   ],
+   [
+    "morganaw",
+    17
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    3
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "morganaq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "samirapknockup": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    0.1,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.601,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "perks_arcanecomet_mis_arc",
+    3
+   ],
+   [
+    "#00000000",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "jannamoveaway": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.734,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    2
+   ],
+   [
+    "#00000000",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "dariusnoxiantacticsslow": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "cast",
+     "morganae"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.103,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    8
+   ],
+   [
+    "morganaw",
+    3
+   ],
+   [
+    "morganaq",
+    2
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.75
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.25
+   ]
+  ]
+ },
+ "blessingofthelizardelderslow": {
+  "n": 12,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    3.0,
+    9
+   ],
+   [
+    2.82,
+    2
+   ],
+   [
+    2.55,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "cast",
+     "morganae"
+    ],
+    0.083
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.083
+   ],
+   [
+    [
+     "end",
+     "summonerhealcheck"
+    ],
+    0.083
+   ],
+   [
+    [
+     "end",
+     "slow"
+    ],
+    0.083
+   ],
+   [
+    [
+     "end",
+     "burning"
+    ],
+    0.083
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.5
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 3.106,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    46
+   ],
+   [
+    "#00000000",
+    30
+   ],
+   [
+    "#f86f3d33",
+    5
+   ],
+   [
+    "morganar",
+    5
+   ],
+   [
+    "morganaq",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.833
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.583
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.083
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.167
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.083
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.083
+   ]
+  ]
+ },
+ "itemsmiteslow": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    2.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.089,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    5
+   ],
+   [
+    "#00000000",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ]
+  ]
+ },
+ "dariusaxegrabcone": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    1.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.192,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ]
+  ],
+  "at_end": []
+ },
+ "dariuseslow": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.072,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "zhonyasringshield": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 18,
+  "durations": [
+   [
+    2.5,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "item2420"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "zhonyashourglass"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "morganar"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.542,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    4
+   ],
+   [
+    "#00000000",
+    2
+   ],
+   [
+    "perks_arcanecomet_mis",
+    2
+   ],
+   [
+    "morganar",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    0.333
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.167
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    0.167
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.167
+   ]
+  ],
+  "at_end": []
+ },
+ "item2420": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "item2420"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "morganar"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    60
+   ],
+   [
+    "#00000000",
+    39
+   ],
+   [
+    "morganabasicattack",
+    8
+   ],
+   [
+    "morganabasicattack2",
+    6
+   ],
+   [
+    "morganaq",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.333
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.333
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    0.333
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": []
+ },
+ "crestoftheancientgolem": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    120.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "morganae"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.5
+   ],
+   [
+    [
+     "other"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 120.091,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    136
+   ],
+   [
+    "morganaw",
+    88
+   ],
+   [
+    "s5_summonersmiteplayerganker",
+    18
+   ],
+   [
+    "morganabasicattack",
+    11
+   ],
+   [
+    "morganabasicattack2",
+    11
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "crestoftheancientgolemvfx": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    99999.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "morganae"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 120.091,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    136
+   ],
+   [
+    "morganaw",
+    88
+   ],
+   [
+    "s5_summonersmiteplayerganker",
+    18
+   ],
+   [
+    "morganabasicattack",
+    11
+   ],
+   [
+    "morganabasicattack2",
+    11
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "leblancre": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    1.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.724,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    2
+   ],
+   [
+    "morganaw",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.0
+   ]
+  ]
+ },
+ "summonerheal": {
+  "n": 16,
+  "games": 4,
+  "self": 0.562,
+  "type": 15,
+  "durations": [
+   [
+    1.0,
+    16
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerheal"
+    ],
+    0.938
+   ],
+   [
+    [
+     "none"
+    ],
+    0.062
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.186,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    8
+   ],
+   [
+    "hallucinatefull",
+    4
+   ],
+   [
+    "morganaq",
+    1
+   ],
+   [
+    "morganabasicattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.75
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.875
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.875
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.375
+   ]
+  ]
+ },
+ "summonerhealcheck": {
+  "n": 16,
+  "games": 4,
+  "self": 0.562,
+  "type": 3,
+  "durations": [
+   [
+    30.0,
+    16
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerheal"
+    ],
+    0.938
+   ],
+   [
+    [
+     "none"
+    ],
+    0.062
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.625
+   ],
+   [
+    [
+     "other"
+    ],
+    0.312
+   ],
+   [
+    [
+     "my cast",
+     "morganaq"
+    ],
+    0.062
+   ]
+  ],
+  "lived_med": 30.173,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    125
+   ],
+   [
+    "s5_summonersmiteplayerganker",
+    20
+   ],
+   [
+    "morganabasicattack2",
+    18
+   ],
+   [
+    "morganabasicattack",
+    15
+   ],
+   [
+    "morganaq",
+    14
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.75
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.875
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.625
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.062
+   ]
+  ]
+ },
+ "planthealthslow": {
+  "n": 11,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.3,
+    11
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.434,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.091
+   ]
+  ]
+ },
+ "summonerteleport": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    5.272,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "teleportchannelbar4500"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 5.278,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     53,
+     "TeleportChannelBar4500"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "teleport_target": {
+  "n": 1,
+  "games": 4,
+  "self": 0.0,
+  "type": 5,
+  "durations": [
+   [
+    5.272,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "teleportchannelbar4500"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 5.445,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     53,
+     "TeleportChannelBar4500"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "summonerteleporthaste": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    4.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "summonerteleport"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.184,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "82"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "3118visualdebuff": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.833
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.902,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganabasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.5
+   ]
+  ],
+  "at_end": []
+ },
+ "8010visualdebuff": {
+  "n": 7,
+  "games": 4,
+  "self": 0.0,
+  "type": 28,
+  "durations": [
+   [
+    6.0,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    1.571
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    1.571
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.857
+   ],
+   [
+    [
+     "hit",
+     "morganar"
+    ],
+    0.857
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.429
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.429
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.857
+   ],
+   [
+    [
+     "time"
+    ],
+    0.143
+   ]
+  ],
+  "lived_med": 6.016,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    15.0
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    2.143
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.857
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.857
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    0.857
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.429
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.571
+   ]
+  ]
+ },
+ "leblance": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    1.5,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "morganaq"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "time"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 1.035,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "perks_arcanecomet_mis",
+    2
+   ],
+   [
+    "morganaw",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    1.333
+   ]
+  ]
+ },
+ "leblanceroot": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 12,
+  "durations": [
+   [
+    1.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "leblance"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.603,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "rolerules_support": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganabasicattack2",
+    6
+   ],
+   [
+    "morganabasicattack",
+    5
+   ],
+   [
+    "morganaq",
+    3
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "supportitempurchasebuff": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganabasicattack2",
+    6
+   ],
+   [
+    "morganabasicattack",
+    5
+   ],
+   [
+    "morganaq",
+    3
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "s14_support_charge_display": {
+  "n": 194,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    20.0,
+    98
+   ],
+   [
+    25000.0,
+    11
+   ],
+   [
+    65.0,
+    3
+   ],
+   [
+    19.465,
+    2
+   ],
+   [
+    13.753,
+    1
+   ],
+   [
+    9.877,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.51
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.227
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.196
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.17
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.139
+   ],
+   [
+    [
+     "hit",
+     "morganabasicattack2"
+    ],
+    0.113
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.474
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.144
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.139
+   ],
+   [
+    [
+     "my hit",
+     "morganaq"
+    ],
+    0.077
+   ],
+   [
+    [
+     "other"
+    ],
+    0.052
+   ]
+  ],
+  "lived_med": 10.44,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    347
+   ],
+   [
+    "morganabasicattack2",
+    95
+   ],
+   [
+    "morganabasicattack",
+    90
+   ],
+   [
+    "#f86f3d33",
+    53
+   ],
+   [
+    "morganaq",
+    38
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.479
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.294
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.144
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.108
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.062
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.031
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.144
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.108
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.062
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.031
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    0.031
+   ]
+  ]
+ },
+ "talentreaperpersistenteffects": {
+  "n": 13,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    13
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_gold_display"
+    ],
+    0.231
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.231
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.923
+   ],
+   [
+    [
+     "my cast",
+     "morganaq"
+    ],
+    0.077
+   ]
+  ],
+  "lived_med": 114.716,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    343
+   ],
+   [
+    "morganabasicattack2",
+    96
+   ],
+   [
+    "morganabasicattack",
+    92
+   ],
+   [
+    "#f86f3d33",
+    53
+   ],
+   [
+    "morganaq",
+    38
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.769
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.231
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.231
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.231
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.231
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.769
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.231
+   ]
+  ]
+ },
+ "sr_2026_s1_rolebound_support_quest": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 744.878,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    347
+   ],
+   [
+    "morganabasicattack2",
+    96
+   ],
+   [
+    "morganabasicattack",
+    92
+   ],
+   [
+    "#f86f3d33",
+    53
+   ],
+   [
+    "morganaq",
+    38
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "s14_support_gold_display": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    250000.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 420.849,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    347
+   ],
+   [
+    "morganabasicattack2",
+    96
+   ],
+   [
+    "morganabasicattack",
+    92
+   ],
+   [
+    "#f86f3d33",
+    53
+   ],
+   [
+    "morganaq",
+    38
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "#05c19e61": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    1.5,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "#0a70cdc1"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 1.609,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.333
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "karthuswallofpaintarget": {
+  "n": 21,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    5.0,
+    12
+   ],
+   [
+    4.25,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.81
+   ],
+   [
+    [
+     "other"
+    ],
+    0.143
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.048
+   ]
+  ],
+  "lived_med": 4.446,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    38
+   ],
+   [
+    "#f86f3d33",
+    7
+   ],
+   [
+    "s5_summonersmiteplayerganker",
+    7
+   ],
+   [
+    "morganaq",
+    6
+   ],
+   [
+    "hallucinatefull",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.476
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.476
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.714
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.048
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.048
+   ]
+  ]
+ },
+ "karthuswallofpainextra": {
+  "n": 22,
+  "games": 4,
+  "self": 1.0,
+  "type": 28,
+  "durations": [
+   [
+    5.0,
+    22
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.818
+   ],
+   [
+    [
+     "other"
+    ],
+    0.136
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.045
+   ]
+  ],
+  "lived_med": 5.181,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    58
+   ],
+   [
+    "#f86f3d33",
+    8
+   ],
+   [
+    "s5_summonersmiteplayerganker",
+    7
+   ],
+   [
+    "morganaq",
+    6
+   ],
+   [
+    "hallucinatefull",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.455
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.455
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.455
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.045
+   ]
+  ]
+ },
+ "item2010": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 14,
+  "durations": [
+   [
+    4.75,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "item2010"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 5.011,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    7
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "rakanwcharm": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    1.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.169,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    6
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "karthusfallenonetarget": {
+  "n": 20,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    20
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.85
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.05
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.9
+   ],
+   [
+    [
+     "my cast",
+     "morganaq"
+    ],
+    0.05
+   ],
+   [
+    [
+     "other"
+    ],
+    0.05
+   ]
+  ],
+  "lived_med": 3.093,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    20
+   ],
+   [
+    "s5_summonersmiteplayerganker",
+    4
+   ],
+   [
+    "morganaq",
+    2
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    2
+   ],
+   [
+    "morganabasicattack2",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.45
+   ]
+  ]
+ },
+ "karthusfallenonecastsound": {
+  "n": 20,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    5.0,
+    20
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.85
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.05
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.85
+   ],
+   [
+    [
+     "other"
+    ],
+    0.1
+   ],
+   [
+    [
+     "my cast",
+     "morganaq"
+    ],
+    0.05
+   ]
+  ],
+  "lived_med": 5.091,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    24
+   ],
+   [
+    "s5_summonersmiteplayerganker",
+    4
+   ],
+   [
+    "morganaq",
+    3
+   ],
+   [
+    "morganabasicattack2",
+    3
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.05
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.3
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.05
+   ]
+  ]
+ },
+ "karthusfallenonedamagesound": {
+  "n": 18,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    5.0,
+    18
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.944
+   ],
+   [
+    [
+     "end",
+     "morganae"
+    ],
+    0.444
+   ],
+   [
+    [
+     "hit",
+     "morganar"
+    ],
+    0.056
+   ],
+   [
+    [
+     "end",
+     "srhomeguardspeed"
+    ],
+    0.056
+   ],
+   [
+    [
+     "end",
+     "karthusfallenonetarget"
+    ],
+    0.056
+   ],
+   [
+    [
+     "end",
+     "orianaredactshield"
+    ],
+    0.056
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 5.115,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    32
+   ],
+   [
+    "hallucinatefull",
+    8
+   ],
+   [
+    "perks_arcanecomet_mis",
+    6
+   ],
+   [
+    "morganaq",
+    4
+   ],
+   [
+    "morganar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.722
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.056
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    0.056
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.056
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.111
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.056
+   ]
+  ]
+ },
+ "destiny": {
+  "n": 10,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    8.0,
+    5
+   ],
+   [
+    10.0,
+    3
+   ],
+   [
+    6.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.556
+   ],
+   [
+    [
+     "other"
+    ],
+    0.222
+   ],
+   [
+    [
+     "my cast",
+     "morganaq"
+    ],
+    0.111
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.111
+   ]
+  ],
+  "lived_med": 8.035,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    58
+   ],
+   [
+    "hallucinatefull",
+    34
+   ],
+   [
+    "morganaq",
+    7
+   ],
+   [
+    "s5_summonersmiteplayerganker",
+    6
+   ],
+   [
+    "morganabasicattack2",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.8
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.2
+   ]
+  ]
+ },
+ "trinketsweeperlvl3": {
+  "n": 39,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    8.0,
+    39
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "trinketsweeperlvl3"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 8.113,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    45
+   ],
+   [
+    "morganabasicattack",
+    24
+   ],
+   [
+    "morganabasicattack2",
+    22
+   ],
+   [
+    "morganaq",
+    9
+   ],
+   [
+    "#f86f3d33",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.974
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.051
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.872
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.026
+   ]
+  ]
+ },
+ "itemghostward": {
+  "n": 98,
+  "games": 4,
+  "self": 0.0,
+  "type": 6,
+  "durations": [
+   [
+    150.0,
+    98
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "s5_summonersmiteplayerganker"
+    ],
+    0.01
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.01
+   ],
+   [
+    [
+     "end",
+     "trinketsweeperlvl3"
+    ],
+    0.01
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "itemghostward"
+    ],
+    0.516
+   ],
+   [
+    [
+     "time"
+    ],
+    0.297
+   ],
+   [
+    [
+     "death"
+    ],
+    0.187
+   ]
+  ],
+  "lived_med": 105.866,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.49
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.184
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.01
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.173
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.102
+   ]
+  ]
+ },
+ "shacoboxslow": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.0,
+    5
+   ],
+   [
+    0.5,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "#01701b21"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cast",
+     "morganaq"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.069,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    3
+   ],
+   [
+    "hallucinatefull",
+    2
+   ],
+   [
+    "morganaq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.625
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.125
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.125
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ]
+  ]
+ },
+ "shacoboxsnare": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 12,
+  "durations": [
+   [
+    0.3,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "#01701b21"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cast",
+     "morganaq"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.522,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    2
+   ],
+   [
+    "morganaq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.625
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.125
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.125
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.125
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.125
+   ]
+  ]
+ },
+ "flee": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 29,
+  "durations": [
+   [
+    1.0,
+    5
+   ],
+   [
+    0.5,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "#01701b21"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cast",
+     "morganaq"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.069,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    3
+   ],
+   [
+    "hallucinatefull",
+    2
+   ],
+   [
+    "morganaq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.625
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.125
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.125
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ]
+  ]
+ },
+ "nasusearmorreduction": {
+  "n": 12,
+  "games": 4,
+  "self": 1.0,
+  "type": 28,
+  "durations": [
+   [
+    5.0,
+    9
+   ],
+   [
+    1.073,
+    1
+   ],
+   [
+    0.998,
+    1
+   ],
+   [
+    0.988,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.833
+   ],
+   [
+    [
+     "hit",
+     "morganabasicattack2"
+    ],
+    0.083
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.083
+   ],
+   [
+    [
+     "hit",
+     "morganar"
+    ],
+    0.083
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "time"
+    ],
+    0.25
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.083
+   ]
+  ],
+  "lived_med": 1.782,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    17
+   ],
+   [
+    "hallucinatefull",
+    6
+   ],
+   [
+    "morganabasicattack2",
+    3
+   ],
+   [
+    "morganaq",
+    3
+   ],
+   [
+    "perks_arcanecomet_mis",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.917
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.083
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    0.083
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.083
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "stun": {
+  "n": 29,
+  "games": 4,
+  "self": 1.0,
+  "type": 5,
+  "durations": [
+   [
+    0.595,
+    8
+   ],
+   [
+    2.0,
+    5
+   ],
+   [
+    1.0,
+    5
+   ],
+   [
+    0.705,
+    2
+   ],
+   [
+    0.34,
+    2
+   ],
+   [
+    1.25,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.862
+   ],
+   [
+    [
+     "cast",
+     "morganar"
+    ],
+    0.034
+   ],
+   [
+    [
+     "cast",
+     "jammerdevice"
+    ],
+    0.034
+   ],
+   [
+    [
+     "end",
+     "item3110aura"
+    ],
+    0.034
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.034
+   ],
+   [
+    [
+     "end",
+     "talentreaperpersistenteffects"
+    ],
+    0.034
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.897
+   ],
+   [
+    [
+     "other"
+    ],
+    0.069
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.034
+   ]
+  ],
+  "lived_med": 0.869,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    10
+   ],
+   [
+    "#f86f3d33",
+    4
+   ],
+   [
+    "itemknightsvow",
+    3
+   ],
+   [
+    "s5_summonersmiteplayerganker",
+    2
+   ],
+   [
+    "morganabasicattack2",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.966
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.966
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.276
+   ],
+   [
+    [
+     "fx_until_end",
+     126216260
+    ],
+    0.207
+   ],
+   [
+    [
+     "slot",
+     47,
+     "MorganaRVFXMis"
+    ],
+    0.034
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.828
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.034
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.034
+   ]
+  ]
+ },
+ "4005debuff": {
+  "n": 42,
+  "games": 4,
+  "self": 0.071,
+  "type": 13,
+  "durations": [
+   [
+    4.0,
+    42
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganaq"
+    ],
+    0.762
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.357
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "morganar"
+    ],
+    0.19
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.143
+   ],
+   [
+    [
+     "end",
+     "morganar"
+    ],
+    0.119
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.619
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.024
+   ],
+   [
+    [
+     "my cast",
+     "morganaq"
+    ],
+    0.024
+   ]
+  ],
+  "lived_med": 4.043,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    6
+   ],
+   [
+    "hallucinatefull",
+    2
+   ],
+   [
+    "s5_summonersmiteplayerganker",
+    2
+   ],
+   [
+    "morganabasicattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.643
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.262
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    1.048
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.19
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.143
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.024
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.786
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.024
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.024
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.024
+   ]
+  ]
+ },
+ "shenwbuff": {
+  "n": 7,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    1.75,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.571
+   ],
+   [
+    [
+     "cast",
+     "morganaq"
+    ],
+    0.143
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.143
+   ],
+   [
+    [
+     "hit",
+     "morganabasicattack2"
+    ],
+    0.143
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.714
+   ],
+   [
+    [
+     "time"
+    ],
+    0.143
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.143
+   ]
+  ],
+  "lived_med": 0.601,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    8
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    2
+   ],
+   [
+    "morganaq",
+    1
+   ],
+   [
+    "morganar",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.571
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.429
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.143
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.429
+   ]
+  ]
+ },
+ "jammerdevice": {
+  "n": 21,
+  "games": 4,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    21
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "jammerdevice"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "death"
+    ],
+    0.6
+   ],
+   [
+    [
+     "my cast",
+     "jammerdevice"
+    ],
+    0.35
+   ],
+   [
+    [
+     "my cast",
+     "itemghostward"
+    ],
+    0.05
+   ]
+  ],
+  "lived_med": 41.989,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.286
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.524
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.143
+   ]
+  ]
+ },
+ "sr_2026_s1_rolebound_support_questcompleted": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "sr_2026_s1_rolebound_support_quest"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_gold_display"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "talentreaperpersistenteffects"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    56
+   ],
+   [
+    "#f86f3d33",
+    6
+   ],
+   [
+    "morganaq",
+    4
+   ],
+   [
+    "morganabasicattack2",
+    3
+   ],
+   [
+    "morganabasicattack",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "s11support_quest_completion_buff": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "sr_2026_s1_rolebound_support_quest"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_gold_display"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "talentreaperpersistenteffects"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    56
+   ],
+   [
+    "#f86f3d33",
+    6
+   ],
+   [
+    "morganaq",
+    4
+   ],
+   [
+    "morganabasicattack2",
+    3
+   ],
+   [
+    "morganabasicattack",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "3869shield": {
+  "n": 32,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    32
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.844
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.219
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.062
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 38.938,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    231
+   ],
+   [
+    "s5_summonersmiteplayerganker",
+    31
+   ],
+   [
+    "morganaq",
+    29
+   ],
+   [
+    "morganabasicattack2",
+    28
+   ],
+   [
+    "morganabasicattack",
+    28
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.125
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.094
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ]
+  ]
+ },
+ "3869shieldprotectionbuff": {
+  "n": 31,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    18.0,
+    31
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.71
+   ],
+   [
+    [
+     "cast",
+     "morganae"
+    ],
+    0.097
+   ],
+   [
+    [
+     "end",
+     "morganae"
+    ],
+    0.065
+   ],
+   [
+    [
+     "cast",
+     "morganaq"
+    ],
+    0.032
+   ],
+   [
+    [
+     "cast",
+     "jammerdevice"
+    ],
+    0.032
+   ],
+   [
+    [
+     "hit",
+     "morganar"
+    ],
+    0.032
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.9
+   ],
+   [
+    [
+     "time"
+    ],
+    0.067
+   ],
+   [
+    [
+     "my hit",
+     "s5_summonersmiteplayerganker"
+    ],
+    0.033
+   ]
+  ],
+  "lived_med": 24.343,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    352
+   ],
+   [
+    "hallucinatefull",
+    56
+   ],
+   [
+    "morganaq",
+    39
+   ],
+   [
+    "morganabasicattack2",
+    30
+   ],
+   [
+    "morganabasicattack",
+    29
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.129
+   ],
+   [
+    [
+     "fx",
+     497252
+    ],
+    0.129
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.097
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.065
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.032
+   ],
+   [
+    [
+     "fx",
+     233454307
+    ],
+    0.032
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.032
+   ]
+  ]
+ },
+ "#0a70cdc1": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    2.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.25,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "shenrtargettracker": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    3.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.029,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    7
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "shenrshield": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    5.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.661,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "rakanrdebuff": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 23,
+  "durations": [
+   [
+    1.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.136,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    3
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "charmbuffbaricon": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    1.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.136,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    3
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "avatarbuffoffensiveburn": {
+  "n": 10,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    4.0,
+    10
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "summonerhealcheck"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "slow"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "burning"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardelderslow"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "morganae"
+    ],
+    0.1
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.7
+   ],
+   [
+    [
+     "other"
+    ],
+    0.2
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.1
+   ]
+  ],
+  "lived_med": 4.08,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    28
+   ],
+   [
+    "morganaq",
+    5
+   ],
+   [
+    "morganabasicattack",
+    3
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "morganabasicattack2",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.2
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.1
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.1
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.1
+   ]
+  ]
+ },
+ "sru_crabspeedboost": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    2.0,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.375
+   ],
+   [
+    [
+     "other"
+    ],
+    0.25
+   ],
+   [
+    [
+     "my hit",
+     "morganabasicattack"
+    ],
+    0.125
+   ],
+   [
+    [
+     "time"
+    ],
+    0.125
+   ],
+   [
+    [
+     "my hit",
+     "morganaq"
+    ],
+    0.125
+   ]
+  ],
+  "lived_med": 2.439,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    1
+   ],
+   [
+    "morganabasicattack",
+    1
+   ],
+   [
+    "morganabasicattack2",
+    1
+   ],
+   [
+    "morganaq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.25
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.75
+   ]
+  ]
+ },
+ "exaltedwithminibaronnashor_recall": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.102,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ]
+ },
+ "srx_dragonsoulbuffhextech_preview": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "FaelightSeenByWardBuffBar"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "hallucinatefull",
+    28
+   ],
+   [
+    "morganaw",
+    23
+   ],
+   [
+    "perks_arcanecomet_mis",
+    2
+   ],
+   [
+    "morganabasicattack2",
+    2
+   ],
+   [
+    "morganaq",
+    2
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "nasusw": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    5.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "morganarhaste"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.75
+   ],
+   [
+    [
+     "other"
+    ],
+    0.25
+   ]
+  ],
+  "lived_med": 5.1,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    7
+   ],
+   [
+    "morganar",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.25
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.75
+   ]
+  ]
+ },
+ "4401maxstacked": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    7.0,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.625
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "hallucinatefull"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "karthuswallofpaintarget"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "karthuswallofpainextra"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.375
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.375
+   ],
+   [
+    [
+     "time"
+    ],
+    0.25
+   ]
+  ],
+  "lived_med": 7.218,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    87
+   ],
+   [
+    "morganaq",
+    9
+   ],
+   [
+    "hallucinatefull",
+    8
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    5
+   ],
+   [
+    "s5_summonersmiteplayerganker",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.75
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.125
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "srx_dragonbuffhextech": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganabasicattack",
+    1
+   ],
+   [
+    "morganaq",
+    1
+   ],
+   [
+    "morganabasicattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SRX_DragonBuffHextech"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "3050_enemybuff": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    0.3,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.75
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.25
+   ]
+  ],
+  "lived_med": 2.05,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    6
+   ],
+   [
+    "morganar",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.75
+   ]
+  ]
+ },
+ "3190shield": {
+  "n": 9,
+  "games": 4,
+  "self": 0.444,
+  "type": 2,
+  "durations": [
+   [
+    2.5,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "3190active"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.778
+   ],
+   [
+    [
+     "my cast",
+     "3190active"
+    ],
+    0.111
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.111
+   ]
+  ],
+  "lived_med": 1.06,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    5
+   ],
+   [
+    "hallucinatefull",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.111
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    2.556
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "8e"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.111
+   ]
+  ]
+ },
+ "3190diminisheddebuff": {
+  "n": 9,
+  "games": 4,
+  "self": 0.444,
+  "type": 3,
+  "durations": [
+   [
+    20.0,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "3190active"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 20.192,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    53
+   ],
+   [
+    "hallucinatefull",
+    16
+   ],
+   [
+    "morganaq",
+    6
+   ],
+   [
+    "morganabasicattack2",
+    4
+   ],
+   [
+    "morganabasicattack",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.111
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    2.556
+   ],
+   [
+    [
+     "cooldown",
+     "8e"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "serpentvenom": {
+  "n": 9,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.556
+   ],
+   [
+    [
+     "cast",
+     "3190active"
+    ],
+    0.111
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.111
+   ],
+   [
+    [
+     "end",
+     "summonerhealcheck"
+    ],
+    0.111
+   ],
+   [
+    [
+     "end",
+     "2503burn"
+    ],
+    0.111
+   ],
+   [
+    [
+     "end",
+     "6653burn"
+    ],
+    0.111
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.778
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.111
+   ],
+   [
+    [
+     "other"
+    ],
+    0.111
+   ]
+  ],
+  "lived_med": 3.141,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    24
+   ],
+   [
+    "hallucinatefull",
+    12
+   ],
+   [
+    "morganaq",
+    3
+   ],
+   [
+    "morganabasicattack2",
+    2
+   ],
+   [
+    "morganabasicattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.333
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.889
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.222
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.111
+   ],
+   [
+    [
+     "cooldown",
+     "8e"
+    ],
+    0.111
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.111
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.889
+   ]
+  ]
+ },
+ "item3110aura": {
+  "n": 19,
+  "games": 4,
+  "self": 1.0,
+  "type": 19,
+  "durations": [
+   [
+    25000.0,
+    9
+   ],
+   [
+    21250.0,
+    8
+   ],
+   [
+    28750.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.895
+   ],
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.053
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.053
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.947
+   ],
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    0.053
+   ]
+  ],
+  "lived_med": 1.07,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    25
+   ],
+   [
+    "hallucinatefull",
+    6
+   ],
+   [
+    "morganabasicattack",
+    4
+   ],
+   [
+    "morganaq",
+    3
+   ],
+   [
+    "#f86f3d33",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.105
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.737
+   ]
+  ]
+ },
+ "barondebuff": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    8.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "#01701b21"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 8.06,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    8
+   ],
+   [
+    "morganaq",
+    3
+   ],
+   [
+    "morganabasicattack",
+    2
+   ],
+   [
+    "morganabasicattack2",
+    2
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "6653burn": {
+  "n": 10,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    2.9,
+    10
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.8
+   ],
+   [
+    [
+     "end",
+     "karthuswallofpaintarget"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cast",
+     "morganae"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.1
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.5
+   ],
+   [
+    [
+     "time"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 3.141,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    22
+   ],
+   [
+    "morganaq",
+    4
+   ],
+   [
+    "morganabasicattack2",
+    2
+   ],
+   [
+    "morganabasicattack",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.2
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.3
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.8
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.1
+   ]
+  ]
+ },
+ "pulverize": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    1.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.833
+   ],
+   [
+    [
+     "end",
+     "headbutttarget"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "morganae"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "morganapassivehealvfx"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.075,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    1
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "gragasestun": {
+  "n": 5,
+  "games": 4,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    1.0,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.502,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.4
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.2
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.4
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.2
+   ]
+  ]
+ },
+ "summonerexhaustslow": {
+  "n": 12,
+  "games": 4,
+  "self": 0.0,
+  "type": 11,
+  "durations": [
+   [
+    3.0,
+    12
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerexhaust"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.75
+   ],
+   [
+    [
+     "other"
+    ],
+    0.25
+   ]
+  ],
+  "lived_med": 3.207,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     180417155
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.75
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3876AllyBuffMissile"
+    ],
+    0.167
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "summonerexhaust": {
+  "n": 12,
+  "games": 4,
+  "self": 0.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    12
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerexhaust"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.833
+   ],
+   [
+    [
+     "other"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 3.207,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     180417155
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.75
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3876AllyBuffMissile"
+    ],
+    0.167
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ]
+  ]
+ },
+ "summonerexhaustdebuff": {
+  "n": 12,
+  "games": 4,
+  "self": 0.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    12
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerexhaust"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.833
+   ],
+   [
+    [
+     "other"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 3.207,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     180417155
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.75
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3876AllyBuffMissile"
+    ],
+    0.167
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ]
+  ]
+ },
+ "headbutttarget": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.75,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "time"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 0.167,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ]
+  ],
+  "at_end": []
+ },
+ "gragasrmoveaway": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.75,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.25
+   ],
+   [
+    [
+     "hit",
+     "morganaq"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.871,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.75
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.25
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "hecarimrampstuncheck": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 5,
+  "durations": [
+   [
+    0.3,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.368,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "hecarimrampattackknockback": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.635,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "hecarimdefilelifeleech": {
+  "n": 14,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    0.5,
+    14
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.643
+   ],
+   [
+    [
+     "end",
+     "morganarhaste"
+    ],
+    0.143
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.143
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.143
+   ],
+   [
+    [
+     "end",
+     "hecarimrampattackknockback"
+    ],
+    0.071
+   ],
+   [
+    [
+     "hit",
+     "perks_arcanecomet_mis_arc"
+    ],
+    0.071
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.535,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    3
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "morganaq",
+    1
+   ],
+   [
+    "morganabasicattack2",
+    1
+   ],
+   [
+    "morganabasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.643
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.143
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.429
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.071
+   ]
+  ]
+ },
+ "srx_dragonsoulbuffchemtech_preview": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganabasicattack",
+    4
+   ],
+   [
+    "morganabasicattack2",
+    4
+   ],
+   [
+    "morganaw",
+    3
+   ],
+   [
+    "#6a4229fc",
+    2
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "srx_dragonbuffchemtech": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    7
+   ],
+   [
+    "#f86f3d33",
+    3
+   ],
+   [
+    "morganabasicattack2",
+    2
+   ],
+   [
+    "morganabasicattack",
+    2
+   ],
+   [
+    "morganaq",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SRX_DragonBuffChemtech"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "blessingofthelizardelder": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    120.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    2.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.806,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    7
+   ],
+   [
+    "#f86f3d33",
+    1
+   ],
+   [
+    "morganabasicattack2",
+    1
+   ],
+   [
+    "burning",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "blessingofthelizardeldervfx": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    99999.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    2.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "morganaw"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.94,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    8
+   ],
+   [
+    "#f86f3d33",
+    1
+   ],
+   [
+    "morganabasicattack2",
+    1
+   ],
+   [
+    "burning",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "klede2target": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.873,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    3
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "6333bleed": {
+  "n": 2,
+  "games": 4,
+  "self": 0.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    2.0
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "morganapassivehealvfx"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 9.366,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.5
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    2.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    1.5
+   ]
+  ]
+ },
+ "kledqmark": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    1.75,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.77,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    3
+   ],
+   [
+    "perks_arcanecomet_mis",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx",
+     497252
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     497252
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "kledqvisionshare": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    2.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.538,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    3
+   ],
+   [
+    "perks_arcanecomet_mis",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx",
+     497252
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "kledqslow": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    2.35,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "kledqmark"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.171,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     78637603
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ]
+ },
+ "3147stackcounter": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    3.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 5.531,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    5
+   ],
+   [
+    "#f86f3d33",
+    1
+   ],
+   [
+    "morganaq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    1.5
+   ]
+  ]
+ },
+ "3147enragebuff": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    0.862,
+    1
+   ],
+   [
+    3.9,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.5
+   ],
+   [
+    [
+     "other"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 2.311,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaq",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    1.5
+   ]
+  ]
+ },
+ "rocketgrab2": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    1.0,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.504,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganabasicattack2",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ],
+   [
+    "perks_arcanecomet_mis",
+    1
+   ],
+   [
+    "itemredemption",
+    1
+   ],
+   [
+    "morganaq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.625
+   ]
+  ]
+ },
+ "#0f34c131": {
+  "n": 7,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.3,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "morganarhaste"
+    ],
+    0.143
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.571
+   ],
+   [
+    [
+     "other"
+    ],
+    0.429
+   ]
+  ],
+  "lived_med": 0.434,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganabasicattack",
+    2
+   ],
+   [
+    "morganar",
+    1
+   ],
+   [
+    "itemredemption",
+    1
+   ],
+   [
+    "morganaq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.857
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.714
+   ]
+  ]
+ },
+ "tristanaechargesound": {
+  "n": 11,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    4.0,
+    11
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.727
+   ],
+   [
+    [
+     "cast",
+     "morganae"
+    ],
+    0.182
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.091
+   ],
+   [
+    [
+     "end",
+     "ornnrknockup"
+    ],
+    0.091
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.636
+   ],
+   [
+    [
+     "time"
+    ],
+    0.364
+   ]
+  ],
+  "lived_med": 2.906,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganabasicattack",
+    4
+   ],
+   [
+    "morganaw",
+    3
+   ],
+   [
+    "morganaq",
+    2
+   ],
+   [
+    "morganabasicattack2",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.091
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.182
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.455
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.182
+   ]
+  ]
+ },
+ "tristanaecharge": {
+  "n": 10,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    2400.0,
+    10
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.9
+   ],
+   [
+    [
+     "cast",
+     "morganae"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "talentreaperpersistenteffects"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "tristanaechargesound"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "tristanar"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "stun"
+    ],
+    0.1
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.706,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganabasicattack",
+    4
+   ],
+   [
+    "morganaw",
+    2
+   ],
+   [
+    "morganabasicattack2",
+    1
+   ],
+   [
+    "morganaq",
+    1
+   ],
+   [
+    "itemknightsvow",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.4
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.2
+   ]
+  ]
+ },
+ "#0ddce281": {
+  "n": 18,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    2.0,
+    12
+   ],
+   [
+    1.0,
+    4
+   ],
+   [
+    4.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.889
+   ],
+   [
+    [
+     "end",
+     "morganae"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "orianaredactshield"
+    ],
+    0.111
+   ],
+   [
+    [
+     "end",
+     "karthusfallenonetarget"
+    ],
+    0.056
+   ],
+   [
+    [
+     "end",
+     "karthuswallofpaintarget"
+    ],
+    0.056
+   ],
+   [
+    [
+     "cast",
+     "morganae"
+    ],
+    0.056
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.722
+   ],
+   [
+    [
+     "other"
+    ],
+    0.278
+   ]
+  ],
+  "lived_med": 2.153,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    17
+   ],
+   [
+    "morganaq",
+    3
+   ],
+   [
+    "morganabasicattack",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.278
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.222
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.167
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.056
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.167
+   ]
+  ]
+ },
+ "orianahaste": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    2.0,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "#0ddce281"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.67,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    4
+   ],
+   [
+    "morganaq",
+    2
+   ],
+   [
+    "morganabasicattack2",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.125
+   ]
+  ]
+ },
+ "tristanawslow": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.7,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "rocketgrab2"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.938,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganabasicattack2",
+    1
+   ],
+   [
+    "morganabasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "srt_2024_horde_summoner": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganabasicattack2",
+    7
+   ],
+   [
+    "morganabasicattack",
+    7
+   ],
+   [
+    "morganaw",
+    4
+   ],
+   [
+    "#f86f3d33",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SRT_2024_Horde_Summoner"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "tristanar": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.75,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "talentreaperpersistenteffects"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "tristanaechargesound"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "stun"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "tristanaecharge"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.0,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.0
+   ]
+  ]
+ },
+ "powerfistslow": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    1.25,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.017,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "staticfieldlightning": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.475,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.0
+   ]
+  ]
+ },
+ "ornnvulnerabledebuff": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "end",
+     "sru_crabspeedboost"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "morganaq"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.833
+   ],
+   [
+    [
+     "other"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 3.146,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    5
+   ],
+   [
+    "itemknightsvow",
+    3
+   ],
+   [
+    "morganaq",
+    2
+   ],
+   [
+    "morganabasicattack",
+    1
+   ],
+   [
+    "perks_arcanecomet_mis",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.333
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.667
+   ]
+  ]
+ },
+ "silence": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 7,
+  "durations": [
+   [
+    1.275,
+    4
+   ],
+   [
+    0.425,
+    3
+   ],
+   [
+    1.7,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "karthuswallofpaintarget"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "malzahare"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "malzaharerecent"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "#0ddce281"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "6653burn"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.875
+   ],
+   [
+    [
+     "other"
+    ],
+    0.125
+   ]
+  ],
+  "lived_med": 1.351,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    10
+   ],
+   [
+    "morganabasicattack",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.125
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.125
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.375
+   ]
+  ]
+ },
+ "malzaharqmissile": {
+  "n": 5,
+  "games": 4,
+  "self": 1.0,
+  "type": 7,
+  "durations": [
+   [
+    1.275,
+    4
+   ],
+   [
+    1.7,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "karthuswallofpaintarget"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "malzahare"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "malzaharerecent"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "#0ddce281"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "6653burn"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.8
+   ],
+   [
+    [
+     "other"
+    ],
+    0.2
+   ]
+  ],
+  "lived_med": 1.477,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    10
+   ],
+   [
+    "morganabasicattack",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.8
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.2
+   ]
+  ]
+ },
+ "tristanarbowling": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.75,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.847,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.0
+   ]
+  ],
+  "at_end": []
+ },
+ "malzahare": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    4.25,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "end",
+     "malzaharerecent"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "#0ddce281"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "6653burn"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "silence"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "malzaharqmissile"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "time"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 4.008,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    9
+   ],
+   [
+    "#f86f3d33",
+    1
+   ],
+   [
+    "morganaq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     49953683
+    ],
+    0.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.667
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "malzaharerecent": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    4.25,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "morganae"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.5
+   ],
+   [
+    [
+     "time"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 4.008,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    5
+   ],
+   [
+    "morganaq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     49953683
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.5
+   ]
+  ]
+ },
+ "3876cooldowndisplay": {
+  "n": 17,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    27.273,
+    17
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.706
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.647
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.471
+   ],
+   [
+    [
+     "hit",
+     "morganaq"
+    ],
+    0.353
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.176
+   ],
+   [
+    [
+     "cast",
+     "summonerexhaust"
+    ],
+    0.118
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.765
+   ],
+   [
+    [
+     "other"
+    ],
+    0.235
+   ]
+  ],
+  "lived_med": 27.342,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    81
+   ],
+   [
+    "morganabasicattack2",
+    20
+   ],
+   [
+    "morganabasicattack",
+    19
+   ],
+   [
+    "#f86f3d33",
+    17
+   ],
+   [
+    "qiyanaq_rock",
+    11
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    10.059
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3876AllyBuffMissile"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.882
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.353
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.294
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.118
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.647
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.235
+   ]
+  ]
+ },
+ "3876healthsizeupdisplay": {
+  "n": 32,
+  "games": 4,
+  "self": 0.5,
+  "type": 27,
+  "durations": [
+   [
+    2.5,
+    32
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.688
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.688
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "morganaq"
+    ],
+    0.312
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.188
+   ],
+   [
+    [
+     "cast",
+     "summonerexhaust"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.938
+   ],
+   [
+    [
+     "other"
+    ],
+    0.062
+   ]
+  ],
+  "lived_med": 2.683,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    45
+   ],
+   [
+    "#f86f3d33",
+    11
+   ],
+   [
+    "perks_arcanecomet_mis",
+    6
+   ],
+   [
+    "itemknightsvow",
+    5
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    10.188
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3876AllyBuffMissile"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.938
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.375
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.312
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.875
+   ],
+   [
+    [
+     "slot",
+     47,
+     "MorganaRVFXMis"
+    ],
+    0.062
+   ]
+  ]
+ },
+ "3876msbufffalloff": {
+  "n": 33,
+  "games": 4,
+  "self": 0.515,
+  "type": 15,
+  "durations": [
+   [
+    2.5,
+    33
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.697
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.667
+   ],
+   [
+    [
+     "hit",
+     "morganaw"
+    ],
+    0.485
+   ],
+   [
+    [
+     "hit",
+     "morganaq"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.182
+   ],
+   [
+    [
+     "cast",
+     "summonerexhaust"
+    ],
+    0.121
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.939
+   ],
+   [
+    [
+     "other"
+    ],
+    0.061
+   ]
+  ],
+  "lived_med": 2.679,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    45
+   ],
+   [
+    "#f86f3d33",
+    11
+   ],
+   [
+    "perks_arcanecomet_mis",
+    6
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    4
+   ],
+   [
+    "itemknightsvow",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    10.121
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.879
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3876AllyBuffMissile"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.909
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.364
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.303
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.97
+   ],
+   [
+    [
+     "slot",
+     47,
+     "MorganaRVFXMis"
+    ],
+    0.061
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.03
+   ]
+  ]
+ },
+ "srx_dragonsoulbuffinfernal_preview": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    8
+   ],
+   [
+    "morganabasicattack2",
+    7
+   ],
+   [
+    "morganabasicattack",
+    6
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "morganar",
+    2
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "sr_infernalrift_firemeepspeedboost": {
+  "n": 5,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    2.0,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.119,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyIn"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "sr_infernalrift_scales_low": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "recall"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "morganaw"
+    ],
+    0.5
+   ],
+   [
+    [
+     "none"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 38.069,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    8
+   ],
+   [
+    "morganabasicattack2",
+    3
+   ],
+   [
+    "morganaq",
+    3
+   ],
+   [
+    "morganabasicattack",
+    3
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "orianaghost": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 5.315,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    14
+   ],
+   [
+    "morganabasicattack2",
+    3
+   ],
+   [
+    "morganaq",
+    3
+   ],
+   [
+    "morganabasicattack",
+    2
+   ],
+   [
+    "#f86f3d33",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.167
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.167
+   ]
+  ]
+ },
+ "orianaredactshield": {
+  "n": 7,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    2.5,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.857
+   ],
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.143
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.714
+   ],
+   [
+    [
+     "other"
+    ],
+    0.286
+   ]
+  ],
+  "lived_med": 2.505,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    14
+   ],
+   [
+    "morganabasicattack2",
+    2
+   ],
+   [
+    "morganabasicattack",
+    1
+   ],
+   [
+    "morganaq",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.857
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.857
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.143
+   ]
+  ]
+ },
+ "4646damagebuff": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    2.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "morganae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.139,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    1.0
+   ]
+  ]
+ },
+ "srx_dragonbuffinfernal": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    24
+   ],
+   [
+    "morganabasicattack2",
+    2
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "morganabasicattack",
+    1
+   ],
+   [
+    "morganaq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SRX_DragonSoulBuffInfernal"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "ornnrknockup": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    1.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "sru_crabspeedboost"
+    ],
+    0.5
+   ],
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "morganaw"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "ornnvulnerabledebuff"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.003,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    4
+   ],
+   [
+    "itemknightsvow",
+    2
+   ],
+   [
+    "perks_arcanecomet_mis",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    8.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ]
+  ]
+ },
+ "exaltedwithbaronnashor": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    180.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 117.438,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    13
+   ],
+   [
+    "qiyanaq_rock",
+    12
+   ],
+   [
+    "morganabasicattack",
+    9
+   ],
+   [
+    "morganabasicattack2",
+    7
+   ],
+   [
+    "morganaq",
+    3
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    1.0
+   ]
+  ]
+ },
+ "exaltedwithbaronnashorvfx": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    99999.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 117.438,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "morganaw",
+    13
+   ],
+   [
+    "qiyanaq_rock",
+    12
+   ],
+   [
+    "morganabasicattack",
+    9
+   ],
+   [
+    "morganabasicattack2",
+    7
+   ],
+   [
+    "morganaq",
+    3
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    1.0
+   ]
+  ]
+ },
+ "superrecall": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    3.9,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.959,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "itemangelofmercydebuffally": {
+  "n": 5,
+  "games": 4,
+  "self": 0.2,
+  "type": 3,
+  "durations": [
+   [
+    8.0,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "itemredemption"
+    ],
+    0.8
+   ],
+   [
+    [
+     "none"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 8.008,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "itemangelofmercydebuffenemy": {
+  "n": 1,
+  "games": 4,
+  "self": 0.0,
+  "type": 3,
+  "durations": [
+   [
+    8.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "itemredemption"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 8.008,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ }
+}

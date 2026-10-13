@@ -1,0 +1,22 @@
+local L0_1, L1_1, L2_1, L3_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBSpellCast
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.CasterVar = "Owner"
+L2_1.TargetVar = "Owner"
+L2_1.OverrideCastPosition = false
+L2_1.SlotNumber = 2
+L3_1 = SpellSlots
+L2_1.SlotType = L3_1
+L2_1.OverrideForceLevel = 0
+L2_1.OverrideForceLevelVar = "1"
+L2_1.OverrideCoolDownCheck = false
+L2_1.FireWithoutCasting = false
+L2_1.UseAutoAttackSpell = false
+L2_1.ForceCastingOrChannelling = true
+L2_1.UpdateAutoAttackTimer = false
+L1_1.Params = L2_1
+L0_1[1] = L1_1
+OnBuffActivateBuildingBlocks = L0_1

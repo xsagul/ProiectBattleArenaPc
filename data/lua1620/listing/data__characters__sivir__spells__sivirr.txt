@@ -1,0 +1,40 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 0000023C7AFD35C0)
+0+ params, 4 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Sivir/HUD/Icons2D/Sivir_R.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "On_The_Hunt"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "r:Sivir_R_buf"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -10	; "C_Buffbone_Glb_Layout_Loc"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName
+	13	[-]	NEWTABLE 	0 3 0
+	14	[-]	LOADK    	1 -12	; 90
+	15	[-]	LOADK    	2 -12	; 90
+	16	[-]	LOADK    	3 -12	; 90
+	17	[-]	SETLIST  	0 3 1	; 1
+	18	[-]	SETGLOBAL	0 -11	; AutoCooldownByLevel
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -13	; NonDispellable
+	21	[-]	RETURN   	0 1
+constants (13) for 0000023C7AFD35C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Sivir/HUD/Icons2D/Sivir_R.dds"
+	5	"BuffName"
+	6	"On_The_Hunt"
+	7	"AutoBuffActivateEffect"
+	8	"r:Sivir_R_buf"
+	9	"AutoBuffActivateAttachBoneName"
+	10	"C_Buffbone_Glb_Layout_Loc"
+	11	"AutoCooldownByLevel"
+	12	90
+	13	"NonDispellable"
+locals (0) for 0000023C7AFD35C0:
+upvalues (0) for 0000023C7AFD35C0:

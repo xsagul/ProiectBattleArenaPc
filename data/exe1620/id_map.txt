@@ -1,0 +1,247 @@
+13.3 formats 161, 16.20 formats 150; matches: {'none': 89, 'near': 26, 'unique': 10, 'by count': 36}
+   15 ->     -  no match                                                      c1{0,01} S(n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf} v{0,01,02,ffffffff} n1{0,01,02,ff} v{0,01,02,ffff}) n4{0,0000004,0000803f,000080bf} c1{0,01}
+   26 ->     -  no match                                                      S(v{0,01,02,ffffffff} v{0,ffffffff} n1{0,01,02,ff} L(v{0,01,02,ffffffff} L(v{0,ffffffff} n1{0,01,02,ff}) n4{0,0000004,0000803f,000080bf} v{0,01,02,fff
+   40 ->     -  no match                                                      T v{0,01,02,ffff} c1{0,01} c1{0,01} c1{0,01} v{0,01,02,ffffffff} T n4{0,0000004,0000803f,000080bf} n12{0} v{0,01,02,ffffffff} v{0,01,02,ffffffff} c1{0
+   43 ->   189  near (0.80)                                                   v{0,ffffffff} n4{0,0000004,0000803f,000080bf}   ||   v{0,ffffffff} n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf}
+   46 ->   121  unique                                                        n4{0,0000004,0000803f,000080bf} v{0,ffffffff}
+   49 ->     -  no match                                                      S(v{0,01,02,ffffffff} L(v{0,ffffffff} n1{0,01,02,ff}) n4{0,0000004,0000803f,000080bf} v{0,01,02,ffffffff} v{0,01,02,ffffffff} n4{0,0000004,0000803f,00
+   52 ->     -  no match                                                      n1{0,01,02,ff} v{0,01,02,ffffffff} v{0,ffffffff}
+   61 ->     -  no match                                                      n4{0,0000004,0000803f,000080bf} S(v{0,01,02,ffffffff} v{0} v{0,01,02,ffffffff} v{0,01,02,ffffffff} n1{0,01,02,ff}) c1{0,01} v{0,ffffffff} v{0}
+   62 ->     -  no match                                                      S(L(n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf} v{0,01,02,ffff} n4{0,0000004,0000803f,000080bf} S(
+   63 ->   280  unique                                                        c1{0,01} c1{0,01} v{0} c1{0,01}
+   65 ->     -  no match                                                      c1{0,01} T c1{0,01} n4{0,0000004,0000803f,000080bf} c1{0,01} n4{0,0000004,0000803f,000080bf} c1{0,01} n4{0,0000004,0000803f,000080bf} c1{0,01} c1{0,01
+   66 ->     -  no match                                                      v{ffffffff}
+   68 ->     -  no match                                                      c1{0,01} c1{0,01} v{0,01,02,ffffffff} n4{0,0000004,0000803f,000080bf} c1{0,01} T v{0,ffffffff} T T n4{0,0000004,0000803f,000080bf} c1{0,01}
+   69 ->     -  no match                                                      n1{0,01,02,ff} v{0,01,02,ffffffff} n1{0,01,02,ff} v{0} v{0,01,02,ffffffff}
+   71 ->     -  no match                                                      L(T T c1{0,01})
+   98 ->     -  no match                                                      v{0,01,02,ffff} n4{0,0000004,0000803f,000080bf} v{0,ffffffff} n1{0,01,02,ff} n1{0,01,02,ff} v{0,01,02,ffff} n1{0,01,02,ff} v{0,ffffffff} n1{0,01,02,ff
+  101 ->     -  no match                                                      n1{0,01,02,ff} v{0,ffffffff}
+  108 ->   693  unique                                                        c1{0,01} v{0,01,02,ffff} c1{0,01}
+  109 ->  1089  near (0.80)                                                   v{0} c1{0,01} c1{0,01}   ||   c1{0,01} c1{0,01}
+  114 ->     -  no match                                                      S(L(n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf} v{0,01,02,ffff} n4{0,0000004,0000803f,000080bf} S(
+  118 ->   827  by count (3 x 13.3, 5 x 16.20 share the shape; rates 0.64/s vs 0.62/s)  n1{0,01,02,ff} n1{0,01,02,ff}
+  124 ->   674  near (0.86)                                                   n4{0,0000004,0000803f,000080bf} v{0,ffffffff} n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf}   ||   n4{0,0000004,0000803f,000080bf} n1{0,01,02,ff} n4{
+  128 ->     -  no match                                                      n8{0} n4{0,0000004,0000803f,000080bf}
+  130 ->   164  near (0.80)                                                   c1{0,01} v{0,ffffffff}   ||   c1{0,01} v{0,ffffffff} n1{0,01,02,ff}
+  134 ->     -  no match                                                      T v{0,ffffffff} T T v{0,01,02,ffffffff} T T T T v{0,ffffffff}
+  137 ->  1215  near (0.80)                                                   c1{0,01} v{0,01,02,ffffffff}   ||   c1{0,01} S(?) v{0,01,02,ffffffff}
+  139 ->     -  no match                                                      n4{0,0000004,0000803f,000080bf} v{0,01,02,ffffffff} v{0,01,02,ffffffff} v{0,01,02,ffffffff} n4{0,0000004,0000803f,000080bf} n1{0,01,02,ff}
+  151 ->  1073  unique                                                        c1{0,01} c1{0,01} c1{0,01}
+  152 ->   710  by count (6 x 13.3, 9 x 16.20 share the shape; rates 0.06/s vs 0.41/s)  c1{0,01}
+  156 ->   272  by count (2 x 13.3, 4 x 16.20 share the shape; rates 0.00/s vs 0.37/s)  T
+  160 ->     -  no 16.20 id left in its shape group                           v{0,ffffffff}
+  171 ->   262  near (0.80)                                                   v{0,01,02,ffffffff} n4{0,0000004,0000803f,000080bf}   ||   n1{0,01,02,ff} v{0,01,02,ffffffff} n4{0,0000004,0000803f,000080bf}
+  172 ->   769  near (0.80)                                                   T n1{0,01,02,ff}   ||   T n1{0,01,02,ff} T
+  174 ->     -  no match                                                      v{0,01,02,ffffffff} v{0,ffffffff} v{0,ffffffff} v{0,01,02,ffffffff}
+  186 ->   236  unique                                                        n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf}
+  188 ->     -  no match                                                      n1{0,01,02,ff} v{0,01,02,ffff} v{0,01,02,ffffffff}
+  190 ->     -  no match                                                      n4{0,0000004,0000803f,000080bf} v{0,ffffffff} n4{0,0000004,0000803f,000080bf} L(L(n4{0,0000004,0000803f,000080bf} c1{0,01} v{0,01,02,ffffffff} v{0,01,
+  192 ->     -  no match                                                      n1{0,01,02,ff} v{0,ffffffff}
+  198 ->     -  no match                                                      T v{0,ffffffff} v{0,ffffffff} T T
+  208 ->     -  no match                                                      S(n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf} v{0,01,02,ffff})
+  213 ->   586  by count (3 x 13.3, 10 x 16.20 share the shape; rates 0.03/s vs 0.55/s)  v{0,01,02,ffffffff}
+  215 ->   831  unique                                                        v{0,01,02,ffffffff} v{0,01,02,ffffffff} n1{0} v{0,01,02,ffffffff} v{0,01,02,ffffffff}
+  220 ->   430  near (0.75)                                                   v{0,01,02,ffffffff} v{0,01,02,ffffffff} c1{0,01} n1{0,01,02,ff}   ||   v{0,01,02,ffffffff} c1{0,01} v{0,01,02,ffffffff} n1{0,01,02,ff}
+  222 ->     -  no match                                                      c1{0,01} n8{0} v{0,01,02,ffffffff}
+  232 ->   623  by count (5 x 13.3, 5 x 16.20 share the shape; rates 0.00/s vs 0.00/s)  n1{0,01,02,ff}
+  237 ->     -  no match                                                      c1{0,01} n4{0,0000004,0000803f,000080bf} c1{0,01} n12{0} n12{0}
+  238 ->     -  no match                                                      n4{0,0000004,0000803f,000080bf} S(n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf} v{0,ffffffff} n8{0} n4{0,0000004,0000803f,000080bf} c1{0,01} v{0,ffff
+  243 ->  1013  by count (3 x 13.3, 4 x 16.20 share the shape; rates 0.00/s vs 0.02/s)  v{0,01,02,ffffffff} v{0,01,02,ffffffff}
+  256 ->    37  by count (5 x 13.3, 5 x 16.20 share the shape; rates 3.40/s vs 0.00/s)  n1{0,01,02,ff}
+  257 ->   284  by count (5 x 13.3, 3 x 16.20 share the shape; rates 0.73/s vs 0.00/s)  v{0,ffffffff}
+  259 ->     -  no match                                                      S(c1{0,01} c1{0,01} c1{0,01} n1{0,01,02,ff} v{0}) T
+  263 ->     -  no match                                                      n1{0,01,02,ff} v{0,ffffffff} n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf} v{0,ffffffff} n1{0,01,02,ff} c1{0,01} v{0,ffffffff}
+  269 ->   430  near (0.86)                                                   v{0,01,02,ffffffff} v{0,01,02,ffffffff} n1{0,01,02,ff}   ||   v{0,01,02,ffffffff} c1{0,01} v{0,01,02,ffffffff} n1{0,01,02,ff}
+  270 ->  1080  by count (3 x 13.3, 10 x 16.20 share the shape; rates 0.00/s vs 0.03/s)  v{0,01,02,ffffffff}
+  271 ->   635  near (0.83)                                                   n4{0,0000004,0000803f,000080bf} n1{0,01,02,ff} c1{0,01} n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf
+  280 ->    62  by count (6 x 13.3, 9 x 16.20 share the shape; rates 0.00/s vs 0.02/s)  c1{0,01}
+  283 ->  1204  by count (2 x 13.3, 1 x 16.20 share the shape; rates 0.08/s vs 0.13/s)  c1{0,01} v{0,01,02,ffffffff}
+  285 ->     -  no match                                                      v{0,ffffffff} c1{0,01} c1{0,01} v{0,ffffffff}
+  286 ->     -  no match                                                      S(v{0,01,02,ffffffff} v{0,ffffffff} n1{0,01,02,ff} c4{0} n1{0,01,02,ff} v{0,ffffffff} n12{0}) n8{0}
+  289 ->  1005  by count (6 x 13.3, 9 x 16.20 share the shape; rates 0.01/s vs 0.02/s)  c1{0,01}
+  292 ->     -  no match                                                      L(v{0} n12{0} n4{0,0000004,0000803f,000080bf})
+  295 ->     -  no match                                                      S(v{0,01,02,ffffffff} n4{0,0000004,0000803f,000080bf} v{0,ffffffff})
+  305 ->   166  by count (3 x 13.3, 4 x 16.20 share the shape; rates 0.02/s vs 0.04/s)  n4{0,0000004,0000803f,000080bf}
+  309 ->     -  no match                                                      S(n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf} v{0,ffffffff} n8{0} n4{0,0000004,0000803f,000080bf} c1{0,01} v{0,ffffffff} c1{0,01} c1{0,01} n4{0,000
+  310 ->     -  no match                                                      n4{0,0000004,0000803f,000080bf} S(v{0,01,02,ffffffff} v{0} v{0,01,02,ffffffff} v{0,01,02,ffffffff} n1{0,01,02,ff}) c1{0,01} v{0,ffffffff} v{0}
+  312 ->     -  no match                                                      n8{0} n1{0,01,02,ff} c1{0,01} v{0,ffffffff} c1{0,01} v{0,ffffffff} c1{0,01} c1{0,01}
+  321 ->  1210  by count (1 x 13.3, 3 x 16.20 share the shape; rates 0.00/s vs 0.57/s)  v{0,01,02,ffffffff} n1{0,01,02,ff}
+  326 ->   282  near (0.80)                                                   n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf} n1{0,01,02,ff} n1{0,01,02,ff} v{0,ffffffff}   ||   n4{0,0000004,0000803f,000080bf} n4{
+  329 ->     -  no match                                                      n4{0,0000004,0000803f,000080bf} T n1{0,01,02,ff} n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf} v{0,01,02,ffffffff} n1{0,01,02,ff} v{0,ffffffff} v{0}
+  330 ->     -  no match                                                      v{0,01,02,ffff} c1{0,01}
+  341 ->   668  by count (6 x 13.3, 9 x 16.20 share the shape; rates 0.01/s vs 0.02/s)  c1{0,01}
+  345 ->     -  no match                                                      c1{0,01} c1{0,01} n12{0} n1{0} c1{0,01} c1{0,01} n4{0,0000004,0000803f,000080bf} c1{0,01} v{0,ffffffff} n1{0,01,02,ff} n1{0,01,02,ff} c1{0,01} v{0,fff
+  350 ->     -  no match                                                      v{0,ffffffff} v{0} c1{0,01} v{0,ffffffff}
+  355 ->     -  no match                                                      v{0,ffffffff} v{0,ffffffff}
+  359 ->     -  no match                                                      n1{0,01,02,ff} v{0,01,02,ffffffff} n1{0,01,02,ff} n12{0} n4{0,0000004,0000803f,000080bf} T T n12{0} v{0,01,02,ffffffff} T v{0,01,02,ffffffff} n12{0} v
+  367 ->     -  no match                                                      L(v{0,ffffffff} n128{0} v{0,01,02,ffffffff} v{0,01,02,ffff} v{0})
+  375 ->     -  no match                                                      v{0,01,02,ffff} v{0,01,02,ffffffff} T
+  376 ->    16  by count (3 x 13.3, 5 x 16.20 share the shape; rates 0.03/s vs 0.34/s)  n1{0,01,02,ff} n1{0,01,02,ff}
+  378 ->     -  no match                                                      n1{0,01,02,ff} c1{0,01} c1{0,01} v{0,ffffffff}
+  387 ->   118  by count (5 x 13.3, 5 x 16.20 share the shape; rates 273.78/s vs 10.12/s)  n1{0,01,02,ff}
+  394 ->   973  by count (1 x 13.3, 2 x 16.20 share the shape; rates 0.01/s vs 0.01/s)  n4{0,0000004,0000803f,000080bf} v{0,01,02,ffffffff}
+  396 ->   267  by count (3 x 13.3, 10 x 16.20 share the shape; rates 0.02/s vs 0.09/s)  v{0,01,02,ffffffff}
+  402 ->     -  no match                                                      c1{0,01} T c1{0,01} n4{0,0000004,0000803f,000080bf} c1{0,01} n4{0,0000004,0000803f,000080bf} c1{0,01} n4{0,0000004,0000803f,000080bf} c1{0,01} c1{0,01
+  406 ->   550  near (0.86)                                                   c1{0,01} v{0,ffffffff} c1{0,01} v{0,01,02,ffffffff}   ||   c1{0,01} c1{0,01} v{0,01,02,ffffffff}
+  409 ->     -  no match                                                      n12{0} n4{0,0000004,0000803f,000080bf} c1{0,01} n12{0} n4{0,0000004,0000803f,000080bf} n12{0} n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,00
+  410 ->     -  no match                                                      c1{0,01} v{0,ffffffff} n4{0,0000004,0000803f,000080bf}
+  412 ->   291  by count (3 x 13.3, 4 x 16.20 share the shape; rates 0.01/s vs 0.42/s)  v{0,01,02,ffffffff} v{0,01,02,ffffffff}
+  417 ->     -  no match                                                      n4{0,0000004,0000803f,000080bf} S(v{0,01,02,ffffffff} v{0} v{0,01,02,ffffffff} v{0,01,02,ffffffff} n1{0,01,02,ff}) c1{0,01} v{0,ffffffff} v{0}
+  418 ->    90  by count (3 x 13.3, 4 x 16.20 share the shape; rates 0.31/s vs 3.87/s)  v{0,01,02,ffffffff} v{0,01,02,ffffffff}
+  427 ->     -  no match                                                      n12{0} v{0,ffffffff}
+  438 ->     -  no match                                                      T v{0,01,02,ffffffff} T v{0,ffffffff} n8{0} T c1{0,01}
+  440 ->   131  by count (2 x 13.3, 1 x 16.20 share the shape; rates 0.03/s vs 0.04/s)  c1{0,01} v{0,ffffffff}
+  453 ->     -  no match                                                      n4{0,0000004,0000803f,000080bf} v{0,ffffffff} c1{0,01} v{0,ffffffff}
+  460 ->     -  no match                                                      v{0,ffffffff} T n1{0,01,02,ff}
+  465 ->   260  by count (3 x 13.3, 4 x 16.20 share the shape; rates 0.89/s vs 0.09/s)  n4{0,0000004,0000803f,000080bf}
+  467 ->   351  near (0.80)                                                   n4{0,0000004,0000803f,000080bf} v{0,01,02,ffffffff} n1{0,01,02,ff}   ||   v{0,01,02,ffffffff} n1{0,01,02,ff}
+  472 ->   381  by count (1 x 13.3, 2 x 16.20 share the shape; rates 0.00/s vs 0.00/s)  v{0}
+  482 ->     -  no match                                                      n8{0}
+  488 ->     -  no match                                                      v{0,ffffffff} v{0,01,02,ffffffff} n12{0} n4{0,0000004,0000803f,000080bf} n1{0,01,02,ff}
+  490 ->     -  no match                                                      c1{0,01} c1{0,01} v{0,ffffffff} v{0,01,02,ffffffff} c1{0,01} c1{0,01}
+  494 ->     -  no match                                                      c1{0,01} c1{0,01} n4{0,0000004,0000803f,000080bf} v{0,01,02,ffff} v{0,ffffffff}
+  496 ->     -  no match                                                      c1{0,01} T
+  501 ->   410  near (0.75)                                                   v{0,01,02,ffff} n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf} v{0,01,02,ffff}   ||   v{0,01,02,ffff} v{0,01,02,ffff} n1{0,01,02,ff} n4{0,0000004,0000
+  506 ->   635  near (0.83)                                                   n4{0,0000004,0000803f,000080bf} n1{0,01,02,ff} c1{0,01} n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf
+  512 ->  1086  by count (5 x 13.3, 5 x 16.20 share the shape; rates 0.00/s vs 0.00/s)  n1{0,01,02,ff}
+  514 ->     -  no match                                                      S(n4{0,0000004,0000803f,000080bf} n1{0,01,02,ff} v{0,01,02,ffffffff} v{0,01,02,ffffffff})
+  516 ->     -  no match                                                      n12{0} v{0,ffffffff} n1{0,01,02,ff}
+  518 ->   699  near (0.80)                                                   v{0,01,02,ffffffff} T   ||   v{0,01,02,ffffffff} T v{0,01,02,ffff}
+  519 ->     -  no match                                                      L(v{0,01,02,ffffffff} v{0,01,02,ffffffff}) c1{0,01}
+  522 ->  1152  unique                                                        n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf} v{0,01,02,ffffffff}
+  541 ->     -  no match                                                      c1{0,01} S(v{0,01,02,ffffffff} v{0,01,02,ffff} c1{0,01} c1{0,01} n4{0,0000004,0000803f,000080bf} v{0,ffffffff} v{0,ffffffff})
+  558 ->   816  by count (6 x 13.3, 9 x 16.20 share the shape; rates 0.37/s vs 0.52/s)  c1{0,01}
+  568 ->   998  near (0.75)                                                   c1{0,01} c1{0,01} n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf}   ||   n4{0,0000004,0000803f,000080bf} c1{0,01} c1{0,01} n4{0,000000
+  574 ->     -  no match                                                      v{0,01,02,ffffffff} v{0,01,02,ffffffff} n1{0} v{0,01,02,ffffffff} v{0,01,02,ffffffffffffffff} L(v{0,01,02,ffffffff} LT c1{0,01} T v{0,01,02,ffffffffff
+  578 ->   683  near (0.80)                                                   n4{0,0000004,0000803f,000080bf} n12{0} c1{0,01}   ||   n4{0,0000004,0000803f,000080bf} c1{0,01}
+  583 ->     -  no match                                                      v{ffffffff}
+  586 ->   312  by count (6 x 13.3, 9 x 16.20 share the shape; rates 0.02/s vs 0.05/s)  c1{0,01}
+  588 ->     -  no match                                                      n1{0,01,02,ff} v{0,ffffffff}
+  589 ->     -  no match                                                      v{0,01,02,ffffffff} T v{0}
+  592 ->     -  no match                                                      S(v{0,01,02,ffffffff} v{0,ffffffff} n1{0,01,02,ff} L(v{0,01,02,ffffffff} L(v{0,ffffffff} n1{0,01,02,ff}) n4{0,0000004,0000803f,000080bf} v{0,01,02,fff
+  595 ->     -  no match                                                      T n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf} v{0,01,02,ffffffff}
+  599 ->   164  near (0.80)                                                   c1{0,01} n1{0,01,02,ff}   ||   c1{0,01} v{0,ffffffff} n1{0,01,02,ff}
+  606 ->   969  by count (3 x 13.3, 5 x 16.20 share the shape; rates 1.42/s vs 1.29/s)  n1{0,01,02,ff} n1{0,01,02,ff}
+  623 ->   861  by count (5 x 13.3, 5 x 16.20 share the shape; rates 10.39/s vs 0.00/s)  n1{0,01,02,ff}
+  625 ->   915  unique                                                        n4{0,0000004,0000803f,000080bf} v{0,01,02,ffffffff} n4{0,0000004,0000803f,000080bf}
+  634 ->     -  no match                                                      v{0,ffffffff} v{0,ffffffff}
+  638 ->     -  no match                                                      v{0,01,02,ffffffff} n1{0,01,02,ff} c1{0,01} c1{0,01} n1{0,01,02,ff} v{0,ffffffff} c1{0,01} n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf} c1{0,01} c1{
+  639 ->     -  no match                                                      n1{0,01,02,ff} v{0,ffffffff}
+  652 ->     -  no match                                                      c1{0,01} c1{0,01} n12{0} n4{0,0000004,0000803f,000080bf} n1{0,01,02,ff} c1{0,01} n4{0,0000004,0000803f,000080bf}
+  657 ->     -  no match                                                      n1{0,01,02,ff} v{0,ffffffff}
+  660 ->     -  no match                                                      S(v{0,01,02,ffffffff} v{0,ffffffff} n1{0,01,02,ff} L(v{0,01,02,ffffffff} L(v{0,ffffffff} n1{0,01,02,ff}) n4{0,0000004,0000803f,000080bf} v{0,01,02,fff
+  676 ->   810  near (0.75)                                                   n1{0,01,02,ff} c1{0,01} n1{0,01,02,ff} n1{0,01,02,ff}   ||   c1{0,01} n1{0,01,02,ff} n1{0,01,02,ff} n1{0,01,02,ff}
+  677 ->     -  no match                                                      c1{0,01} v{0,01,02,ffffffff} v{0,01,02,ffffffff} v{0,ffffffff} n4{0,0000004,0000803f,000080bf} c1{0,01}
+  683 ->   674  near (0.86)                                                   n4{0,0000004,0000803f,000080bf} n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf} v{0,01,02,ffff}   ||   n4{0,0000004,0000803f,000080bf} n1{0,01,02,ff} n
+  685 ->     -  no match                                                      S(L(v{0,01,02,ffffffff} v{0,01,02,ffffffff}))
+  693 ->     -  no match                                                      v{0,01,02,ffffffff} v{0,01,02,ffffffff} c1{0,01} n1{0,01,02,ff} n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf} c1{0,01} n1{0,01,02,ff} L(?) v{0,01,02,
+  697 ->     -  no match                                                      n1{0} S(?)
+  698 ->     -  no match                                                      L(n12{0} v{0,ffffffff})
+  703 ->  1052  by count (1 x 13.3, 2 x 16.20 share the shape; rates 6.67/s vs 29.73/s)  L(?)
+  704 ->   612  near (0.80)                                                   n1{0,01,02,ff} v{0,01,02,ffff}   ||   n1{0,01,02,ff} n1{0,01,02,ff} v{0,01,02,ffff}
+  708 ->   838  unique                                                        n4{0,0000004,0000803f,000080bf} n1{0,01,02,ff}
+  714 ->     -  no match                                                      c1{0,01} S(v{0,01,02,ffff} v{0,01,02,ffffffff} n4{0,0000004,0000803f,000080bf} v{0,ffffffff} v{0,01,02,ffff} v{0,ffffffff} v{0,01,02,ffffffff})
+  717 ->     -  no 16.20 id left in its shape group                           v{0,ffffffff}
+  721 ->     -  no match                                                      c1{0,01} v{0,01,02,ffffffff} n4{0,0000004,0000803f,000080bf} c1{0,01} n1{0,01,02,ff} v{0,01,02,ffffffff}
+  723 ->     -  no match                                                      S(c1{0,01} c1{0,01} c1{0,01} n1{0,01,02,ff} v{0}) T
+  728 ->     -  no match                                                      n1{0,01,02,ff} c1{0,01} n4{0,0000004,0000803f,000080bf} n1{0,01,02,ff}
+  731 ->   266  by count (5 x 13.3, 3 x 16.20 share the shape; rates 19.65/s vs 0.72/s)  v{0,ffffffff}
+  738 ->   723  by count (1 x 13.3, 5 x 16.20 share the shape; rates 0.00/s vs 284.99/s)  n1{0}
+  740 ->     -  no match                                                      v{ffffffff}
+  743 ->     -  no match                                                      S(n1{0} n4{0,0000004,0000803f,000080bf} c1{0,01} v{0,01,02,ffff})
+  750 ->   843  by count (2 x 13.3, 1 x 16.20 share the shape; rates 3.35/s vs 0.00/s)  T n1{0,01,02,ff}
+  752 ->     -  no match                                                      S(n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf} v{0,01,02,ffff})
+  766 ->   139  near (0.86)                                                   n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf} n1{0,01,02,ff}   ||   n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf} 
+  770 ->   699  near (0.80)                                                   v{0,01,02,ffffffff} T   ||   v{0,01,02,ffffffff} T v{0,01,02,ffff}
+  771 ->     -  no match                                                      c1{0,01} T c1{0,01} n4{0,0000004,0000803f,000080bf} c1{0,01} n4{0,0000004,0000803f,000080bf} c1{0,01} n4{0,0000004,0000803f,000080bf} c1{0,01} c1{0,01
+  773 ->  1126  near (0.80)                                                   v{0,01,02,ffff} n1{0,01,02,ff} n1{0,01,02,ff}   ||   v{0,01,02,ffff} n1{0,01,02,ff}
+  774 ->   733  near (0.80)                                                   v{0,01,02,ffffffff} v{0,01,02,ffffffff} c1{0,01}   ||   v{0,01,02,ffffffff} v{0,01,02,ffffffff}
+  779 ->   228  by count (5 x 13.3, 3 x 16.20 share the shape; rates 10.56/s vs 0.01/s)  v{0,ffffffff}
+  780 ->   610  by count (3 x 13.3, 4 x 16.20 share the shape; rates 0.03/s vs 0.04/s)  n4{0,0000004,0000803f,000080bf}
+  783 ->    29  unique                                                        v{0,01,02,ffff}
+  790 ->   331  by count (2 x 13.3, 4 x 16.20 share the shape; rates 1.48/s vs 1.55/s)  T
+
+16.20 ids with a learnt format and no 13.3 partner:
+          8      0.00/s  c16{0}
+         10      6.68/s  L(?)
+         30      0.02/s  n1{0}
+         43      0.14/s  v{0,01,02,ffff} n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf}
+         48      0.00/s  n1{0}
+         49      0.02/s  v{0,01,02,ffffffff}
+         61     22.86/s  v{0,01,02,ffff} T v{0,01,02,ffffffff}
+         65      0.00/s  n1{0,01,02,ff} v{0,01,02,ffffffffffffffff}
+         81      0.00/s  v{0,ffffffff} c1{0,01} T T
+         86      0.00/s  v{0,01,02,ffffffff} c1{0,01} n4{0,0000004,0000803f,000080bf} c1{0,01} v{0,01,02,ffffffff}
+         95      0.01/s  v{0,ffffffff} c1{0,01}
+        101      0.05/s  c1{0,01} n1{0,01,02,ff} v{0,ffffffff} n1{0,01,02,ff} v{0,ffffffff}
+        119      0.01/s  v{0,01,02,ffffffff}
+        150     34.25/s  n4{0,0000004,0000803f,000080bf} v{0,ffffffff} n1{0,01,02,ff} c1{0,01} n1{0,01,02,ff} v{0,ffffffff} n1{0,01,02,ff} v{0,ffffffff} n4{0,0000004,0000803f,
+        151      0.01/s  n4{aeaeac51,aeaeac53,aeaeaeae,aeaeaeec}
+        158      0.03/s  n4{0,0000004,0000803f,000080bf} n8{0}
+        222      0.00/s  n1{0,01,02,ff} c1{0,01} n1{0} c1{0,01} n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf} v{0,ffffffff} n12{0} c1{0,01} n1{0,01,02,ff} n1{0,01,02,ff} n1{0
+        227      0.00/s  S(L(n4{0,0000004,0000803f,000080bf} S(?) n4{0,0000004,0000803f,000080bf} v{0,01,02,ffff} n4{0,0000004,0000803f,000080bf} n4{99999516,999995e2,9999990b
+        232      0.01/s  S(v{0,01,02,ffffffff} v{0} n4{0,0000004,0000803f,000080bf} n1{0,01,02,ff} n1{0,01,02,ff} v{0,01,02,ffffffff} v{0,01,02,ffffffff} n12{0}) v{0} c1{0,01}
+        239      2.70/s  c16{10200000006000000000000047} T
+        241      0.17/s  S(c1{0,01} n4{0,0000004,0000803f,000080bf} v{0,ffffffff})
+        245      0.00/s  c1{0,01} v{0,01,02,ffffffff} n1{0,01,02,ff}
+        258      0.01/s  n4{0,0000004,0000803f,000080bf} c1{0,01} n12{0} c1{0,01} c1{0,01} n12{0}
+        264      3.99/s  n4{0,0000004,0000803f,000080bf} c1{0,01} n1{0} c1{0,01} v{0,01,02,ffffffff}
+        268      0.18/s  c1{0,01} c1{0,01} c1{0,01} n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf} c1{0,01} T n4{0,0000004,0000803f,000080bf} n4{0,0000004,000
+        287      9.08/s  n1{0,01,02,ff} v{0,01,02,ffffffff} n4{0,0000004,0000803f,000080bf} T
+        290      0.00/s  S(?)
+        309      0.00/s  v{0,01,02,ffffffff}
+        314      0.05/s  T n4{0,0000004,0000803f,000080bf} c1{0,01} c1{0,01} c1{0,01} c1{0,01} n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf} c1{0,01} c1{0,01
+        315      0.01/s  c1{0,01} v{0} n4{0,0000004,0000803f,000080bf}
+        325      0.00/s  v{0,01,02,ffff} n4{0,0000004,0000803f,000080bf} c1{0,01} n1{0,01,02,ff} n8{0} c1{0,01}
+        326      0.26/s  c1{0,01} n1{0,01,02,ff} v{0,01,02,ffffffff} c1{0,01} v{0,01,02,ffffffff} n4{0,0000004,0000803f,000080bf}
+        347      0.74/s  n12{0}
+        365      0.00/s  n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf}
+        371      0.00/s  n8{0} c1{0,01} c1{0,01} n1{0,01,02,ff} n8{0} n8{0} n1{0,01,02,ff} n8{0} n4{0,0000004,0000803f,000080bf} T n1{0}
+        421      0.04/s  S(v{0,01,02,ffffffff} v{0} n4{0,0000004,0000803f,000080bf} n1{0,01,02,ff} n1{0,01,02,ff} v{0,01,02,ffffffff} v{0,01,02,ffffffff} n12{0}) v{0} c1{0,01}
+        423      0.00/s  v{0,01,02,ffffffff}
+        433      0.88/s  S(?)
+        437      0.12/s  v{0,01,02,ffffffff} v{0,01,02,ffffffff} v{0,01,02,ffffffff}
+        467      0.01/s  n1{0,01,02,ff} n1{0,01,02,ff}
+        511      0.00/s  v{0,01,02,ffffffff} n4{0,0000004,0000803f,000080bf} c1{0,01}
+        538      0.00/s  v{0,01,02,ffff} n4{0,0000004,0000803f,000080bf} n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf}
+        585      0.05/s  n12{0}
+        639      0.17/s  n1{0,01,02,ff} c1{0,01}
+        662      0.00/s  v{0,01,02,ffffffff} n1{0,01,02,ff} v{0,01,02,ffffffff} v{0} n1{0,01,02,ff} v{0,01,02,ffffffff} T
+        672      0.00/s  S(?)
+        673      0.00/s  n1{0} n1{0,01,02,ff} n1{0,01,02,ff} v{0,01,02,ffffffff} c1{0,01}
+        684      2.70/s  T T
+        722      0.00/s  T
+        754      0.16/s  n72{0000000010000000842546bf64b44cbd3296213f00000000feca313bc8217f3f3f6ba83d00000000461722bf64dd853da27045bf00000000f4a9f24531884942fe427b450000803f}
+        755     44.86/s  n1{0} v{0,01,02,ffffffff} v{0,01,02,ffffffff}
+        772      0.00/s  n1{0,01,02,ff} n1{0,01,02,ff}
+        788      0.00/s  n4{0,0000004,0000803f,000080bf} v{0,01,02,ffffffff}
+        794      0.15/s  T T c1{0,01}
+        802      0.31/s  T
+        804      0.00/s  n1{0,01,02,ff} n8{0} n8{0} c1{0,01} n8{0}
+        811      0.00/s  n8{0} n8{0}
+        815      0.02/s  n1{0}
+        835      0.42/s  v{0,01,02,ffffffff} n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf} v{0,01,02,ffffffff} n4{0,0000004,0000803f,000080bf} v{0,01,02,ffffffff}
+        836      0.00/s  v{0,01,02,ffffffff}
+        857      0.00/s  c1{0,01}
+        866      0.00/s  v{0}
+        912      0.04/s  v{0,01,02,ffffffff} n1{0,01,02,ff}
+        914      0.00/s  c1{0,01}
+        934      0.00/s  c1{0,01}
+        967      0.98/s  n1{0,01,02,ff} c1{0,01}
+        984      0.01/s  T v{0} v{0,01,02,ffffffff}
+        985      0.04/s  c1{0,01} n12{0} n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf} c1{0,01} c1{0,01} c1{0,01} n4{0,0000004,0000803f,000080bf}
+       1002      0.00/s  n1{0,01,02,ff} n4{0,0000004,0000803f,000080bf}
+       1015      0.00/s  v{0,01,02,ffff} n1{0,01,02,ff} v{0,01,02,ffffffff}
+       1051      0.00/s  LT
+       1058      0.01/s  n1{13,a6,ae,af}
+       1061      0.04/s  v{0,01,02,ffffffff} n1{0,01,02,ff} v{0,01,02,ffffffff} v{0,01,02,ffffffff}
+       1066      0.86/s  c1{0,01} n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf} n12{0} n12{0} n4{0,0000004,0000803f,000080bf} n12{0} n4{0,0000004,0000803f,00
+       1078      0.00/s  n4{0,0000004,0000803f,000080bf}
+       1088      1.83/s  T n4{0,0000004,0000803f,000080bf} c1{0,01} c1{0,01} c1{0,01} c1{0,01} n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf} c1{0,01} c1{0,01
+       1121      0.22/s  n1{0,01,02,ff} v{0,01,02,ffffffff} n4{0,0000004,0000803f,000080bf} c1{0,01}
+       1140      1.58/s  v{0,01,02,ffff} T v{0,01,02,ffffffff}
+       1173      0.01/s  T n4{0,0000004,0000803f,000080bf} c1{0,01} c1{0,01} c1{0,01} c1{0,01} n4{0,0000004,0000803f,000080bf} n4{0,0000004,0000803f,000080bf} c1{0,01} c1{0,01
+       1195      3.91/s  n1{0}
+       1196      0.11/s  n4{0,0000004,0000803f,000080bf} n1{0,01,02,ff} n1{0,01,02,ff} c1{0,01}
+       1217      0.01/s  v{0,01,02,ffffffff}
+       1224      0.00/s  v{0,01,02,ffffffff}

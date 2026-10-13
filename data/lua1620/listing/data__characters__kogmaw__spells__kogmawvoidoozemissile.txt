@@ -1,0 +1,36 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 00000296394C3600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Kogmaw/HUD/Icons2D/KogMaw_VoidOoze.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "EzrealEssenceFluxDebuff"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -9	; "KogMawSkin08"
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -10	; IsDamagingSpell
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -11	; TriggersSpellCasts
+	19	[-]	RETURN   	0 1
+constants (11) for 00000296394C3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Kogmaw/HUD/Icons2D/KogMaw_VoidOoze.dds"
+	6	"BuffName"
+	7	"EzrealEssenceFluxDebuff"
+	8	"SpellFXOverrideSkins"
+	9	"KogMawSkin08"
+	10	"IsDamagingSpell"
+	11	"TriggersSpellCasts"
+locals (0) for 00000296394C3600:
+upvalues (0) for 00000296394C3600:

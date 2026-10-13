@@ -1,0 +1,40 @@
+
+main <?:0,0> (22 instructions, 88 bytes at 000001DF276634C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; 1.75
+	10	[-]	SETGLOBAL	0 -5	; ChannelDuration
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -7	; IsDeathRecapSource
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -8	; NonDispellable
+	15	[-]	NEWTABLE 	0 2 0
+	16	[-]	LOADK    	1 -10	; "PhoenixUltBook_Quinn"
+	17	[-]	LOADK    	2 -11	; "UltBook_QuinnSkin02"
+	18	[-]	SETLIST  	0 2 1	; 1
+	19	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	20	[-]	LOADBOOL 	0 0 0
+	21	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	22	[-]	RETURN   	0 1
+constants (12) for 000001DF276634C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"ChannelDuration"
+	6	1.75
+	7	"IsDeathRecapSource"
+	8	"NonDispellable"
+	9	"SpellFXOverrideSkins"
+	10	"PhoenixUltBook_Quinn"
+	11	"UltBook_QuinnSkin02"
+	12	"IsDamagingSpell"
+locals (0) for 000001DF276634C0:
+upvalues (0) for 000001DF276634C0:

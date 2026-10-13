@@ -1,0 +1,43 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 0000025435E53630)
+0+ params, 6 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "Jade_Blitzcrank_Overdrive.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Jade_BlitzcrankOverdrive"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	NEWTABLE 	0 5 0
+	10	[-]	LOADK    	1 -8	; 90
+	11	[-]	LOADK    	2 -8	; 90
+	12	[-]	LOADK    	3 -8	; 90
+	13	[-]	LOADK    	4 -9	; 18
+	14	[-]	LOADK    	5 -10	; 14
+	15	[-]	SETLIST  	0 5 1	; 1
+	16	[-]	SETGLOBAL	0 -7	; AutoCooldownByLevel
+	17	[-]	NEWTABLE 	0 3 0
+	18	[-]	LOADK    	1 -12	; "PiltoverCustomsBlitz"
+	19	[-]	LOADK    	2 -13	; "iBlitz"
+	20	[-]	LOADK    	3 -14	; "Jade_BlitzcrankSkin08"
+	21	[-]	SETLIST  	0 3 1	; 1
+	22	[-]	SETGLOBAL	0 -11	; SpellFXOverrideSkins
+	23	[-]	RETURN   	0 1
+constants (14) for 0000025435E53630:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"Jade_Blitzcrank_Overdrive.dds"
+	5	"BuffName"
+	6	"Jade_BlitzcrankOverdrive"
+	7	"AutoCooldownByLevel"
+	8	90
+	9	18
+	10	14
+	11	"SpellFXOverrideSkins"
+	12	"PiltoverCustomsBlitz"
+	13	"iBlitz"
+	14	"Jade_BlitzcrankSkin08"
+locals (0) for 0000025435E53630:
+upvalues (0) for 0000025435E53630:

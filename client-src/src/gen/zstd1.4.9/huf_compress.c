@@ -4,6 +4,8 @@
 // match: c53640 _HUF_compress1X_repeat -O2
 // match: c536a0 _HUF_compress1X_usingCTable_internal_body -O2
 // match: c538f0 _HUF_compress4X_repeat -O2
+// match: c53950 _HUF_compress4X_usingCTable_internal -O2
+// match: c53a50 _HUF_compressCTable_internal -O2
 // match: c53ab0 _HUF_compress_internal -O2
 // match: c53da0 _HUF_estimateCompressedSize -O2
 // match: c53e20 _HUF_getNbBits -O2

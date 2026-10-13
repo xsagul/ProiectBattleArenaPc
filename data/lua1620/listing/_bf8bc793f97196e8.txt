@@ -1,0 +1,24 @@
+
+main <?:0,0> (11 instructions, 44 bytes at 00000196714734C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "UltBook_TalonRMisTwo"
+	6	[-]	SETGLOBAL	0 -3	; BuffName
+	7	[-]	LOADK    	0 -6	; 1
+	8	[-]	SETGLOBAL	0 -5	; SpellDamageRatio
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -7	; IsDamagingSpell
+	11	[-]	RETURN   	0 1
+constants (7) for 00000196714734C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffName"
+	4	"UltBook_TalonRMisTwo"
+	5	"SpellDamageRatio"
+	6	1
+	7	"IsDamagingSpell"
+locals (0) for 00000196714734C0:
+upvalues (0) for 00000196714734C0:

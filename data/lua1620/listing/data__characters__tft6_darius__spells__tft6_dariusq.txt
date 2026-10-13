@@ -1,0 +1,39 @@
+
+main <?:0,0> (20 instructions, 80 bytes at 000002346AA235F0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "AkaliCrescentSlash.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "RenekthonCleaveReady"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; 1
+	10	[-]	SETGLOBAL	0 -7	; SpellToggleSlot
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -9	; IsDeathRecapSource
+	13	[-]	NEWTABLE 	0 2 0
+	14	[-]	LOADK    	1 -11	; "TFTTutorial_Darius_ZaunKnight"
+	15	[-]	LOADK    	2 -12	; "TFTTutorial_Darius_NorseKing"
+	16	[-]	SETLIST  	0 2 1	; 1
+	17	[-]	SETGLOBAL	0 -10	; SpellFXOverrideSkins
+	18	[-]	LOADBOOL 	0 1 0
+	19	[-]	SETGLOBAL	0 -13	; IsDamagingSpell
+	20	[-]	RETURN   	0 1
+constants (13) for 000002346AA235F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"AkaliCrescentSlash.dds"
+	5	"BuffName"
+	6	"RenekthonCleaveReady"
+	7	"SpellToggleSlot"
+	8	1
+	9	"IsDeathRecapSource"
+	10	"SpellFXOverrideSkins"
+	11	"TFTTutorial_Darius_ZaunKnight"
+	12	"TFTTutorial_Darius_NorseKing"
+	13	"IsDamagingSpell"
+locals (0) for 000002346AA235F0:
+upvalues (0) for 000002346AA235F0:

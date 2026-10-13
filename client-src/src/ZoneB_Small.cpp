@@ -1,10 +1,8 @@
 // Deleting destructors and small functions in Zone B.
 // match: 2db8e0 ?ScalarDeletingDestructor@Object2db8e0@@QAEPAXI@Z
 #include "types.h"
+#include <new>
 
-void operator_delete_sized(void* p, u32 size); // rva 0x9bb940
-void operator_delete_aligned(void* p, u32 size, u32 align); // rva 0x9bb950
-void* operator_new(u32 size); // rva 0x9bb8d0
 void Destruct_9bab90(void* p); // rva 0x9bab90
 
 
@@ -17,7 +15,7 @@ struct Object2db8e0
 void* Object2db8e0::ScalarDeletingDestructor(unsigned int flags)
 {
     if (flags & 1)
-        operator_delete_sized(this, 0xb);
+        ::operator delete(this, 0xb);
     return this;
 }
 
@@ -33,7 +31,7 @@ void* Object2db050::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destruct2d8840();
     if (flags & 1)
-        operator_delete_sized(this, 0x24);
+        ::operator delete(this, 0x24);
     return this;
 }
 
@@ -49,7 +47,7 @@ void* Object2db070::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destruct2d8910();
     if (flags & 1)
-        operator_delete_sized(this, 0x24);
+        ::operator delete(this, 0x24);
     return this;
 }
 
@@ -65,7 +63,7 @@ void* Object2db120::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destruct2d8a60();
     if (flags & 1)
-        operator_delete_sized(this, 0x30);
+        ::operator delete(this, 0x30);
     return this;
 }
 
@@ -81,7 +79,7 @@ void* Object2db1a0::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destruct2d8b90();
     if (flags & 1)
-        operator_delete_sized(this, 0x38);
+        ::operator delete(this, 0x38);
     return this;
 }
 
@@ -97,7 +95,7 @@ void* Object2db090::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destruct2d8980();
     if (flags & 1)
-        operator_delete_sized(this, 0x474);
+        ::operator delete(this, 0x474);
     return this;
 }
 
@@ -113,7 +111,7 @@ void* Object2db220::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destruct2d8bf0();
     if (flags & 1)
-        operator_delete_sized(this, 0x68);
+        ::operator delete(this, 0x68);
     return this;
 }
 
@@ -129,7 +127,7 @@ void* Object2db2b0::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destruct2d8c60();
     if (flags & 1)
-        operator_delete_aligned(this, 0x240, 0x40);
+        ::operator delete(this, 0x240, std::align_val_t(0x40));
     return this;
 }
 
@@ -145,7 +143,7 @@ void* Object2db2e0::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destruct2d8f70();
     if (flags & 1)
-        operator_delete_aligned(this, 0x1c0, 0x40);
+        ::operator delete(this, 0x1c0, std::align_val_t(0x40));
     return this;
 }
 
@@ -161,7 +159,7 @@ void* Object2db310::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destruct2d9040();
     if (flags & 1)
-        operator_delete_sized(this, 0x928);
+        ::operator delete(this, 0x928);
     return this;
 }
 
@@ -177,7 +175,7 @@ void* Object2db340::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destruct2d90b0();
     if (flags & 1)
-        operator_delete_sized(this, 0x418);
+        ::operator delete(this, 0x418);
     return this;
 }
 
@@ -193,7 +191,7 @@ void* Object2db370::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destruct2d9110();
     if (flags & 1)
-        operator_delete_sized(this, 0x28);
+        ::operator delete(this, 0x28);
     return this;
 }
 
@@ -209,7 +207,7 @@ void* Object2db390::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destruct2d9170();
     if (flags & 1)
-        operator_delete_aligned(this, 0x1c0, 0x40);
+        ::operator delete(this, 0x1c0, std::align_val_t(0x40));
     return this;
 }
 
@@ -225,7 +223,7 @@ void* Object2db420::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destruct2d93e0();
     if (flags & 1)
-        operator_delete_sized(this, 0x88);
+        ::operator delete(this, 0x88);
     return this;
 }
 
@@ -241,7 +239,7 @@ void* Object2db700::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destruct34c210();
     if (flags & 1)
-        operator_delete_sized(this, 0x1c);
+        ::operator delete(this, 0x1c);
     return this;
 }
 
@@ -257,7 +255,7 @@ void* Object2db720::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destructa23f10();
     if (flags & 1)
-        operator_delete_sized(this, 0x74);
+        ::operator delete(this, 0x74);
     return this;
 }
 
@@ -290,30 +288,30 @@ void* Object2db970::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destructac9970();
     if (flags & 1)
-        operator_delete_sized(this, 0xc);
+        ::operator delete(this, 0xc);
     return this;
 }
 
 // rva 0x2dad60: calls destructor on +4 and frees 8 bytes if flags & 1.
 // match: 2dad60 ?ScalarDeletingDestructor@Object2dad60@@QAEPAXI@Z
-struct Member9baf90
+struct K9baf90
 {
-    void Destruct(); // rva 0x9baf90
+    __declspec(noinline) int f(); // rva 0x9baf90, reconstructed in gen/Small_960000.cpp
 };
 
 struct Object2dad60
 {
     void* vptr;
-    Member9baf90 member4;
+    K9baf90 member4;
 
     void* ScalarDeletingDestructor(unsigned int flags);
 };
 
 void* Object2dad60::ScalarDeletingDestructor(unsigned int flags)
 {
-    this->member4.Destruct();
+    this->member4.f();
     if (flags & 1)
-        operator_delete_sized(this, 8);
+        ::operator delete(this, 8);
     return this;
 }
 
@@ -329,7 +327,7 @@ void* Object2daf70::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destruct2d86e0();
     if (flags & 1)
-        operator_delete_sized(this, 0x148);
+        ::operator delete(this, 0x148);
     return this;
 }
 
@@ -350,7 +348,7 @@ void* Object2dae90::ScalarDeletingDestructor(unsigned int flags)
     this->member4 = 0;
     this->vtable = &g_vtablefb3474;
     if (flags & 1)
-        operator_delete_sized(this, 8);
+        ::operator delete(this, 8);
     return this;
 }
 
@@ -374,7 +372,7 @@ struct Object2dbff0
 
 Cloned2dbff0* Object2dbff0::Clone()
 {
-    Cloned2dbff0* obj = (Cloned2dbff0*)operator_new(8);
+    Cloned2dbff0* obj = (Cloned2dbff0*)::operator new(8);
     if (obj)
     {
         obj->vtable = &g_vtable15796e0;
@@ -396,7 +394,7 @@ void* Object2dabb0::ScalarDeletingDestructor(unsigned int flags)
 {
     this->Destruct5d5f20();
     if (flags & 1)
-        operator_delete_sized(this, 0x87d0);
+        ::operator delete(this, 0x87d0);
     return this;
 }
 
@@ -432,7 +430,7 @@ void* Object2da8b0::ScalarDeletingDestructor(unsigned int flags)
     this->vtable = &g_vtable157a6c4;
     g_instance3172a60 = nullptr;
     if (flags & 1)
-        operator_delete_sized(this, 0x5e0);
+        ::operator delete(this, 0x5e0);
     return this;
 }
 
@@ -454,7 +452,7 @@ void* Object2da7c0::ScalarDeletingDestructor(unsigned int flags)
     this->vtable = &g_vtable157931c;
     g_instance316fda8 = nullptr;
     if (flags & 1)
-        operator_delete_sized(this, 8);
+        ::operator delete(this, 8);
     return this;
 }
 

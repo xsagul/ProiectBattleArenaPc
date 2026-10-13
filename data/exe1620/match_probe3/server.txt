@@ -1,0 +1,16 @@
+replay 16.20.824.8524, 64 records
+listening on udp 5119
+   2.099 client connected
+   2.108 rcv ch 1 num 1 flags 0x08 id 1 len 35: a6c84604ec5f6e37dc9e19cf22eac06a8c84ef4f8466094cb8b8fe82344c4c3409b8
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\lnp16.py", line 189, in <module>
+    main()
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\lnp16.py", line 185, in main
+    send_message(addr, st, 1, packet(GAME_INFO, obj, body), f'packet {GAME_INFO} netid {obj:#x} ({len(body)} B)')
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\lnp16.py", line 124, in send_message
+    return send_data(addr, st, message(channel, st.msgnum[channel], data), what)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\lnp16.py", line 51, in message
+    out = struct.pack('<HBH', w, channel, number & 0xFFFF)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: 'H' format requires 0 <= number <= 65535

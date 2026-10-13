@@ -1,0 +1,18608 @@
+{
+ "sr_2026_s1_rolebound_mid_quest": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "my hit",
+     "#00000000"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 721.448,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    569
+   ],
+   [
+    "lissandraq",
+    445
+   ],
+   [
+    "lissandrabasicattack",
+    192
+   ],
+   [
+    "#00000000",
+    179
+   ],
+   [
+    "lissandrabasicattack2",
+    163
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.667
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ]
+  ]
+ },
+ "4641wardplacementcounter": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    8
+   ],
+   [
+    "lissandrabasicattack2",
+    5
+   ],
+   [
+    "lissandrabasicattack",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.5
+   ]
+  ],
+  "at_end": []
+ },
+ "challengeschampiontrackerbuff": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    8
+   ],
+   [
+    "lissandrabasicattack2",
+    5
+   ],
+   [
+    "lissandrabasicattack",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.5
+   ]
+  ],
+  "at_end": []
+ },
+ "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua": {
+  "n": 71,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    71
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "#01701b21"
+    ],
+    0.972
+   ],
+   [
+    [
+     "none"
+    ],
+    0.859
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.113
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.042
+   ],
+   [
+    [
+     "cast",
+     "lissandraemissile"
+    ],
+    0.014
+   ],
+   [
+    [
+     "end",
+     "jhinetrapslow"
+    ],
+    0.014
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "lissandraq"
+    ],
+    0.329
+   ],
+   [
+    [
+     "my hit",
+     "lissandraw"
+    ],
+    0.157
+   ],
+   [
+    [
+     "my hit",
+     "#f86f3d33"
+    ],
+    0.157
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.071
+   ],
+   [
+    [
+     "my cast",
+     "lissandraw"
+    ],
+    0.071
+   ]
+  ],
+  "lived_med": 42.236,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    487
+   ],
+   [
+    "#00000000",
+    363
+   ],
+   [
+    "#6a4229fc",
+    287
+   ],
+   [
+    "lissandrabasicattack",
+    103
+   ],
+   [
+    "lissandraw",
+    90
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.099
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.028
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.028
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.028
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.014
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.761
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.775
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.211
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.211
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.028
+   ]
+  ]
+ },
+ "#0eab29c1": {
+  "n": 20,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    20
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "#02eb3801"
+    ],
+    0.9
+   ],
+   [
+    [
+     "none"
+    ],
+    0.85
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.05
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.05
+   ],
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    0.05
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "lissandraq"
+    ],
+    0.65
+   ],
+   [
+    [
+     "my hit",
+     "lissandraw"
+    ],
+    0.15
+   ],
+   [
+    [
+     "my cast",
+     "lissandraw"
+    ],
+    0.1
+   ],
+   [
+    [
+     "my hit",
+     "lissandrae"
+    ],
+    0.05
+   ],
+   [
+    [
+     "other"
+    ],
+    0.05
+   ]
+  ],
+  "lived_med": 27.975,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    197
+   ],
+   [
+    "lissandraq",
+    142
+   ],
+   [
+    "lissandrabasicattack",
+    57
+   ],
+   [
+    "lissandrabasicattack2",
+    40
+   ],
+   [
+    "lissandraw",
+    27
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.1
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.05
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.4
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.4
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.15
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.05
+   ]
+  ]
+ },
+ "srhomeguardspeed": {
+  "n": 88,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    25000.0,
+    88
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.989
+   ],
+   [
+    [
+     "end",
+     "recall"
+    ],
+    0.057
+   ],
+   [
+    [
+     "cast",
+     "lissandraemissile"
+    ],
+    0.011
+   ],
+   [
+    [
+     "end",
+     "superrecall"
+    ],
+    0.011
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 14.176,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "planthawkshotchemtech",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.409
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.057
+   ]
+  ]
+ },
+ "s4spawnlockspeed": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    16.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 24.055,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "#0cf347e6": {
+  "n": 61,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    61
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.545,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "planthawkshotchemtech",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.016
+   ]
+  ]
+ },
+ "malzahare": {
+  "n": 14,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    4.25,
+    14
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.786
+   ],
+   [
+    [
+     "none"
+    ],
+    0.714
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.071
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.071
+   ],
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.071
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.071
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.643
+   ],
+   [
+    [
+     "other"
+    ],
+    0.286
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.071
+   ]
+  ],
+  "lived_med": 4.042,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    79
+   ],
+   [
+    "lissandrar",
+    18
+   ],
+   [
+    "lissandraq",
+    17
+   ],
+   [
+    "lissandrabasicattack2",
+    8
+   ],
+   [
+    "lissandraw",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.286
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.071
+   ],
+   [
+    [
+     "fx",
+     49953683
+    ],
+    0.786
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.071
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.857
+   ]
+  ]
+ },
+ "malzaharerecent": {
+  "n": 11,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    4.25,
+    11
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    0.636
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.091
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.091
+   ],
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.091
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.091
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.636
+   ],
+   [
+    [
+     "other"
+    ],
+    0.273
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.091
+   ]
+  ],
+  "lived_med": 4.276,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    79
+   ],
+   [
+    "lissandrar",
+    18
+   ],
+   [
+    "lissandraq",
+    17
+   ],
+   [
+    "lissandrabasicattack2",
+    8
+   ],
+   [
+    "lissandraw",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.545
+   ],
+   [
+    [
+     "fx",
+     49953683
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.273
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.091
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.636
+   ]
+  ]
+ },
+ "lissandraqmissile": {
+  "n": 1317,
+  "games": 4,
+  "self": 0.0,
+  "type": 11,
+  "durations": [
+   [
+    1.5,
+    1250
+   ],
+   [
+    1.05,
+    24
+   ],
+   [
+    1.41,
+    21
+   ],
+   [
+    0.987,
+    13
+   ],
+   [
+    1.275,
+    4
+   ],
+   [
+    1.198,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    1.125
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.688
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.046
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.026
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.025
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.023
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.743
+   ],
+   [
+    [
+     "death"
+    ],
+    0.158
+   ],
+   [
+    [
+     "my cast",
+     "lissandraw"
+    ],
+    0.041
+   ],
+   [
+    [
+     "my cast",
+     "lissandraqmissile"
+    ],
+    0.04
+   ],
+   [
+    [
+     "other"
+    ],
+    0.016
+   ]
+  ],
+  "lived_med": 1.57,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.479
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.034
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.375
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.014
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.009
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.005
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.494
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.145
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.002
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.002
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3137_Heal_Missile"
+    ],
+    0.002
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.002
+   ]
+  ]
+ },
+ "lissandraqshards": {
+  "n": 1343,
+  "games": 4,
+  "self": 0.0,
+  "type": 13,
+  "durations": [
+   [
+    0.5,
+    1343
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    1.121
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.692
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.045
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.026
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.025
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.023
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.589
+   ],
+   [
+    [
+     "death"
+    ],
+    0.355
+   ],
+   [
+    [
+     "my cast",
+     "lissandraqmissile"
+    ],
+    0.039
+   ],
+   [
+    [
+     "other"
+    ],
+    0.008
+   ],
+   [
+    [
+     "my cast",
+     "lissandraw"
+    ],
+    0.008
+   ]
+  ],
+  "lived_med": 0.502,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.448
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.387
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.095
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.013
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.01
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.004
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.025
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.144
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.004
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.003
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.002
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.001
+   ]
+  ]
+ },
+ "#02eb3801": {
+  "n": 18,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    15.0,
+    18
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "#0eab29c1"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.889
+   ],
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.667
+   ],
+   [
+    [
+     "hit",
+     "lissandraw"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.278
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 15.133,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    174
+   ],
+   [
+    "lissandraq",
+    46
+   ],
+   [
+    "lissandrabasicattack",
+    39
+   ],
+   [
+    "#f86f3d33",
+    25
+   ],
+   [
+    "lissandrabasicattack2",
+    21
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.611
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.556
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.444
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.111
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.056
+   ]
+  ]
+ },
+ "#01701b21": {
+  "n": 70,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    11.529,
+    8
+   ],
+   [
+    13.647,
+    7
+   ],
+   [
+    8.0,
+    7
+   ],
+   [
+    10.823,
+    5
+   ],
+   [
+    10.118,
+    5
+   ],
+   [
+    17.176,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.886
+   ],
+   [
+    [
+     "hit",
+     "lissandraw"
+    ],
+    0.486
+   ],
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.343
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.343
+   ],
+   [
+    [
+     "end",
+     "#0eab29c1"
+    ],
+    0.257
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 13.118,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    363
+   ],
+   [
+    "#6a4229fc",
+    321
+   ],
+   [
+    "lissandraq",
+    186
+   ],
+   [
+    "#f86f3d33",
+    85
+   ],
+   [
+    "lissandrabasicattack",
+    69
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.814
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.786
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.214
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.214
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.029
+   ],
+   [
+    [
+     "cooldown",
+     "a7"
+    ],
+    0.029
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.986
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.1
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.014
+   ]
+  ]
+ },
+ "#0d398291": {
+  "n": 75,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    75
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.84
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.08
+   ],
+   [
+    [
+     "end",
+     "#01701b21"
+    ],
+    0.053
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.04
+   ],
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.027
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.027
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "lissandraq"
+    ],
+    0.351
+   ],
+   [
+    [
+     "my hit",
+     "#f86f3d33"
+    ],
+    0.176
+   ],
+   [
+    [
+     "my hit",
+     "lissandraw"
+    ],
+    0.162
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.068
+   ],
+   [
+    [
+     "my cast",
+     "lissandraw"
+    ],
+    0.068
+   ]
+  ],
+  "lived_med": 37.873,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    478
+   ],
+   [
+    "#00000000",
+    379
+   ],
+   [
+    "#6a4229fc",
+    279
+   ],
+   [
+    "lissandrabasicattack",
+    102
+   ],
+   [
+    "lissandraw",
+    98
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.24
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.053
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.88
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.68
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.267
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.147
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.027
+   ],
+   [
+    [
+     "fx",
+     49953683
+    ],
+    0.013
+   ]
+  ]
+ },
+ "item2003": {
+  "n": 10,
+  "games": 4,
+  "self": 1.0,
+  "type": 14,
+  "durations": [
+   [
+    14.75,
+    10
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "item2003"
+    ],
+    0.8
+   ],
+   [
+    [
+     "none"
+    ],
+    0.2
+   ],
+   [
+    [
+     "hit",
+     "lissandrabasicattack2"
+    ],
+    0.1
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.9
+   ],
+   [
+    [
+     "other"
+    ],
+    0.1
+   ]
+  ],
+  "lived_med": 14.898,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    33
+   ],
+   [
+    "#6a4229fc",
+    25
+   ],
+   [
+    "lissandrabasicattack",
+    17
+   ],
+   [
+    "lissandrabasicattack2",
+    14
+   ],
+   [
+    "lissandraw",
+    7
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.3
+   ]
+  ]
+ },
+ "lissandrawfrozen": {
+  "n": 481,
+  "games": 4,
+  "self": 0.0,
+  "type": 12,
+  "durations": [
+   [
+    1.65,
+    157
+   ],
+   [
+    1.25,
+    136
+   ],
+   [
+    1.35,
+    65
+   ],
+   [
+    1.45,
+    50
+   ],
+   [
+    1.55,
+    34
+   ],
+   [
+    1.551,
+    14
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "lissandraw"
+    ],
+    3.021
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.971
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.087
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.083
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.083
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.077
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.48
+   ],
+   [
+    [
+     "my cast",
+     "lissandraw"
+    ],
+    0.364
+   ],
+   [
+    [
+     "death"
+    ],
+    0.108
+   ],
+   [
+    [
+     "other"
+    ],
+    0.023
+   ],
+   [
+    [
+     "my cast",
+     "lissandraqmissile"
+    ],
+    0.021
+   ]
+  ],
+  "lived_med": 0.873,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.57
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.243
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.083
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.029
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.01
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    0.004
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.734
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.042
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.008
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.008
+   ],
+   [
+    [
+     "slot",
+     2,
+     ""
+    ],
+    0.008
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.006
+   ]
+  ]
+ },
+ "sharedwardbuff": {
+  "n": 27,
+  "games": 4,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    100.412,
+    2
+   ],
+   [
+    105.353,
+    2
+   ],
+   [
+    92.824,
+    1
+   ],
+   [
+    95.118,
+    1
+   ],
+   [
+    98.118,
+    1
+   ],
+   [
+    107.471,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.92
+   ],
+   [
+    [
+     "death"
+    ],
+    0.08
+   ]
+  ],
+  "lived_med": 100.993,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.148
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.926
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.185
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.148
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.185
+   ]
+  ]
+ },
+ "sharedstealthwardbuff": {
+  "n": 27,
+  "games": 4,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    27
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "death"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 100.993,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.148
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.926
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.185
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.148
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.222
+   ]
+  ]
+ },
+ "relicyellowward": {
+  "n": 27,
+  "games": 4,
+  "self": 0.0,
+  "type": 6,
+  "durations": [
+   [
+    100.412,
+    2
+   ],
+   [
+    105.353,
+    2
+   ],
+   [
+    92.824,
+    1
+   ],
+   [
+    95.118,
+    1
+   ],
+   [
+    98.118,
+    1
+   ],
+   [
+    107.471,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.92
+   ],
+   [
+    [
+     "death"
+    ],
+    0.08
+   ]
+  ],
+  "lived_med": 100.993,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.148
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.926
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.185
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.148
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.185
+   ]
+  ]
+ },
+ "sr_2026_s2_rolebound_roamingbank": {
+  "n": 5,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "planthealthslow"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.8
+   ],
+   [
+    [
+     "my cast",
+     "lissandrae"
+    ],
+    0.2
+   ]
+  ],
+  "lived_med": 6.957,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    34
+   ],
+   [
+    "lissandraq",
+    19
+   ],
+   [
+    "lissandraw",
+    16
+   ],
+   [
+    "lissandrabasicattack",
+    12
+   ],
+   [
+    "burning",
+    11
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.2
+   ]
+  ]
+ },
+ "nunupbloodboil": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    4.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.833
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 4.203,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    31
+   ],
+   [
+    "lissandrar",
+    8
+   ],
+   [
+    "lissandrapassive",
+    6
+   ],
+   [
+    "lissandraq",
+    5
+   ],
+   [
+    "lissandrabasicattack",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.167
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    3.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.833
+   ]
+  ]
+ },
+ "silence": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 7,
+  "durations": [
+   [
+    1.0,
+    5
+   ],
+   [
+    0.94,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "malzahare"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.102,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    10
+   ],
+   [
+    "lissandrar",
+    9
+   ],
+   [
+    "lissandrabasicattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.875
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.25
+   ]
+  ]
+ },
+ "malzaharqmissile": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 7,
+  "durations": [
+   [
+    1.0,
+    5
+   ],
+   [
+    0.94,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "malzahare"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.102,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    10
+   ],
+   [
+    "lissandrar",
+    9
+   ],
+   [
+    "lissandrabasicattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.875
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.25
+   ]
+  ]
+ },
+ "lissandrae": {
+  "n": 162,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    162
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "lissandraemissile"
+    ],
+    0.963
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.037
+   ],
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.012
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.012
+   ],
+   [
+    [
+     "hit",
+     "lissandrar"
+    ],
+    0.006
+   ],
+   [
+    [
+     "end",
+     "lissandrarenemy"
+    ],
+    0.006
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "lissandrae"
+    ],
+    0.784
+   ],
+   [
+    [
+     "other"
+    ],
+    0.136
+   ],
+   [
+    [
+     "my hit",
+     "#00000000"
+    ],
+    0.031
+   ],
+   [
+    [
+     "my hit",
+     "lissandrae"
+    ],
+    0.019
+   ],
+   [
+    [
+     "my hit",
+     "quinnq"
+    ],
+    0.012
+   ]
+  ],
+  "lived_med": 1.47,
+  "ticks": 75,
+  "period_med": 0.17,
+  "on_hit": [
+   [
+    "#00000000",
+    92
+   ],
+   [
+    "lissandraq",
+    18
+   ],
+   [
+    "#f86f3d33",
+    17
+   ],
+   [
+    "#6a4229fc",
+    14
+   ],
+   [
+    "quinnq",
+    14
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.556
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.469
+   ],
+   [
+    [
+     "slot",
+     2,
+     ""
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.037
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.012
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.556
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.006
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.006
+   ]
+  ]
+ },
+ "lissandraedamage": {
+  "n": 77,
+  "games": 4,
+  "self": 0.0,
+  "type": 13,
+  "durations": [
+   [
+    1.5,
+    77
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "lissandrae"
+    ],
+    1.052
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.052
+   ],
+   [
+    [
+     "cast",
+     "lissandrae"
+    ],
+    0.052
+   ],
+   [
+    [
+     "end",
+     "lissandrae"
+    ],
+    0.052
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.039
+   ],
+   [
+    [
+     "cast",
+     "lissandraemissile"
+    ],
+    0.039
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.61
+   ],
+   [
+    [
+     "death"
+    ],
+    0.26
+   ],
+   [
+    [
+     "my cast",
+     "lissandraw"
+    ],
+    0.078
+   ],
+   [
+    [
+     "other"
+    ],
+    0.026
+   ],
+   [
+    [
+     "my cast",
+     "lissandraq"
+    ],
+    0.026
+   ]
+  ],
+  "lived_med": 1.503,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.623
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.065
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.052
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.052
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.026
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.026
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.935
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.065
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.052
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.026
+   ],
+   [
+    [
+     "fx",
+     49953683
+    ],
+    0.013
+   ]
+  ]
+ },
+ "lulufaerieshield": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    2.5,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "lissandrae"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "lissandrae"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.5
+   ],
+   [
+    [
+     "other"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 2.505,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#f86f3d33",
+    3
+   ],
+   [
+    "lissandraq",
+    2
+   ],
+   [
+    "lissandraw",
+    2
+   ],
+   [
+    "lissandrar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.75
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.25
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.75
+   ]
+  ]
+ },
+ "lulufaerieattackaid": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    8.548,
+    2
+   ],
+   [
+    9.115,
+    1
+   ],
+   [
+    7.536,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "lissandrae"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "lissandrae"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 6.447,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    6
+   ],
+   [
+    "lissandrabasicattack2",
+    3
+   ],
+   [
+    "#f86f3d33",
+    3
+   ],
+   [
+    "#6a4229fc",
+    2
+   ],
+   [
+    "lissandraw",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.75
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.25
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "renatapassivedebuff": {
+  "n": 17,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    6.0,
+    17
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.706
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.118
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.118
+   ],
+   [
+    [
+     "end",
+     "nunupbloodboil"
+    ],
+    0.059
+   ],
+   [
+    [
+     "end",
+     "malzahare"
+    ],
+    0.059
+   ],
+   [
+    [
+     "end",
+     "malzaharerecent"
+    ],
+    0.059
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.824
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.118
+   ],
+   [
+    [
+     "time"
+    ],
+    0.059
+   ]
+  ],
+  "lived_med": 2.207,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    16
+   ],
+   [
+    "#6a4229fc",
+    13
+   ],
+   [
+    "#f86f3d33",
+    8
+   ],
+   [
+    "lissandrapassive",
+    6
+   ],
+   [
+    "perks_arcanecomet_mis",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.353
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.941
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.059
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.059
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.059
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.059
+   ]
+  ]
+ },
+ "summonerteleport": {
+  "n": 15,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    8.0,
+    4
+   ],
+   [
+    5.699,
+    1
+   ],
+   [
+    5.758,
+    1
+   ],
+   [
+    5.176,
+    1
+   ],
+   [
+    5.272,
+    1
+   ],
+   [
+    5.62,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "teleportchannelbar4500"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 5.714,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     53,
+     "TeleportChannelBar4500"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "teleport_target": {
+  "n": 15,
+  "games": 4,
+  "self": 0.0,
+  "type": 5,
+  "durations": [
+   [
+    8.0,
+    4
+   ],
+   [
+    5.699,
+    1
+   ],
+   [
+    5.758,
+    1
+   ],
+   [
+    5.176,
+    1
+   ],
+   [
+    5.272,
+    1
+   ],
+   [
+    5.62,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "teleportchannelbar4500"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 5.884,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     53,
+     "TeleportChannelBar4500"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.267
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.067
+   ]
+  ]
+ },
+ "s12_summonerteleportmanager": {
+  "n": 18,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    18
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "summonerteleport"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "#0cf347e6"
+    ],
+    0.056
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.0,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    237
+   ],
+   [
+    "#6a4229fc",
+    190
+   ],
+   [
+    "lissandrabasicattack2",
+    81
+   ],
+   [
+    "lissandraw",
+    81
+   ],
+   [
+    "lissandrabasicattack",
+    78
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.333
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.278
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.167
+   ],
+   [
+    [
+     "slot",
+     5,
+     "S12_SummonerTeleportUpgrade"
+    ],
+    0.111
+   ],
+   [
+    [
+     "slot",
+     4,
+     "S12_SummonerTeleportUpgrade"
+    ],
+    0.056
+   ]
+  ]
+ },
+ "2508burn": {
+  "n": 133,
+  "games": 4,
+  "self": 0.023,
+  "type": 13,
+  "durations": [
+   [
+    2.9,
+    133
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.932
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.511
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.391
+   ],
+   [
+    [
+     "hit",
+     "lissandraw"
+    ],
+    0.286
+   ],
+   [
+    [
+     "hit",
+     "lissandrar"
+    ],
+    0.128
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.113
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.398
+   ],
+   [
+    [
+     "death"
+    ],
+    0.391
+   ],
+   [
+    [
+     "other"
+    ],
+    0.09
+   ],
+   [
+    [
+     "my cast",
+     "lissandraw"
+    ],
+    0.075
+   ],
+   [
+    [
+     "my cast",
+     "lissandraqmissile"
+    ],
+    0.038
+   ]
+  ],
+  "lived_med": 2.472,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    43
+   ],
+   [
+    "lissandrar",
+    9
+   ],
+   [
+    "lissandrabasicattack2",
+    4
+   ],
+   [
+    "lissandrabasicattack",
+    4
+   ],
+   [
+    "lissandraq",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.083
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.729
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.241
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.038
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.023
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.008
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.195
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.113
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.008
+   ]
+  ]
+ },
+ "lissandrarspellshieldcheck": {
+  "n": 35,
+  "games": 4,
+  "self": 0.0,
+  "type": 3,
+  "durations": [
+   [
+    0.25,
+    35
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "lissandrar"
+    ],
+    0.943
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.057
+   ],
+   [
+    [
+     "end",
+     "qiyanapassivecd_water"
+    ],
+    0.029
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.029
+   ],
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.029
+   ],
+   [
+    [
+     "end",
+     "lissandrarenemy"
+    ],
+    0.029
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.401,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.029
+   ],
+   [
+    [
+     "slot",
+     48,
+     "LissandraREnemy"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "a7"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.314
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.057
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.029
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.657
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.171
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.114
+   ],
+   [
+    [
+     "slot",
+     2,
+     ""
+    ],
+    0.029
+   ]
+  ]
+ },
+ "lissandrarenemy": {
+  "n": 35,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    5.0,
+    35
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "lissandrar"
+    ],
+    0.943
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.057
+   ],
+   [
+    [
+     "end",
+     "qiyanapassivecd_water"
+    ],
+    0.029
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.029
+   ],
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.029
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.771
+   ],
+   [
+    [
+     "my hit",
+     "lissandrar"
+    ],
+    0.114
+   ],
+   [
+    [
+     "my cast",
+     "lissandraq"
+    ],
+    0.029
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.029
+   ],
+   [
+    [
+     "my cast",
+     "lissandrar"
+    ],
+    0.029
+   ]
+  ],
+  "lived_med": 0.401,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    13
+   ],
+   [
+    "#00000000",
+    5
+   ],
+   [
+    "lissandrar",
+    4
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    2
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.029
+   ],
+   [
+    [
+     "slot",
+     48,
+     "LissandraREnemy"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "a7"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.971
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.057
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.029
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.086
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.914
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.057
+   ],
+   [
+    [
+     "slot",
+     2,
+     ""
+    ],
+    0.029
+   ],
+   [
+    [
+     "slot",
+     48,
+     "LissandraREnemy"
+    ],
+    0.029
+   ]
+  ]
+ },
+ "lissandrarenemy2": {
+  "n": 33,
+  "games": 4,
+  "self": 0.0,
+  "type": 5,
+  "durations": [
+   [
+    1.5,
+    21
+   ],
+   [
+    1.41,
+    5
+   ],
+   [
+    1.275,
+    2
+   ],
+   [
+    1.05,
+    2
+   ],
+   [
+    0.987,
+    2
+   ],
+   [
+    1.128,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "lissandrarenemy"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    0.758
+   ],
+   [
+    [
+     "hit",
+     "lissandrar"
+    ],
+    0.121
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.061
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.061
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.061
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.939
+   ],
+   [
+    [
+     "other"
+    ],
+    0.061
+   ]
+  ],
+  "lived_med": 1.57,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.182
+   ],
+   [
+    [
+     "cooldown",
+     "a7"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.97
+   ],
+   [
+    [
+     "fx_until_end",
+     145064564
+    ],
+    0.97
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.182
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.061
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.485
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.939
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.061
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.03
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.03
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.03
+   ]
+  ]
+ },
+ "lissandrarslow": {
+  "n": 84,
+  "games": 4,
+  "self": 0.0,
+  "type": 11,
+  "durations": [
+   [
+    0.5,
+    62
+   ],
+   [
+    0.47,
+    8
+   ],
+   [
+    0.35,
+    6
+   ],
+   [
+    0.425,
+    3
+   ],
+   [
+    0.329,
+    3
+   ],
+   [
+    0.399,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "lissandrar"
+    ],
+    1.286
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.369
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.202
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.19
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.119
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.119
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.738
+   ],
+   [
+    [
+     "time"
+    ],
+    0.143
+   ],
+   [
+    [
+     "my cast",
+     "lissandraqmissile"
+    ],
+    0.119
+   ]
+  ],
+  "lived_med": 1.87,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.595
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.119
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.071
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.06
+   ],
+   [
+    [
+     "cooldown",
+     "a7"
+    ],
+    0.048
+   ],
+   [
+    [
+     "fx_until_end",
+     145064564
+    ],
+    0.024
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.726
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.107
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.048
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.048
+   ],
+   [
+    [
+     "fx",
+     75680508
+    ],
+    0.012
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.012
+   ]
+  ]
+ },
+ "lissandrapassivevictim": {
+  "n": 71,
+  "games": 4,
+  "self": 0.0,
+  "type": 1,
+  "durations": [
+   [
+    4.0,
+    71
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.451
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.268
+   ],
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.169
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.099
+   ],
+   [
+    [
+     "hit",
+     "lissandraw"
+    ],
+    0.07
+   ],
+   [
+    [
+     "hit",
+     "lissandrabasicattack2"
+    ],
+    0.056
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.144,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.634
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.324
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.324
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.324
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.141
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.07
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.31
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.028
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.014
+   ]
+  ]
+ },
+ "lissandraslow": {
+  "n": 123,
+  "games": 4,
+  "self": 0.0,
+  "type": 11,
+  "durations": [
+   [
+    0.5,
+    102
+   ],
+   [
+    0.47,
+    9
+   ],
+   [
+    0.35,
+    7
+   ],
+   [
+    0.425,
+    2
+   ],
+   [
+    0.329,
+    2
+   ],
+   [
+    0.399,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.699
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.114
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.106
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.057
+   ],
+   [
+    [
+     "end",
+     "8020visualdebuff"
+    ],
+    0.049
+   ],
+   [
+    [
+     "end",
+     "gatlingdebuff"
+    ],
+    0.041
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.504
+   ],
+   [
+    [
+     "death"
+    ],
+    0.26
+   ],
+   [
+    [
+     "time"
+    ],
+    0.236
+   ]
+  ],
+  "lived_med": 1.338,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.528
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.358
+   ],
+   [
+    [
+     "fx",
+     133134611
+    ],
+    0.008
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.008
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.008
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.008
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.39
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.024
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.016
+   ],
+   [
+    [
+     "fx",
+     75680508
+    ],
+    0.008
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.008
+   ]
+  ]
+ },
+ "lissandrapassiveexplosionaudio": {
+  "n": 71,
+  "games": 4,
+  "self": 0.0,
+  "type": 1,
+  "durations": [
+   [
+    3.0,
+    71
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "lissandrapassive"
+    ],
+    0.915
+   ],
+   [
+    [
+     "none"
+    ],
+    0.535
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.141
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.07
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.056
+   ],
+   [
+    [
+     "end",
+     "3171speed"
+    ],
+    0.042
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.207,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.31
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.028
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.014
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.099
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.014
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.014
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.014
+   ]
+  ]
+ },
+ "recall": {
+  "n": 42,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    7.9,
+    42
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.69
+   ],
+   [
+    [
+     "other"
+    ],
+    0.31
+   ]
+  ],
+  "lived_med": 8.016,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.048
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.595
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.238
+   ]
+  ]
+ },
+ "srx_dragonbuffchemtech": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    35
+   ],
+   [
+    "#6a4229fc",
+    12
+   ],
+   [
+    "lissandrabasicattack2",
+    8
+   ],
+   [
+    "#00000000",
+    8
+   ],
+   [
+    "lissandraw",
+    7
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SRX_DragonBuffChemtech"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "itemlostchapter": {
+  "n": 12,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    3.0,
+    12
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "lissandraw"
+    ],
+    0.417
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.333
+   ],
+   [
+    [
+     "none"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.207,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    18
+   ],
+   [
+    "#6a4229fc",
+    12
+   ],
+   [
+    "lissandraw",
+    8
+   ],
+   [
+    "lissandrabasicattack2",
+    5
+   ],
+   [
+    "lissandrabasicattack",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.333
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.167
+   ],
+   [
+    [
+     "fx",
+     75680508
+    ],
+    0.083
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.083
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "slow": {
+  "n": 21,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.88,
+    7
+   ],
+   [
+    2.82,
+    4
+   ],
+   [
+    2.64,
+    3
+   ],
+   [
+    1.41,
+    2
+   ],
+   [
+    1.25,
+    2
+   ],
+   [
+    3.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.619
+   ],
+   [
+    [
+     "end",
+     "evelynnw"
+    ],
+    0.143
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.095
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.095
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.095
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.095
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.81
+   ],
+   [
+    [
+     "other"
+    ],
+    0.19
+   ]
+  ],
+  "lived_med": 1.904,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    28
+   ],
+   [
+    "lissandraq",
+    13
+   ],
+   [
+    "#f86f3d33",
+    7
+   ],
+   [
+    "lissandraw",
+    6
+   ],
+   [
+    "lissandrapassive",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.095
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.619
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.143
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.048
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.952
+   ],
+   [
+    [
+     "fx",
+     6941860
+    ],
+    0.048
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.048
+   ]
+  ]
+ },
+ "renataq": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 12,
+  "durations": [
+   [
+    0.94,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.102,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "perks_arcanecomet_mis",
+    3
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.333
+   ],
+   [
+    [
+     "fx",
+     39594263
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ]
+  ]
+ },
+ "renataqrecastbuff": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.5,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.833
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.234,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     258804818
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.167
+   ]
+  ],
+  "at_end": []
+ },
+ "kaynrenemymark": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.667
+   ],
+   [
+    [
+     "end",
+     "renatapassivedebuff"
+    ],
+    0.333
+   ],
+   [
+    [
+     "none"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 3.13,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#f86f3d33",
+    1
+   ],
+   [
+    "lissandraq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.333
+   ]
+  ],
+  "at_end": []
+ },
+ "phosphorusbombblind": {
+  "n": 7,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    6.0,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.429
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.429
+   ],
+   [
+    [
+     "end",
+     "renatapassivedebuff"
+    ],
+    0.143
+   ],
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.143
+   ],
+   [
+    [
+     "hit",
+     "lissandrar"
+    ],
+    0.143
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.143
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.571
+   ],
+   [
+    [
+     "time"
+    ],
+    0.429
+   ]
+  ],
+  "lived_med": 1.71,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    11
+   ],
+   [
+    "lissandraq",
+    8
+   ],
+   [
+    "lissandrabasicattack2",
+    2
+   ],
+   [
+    "lissandrar",
+    2
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.286
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.286
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.143
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.143
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.714
+   ]
+  ]
+ },
+ "malzaharr": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 25,
+  "durations": [
+   [
+    4.25,
+    1
+   ],
+   [
+    2.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "malzahare"
+    ],
+    0.5
+   ],
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.735,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "globaltruesight": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "malzahare"
+    ],
+    0.5
+   ],
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.735,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "sru_crabspeedboost": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    2.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.809,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "planthealthslow": {
+  "n": 7,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.3,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.415,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.286
+   ]
+  ]
+ },
+ "srt_2024_horde_dot": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    73
+   ],
+   [
+    "#00000000",
+    48
+   ],
+   [
+    "lissandraq",
+    33
+   ],
+   [
+    "lissandrabasicattack2",
+    14
+   ],
+   [
+    "quinnq",
+    12
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SRT_2024_Horde_DoT"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "srt_2024_horde_summoner": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    54
+   ],
+   [
+    "#6a4229fc",
+    40
+   ],
+   [
+    "lissandraq",
+    36
+   ],
+   [
+    "burning",
+    13
+   ],
+   [
+    "quinnq",
+    12
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SRT_2024_Horde_Summoner"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "FaelightSeenByWardBuffBar": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.801,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.167
+   ]
+  ],
+  "at_end": []
+ },
+ "renataemark": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    1.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.167
+   ],
+   [
+    [
+     "hit",
+     "perks_arcanecomet_mis_arc"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.102,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    11
+   ],
+   [
+    "lissandrapassive",
+    6
+   ],
+   [
+    "#f86f3d33",
+    3
+   ],
+   [
+    "lissandraq",
+    3
+   ],
+   [
+    "lissandrar",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.833
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.167
+   ]
+  ]
+ },
+ "stun": {
+  "n": 21,
+  "games": 4,
+  "self": 1.0,
+  "type": 5,
+  "durations": [
+   [
+    1.0,
+    13
+   ],
+   [
+    0.94,
+    2
+   ],
+   [
+    1.54,
+    2
+   ],
+   [
+    0.47,
+    1
+   ],
+   [
+    0.4,
+    1
+   ],
+   [
+    0.88,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.619
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.143
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.095
+   ],
+   [
+    [
+     "end",
+     "ambessarsuppressiondebuff"
+    ],
+    0.095
+   ],
+   [
+    [
+     "cast",
+     "lissandrae"
+    ],
+    0.048
+   ],
+   [
+    [
+     "end",
+     "lissandrae"
+    ],
+    0.048
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.952
+   ],
+   [
+    [
+     "other"
+    ],
+    0.048
+   ]
+  ],
+  "lived_med": 1.135,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    11
+   ],
+   [
+    "lissandraq",
+    8
+   ],
+   [
+    "#f86f3d33",
+    5
+   ],
+   [
+    "lissandrapassive",
+    3
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.238
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.905
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.048
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.048
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.952
+   ],
+   [
+    [
+     "fx",
+     6941860
+    ],
+    0.048
+   ]
+  ]
+ },
+ "lulur": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    7.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 7.249,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    5
+   ],
+   [
+    "lissandrabasicattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ]
+ },
+ "lulubonushpcounter": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    7.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 7.249,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    5
+   ],
+   [
+    "lissandrabasicattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ]
+ },
+ "kaynpmessagekaynhastransformed": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    0.25,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.267,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "lissandrarself": {
+  "n": 12,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    2.5,
+    12
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "lissandrar"
+    ],
+    0.833
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.167
+   ],
+   [
+    [
+     "hit",
+     "lissandrar"
+    ],
+    0.083
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.083
+   ],
+   [
+    [
+     "end",
+     "galioqsuperdot"
+    ],
+    0.083
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.639,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandrar",
+    12
+   ],
+   [
+    "#6a4229fc",
+    12
+   ],
+   [
+    "#00000000",
+    9
+   ],
+   [
+    "lissandraq",
+    5
+   ],
+   [
+    "#f86f3d33",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.583
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     145064564
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.167
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.083
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.083
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.917
+   ]
+  ]
+ },
+ "srx_dragonbuffmountain": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    23
+   ],
+   [
+    "lissandraq",
+    21
+   ],
+   [
+    "#6a4229fc",
+    11
+   ],
+   [
+    "lissandrar",
+    6
+   ],
+   [
+    "lissandraw",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "srx_dragonsoulbuffocean_preview": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    4
+   ],
+   [
+    "lissandraq",
+    3
+   ],
+   [
+    "lissandrar",
+    2
+   ],
+   [
+    "#f86f3d33",
+    1
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "gatlingdebuff": {
+  "n": 10,
+  "games": 4,
+  "self": 1.0,
+  "type": 28,
+  "durations": [
+   [
+    2.0,
+    10
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.3
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "dangerzonetarget"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "phosphorusbombblind"
+    ],
+    0.1
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "renatapassivedebuff"
+    ],
+    0.1
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.5
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.3
+   ],
+   [
+    [
+     "time"
+    ],
+    0.2
+   ]
+  ],
+  "lived_med": 2.405,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    61
+   ],
+   [
+    "lissandrar",
+    14
+   ],
+   [
+    "lissandraq",
+    7
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    5
+   ],
+   [
+    "#f86f3d33",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.4
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.9
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.7
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.1
+   ]
+  ]
+ },
+ "3118visualdebuff": {
+  "n": 42,
+  "games": 4,
+  "self": 0.048,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    42
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "lissandrar"
+    ],
+    0.452
+   ],
+   [
+    [
+     "end",
+     "lissandrarenemy"
+    ],
+    0.357
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.119
+   ],
+   [
+    [
+     "cast",
+     "lissandrar"
+    ],
+    0.071
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.048
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.881
+   ],
+   [
+    [
+     "death"
+    ],
+    0.071
+   ],
+   [
+    [
+     "my cast",
+     "lissandraqmissile"
+    ],
+    0.024
+   ],
+   [
+    [
+     "my cast",
+     "lissandraq"
+    ],
+    0.024
+   ]
+  ],
+  "lived_med": 1.102,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraw",
+    1
+   ],
+   [
+    "#6a4229fc",
+    1
+   ],
+   [
+    "lissandrabasicattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.714
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.595
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.405
+   ],
+   [
+    [
+     "cooldown",
+     "a7"
+    ],
+    0.357
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.071
+   ],
+   [
+    [
+     "fx_until_end",
+     145064564
+    ],
+    0.048
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.81
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.048
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.024
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.024
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.024
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3137_Heal_Missile"
+    ],
+    0.024
+   ]
+  ]
+ },
+ "sr_2026_s1_rolebound_mid_questcompleted": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "sr_2026_s1_rolebound_mid_quest"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "end",
+     "sr_2026_s2_rolebound_roamingbank"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    28
+   ],
+   [
+    "lissandraq",
+    26
+   ],
+   [
+    "#6a4229fc",
+    10
+   ],
+   [
+    "lissandrabasicattack2",
+    8
+   ],
+   [
+    "lissandrabasicattack",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ]
+  ],
+  "at_end": []
+ },
+ "feats_noxianbootupgradebuff": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "sr_2026_s1_rolebound_mid_quest"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "end",
+     "sr_2026_s2_rolebound_roamingbank"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    28
+   ],
+   [
+    "lissandraq",
+    26
+   ],
+   [
+    "#6a4229fc",
+    10
+   ],
+   [
+    "lissandrabasicattack2",
+    8
+   ],
+   [
+    "lissandrabasicattack",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ]
+  ],
+  "at_end": []
+ },
+ "feats_noxianbootpurchasebuff": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "sr_2026_s1_rolebound_mid_quest"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "end",
+     "sr_2026_s2_rolebound_roamingbank"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    28
+   ],
+   [
+    "lissandraq",
+    26
+   ],
+   [
+    "#6a4229fc",
+    10
+   ],
+   [
+    "lissandrabasicattack2",
+    8
+   ],
+   [
+    "lissandrabasicattack",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ]
+  ],
+  "at_end": []
+ },
+ "dangerzonetarget": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    1.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "lissandrae"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.27,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraw",
+    2
+   ],
+   [
+    "lissandraq",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ],
+   [
+    "lissandrabasicattack",
+    1
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ]
+  ]
+ },
+ "summonerteleporthaste": {
+  "n": 11,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    4.0,
+    11
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "summonerteleport"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s12_summonerteleportmanager"
+    ],
+    0.636
+   ],
+   [
+    [
+     "end",
+     "#0cf347e6"
+    ],
+    0.091
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.176,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    22
+   ],
+   [
+    "lissandraw",
+    9
+   ],
+   [
+    "#6a4229fc",
+    7
+   ],
+   [
+    "lissandrabasicattack2",
+    4
+   ],
+   [
+    "lissandrabasicattack",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.727
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.273
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.818
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.091
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.091
+   ],
+   [
+    [
+     "slot",
+     2,
+     ""
+    ],
+    0.091
+   ]
+  ]
+ },
+ "olafslow": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.114,
+    1
+   ],
+   [
+    2.82,
+    1
+   ],
+   [
+    1.549,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "renatapassivedebuff"
+    ],
+    0.667
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.731,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    21
+   ],
+   [
+    "lissandraq",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    7.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    3.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ]
+  ]
+ },
+ "olafqshred": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    4.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "renatapassivedebuff"
+    ],
+    0.667
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 4.109,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    21
+   ],
+   [
+    "lissandraq",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    7.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    3.667
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "3876healthsizeupdisplay": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    2.5,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.575,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "3876msbufffalloff": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    2.5,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.575,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "burning": {
+  "n": 33,
+  "games": 4,
+  "self": 0.212,
+  "type": 13,
+  "durations": [
+   [
+    3.0,
+    33
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "burning"
+    ],
+    0.758
+   ],
+   [
+    [
+     "hit",
+     "lissandrabasicattack"
+    ],
+    0.515
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.485
+   ],
+   [
+    [
+     "hit",
+     "lissandrabasicattack2"
+    ],
+    0.273
+   ],
+   [
+    [
+     "none"
+    ],
+    0.121
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.061
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.455
+   ],
+   [
+    [
+     "death"
+    ],
+    0.242
+   ],
+   [
+    [
+     "other"
+    ],
+    0.212
+   ],
+   [
+    [
+     "my cast",
+     "lissandraw"
+    ],
+    0.061
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.03
+   ]
+  ],
+  "lived_med": 3.039,
+  "ticks": 47,
+  "period_med": 1.07,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    13
+   ],
+   [
+    "lissandraq",
+    10
+   ],
+   [
+    "lissandrar",
+    7
+   ],
+   [
+    "#00000000",
+    7
+   ],
+   [
+    "#f86f3d33",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.606
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.212
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.061
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.091
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.03
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.03
+   ]
+  ]
+ },
+ "blessingofthelizardelderslow": {
+  "n": 32,
+  "games": 4,
+  "self": 0.219,
+  "type": 11,
+  "durations": [
+   [
+    3.0,
+    25
+   ],
+   [
+    2.1,
+    4
+   ],
+   [
+    2.82,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "burning"
+    ],
+    0.719
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "lissandrabasicattack"
+    ],
+    0.469
+   ],
+   [
+    [
+     "hit",
+     "lissandrabasicattack2"
+    ],
+    0.312
+   ],
+   [
+    [
+     "none"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.062
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.531
+   ],
+   [
+    [
+     "death"
+    ],
+    0.25
+   ],
+   [
+    [
+     "other"
+    ],
+    0.125
+   ],
+   [
+    [
+     "my cast",
+     "lissandraw"
+    ],
+    0.062
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.031
+   ]
+  ],
+  "lived_med": 2.973,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    13
+   ],
+   [
+    "lissandraq",
+    10
+   ],
+   [
+    "lissandrar",
+    7
+   ],
+   [
+    "#00000000",
+    7
+   ],
+   [
+    "#f86f3d33",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.625
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.188
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.25
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.094
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.031
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.031
+   ]
+  ]
+ },
+ "blessingofthelizardelder": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    120.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "crestoftheancientgolemvfx"
+    ],
+    0.333
+   ],
+   [
+    [
+     "none"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardeldervfx"
+    ],
+    0.167
+   ],
+   [
+    [
+     "hit",
+     "lissandrabasicattack2"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.333
+   ],
+   [
+    [
+     "my hit",
+     "#f86f3d33"
+    ],
+    0.167
+   ],
+   [
+    [
+     "time"
+    ],
+    0.167
+   ],
+   [
+    [
+     "my hit",
+     "lissandrapassive"
+    ],
+    0.167
+   ],
+   [
+    [
+     "my hit",
+     "#00000000"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 80.652,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    228
+   ],
+   [
+    "lissandraq",
+    148
+   ],
+   [
+    "#6a4229fc",
+    95
+   ],
+   [
+    "burning",
+    57
+   ],
+   [
+    "lissandraw",
+    30
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.167
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.667
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.167
+   ]
+  ]
+ },
+ "blessingofthelizardeldervfx": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    99999.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "crestoftheancientgolemvfx"
+    ],
+    0.333
+   ],
+   [
+    [
+     "none"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "lissandrabasicattack2"
+    ],
+    0.167
+   ],
+   [
+    [
+     "hit",
+     "perks_arcanecomet_mis_arc"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.5
+   ],
+   [
+    [
+     "my hit",
+     "lissandraq"
+    ],
+    0.167
+   ],
+   [
+    [
+     "my hit",
+     "#f86f3d33"
+    ],
+    0.167
+   ],
+   [
+    [
+     "my hit",
+     "lissandrapassive"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 57.035,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    228
+   ],
+   [
+    "lissandraq",
+    120
+   ],
+   [
+    "#6a4229fc",
+    82
+   ],
+   [
+    "burning",
+    41
+   ],
+   [
+    "lissandraw",
+    24
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.167
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.667
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.333
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.333
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.167
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.167
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.167
+   ]
+  ]
+ },
+ "crestoftheancientgolem": {
+  "n": 7,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    120.0,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "lissandraw"
+    ],
+    0.714
+   ],
+   [
+    [
+     "none"
+    ],
+    0.429
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.286
+   ],
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.286
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.286
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardeldervfx"
+    ],
+    0.143
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.857
+   ],
+   [
+    [
+     "time"
+    ],
+    0.143
+   ]
+  ],
+  "lived_med": 80.652,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    141
+   ],
+   [
+    "#00000000",
+    139
+   ],
+   [
+    "lissandraw",
+    31
+   ],
+   [
+    "#6a4229fc",
+    30
+   ],
+   [
+    "lissandrabasicattack",
+    27
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.857
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.571
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.286
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.286
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.286
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.286
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.286
+   ]
+  ]
+ },
+ "crestoftheancientgolemvfx": {
+  "n": 9,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    99999.0,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "lissandraw"
+    ],
+    0.556
+   ],
+   [
+    [
+     "none"
+    ],
+    0.444
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.222
+   ],
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.222
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.222
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardeldervfx"
+    ],
+    0.111
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.111
+   ],
+   [
+    [
+     "my hit",
+     "#f86f3d33"
+    ],
+    0.111
+   ],
+   [
+    [
+     "my hit",
+     "perks_arcanecomet_mis_arc"
+    ],
+    0.111
+   ]
+  ],
+  "lived_med": 52.24,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    141
+   ],
+   [
+    "#00000000",
+    139
+   ],
+   [
+    "#6a4229fc",
+    32
+   ],
+   [
+    "lissandraw",
+    31
+   ],
+   [
+    "lissandrabasicattack",
+    28
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.222
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.556
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.222
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.556
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.111
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.111
+   ]
+  ]
+ },
+ "waterdragonslow": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.88,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "lissandrapassive"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.75
+   ],
+   [
+    [
+     "other"
+    ],
+    0.25
+   ]
+  ],
+  "lived_med": 2.138,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.75
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.75
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.25
+   ]
+  ]
+ },
+ "srx_dragonbuffocean": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    47
+   ],
+   [
+    "#6a4229fc",
+    26
+   ],
+   [
+    "burning",
+    10
+   ],
+   [
+    "lissandraw",
+    8
+   ],
+   [
+    "lissandrabasicattack",
+    8
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "kaynwslow": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.41,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "renatapassivedebuff"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.936,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    2
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "planthawkshotbuff": {
+  "n": 49,
+  "games": 4,
+  "self": 0.265,
+  "type": 3,
+  "durations": [
+   [
+    12.0,
+    27
+   ],
+   [
+    3.0,
+    22
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.898
+   ],
+   [
+    [
+     "hit",
+     "planthawkshotchemtech"
+    ],
+    0.082
+   ],
+   [
+    [
+     "end",
+     "#0ddce281"
+    ],
+    0.02
+   ],
+   [
+    [
+     "hit",
+     "quinnq"
+    ],
+    0.02
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.673
+   ],
+   [
+    [
+     "death"
+    ],
+    0.245
+   ],
+   [
+    [
+     "my hit",
+     "lissandrabasicattack"
+    ],
+    0.02
+   ],
+   [
+    [
+     "my hit",
+     "#00000000"
+    ],
+    0.02
+   ],
+   [
+    [
+     "time"
+    ],
+    0.02
+   ]
+  ],
+  "lived_med": 4.012,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    14
+   ],
+   [
+    "#00000000",
+    7
+   ],
+   [
+    "lissandraw",
+    4
+   ],
+   [
+    "lissandrabasicattack",
+    3
+   ],
+   [
+    "burning",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.122
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.041
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.184
+   ]
+  ]
+ },
+ "plantsatchelknockback": {
+  "n": 8,
+  "games": 4,
+  "self": 0.875,
+  "type": 31,
+  "durations": [
+   [
+    1.5,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.835,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.125
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.875
+   ]
+  ],
+  "at_end": []
+ },
+ "2503burn": {
+  "n": 447,
+  "games": 4,
+  "self": 0.009,
+  "type": 13,
+  "durations": [
+   [
+    2.9,
+    447
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.826
+   ],
+   [
+    [
+     "hit",
+     "lissandraw"
+    ],
+    0.488
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.452
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.192
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.17
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.072
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "death"
+    ],
+    0.577
+   ],
+   [
+    [
+     "time"
+    ],
+    0.166
+   ],
+   [
+    [
+     "my cast",
+     "lissandraw"
+    ],
+    0.116
+   ],
+   [
+    [
+     "other"
+    ],
+    0.098
+   ],
+   [
+    [
+     "my cast",
+     "lissandraqmissile"
+    ],
+    0.025
+   ]
+  ],
+  "lived_med": 0.669,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    43
+   ],
+   [
+    "lissandrar",
+    10
+   ],
+   [
+    "lissandraq",
+    4
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    2
+   ],
+   [
+    "lissandrabasicattack2",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.204
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.919
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.208
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.063
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.011
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.009
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.669
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.143
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.009
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.007
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.007
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.004
+   ]
+  ]
+ },
+ "renatardebuff": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 9,
+  "durations": [
+   [
+    1.645,
+    2
+   ],
+   [
+    1.175,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 1.403,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    35
+   ],
+   [
+    "lissandrar",
+    9
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    3
+   ],
+   [
+    "#f86f3d33",
+    3
+   ],
+   [
+    "lissandrabasicattack",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    3.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.333
+   ]
+  ]
+ },
+ "kledrchargeallyspeedbuff": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    0.25,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.136,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "6653burn": {
+  "n": 14,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    2.9,
+    14
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.857
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.071
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.071
+   ],
+   [
+    [
+     "end",
+     "leonasunlight"
+    ],
+    0.071
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.643
+   ],
+   [
+    [
+     "time"
+    ],
+    0.286
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.071
+   ]
+  ],
+  "lived_med": 2.931,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    9
+   ],
+   [
+    "#6a4229fc",
+    7
+   ],
+   [
+    "lissandrar",
+    5
+   ],
+   [
+    "lissandrabasicattack2",
+    4
+   ],
+   [
+    "lissandraw",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.071
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.214
+   ],
+   [
+    [
+     "fx",
+     49953683
+    ],
+    0.071
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.286
+   ]
+  ]
+ },
+ "3116slow": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.94,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "2503burn"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.5
+   ],
+   [
+    [
+     "time"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 1.604,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    7.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     49953683
+    ],
+    0.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "galioqsuperdot": {
+  "n": 43,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    43
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.744
+   ],
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    0.116
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.116
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.093
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.07
+   ],
+   [
+    [
+     "cast",
+     "lissandrae"
+    ],
+    0.047
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.907
+   ],
+   [
+    [
+     "my cast",
+     "item2003"
+    ],
+    0.023
+   ],
+   [
+    [
+     "my hit",
+     "lissandraw"
+    ],
+    0.023
+   ],
+   [
+    [
+     "my cast",
+     "lissandrar"
+    ],
+    0.023
+   ],
+   [
+    [
+     "my cast",
+     "summonerflash"
+    ],
+    0.023
+   ]
+  ],
+  "lived_med": 0.468,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    13
+   ],
+   [
+    "lissandraq",
+    6
+   ],
+   [
+    "#6a4229fc",
+    5
+   ],
+   [
+    "#f86f3d33",
+    3
+   ],
+   [
+    "lissandrabasicattack2",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.581
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.047
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.047
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.047
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.023
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.023
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.326
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.047
+   ]
+  ]
+ },
+ "galioknockup": {
+  "n": 16,
+  "games": 4,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    1.0,
+    13
+   ],
+   [
+    0.75,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.688
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.25
+   ],
+   [
+    [
+     "hit",
+     "lissandraw"
+    ],
+    0.125
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.062
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.062
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.062
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.875
+   ],
+   [
+    [
+     "other"
+    ],
+    0.125
+   ]
+  ],
+  "lived_med": 0.769,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    3
+   ],
+   [
+    "lissandrabasicattack2",
+    1
+   ],
+   [
+    "elixirofsorcery",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.062
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.062
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.062
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.062
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.438
+   ]
+  ]
+ },
+ "qiyanaqroot": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 12,
+  "durations": [
+   [
+    0.5,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "lissandrapassive"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardelder"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardeldervfx"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "3171speed"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.635,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    1
+   ],
+   [
+    "lissandrar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "qiyanaqslow": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "lissandrapassive"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardelder"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardeldervfx"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "3171speed"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.17,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    2
+   ],
+   [
+    "lissandrar",
+    1
+   ],
+   [
+    "lissandrae",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "qiyanapassivecd_rock": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "end",
+     "lissandrae"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cast",
+     "lissandraemissile"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 25.16,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    29
+   ],
+   [
+    "lissandraq",
+    11
+   ],
+   [
+    "lissandrapassive",
+    8
+   ],
+   [
+    "#f86f3d33",
+    3
+   ],
+   [
+    "lissandraw",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.75
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.25
+   ]
+  ],
+  "at_end": []
+ },
+ "taunt": {
+  "n": 15,
+  "games": 4,
+  "self": 1.0,
+  "type": 8,
+  "durations": [
+   [
+    1.248,
+    2
+   ],
+   [
+    1.5,
+    2
+   ],
+   [
+    1.034,
+    1
+   ],
+   [
+    0.714,
+    1
+   ],
+   [
+    1.168,
+    1
+   ],
+   [
+    0.981,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.6
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.267
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.067
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.067
+   ],
+   [
+    [
+     "end",
+     "srx_dragonchemtech_mutated_shield"
+    ],
+    0.067
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.867
+   ],
+   [
+    [
+     "other"
+    ],
+    0.133
+   ]
+  ],
+  "lived_med": 1.203,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    10
+   ],
+   [
+    "lissandrabasicattack",
+    8
+   ],
+   [
+    "#6a4229fc",
+    4
+   ],
+   [
+    "#f86f3d33",
+    4
+   ],
+   [
+    "lissandrabasicattack2",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.133
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.533
+   ]
+  ]
+ },
+ "galiowslow": {
+  "n": 15,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.248,
+    2
+   ],
+   [
+    1.5,
+    2
+   ],
+   [
+    1.034,
+    1
+   ],
+   [
+    0.714,
+    1
+   ],
+   [
+    1.168,
+    1
+   ],
+   [
+    0.981,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.6
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.267
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.067
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.067
+   ],
+   [
+    [
+     "end",
+     "srx_dragonchemtech_mutated_shield"
+    ],
+    0.067
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.249,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    11
+   ],
+   [
+    "lissandrabasicattack",
+    8
+   ],
+   [
+    "#6a4229fc",
+    4
+   ],
+   [
+    "#f86f3d33",
+    4
+   ],
+   [
+    "lissandrabasicattack2",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.133
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.867
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.467
+   ]
+  ]
+ },
+ "qiyanapassivecd_base": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "lissandraq"
+    ],
+    0.333
+   ],
+   [
+    [
+     "time"
+    ],
+    0.333
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 3.674,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    14
+   ],
+   [
+    "#00000000",
+    5
+   ],
+   [
+    "#f86f3d33",
+    4
+   ],
+   [
+    "lissandrar",
+    3
+   ],
+   [
+    "lissandraq",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "summonerexhaustslow": {
+  "n": 10,
+  "games": 4,
+  "self": 0.3,
+  "type": 11,
+  "durations": [
+   [
+    2.82,
+    5
+   ],
+   [
+    3.0,
+    2
+   ],
+   [
+    2.1,
+    1
+   ],
+   [
+    1.974,
+    1
+   ],
+   [
+    2.64,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerexhaust"
+    ],
+    0.7
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "qiyanarknockback"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "ambessaeslow"
+    ],
+    0.1
+   ],
+   [
+    [
+     "none"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.1
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.7
+   ],
+   [
+    [
+     "other"
+    ],
+    0.3
+   ]
+  ],
+  "lived_med": 2.841,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    9
+   ],
+   [
+    "lissandraq",
+    2
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "lissandraw",
+    2
+   ],
+   [
+    "lissandrabasicattack2",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.7
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.2
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.1
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.2
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.1
+   ]
+  ]
+ },
+ "summonerexhaust": {
+  "n": 10,
+  "games": 4,
+  "self": 0.3,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    10
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerexhaust"
+    ],
+    0.7
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "qiyanarknockback"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "ambessaeslow"
+    ],
+    0.1
+   ],
+   [
+    [
+     "none"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.1
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.8
+   ],
+   [
+    [
+     "other"
+    ],
+    0.2
+   ]
+  ],
+  "lived_med": 3.173,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    9
+   ],
+   [
+    "lissandraq",
+    2
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "lissandraw",
+    2
+   ],
+   [
+    "lissandrabasicattack2",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.7
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.1
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.3
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.1
+   ]
+  ]
+ },
+ "summonerexhaustdebuff": {
+  "n": 10,
+  "games": 4,
+  "self": 0.3,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    10
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerexhaust"
+    ],
+    0.7
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "qiyanarknockback"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "ambessaeslow"
+    ],
+    0.1
+   ],
+   [
+    [
+     "none"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.1
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.8
+   ],
+   [
+    [
+     "other"
+    ],
+    0.2
+   ]
+  ],
+  "lived_med": 3.173,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    9
+   ],
+   [
+    "lissandraq",
+    2
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "lissandraw",
+    2
+   ],
+   [
+    "lissandrabasicattack2",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.7
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.1
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.3
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.1
+   ]
+  ]
+ },
+ "qiyanarstun": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 5,
+  "durations": [
+   [
+    1.0,
+    4
+   ],
+   [
+    0.85,
+    1
+   ],
+   [
+    0.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.102,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    4
+   ],
+   [
+    "#00000000",
+    4
+   ],
+   [
+    "lissandrabasicattack2",
+    1
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ]
+  ]
+ },
+ "itemsmiteslow": {
+  "n": 9,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    2.0,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.889
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.111
+   ],
+   [
+    [
+     "end",
+     "itemcrystalflaskcharge"
+    ],
+    0.111
+   ],
+   [
+    [
+     "end",
+     "itemcrystalflask"
+    ],
+    0.111
+   ],
+   [
+    [
+     "end",
+     "evelynnwshred"
+    ],
+    0.111
+   ],
+   [
+    [
+     "end",
+     "volibearw"
+    ],
+    0.111
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 2.086,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    20
+   ],
+   [
+    "#f86f3d33",
+    7
+   ],
+   [
+    "lissandraq",
+    7
+   ],
+   [
+    "lissandrar",
+    5
+   ],
+   [
+    "#6a4229fc",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.778
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.778
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.111
+   ]
+  ]
+ },
+ "relicblueward": {
+  "n": 18,
+  "games": 4,
+  "self": 0.0,
+  "type": 6,
+  "durations": [
+   [
+    25000.0,
+    18
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "trinketorblvl3"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "death"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.676,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.222
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.167
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.111
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.222
+   ]
+  ]
+ },
+ "qiyanapassivecd_water": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "lissandrapassive"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardelder"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardeldervfx"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "3171speed"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "jhinrsight"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "lissandraqmissile"
+    ],
+    0.5
+   ],
+   [
+    [
+     "time"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 25.16,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     48,
+     "LissandraREnemy"
+    ],
+    0.5
+   ]
+  ]
+ },
+ "3171speed": {
+  "n": 32,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    4.0,
+    32
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.781
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.75
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.312
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.281
+   ],
+   [
+    [
+     "hit",
+     "lissandraw"
+    ],
+    0.281
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.562
+   ],
+   [
+    [
+     "time"
+    ],
+    0.281
+   ],
+   [
+    [
+     "my hit",
+     "#00000000"
+    ],
+    0.094
+   ],
+   [
+    [
+     "my cast",
+     "lissandraqmissile"
+    ],
+    0.031
+   ],
+   [
+    [
+     "my hit",
+     "lissandrapassive"
+    ],
+    0.031
+   ]
+  ],
+  "lived_med": 5.269,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    207
+   ],
+   [
+    "lissandraq",
+    54
+   ],
+   [
+    "#f86f3d33",
+    31
+   ],
+   [
+    "lissandrar",
+    19
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    15
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.688
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.688
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.281
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    0.062
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.062
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.031
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.781
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.031
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.031
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.031
+   ]
+  ]
+ },
+ "qiyanarknockback": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.5,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "lissandraw"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.667,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.333
+   ]
+  ]
+ },
+ "qiyanapassivecd_grass": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.333
+   ],
+   [
+    [
+     "none"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 25.123,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    8
+   ],
+   [
+    "lissandraq",
+    2
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.333
+   ]
+  ],
+  "at_end": []
+ },
+ "srt_2024_horde_dot_buff": {
+  "n": 9,
+  "games": 4,
+  "self": 0.0,
+  "type": 13,
+  "durations": [
+   [
+    4.6,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "lissandrabasicattack2"
+    ],
+    0.889
+   ],
+   [
+    [
+     "hit",
+     "lissandrabasicattack"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.111
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 9.59,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.556
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "jhinespotteddebuff": {
+  "n": 15,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.5,
+    15
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.8
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.133
+   ],
+   [
+    [
+     "cast",
+     "lissandrae"
+    ],
+    0.067
+   ],
+   [
+    [
+     "hit",
+     "illaoie"
+    ],
+    0.067
+   ],
+   [
+    [
+     "end",
+     "lissandrae"
+    ],
+    0.067
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.067
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.733
+   ],
+   [
+    [
+     "time"
+    ],
+    0.133
+   ],
+   [
+    [
+     "my cast",
+     "lissandraqmissile"
+    ],
+    0.067
+   ],
+   [
+    [
+     "my hit",
+     "lissandrapassive"
+    ],
+    0.067
+   ]
+  ],
+  "lived_med": 1.704,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    38
+   ],
+   [
+    "lissandraq",
+    7
+   ],
+   [
+    "#f86f3d33",
+    6
+   ],
+   [
+    "lissandrapassive",
+    6
+   ],
+   [
+    "lissandrar",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.4
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.933
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.067
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.067
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.133
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.067
+   ]
+  ]
+ },
+ "volibearqattack": {
+  "n": 11,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    1.25,
+    11
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.364
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.182
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.182
+   ],
+   [
+    [
+     "cast",
+     "lissandrar"
+    ],
+    0.091
+   ],
+   [
+    [
+     "cast",
+     "lissandraemissile"
+    ],
+    0.091
+   ],
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    0.091
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.369,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    11
+   ],
+   [
+    "lissandraq",
+    10
+   ],
+   [
+    "#f86f3d33",
+    5
+   ],
+   [
+    "lissandraw",
+    4
+   ],
+   [
+    "lissandrapassive",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.182
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.455
+   ]
+  ]
+ },
+ "#0f1b5ee1": {
+  "n": 16,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    4.0,
+    16
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.625
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.188
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.062
+   ],
+   [
+    [
+     "hit",
+     "lissandraw"
+    ],
+    0.062
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.75
+   ],
+   [
+    [
+     "time"
+    ],
+    0.188
+   ],
+   [
+    [
+     "my hit",
+     "#00000000"
+    ],
+    0.062
+   ]
+  ],
+  "lived_med": 1.937,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    23
+   ],
+   [
+    "lissandraq",
+    15
+   ],
+   [
+    "#6a4229fc",
+    10
+   ],
+   [
+    "lissandrabasicattack2",
+    6
+   ],
+   [
+    "lissandrapassive",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.062
+   ],
+   [
+    [
+     "fx",
+     6941860
+    ],
+    0.312
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.125
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.625
+   ],
+   [
+    [
+     "fx",
+     6941860
+    ],
+    0.438
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.125
+   ]
+  ]
+ },
+ "summonerdot": {
+  "n": 9,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    5.0,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.222
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.111
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.444
+   ],
+   [
+    [
+     "time"
+    ],
+    0.333
+   ],
+   [
+    [
+     "my hit",
+     "lissandrapassive"
+    ],
+    0.111
+   ],
+   [
+    [
+     "my hit",
+     "#00000000"
+    ],
+    0.111
+   ]
+  ],
+  "lived_med": 3.705,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    7
+   ],
+   [
+    "lissandraq",
+    6
+   ],
+   [
+    "#00000000",
+    4
+   ],
+   [
+    "lissandrar",
+    4
+   ],
+   [
+    "#f86f3d33",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.444
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.778
+   ]
+  ]
+ },
+ "grievouswound": {
+  "n": 9,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    5.0,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.222
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.111
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.444
+   ],
+   [
+    [
+     "time"
+    ],
+    0.333
+   ],
+   [
+    [
+     "my hit",
+     "lissandrapassive"
+    ],
+    0.111
+   ],
+   [
+    [
+     "my hit",
+     "#00000000"
+    ],
+    0.111
+   ]
+  ],
+  "lived_med": 3.705,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    7
+   ],
+   [
+    "lissandraq",
+    6
+   ],
+   [
+    "#00000000",
+    4
+   ],
+   [
+    "lissandrar",
+    4
+   ],
+   [
+    "#f86f3d33",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.444
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.778
+   ]
+  ]
+ },
+ "volibearw": {
+  "n": 15,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    8.0,
+    15
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.8
+   ],
+   [
+    [
+     "end",
+     "#0f1b5ee1"
+    ],
+    0.467
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "stun"
+    ],
+    0.067
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.067
+   ],
+   [
+    [
+     "end",
+     "evelynnwcharmvfx"
+    ],
+    0.067
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.467
+   ],
+   [
+    [
+     "other"
+    ],
+    0.4
+   ],
+   [
+    [
+     "my hit",
+     "lissandrapassive"
+    ],
+    0.067
+   ],
+   [
+    [
+     "my hit",
+     "#00000000"
+    ],
+    0.067
+   ]
+  ],
+  "lived_med": 6.546,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    14
+   ],
+   [
+    "#00000000",
+    12
+   ],
+   [
+    "#6a4229fc",
+    10
+   ],
+   [
+    "lissandrabasicattack2",
+    8
+   ],
+   [
+    "#f86f3d33",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.2
+   ],
+   [
+    [
+     "fx",
+     6941860
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.2
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.6
+   ],
+   [
+    [
+     "fx",
+     6941860
+    ],
+    0.2
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.067
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.067
+   ]
+  ]
+ },
+ "volibeareslow": {
+  "n": 7,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    2.0,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.714
+   ],
+   [
+    [
+     "hit",
+     "lissandraw"
+    ],
+    0.429
+   ],
+   [
+    [
+     "end",
+     "#0f1b5ee1"
+    ],
+    0.143
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.143
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.143
+   ],
+   [
+    [
+     "end",
+     "itemcrystalflaskcharge"
+    ],
+    0.143
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.714
+   ],
+   [
+    [
+     "other"
+    ],
+    0.286
+   ]
+  ],
+  "lived_med": 2.005,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.857
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.143
+   ],
+   [
+    [
+     "fx",
+     6941860
+    ],
+    0.143
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.429
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.286
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.143
+   ]
+  ]
+ },
+ "#0ddce281": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    4.0,
+    6
+   ],
+   [
+    2.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.125
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cast",
+     "summonerexhaust"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "jhinespotteddebuff"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "3171speed"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.625
+   ],
+   [
+    [
+     "my cast",
+     "lissandraqmissile"
+    ],
+    0.125
+   ],
+   [
+    [
+     "other"
+    ],
+    0.125
+   ],
+   [
+    [
+     "my hit",
+     "lissandrapassive"
+    ],
+    0.125
+   ]
+  ],
+  "lived_med": 4.012,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    13
+   ],
+   [
+    "#f86f3d33",
+    3
+   ],
+   [
+    "lissandrapassive",
+    3
+   ],
+   [
+    "lissandrabasicattack2",
+    2
+   ],
+   [
+    "lissandrabasicattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.625
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.375
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.125
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.375
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.125
+   ]
+  ]
+ },
+ "zhonyasringshield": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 18,
+  "durations": [
+   [
+    2.5,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "zhonyashourglass"
+    ],
+    0.625
+   ],
+   [
+    [
+     "cast",
+     "item2420"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.621,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    9
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "lissandraq",
+    1
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.875
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.875
+   ],
+   [
+    [
+     "cooldown",
+     "a3"
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cooldown",
+     "87"
+    ],
+    0.125
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "item2420": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "item2420"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    9
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "lissandrapassive",
+    2
+   ],
+   [
+    "lissandrabasicattack2",
+    1
+   ],
+   [
+    "lissandrabasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "jhinetrapslow": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.5,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "zhonyasringshield"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 0.555,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "hextechgunbladedebuff": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.5,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.5
+   ],
+   [
+    [
+     "time"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 1.603,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    4
+   ],
+   [
+    "lissandraw",
+    3
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "lissandrar",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.5
+   ]
+  ]
+ },
+ "srx_dragonsoulbuffmountain_preview": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    29
+   ],
+   [
+    "lissandraq",
+    11
+   ],
+   [
+    "#f86f3d33",
+    3
+   ],
+   [
+    "#6a4229fc",
+    1
+   ],
+   [
+    "lissandrabasicattack",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "4005debuff": {
+  "n": 15,
+  "games": 4,
+  "self": 0.8,
+  "type": 13,
+  "durations": [
+   [
+    4.0,
+    15
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.533
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.4
+   ],
+   [
+    [
+     "hit",
+     "lissandraw"
+    ],
+    0.133
+   ],
+   [
+    [
+     "end",
+     "lissandrarenemy"
+    ],
+    0.133
+   ],
+   [
+    [
+     "end",
+     "leonasunlight"
+    ],
+    0.067
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.067
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.533
+   ],
+   [
+    [
+     "other"
+    ],
+    0.467
+   ]
+  ],
+  "lived_med": 4.029,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    11
+   ],
+   [
+    "#f86f3d33",
+    5
+   ],
+   [
+    "lissandrapassive",
+    4
+   ],
+   [
+    "lissandrabasicattack",
+    4
+   ],
+   [
+    "elixirofsorcery",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.933
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.733
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.133
+   ],
+   [
+    [
+     "cooldown",
+     "a7"
+    ],
+    0.133
+   ],
+   [
+    [
+     "fx_until_end",
+     145064564
+    ],
+    0.067
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     145064564
+    ],
+    0.067
+   ]
+  ]
+ },
+ "pykeqrange": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    1.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "summonerexhaust"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.401,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ]
+  ]
+ },
+ "pykeqmelee": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "pykeqrange"
+    ],
+    0.75
+   ],
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "end",
+     "taunt"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.168,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraw",
+    1
+   ],
+   [
+    "#00000000",
+    1
+   ],
+   [
+    "lissandraq",
+    1
+   ],
+   [
+    "lissandrapassive",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.75
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ]
+  ]
+ },
+ "4646damagebuff": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    2.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.039,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ]
+ },
+ "jhinrsight": {
+  "n": 5,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    2.0,
+    3
+   ],
+   [
+    4.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "jhinespotteddebuff"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "3171speed"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "jhinrslow"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "#0ddce281"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.6
+   ],
+   [
+    [
+     "other"
+    ],
+    0.2
+   ],
+   [
+    [
+     "my hit",
+     "lissandrapassive"
+    ],
+    0.2
+   ]
+  ],
+  "lived_med": 2.105,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "#00000000",
+    1
+   ],
+   [
+    "lissandrar",
+    1
+   ],
+   [
+    "lissandraq",
+    1
+   ],
+   [
+    "lissandrapassive",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.2
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.4
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.2
+   ]
+  ]
+ },
+ "jhinrslow": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.5,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "jhinespotteddebuff"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "3171speed"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "jhinrsight"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "#0ddce281"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 0.501,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.667
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     46,
+     "LissandraQMissile"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "exaltedwithbaronnashor": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    180.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 180.124,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    119
+   ],
+   [
+    "#00000000",
+    80
+   ],
+   [
+    "lissandraw",
+    35
+   ],
+   [
+    "#6a4229fc",
+    35
+   ],
+   [
+    "lissandrabasicattack2",
+    23
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.25
+   ]
+  ]
+ },
+ "exaltedwithbaronnashorvfx": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    99999.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 180.124,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    119
+   ],
+   [
+    "#00000000",
+    80
+   ],
+   [
+    "lissandraw",
+    35
+   ],
+   [
+    "#6a4229fc",
+    35
+   ],
+   [
+    "lissandrabasicattack2",
+    23
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.25
+   ]
+  ]
+ },
+ "superrecall": {
+  "n": 10,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    3.9,
+    10
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.6
+   ],
+   [
+    [
+     "other"
+    ],
+    0.4
+   ]
+  ],
+  "lived_med": 3.975,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.8
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.2
+   ]
+  ]
+ },
+ "jammerdevice": {
+  "n": 3,
+  "games": 4,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "jammerdevice"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "jammerdevice"
+    ],
+    0.5
+   ],
+   [
+    [
+     "death"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 547.366,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "pykeqmeleehit": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    1.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.073,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "elixirofsorcery": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    180.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 5,
+  "period_med": 3.36,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    12
+   ],
+   [
+    "lissandraq",
+    5
+   ],
+   [
+    "#f86f3d33",
+    5
+   ],
+   [
+    "lissandrabasicattack2",
+    4
+   ],
+   [
+    "lissandraw",
+    4
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "ASSETS/Perks/Styles/Domination/Electrocute/Electrocute.lua": {
+  "n": 35,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    35
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "#0ac1a3e1"
+    ],
+    0.943
+   ],
+   [
+    [
+     "none"
+    ],
+    0.743
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.114
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.057
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.057
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.057
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "lissandrabasicattack"
+    ],
+    0.212
+   ],
+   [
+    [
+     "my hit",
+     "#f86f3d33"
+    ],
+    0.182
+   ],
+   [
+    [
+     "my hit",
+     "lissandraq"
+    ],
+    0.182
+   ],
+   [
+    [
+     "my hit",
+     "lissandrabasicattack2"
+    ],
+    0.182
+   ],
+   [
+    [
+     "my hit",
+     "lissandraw"
+    ],
+    0.121
+   ]
+  ],
+  "lived_med": 68.872,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    528
+   ],
+   [
+    "#6a4229fc",
+    299
+   ],
+   [
+    "lissandrabasicattack2",
+    225
+   ],
+   [
+    "lissandrabasicattack",
+    199
+   ],
+   [
+    "lissandraw",
+    192
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.314
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.057
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.057
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.057
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.2
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.229
+   ]
+  ]
+ },
+ "#0ac1a3e1": {
+  "n": 33,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    20.0,
+    33
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Domination/Electrocute/Electrocute.lua"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "lissandrabasicattack"
+    ],
+    0.273
+   ],
+   [
+    [
+     "hit",
+     "lissandraw"
+    ],
+    0.273
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.242
+   ],
+   [
+    [
+     "hit",
+     "lissandrabasicattack2"
+    ],
+    0.212
+   ],
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    0.182
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 20.107,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    136
+   ],
+   [
+    "#6a4229fc",
+    126
+   ],
+   [
+    "lissandraq",
+    113
+   ],
+   [
+    "lissandrabasicattack2",
+    76
+   ],
+   [
+    "quinnq",
+    76
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.273
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.242
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "item2010": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 14,
+  "durations": [
+   [
+    4.75,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "item2010"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.976,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandrabasicattack2",
+    4
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "#6a4229fc",
+    1
+   ],
+   [
+    "lissandrabasicattack",
+    1
+   ],
+   [
+    "lissandraq",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "zyraehold": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 12,
+  "durations": [
+   [
+    1.0,
+    1
+   ],
+   [
+    1.41,
+    1
+   ],
+   [
+    1.32,
+    1
+   ],
+   [
+    1.76,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "leonasunlight"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.5
+   ],
+   [
+    [
+     "other"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 1.103,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.25
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.75
+   ]
+  ]
+ },
+ "zyraeplantslow": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.76,
+    2
+   ],
+   [
+    2.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.905,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandrabasicattack2",
+    3
+   ],
+   [
+    "lissandraq",
+    3
+   ],
+   [
+    "lissandrabasicattack",
+    2
+   ],
+   [
+    "#f86f3d33",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "itemcrystalflaskcharge": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "recall"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "itemcrystalflask"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "itemcrystalflask"
+    ],
+    0.625
+   ],
+   [
+    [
+     "other"
+    ],
+    0.375
+   ]
+  ],
+  "lived_med": 110.603,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    187
+   ],
+   [
+    "#6a4229fc",
+    93
+   ],
+   [
+    "lissandrabasicattack2",
+    83
+   ],
+   [
+    "lissandraw",
+    70
+   ],
+   [
+    "lissandrabasicattack",
+    63
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.125
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.125
+   ]
+  ]
+ },
+ "itemcrystalflask": {
+  "n": 11,
+  "games": 4,
+  "self": 1.0,
+  "type": 14,
+  "durations": [
+   [
+    12.0,
+    11
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemcrystalflask"
+    ],
+    0.636
+   ],
+   [
+    [
+     "none"
+    ],
+    0.182
+   ],
+   [
+    [
+     "cast",
+     "lissandraemissile"
+    ],
+    0.091
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.091
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.636
+   ],
+   [
+    [
+     "other"
+    ],
+    0.364
+   ]
+  ],
+  "lived_med": 12.058,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    16
+   ],
+   [
+    "lissandrabasicattack2",
+    11
+   ],
+   [
+    "lissandrae",
+    5
+   ],
+   [
+    "lissandraw",
+    4
+   ],
+   [
+    "#6a4229fc",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "a3"
+    ],
+    0.364
+   ],
+   [
+    [
+     "cooldown",
+     "8e"
+    ],
+    0.273
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.091
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.636
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.091
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.091
+   ],
+   [
+    [
+     "fx",
+     6941860
+    ],
+    0.091
+   ]
+  ]
+ },
+ "8020visualdebuff": {
+  "n": 42,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    42
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.786
+   ],
+   [
+    [
+     "cast",
+     "lissandrae"
+    ],
+    0.071
+   ],
+   [
+    [
+     "end",
+     "lissandrae"
+    ],
+    0.071
+   ],
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.048
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.048
+   ],
+   [
+    [
+     "cast",
+     "lissandraemissile"
+    ],
+    0.048
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.976
+   ],
+   [
+    [
+     "my hit",
+     "lissandrar"
+    ],
+    0.024
+   ]
+  ],
+  "lived_med": 1.636,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandrabasicattack2",
+    20
+   ],
+   [
+    "#f86f3d33",
+    18
+   ],
+   [
+    "lissandraq",
+    18
+   ],
+   [
+    "lissandrabasicattack",
+    14
+   ],
+   [
+    "lissandraw",
+    11
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.524
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.071
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.071
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.048
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.024
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    0.024
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.762
+   ]
+  ]
+ },
+ "sionrsoundglobal": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    4.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "stun"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.08,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    12
+   ],
+   [
+    "lissandraq",
+    3
+   ],
+   [
+    "lissandrabasicattack2",
+    3
+   ],
+   [
+    "#f86f3d33",
+    3
+   ],
+   [
+    "lissandrar",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.167
+   ]
+  ],
+  "at_end": []
+ },
+ "srx_dragonsoulbuffchemtech_preview": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 976.396,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    158
+   ],
+   [
+    "#6a4229fc",
+    77
+   ],
+   [
+    "lissandrabasicattack2",
+    58
+   ],
+   [
+    "lissandraw",
+    51
+   ],
+   [
+    "lissandrabasicattack",
+    44
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "leonasolarflareslow": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.54,
+    2
+   ],
+   [
+    1.75,
+    1
+   ],
+   [
+    1.645,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "stun"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.75
+   ],
+   [
+    [
+     "other"
+    ],
+    0.25
+   ]
+  ],
+  "lived_med": 1.661,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "leonasunlight": {
+  "n": 9,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    2.5,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.222
+   ],
+   [
+    [
+     "cast",
+     "lissandrae"
+    ],
+    0.111
+   ],
+   [
+    [
+     "end",
+     "lissandrae"
+    ],
+    0.111
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.556
+   ],
+   [
+    [
+     "time"
+    ],
+    0.333
+   ],
+   [
+    [
+     "my cast",
+     "lissandrae"
+    ],
+    0.111
+   ]
+  ],
+  "lived_med": 0.401,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    2
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.778
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.444
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.111
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.111
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.778
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.111
+   ]
+  ]
+ },
+ "ambessaeslow": {
+  "n": 5,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.0,
+    2
+   ],
+   [
+    0.94,
+    2
+   ],
+   [
+    0.88,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.6
+   ],
+   [
+    [
+     "other"
+    ],
+    0.4
+   ]
+  ],
+  "lived_med": 1.102,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    2
+   ],
+   [
+    "lissandrar",
+    2
+   ],
+   [
+    "lissandrae",
+    1
+   ],
+   [
+    "lissandraw",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.2
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.4
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.2
+   ]
+  ]
+ },
+ "ambessarsuppressiondebuff": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 25,
+  "durations": [
+   [
+    0.75,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.768,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandrabasicattack2",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ]
+ },
+ "leonazenithblademissile": {
+  "n": 3,
+  "games": 4,
+  "self": 0.0,
+  "type": 1,
+  "durations": [
+   [
+    1.25,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "lissandrae"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "lissandrae"
+    ],
+    0.333
+   ],
+   [
+    [
+     "none"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.47,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "leonazenithbladeroot": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 12,
+  "durations": [
+   [
+    0.5,
+    1
+   ],
+   [
+    0.47,
+    1
+   ],
+   [
+    0.44,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "lissandrae"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "lissandrae"
+    ],
+    0.333
+   ],
+   [
+    [
+     "none"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.668,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     2,
+     "\u0007"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": []
+ },
+ "avatarbuffoffensiveburn": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    4.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "leonasunlight"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "time"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 2.773,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraw",
+    2
+   ],
+   [
+    "lissandrabasicattack2",
+    2
+   ],
+   [
+    "lissandrabasicattack",
+    2
+   ],
+   [
+    "elixirofsorcery",
+    2
+   ],
+   [
+    "lissandrapassive",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.167
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "srx_dragonchemtech_mutated_shield": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    20.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 22.237,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    9
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.25
+   ]
+  ]
+ },
+ "barondebuff": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    8.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 16.595,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandrabasicattack",
+    6
+   ],
+   [
+    "lissandraq",
+    5
+   ],
+   [
+    "lissandrabasicattack2",
+    3
+   ],
+   [
+    "lissandraw",
+    2
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "6333bleed": {
+  "n": 1,
+  "games": 4,
+  "self": 0.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.382,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     49,
+     "LissandraQShards"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "jayceacceleratorchampionbuff": {
+  "n": 9,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    3.0,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.889
+   ],
+   [
+    [
+     "cast",
+     "lissandrae"
+    ],
+    0.111
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.778
+   ],
+   [
+    [
+     "time"
+    ],
+    0.222
+   ]
+  ],
+  "lived_med": 3.478,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    10
+   ],
+   [
+    "lissandrabasicattack2",
+    5
+   ],
+   [
+    "lissandraw",
+    2
+   ],
+   [
+    "lissandrabasicattack",
+    2
+   ],
+   [
+    "#6a4229fc",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.889
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.111
+   ]
+  ]
+ },
+ "srx_dragonsoulbuffchemtech": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "srx_dragonsoulbuffchemtech_preview"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "srx_dragonsoulbuffchemtechvfx"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    8
+   ],
+   [
+    "lissandrabasicattack2",
+    6
+   ],
+   [
+    "lissandrabasicattack",
+    2
+   ],
+   [
+    "lissandraw",
+    2
+   ],
+   [
+    "#6a4229fc",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "srx_dragonsoulbuffchemtechvfx": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "srx_dragonsoulbuffchemtech_preview"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.0,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    3
+   ],
+   [
+    "lissandraw",
+    2
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "tristanaechargesound": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    4.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "leonasunlight"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.968,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.0
+   ]
+  ]
+ },
+ "tristanaecharge": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    2400.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.801,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.0
+   ]
+  ]
+ },
+ "elderdragonbuff": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    150.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 65.865,
+  "ticks": 19,
+  "period_med": 1.07,
+  "on_hit": [
+   [
+    "lissandrabasicattack",
+    8
+   ],
+   [
+    "lissandrabasicattack2",
+    7
+   ],
+   [
+    "lissandraq",
+    3
+   ],
+   [
+    "lissandraw",
+    3
+   ],
+   [
+    "lissandrae",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "elderdragonhealthbartickmanager": {
+  "n": 1,
+  "games": 4,
+  "self": 0.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "lissandraq"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.248,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ]
+  ],
+  "at_end": []
+ },
+ "sr_2026_s1_rolebound_top_quest": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 710.437,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    184
+   ],
+   [
+    "lissandraq",
+    121
+   ],
+   [
+    "lissandrabasicattack",
+    69
+   ],
+   [
+    "lissandrabasicattack2",
+    67
+   ],
+   [
+    "lissandraw",
+    60
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "yasuoravailabletest": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "kalistavobindallyglobal": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    10.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 10.088,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "2151active": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    60.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "2151active"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 60.032,
+  "ticks": 24,
+  "period_med": 2.01,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    23
+   ],
+   [
+    "lissandrabasicattack",
+    18
+   ],
+   [
+    "lissandrabasicattack2",
+    9
+   ],
+   [
+    "lissandraw",
+    6
+   ],
+   [
+    "lissandraq",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "volibearrimpactslow": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "lissandraqmissile"
+    ],
+    0.5
+   ],
+   [
+    [
+     "none"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.102,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    5
+   ],
+   [
+    "#f86f3d33",
+    1
+   ],
+   [
+    "lissandrabasicattack",
+    1
+   ],
+   [
+    "lissandrar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ]
+  ]
+ },
+ "evelynnw": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    5.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "lissandraq"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "my hit",
+     "#00000000"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 4.476,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    12
+   ],
+   [
+    "lissandraq",
+    5
+   ],
+   [
+    "quinnq",
+    5
+   ],
+   [
+    "lissandrabasicattack2",
+    2
+   ],
+   [
+    "#f86f3d33",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     78637603
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    6.0
+   ]
+  ]
+ },
+ "evelynnwcharmvfx": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    1.25,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "evelynnw"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.667
+   ],
+   [
+    [
+     "none"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.337,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    6.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     6941860
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "charmbuffbaricon": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    1.25,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "evelynnw"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.667
+   ],
+   [
+    [
+     "none"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.337,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    6.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     6941860
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "evelynnwcharmslow": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 23,
+  "durations": [
+   [
+    1.25,
+    2
+   ],
+   [
+    1.175,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "evelynnw"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.667
+   ],
+   [
+    [
+     "none"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.337,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    6.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     6941860
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "evelynnwshred": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 28,
+  "durations": [
+   [
+    4.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "evelynnw"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    0.667
+   ],
+   [
+    [
+     "none"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "lissandraw"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.504,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    6.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.667
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyout"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "2152active": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    60.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "2152active"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 60.011,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    5
+   ],
+   [
+    "lissandrabasicattack2",
+    3
+   ],
+   [
+    "#6a4229fc",
+    2
+   ],
+   [
+    "lissandrabasicattack",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "itemglory": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "#f86f3d33"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "lissandrabasicattack2"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    15
+   ],
+   [
+    "lissandrabasicattack2",
+    7
+   ],
+   [
+    "#6a4229fc",
+    5
+   ],
+   [
+    "lissandraw",
+    5
+   ],
+   [
+    "lissandrae",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "sr_2026_s1_rolebound_top_questcompleted": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "sr_2026_s1_rolebound_top_quest"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    37
+   ],
+   [
+    "lissandraq",
+    14
+   ],
+   [
+    "quinnq",
+    11
+   ],
+   [
+    "lissandraw",
+    4
+   ],
+   [
+    "lissandrabasicattack2",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "evelynnqdebuff": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    6.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "#00000000"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "evelynnw"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.181,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    7
+   ],
+   [
+    "lissandraw",
+    5
+   ],
+   [
+    "quinnq",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "sr_2026_s1_rolebound_enhancedteleportbonus": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    10.25,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "summonerteleport"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s12_summonerteleportmanager"
+    ],
+    0.667
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 10.394,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    9
+   ],
+   [
+    "lissandraw",
+    7
+   ],
+   [
+    "#00000000",
+    6
+   ],
+   [
+    "quinnq",
+    5
+   ],
+   [
+    "#6a4229fc",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "trinketsweeperlvl3": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    8.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "trinketsweeperlvl3"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "summonerteleporthaste"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 8.155,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    10
+   ],
+   [
+    "#00000000",
+    10
+   ],
+   [
+    "lissandraw",
+    3
+   ],
+   [
+    "#6a4229fc",
+    2
+   ],
+   [
+    "lissandrabasicattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.75
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.75
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "srx_dragonsoulbuffinfernal_preview": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    11
+   ],
+   [
+    "#00000000",
+    8
+   ],
+   [
+    "lissandraw",
+    4
+   ],
+   [
+    "#6a4229fc",
+    2
+   ],
+   [
+    "lissandrabasicattack2",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SRX_DragonBuffChemtech"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "sr_infernalrift_firemeepspeedboost": {
+  "n": 5,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    2.0,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.8
+   ],
+   [
+    [
+     "other"
+    ],
+    0.2
+   ]
+  ],
+  "lived_med": 2.138,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "lissandraq",
+    4
+   ],
+   [
+    "lissandraw",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SR_InfernalRift_MeepFlyIn"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "sr_infernalrift_scales_low": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.171,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    11
+   ],
+   [
+    "lissandraq",
+    10
+   ],
+   [
+    "lissandraw",
+    4
+   ],
+   [
+    "#6a4229fc",
+    2
+   ],
+   [
+    "lissandrabasicattack2",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "item3153botrkstacks": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    6.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 6.207,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    5
+   ],
+   [
+    "lissandraq",
+    2
+   ],
+   [
+    "#f86f3d33",
+    1
+   ],
+   [
+    "lissandraw",
+    1
+   ],
+   [
+    "lissandrabasicattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "kalistacoopstrikemarkally": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    4.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.21,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    4
+   ],
+   [
+    "quinnq",
+    2
+   ],
+   [
+    "lissandrabasicattack",
+    2
+   ],
+   [
+    "lissandraq",
+    1
+   ],
+   [
+    "lissandraw",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "3190shield": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    2.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.525,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#00000000",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "3190diminisheddebuff": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    20.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 20.008,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "quinnq",
+    27
+   ],
+   [
+    "#00000000",
+    10
+   ],
+   [
+    "lissandrar",
+    5
+   ],
+   [
+    "lissandrabasicattack2",
+    5
+   ],
+   [
+    "lissandrabasicattack",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ }
+}

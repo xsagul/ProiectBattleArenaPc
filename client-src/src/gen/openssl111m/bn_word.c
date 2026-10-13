@@ -6,4 +6,6 @@
 // match: e136c0 _BN_mod_word
 // match: e13730 _BN_mul_word
 // match: e137a0 _BN_sub_word
+#define OPENSSL_FILE "crypto\\bn\\bn_word.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/bn/bn_word.c"

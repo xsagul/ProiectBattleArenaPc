@@ -1,0 +1,27 @@
+local L0_1, L1_1, L2_1
+L0_1 = true
+NotSingleTargetSpell = L0_1
+L0_1 = false
+DoesntTriggerSpellCasts = L0_1
+L0_1 = "GravesTrueGrit.dds"
+BuffTextureName = L0_1
+L0_1 = "GravesPassive"
+BuffName = L0_1
+L0_1 = ""
+AutoBuffActivateEffect = L0_1
+L0_1 = true
+PersistsThroughDeath = L0_1
+L0_1 = {}
+BuffOnUpdateStatsBuildingBlocks = L0_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBSetBuffToolTipVar
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.Value = 0
+L2_1.ValueVar = "ArmorAmount"
+L2_1.ValueVarTable = "CharVars"
+L2_1.Index = 1
+L1_1.Params = L2_1
+L0_1[1] = L1_1
+BuffOnUpdateActionsBuildingBlocks = L0_1

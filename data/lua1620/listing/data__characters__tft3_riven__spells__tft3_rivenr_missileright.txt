@@ -1,0 +1,31 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 0000021A76C73610)
+0+ params, 2 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Ezreal/HUD/Icons2D/Ezreal_EssenceFlux.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "EzrealEssenceFluxDebuff"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "DATA/Shared/Particles/Global_Slow.troy"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -9	; IsDamagingSpell
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -10	; TriggersSpellCasts
+	15	[-]	RETURN   	0 1
+constants (10) for 0000021A76C73610:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Ezreal/HUD/Icons2D/Ezreal_EssenceFlux.dds"
+	5	"BuffName"
+	6	"EzrealEssenceFluxDebuff"
+	7	"AutoBuffActivateEffect"
+	8	"DATA/Shared/Particles/Global_Slow.troy"
+	9	"IsDamagingSpell"
+	10	"TriggersSpellCasts"
+locals (0) for 0000021A76C73610:
+upvalues (0) for 0000021A76C73610:

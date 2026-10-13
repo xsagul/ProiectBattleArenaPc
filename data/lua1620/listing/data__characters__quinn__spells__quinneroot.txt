@@ -1,0 +1,48 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 00000231345535C0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 17 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_E.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "QuinnERoot"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	NEWTABLE 	0 5 0
+	12	[-]	LOADK    	1 -9	; 12
+	13	[-]	LOADK    	2 -10	; 11
+	14	[-]	LOADK    	3 -11	; 10
+	15	[-]	LOADK    	4 -12	; 9
+	16	[-]	LOADK    	5 -13	; 8
+	17	[-]	SETLIST  	0 5 1	; 1
+	18	[-]	SETGLOBAL	0 -8	; AutoCooldownByLevel
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -14	; IsDeathRecapSource
+	21	[-]	LOADK    	0 -16	; "game_floatingtext_Slowed"
+	22	[-]	SETGLOBAL	0 -15	; PopupMessage1
+	23	[-]	LOADBOOL 	0 1 0
+	24	[-]	SETGLOBAL	0 -17	; IsDamagingSpell
+	25	[-]	RETURN   	0 1
+constants (17) for 00000231345535C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_E.dds"
+	6	"BuffName"
+	7	"QuinnERoot"
+	8	"AutoCooldownByLevel"
+	9	12
+	10	11
+	11	10
+	12	9
+	13	8
+	14	"IsDeathRecapSource"
+	15	"PopupMessage1"
+	16	"game_floatingtext_Slowed"
+	17	"IsDamagingSpell"
+locals (0) for 00000231345535C0:
+upvalues (0) for 00000231345535C0:

@@ -1,0 +1,66 @@
+
+main <?:0,0> (38 instructions, 152 bytes at 000001EF612935C0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 22 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Fiora/HUD/Icons2D/Fiora_Lunge.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "FioraQAttack"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -10	; "FioraSkin04"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	17	[-]	NEWTABLE 	0 1 0
+	18	[-]	LOADK    	1 -10	; "FioraSkin04"
+	19	[-]	SETLIST  	0 1 1	; 1
+	20	[-]	SETGLOBAL	0 -11	; SpellVOOverrideSkins
+	21	[-]	LOADBOOL 	0 1 0
+	22	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	23	[-]	NEWTABLE 	0 0 6
+	24	[-]	NEWTABLE 	1 5 0
+	25	[-]	LOADK    	2 -15	; 10
+	26	[-]	LOADK    	3 -15	; 10
+	27	[-]	LOADK    	4 -15	; 10
+	28	[-]	LOADK    	5 -15	; 10
+	29	[-]	LOADK    	6 -15	; 10
+	30	[-]	SETLIST  	1 5 1	; 1
+	31	[-]	SETTABLE 	0 -14 1	; "MaximumHits" -
+	32	[-]	SETTABLE 	0 -16 -17	; "CanHitCaster" 0
+	33	[-]	SETTABLE 	0 -18 -17	; "CanHitSameTarget" 0
+	34	[-]	SETTABLE 	0 -19 -17	; "CanHitSameTargetConsecutively" 0
+	35	[-]	SETTABLE 	0 -20 -21	; "CanHitEnemies" 1
+	36	[-]	SETTABLE 	0 -22 -17	; "CanHitFriends" 0
+	37	[-]	SETGLOBAL	0 -13	; ChainMissileParameters
+	38	[-]	RETURN   	0 1
+constants (22) for 000001EF612935C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Fiora/HUD/Icons2D/Fiora_Lunge.dds"
+	7	"BuffName"
+	8	"FioraQAttack"
+	9	"SpellFXOverrideSkins"
+	10	"FioraSkin04"
+	11	"SpellVOOverrideSkins"
+	12	"IsDamagingSpell"
+	13	"ChainMissileParameters"
+	14	"MaximumHits"
+	15	10
+	16	"CanHitCaster"
+	17	0
+	18	"CanHitSameTarget"
+	19	"CanHitSameTargetConsecutively"
+	20	"CanHitEnemies"
+	21	1
+	22	"CanHitFriends"
+locals (0) for 000001EF612935C0:
+upvalues (0) for 000001EF612935C0:

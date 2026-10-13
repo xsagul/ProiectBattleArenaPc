@@ -1,0 +1,15 @@
++0x10 1 B bits 6..6: 0:const, 1:const
++0x18 1 B bits 8..16: 0:const, 18:const, 47:const, 82:const, 105:const, 131:const, 135:const, 172:const, 176:const, 191:const, 193:const, 234:const, 235:const, 256:const, 257:const, 258:const, 304:const, 343:const, 357:const, 361:const, 414:const, 417:const, 433:const, 449:const, 461:const, 464:const, 487:const
++0x19 1 B bits 16..31: 17412:const, 17466:const, 17526:const, 17540:const, 17550:const, 17566:const, 17599:const, 17616:const, 17620:const, 25885:const, 25941:const, 25974:const, 25991:const, 25998:const, 26023:const, 26047:const, 26099:const, 32783:const, 32894:const, 32906:const, 32926:const, 32940:const, 33003:const, 46974:const, 47014:const, 47015:const, 47091:const
++0x1a 1 B bits 24..31: 1:const, 2:const, 5:const, 14:const, 52:const, 59:const, 69:const, 98:const, 104:const, 120:const, 144:const, 146:const, 178:const, 183:const, 189:const, 196:const, 205:const, 217:const, 219:const, 231:const, 251:const
++0x1f 1 B bits 24..31: 0:const, 183:const
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\c2s16.py", line 580, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\c2s16.py", line 434, in learn
+    f['modes'][m] = CC._learn_read(W, off, n, v0, k, header, f['bit'], f['width'], m, 0)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\c2s_codec.py", line 245, in _learn_read
+    d = run(((5 << 7) | x).to_bytes(n, 'little'))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: int too big to convert

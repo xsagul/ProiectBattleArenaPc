@@ -8,4 +8,6 @@
 // match: e08d90 _obj_trust
 // match: e08e90 _X509_TRUST_get_by_id
 // match: e08ee0 _X509_check_trust
+#define OPENSSL_FILE "crypto\\x509\\x509_trs.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/x509/x509_trs.c"

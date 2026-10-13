@@ -1,0 +1,52 @@
+
+main <?:0,0> (27 instructions, 108 bytes at 000001AAA4A13600)
+0+ params, 4 slots, 0 upvalues, 0 locals, 19 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; CastingBreaksStealth
+	7	[-]	LOADK    	0 -5	; "arrow"
+	8	[-]	SETGLOBAL	0 -4	; AutoBuffActivateAttachBoneName
+	9	[-]	LOADK    	0 -7	; "r_bow"
+	10	[-]	SETGLOBAL	0 -6	; AutoBuffActivateAttachBoneName2
+	11	[-]	LOADK    	0 -9	; "L_bow"
+	12	[-]	SETGLOBAL	0 -8	; AutoBuffActivateAttachBoneName3
+	13	[-]	LOADK    	0 -11	; "Buffbone_Glb_Ground_Loc"
+	14	[-]	SETGLOBAL	0 -10	; AutoBuffActivateAttachBoneName4
+	15	[-]	NEWTABLE 	0 3 0
+	16	[-]	LOADK    	1 -13	; 90
+	17	[-]	LOADK    	2 -14	; 75
+	18	[-]	LOADK    	3 -15	; 60
+	19	[-]	SETLIST  	0 3 1	; 1
+	20	[-]	SETGLOBAL	0 -12	; AutoCooldownByLevel
+	21	[-]	NEWTABLE 	0 3 0
+	22	[-]	LOADK    	1 -17	; "GangsterTwitch"
+	23	[-]	LOADK    	2 -18	; "PunkTwitch"
+	24	[-]	LOADK    	3 -19	; "TwitchSkin06"
+	25	[-]	SETLIST  	0 3 1	; 1
+	26	[-]	SETGLOBAL	0 -16	; SpellFXOverrideSkins
+	27	[-]	RETURN   	0 1
+constants (19) for 000001AAA4A13600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"CastingBreaksStealth"
+	4	"AutoBuffActivateAttachBoneName"
+	5	"arrow"
+	6	"AutoBuffActivateAttachBoneName2"
+	7	"r_bow"
+	8	"AutoBuffActivateAttachBoneName3"
+	9	"L_bow"
+	10	"AutoBuffActivateAttachBoneName4"
+	11	"Buffbone_Glb_Ground_Loc"
+	12	"AutoCooldownByLevel"
+	13	90
+	14	75
+	15	60
+	16	"SpellFXOverrideSkins"
+	17	"GangsterTwitch"
+	18	"PunkTwitch"
+	19	"TwitchSkin06"
+locals (0) for 000001AAA4A13600:
+upvalues (0) for 000001AAA4A13600:

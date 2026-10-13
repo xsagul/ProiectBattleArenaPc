@@ -1,0 +1,34 @@
+
+main <?:0,0> (18 instructions, 72 bytes at 000001DDD8A335A0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; 1
+	8	[-]	SETGLOBAL	0 -4	; SpellDamageRatio
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -6	; IsDeathRecapSource
+	11	[-]	NEWTABLE 	0 2 0
+	12	[-]	LOADK    	1 -8	; "Zyra_hellvine"
+	13	[-]	LOADK    	2 -9	; "ZyraSkin02"
+	14	[-]	SETLIST  	0 2 1	; 1
+	15	[-]	SETGLOBAL	0 -7	; SpellFXOverrideSkins
+	16	[-]	LOADBOOL 	0 1 0
+	17	[-]	SETGLOBAL	0 -10	; IsDamagingSpell
+	18	[-]	RETURN   	0 1
+constants (10) for 000001DDD8A335A0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"SpellDamageRatio"
+	5	1
+	6	"IsDeathRecapSource"
+	7	"SpellFXOverrideSkins"
+	8	"Zyra_hellvine"
+	9	"ZyraSkin02"
+	10	"IsDamagingSpell"
+locals (0) for 000001DDD8A335A0:
+upvalues (0) for 000001DDD8A335A0:

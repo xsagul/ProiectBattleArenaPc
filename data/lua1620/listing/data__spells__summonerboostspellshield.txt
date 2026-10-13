@@ -1,0 +1,39 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 00000248470235C0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "Summoner_boost.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Spell_Shield"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "DATA/Shared/Particles/spellblock_eff.troy"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	NEWTABLE 	0 5 0
+	12	[-]	LOADK    	1 -10	; 44
+	13	[-]	LOADK    	2 -11	; 38
+	14	[-]	LOADK    	3 -12	; 30
+	15	[-]	LOADK    	4 -13	; 22
+	16	[-]	LOADK    	5 -14	; 14
+	17	[-]	SETLIST  	0 5 1	; 1
+	18	[-]	SETGLOBAL	0 -9	; AutoCooldownByLevel
+	19	[-]	RETURN   	0 1
+constants (14) for 00000248470235C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"Summoner_boost.dds"
+	5	"BuffName"
+	6	"Spell_Shield"
+	7	"AutoBuffActivateEffect"
+	8	"DATA/Shared/Particles/spellblock_eff.troy"
+	9	"AutoCooldownByLevel"
+	10	44
+	11	38
+	12	30
+	13	22
+	14	14
+locals (0) for 00000248470235C0:
+upvalues (0) for 00000248470235C0:

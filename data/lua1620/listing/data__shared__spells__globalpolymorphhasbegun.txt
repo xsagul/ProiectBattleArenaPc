@@ -1,0 +1,24 @@
+
+main <?:0,0> (12 instructions, 48 bytes at 000002391D7C35C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	NEWTABLE 	0 2 0
+	8	[-]	LOADK    	1 -5	; "ReefMalphite"
+	9	[-]	LOADK    	2 -6	; "GlacialMalphite"
+	10	[-]	SETLIST  	0 2 1	; 1
+	11	[-]	SETGLOBAL	0 -4	; SpellFXOverrideSkins
+	12	[-]	RETURN   	0 1
+constants (6) for 000002391D7C35C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"SpellFXOverrideSkins"
+	5	"ReefMalphite"
+	6	"GlacialMalphite"
+locals (0) for 000002391D7C35C0:
+upvalues (0) for 000002391D7C35C0:

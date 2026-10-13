@@ -1,0 +1,26 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 0000023AD26535C0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	NEWTABLE 	0 5 0
+	6	[-]	LOADK    	1 -4	; 0
+	7	[-]	LOADK    	2 -4	; 0
+	8	[-]	LOADK    	3 -4	; 0
+	9	[-]	LOADK    	4 -4	; 0
+	10	[-]	LOADK    	5 -4	; 0
+	11	[-]	SETLIST  	0 5 1	; 1
+	12	[-]	SETGLOBAL	0 -3	; AutoCooldownByLevel
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -5	; IsDamagingSpell
+	15	[-]	RETURN   	0 1
+constants (5) for 0000023AD26535C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"AutoCooldownByLevel"
+	4	0
+	5	"IsDamagingSpell"
+locals (0) for 0000023AD26535C0:
+upvalues (0) for 0000023AD26535C0:

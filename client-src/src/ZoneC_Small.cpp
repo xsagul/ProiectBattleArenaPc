@@ -171,23 +171,25 @@ void Wrapper2ddcb0::SetByte19c0(u8 value)
     inner->byte19c0 = value;
 }
 
-// rva 0x2df320: forwards two arguments to method at rva 0x2df220 of the inner object.
-// match: 2df320 ?Forward@Wrapper2df320@@QAEHII@Z
+// rva 0x2df320: forwards a signed 64-bit peer key to the inner map accessor. Its two stack words are one key,
+// not two separate arguments; this distinction keeps the call and ret 8 rather than a tail jump.
+// match: 2df320 ?Forward@Wrapper2df320@@
+struct PeerData2df220;
 struct Inner2df320
 {
-    int Method2df220(u32 a, u32 b); // rva 0x2df220
+    PeerData2df220& Method2df220(long long key); // rva 0x2df220, returns the entry's value at node +0x18
 };
 
 struct Wrapper2df320
 {
     Inner2df320* inner;
 
-    int Forward(u32 a, u32 b);
+    PeerData2df220& Forward(long long key);
 };
 
-int Wrapper2df320::Forward(u32 a, u32 b)
+PeerData2df220& Wrapper2df320::Forward(long long key)
 {
-    return inner->Method2df220(a, b);
+    return inner->Method2df220(key);
 }
 
 // rva 0x2dead0: returns ptr at +0x10 if non-null, else address of inline buffer at +0x04.
@@ -208,26 +210,30 @@ const char* String2dead0::c_str() const
     return inline_buf;
 }
 
-// rva 0x2e1d70: dispatches datagram according to its sequence number: negative (ack) -> rva 0x2ed360, positive -> rva 0x2ee8a0, zero -> 1.
-// match: 2e1d70 ?HandleDatagram_2e1d70@@YGEPBULnpDatagram@@@Z
-// 40 of 42 bytes identical; differs in ecx vs edx temporary register
+// rva 0x2e1d70: dispatches the sequence number through members of the same handler: negative -> acknowledgement,
+// positive -> sequence, zero -> 1. Both callees consume the original this pointer in ecx.
+// match: 2e1d70 ?HandleDatagram@DatagramHandler2e1d70@@
 #include "LnpDatagram.h"
 
 
-void __stdcall HandleAck_2ed360(const LnpDatagram* d);     // rva 0x2ed360
-void __stdcall HandleSeq_2ee8a0(const LnpDatagram* d);     // rva 0x2ee8a0
-
-u8 __stdcall HandleDatagram_2e1d70(const LnpDatagram* d)
+struct DatagramHandler2e1d70
 {
-    u16 number = *(const u16*)((const char*)d + 8);
-    if ((short)number < 0)
+    void HandleAck(const LnpDatagram* d); // rva 0x2ed360
+    void HandleSeq(const LnpDatagram* d); // rva 0x2ee8a0
+    u8 HandleDatagram(const LnpDatagram* d);
+};
+
+u8 DatagramHandler2e1d70::HandleDatagram(const LnpDatagram* d)
+{
+    short number = d->number;
+    if (number < 0)
     {
-        HandleAck_2ed360(d);
+        HandleAck(d);
         return 4;
     }
-    if ((short)number > 0)
+    if (number > 0)
     {
-        HandleSeq_2ee8a0(d);
+        HandleSeq(d);
         return 0;
     }
     return 1;

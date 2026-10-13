@@ -1,0 +1,39 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 000002C8363635A0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Sona/HUD/Icons2D/Sona_W.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -7	; PersistsThroughDeath
+	13	[-]	NEWTABLE 	0 5 0
+	14	[-]	LOADK    	1 -9	; ""
+	15	[-]	LOADK    	2 -9	; ""
+	16	[-]	LOADK    	3 -9	; ""
+	17	[-]	LOADK    	4 -9	; ""
+	18	[-]	LOADK    	5 -9	; ""
+	19	[-]	SETLIST  	0 5 1	; 1
+	20	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	21	[-]	LOADBOOL 	0 1 0
+	22	[-]	SETGLOBAL	0 -10	; IsDamagingSpell
+	23	[-]	RETURN   	0 1
+constants (10) for 000002C8363635A0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Sona/HUD/Icons2D/Sona_W.dds"
+	7	"PersistsThroughDeath"
+	8	"SpellFXOverrideSkins"
+	9	""
+	10	"IsDamagingSpell"
+locals (0) for 000002C8363635A0:
+upvalues (0) for 000002C8363635A0:

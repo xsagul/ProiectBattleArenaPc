@@ -7,4 +7,6 @@
 // match: e6ddb0 _md_ctrl
 // match: e6dff0 _md_new
 // match: e6e020 _md_free
+#define OPENSSL_FILE "crypto\\evp\\bio_md.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/evp/bio_md.c"

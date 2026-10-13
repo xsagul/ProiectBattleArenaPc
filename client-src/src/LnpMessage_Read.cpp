@@ -11,29 +11,25 @@
 
 bool LnpMessage::Read(LnpBuffer& in, const LnpMessage& previous)
 {
-    u16 header;
-    bool ok = in.Read(header);
-    bool fragment = header & 1;
-    header >>= 1;
-    bool nextNumber = header & 1;
-    header >>= 1;
-    bool sameChannel = header & 1;
-    header >>= 1;
-    if (sameChannel)
-        channel = previous.channel;
-    else
-        ok &= in.Read(channel);
-    if (nextNumber)
-        number = previous.number + 1;
-    else
-        ok &= in.Read(number);
-    if (fragment)
-    {
-        ok &= in.Read(fragmentId);
-        ok &= in.Read(fragmentCount);
-        ok &= in.Read(fragmentIndex);
+    u16 header ;
+    const auto & local382 = in . Read ( header ) ;
+    bool ok = local382 ;
+    bool fragment = header & 1 ;
+    header >>= 1 ;
+    bool nextNumber = 1 & header ;
+    header >>= 1 ;
+    bool sameChannel = header & 1 ;
+    header >>= 1 ;
+    if ( sameChannel ) channel = previous . channel ;
+    else ok &= in . Read ( channel ) ;
+    if ( nextNumber ) number = previous . number + 1 ;
+    else ok &= in . Read ( number ) ;
+    if ( fragment ) {
+        ok &= in . Read ( fragmentId ) ;
+        ok &= in . Read ( fragmentCount ) ;
+        ok &= in . Read ( fragmentIndex ) ;
     }
-    ok &= in.ReadBuffer(&payload, header);
-    text30 = "";
-    return ok;
+    ok &= in . ReadBuffer ( & payload , header ) ;
+    text30 = "" ;
+    return ok ;
 }

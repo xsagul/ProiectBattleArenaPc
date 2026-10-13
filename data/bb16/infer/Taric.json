@@ -1,0 +1,13961 @@
+{
+ "rolerules_support": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ],
+   [
+    "taricbasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "supportitempurchasebuff": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ],
+   [
+    "taricbasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "s14_support_charge_display": {
+  "n": 183,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    20.0,
+    91
+   ],
+   [
+    25000.0,
+    17
+   ],
+   [
+    65.0,
+    3
+   ],
+   [
+    18.497,
+    2
+   ],
+   [
+    18.998,
+    2
+   ],
+   [
+    5.474,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.508
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.257
+   ],
+   [
+    [
+     "hit",
+     "taricpassiveattack"
+    ],
+    0.164
+   ],
+   [
+    [
+     "hit",
+     "tarice"
+    ],
+    0.153
+   ],
+   [
+    [
+     "hit",
+     "taricpassive"
+    ],
+    0.093
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Inspiration/GlacialAugment/GlacialAugment.lua"
+    ],
+    0.082
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.475
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.257
+   ],
+   [
+    [
+     "my hit",
+     "tarice"
+    ],
+    0.093
+   ],
+   [
+    [
+     "my hit",
+     "taricpassiveattack"
+    ],
+    0.082
+   ],
+   [
+    [
+     "other"
+    ],
+    0.055
+   ]
+  ],
+  "lived_med": 12.24,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    112
+   ],
+   [
+    "taricpassiveattack",
+    95
+   ],
+   [
+    "#6a4229fc",
+    67
+   ],
+   [
+    "taricpassiveattack2",
+    63
+   ],
+   [
+    "tarice",
+    50
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.858
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.268
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.251
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.164
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.131
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.109
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.847
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.268
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.164
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_GlacialAugment_Mis"
+    ],
+    0.082
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.033
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.022
+   ]
+  ]
+ },
+ "talentreaperpersistenteffects": {
+  "n": 11,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    11
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.909
+   ],
+   [
+    [
+     "end",
+     "s14_support_gold_display"
+    ],
+    0.273
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.273
+   ],
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.091
+   ],
+   [
+    [
+     "end",
+     "item2010"
+    ],
+    0.091
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 226.553,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    112
+   ],
+   [
+    "taricpassiveattack",
+    95
+   ],
+   [
+    "#6a4229fc",
+    67
+   ],
+   [
+    "taricpassiveattack2",
+    63
+   ],
+   [
+    "tarice",
+    53
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.727
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.273
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.273
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.273
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.182
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.545
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.091
+   ]
+  ]
+ },
+ "sr_2026_s1_rolebound_support_quest": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 856.772,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    112
+   ],
+   [
+    "taricpassiveattack",
+    95
+   ],
+   [
+    "#6a4229fc",
+    67
+   ],
+   [
+    "taricpassiveattack2",
+    63
+   ],
+   [
+    "tarice",
+    53
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "4641wardplacementcounter": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ],
+   [
+    "taricbasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "challengeschampiontrackerbuff": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ],
+   [
+    "taricbasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "ASSETS/Perks/Styles/Inspiration/GlacialAugment/GlacialAugment.lua": {
+  "n": 44,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    44
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.977
+   ],
+   [
+    [
+     "end",
+     "#056b6bd1"
+    ],
+    0.932
+   ],
+   [
+    [
+     "end",
+     "3870dreambubblecounterdisplay"
+    ],
+    0.023
+   ],
+   [
+    [
+     "hit",
+     "taricpassiveattack2"
+    ],
+    0.023
+   ],
+   [
+    [
+     "hit",
+     "taricpassive"
+    ],
+    0.023
+   ],
+   [
+    [
+     "end",
+     "taricpassiveattack"
+    ],
+    0.023
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "tarice"
+    ],
+    0.976
+   ],
+   [
+    [
+     "my hit",
+     "itemknightsvow"
+    ],
+    0.024
+   ]
+  ],
+  "lived_med": 100.828,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    146
+   ],
+   [
+    "taricpassiveattack",
+    139
+   ],
+   [
+    "#6a4229fc",
+    101
+   ],
+   [
+    "taricpassiveattack2",
+    92
+   ],
+   [
+    "tarice",
+    85
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.159
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.114
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.068
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.068
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.045
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.023
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_GlacialAugment_Mis"
+    ],
+    0.955
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.023
+   ]
+  ]
+ },
+ "#0b687c51": {
+  "n": 60,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    60
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "#01e49e71"
+    ],
+    0.95
+   ],
+   [
+    [
+     "none"
+    ],
+    0.917
+   ],
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.033
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.017
+   ],
+   [
+    [
+     "end",
+     "superrecall"
+    ],
+    0.017
+   ],
+   [
+    [
+     "cast",
+     "taricr"
+    ],
+    0.017
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.983
+   ],
+   [
+    [
+     "my cast",
+     "taricw"
+    ],
+    0.017
+   ]
+  ],
+  "lived_med": 39.276,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    50
+   ],
+   [
+    "#6a4229fc",
+    45
+   ],
+   [
+    "taricpassive",
+    44
+   ],
+   [
+    "tarice",
+    32
+   ],
+   [
+    "taricpassiveattack2",
+    26
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.2
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.05
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.05
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.05
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.033
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.017
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    6.517
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.033
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.033
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.033
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack2"
+    ],
+    0.017
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.017
+   ]
+  ]
+ },
+ "srhomeguardspeed": {
+  "n": 45,
+  "games": 3,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    25000.0,
+    45
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "recall"
+    ],
+    0.067
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 17.817,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.867
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    0.089
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.111
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.044
+   ]
+  ]
+ },
+ "s14_support_gold_display": {
+  "n": 6,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    250000.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 473.87,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    112
+   ],
+   [
+    "taricpassiveattack",
+    95
+   ],
+   [
+    "#6a4229fc",
+    67
+   ],
+   [
+    "taricpassiveattack2",
+    63
+   ],
+   [
+    "tarice",
+    53
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "s4spawnlockspeed": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    16.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 22.233,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "#0cf347e6": {
+  "n": 40,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    40
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.173,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.075
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.025
+   ]
+  ]
+ },
+ "plantsatchelknockback": {
+  "n": 9,
+  "games": 3,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    1.5,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.835,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.444
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.222
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.111
+   ]
+  ],
+  "at_end": []
+ },
+ "ASSETS/Perks/Styles/Resolve/UnflinchingResists/UnflinchingResists.lua": {
+  "n": 54,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    2.0,
+    54
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.889
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.148
+   ],
+   [
+    [
+     "end",
+     "taricw"
+    ],
+    0.074
+   ],
+   [
+    [
+     "cast",
+     "tarice"
+    ],
+    0.056
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.037
+   ],
+   [
+    [
+     "end",
+     "flee"
+    ],
+    0.019
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.815
+   ],
+   [
+    [
+     "time"
+    ],
+    0.148
+   ],
+   [
+    [
+     "my hit",
+     "tarice"
+    ],
+    0.037
+   ]
+  ],
+  "lived_med": 3.307,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    34
+   ],
+   [
+    "tarice",
+    28
+   ],
+   [
+    "taricpassiveattack",
+    26
+   ],
+   [
+    "#6a4229fc",
+    14
+   ],
+   [
+    "taricpassiveattack2",
+    13
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.278
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.111
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.056
+   ],
+   [
+    [
+     "fx",
+     119924804
+    ],
+    0.019
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.019
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.056
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.019
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.019
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_GlacialAugment_Mis"
+    ],
+    0.019
+   ]
+  ]
+ },
+ "#0f34c131": {
+  "n": 142,
+  "games": 3,
+  "self": 0.056,
+  "type": 11,
+  "durations": [
+   [
+    0.3,
+    142
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.873
+   ],
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.063
+   ],
+   [
+    [
+     "cast",
+     "summonerexhaust"
+    ],
+    0.021
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Resolve/BonePlating/BonePlating.lua"
+    ],
+    0.021
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.021
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.014
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.775
+   ],
+   [
+    [
+     "time"
+    ],
+    0.197
+   ],
+   [
+    [
+     "my cast",
+     "taricw"
+    ],
+    0.014
+   ],
+   [
+    [
+     "my cast",
+     "item2003"
+    ],
+    0.007
+   ],
+   [
+    [
+     "my cast",
+     "3190active"
+    ],
+    0.007
+   ]
+  ],
+  "lived_med": 2.304,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    5
+   ],
+   [
+    "taricpassiveattack",
+    4
+   ],
+   [
+    "taricpassiveattack2",
+    2
+   ],
+   [
+    "tarice",
+    2
+   ],
+   [
+    "#6a4229fc",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.486
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.014
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.07
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.014
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.007
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.007
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.669
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    0.014
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.014
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.007
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack2"
+    ],
+    0.007
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricBasicAttack"
+    ],
+    0.007
+   ]
+  ]
+ },
+ "taricpassiveattack": {
+  "n": 293,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    5.0,
+    293
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.597
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.239
+   ],
+   [
+    [
+     "cast",
+     "tarice"
+    ],
+    0.14
+   ],
+   [
+    [
+     "cast",
+     "taricr"
+    ],
+    0.02
+   ],
+   [
+    [
+     "end",
+     "passivegemidlevfx"
+    ],
+    0.017
+   ],
+   [
+    [
+     "end",
+     "shyvanaedragonslow"
+    ],
+    0.003
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "taricpassiveattack2"
+    ],
+    0.395
+   ],
+   [
+    [
+     "other"
+    ],
+    0.316
+   ],
+   [
+    [
+     "time"
+    ],
+    0.199
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.076
+   ],
+   [
+    [
+     "my hit",
+     "taricpassive"
+    ],
+    0.007
+   ]
+  ],
+  "lived_med": 5.077,
+  "ticks": 216,
+  "period_med": 1.87,
+  "on_hit": [
+   [
+    "taricpassive",
+    253
+   ],
+   [
+    "taricpassiveattack2",
+    138
+   ],
+   [
+    "tarice",
+    106
+   ],
+   [
+    "#6a4229fc",
+    92
+   ],
+   [
+    "itemknightsvow",
+    9
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.689
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    1.396
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.997
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.249
+   ],
+   [
+    [
+     "fx_until_end",
+     7791810
+    ],
+    0.198
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.041
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.686
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.051
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.048
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.038
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.007
+   ]
+  ]
+ },
+ "taricpassiveattackparticle": {
+  "n": 293,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    5.0,
+    293
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.597
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.239
+   ],
+   [
+    [
+     "cast",
+     "tarice"
+    ],
+    0.14
+   ],
+   [
+    [
+     "cast",
+     "taricr"
+    ],
+    0.02
+   ],
+   [
+    [
+     "end",
+     "passivegemidlevfx"
+    ],
+    0.017
+   ],
+   [
+    [
+     "end",
+     "shyvanaedragonslow"
+    ],
+    0.003
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "taricpassiveattack2"
+    ],
+    0.395
+   ],
+   [
+    [
+     "other"
+    ],
+    0.316
+   ],
+   [
+    [
+     "time"
+    ],
+    0.199
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.076
+   ],
+   [
+    [
+     "my hit",
+     "taricpassive"
+    ],
+    0.007
+   ]
+  ],
+  "lived_med": 5.077,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    253
+   ],
+   [
+    "taricpassiveattack",
+    216
+   ],
+   [
+    "taricpassiveattack2",
+    138
+   ],
+   [
+    "tarice",
+    106
+   ],
+   [
+    "#6a4229fc",
+    92
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.689
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    1.396
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.997
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.249
+   ],
+   [
+    [
+     "fx_until_end",
+     7791810
+    ],
+    0.198
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.041
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.686
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.051
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.048
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.038
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.007
+   ]
+  ]
+ },
+ "#056b6bd1": {
+  "n": 42,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25.0,
+    42
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "tarice"
+    ],
+    1.595
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Inspiration/GlacialAugment/GlacialAugment.lua"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.357
+   ],
+   [
+    [
+     "hit",
+     "itemknightsvow"
+    ],
+    0.048
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.024
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Resolve/UnflinchingResists/UnflinchingResists.lua"
+    ],
+    0.024
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 25.155,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    108
+   ],
+   [
+    "taricpassiveattack",
+    79
+   ],
+   [
+    "taricpassiveattack2",
+    46
+   ],
+   [
+    "#6a4229fc",
+    24
+   ],
+   [
+    "tarice",
+    23
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_GlacialAugment_Mis"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.024
+   ],
+   [
+    [
+     "cooldown",
+     "87"
+    ],
+    0.024
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.167
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.048
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.024
+   ]
+  ]
+ },
+ "taricestun": {
+  "n": 111,
+  "games": 3,
+  "self": 0.0,
+  "type": 5,
+  "durations": [
+   [
+    1.5,
+    92
+   ],
+   [
+    1.05,
+    12
+   ],
+   [
+    1.41,
+    5
+   ],
+   [
+    0.987,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "tarice"
+    ],
+    2.405
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Inspiration/GlacialAugment/GlacialAugment.lua"
+    ],
+    0.631
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.252
+   ],
+   [
+    [
+     "end",
+     "powerfistslow"
+    ],
+    0.045
+   ],
+   [
+    [
+     "hit",
+     "itemknightsvow"
+    ],
+    0.045
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Resolve/UnflinchingResists/UnflinchingResists.lua"
+    ],
+    0.036
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.826
+   ],
+   [
+    [
+     "death"
+    ],
+    0.092
+   ],
+   [
+    [
+     "other"
+    ],
+    0.083
+   ]
+  ],
+  "lived_med": 1.565,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_GlacialAugment_Mis"
+    ],
+    0.631
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.027
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.027
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.018
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.009
+   ],
+   [
+    [
+     "cooldown",
+     "87"
+    ],
+    0.009
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.198
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.081
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.063
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_GlacialAugment_Mis"
+    ],
+    0.036
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.027
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.018
+   ]
+  ]
+ },
+ "summonerexhaustslow": {
+  "n": 12,
+  "games": 3,
+  "self": 0.0,
+  "type": 11,
+  "durations": [
+   [
+    3.0,
+    11
+   ],
+   [
+    2.1,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerexhaust"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.073,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     180417155
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.083
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.083
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.083
+   ]
+  ]
+ },
+ "summonerexhaust": {
+  "n": 12,
+  "games": 3,
+  "self": 0.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    12
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerexhaust"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.073,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     180417155
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.083
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.083
+   ]
+  ]
+ },
+ "summonerexhaustdebuff": {
+  "n": 12,
+  "games": 3,
+  "self": 0.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    12
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerexhaust"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.073,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     180417155
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.083
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.083
+   ]
+  ]
+ },
+ "ASSETS/Perks/Styles/Resolve/BonePlating/BonePlating.lua": {
+  "n": 60,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    1.5,
+    60
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    0.883
+   ],
+   [
+    [
+     "end",
+     "taricw"
+    ],
+    0.15
+   ],
+   [
+    [
+     "cast",
+     "tarice"
+    ],
+    0.067
+   ],
+   [
+    [
+     "end",
+     "3190shield"
+    ],
+    0.05
+   ],
+   [
+    [
+     "end",
+     "sru_crabspeedboost"
+    ],
+    0.033
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.867
+   ],
+   [
+    [
+     "other"
+    ],
+    0.133
+   ]
+  ],
+  "lived_med": 1.636,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "tarice",
+    12
+   ],
+   [
+    "taricpassive",
+    6
+   ],
+   [
+    "taricpassiveattack",
+    5
+   ],
+   [
+    "taricpassiveattack2",
+    3
+   ],
+   [
+    "#6a4229fc",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    6.517
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    3.767
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.033
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.033
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.033
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack2"
+    ],
+    0.017
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.517
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.067
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.033
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.033
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.017
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.017
+   ]
+  ]
+ },
+ "#01e49e71": {
+  "n": 60,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    55.0,
+    60
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Resolve/BonePlating/BonePlating.lua"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    0.9
+   ],
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.033
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.033
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.033
+   ],
+   [
+    [
+     "hit",
+     "taricpassiveattack"
+    ],
+    0.017
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 55.077,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    204
+   ],
+   [
+    "taricpassiveattack",
+    163
+   ],
+   [
+    "taricpassiveattack2",
+    109
+   ],
+   [
+    "#6a4229fc",
+    78
+   ],
+   [
+    "tarice",
+    64
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.517
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.067
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.05
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.033
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.033
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.017
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.2
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.033
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.017
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.017
+   ]
+  ]
+ },
+ "stun": {
+  "n": 16,
+  "games": 3,
+  "self": 1.0,
+  "type": 5,
+  "durations": [
+   [
+    0.7,
+    3
+   ],
+   [
+    1.0,
+    3
+   ],
+   [
+    0.5,
+    3
+   ],
+   [
+    0.658,
+    2
+   ],
+   [
+    1.35,
+    2
+   ],
+   [
+    1.75,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "end",
+     "taricw"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cast",
+     "tarice"
+    ],
+    0.062
+   ],
+   [
+    [
+     "end",
+     "FaelightSeenByWardBuffBar"
+    ],
+    0.062
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.002,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.312
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.875
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.438
+   ],
+   [
+    [
+     "fx_until_end",
+     126216260
+    ],
+    0.188
+   ],
+   [
+    [
+     "fx",
+     119924804
+    ],
+    0.125
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.062
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.062
+   ]
+  ]
+ },
+ "rocketgrab2": {
+  "n": 5,
+  "games": 3,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    1.0,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.8
+   ],
+   [
+    [
+     "end",
+     "taricw"
+    ],
+    0.4
+   ],
+   [
+    [
+     "cast",
+     "tarice"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "FaelightSeenByWardBuffBar"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.534,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.2
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     126216260
+    ],
+    0.2
+   ]
+  ],
+  "at_end": []
+ },
+ "powerfistslow": {
+  "n": 9,
+  "games": 3,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    1.25,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.778
+   ],
+   [
+    [
+     "cast",
+     "tarice"
+    ],
+    0.111
+   ],
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.111
+   ],
+   [
+    [
+     "end",
+     "3190shield"
+    ],
+    0.111
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.889
+   ],
+   [
+    [
+     "other"
+    ],
+    0.111
+   ]
+  ],
+  "lived_med": 1.002,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "tarice",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.444
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.111
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.111
+   ]
+  ]
+ },
+ "item2003": {
+  "n": 6,
+  "games": 3,
+  "self": 1.0,
+  "type": 14,
+  "durations": [
+   [
+    14.75,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "item2003"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.833
+   ],
+   [
+    [
+     "other"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 14.894,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    13
+   ],
+   [
+    "tarice",
+    13
+   ],
+   [
+    "taricpassiveattack",
+    10
+   ],
+   [
+    "#6a4229fc",
+    5
+   ],
+   [
+    "taricpassiveattack2",
+    5
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.167
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.167
+   ]
+  ]
+ },
+ "taricwselfbuff": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "tarice",
+    6
+   ],
+   [
+    "#6a4229fc",
+    5
+   ],
+   [
+    "taricpassive",
+    5
+   ],
+   [
+    "taricbasicattack2",
+    4
+   ],
+   [
+    "taricpassiveattack",
+    4
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "taricwallybuff": {
+  "n": 68,
+  "games": 3,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    68
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "passivegemidlevfx"
+    ],
+    0.103
+   ],
+   [
+    [
+     "end",
+     "nasusearmorreduction"
+    ],
+    0.015
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "taricw"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 67.911,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.588
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.5
+   ],
+   [
+    [
+     "fx_until_end",
+     112288979
+    ],
+    0.265
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.132
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.456
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    1.912
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.956
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.5
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.103
+   ]
+  ]
+ },
+ "taricwleashactive": {
+  "n": 187,
+  "games": 3,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    187
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.615
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.364
+   ],
+   [
+    [
+     "end",
+     "passivegemidlevfx"
+    ],
+    0.112
+   ],
+   [
+    [
+     "cast",
+     "recall"
+    ],
+    0.005
+   ],
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.005
+   ],
+   [
+    [
+     "cast",
+     "jammerdevice"
+    ],
+    0.005
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.845
+   ],
+   [
+    [
+     "my cast",
+     "taricw"
+    ],
+    0.134
+   ],
+   [
+    [
+     "my cast",
+     "taricq"
+    ],
+    0.011
+   ],
+   [
+    [
+     "my cast",
+     "summonerflash"
+    ],
+    0.005
+   ],
+   [
+    [
+     "my cast",
+     "trinketsweeperlvl3"
+    ],
+    0.005
+   ]
+  ],
+  "lived_med": 7.604,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.262
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    0.813
+   ],
+   [
+    [
+     "fx_until_end",
+     112288979
+    ],
+    0.813
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.449
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.364
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.182
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.102
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    0.299
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.144
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.118
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.064
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.016
+   ]
+  ]
+ },
+ "taricw": {
+  "n": 218,
+  "games": 3,
+  "self": 0.505,
+  "type": 2,
+  "durations": [
+   [
+    2.5,
+    218
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "passivegemidlevfx"
+    ],
+    0.064
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.009
+   ],
+   [
+    [
+     "end",
+     "nasusearmorreduction"
+    ],
+    0.009
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.592
+   ],
+   [
+    [
+     "other"
+    ],
+    0.39
+   ],
+   [
+    [
+     "my cast",
+     "taricw"
+    ],
+    0.014
+   ],
+   [
+    [
+     "my hit",
+     "itemknightsvow"
+    ],
+    0.005
+   ]
+  ],
+  "lived_med": 2.504,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    39
+   ],
+   [
+    "taricpassive",
+    38
+   ],
+   [
+    "tarice",
+    17
+   ],
+   [
+    "taricpassiveattack2",
+    16
+   ],
+   [
+    "#6a4229fc",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.807
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.44
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    1.248
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.404
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.064
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.661
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.023
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack2"
+    ],
+    0.009
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.009
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.005
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.005
+   ]
+  ]
+ },
+ "recall": {
+  "n": 36,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    7.9,
+    36
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.028
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.528
+   ],
+   [
+    [
+     "other"
+    ],
+    0.444
+   ],
+   [
+    [
+     "my cast",
+     "taricq"
+    ],
+    0.028
+   ]
+  ],
+  "lived_med": 7.903,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.667
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.194
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.111
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    0.028
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.028
+   ]
+  ]
+ },
+ "taricwleashinactive": {
+  "n": 162,
+  "games": 3,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    162
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.932
+   ],
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.025
+   ],
+   [
+    [
+     "cast",
+     "tarice"
+    ],
+    0.006
+   ],
+   [
+    [
+     "end",
+     "kindredrnodeathbuff"
+    ],
+    0.006
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.006
+   ],
+   [
+    [
+     "cast",
+     "trinketsweeperlvl3"
+    ],
+    0.006
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.786
+   ],
+   [
+    [
+     "my cast",
+     "taricw"
+    ],
+    0.214
+   ]
+  ],
+  "lived_med": 6.524,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.389
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.117
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    0.037
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.019
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.019
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.012
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.438
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    0.519
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.21
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.111
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.111
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_GlacialAugment_Mis"
+    ],
+    0.006
+   ]
+  ]
+ },
+ "passivegemidlevfx": {
+  "n": 153,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    250000.0,
+    153
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.948
+   ],
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.026
+   ],
+   [
+    [
+     "end",
+     "3870dreambubblecounterdisplay"
+    ],
+    0.026
+   ],
+   [
+    [
+     "end",
+     "recall"
+    ],
+    0.02
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Resolve/BonePlating/BonePlating.lua"
+    ],
+    0.013
+   ],
+   [
+    [
+     "end",
+     "taricpassiveattack"
+    ],
+    0.013
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.908
+   ],
+   [
+    [
+     "my cast",
+     "taricw"
+    ],
+    0.086
+   ],
+   [
+    [
+     "my cast",
+     "trinketsweeperlvl3"
+    ],
+    0.007
+   ]
+  ],
+  "lived_med": 9.346,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    51
+   ],
+   [
+    "#6a4229fc",
+    46
+   ],
+   [
+    "taricpassive",
+    31
+   ],
+   [
+    "taricbasicattack",
+    25
+   ],
+   [
+    "taricpassiveattack2",
+    25
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.993
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.346
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.026
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.02
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.013
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.007
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.987
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.464
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    0.235
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.046
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.039
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.026
+   ]
+  ]
+ },
+ "sru_crabspeedboost": {
+  "n": 9,
+  "games": 3,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    2.0,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.889
+   ],
+   [
+    [
+     "my hit",
+     "taricbasicattack"
+    ],
+    0.111
+   ]
+  ],
+  "lived_med": 3.478,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricbasicattack",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.889
+   ]
+  ]
+ },
+ "sharedwardbuff": {
+  "n": 103,
+  "games": 3,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    150.0,
+    92
+   ],
+   [
+    94.059,
+    2
+   ],
+   [
+    94.588,
+    1
+   ],
+   [
+    97.412,
+    1
+   ],
+   [
+    91.235,
+    1
+   ],
+   [
+    98.294,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.893
+   ],
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    0.107
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.438
+   ],
+   [
+    [
+     "death"
+    ],
+    0.292
+   ],
+   [
+    [
+     "my cast",
+     "itemghostward"
+    ],
+    0.271
+   ]
+  ],
+  "lived_med": 101.344,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.369
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.35
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.097
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.252
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.087
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    0.019
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.01
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.01
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.01
+   ]
+  ]
+ },
+ "sharedstealthwardbuff": {
+  "n": 103,
+  "games": 3,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    103
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.893
+   ],
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    0.107
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "death"
+    ],
+    0.719
+   ],
+   [
+    [
+     "my cast",
+     "itemghostward"
+    ],
+    0.281
+   ]
+  ],
+  "lived_med": 101.344,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.369
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.35
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.097
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.252
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.087
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    0.019
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.01
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.01
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.01
+   ]
+  ]
+ },
+ "relicyellowward": {
+  "n": 11,
+  "games": 3,
+  "self": 0.0,
+  "type": 6,
+  "durations": [
+   [
+    94.059,
+    2
+   ],
+   [
+    94.588,
+    1
+   ],
+   [
+    97.412,
+    1
+   ],
+   [
+    91.235,
+    1
+   ],
+   [
+    98.294,
+    1
+   ],
+   [
+    101.118,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.818
+   ],
+   [
+    [
+     "death"
+    ],
+    0.182
+   ]
+  ],
+  "lived_med": 94.152,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.909
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.091
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.182
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.091
+   ]
+  ]
+ },
+ "item2010": {
+  "n": 7,
+  "games": 3,
+  "self": 1.0,
+  "type": 14,
+  "durations": [
+   [
+    4.75,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "item2010"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.877,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    5
+   ],
+   [
+    "taricpassiveattack",
+    4
+   ],
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "taricbasicattack",
+    2
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.143
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.143
+   ]
+  ]
+ },
+ "summonerdot": {
+  "n": 5,
+  "games": 3,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    5.0,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.75
+   ],
+   [
+    [
+     "other"
+    ],
+    0.25
+   ]
+  ],
+  "lived_med": 5.077,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    4
+   ],
+   [
+    "taricpassiveattack",
+    3
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ],
+   [
+    "tarice",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.4
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.6
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.4
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.2
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.2
+   ]
+  ]
+ },
+ "grievouswound": {
+  "n": 12,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    7
+   ],
+   [
+    5.0,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "tristanaechargesound"
+    ],
+    0.083
+   ],
+   [
+    [
+     "end",
+     "tristanaecharge"
+    ],
+    0.083
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.545
+   ],
+   [
+    [
+     "other"
+    ],
+    0.455
+   ]
+  ],
+  "lived_med": 3.208,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    4
+   ],
+   [
+    "taricpassiveattack",
+    3
+   ],
+   [
+    "tarice",
+    2
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.75
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.417
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.583
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.25
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.167
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.083
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.083
+   ]
+  ]
+ },
+ "itemghostward": {
+  "n": 92,
+  "games": 3,
+  "self": 0.0,
+  "type": 6,
+  "durations": [
+   [
+    150.0,
+    92
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.388
+   ],
+   [
+    [
+     "death"
+    ],
+    0.306
+   ],
+   [
+    [
+     "my cast",
+     "itemghostward"
+    ],
+    0.306
+   ]
+  ],
+  "lived_med": 114.417,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.38
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.293
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.261
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.087
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    0.022
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.011
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.011
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.011
+   ]
+  ]
+ },
+ "dravendoubleshotmissile": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    2.0,
+    3
+   ],
+   [
+    1.32,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.237,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    9
+   ],
+   [
+    "tarice",
+    5
+   ],
+   [
+    "taricpassive",
+    4
+   ],
+   [
+    "taricpassiveattack",
+    3
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.5
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ]
+  ]
+ },
+ "dravendoubleshot": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.5,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.4,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    3
+   ],
+   [
+    "tarice",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "srx_dragonbuffinfernal": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    8
+   ],
+   [
+    "taricpassive",
+    7
+   ],
+   [
+    "taricpassiveattack2",
+    5
+   ],
+   [
+    "taricbasicattack",
+    2
+   ],
+   [
+    "tarice",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SRX_DragonSoulBuffInfernal"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "trinketsweeperlvl3": {
+  "n": 38,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    8.0,
+    38
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "trinketsweeperlvl3"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 8.154,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    18
+   ],
+   [
+    "taricpassive",
+    15
+   ],
+   [
+    "taricpassiveattack2",
+    13
+   ],
+   [
+    "taricbasicattack",
+    9
+   ],
+   [
+    "taricbasicattack3",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.921
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.974
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.026
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.026
+   ]
+  ]
+ },
+ "silence": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 7,
+  "durations": [
+   [
+    0.47,
+    2
+   ],
+   [
+    0.5,
+    1
+   ],
+   [
+    0.33,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "cast",
+     "tarice"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.701,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassive",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.25
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ]
+  ]
+ },
+ "flee": {
+  "n": 9,
+  "games": 3,
+  "self": 1.0,
+  "type": 29,
+  "durations": [
+   [
+    0.3,
+    4
+   ],
+   [
+    0.495,
+    2
+   ],
+   [
+    0.75,
+    1
+   ],
+   [
+    0.705,
+    1
+   ],
+   [
+    0.99,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "powerfistslow"
+    ],
+    0.222
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.2,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.222
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.889
+   ]
+  ]
+ },
+ "slow": {
+  "n": 19,
+  "games": 3,
+  "self": 0.842,
+  "type": 11,
+  "durations": [
+   [
+    1.5,
+    7
+   ],
+   [
+    1.41,
+    3
+   ],
+   [
+    0.3,
+    3
+   ],
+   [
+    2.64,
+    2
+   ],
+   [
+    0.75,
+    1
+   ],
+   [
+    0.705,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.842
+   ],
+   [
+    [
+     "end",
+     "flee"
+    ],
+    0.158
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.158
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Resolve/BonePlating/BonePlating.lua"
+    ],
+    0.105
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.053
+   ],
+   [
+    [
+     "end",
+     "powerfistslow"
+    ],
+    0.053
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.842
+   ],
+   [
+    [
+     "other"
+    ],
+    0.158
+   ]
+  ],
+  "lived_med": 1.637,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    4
+   ],
+   [
+    "taricpassiveattack",
+    3
+   ],
+   [
+    "taricpassiveattack2",
+    2
+   ],
+   [
+    "#6a4229fc",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.579
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.368
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.105
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.316
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.211
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.053
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.053
+   ]
+  ]
+ },
+ "taricrindicator": {
+  "n": 29,
+  "games": 3,
+  "self": 0.0,
+  "type": 1,
+  "durations": [
+   [
+    2.233,
+    3
+   ],
+   [
+    0.12,
+    3
+   ],
+   [
+    2.427,
+    3
+   ],
+   [
+    1.957,
+    2
+   ],
+   [
+    1.892,
+    2
+   ],
+   [
+    2.326,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.483
+   ],
+   [
+    [
+     "cast",
+     "taricr"
+    ],
+    0.379
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.103
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.034
+   ],
+   [
+    [
+     "end",
+     "kaynrenemymark"
+    ],
+    0.034
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.621
+   ],
+   [
+    [
+     "other"
+    ],
+    0.379
+   ]
+  ],
+  "lived_med": 1.002,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.138
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.448
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.483
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.172
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.034
+   ]
+  ]
+ },
+ "taricr": {
+  "n": 52,
+  "games": 3,
+  "self": 0.385,
+  "type": 18,
+  "durations": [
+   [
+    2.5,
+    52
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.942
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.058
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.576,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    20
+   ],
+   [
+    "taricpassive",
+    7
+   ],
+   [
+    "taricpassiveattack",
+    6
+   ],
+   [
+    "tarice",
+    6
+   ],
+   [
+    "taricpassiveattack2",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.173
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.173
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.115
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.346
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.096
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.058
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.019
+   ]
+  ]
+ },
+ "shyvanaegrounddot": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    0.5,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "time"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 2.7,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.667
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.333
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.333
+   ]
+  ]
+ },
+ "kindredrnodeathbuff": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    4.0,
+    2
+   ],
+   [
+    3.766,
+    1
+   ],
+   [
+    2.694,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.5
+   ],
+   [
+    [
+     "time"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 2.407,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "tarice",
+    1
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.75
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.25
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ]
+  ]
+ },
+ "yoneedeathmark": {
+  "n": 6,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "sru_crabspeedboost"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "taricw"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.833
+   ],
+   [
+    [
+     "my hit",
+     "taricpassiveattack"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 2.939,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    9
+   ],
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.833
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.833
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.167
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.167
+   ]
+  ]
+ },
+ "yoneq3knockup": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    0.75,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.969,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "3190shield": {
+  "n": 64,
+  "games": 3,
+  "self": 0.328,
+  "type": 2,
+  "durations": [
+   [
+    2.5,
+    64
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "3190active"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.828
+   ],
+   [
+    [
+     "time"
+    ],
+    0.156
+   ],
+   [
+    [
+     "my hit",
+     "taricpassiveattack"
+    ],
+    0.016
+   ]
+  ],
+  "lived_med": 1.188,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassive",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.891
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    3.469
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.531
+   ],
+   [
+    [
+     "cooldown",
+     "8e"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.156
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.438
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.016
+   ],
+   [
+    [
+     "fx",
+     146970388
+    ],
+    0.016
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.016
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.016
+   ]
+  ]
+ },
+ "3190diminisheddebuff": {
+  "n": 64,
+  "games": 3,
+  "self": 0.328,
+  "type": 3,
+  "durations": [
+   [
+    20.0,
+    64
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "3190active"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 20.116,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    21
+   ],
+   [
+    "taricpassiveattack",
+    14
+   ],
+   [
+    "tarice",
+    10
+   ],
+   [
+    "taricpassiveattack2",
+    8
+   ],
+   [
+    "itemknightsvow",
+    7
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.891
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    3.469
+   ],
+   [
+    [
+     "cooldown",
+     "8e"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.156
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.172
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.109
+   ]
+  ]
+ },
+ "planthawkshotbuff": {
+  "n": 45,
+  "games": 3,
+  "self": 0.156,
+  "type": 3,
+  "durations": [
+   [
+    12.0,
+    26
+   ],
+   [
+    3.0,
+    19
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.911
+   ],
+   [
+    [
+     "hit",
+     "planthawkshotchemtech"
+    ],
+    0.044
+   ],
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.022
+   ],
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.022
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.422
+   ],
+   [
+    [
+     "death"
+    ],
+    0.244
+   ],
+   [
+    [
+     "time"
+    ],
+    0.222
+   ],
+   [
+    [
+     "my cast",
+     "taricq"
+    ],
+    0.067
+   ],
+   [
+    [
+     "my cast",
+     "recall"
+    ],
+    0.022
+   ]
+  ],
+  "lived_med": 3.972,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "tarice",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.756
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.511
+   ],
+   [
+    [
+     "slot",
+     52,
+     "PlantHawkshotChemtech"
+    ],
+    0.022
+   ],
+   [
+    [
+     "slot",
+     52,
+     "PlantHawkshotAudio"
+    ],
+    0.022
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.111
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_GlacialAugment_Mis"
+    ],
+    0.022
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.022
+   ]
+  ]
+ },
+ "#0f1b5ee1": {
+  "n": 6,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    4.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.833
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "time"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 4.041,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "tarice",
+    2
+   ],
+   [
+    "#6a4229fc",
+    2
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassive",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "shyvanaedragonslow": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    2.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.204,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.5
+   ]
+  ]
+ },
+ "sr_2026_s1_rolebound_support_questcompleted": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "sr_2026_s1_rolebound_support_quest"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_gold_display"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "talentreaperpersistenteffects"
+    ],
+    0.667
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    9
+   ],
+   [
+    "taricpassiveattack",
+    8
+   ],
+   [
+    "#6a4229fc",
+    7
+   ],
+   [
+    "taricpassiveattack2",
+    4
+   ],
+   [
+    "tarice",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "s11support_quest_completion_buff": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "sr_2026_s1_rolebound_support_quest"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_gold_display"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "talentreaperpersistenteffects"
+    ],
+    0.667
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    9
+   ],
+   [
+    "taricpassiveattack",
+    8
+   ],
+   [
+    "#6a4229fc",
+    7
+   ],
+   [
+    "taricpassiveattack2",
+    4
+   ],
+   [
+    "tarice",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "3870bubbleblue": {
+  "n": 92,
+  "games": 3,
+  "self": 0.0,
+  "type": 1,
+  "durations": [
+   [
+    3.0,
+    92
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.511
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.478
+   ],
+   [
+    [
+     "end",
+     "passivegemidlevfx"
+    ],
+    0.043
+   ],
+   [
+    [
+     "cast",
+     "summonerheal"
+    ],
+    0.011
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.5
+   ],
+   [
+    [
+     "other"
+    ],
+    0.467
+   ],
+   [
+    [
+     "my cast",
+     "taricw"
+    ],
+    0.022
+   ],
+   [
+    [
+     "my cast",
+     "taricq"
+    ],
+    0.011
+   ]
+  ],
+  "lived_med": 2.908,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    6.707
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    1.728
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.141
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.989
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.054
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.467
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    0.065
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.033
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.033
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.033
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.022
+   ]
+  ]
+ },
+ "3870dreambubblecounterdisplay": {
+  "n": 92,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    7.273,
+    92
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.511
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.478
+   ],
+   [
+    [
+     "end",
+     "passivegemidlevfx"
+    ],
+    0.043
+   ],
+   [
+    [
+     "cast",
+     "summonerheal"
+    ],
+    0.011
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 7.408,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    111
+   ],
+   [
+    "taricpassiveattack",
+    91
+   ],
+   [
+    "taricpassiveattack2",
+    51
+   ],
+   [
+    "#6a4229fc",
+    40
+   ],
+   [
+    "tarice",
+    32
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    6.707
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    1.728
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.989
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.054
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.043
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.283
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.098
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.076
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.022
+   ]
+  ]
+ },
+ "srx_dragonbuffcloud": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    3
+   ],
+   [
+    "taricpassive",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "srx_dragonsoulbuffchemtech_preview": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 627.765,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    29
+   ],
+   [
+    "taricpassive",
+    19
+   ],
+   [
+    "taricpassiveattack2",
+    11
+   ],
+   [
+    "tarice",
+    8
+   ],
+   [
+    "taricbasicattack",
+    7
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "jammerdevice": {
+  "n": 31,
+  "games": 3,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    31
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "jammerdevice"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "summonerheal"
+    ],
+    0.032
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "jammerdevice"
+    ],
+    0.655
+   ],
+   [
+    [
+     "death"
+    ],
+    0.31
+   ],
+   [
+    [
+     "my cast",
+     "taricw"
+    ],
+    0.034
+   ]
+  ],
+  "lived_med": 40.324,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.645
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.032
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.032
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.29
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.032
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.032
+   ]
+  ]
+ },
+ "moveawaycollision": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.669,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "srx_dragonbuffchemtech": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    6
+   ],
+   [
+    "tarice",
+    5
+   ],
+   [
+    "taricpassiveattack",
+    5
+   ],
+   [
+    "taricpassiveattack2",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SRX_DragonBuffChemtech"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "shyvanaeslow": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.88,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.042,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ]
+ },
+ "staticfieldlightning": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.5
+   ],
+   [
+    [
+     "none"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.303,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassive",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.5
+   ]
+  ]
+ },
+ "FaelightSeenByWardBuffBar": {
+  "n": 14,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    14
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.786
+   ],
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.143
+   ],
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.071
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.071,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    2
+   ],
+   [
+    "taricbasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.286
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.643
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.071
+   ]
+  ]
+ },
+ "burning": {
+  "n": 8,
+  "games": 3,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    3.0,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "sru_crabspeedboost"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.875
+   ],
+   [
+    [
+     "time"
+    ],
+    0.125
+   ]
+  ],
+  "lived_med": 3.675,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    2
+   ],
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "tarice",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.875
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.875
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.375
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.25
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.125
+   ]
+  ]
+ },
+ "blessingofthelizardelderslow": {
+  "n": 8,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    3.0,
+    7
+   ],
+   [
+    2.82,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "sru_crabspeedboost"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.875
+   ],
+   [
+    [
+     "time"
+    ],
+    0.125
+   ]
+  ],
+  "lived_med": 3.675,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    2
+   ],
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "tarice",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.875
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.375
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.875
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.375
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.125
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.125
+   ]
+  ]
+ },
+ "yonerstun": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 5,
+  "durations": [
+   [
+    1.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "taricr"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.267,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "yonerknockback": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    1.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "taricr"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "yonerstun"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.067,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "yonerknockup": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    0.75,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "yonerknockback"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.91,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "srx_dragonsoulbuffchemtech": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "srx_dragonsoulbuffchemtech_preview"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "srx_dragonsoulbuffchemtechvfx"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    13
+   ],
+   [
+    "taricpassiveattack",
+    10
+   ],
+   [
+    "taricpassiveattack2",
+    6
+   ],
+   [
+    "tarice",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "srx_dragonsoulbuffchemtechvfx": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "srx_dragonsoulbuffchemtech_preview"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.0,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "planthawkshotchemtech",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack2"
+    ],
+    0.5
+   ]
+  ],
+  "at_end": []
+ },
+ "srx_dragonchemtech_mutated_shield": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    20.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 22.584,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    2
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "barondebuff": {
+  "n": 5,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    8.0,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.8
+   ],
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.8
+   ],
+   [
+    [
+     "time"
+    ],
+    0.2
+   ]
+  ],
+  "lived_med": 15.822,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    65
+   ],
+   [
+    "taricpassiveattack",
+    35
+   ],
+   [
+    "taricpassiveattack2",
+    30
+   ],
+   [
+    "tarice",
+    2
+   ],
+   [
+    "taricbasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.4
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.2
+   ]
+  ],
+  "at_end": []
+ },
+ "barontarget": {
+  "n": 7,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    8.0,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.857
+   ],
+   [
+    [
+     "end",
+     "taricw"
+    ],
+    0.286
+   ],
+   [
+    [
+     "hit",
+     "taricpassiveattack2"
+    ],
+    0.143
+   ],
+   [
+    [
+     "hit",
+     "taricpassive"
+    ],
+    0.143
+   ],
+   [
+    [
+     "end",
+     "taricpassiveattack"
+    ],
+    0.143
+   ],
+   [
+    [
+     "end",
+     "taricpassiveattackparticle"
+    ],
+    0.143
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.265,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    16
+   ],
+   [
+    "taricpassiveattack",
+    10
+   ],
+   [
+    "taricpassiveattack2",
+    6
+   ],
+   [
+    "taricbasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.143
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.286
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.143
+   ]
+  ]
+ },
+ "exaltedwithbaronnashor": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    180.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 180.001,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    2
+   ],
+   [
+    "planthawkshotchemtech",
+    1
+   ],
+   [
+    "taricbasicattack",
+    1
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ],
+   [
+    "tarice",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack2"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": []
+ },
+ "exaltedwithbaronnashorvfx": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    99999.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 180.001,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    2
+   ],
+   [
+    "planthawkshotchemtech",
+    1
+   ],
+   [
+    "taricbasicattack",
+    1
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ],
+   [
+    "tarice",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack2"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": []
+ },
+ "superrecall": {
+  "n": 7,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    3.9,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.571
+   ],
+   [
+    [
+     "other"
+    ],
+    0.429
+   ]
+  ],
+  "lived_med": 3.942,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.571
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.143
+   ]
+  ]
+ },
+ "6333bleed": {
+  "n": 1,
+  "games": 3,
+  "self": 0.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "itemknightsvow"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Inspiration/GlacialAugment/GlacialAugment.lua"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.143,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_GlacialAugment_Mis"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ]
+ },
+ "elixirofiron": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    180.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "elixirofiron"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 180.18,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    41
+   ],
+   [
+    "taricpassiveattack",
+    14
+   ],
+   [
+    "taricpassive",
+    13
+   ],
+   [
+    "tarice",
+    12
+   ],
+   [
+    "taricpassiveattack2",
+    8
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ],
+  "at_end": []
+ },
+ "elderdragonhealthbartickmanager": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "cast",
+     "tarice"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.5
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.25
+   ],
+   [
+    [
+     "time"
+    ],
+    0.25
+   ]
+  ],
+  "lived_med": 4.479,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    22
+   ],
+   [
+    "taricpassive",
+    4
+   ],
+   [
+    "taricpassiveattack",
+    3
+   ],
+   [
+    "taricpassiveattack2",
+    2
+   ],
+   [
+    "tarice",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "3050_stormbuff": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    10.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "taricr"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "taricpassiveattack"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 5.304,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    25
+   ],
+   [
+    "taricpassiveattack",
+    2
+   ],
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "tarice",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    6.0
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "87"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     7791810
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "3050_enemybuff": {
+  "n": 5,
+  "games": 3,
+  "self": 0.0,
+  "type": 13,
+  "durations": [
+   [
+    0.3,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.4
+   ],
+   [
+    [
+     "cast",
+     "taricr"
+    ],
+    0.2
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.2
+   ],
+   [
+    [
+     "cast",
+     "summonerexhaust"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.8
+   ],
+   [
+    [
+     "time"
+    ],
+    0.2
+   ]
+  ],
+  "lived_med": 1.458,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.8
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.2
+   ]
+  ]
+ },
+ "kayleq": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.32,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.523,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    3
+   ],
+   [
+    "taricpassiveattack",
+    2
+   ],
+   [
+    "taricpassive",
+    2
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ]
+  ]
+ },
+ "kayleqshred": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    4.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.212,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    3
+   ],
+   [
+    "#6a4229fc",
+    3
+   ],
+   [
+    "taricpassiveattack",
+    2
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ]
+  ]
+ },
+ "karthuswallofpaintarget": {
+  "n": 8,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    4.4,
+    4
+   ],
+   [
+    5.0,
+    2
+   ],
+   [
+    4.7,
+    1
+   ],
+   [
+    3.3,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "srhomeguardspeed"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.487,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    5
+   ],
+   [
+    "taricpassiveattack",
+    3
+   ],
+   [
+    "tarice",
+    2
+   ],
+   [
+    "taricpassiveattack2",
+    2
+   ],
+   [
+    "itemknightsvow",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.125
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.25
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.25
+   ]
+  ]
+ },
+ "karthuswallofpainextra": {
+  "n": 8,
+  "games": 3,
+  "self": 1.0,
+  "type": 28,
+  "durations": [
+   [
+    5.0,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "srhomeguardspeed"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 5.176,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    5
+   ],
+   [
+    "taricpassiveattack",
+    3
+   ],
+   [
+    "tarice",
+    2
+   ],
+   [
+    "taricpassiveattack2",
+    2
+   ],
+   [
+    "itemknightsvow",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.75
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.375
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.25
+   ]
+  ]
+ },
+ "#0ddce281": {
+  "n": 21,
+  "games": 3,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    2.0,
+    9
+   ],
+   [
+    4.0,
+    7
+   ],
+   [
+    1.0,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.905
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.19
+   ],
+   [
+    [
+     "end",
+     "taricw"
+    ],
+    0.143
+   ],
+   [
+    [
+     "end",
+     "3190shield"
+    ],
+    0.143
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Resolve/BonePlating/BonePlating.lua"
+    ],
+    0.095
+   ],
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.048
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.571
+   ],
+   [
+    [
+     "other"
+    ],
+    0.429
+   ]
+  ],
+  "lived_med": 2.639,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    15
+   ],
+   [
+    "taricpassiveattack",
+    9
+   ],
+   [
+    "taricpassiveattack2",
+    7
+   ],
+   [
+    "#6a4229fc",
+    5
+   ],
+   [
+    "tarice",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.905
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.667
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.095
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.095
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.381
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.238
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.143
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.048
+   ]
+  ]
+ },
+ "2508burn": {
+  "n": 5,
+  "games": 3,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    2.9,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.8
+   ],
+   [
+    [
+     "end",
+     "taricw"
+    ],
+    0.4
+   ],
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.6
+   ],
+   [
+    [
+     "other"
+    ],
+    0.4
+   ]
+  ],
+  "lived_med": 3.107,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    6
+   ],
+   [
+    "tarice",
+    3
+   ],
+   [
+    "taricpassiveattack",
+    3
+   ],
+   [
+    "taricpassiveattack2",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.8
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.2
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.2
+   ]
+  ]
+ },
+ "leonasunlight": {
+  "n": 10,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    2.5,
+    10
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.9
+   ],
+   [
+    [
+     "end",
+     "stun"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.1
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.6
+   ],
+   [
+    [
+     "time"
+    ],
+    0.3
+   ],
+   [
+    [
+     "my cast",
+     "taricq"
+    ],
+    0.1
+   ]
+  ],
+  "lived_med": 0.568,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.8
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.1
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.4
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.1
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricBasicAttack"
+    ],
+    0.1
+   ]
+  ]
+ },
+ "summonerheal": {
+  "n": 16,
+  "games": 3,
+  "self": 0.5,
+  "type": 15,
+  "durations": [
+   [
+    1.0,
+    16
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerheal"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.169,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack2",
+    1
+   ],
+   [
+    "taricpassive",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.375
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.125
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.375
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.125
+   ]
+  ]
+ },
+ "summonerhealcheck": {
+  "n": 16,
+  "games": 3,
+  "self": 0.5,
+  "type": 3,
+  "durations": [
+   [
+    30.0,
+    16
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerheal"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.625
+   ],
+   [
+    [
+     "other"
+    ],
+    0.375
+   ]
+  ],
+  "lived_med": 30.09,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "tarice",
+    2
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.375
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.125
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.562
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.438
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    0.25
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.062
+   ]
+  ]
+ },
+ "leonazenithblademissile": {
+  "n": 2,
+  "games": 3,
+  "self": 0.0,
+  "type": 1,
+  "durations": [
+   [
+    1.25,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.512,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "leonazenithbladeroot": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 12,
+  "durations": [
+   [
+    0.5,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.668,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassive",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     126213122
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "karthusfallenonetarget": {
+  "n": 13,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    13
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.923
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.077
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.11,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "tarice",
+    3
+   ],
+   [
+    "taricpassiveattack",
+    3
+   ],
+   [
+    "taricpassive",
+    3
+   ],
+   [
+    "itemknightsvow",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.077
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.077
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.615
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.077
+   ]
+  ]
+ },
+ "karthusfallenonecastsound": {
+  "n": 13,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    5.0,
+    13
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.923
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.077
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 5.155,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    5
+   ],
+   [
+    "taricpassive",
+    5
+   ],
+   [
+    "tarice",
+    3
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ],
+   [
+    "itemknightsvow",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.077
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.077
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.231
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.077
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.077
+   ]
+  ]
+ },
+ "karthusfallenonedamagesound": {
+  "n": 12,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    5.0,
+    12
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.917
+   ],
+   [
+    [
+     "end",
+     "taricw"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "3190shield"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.083
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 5.172,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    3
+   ],
+   [
+    "taricpassiveattack",
+    2
+   ],
+   [
+    "taricpassiveattack2",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.083
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.25
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.083
+   ]
+  ]
+ },
+ "zeriw": {
+  "n": 6,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    2.0,
+    4
+   ],
+   [
+    1.88,
+    1
+   ],
+   [
+    1.76,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.833
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "taricw"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.139,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    2
+   ],
+   [
+    "taricpassiveattack2",
+    2
+   ],
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "taricbasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.167
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.333
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.167
+   ]
+  ],
+  "at_end": []
+ },
+ "shenqslow": {
+  "n": 6,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    2.0,
+    3
+   ],
+   [
+    1.76,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 2.004,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "tarice",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.667
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.333
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.167
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.167
+   ]
+  ]
+ },
+ "2503burn": {
+  "n": 16,
+  "games": 3,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    2.9,
+    16
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.875
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "3190shield"
+    ],
+    0.188
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Resolve/BonePlating/BonePlating.lua"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "taricw"
+    ],
+    0.062
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.062
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.562
+   ],
+   [
+    [
+     "other"
+    ],
+    0.438
+   ]
+  ],
+  "lived_med": 3.141,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    11
+   ],
+   [
+    "taricpassiveattack",
+    7
+   ],
+   [
+    "taricpassiveattack2",
+    5
+   ],
+   [
+    "#6a4229fc",
+    5
+   ],
+   [
+    "itemknightsvow",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.438
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.062
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.125
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.062
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.188
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.125
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    0.125
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.062
+   ]
+  ]
+ },
+ "sylaseknockup": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    0.5,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.668,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "sylasr": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    313.043,
+    1
+   ],
+   [
+    300.0,
+    1
+   ],
+   [
+    240.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "3190shield"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 300.014,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    60
+   ],
+   [
+    "taricpassiveattack",
+    39
+   ],
+   [
+    "taricpassiveattack2",
+    30
+   ],
+   [
+    "#6a4229fc",
+    18
+   ],
+   [
+    "tarice",
+    11
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx",
+     146970388
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.333
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "taunt": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 8,
+  "durations": [
+   [
+    1.32,
+    2
+   ],
+   [
+    1.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 1.346,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack2",
+    1
+   ],
+   [
+    "taricpassive",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.333
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.667
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.333
+   ]
+  ]
+ },
+ "leonasolarflareslow": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.75,
+    1
+   ],
+   [
+    1.645,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.871,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.5
+   ]
+  ]
+ },
+ "barontailpopup": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    1.25,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "taricw"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.437,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "8020visualdebuff": {
+  "n": 57,
+  "games": 3,
+  "self": 0.07,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    57
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.86
+   ],
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.035
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.035
+   ],
+   [
+    [
+     "cast",
+     "3190active"
+    ],
+    0.035
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Resolve/UnflinchingResists/UnflinchingResists.lua"
+    ],
+    0.018
+   ],
+   [
+    [
+     "cast",
+     "tarice"
+    ],
+    0.018
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.385,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.351
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.088
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.018
+   ],
+   [
+    [
+     "cooldown",
+     "8e"
+    ],
+    0.018
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.632
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.14
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.07
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.035
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.018
+   ]
+  ]
+ },
+ "avatarbuffoffensiveburn": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    4.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Resolve/BonePlating/BonePlating.lua"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.027,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    1
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.5
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "4646damagebuff": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    2.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "taricr"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "slow"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "passivegemidlevfx"
+    ],
+    0.5
+   ],
+   [
+    [
+     "none"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.149,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.5
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.5
+   ]
+  ]
+ },
+ "elixirofirontrail": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    2.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.341,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "tarice",
+    1
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassive",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "hecarimultmissilegrab": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.99,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.211,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "6653burn": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    2.9,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.559,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    8.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "pykeqrange": {
+  "n": 10,
+  "games": 3,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    1.0,
+    10
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.9
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.3
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "taricw"
+    ],
+    0.1
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.401,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "tarice",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.4
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.1
+   ]
+  ]
+ },
+ "pykeqmelee": {
+  "n": 10,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.0,
+    10
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "pykeqrange"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.102,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassive",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.1
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.1
+   ]
+  ]
+ },
+ "tristanaechargesound": {
+  "n": 8,
+  "games": 3,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    4.0,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.875
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.625
+   ],
+   [
+    [
+     "other"
+    ],
+    0.375
+   ]
+  ],
+  "lived_med": 4.075,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassive",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.375
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.625
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.125
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.125
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.125
+   ]
+  ]
+ },
+ "tristanaecharge": {
+  "n": 5,
+  "games": 3,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    2400.0,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.305,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.2
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.6
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.4
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.2
+   ]
+  ]
+ },
+ "pykeemissile": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    1.35,
+    2
+   ],
+   [
+    1.25,
+    1
+   ],
+   [
+    1.58,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "taricw"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cast",
+     "taricr"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.604,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.25
+   ]
+  ]
+ },
+ "planthealthslow": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.3,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.501,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "itemcrystalflaskcharge": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "recall"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "passivegemidlevfx"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "itemcrystalflask"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 184.282,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    24
+   ],
+   [
+    "#6a4229fc",
+    21
+   ],
+   [
+    "taricpassive",
+    20
+   ],
+   [
+    "taricpassiveattack2",
+    17
+   ],
+   [
+    "taricbasicattack",
+    11
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.25
+   ]
+  ],
+  "at_end": []
+ },
+ "itemcrystalflask": {
+  "n": 8,
+  "games": 3,
+  "self": 1.0,
+  "type": 14,
+  "durations": [
+   [
+    12.0,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemcrystalflask"
+    ],
+    0.75
+   ],
+   [
+    [
+     "none"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "itemcrystalflaskcharge"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 12.127,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    10
+   ],
+   [
+    "taricpassiveattack",
+    6
+   ],
+   [
+    "taricpassiveattack2",
+    5
+   ],
+   [
+    "#6a4229fc",
+    4
+   ],
+   [
+    "taricbasicattack",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "a3"
+    ],
+    0.75
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.25
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.125
+   ]
+  ]
+ },
+ "srt_2024_horde_dot": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    7
+   ],
+   [
+    "taricpassiveattack",
+    3
+   ],
+   [
+    "taricpassive",
+    3
+   ],
+   [
+    "taricpassiveattack2",
+    2
+   ],
+   [
+    "taricbasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SRT_2024_Horde_DoT"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "srt_2024_horde_summoner": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    2
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassive",
+    1
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SRT_2024_Horde_Summoner"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "srx_dragonsoulbuffmountain_preview": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 728.318,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    37
+   ],
+   [
+    "taricpassiveattack",
+    32
+   ],
+   [
+    "taricpassiveattack2",
+    23
+   ],
+   [
+    "#6a4229fc",
+    12
+   ],
+   [
+    "taricbasicattack",
+    9
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SRX_DragonSoulBuffInfernal"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ]
+ },
+ "kaynpmessagekaynhastransformed": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    0.25,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.267,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "luxlightbindingmis": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 12,
+  "durations": [
+   [
+    2.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.667
+   ],
+   [
+    [
+     "none"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "3190active"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "3190shield"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "taricq"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "srx_dragonsoulbuffmountain_tookdamage"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 2.037,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "tarice",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.667
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.667
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "luxilluminatingfraulein": {
+  "n": 7,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    6.0,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.571
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.286
+   ],
+   [
+    [
+     "cast",
+     "tarice"
+    ],
+    0.143
+   ],
+   [
+    [
+     "end",
+     "taricw"
+    ],
+    0.143
+   ],
+   [
+    [
+     "cast",
+     "3190active"
+    ],
+    0.143
+   ],
+   [
+    [
+     "end",
+     "3190shield"
+    ],
+    0.143
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.571
+   ],
+   [
+    [
+     "time"
+    ],
+    0.429
+   ]
+  ],
+  "lived_med": 2.308,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    4
+   ],
+   [
+    "tarice",
+    3
+   ],
+   [
+    "taricpassiveattack",
+    3
+   ],
+   [
+    "#6a4229fc",
+    1
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.143
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.286
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.143
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.143
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.143
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.429
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.143
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.143
+   ]
+  ]
+ },
+ "luxeslow": {
+  "n": 5,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.35,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.8
+   ],
+   [
+    [
+     "time"
+    ],
+    0.2
+   ]
+  ],
+  "lived_med": 1.202,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassive",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "leesinwoneshield": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    2.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.004,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    2
+   ],
+   [
+    "taricpassiveattack",
+    2
+   ],
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "tristanawslow": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    2.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "tarice"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 2.043,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ],
+   [
+    "tarice",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "srx_dragonbuffmountain": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricbasicattack",
+    2
+   ],
+   [
+    "taricbasicattack2",
+    1
+   ],
+   [
+    "taricbasicattack3",
+    1
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "kaynwslow": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.5,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cast",
+     "taricr"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.537,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassive",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.25
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.25
+   ]
+  ]
+ },
+ "kaynrenemymark": {
+  "n": 7,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.714
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.286
+   ],
+   [
+    [
+     "cast",
+     "taricr"
+    ],
+    0.143
+   ],
+   [
+    [
+     "cast",
+     "tarice"
+    ],
+    0.143
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.429
+   ],
+   [
+    [
+     "other"
+    ],
+    0.429
+   ],
+   [
+    [
+     "my cast",
+     "taricw"
+    ],
+    0.143
+   ]
+  ],
+  "lived_med": 2.171,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.857
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.571
+   ],
+   [
+    [
+     "fx",
+     497252
+    ],
+    0.143
+   ],
+   [
+    [
+     "slot",
+     46,
+     "TaricWAllyBuffMissile"
+    ],
+    0.143
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.571
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.143
+   ]
+  ]
+ },
+ "3877maimdebuff": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    4.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "pykeqrange"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "time"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 1.603,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    2
+   ],
+   [
+    "taricpassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.667
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "kaynrhost": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    2.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.439,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     497252
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     497252
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "baronbacksidestun": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 5,
+  "durations": [
+   [
+    0.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.601,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "nasusearmorreduction": {
+  "n": 5,
+  "games": 3,
+  "self": 1.0,
+  "type": 28,
+  "durations": [
+   [
+    5.0,
+    3
+   ],
+   [
+    3.697,
+    1
+   ],
+   [
+    1.056,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "#0b687c51"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.6
+   ],
+   [
+    [
+     "my cast",
+     "taricw"
+    ],
+    0.2
+   ],
+   [
+    [
+     "time"
+    ],
+    0.2
+   ]
+  ],
+  "lived_med": 1.34,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassiveattack",
+    1
+   ],
+   [
+    "taricpassive",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.4
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.6
+   ],
+   [
+    [
+     "fx",
+     112288979
+    ],
+    0.4
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.2
+   ],
+   [
+    [
+     "fx",
+     7791810
+    ],
+    0.2
+   ]
+  ]
+ },
+ "luxlightbinding": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 12,
+  "durations": [
+   [
+    2.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "taricw"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.153,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "srx_dragonsoulbuffmountain": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "srx_dragonsoulbuffmountain_preview"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "srx_dragonsoulbuffmountainvfx"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    4
+   ],
+   [
+    "taricpassiveattack",
+    3
+   ],
+   [
+    "tarice",
+    2
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "srx_dragonsoulbuffmountainvfx": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    99999.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "srx_dragonsoulbuffmountain_preview"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.0,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ]
+ },
+ "nasusw": {
+  "n": 5,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    5.0,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.6
+   ],
+   [
+    [
+     "cast",
+     "taricw"
+    ],
+    0.4
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.6
+   ],
+   [
+    [
+     "time"
+    ],
+    0.4
+   ]
+  ],
+  "lived_med": 3.03,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "tarice",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.4
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.4
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.8
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.6
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.2
+   ]
+  ]
+ },
+ "srx_dragonsoulbuffmountain_tookdamage": {
+  "n": 9,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    5.0,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.875
+   ],
+   [
+    [
+     "time"
+    ],
+    0.125
+   ]
+  ],
+  "lived_med": 9.03,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "taricpassive",
+    5
+   ],
+   [
+    "taricpassiveattack",
+    4
+   ],
+   [
+    "tarice",
+    4
+   ],
+   [
+    "taricpassiveattack2",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.111
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.444
+   ],
+   [
+    [
+     "fx",
+     126213122
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     45,
+     "TaricPassiveAttack"
+    ],
+    0.111
+   ]
+  ]
+ }
+}

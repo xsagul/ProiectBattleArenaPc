@@ -1,0 +1,51 @@
+
+main <?:0,0> (28 instructions, 112 bytes at 00000215ED5F3600)
+0+ params, 7 slots, 0 upvalues, 0 locals, 17 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/MasterYi/HUD/Icons2D/MasterYi_Q.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "Alpha_Striking"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -8	; IsDamagingSpell
+	13	[-]	NEWTABLE 	0 0 6
+	14	[-]	NEWTABLE 	1 5 0
+	15	[-]	LOADK    	2 -11	; 1
+	16	[-]	LOADK    	3 -11	; 1
+	17	[-]	LOADK    	4 -11	; 1
+	18	[-]	LOADK    	5 -11	; 1
+	19	[-]	LOADK    	6 -11	; 1
+	20	[-]	SETLIST  	1 5 1	; 1
+	21	[-]	SETTABLE 	0 -10 1	; "MaximumHits" -
+	22	[-]	SETTABLE 	0 -12 -13	; "CanHitCaster" 0
+	23	[-]	SETTABLE 	0 -14 -13	; "CanHitSameTarget" 0
+	24	[-]	SETTABLE 	0 -15 -13	; "CanHitSameTargetConsecutively" 0
+	25	[-]	SETTABLE 	0 -16 -11	; "CanHitEnemies" 1
+	26	[-]	SETTABLE 	0 -17 -13	; "CanHitFriends" 0
+	27	[-]	SETGLOBAL	0 -9	; ChainMissileParameters
+	28	[-]	RETURN   	0 1
+constants (17) for 00000215ED5F3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/MasterYi/HUD/Icons2D/MasterYi_Q.dds"
+	6	"BuffName"
+	7	"Alpha_Striking"
+	8	"IsDamagingSpell"
+	9	"ChainMissileParameters"
+	10	"MaximumHits"
+	11	1
+	12	"CanHitCaster"
+	13	0
+	14	"CanHitSameTarget"
+	15	"CanHitSameTargetConsecutively"
+	16	"CanHitEnemies"
+	17	"CanHitFriends"
+locals (0) for 00000215ED5F3600:
+upvalues (0) for 00000215ED5F3600:

@@ -1,0 +1,44 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 0000015363613630)
+0+ params, 2 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADBOOL 	0 0 0
+	10	[-]	SETGLOBAL	0 -5	; IsDamagingSpell
+	11	[-]	LOADK    	0 -7	; "OriannaCommandRedact.dds"
+	12	[-]	SETGLOBAL	0 -6	; BuffTextureName
+	13	[-]	LOADK    	0 -9	; "Jade_LuluShield"
+	14	[-]	SETGLOBAL	0 -8	; BuffName
+	15	[-]	LOADK    	0 -11	; ""
+	16	[-]	SETGLOBAL	0 -10	; AutoBuffActivateEffect
+	17	[-]	LOADK    	0 -11	; ""
+	18	[-]	SETGLOBAL	0 -12	; AutoBuffActivateAttachBoneName
+	19	[-]	LOADK    	0 -14	; 3
+	20	[-]	SETGLOBAL	0 -13	; OnPreDamagePriority
+	21	[-]	LOADBOOL 	0 1 0
+	22	[-]	SETGLOBAL	0 -15	; DoOnPreDamageInExpirationOrder
+	23	[-]	RETURN   	0 1
+constants (15) for 0000015363613630:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"IsDamagingSpell"
+	6	"BuffTextureName"
+	7	"OriannaCommandRedact.dds"
+	8	"BuffName"
+	9	"Jade_LuluShield"
+	10	"AutoBuffActivateEffect"
+	11	""
+	12	"AutoBuffActivateAttachBoneName"
+	13	"OnPreDamagePriority"
+	14	3
+	15	"DoOnPreDamageInExpirationOrder"
+locals (0) for 0000015363613630:
+upvalues (0) for 0000015363613630:

@@ -1,0 +1,20 @@
+local L0_1, L1_1, L2_1, L3_1
+L0_1 = "KogMaw_LivingArtillery.dds"
+BuffTextureName = L0_1
+L0_1 = "KogMawLivingArtillery"
+BuffName = L0_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBSetPARCostInc
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.SpellSlotOwnerVar = "Owner"
+L2_1.SpellSlot = 3
+L3_1 = SpellSlots
+L2_1.SlotType = L3_1
+L2_1.Cost = 0
+L3_1 = PAR_MANA
+L2_1.PARType = L3_1
+L1_1.Params = L2_1
+L0_1[1] = L1_1
+OnBuffDeactivateBuildingBlocks = L0_1

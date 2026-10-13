@@ -5,4 +5,6 @@
 // match: e15160 _OPENSSL_gmtime_adj
 // match: e152e0 _OPENSSL_gmtime_diff
 // match: e15380 _julian_adj
+#define OPENSSL_FILE "crypto\\o_time.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/o_time.c"

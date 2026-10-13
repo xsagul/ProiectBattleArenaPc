@@ -1,0 +1,68 @@
+
+main <?:0,0> (39 instructions, 156 bytes at 0000015B665034C0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 23 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Yone/HUD/Icons2D/YoneR.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "UltBook_YoneR"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; 1
+	12	[-]	SETGLOBAL	0 -8	; SpellToggleSlot
+	13	[-]	NEWTABLE 	0 2 0
+	14	[-]	LOADK    	1 -11	; "UltBook_YoneSkin01"
+	15	[-]	LOADK    	2 -12	; "UltBook_YoneSkin02"
+	16	[-]	SETLIST  	0 2 1	; 1
+	17	[-]	SETGLOBAL	0 -10	; SpellFXOverrideSkins
+	18	[-]	NEWTABLE 	0 1 0
+	19	[-]	LOADK    	1 -12	; "UltBook_YoneSkin02"
+	20	[-]	SETLIST  	0 1 1	; 1
+	21	[-]	SETGLOBAL	0 -13	; SpellVOOverrideSkins
+	22	[-]	LOADBOOL 	0 0 0
+	23	[-]	SETGLOBAL	0 -14	; IsDamagingSpell
+	24	[-]	NEWTABLE 	0 0 6
+	25	[-]	NEWTABLE 	1 5 0
+	26	[-]	LOADK    	2 -17	; 4
+	27	[-]	LOADK    	3 -17	; 4
+	28	[-]	LOADK    	4 -17	; 4
+	29	[-]	LOADK    	5 -17	; 4
+	30	[-]	LOADK    	6 -17	; 4
+	31	[-]	SETLIST  	1 5 1	; 1
+	32	[-]	SETTABLE 	0 -16 1	; "MaximumHits" -
+	33	[-]	SETTABLE 	0 -18 -19	; "CanHitCaster" 0
+	34	[-]	SETTABLE 	0 -20 -19	; "CanHitSameTarget" 0
+	35	[-]	SETTABLE 	0 -21 -19	; "CanHitSameTargetConsecutively" 0
+	36	[-]	SETTABLE 	0 -22 -9	; "CanHitEnemies" 1
+	37	[-]	SETTABLE 	0 -23 -19	; "CanHitFriends" 0
+	38	[-]	SETGLOBAL	0 -15	; ChainMissileParameters
+	39	[-]	RETURN   	0 1
+constants (23) for 0000015B665034C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Yone/HUD/Icons2D/YoneR.dds"
+	6	"BuffName"
+	7	"UltBook_YoneR"
+	8	"SpellToggleSlot"
+	9	1
+	10	"SpellFXOverrideSkins"
+	11	"UltBook_YoneSkin01"
+	12	"UltBook_YoneSkin02"
+	13	"SpellVOOverrideSkins"
+	14	"IsDamagingSpell"
+	15	"ChainMissileParameters"
+	16	"MaximumHits"
+	17	4
+	18	"CanHitCaster"
+	19	0
+	20	"CanHitSameTarget"
+	21	"CanHitSameTargetConsecutively"
+	22	"CanHitEnemies"
+	23	"CanHitFriends"
+locals (0) for 0000015B665034C0:
+upvalues (0) for 0000015B665034C0:

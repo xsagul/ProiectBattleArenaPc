@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "id": "worker_clock_now",
+  "role": "holdout",
+  "learning_use": "evaluation_only",
+  "source": "clock_seed.cpp",
+  "source_sha256": "24e5ebad8301f8476a2bcaa81c6a501df975c918b27000ba4c14e005be87c0cd",
+  "symbol": "?Now@WorkerClockProbe@@QAENXZ",
+  "rva": "0xa2c930",
+  "expected_size": 46,
+  "compiler": "msvc-14.32.31328",
+  "flags": [
+    "-O2",
+    "-std:c++17"
+  ],
+  "expected_targets": {
+    "?WorkerCounterNow@@YA_JXZ": "0x9cbbc0",
+    "__ltod3": "0xf413a0",
+    "?g_workerSecondsPerTick@@3NA": "0x3198e60"
+  },
+  "constraints": {
+    "calling_convention": "thiscall",
+    "stack_argument_bytes": 0,
+    "counter_return": {
+      "type": "signed_int64",
+      "low_register": "EAX",
+      "high_register": "EDX"
+    },
+    "origin_pointer_offset": 0,
+    "origin_value": {
+      "bits": 64,
+      "signed": true
+    },
+    "arithmetic": "signed 64-bit counter minus origin, converted to double, multiplied by the live scale global",
+    "conversion_helper": {
+      "symbol": "__ltod3",
+      "rva": "0xf413a0"
+    },
+    "scale_global": {
+      "symbol": "?g_workerSecondsPerTick@@3NA",
+      "rva": "0x3198e60",
+      "va": "0x3718e60",
+      "type": "double",
+      "read_required": true
+    },
+    "return": {
+      "type": "double",
+      "register": "x87 ST(0)"
+    },
+    "complete_function_required": true,
+    "exact_nonrelocation_bytes_required": true,
+    "exact_relocation_targets_required": true,
+    "no_assembly_or_raw_code_replacements": true,
+    "production_changes_allowed": false
+  },
+  "baseline": {
+    "compiled_size": 46,
+    "identical_bytes": 38,
+    "first_difference": 12,
+    "identical": false
+  },
+  "provenance": {
+    "seed": "client-src/obj/agent_transport_worker_clock_method.cpp",
+    "baseline_audit": "client-src/obj/agent_transport_worker_clock_method_audit.json",
+    "counter_abi_audit": "client-src/obj/agent_transport_worker_counter_sdk_audit.json",
+    "note": "Unmodified semantic seed; no search, mutation, or proposed winning source is included."
+  },
+  "requires_uncovered": true,
+  "kind": "function",
+  "function": {
+    "signature": "double WorkerClockProbe::Now()",
+    "member": true,
+    "constructor": false,
+    "return_type": "double",
+    "parameters": [],
+    "member_fields": [
+      "origin"
+    ]
+  }
+}

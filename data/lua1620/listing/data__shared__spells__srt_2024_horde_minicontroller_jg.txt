@@ -1,0 +1,50 @@
+
+main <?:0,0> (28 instructions, 112 bytes at 00000203AC433600)
+0+ params, 7 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; PersistsThroughDeath
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -5	; NonDispellable
+	11	[-]	LOADBOOL 	0 0 0
+	12	[-]	SETGLOBAL	0 -6	; IsDamagingSpell
+	13	[-]	NEWTABLE 	0 0 6
+	14	[-]	NEWTABLE 	1 5 0
+	15	[-]	LOADK    	2 -9	; 4
+	16	[-]	LOADK    	3 -9	; 4
+	17	[-]	LOADK    	4 -9	; 4
+	18	[-]	LOADK    	5 -9	; 4
+	19	[-]	LOADK    	6 -9	; 4
+	20	[-]	SETLIST  	1 5 1	; 1
+	21	[-]	SETTABLE 	0 -8 1	; "MaximumHits" -
+	22	[-]	SETTABLE 	0 -10 -11	; "CanHitCaster" 0
+	23	[-]	SETTABLE 	0 -12 -11	; "CanHitSameTarget" 0
+	24	[-]	SETTABLE 	0 -13 -11	; "CanHitSameTargetConsecutively" 0
+	25	[-]	SETTABLE 	0 -14 -15	; "CanHitEnemies" 1
+	26	[-]	SETTABLE 	0 -16 -11	; "CanHitFriends" 0
+	27	[-]	SETGLOBAL	0 -7	; ChainMissileParameters
+	28	[-]	RETURN   	0 1
+constants (16) for 00000203AC433600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"PersistsThroughDeath"
+	5	"NonDispellable"
+	6	"IsDamagingSpell"
+	7	"ChainMissileParameters"
+	8	"MaximumHits"
+	9	4
+	10	"CanHitCaster"
+	11	0
+	12	"CanHitSameTarget"
+	13	"CanHitSameTargetConsecutively"
+	14	"CanHitEnemies"
+	15	1
+	16	"CanHitFriends"
+locals (0) for 00000203AC433600:
+upvalues (0) for 00000203AC433600:

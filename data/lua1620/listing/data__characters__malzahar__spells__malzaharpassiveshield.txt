@@ -1,0 +1,38 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 000001C3572D3600)
+0+ params, 6 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Malzahar/HUD/Icons2D/Malzahar_Passive.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "MalzaharPassiveShield"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	NEWTABLE 	0 5 0
+	10	[-]	LOADK    	1 -8	; 16
+	11	[-]	LOADK    	2 -8	; 16
+	12	[-]	LOADK    	3 -8	; 16
+	13	[-]	LOADK    	4 -8	; 16
+	14	[-]	LOADK    	5 -8	; 16
+	15	[-]	SETLIST  	0 5 1	; 1
+	16	[-]	SETGLOBAL	0 -7	; AutoCooldownByLevel
+	17	[-]	LOADK    	0 -10	; -2
+	18	[-]	SETGLOBAL	0 -9	; OnPreDamagePriority
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -11	; DoOnPreDamageInExpirationOrder
+	21	[-]	RETURN   	0 1
+constants (11) for 000001C3572D3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Malzahar/HUD/Icons2D/Malzahar_Passive.dds"
+	5	"BuffName"
+	6	"MalzaharPassiveShield"
+	7	"AutoCooldownByLevel"
+	8	16
+	9	"OnPreDamagePriority"
+	10	-2
+	11	"DoOnPreDamageInExpirationOrder"
+locals (0) for 000001C3572D3600:
+upvalues (0) for 000001C3572D3600:

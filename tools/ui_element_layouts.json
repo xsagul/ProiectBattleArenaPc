@@ -1,0 +1,2770 @@
+[
+  {
+    "name": "AnchorBase",
+    "facts": {
+      "create": 0,
+      "destroy": 987760,
+      "construct": 0,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 4,
+      "align": 4,
+      "parent": null,
+      "poly": true
+    },
+    "members": [],
+    "callbacks": {
+      "create": null,
+      "construct": null,
+      "destroy": "mov ecx, dword ptr [esp + 4]\ntest ecx, ecx\nje 0xf127e\nmov eax, dword ptr [ecx]\npush 1\ncall dword ptr [eax]\nret",
+      "destruct": "mov ecx, dword ptr [esp + 4]\npush 0\nmov eax, dword ptr [ecx]\ncall dword ptr [eax]\nret",
+      "v2": "mov ecx, dword ptr [esp + 4]\nmov eax, dword ptr [ecx]\njmp dword ptr [eax + 8]"
+    },
+    "constructor": null,
+    "release": "sub esp, 0x20\npush ebx\npush edi\nmov ebx, ecx\nor edi, 0xffffffff\nlock xadd dword ptr [ebx + 0x20], edi\ndec edi\njne 0xaaa59f\npush ebp\nmov ebp, dword ptr [0x2aa7228]\ntest ebp, ebp\nje 0xaaa59e\npush esi\nmov esi, dword ptr [ebx + 4]\npush esi\nmov dword ptr [esp + 0x14], esi\ncall 0x9daf30\nadd esp, 4\nmov dword ptr [esp + 0x24], esi\nmov dword ptr [esp + 0x28], eax\ntest al, 1\nje 0xaaa503\ninc eax\nmov dword ptr [esp + 0x2c], eax\nlea eax, [esp + 0x24]\npush eax\ncall 0x9bf640\nadd esp, 4\nmov dword ptr [esp + 0x18], edx\nmov esi, eax\nlea ecx, [esp + 0x24]\nmov dword ptr [esp + 0x14], esi\ncall 0x9bab90\npush esi\nlea eax, [esp + 0x18]\npush eax\nlea eax, [esp + 0x24]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0x3b4db0\nmov esi, dword ptr [eax + 4]\ntest esi, esi\njne 0xaaa544\nmov esi, dword ptr [ebp + 0x10]\ncmp esi, dword ptr [ebp + 0x10]\njne 0xaaa56a\npush dword ptr [esp + 0x10]\npush 0x1b4faf4\npush 0\npush 1\npush 2\ncall 0x11e7c0\nadd esp, 0x14\nmov eax, edi\npop esi\npop ebp\npop edi\npop ebx\nadd esp, 0x20\nret\nmov eax, dword ptr [ebx + 0x18]\ntest eax, eax\nje 0xaaa57d\nmov ecx, dword ptr [0x36f6820]\npush eax\ncall 0x971c00\npush esi\nlea eax, [esp + 0x14]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0xaa1bb0\nmov eax, dword ptr [ebx]\nmov ecx, ebx\npush 0\ncall dword ptr [eax + 8]\npush ebx\ncall 0x9bb930\nadd esp, 4\npop esi\npop ebp\nmov eax, edi\npop edi\npop ebx\nadd esp, 0x20\nret",
+    "globals": {
+      "0x3195f68": "00000000",
+      "0x3195f6c": "00000000",
+      "0x3195f7c": "00000000000000000000000000000000"
+    }
+  },
+  {
+    "name": "AnchorSingle",
+    "facts": {
+      "create": 11391520,
+      "destroy": 987760,
+      "construct": 11384912,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 12,
+      "align": 4,
+      "parent": 57822360,
+      "poly": true
+    },
+    "members": [
+      {
+        "offset": 4,
+        "name": "Anchor",
+        "type": "Vector2",
+        "wrapper": 3423968,
+        "args": [
+          [
+            "imm",
+            1122880180
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xb\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc"
+      }
+    ],
+    "callbacks": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xadd24f\nmov dword ptr [eax], 0x1b512e8\nmovss xmm0, dword ptr [0x3715f68]\nmovss dword ptr [eax + 4], xmm0\nmovss xmm0, dword ptr [0x3715f6c]\nmovss dword ptr [eax + 8], xmm0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0x1b512e8\nmovss xmm0, dword ptr [0x3715f68]\nmovss dword ptr [eax + 4], xmm0\nmovss xmm0, dword ptr [0x3715f6c]\nmovss dword ptr [eax + 8], xmm0\nret",
+      "destroy": "mov ecx, dword ptr [esp + 4]\ntest ecx, ecx\nje 0xf127e\nmov eax, dword ptr [ecx]\npush 1\ncall dword ptr [eax]\nret",
+      "destruct": "mov ecx, dword ptr [esp + 4]\npush 0\nmov eax, dword ptr [ecx]\ncall dword ptr [eax]\nret",
+      "v2": "mov ecx, dword ptr [esp + 4]\nmov eax, dword ptr [ecx]\njmp dword ptr [eax + 8]"
+    },
+    "constructor": null,
+    "release": "sub esp, 0x20\npush ebx\npush edi\nmov ebx, ecx\nor edi, 0xffffffff\nlock xadd dword ptr [ebx + 0x20], edi\ndec edi\njne 0xaaa59f\npush ebp\nmov ebp, dword ptr [0x2aa7228]\ntest ebp, ebp\nje 0xaaa59e\npush esi\nmov esi, dword ptr [ebx + 4]\npush esi\nmov dword ptr [esp + 0x14], esi\ncall 0x9daf30\nadd esp, 4\nmov dword ptr [esp + 0x24], esi\nmov dword ptr [esp + 0x28], eax\ntest al, 1\nje 0xaaa503\ninc eax\nmov dword ptr [esp + 0x2c], eax\nlea eax, [esp + 0x24]\npush eax\ncall 0x9bf640\nadd esp, 4\nmov dword ptr [esp + 0x18], edx\nmov esi, eax\nlea ecx, [esp + 0x24]\nmov dword ptr [esp + 0x14], esi\ncall 0x9bab90\npush esi\nlea eax, [esp + 0x18]\npush eax\nlea eax, [esp + 0x24]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0x3b4db0\nmov esi, dword ptr [eax + 4]\ntest esi, esi\njne 0xaaa544\nmov esi, dword ptr [ebp + 0x10]\ncmp esi, dword ptr [ebp + 0x10]\njne 0xaaa56a\npush dword ptr [esp + 0x10]\npush 0x1b4faf4\npush 0\npush 1\npush 2\ncall 0x11e7c0\nadd esp, 0x14\nmov eax, edi\npop esi\npop ebp\npop edi\npop ebx\nadd esp, 0x20\nret\nmov eax, dword ptr [ebx + 0x18]\ntest eax, eax\nje 0xaaa57d\nmov ecx, dword ptr [0x36f6820]\npush eax\ncall 0x971c00\npush esi\nlea eax, [esp + 0x14]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0xaa1bb0\nmov eax, dword ptr [ebx]\nmov ecx, ebx\npush 0\ncall dword ptr [eax + 8]\npush ebx\ncall 0x9bb930\nadd esp, 4\npop esi\npop ebp\nmov eax, edi\npop edi\npop ebx\nadd esp, 0x20\nret",
+    "globals": {
+      "0x3195f68": "00000000",
+      "0x3195f6c": "00000000",
+      "0x3195f7c": "00000000000000000000000000000000"
+    }
+  },
+  {
+    "name": "UiElementAsset",
+    "facts": {
+      "create": 0,
+      "destroy": 987760,
+      "construct": 0,
+      "destruct": 987808,
+      "v2": 0,
+      "size": 184,
+      "align": 4,
+      "parent": 57820064,
+      "poly": true
+    },
+    "members": [],
+    "callbacks": {
+      "create": null,
+      "construct": null,
+      "destroy": "mov ecx, dword ptr [esp + 4]\ntest ecx, ecx\nje 0xf127e\nmov eax, dword ptr [ecx]\npush 1\ncall dword ptr [eax]\nret",
+      "destruct": "mov ecx, dword ptr [esp + 4]\npush 0\nmov eax, dword ptr [ecx]\ncall dword ptr [eax]\nret",
+      "v2": null
+    },
+    "constructor": "push esi\nmov esi, ecx\ncall 0xadfb60\nmov dword ptr [esi], 0x1b514b8\nmov eax, esi\nmov dword ptr [esi + 0x80], 0\nmov dword ptr [esi + 0x88], 0\nmov dword ptr [esi + 0x8c], 0\nmov dword ptr [esi + 0x90], 0x3f800000\nmov dword ptr [esi + 0x94], 0x3f800000\nmov byte ptr [esi + 0x84], 0\nmovups xmm0, xmmword ptr [0x3715f7c]\nmovups xmmword ptr [esi + 0x98], xmm0\nmovss xmm0, dword ptr [0x3715f68]\nmovss dword ptr [esi + 0xa8], xmm0\nmovss xmm0, dword ptr [0x3715f6c]\nmovss dword ptr [esi + 0xac], xmm0\nmovss xmm0, dword ptr [0x3715f68]\nmovss dword ptr [esi + 0xb0], xmm0\nmovss xmm0, dword ptr [0x3715f6c]\nmovss dword ptr [esi + 0xb4], xmm0\npop esi\nret",
+    "release": "sub esp, 0x20\npush ebx\npush edi\nmov ebx, ecx\nor edi, 0xffffffff\nlock xadd dword ptr [ebx + 0x20], edi\ndec edi\njne 0xaaa59f\npush ebp\nmov ebp, dword ptr [0x2aa7228]\ntest ebp, ebp\nje 0xaaa59e\npush esi\nmov esi, dword ptr [ebx + 4]\npush esi\nmov dword ptr [esp + 0x14], esi\ncall 0x9daf30\nadd esp, 4\nmov dword ptr [esp + 0x24], esi\nmov dword ptr [esp + 0x28], eax\ntest al, 1\nje 0xaaa503\ninc eax\nmov dword ptr [esp + 0x2c], eax\nlea eax, [esp + 0x24]\npush eax\ncall 0x9bf640\nadd esp, 4\nmov dword ptr [esp + 0x18], edx\nmov esi, eax\nlea ecx, [esp + 0x24]\nmov dword ptr [esp + 0x14], esi\ncall 0x9bab90\npush esi\nlea eax, [esp + 0x18]\npush eax\nlea eax, [esp + 0x24]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0x3b4db0\nmov esi, dword ptr [eax + 4]\ntest esi, esi\njne 0xaaa544\nmov esi, dword ptr [ebp + 0x10]\ncmp esi, dword ptr [ebp + 0x10]\njne 0xaaa56a\npush dword ptr [esp + 0x10]\npush 0x1b4faf4\npush 0\npush 1\npush 2\ncall 0x11e7c0\nadd esp, 0x14\nmov eax, edi\npop esi\npop ebp\npop edi\npop ebx\nadd esp, 0x20\nret\nmov eax, dword ptr [ebx + 0x18]\ntest eax, eax\nje 0xaaa57d\nmov ecx, dword ptr [0x36f6820]\npush eax\ncall 0x971c00\npush esi\nlea eax, [esp + 0x14]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0xaa1bb0\nmov eax, dword ptr [ebx]\nmov ecx, ebx\npush 0\ncall dword ptr [eax + 8]\npush ebx\ncall 0x9bb930\nadd esp, 4\npop esi\npop ebp\nmov eax, edi\npop edi\npop ebx\nadd esp, 0x20\nret",
+    "globals": {
+      "0x3195f68": "00000000",
+      "0x3195f6c": "00000000",
+      "0x3195f7c": "00000000000000000000000000000000"
+    }
+  },
+  {
+    "name": "UiElementData",
+    "facts": {
+      "create": 0,
+      "destroy": 987760,
+      "construct": 0,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 36,
+      "align": 4,
+      "parent": 57821880,
+      "poly": true
+    },
+    "members": [
+      {
+        "offset": 20,
+        "name": "Enabled",
+        "type": "bool",
+        "wrapper": 994160,
+        "args": [
+          [
+            "imm",
+            49525662
+          ],
+          [
+            "imm",
+            20
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 1\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc"
+      },
+      {
+        "offset": 21,
+        "name": "BlockInputEvents",
+        "type": "bool",
+        "wrapper": 994160,
+        "args": [
+          [
+            "imm",
+            2562340595
+          ],
+          [
+            "imm",
+            21
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 1\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc"
+      },
+      {
+        "offset": 22,
+        "name": "m_59939874",
+        "type": "bool",
+        "wrapper": 994160,
+        "args": [
+          [
+            "imm",
+            1502845044
+          ],
+          [
+            "imm",
+            22
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 1\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc"
+      },
+      {
+        "offset": 24,
+        "name": "m_3e2f4733",
+        "type": "u32",
+        "wrapper": 992848,
+        "args": [
+          [
+            "imm",
+            1043285811
+          ],
+          [
+            "imm",
+            24
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 7\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc"
+      },
+      {
+        "offset": 28,
+        "name": "Layer",
+        "type": "u32",
+        "wrapper": 992848,
+        "args": [
+          [
+            "imm",
+            128336118
+          ],
+          [
+            "imm",
+            28
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 7\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc"
+      },
+      {
+        "offset": 32,
+        "name": "Position",
+        "type": "MetaPointer<UiPositionBase>",
+        "wrapper": 11392688,
+        "args": [
+          [
+            "imm",
+            2471448074
+          ],
+          [
+            "imm",
+            32
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0x37244e0\npush 0\npush 0x82\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc"
+      }
+    ],
+    "callbacks": {
+      "create": null,
+      "construct": null,
+      "destroy": "mov ecx, dword ptr [esp + 4]\ntest ecx, ecx\nje 0xf127e\nmov eax, dword ptr [ecx]\npush 1\ncall dword ptr [eax]\nret",
+      "destruct": "mov ecx, dword ptr [esp + 4]\npush 0\nmov eax, dword ptr [ecx]\ncall dword ptr [eax]\nret",
+      "v2": "mov ecx, dword ptr [esp + 4]\nmov eax, dword ptr [ecx]\njmp dword ptr [eax + 8]"
+    },
+    "constructor": "push esi\nmov esi, ecx\npush 0x20\nmov dword ptr [esi], 0x1b512dc\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [esi + 4], eax\nmov dword ptr [esi + 8], 0\nmov dword ptr [esi + 0xc], 0\nmov dword ptr [esi + 0x10], 0\nmov dword ptr [esi], 0x1b51340\nmov word ptr [esi + 0x14], 0\nmov byte ptr [esi + 0x16], 0\nmov dword ptr [esi + 0x18], 0\nmov dword ptr [esi + 0x1c], 0\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xadfd80\nmov ecx, eax\ncall 0xae0ac0\nmov dword ptr [esi + 0x20], eax\nmov eax, esi\npop esi\nret\nmov dword ptr [esi + 0x20], 0\nmov eax, esi\npop esi\nret",
+    "release": "sub esp, 0x20\npush ebx\npush edi\nmov ebx, ecx\nor edi, 0xffffffff\nlock xadd dword ptr [ebx + 0x20], edi\ndec edi\njne 0xaaa59f\npush ebp\nmov ebp, dword ptr [0x2aa7228]\ntest ebp, ebp\nje 0xaaa59e\npush esi\nmov esi, dword ptr [ebx + 4]\npush esi\nmov dword ptr [esp + 0x14], esi\ncall 0x9daf30\nadd esp, 4\nmov dword ptr [esp + 0x24], esi\nmov dword ptr [esp + 0x28], eax\ntest al, 1\nje 0xaaa503\ninc eax\nmov dword ptr [esp + 0x2c], eax\nlea eax, [esp + 0x24]\npush eax\ncall 0x9bf640\nadd esp, 4\nmov dword ptr [esp + 0x18], edx\nmov esi, eax\nlea ecx, [esp + 0x24]\nmov dword ptr [esp + 0x14], esi\ncall 0x9bab90\npush esi\nlea eax, [esp + 0x18]\npush eax\nlea eax, [esp + 0x24]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0x3b4db0\nmov esi, dword ptr [eax + 4]\ntest esi, esi\njne 0xaaa544\nmov esi, dword ptr [ebp + 0x10]\ncmp esi, dword ptr [ebp + 0x10]\njne 0xaaa56a\npush dword ptr [esp + 0x10]\npush 0x1b4faf4\npush 0\npush 1\npush 2\ncall 0x11e7c0\nadd esp, 0x14\nmov eax, edi\npop esi\npop ebp\npop edi\npop ebx\nadd esp, 0x20\nret\nmov eax, dword ptr [ebx + 0x18]\ntest eax, eax\nje 0xaaa57d\nmov ecx, dword ptr [0x36f6820]\npush eax\ncall 0x971c00\npush esi\nlea eax, [esp + 0x14]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0xaa1bb0\nmov eax, dword ptr [ebx]\nmov ecx, ebx\npush 0\ncall dword ptr [eax + 8]\npush ebx\ncall 0x9bb930\nadd esp, 4\npop esi\npop ebp\nmov eax, edi\npop edi\npop ebx\nadd esp, 0x20\nret",
+    "globals": {
+      "0x3195f68": "00000000",
+      "0x3195f6c": "00000000",
+      "0x3195f7c": "00000000000000000000000000000000"
+    }
+  },
+  {
+    "name": "UiElementIData",
+    "facts": {
+      "create": 0,
+      "destroy": 987760,
+      "construct": 0,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 20,
+      "align": 4,
+      "parent": null,
+      "poly": true
+    },
+    "members": [
+      {
+        "offset": 4,
+        "name": "name",
+        "type": "MetaString",
+        "wrapper": 994016,
+        "args": [
+          [
+            "imm",
+            2369371622
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0x10\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc"
+      },
+      {
+        "offset": 16,
+        "name": "Scene",
+        "type": "MetaLink<Class_aae83c5b>",
+        "wrapper": 11391968,
+        "args": [
+          [
+            "imm",
+            543410963
+          ],
+          [
+            "imm",
+            16
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0x3724f18\npush 0\npush 0x84\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc"
+      }
+    ],
+    "callbacks": {
+      "create": null,
+      "construct": null,
+      "destroy": "mov ecx, dword ptr [esp + 4]\ntest ecx, ecx\nje 0xf127e\nmov eax, dword ptr [ecx]\npush 1\ncall dword ptr [eax]\nret",
+      "destruct": "mov ecx, dword ptr [esp + 4]\npush 0\nmov eax, dword ptr [ecx]\ncall dword ptr [eax]\nret",
+      "v2": "mov ecx, dword ptr [esp + 4]\nmov eax, dword ptr [ecx]\njmp dword ptr [eax + 8]"
+    },
+    "constructor": null,
+    "release": "sub esp, 0x20\npush ebx\npush edi\nmov ebx, ecx\nor edi, 0xffffffff\nlock xadd dword ptr [ebx + 0x20], edi\ndec edi\njne 0xaaa59f\npush ebp\nmov ebp, dword ptr [0x2aa7228]\ntest ebp, ebp\nje 0xaaa59e\npush esi\nmov esi, dword ptr [ebx + 4]\npush esi\nmov dword ptr [esp + 0x14], esi\ncall 0x9daf30\nadd esp, 4\nmov dword ptr [esp + 0x24], esi\nmov dword ptr [esp + 0x28], eax\ntest al, 1\nje 0xaaa503\ninc eax\nmov dword ptr [esp + 0x2c], eax\nlea eax, [esp + 0x24]\npush eax\ncall 0x9bf640\nadd esp, 4\nmov dword ptr [esp + 0x18], edx\nmov esi, eax\nlea ecx, [esp + 0x24]\nmov dword ptr [esp + 0x14], esi\ncall 0x9bab90\npush esi\nlea eax, [esp + 0x18]\npush eax\nlea eax, [esp + 0x24]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0x3b4db0\nmov esi, dword ptr [eax + 4]\ntest esi, esi\njne 0xaaa544\nmov esi, dword ptr [ebp + 0x10]\ncmp esi, dword ptr [ebp + 0x10]\njne 0xaaa56a\npush dword ptr [esp + 0x10]\npush 0x1b4faf4\npush 0\npush 1\npush 2\ncall 0x11e7c0\nadd esp, 0x14\nmov eax, edi\npop esi\npop ebp\npop edi\npop ebx\nadd esp, 0x20\nret\nmov eax, dword ptr [ebx + 0x18]\ntest eax, eax\nje 0xaaa57d\nmov ecx, dword ptr [0x36f6820]\npush eax\ncall 0x971c00\npush esi\nlea eax, [esp + 0x14]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0xaa1bb0\nmov eax, dword ptr [ebx]\nmov ecx, ebx\npush 0\ncall dword ptr [eax + 8]\npush ebx\ncall 0x9bb930\nadd esp, 4\npop esi\npop ebp\nmov eax, edi\npop edi\npop ebx\nadd esp, 0x20\nret",
+    "globals": {
+      "0x3195f68": "00000000",
+      "0x3195f6c": "00000000",
+      "0x3195f7c": "00000000000000000000000000000000"
+    }
+  },
+  {
+    "name": "UIElementI",
+    "facts": {
+      "create": 0,
+      "destroy": 987760,
+      "construct": 0,
+      "destruct": 987808,
+      "v2": 0,
+      "size": 44,
+      "align": 4,
+      "parent": null,
+      "poly": true
+    },
+    "members": [],
+    "callbacks": {
+      "create": null,
+      "construct": null,
+      "destroy": "mov ecx, dword ptr [esp + 4]\ntest ecx, ecx\nje 0xf127e\nmov eax, dword ptr [ecx]\npush 1\ncall dword ptr [eax]\nret",
+      "destruct": "mov ecx, dword ptr [esp + 4]\npush 0\nmov eax, dword ptr [ecx]\ncall dword ptr [eax]\nret",
+      "v2": null
+    },
+    "constructor": null,
+    "release": "sub esp, 0x20\npush ebx\npush edi\nmov ebx, ecx\nor edi, 0xffffffff\nlock xadd dword ptr [ebx + 0x20], edi\ndec edi\njne 0xaaa59f\npush ebp\nmov ebp, dword ptr [0x2aa7228]\ntest ebp, ebp\nje 0xaaa59e\npush esi\nmov esi, dword ptr [ebx + 4]\npush esi\nmov dword ptr [esp + 0x14], esi\ncall 0x9daf30\nadd esp, 4\nmov dword ptr [esp + 0x24], esi\nmov dword ptr [esp + 0x28], eax\ntest al, 1\nje 0xaaa503\ninc eax\nmov dword ptr [esp + 0x2c], eax\nlea eax, [esp + 0x24]\npush eax\ncall 0x9bf640\nadd esp, 4\nmov dword ptr [esp + 0x18], edx\nmov esi, eax\nlea ecx, [esp + 0x24]\nmov dword ptr [esp + 0x14], esi\ncall 0x9bab90\npush esi\nlea eax, [esp + 0x18]\npush eax\nlea eax, [esp + 0x24]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0x3b4db0\nmov esi, dword ptr [eax + 4]\ntest esi, esi\njne 0xaaa544\nmov esi, dword ptr [ebp + 0x10]\ncmp esi, dword ptr [ebp + 0x10]\njne 0xaaa56a\npush dword ptr [esp + 0x10]\npush 0x1b4faf4\npush 0\npush 1\npush 2\ncall 0x11e7c0\nadd esp, 0x14\nmov eax, edi\npop esi\npop ebp\npop edi\npop ebx\nadd esp, 0x20\nret\nmov eax, dword ptr [ebx + 0x18]\ntest eax, eax\nje 0xaaa57d\nmov ecx, dword ptr [0x36f6820]\npush eax\ncall 0x971c00\npush esi\nlea eax, [esp + 0x14]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0xaa1bb0\nmov eax, dword ptr [ebx]\nmov ecx, ebx\npush 0\ncall dword ptr [eax + 8]\npush ebx\ncall 0x9bb930\nadd esp, 4\npop esi\npop ebp\nmov eax, edi\npop edi\npop ebx\nadd esp, 0x20\nret",
+    "globals": {
+      "0x3195f68": "00000000",
+      "0x3195f6c": "00000000",
+      "0x3195f7c": "00000000000000000000000000000000"
+    }
+  },
+  {
+    "name": "UIElement",
+    "facts": {
+      "create": 0,
+      "destroy": 987760,
+      "construct": 0,
+      "destruct": 987808,
+      "v2": 0,
+      "size": 128,
+      "align": 4,
+      "parent": 57817320,
+      "poly": true
+    },
+    "members": [],
+    "callbacks": {
+      "create": null,
+      "construct": null,
+      "destroy": "mov ecx, dword ptr [esp + 4]\ntest ecx, ecx\nje 0xf127e\nmov eax, dword ptr [ecx]\npush 1\ncall dword ptr [eax]\nret",
+      "destruct": "mov ecx, dword ptr [esp + 4]\npush 0\nmov eax, dword ptr [ecx]\ncall dword ptr [eax]\nret",
+      "v2": null
+    },
+    "constructor": "mov dword ptr [ecx], 0x1b51108\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [ecx + 4], eax\nmov dword ptr [ecx + 8], 0\nmov dword ptr [ecx + 0xc], 0\nmov dword ptr [ecx + 0x10], 0\nmov dword ptr [ecx + 0x14], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [ecx + 0x18], eax\nmov eax, ecx\nmov dword ptr [ecx + 0x1c], 0\nmov dword ptr [ecx + 0x20], 0\nmov dword ptr [ecx + 0x24], 0\nmov dword ptr [ecx + 0x28], 0\nmov dword ptr [ecx], 0x1b51418\nmov dword ptr [ecx + 0x2c], 0xffffffff\nmov dword ptr [ecx + 0x30], 0\nmov dword ptr [ecx + 0x34], 0\nmov dword ptr [ecx + 0x38], 0\nmov dword ptr [ecx + 0x3c], 0x7f7fffff\nmov dword ptr [ecx + 0x44], 0x7f7fffff\nmov dword ptr [ecx + 0x4c], 0\nmov dword ptr [ecx + 0x50], 0\nmov dword ptr [ecx + 0x54], 0\nmov dword ptr [ecx + 0x58], 0\nmov dword ptr [ecx + 0x5c], 0\nmov dword ptr [ecx + 0x60], 0\nmov dword ptr [ecx + 0x64], 0x3f800000\nmov dword ptr [ecx + 0x68], 0x3f800000\nmov dword ptr [ecx + 0x6c], 0x3f800000\nmov dword ptr [ecx + 0x70], 0x3f800000\nmov dword ptr [ecx + 0x74], 0x3f800000\nmov dword ptr [ecx + 0x78], 0x3000400\nmov dword ptr [ecx + 0x7c], 0xffffffff\nret",
+    "release": "sub esp, 0x20\npush ebx\npush edi\nmov ebx, ecx\nor edi, 0xffffffff\nlock xadd dword ptr [ebx + 0x20], edi\ndec edi\njne 0xaaa59f\npush ebp\nmov ebp, dword ptr [0x2aa7228]\ntest ebp, ebp\nje 0xaaa59e\npush esi\nmov esi, dword ptr [ebx + 4]\npush esi\nmov dword ptr [esp + 0x14], esi\ncall 0x9daf30\nadd esp, 4\nmov dword ptr [esp + 0x24], esi\nmov dword ptr [esp + 0x28], eax\ntest al, 1\nje 0xaaa503\ninc eax\nmov dword ptr [esp + 0x2c], eax\nlea eax, [esp + 0x24]\npush eax\ncall 0x9bf640\nadd esp, 4\nmov dword ptr [esp + 0x18], edx\nmov esi, eax\nlea ecx, [esp + 0x24]\nmov dword ptr [esp + 0x14], esi\ncall 0x9bab90\npush esi\nlea eax, [esp + 0x18]\npush eax\nlea eax, [esp + 0x24]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0x3b4db0\nmov esi, dword ptr [eax + 4]\ntest esi, esi\njne 0xaaa544\nmov esi, dword ptr [ebp + 0x10]\ncmp esi, dword ptr [ebp + 0x10]\njne 0xaaa56a\npush dword ptr [esp + 0x10]\npush 0x1b4faf4\npush 0\npush 1\npush 2\ncall 0x11e7c0\nadd esp, 0x14\nmov eax, edi\npop esi\npop ebp\npop edi\npop ebx\nadd esp, 0x20\nret\nmov eax, dword ptr [ebx + 0x18]\ntest eax, eax\nje 0xaaa57d\nmov ecx, dword ptr [0x36f6820]\npush eax\ncall 0x971c00\npush esi\nlea eax, [esp + 0x14]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0xaa1bb0\nmov eax, dword ptr [ebx]\nmov ecx, ebx\npush 0\ncall dword ptr [eax + 8]\npush ebx\ncall 0x9bb930\nadd esp, 4\npop esi\npop ebp\nmov eax, edi\npop edi\npop ebx\nadd esp, 0x20\nret",
+    "globals": {
+      "0x3195f68": "00000000",
+      "0x3195f6c": "00000000",
+      "0x3195f7c": "00000000000000000000000000000000"
+    }
+  },
+  {
+    "name": "UiPositionBase",
+    "facts": {
+      "create": 0,
+      "destroy": 987760,
+      "construct": 0,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 4,
+      "align": 4,
+      "parent": null,
+      "poly": true
+    },
+    "members": [],
+    "callbacks": {
+      "create": null,
+      "construct": null,
+      "destroy": "mov ecx, dword ptr [esp + 4]\ntest ecx, ecx\nje 0xf127e\nmov eax, dword ptr [ecx]\npush 1\ncall dword ptr [eax]\nret",
+      "destruct": "mov ecx, dword ptr [esp + 4]\npush 0\nmov eax, dword ptr [ecx]\ncall dword ptr [eax]\nret",
+      "v2": "mov ecx, dword ptr [esp + 4]\nmov eax, dword ptr [ecx]\njmp dword ptr [eax + 8]"
+    },
+    "constructor": null,
+    "release": "sub esp, 0x20\npush ebx\npush edi\nmov ebx, ecx\nor edi, 0xffffffff\nlock xadd dword ptr [ebx + 0x20], edi\ndec edi\njne 0xaaa59f\npush ebp\nmov ebp, dword ptr [0x2aa7228]\ntest ebp, ebp\nje 0xaaa59e\npush esi\nmov esi, dword ptr [ebx + 4]\npush esi\nmov dword ptr [esp + 0x14], esi\ncall 0x9daf30\nadd esp, 4\nmov dword ptr [esp + 0x24], esi\nmov dword ptr [esp + 0x28], eax\ntest al, 1\nje 0xaaa503\ninc eax\nmov dword ptr [esp + 0x2c], eax\nlea eax, [esp + 0x24]\npush eax\ncall 0x9bf640\nadd esp, 4\nmov dword ptr [esp + 0x18], edx\nmov esi, eax\nlea ecx, [esp + 0x24]\nmov dword ptr [esp + 0x14], esi\ncall 0x9bab90\npush esi\nlea eax, [esp + 0x18]\npush eax\nlea eax, [esp + 0x24]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0x3b4db0\nmov esi, dword ptr [eax + 4]\ntest esi, esi\njne 0xaaa544\nmov esi, dword ptr [ebp + 0x10]\ncmp esi, dword ptr [ebp + 0x10]\njne 0xaaa56a\npush dword ptr [esp + 0x10]\npush 0x1b4faf4\npush 0\npush 1\npush 2\ncall 0x11e7c0\nadd esp, 0x14\nmov eax, edi\npop esi\npop ebp\npop edi\npop ebx\nadd esp, 0x20\nret\nmov eax, dword ptr [ebx + 0x18]\ntest eax, eax\nje 0xaaa57d\nmov ecx, dword ptr [0x36f6820]\npush eax\ncall 0x971c00\npush esi\nlea eax, [esp + 0x14]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0xaa1bb0\nmov eax, dword ptr [ebx]\nmov ecx, ebx\npush 0\ncall dword ptr [eax + 8]\npush ebx\ncall 0x9bb930\nadd esp, 4\npop esi\npop ebp\nmov eax, edi\npop edi\npop ebx\nadd esp, 0x20\nret",
+    "globals": {
+      "0x3195f68": "00000000",
+      "0x3195f6c": "00000000",
+      "0x3195f7c": "00000000000000000000000000000000"
+    }
+  },
+  {
+    "name": "UiPositionRect",
+    "facts": {
+      "create": 11387056,
+      "destroy": 987760,
+      "construct": 11387168,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 32,
+      "align": 4,
+      "parent": 57820384,
+      "poly": true
+    },
+    "members": [
+      {
+        "offset": 4,
+        "name": "m_eae44d07",
+        "type": "Vector4",
+        "wrapper": 6376272,
+        "args": [
+          [
+            "imm",
+            3940830471
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xd\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc"
+      },
+      {
+        "offset": 20,
+        "name": "m_df3f6504",
+        "type": "u16",
+        "wrapper": 992752,
+        "args": [
+          [
+            "imm",
+            3745473796
+          ],
+          [
+            "imm",
+            20
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 5\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc"
+      },
+      {
+        "offset": 22,
+        "name": "m_6240fc33",
+        "type": "u16",
+        "wrapper": 992752,
+        "args": [
+          [
+            "imm",
+            1648426035
+          ],
+          [
+            "imm",
+            22
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 5\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc"
+      },
+      {
+        "offset": 24,
+        "name": "Anchors",
+        "type": "MetaPointer<AnchorBase>",
+        "wrapper": 11392256,
+        "args": [
+          [
+            "imm",
+            592852805
+          ],
+          [
+            "imm",
+            24
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0x3724c98\npush 0\npush 0x82\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc"
+      },
+      {
+        "offset": 28,
+        "name": "IgnoreGlobalScale",
+        "type": "bool",
+        "wrapper": 994160,
+        "args": [
+          [
+            "imm",
+            1216335130
+          ],
+          [
+            "imm",
+            28
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 1\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc"
+      },
+      {
+        "offset": 29,
+        "name": "DisablePixelSnappingX",
+        "type": "bool",
+        "wrapper": 994160,
+        "args": [
+          [
+            "imm",
+            3627319383
+          ],
+          [
+            "imm",
+            29
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 1\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc"
+      },
+      {
+        "offset": 30,
+        "name": "DisablePixelSnappingY",
+        "type": "bool",
+        "wrapper": 994160,
+        "args": [
+          [
+            "imm",
+            3610541764
+          ],
+          [
+            "imm",
+            30
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 1\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc"
+      },
+      {
+        "offset": 31,
+        "name": "DisableResolutionDownscale",
+        "type": "bool",
+        "wrapper": 994160,
+        "args": [
+          [
+            "imm",
+            3887515405
+          ],
+          [
+            "imm",
+            31
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 1\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc"
+      }
+    ],
+    "callbacks": {
+      "create": "push 0x20\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xadc0c5\nmov ecx, eax\njmp 0xae0ac0\nxor eax, eax\nret",
+      "construct": "mov ecx, dword ptr [esp + 4]\njmp 0xae0ac0",
+      "destroy": "mov ecx, dword ptr [esp + 4]\ntest ecx, ecx\nje 0xf127e\nmov eax, dword ptr [ecx]\npush 1\ncall dword ptr [eax]\nret",
+      "destruct": "mov ecx, dword ptr [esp + 4]\npush 0\nmov eax, dword ptr [ecx]\ncall dword ptr [eax]\nret",
+      "v2": "mov ecx, dword ptr [esp + 4]\nmov eax, dword ptr [ecx]\njmp dword ptr [eax + 8]"
+    },
+    "constructor": "push esi\nmov esi, ecx\nxor eax, eax\npush 0xc\nmov dword ptr [esi], 0x1b51320\nmovups xmm0, xmmword ptr [0x3715f7c]\nmov dword ptr [esi + 0x14], eax\nmovups xmmword ptr [esi + 4], xmm0\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xae0b23\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nmov dword ptr [eax], 0x1b512e8\nmovss xmm0, dword ptr [0x3715f68]\nmovss dword ptr [eax + 4], xmm0\nmovss xmm0, dword ptr [0x3715f6c]\nmovss dword ptr [eax + 8], xmm0\nmov dword ptr [esi + 0x18], eax\nmov eax, esi\nmov dword ptr [esi + 0x1c], 0\npop esi\nret\nxor eax, eax\nmov dword ptr [esi + 0x18], eax\nmov dword ptr [esi + 0x1c], eax\nmov eax, esi\npop esi\nret",
+    "release": "sub esp, 0x20\npush ebx\npush edi\nmov ebx, ecx\nor edi, 0xffffffff\nlock xadd dword ptr [ebx + 0x20], edi\ndec edi\njne 0xaaa59f\npush ebp\nmov ebp, dword ptr [0x2aa7228]\ntest ebp, ebp\nje 0xaaa59e\npush esi\nmov esi, dword ptr [ebx + 4]\npush esi\nmov dword ptr [esp + 0x14], esi\ncall 0x9daf30\nadd esp, 4\nmov dword ptr [esp + 0x24], esi\nmov dword ptr [esp + 0x28], eax\ntest al, 1\nje 0xaaa503\ninc eax\nmov dword ptr [esp + 0x2c], eax\nlea eax, [esp + 0x24]\npush eax\ncall 0x9bf640\nadd esp, 4\nmov dword ptr [esp + 0x18], edx\nmov esi, eax\nlea ecx, [esp + 0x24]\nmov dword ptr [esp + 0x14], esi\ncall 0x9bab90\npush esi\nlea eax, [esp + 0x18]\npush eax\nlea eax, [esp + 0x24]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0x3b4db0\nmov esi, dword ptr [eax + 4]\ntest esi, esi\njne 0xaaa544\nmov esi, dword ptr [ebp + 0x10]\ncmp esi, dword ptr [ebp + 0x10]\njne 0xaaa56a\npush dword ptr [esp + 0x10]\npush 0x1b4faf4\npush 0\npush 1\npush 2\ncall 0x11e7c0\nadd esp, 0x14\nmov eax, edi\npop esi\npop ebp\npop edi\npop ebx\nadd esp, 0x20\nret\nmov eax, dword ptr [ebx + 0x18]\ntest eax, eax\nje 0xaaa57d\nmov ecx, dword ptr [0x36f6820]\npush eax\ncall 0x971c00\npush esi\nlea eax, [esp + 0x14]\npush eax\nlea ecx, [ebp + 0xc]\ncall 0xaa1bb0\nmov eax, dword ptr [ebx]\nmov ecx, ebx\npush 0\ncall dword ptr [eax + 8]\npush ebx\ncall 0x9bb930\nadd esp, 4\npop esi\npop ebp\nmov eax, edi\npop edi\npop ebx\nadd esp, 0x20\nret",
+    "globals": {
+      "0x3195f68": "00000000",
+      "0x3195f6c": "00000000",
+      "0x3195f7c": "00000000000000000000000000000000"
+    }
+  },
+  {
+    "name": "Class_c27090c2",
+    "facts": {
+      "create": 11387744,
+      "destroy": 987760,
+      "construct": 11387776,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 72,
+      "align": 4,
+      "parent": 57820144,
+      "poly": true
+    },
+    "events": [
+      [
+        "call",
+        10197600,
+        57818760,
+        [
+          [
+            "imm",
+            3262156994
+          ],
+          [
+            "imm",
+            17154912
+          ],
+          [
+            "imm",
+            6754928
+          ],
+          [
+            "imm",
+            17154944
+          ],
+          [
+            "imm",
+            6754976
+          ],
+          [
+            "imm",
+            6754992
+          ],
+          [
+            "imm",
+            72
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "store",
+        57818760,
+        [
+          "imm",
+          0
+        ]
+      ],
+      [
+        "store",
+        57818788,
+        [
+          "imm",
+          57820144
+        ]
+      ],
+      [
+        "call",
+        1613104,
+        57818760,
+        [
+          [
+            "imm",
+            2479726548
+          ],
+          [
+            "imm",
+            52
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        1613104,
+        57818760,
+        [
+          [
+            "imm",
+            2496504167
+          ],
+          [
+            "imm",
+            56
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        15995301,
+        null,
+        [
+          [
+            "imm",
+            22190896
+          ]
+        ]
+      ]
+    ],
+    "event_bodies": {
+      "10197600": "mov eax, dword ptr [esp + 4]\npush ebx\nmov ebx, ecx\npush ebp\npush edi\nmov dword ptr [ebx + 4], eax\nmov eax, dword ptr [esp + 0x14]\nmov dword ptr [ebx + 8], eax\nmov eax, dword ptr [esp + 0x18]\nmov dword ptr [ebx + 0xc], eax\nmov eax, dword ptr [esp + 0x1c]\nmov dword ptr [ebx + 0x10], eax\nmov eax, dword ptr [esp + 0x20]\nmov dword ptr [ebx + 0x14], eax\nmov eax, dword ptr [esp + 0x24]\nmov dword ptr [ebx + 0x18], eax\nmov eax, dword ptr [esp + 0x28]\nmov dword ptr [ebx + 0x20], eax\nmov eax, dword ptr [esp + 0x2c]\nmov dword ptr [ebx + 0x24], eax\nmov al, byte ptr [esp + 0x30]\nmov byte ptr [ebx + 0x28], al\nmov al, byte ptr [esp + 0x34]\nmov dword ptr [ebx], 0\nmov dword ptr [ebx + 0x1c], 0\nmov byte ptr [ebx + 0x29], al\nmov byte ptr [ebx + 0x2a], 0\nmov dword ptr [ebx + 0x2c], 0\nmov dword ptr [ebx + 0x30], 0\nmov dword ptr [ebx + 0x34], 0\nmov dword ptr [ebx + 0x38], 0\nmov dword ptr [ebx + 0x3c], 0\nmov dword ptr [ebx + 0x40], 0\nmov dword ptr [ebx + 0x44], 0\nmov dword ptr [ebx + 0x48], 0\nmov dword ptr [ebx + 0x4c], 0\ncall 0x28d7e0\nmov edi, eax\nmov ecx, dword ptr [edi + 8]\nmov ebp, dword ptr [edi + 4]\nand ecx, 0x7fffffff\ncmp ebp, ecx\njne 0x9b9b71\nmov eax, ecx\ninc ecx\nshr eax, 1\nadd eax, ecx\nmov dword ptr [esp + 0x34], eax\nshl eax, 2\npush esi\npush eax\ncall 0x9d4570\nmov ecx, dword ptr [edi]\nadd esp, 4\nmov edx, dword ptr [edi + 4]\nmov esi, eax\nmov dword ptr [esp + 0x34], eax\nlea edx, [ecx + edx*4]\ncmp ecx, edx\njae 0x9b9b51\nnop dword ptr [eax]\nmov eax, dword ptr [ecx]\nlea esi, [esi + 4]\nadd ecx, 4\nmov dword ptr [esi - 4], eax\ncmp ecx, edx\njb 0x9b9b40\nmov ecx, dword ptr [edi]\ncmp dword ptr [edi + 8], 0\npop esi\njl 0x9b9b61\npush ecx\ncall 0x9d42e0\nadd esp, 4\nmov eax, dword ptr [esp + 0x30]\nmov dword ptr [edi], eax\nmov eax, dword ptr [esp + 0x34]\nmov dword ptr [edi + 4], ebp\nmov dword ptr [edi + 8], eax\nmov eax, dword ptr [edi]\nmov dword ptr [eax + ebp*4], ebx\nmov eax, ebx\ninc dword ptr [edi + 4]\nmov byte ptr [edi + 0xc], 1\npop edi\npop ebp\npop ebx\nret 0x28",
+      "1613104": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xf\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "15995301": "push ebp\nmov ebp, esp\npush dword ptr [ebp + 8]\ncall 0xf41178\nneg eax\npop ecx\nsbb eax, eax\nneg eax\ndec eax\npop ebp\nret"
+    },
+    "constructor": "push esi\nmov esi, ecx\ncall 0xadfd20\nmov dword ptr [esi], 0x1b5134c\nmov dword ptr [esi + 0x34], 0xffffffff\nmov dword ptr [esi + 0x38], 0xffffffff\nmov dword ptr [esi + 0x24], 0\nmov dword ptr [esi + 0x28], 0\nmov dword ptr [esi + 0x2c], 0\nmov dword ptr [esi + 0x30], 0\nmov dword ptr [esi + 0x3c], 0\nmov eax, dword ptr [0x1e45828]\nmov dword ptr [esi + 0x40], eax\nmov eax, esi\nmov dword ptr [esi + 0x44], 0\nmov dword ptr [esi], 0x1b5137c\npop esi\nret",
+    "placement": "mov ecx, dword ptr [esp + 4]\njmp 0xadef80"
+  },
+  {
+    "name": "Class_720bb1aa",
+    "facts": {
+      "create": 11388064,
+      "destroy": 987760,
+      "construct": 11388112,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 76,
+      "align": 4,
+      "parent": 57820144,
+      "poly": true
+    },
+    "events": [
+      [
+        "call",
+        10197600,
+        57823560,
+        [
+          [
+            "imm",
+            1913369002
+          ],
+          [
+            "imm",
+            17155232
+          ],
+          [
+            "imm",
+            6754928
+          ],
+          [
+            "imm",
+            17155280
+          ],
+          [
+            "imm",
+            6754976
+          ],
+          [
+            "imm",
+            6754992
+          ],
+          [
+            "imm",
+            76
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "store",
+        57823560,
+        [
+          "imm",
+          0
+        ]
+      ],
+      [
+        "store",
+        57823588,
+        [
+          "imm",
+          57820144
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57823560,
+        [
+          [
+            "imm",
+            4007892433
+          ],
+          [
+            "imm",
+            61
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57823560,
+        [
+          [
+            "imm",
+            3991114814
+          ],
+          [
+            "imm",
+            62
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57823560,
+        [
+          [
+            "imm",
+            1342547873
+          ],
+          [
+            "imm",
+            63
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        11392304,
+        57823560,
+        [
+          [
+            "imm",
+            3915856815
+          ],
+          [
+            "imm",
+            68
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        992896,
+        57823560,
+        [
+          [
+            "imm",
+            4285724010
+          ],
+          [
+            "imm",
+            36
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        992896,
+        57823560,
+        [
+          [
+            "imm",
+            2790357931
+          ],
+          [
+            "imm",
+            40
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        992896,
+        57823560,
+        [
+          [
+            "imm",
+            2652370576
+          ],
+          [
+            "imm",
+            44
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        992704,
+        57823560,
+        [
+          [
+            "imm",
+            3996911377
+          ],
+          [
+            "imm",
+            72
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        15995301,
+        null,
+        [
+          [
+            "imm",
+            22190928
+          ]
+        ]
+      ]
+    ],
+    "event_bodies": {
+      "10197600": "mov eax, dword ptr [esp + 4]\npush ebx\nmov ebx, ecx\npush ebp\npush edi\nmov dword ptr [ebx + 4], eax\nmov eax, dword ptr [esp + 0x14]\nmov dword ptr [ebx + 8], eax\nmov eax, dword ptr [esp + 0x18]\nmov dword ptr [ebx + 0xc], eax\nmov eax, dword ptr [esp + 0x1c]\nmov dword ptr [ebx + 0x10], eax\nmov eax, dword ptr [esp + 0x20]\nmov dword ptr [ebx + 0x14], eax\nmov eax, dword ptr [esp + 0x24]\nmov dword ptr [ebx + 0x18], eax\nmov eax, dword ptr [esp + 0x28]\nmov dword ptr [ebx + 0x20], eax\nmov eax, dword ptr [esp + 0x2c]\nmov dword ptr [ebx + 0x24], eax\nmov al, byte ptr [esp + 0x30]\nmov byte ptr [ebx + 0x28], al\nmov al, byte ptr [esp + 0x34]\nmov dword ptr [ebx], 0\nmov dword ptr [ebx + 0x1c], 0\nmov byte ptr [ebx + 0x29], al\nmov byte ptr [ebx + 0x2a], 0\nmov dword ptr [ebx + 0x2c], 0\nmov dword ptr [ebx + 0x30], 0\nmov dword ptr [ebx + 0x34], 0\nmov dword ptr [ebx + 0x38], 0\nmov dword ptr [ebx + 0x3c], 0\nmov dword ptr [ebx + 0x40], 0\nmov dword ptr [ebx + 0x44], 0\nmov dword ptr [ebx + 0x48], 0\nmov dword ptr [ebx + 0x4c], 0\ncall 0x28d7e0\nmov edi, eax\nmov ecx, dword ptr [edi + 8]\nmov ebp, dword ptr [edi + 4]\nand ecx, 0x7fffffff\ncmp ebp, ecx\njne 0x9b9b71\nmov eax, ecx\ninc ecx\nshr eax, 1\nadd eax, ecx\nmov dword ptr [esp + 0x34], eax\nshl eax, 2\npush esi\npush eax\ncall 0x9d4570\nmov ecx, dword ptr [edi]\nadd esp, 4\nmov edx, dword ptr [edi + 4]\nmov esi, eax\nmov dword ptr [esp + 0x34], eax\nlea edx, [ecx + edx*4]\ncmp ecx, edx\njae 0x9b9b51\nnop dword ptr [eax]\nmov eax, dword ptr [ecx]\nlea esi, [esi + 4]\nadd ecx, 4\nmov dword ptr [esi - 4], eax\ncmp ecx, edx\njb 0x9b9b40\nmov ecx, dword ptr [edi]\ncmp dword ptr [edi + 8], 0\npop esi\njl 0x9b9b61\npush ecx\ncall 0x9d42e0\nadd esp, 4\nmov eax, dword ptr [esp + 0x30]\nmov dword ptr [edi], eax\nmov eax, dword ptr [esp + 0x34]\nmov dword ptr [edi + 4], ebp\nmov dword ptr [edi + 8], eax\nmov eax, dword ptr [edi]\nmov dword ptr [eax + ebp*4], ebx\nmov eax, ebx\ninc dword ptr [edi + 4]\nmov byte ptr [edi + 0xc], 1\npop edi\npop ebp\npop ebx\nret 0x28",
+      "994160": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 1\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "11392304": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0x3723560\npush 0\npush 0x82\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "992896": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xa\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "992704": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 3\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "15995301": "push ebp\nmov ebp, esp\npush dword ptr [ebp + 8]\ncall 0xf41178\nneg eax\npop ecx\nsbb eax, eax\nneg eax\ndec eax\npop ebp\nret"
+    },
+    "constructor": "push esi\nmov esi, ecx\ncall 0xadfd20\nmov dword ptr [esi], 0x1b5134c\nmov dword ptr [esi + 0x34], 0xffffffff\nmov dword ptr [esi + 0x38], 0xffffffff\nmov dword ptr [esi + 0x24], 0\nmov dword ptr [esi + 0x28], 0\nmov dword ptr [esi + 0x2c], 0\nmov dword ptr [esi + 0x30], 0\nmov dword ptr [esi + 0x3c], 0\nmov eax, dword ptr [0x1e45828]\nmov dword ptr [esi + 0x40], eax\nmov eax, esi\nmov dword ptr [esi + 0x44], 0\nmov dword ptr [esi], 0x1b51394\nmov byte ptr [esi + 0x48], 0\npop esi\nret",
+    "placement": "mov ecx, dword ptr [esp + 4]\njmp 0xadefe0"
+  },
+  {
+    "name": "Class_9b78684f",
+    "facts": {
+      "create": 11387696,
+      "destroy": 987760,
+      "construct": 11387728,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 72,
+      "align": 4,
+      "parent": 57820144,
+      "poly": true
+    },
+    "events": [
+      [
+        "call",
+        10197600,
+        57820704,
+        [
+          [
+            "imm",
+            2608359503
+          ],
+          [
+            "imm",
+            17154864
+          ],
+          [
+            "imm",
+            6754928
+          ],
+          [
+            "imm",
+            17154896
+          ],
+          [
+            "imm",
+            6754976
+          ],
+          [
+            "imm",
+            6754992
+          ],
+          [
+            "imm",
+            72
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "store",
+        57820704,
+        [
+          "imm",
+          0
+        ]
+      ],
+      [
+        "store",
+        57820732,
+        [
+          "imm",
+          57820144
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57820704,
+        [
+          [
+            "imm",
+            4007892433
+          ],
+          [
+            "imm",
+            61
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57820704,
+        [
+          [
+            "imm",
+            3991114814
+          ],
+          [
+            "imm",
+            62
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57820704,
+        [
+          [
+            "imm",
+            1342547873
+          ],
+          [
+            "imm",
+            63
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        11392304,
+        57820704,
+        [
+          [
+            "imm",
+            3915856815
+          ],
+          [
+            "imm",
+            68
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        15995301,
+        null,
+        [
+          [
+            "imm",
+            22190944
+          ]
+        ]
+      ]
+    ],
+    "event_bodies": {
+      "10197600": "mov eax, dword ptr [esp + 4]\npush ebx\nmov ebx, ecx\npush ebp\npush edi\nmov dword ptr [ebx + 4], eax\nmov eax, dword ptr [esp + 0x14]\nmov dword ptr [ebx + 8], eax\nmov eax, dword ptr [esp + 0x18]\nmov dword ptr [ebx + 0xc], eax\nmov eax, dword ptr [esp + 0x1c]\nmov dword ptr [ebx + 0x10], eax\nmov eax, dword ptr [esp + 0x20]\nmov dword ptr [ebx + 0x14], eax\nmov eax, dword ptr [esp + 0x24]\nmov dword ptr [ebx + 0x18], eax\nmov eax, dword ptr [esp + 0x28]\nmov dword ptr [ebx + 0x20], eax\nmov eax, dword ptr [esp + 0x2c]\nmov dword ptr [ebx + 0x24], eax\nmov al, byte ptr [esp + 0x30]\nmov byte ptr [ebx + 0x28], al\nmov al, byte ptr [esp + 0x34]\nmov dword ptr [ebx], 0\nmov dword ptr [ebx + 0x1c], 0\nmov byte ptr [ebx + 0x29], al\nmov byte ptr [ebx + 0x2a], 0\nmov dword ptr [ebx + 0x2c], 0\nmov dword ptr [ebx + 0x30], 0\nmov dword ptr [ebx + 0x34], 0\nmov dword ptr [ebx + 0x38], 0\nmov dword ptr [ebx + 0x3c], 0\nmov dword ptr [ebx + 0x40], 0\nmov dword ptr [ebx + 0x44], 0\nmov dword ptr [ebx + 0x48], 0\nmov dword ptr [ebx + 0x4c], 0\ncall 0x28d7e0\nmov edi, eax\nmov ecx, dword ptr [edi + 8]\nmov ebp, dword ptr [edi + 4]\nand ecx, 0x7fffffff\ncmp ebp, ecx\njne 0x9b9b71\nmov eax, ecx\ninc ecx\nshr eax, 1\nadd eax, ecx\nmov dword ptr [esp + 0x34], eax\nshl eax, 2\npush esi\npush eax\ncall 0x9d4570\nmov ecx, dword ptr [edi]\nadd esp, 4\nmov edx, dword ptr [edi + 4]\nmov esi, eax\nmov dword ptr [esp + 0x34], eax\nlea edx, [ecx + edx*4]\ncmp ecx, edx\njae 0x9b9b51\nnop dword ptr [eax]\nmov eax, dword ptr [ecx]\nlea esi, [esi + 4]\nadd ecx, 4\nmov dword ptr [esi - 4], eax\ncmp ecx, edx\njb 0x9b9b40\nmov ecx, dword ptr [edi]\ncmp dword ptr [edi + 8], 0\npop esi\njl 0x9b9b61\npush ecx\ncall 0x9d42e0\nadd esp, 4\nmov eax, dword ptr [esp + 0x30]\nmov dword ptr [edi], eax\nmov eax, dword ptr [esp + 0x34]\nmov dword ptr [edi + 4], ebp\nmov dword ptr [edi + 8], eax\nmov eax, dword ptr [edi]\nmov dword ptr [eax + ebp*4], ebx\nmov eax, ebx\ninc dword ptr [edi + 4]\nmov byte ptr [edi + 0xc], 1\npop edi\npop ebp\npop ebx\nret 0x28",
+      "994160": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 1\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "11392304": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0x3723560\npush 0\npush 0x82\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "15995301": "push ebp\nmov ebp, esp\npush dword ptr [ebp + 8]\ncall 0xf41178\nneg eax\npop ecx\nsbb eax, eax\nneg eax\ndec eax\npop ebp\nret"
+    },
+    "constructor": "push esi\nmov esi, ecx\ncall 0xadfd20\nmov dword ptr [esi], 0x1b5134c\nmov dword ptr [esi + 0x34], 0xffffffff\nmov dword ptr [esi + 0x38], 0xffffffff\nmov dword ptr [esi + 0x24], 0\nmov dword ptr [esi + 0x28], 0\nmov dword ptr [esi + 0x2c], 0\nmov dword ptr [esi + 0x30], 0\nmov dword ptr [esi + 0x3c], 0\nmov eax, dword ptr [0x1e45828]\nmov dword ptr [esi + 0x40], eax\nmov eax, esi\nmov dword ptr [esi + 0x44], 0\nmov dword ptr [esi], 0x1b51370\npop esi\nret",
+    "placement": "mov ecx, dword ptr [esp + 4]\njmp 0xadf040"
+  },
+  {
+    "name": "Class_f395015b",
+    "facts": {
+      "create": 11389120,
+      "destroy": 987760,
+      "construct": 11389152,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 72,
+      "align": 4,
+      "parent": 57820144,
+      "poly": true
+    },
+    "events": [
+      [
+        "call",
+        10197600,
+        57822440,
+        [
+          [
+            "imm",
+            4086628699
+          ],
+          [
+            "imm",
+            17156288
+          ],
+          [
+            "imm",
+            6754928
+          ],
+          [
+            "imm",
+            17156320
+          ],
+          [
+            "imm",
+            6754976
+          ],
+          [
+            "imm",
+            6754992
+          ],
+          [
+            "imm",
+            72
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "store",
+        57822440,
+        [
+          "imm",
+          0
+        ]
+      ],
+      [
+        "store",
+        57822468,
+        [
+          "imm",
+          57820144
+        ]
+      ],
+      [
+        "call",
+        1613104,
+        57822440,
+        [
+          [
+            "imm",
+            2479726548
+          ],
+          [
+            "imm",
+            52
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        1613104,
+        57822440,
+        [
+          [
+            "imm",
+            2496504167
+          ],
+          [
+            "imm",
+            56
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        15995301,
+        null,
+        [
+          [
+            "imm",
+            22190960
+          ]
+        ]
+      ]
+    ],
+    "event_bodies": {
+      "10197600": "mov eax, dword ptr [esp + 4]\npush ebx\nmov ebx, ecx\npush ebp\npush edi\nmov dword ptr [ebx + 4], eax\nmov eax, dword ptr [esp + 0x14]\nmov dword ptr [ebx + 8], eax\nmov eax, dword ptr [esp + 0x18]\nmov dword ptr [ebx + 0xc], eax\nmov eax, dword ptr [esp + 0x1c]\nmov dword ptr [ebx + 0x10], eax\nmov eax, dword ptr [esp + 0x20]\nmov dword ptr [ebx + 0x14], eax\nmov eax, dword ptr [esp + 0x24]\nmov dword ptr [ebx + 0x18], eax\nmov eax, dword ptr [esp + 0x28]\nmov dword ptr [ebx + 0x20], eax\nmov eax, dword ptr [esp + 0x2c]\nmov dword ptr [ebx + 0x24], eax\nmov al, byte ptr [esp + 0x30]\nmov byte ptr [ebx + 0x28], al\nmov al, byte ptr [esp + 0x34]\nmov dword ptr [ebx], 0\nmov dword ptr [ebx + 0x1c], 0\nmov byte ptr [ebx + 0x29], al\nmov byte ptr [ebx + 0x2a], 0\nmov dword ptr [ebx + 0x2c], 0\nmov dword ptr [ebx + 0x30], 0\nmov dword ptr [ebx + 0x34], 0\nmov dword ptr [ebx + 0x38], 0\nmov dword ptr [ebx + 0x3c], 0\nmov dword ptr [ebx + 0x40], 0\nmov dword ptr [ebx + 0x44], 0\nmov dword ptr [ebx + 0x48], 0\nmov dword ptr [ebx + 0x4c], 0\ncall 0x28d7e0\nmov edi, eax\nmov ecx, dword ptr [edi + 8]\nmov ebp, dword ptr [edi + 4]\nand ecx, 0x7fffffff\ncmp ebp, ecx\njne 0x9b9b71\nmov eax, ecx\ninc ecx\nshr eax, 1\nadd eax, ecx\nmov dword ptr [esp + 0x34], eax\nshl eax, 2\npush esi\npush eax\ncall 0x9d4570\nmov ecx, dword ptr [edi]\nadd esp, 4\nmov edx, dword ptr [edi + 4]\nmov esi, eax\nmov dword ptr [esp + 0x34], eax\nlea edx, [ecx + edx*4]\ncmp ecx, edx\njae 0x9b9b51\nnop dword ptr [eax]\nmov eax, dword ptr [ecx]\nlea esi, [esi + 4]\nadd ecx, 4\nmov dword ptr [esi - 4], eax\ncmp ecx, edx\njb 0x9b9b40\nmov ecx, dword ptr [edi]\ncmp dword ptr [edi + 8], 0\npop esi\njl 0x9b9b61\npush ecx\ncall 0x9d42e0\nadd esp, 4\nmov eax, dword ptr [esp + 0x30]\nmov dword ptr [edi], eax\nmov eax, dword ptr [esp + 0x34]\nmov dword ptr [edi + 4], ebp\nmov dword ptr [edi + 8], eax\nmov eax, dword ptr [edi]\nmov dword ptr [eax + ebp*4], ebx\nmov eax, ebx\ninc dword ptr [edi + 4]\nmov byte ptr [edi + 0xc], 1\npop edi\npop ebp\npop ebx\nret 0x28",
+      "1613104": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xf\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "15995301": "push ebp\nmov ebp, esp\npush dword ptr [ebp + 8]\ncall 0xf41178\nneg eax\npop ecx\nsbb eax, eax\nneg eax\ndec eax\npop ebp\nret"
+    },
+    "constructor": "push esi\nmov esi, ecx\ncall 0xadfd20\nmov dword ptr [esi], 0x1b5134c\nmov dword ptr [esi + 0x34], 0xffffffff\nmov dword ptr [esi + 0x38], 0xffffffff\nmov dword ptr [esi + 0x24], 0\nmov dword ptr [esi + 0x28], 0\nmov dword ptr [esi + 0x2c], 0\nmov dword ptr [esi + 0x30], 0\nmov dword ptr [esi + 0x3c], 0\nmov eax, dword ptr [0x1e45828]\nmov dword ptr [esi + 0x40], eax\nmov eax, esi\nmov dword ptr [esi + 0x44], 0\nmov dword ptr [esi], 0x1b51400\npop esi\nret",
+    "placement": "mov ecx, dword ptr [esp + 4]\njmp 0xadf0a0"
+  },
+  {
+    "name": "Class_be3f7ef7",
+    "facts": {
+      "create": 11387344,
+      "destroy": 987760,
+      "construct": 11387408,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 72,
+      "align": 4,
+      "parent": 57820144,
+      "poly": true
+    },
+    "events": [
+      [
+        "call",
+        10197600,
+        57817800,
+        [
+          [
+            "imm",
+            3191832311
+          ],
+          [
+            "imm",
+            17154512
+          ],
+          [
+            "imm",
+            6754928
+          ],
+          [
+            "imm",
+            17154576
+          ],
+          [
+            "imm",
+            6754976
+          ],
+          [
+            "imm",
+            6754992
+          ],
+          [
+            "imm",
+            72
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "store",
+        57817800,
+        [
+          "imm",
+          0
+        ]
+      ],
+      [
+        "store",
+        57817828,
+        [
+          "imm",
+          57820144
+        ]
+      ],
+      [
+        "call",
+        1613104,
+        57817800,
+        [
+          [
+            "imm",
+            2479726548
+          ],
+          [
+            "imm",
+            52
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        1613104,
+        57817800,
+        [
+          [
+            "imm",
+            2496504167
+          ],
+          [
+            "imm",
+            56
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        15995301,
+        null,
+        [
+          [
+            "imm",
+            22190992
+          ]
+        ]
+      ]
+    ],
+    "event_bodies": {
+      "10197600": "mov eax, dword ptr [esp + 4]\npush ebx\nmov ebx, ecx\npush ebp\npush edi\nmov dword ptr [ebx + 4], eax\nmov eax, dword ptr [esp + 0x14]\nmov dword ptr [ebx + 8], eax\nmov eax, dword ptr [esp + 0x18]\nmov dword ptr [ebx + 0xc], eax\nmov eax, dword ptr [esp + 0x1c]\nmov dword ptr [ebx + 0x10], eax\nmov eax, dword ptr [esp + 0x20]\nmov dword ptr [ebx + 0x14], eax\nmov eax, dword ptr [esp + 0x24]\nmov dword ptr [ebx + 0x18], eax\nmov eax, dword ptr [esp + 0x28]\nmov dword ptr [ebx + 0x20], eax\nmov eax, dword ptr [esp + 0x2c]\nmov dword ptr [ebx + 0x24], eax\nmov al, byte ptr [esp + 0x30]\nmov byte ptr [ebx + 0x28], al\nmov al, byte ptr [esp + 0x34]\nmov dword ptr [ebx], 0\nmov dword ptr [ebx + 0x1c], 0\nmov byte ptr [ebx + 0x29], al\nmov byte ptr [ebx + 0x2a], 0\nmov dword ptr [ebx + 0x2c], 0\nmov dword ptr [ebx + 0x30], 0\nmov dword ptr [ebx + 0x34], 0\nmov dword ptr [ebx + 0x38], 0\nmov dword ptr [ebx + 0x3c], 0\nmov dword ptr [ebx + 0x40], 0\nmov dword ptr [ebx + 0x44], 0\nmov dword ptr [ebx + 0x48], 0\nmov dword ptr [ebx + 0x4c], 0\ncall 0x28d7e0\nmov edi, eax\nmov ecx, dword ptr [edi + 8]\nmov ebp, dword ptr [edi + 4]\nand ecx, 0x7fffffff\ncmp ebp, ecx\njne 0x9b9b71\nmov eax, ecx\ninc ecx\nshr eax, 1\nadd eax, ecx\nmov dword ptr [esp + 0x34], eax\nshl eax, 2\npush esi\npush eax\ncall 0x9d4570\nmov ecx, dword ptr [edi]\nadd esp, 4\nmov edx, dword ptr [edi + 4]\nmov esi, eax\nmov dword ptr [esp + 0x34], eax\nlea edx, [ecx + edx*4]\ncmp ecx, edx\njae 0x9b9b51\nnop dword ptr [eax]\nmov eax, dword ptr [ecx]\nlea esi, [esi + 4]\nadd ecx, 4\nmov dword ptr [esi - 4], eax\ncmp ecx, edx\njb 0x9b9b40\nmov ecx, dword ptr [edi]\ncmp dword ptr [edi + 8], 0\npop esi\njl 0x9b9b61\npush ecx\ncall 0x9d42e0\nadd esp, 4\nmov eax, dword ptr [esp + 0x30]\nmov dword ptr [edi], eax\nmov eax, dword ptr [esp + 0x34]\nmov dword ptr [edi + 4], ebp\nmov dword ptr [edi + 8], eax\nmov eax, dword ptr [edi]\nmov dword ptr [eax + ebp*4], ebx\nmov eax, ebx\ninc dword ptr [edi + 4]\nmov byte ptr [edi + 0xc], 1\npop edi\npop ebp\npop ebx\nret 0x28",
+      "1613104": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xf\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "15995301": "push ebp\nmov ebp, esp\npush dword ptr [ebp + 8]\ncall 0xf41178\nneg eax\npop ecx\nsbb eax, eax\nneg eax\ndec eax\npop ebp\nret"
+    },
+    "constructor": "push esi\nmov esi, ecx\ncall 0xadfd20\nmov dword ptr [esi], 0x1b5134c\nmov dword ptr [esi + 0x34], 0xffffffff\nmov dword ptr [esi + 0x38], 0xffffffff\nmov dword ptr [esi + 0x24], 0\nmov dword ptr [esi + 0x28], 0\nmov dword ptr [esi + 0x2c], 0\nmov dword ptr [esi + 0x30], 0\nmov dword ptr [esi + 0x3c], 0\nmov eax, dword ptr [0x1e45828]\nmov dword ptr [esi + 0x40], eax\nmov eax, esi\nmov dword ptr [esi + 0x44], 0\nmov dword ptr [esi], 0x1b51358\npop esi\nret",
+    "placement": "mov ecx, dword ptr [esp + 4]\njmp 0xadf100"
+  },
+  {
+    "name": "Class_81990a5e",
+    "facts": {
+      "create": 11387424,
+      "destroy": 987760,
+      "construct": 11387648,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 76,
+      "align": 4,
+      "parent": 57820144,
+      "poly": true
+    },
+    "events": [
+      [
+        "call",
+        10197600,
+        57823880,
+        [
+          [
+            "imm",
+            2174290526
+          ],
+          [
+            "imm",
+            17154592
+          ],
+          [
+            "imm",
+            6754928
+          ],
+          [
+            "imm",
+            17154816
+          ],
+          [
+            "imm",
+            6754976
+          ],
+          [
+            "imm",
+            6754992
+          ],
+          [
+            "imm",
+            76
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "store",
+        57823880,
+        [
+          "imm",
+          0
+        ]
+      ],
+      [
+        "store",
+        57823908,
+        [
+          "imm",
+          57820144
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57823880,
+        [
+          [
+            "imm",
+            181492049
+          ],
+          [
+            "imm",
+            72
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57823880,
+        [
+          [
+            "imm",
+            4007892433
+          ],
+          [
+            "imm",
+            61
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57823880,
+        [
+          [
+            "imm",
+            3991114814
+          ],
+          [
+            "imm",
+            62
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57823880,
+        [
+          [
+            "imm",
+            1342547873
+          ],
+          [
+            "imm",
+            63
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        11392304,
+        57823880,
+        [
+          [
+            "imm",
+            3915856815
+          ],
+          [
+            "imm",
+            68
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        15995301,
+        null,
+        [
+          [
+            "imm",
+            22191008
+          ]
+        ]
+      ]
+    ],
+    "event_bodies": {
+      "10197600": "mov eax, dword ptr [esp + 4]\npush ebx\nmov ebx, ecx\npush ebp\npush edi\nmov dword ptr [ebx + 4], eax\nmov eax, dword ptr [esp + 0x14]\nmov dword ptr [ebx + 8], eax\nmov eax, dword ptr [esp + 0x18]\nmov dword ptr [ebx + 0xc], eax\nmov eax, dword ptr [esp + 0x1c]\nmov dword ptr [ebx + 0x10], eax\nmov eax, dword ptr [esp + 0x20]\nmov dword ptr [ebx + 0x14], eax\nmov eax, dword ptr [esp + 0x24]\nmov dword ptr [ebx + 0x18], eax\nmov eax, dword ptr [esp + 0x28]\nmov dword ptr [ebx + 0x20], eax\nmov eax, dword ptr [esp + 0x2c]\nmov dword ptr [ebx + 0x24], eax\nmov al, byte ptr [esp + 0x30]\nmov byte ptr [ebx + 0x28], al\nmov al, byte ptr [esp + 0x34]\nmov dword ptr [ebx], 0\nmov dword ptr [ebx + 0x1c], 0\nmov byte ptr [ebx + 0x29], al\nmov byte ptr [ebx + 0x2a], 0\nmov dword ptr [ebx + 0x2c], 0\nmov dword ptr [ebx + 0x30], 0\nmov dword ptr [ebx + 0x34], 0\nmov dword ptr [ebx + 0x38], 0\nmov dword ptr [ebx + 0x3c], 0\nmov dword ptr [ebx + 0x40], 0\nmov dword ptr [ebx + 0x44], 0\nmov dword ptr [ebx + 0x48], 0\nmov dword ptr [ebx + 0x4c], 0\ncall 0x28d7e0\nmov edi, eax\nmov ecx, dword ptr [edi + 8]\nmov ebp, dword ptr [edi + 4]\nand ecx, 0x7fffffff\ncmp ebp, ecx\njne 0x9b9b71\nmov eax, ecx\ninc ecx\nshr eax, 1\nadd eax, ecx\nmov dword ptr [esp + 0x34], eax\nshl eax, 2\npush esi\npush eax\ncall 0x9d4570\nmov ecx, dword ptr [edi]\nadd esp, 4\nmov edx, dword ptr [edi + 4]\nmov esi, eax\nmov dword ptr [esp + 0x34], eax\nlea edx, [ecx + edx*4]\ncmp ecx, edx\njae 0x9b9b51\nnop dword ptr [eax]\nmov eax, dword ptr [ecx]\nlea esi, [esi + 4]\nadd ecx, 4\nmov dword ptr [esi - 4], eax\ncmp ecx, edx\njb 0x9b9b40\nmov ecx, dword ptr [edi]\ncmp dword ptr [edi + 8], 0\npop esi\njl 0x9b9b61\npush ecx\ncall 0x9d42e0\nadd esp, 4\nmov eax, dword ptr [esp + 0x30]\nmov dword ptr [edi], eax\nmov eax, dword ptr [esp + 0x34]\nmov dword ptr [edi + 4], ebp\nmov dword ptr [edi + 8], eax\nmov eax, dword ptr [edi]\nmov dword ptr [eax + ebp*4], ebx\nmov eax, ebx\ninc dword ptr [edi + 4]\nmov byte ptr [edi + 0xc], 1\npop edi\npop ebp\npop ebx\nret 0x28",
+      "994160": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 1\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "11392304": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0x3723560\npush 0\npush 0x82\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "15995301": "push ebp\nmov ebp, esp\npush dword ptr [ebp + 8]\ncall 0xf41178\nneg eax\npop ecx\nsbb eax, eax\nneg eax\ndec eax\npop ebp\nret"
+    },
+    "constructor": "push esi\nmov esi, ecx\ncall 0xadfd20\nmov dword ptr [esi], 0x1b5134c\nmov dword ptr [esi + 0x34], 0xffffffff\nmov dword ptr [esi + 0x38], 0xffffffff\nmov dword ptr [esi + 0x24], 0\nmov dword ptr [esi + 0x28], 0\nmov dword ptr [esi + 0x2c], 0\nmov dword ptr [esi + 0x30], 0\nmov dword ptr [esi + 0x3c], 0\nmov eax, dword ptr [0x1e45828]\nmov dword ptr [esi + 0x40], eax\nmov eax, esi\nmov dword ptr [esi + 0x44], 0\nmov dword ptr [esi], 0x1b51364\nmov byte ptr [esi + 0x48], 0\npop esi\nret",
+    "placement": "mov ecx, dword ptr [esp + 4]\njmp 0xadf160"
+  },
+  {
+    "name": "Class_f6fd1c96",
+    "facts": {
+      "create": 11389168,
+      "destroy": 987760,
+      "construct": 11389248,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 76,
+      "align": 4,
+      "parent": 57820144,
+      "poly": true
+    },
+    "events": [
+      [
+        "call",
+        10197600,
+        57818680,
+        [
+          [
+            "imm",
+            4143783062
+          ],
+          [
+            "imm",
+            17156336
+          ],
+          [
+            "imm",
+            6754928
+          ],
+          [
+            "imm",
+            17156416
+          ],
+          [
+            "imm",
+            6754976
+          ],
+          [
+            "imm",
+            6754992
+          ],
+          [
+            "imm",
+            76
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "store",
+        57818680,
+        [
+          "imm",
+          0
+        ]
+      ],
+      [
+        "store",
+        57818708,
+        [
+          "imm",
+          57820144
+        ]
+      ],
+      [
+        "call",
+        2792176,
+        57818680,
+        [
+          [
+            "imm",
+            2246894113
+          ],
+          [
+            "imm",
+            72
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        15995301,
+        null,
+        [
+          [
+            "imm",
+            22191024
+          ]
+        ]
+      ]
+    ],
+    "event_bodies": {
+      "10197600": "mov eax, dword ptr [esp + 4]\npush ebx\nmov ebx, ecx\npush ebp\npush edi\nmov dword ptr [ebx + 4], eax\nmov eax, dword ptr [esp + 0x14]\nmov dword ptr [ebx + 8], eax\nmov eax, dword ptr [esp + 0x18]\nmov dword ptr [ebx + 0xc], eax\nmov eax, dword ptr [esp + 0x1c]\nmov dword ptr [ebx + 0x10], eax\nmov eax, dword ptr [esp + 0x20]\nmov dword ptr [ebx + 0x14], eax\nmov eax, dword ptr [esp + 0x24]\nmov dword ptr [ebx + 0x18], eax\nmov eax, dword ptr [esp + 0x28]\nmov dword ptr [ebx + 0x20], eax\nmov eax, dword ptr [esp + 0x2c]\nmov dword ptr [ebx + 0x24], eax\nmov al, byte ptr [esp + 0x30]\nmov byte ptr [ebx + 0x28], al\nmov al, byte ptr [esp + 0x34]\nmov dword ptr [ebx], 0\nmov dword ptr [ebx + 0x1c], 0\nmov byte ptr [ebx + 0x29], al\nmov byte ptr [ebx + 0x2a], 0\nmov dword ptr [ebx + 0x2c], 0\nmov dword ptr [ebx + 0x30], 0\nmov dword ptr [ebx + 0x34], 0\nmov dword ptr [ebx + 0x38], 0\nmov dword ptr [ebx + 0x3c], 0\nmov dword ptr [ebx + 0x40], 0\nmov dword ptr [ebx + 0x44], 0\nmov dword ptr [ebx + 0x48], 0\nmov dword ptr [ebx + 0x4c], 0\ncall 0x28d7e0\nmov edi, eax\nmov ecx, dword ptr [edi + 8]\nmov ebp, dword ptr [edi + 4]\nand ecx, 0x7fffffff\ncmp ebp, ecx\njne 0x9b9b71\nmov eax, ecx\ninc ecx\nshr eax, 1\nadd eax, ecx\nmov dword ptr [esp + 0x34], eax\nshl eax, 2\npush esi\npush eax\ncall 0x9d4570\nmov ecx, dword ptr [edi]\nadd esp, 4\nmov edx, dword ptr [edi + 4]\nmov esi, eax\nmov dword ptr [esp + 0x34], eax\nlea edx, [ecx + edx*4]\ncmp ecx, edx\njae 0x9b9b51\nnop dword ptr [eax]\nmov eax, dword ptr [ecx]\nlea esi, [esi + 4]\nadd ecx, 4\nmov dword ptr [esi - 4], eax\ncmp ecx, edx\njb 0x9b9b40\nmov ecx, dword ptr [edi]\ncmp dword ptr [edi + 8], 0\npop esi\njl 0x9b9b61\npush ecx\ncall 0x9d42e0\nadd esp, 4\nmov eax, dword ptr [esp + 0x30]\nmov dword ptr [edi], eax\nmov eax, dword ptr [esp + 0x34]\nmov dword ptr [edi + 4], ebp\nmov dword ptr [edi + 8], eax\nmov eax, dword ptr [edi]\nmov dword ptr [eax + ebp*4], ebx\nmov eax, ebx\ninc dword ptr [edi + 4]\nmov byte ptr [edi + 0xc], 1\npop edi\npop ebp\npop ebx\nret 0x28",
+      "2792176": "push esi\npush dword ptr [esp + 0x10]\nmov esi, ecx\npush 0x1532fb2\npush 0\npush 0\ncall 0xaadd50\npush eax\npush 0\npush 0x84\npush dword ptr [esp + 0x28]\nmov ecx, esi\npush dword ptr [esp + 0x28]\ncall 0x9bd410\npop esi\nret 0xc",
+      "15995301": "push ebp\nmov ebp, esp\npush dword ptr [ebp + 8]\ncall 0xf41178\nneg eax\npop ecx\nsbb eax, eax\nneg eax\ndec eax\npop ebp\nret"
+    },
+    "constructor": "push esi\nmov esi, ecx\ncall 0xadfd20\nmov dword ptr [esi], 0x1b5134c\nmov dword ptr [esi + 0x34], 0xffffffff\nmov dword ptr [esi + 0x38], 0xffffffff\nmov dword ptr [esi + 0x24], 0\nmov dword ptr [esi + 0x28], 0\nmov dword ptr [esi + 0x2c], 0\nmov dword ptr [esi + 0x30], 0\nmov dword ptr [esi + 0x3c], 0\nmov eax, dword ptr [0x1e45828]\nmov dword ptr [esi + 0x40], eax\nmov eax, esi\nmov dword ptr [esi + 0x44], 0\nmov dword ptr [esi], 0x1b5140c\nmov dword ptr [esi + 0x48], 0\npop esi\nret",
+    "placement": "mov ecx, dword ptr [esp + 4]\njmp 0xadf1c0"
+  },
+  {
+    "name": "Class_0d221f07",
+    "facts": {
+      "create": 11388128,
+      "destroy": 987760,
+      "construct": 11388160,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 72,
+      "align": 4,
+      "parent": 57820144,
+      "poly": true
+    },
+    "events": [
+      [
+        "call",
+        10197600,
+        57818840,
+        [
+          [
+            "imm",
+            220339975
+          ],
+          [
+            "imm",
+            17155296
+          ],
+          [
+            "imm",
+            6754928
+          ],
+          [
+            "imm",
+            17155328
+          ],
+          [
+            "imm",
+            6754976
+          ],
+          [
+            "imm",
+            6754992
+          ],
+          [
+            "imm",
+            72
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "store",
+        57818840,
+        [
+          "imm",
+          0
+        ]
+      ],
+      [
+        "store",
+        57818868,
+        [
+          "imm",
+          57820144
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57818840,
+        [
+          [
+            "imm",
+            4007892433
+          ],
+          [
+            "imm",
+            61
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57818840,
+        [
+          [
+            "imm",
+            3991114814
+          ],
+          [
+            "imm",
+            62
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57818840,
+        [
+          [
+            "imm",
+            1342547873
+          ],
+          [
+            "imm",
+            63
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        11392304,
+        57818840,
+        [
+          [
+            "imm",
+            3915856815
+          ],
+          [
+            "imm",
+            68
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        15995301,
+        null,
+        [
+          [
+            "imm",
+            22191072
+          ]
+        ]
+      ]
+    ],
+    "event_bodies": {
+      "10197600": "mov eax, dword ptr [esp + 4]\npush ebx\nmov ebx, ecx\npush ebp\npush edi\nmov dword ptr [ebx + 4], eax\nmov eax, dword ptr [esp + 0x14]\nmov dword ptr [ebx + 8], eax\nmov eax, dword ptr [esp + 0x18]\nmov dword ptr [ebx + 0xc], eax\nmov eax, dword ptr [esp + 0x1c]\nmov dword ptr [ebx + 0x10], eax\nmov eax, dword ptr [esp + 0x20]\nmov dword ptr [ebx + 0x14], eax\nmov eax, dword ptr [esp + 0x24]\nmov dword ptr [ebx + 0x18], eax\nmov eax, dword ptr [esp + 0x28]\nmov dword ptr [ebx + 0x20], eax\nmov eax, dword ptr [esp + 0x2c]\nmov dword ptr [ebx + 0x24], eax\nmov al, byte ptr [esp + 0x30]\nmov byte ptr [ebx + 0x28], al\nmov al, byte ptr [esp + 0x34]\nmov dword ptr [ebx], 0\nmov dword ptr [ebx + 0x1c], 0\nmov byte ptr [ebx + 0x29], al\nmov byte ptr [ebx + 0x2a], 0\nmov dword ptr [ebx + 0x2c], 0\nmov dword ptr [ebx + 0x30], 0\nmov dword ptr [ebx + 0x34], 0\nmov dword ptr [ebx + 0x38], 0\nmov dword ptr [ebx + 0x3c], 0\nmov dword ptr [ebx + 0x40], 0\nmov dword ptr [ebx + 0x44], 0\nmov dword ptr [ebx + 0x48], 0\nmov dword ptr [ebx + 0x4c], 0\ncall 0x28d7e0\nmov edi, eax\nmov ecx, dword ptr [edi + 8]\nmov ebp, dword ptr [edi + 4]\nand ecx, 0x7fffffff\ncmp ebp, ecx\njne 0x9b9b71\nmov eax, ecx\ninc ecx\nshr eax, 1\nadd eax, ecx\nmov dword ptr [esp + 0x34], eax\nshl eax, 2\npush esi\npush eax\ncall 0x9d4570\nmov ecx, dword ptr [edi]\nadd esp, 4\nmov edx, dword ptr [edi + 4]\nmov esi, eax\nmov dword ptr [esp + 0x34], eax\nlea edx, [ecx + edx*4]\ncmp ecx, edx\njae 0x9b9b51\nnop dword ptr [eax]\nmov eax, dword ptr [ecx]\nlea esi, [esi + 4]\nadd ecx, 4\nmov dword ptr [esi - 4], eax\ncmp ecx, edx\njb 0x9b9b40\nmov ecx, dword ptr [edi]\ncmp dword ptr [edi + 8], 0\npop esi\njl 0x9b9b61\npush ecx\ncall 0x9d42e0\nadd esp, 4\nmov eax, dword ptr [esp + 0x30]\nmov dword ptr [edi], eax\nmov eax, dword ptr [esp + 0x34]\nmov dword ptr [edi + 4], ebp\nmov dword ptr [edi + 8], eax\nmov eax, dword ptr [edi]\nmov dword ptr [eax + ebp*4], ebx\nmov eax, ebx\ninc dword ptr [edi + 4]\nmov byte ptr [edi + 0xc], 1\npop edi\npop ebp\npop ebx\nret 0x28",
+      "994160": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 1\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "11392304": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0x3723560\npush 0\npush 0x82\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "15995301": "push ebp\nmov ebp, esp\npush dword ptr [ebp + 8]\ncall 0xf41178\nneg eax\npop ecx\nsbb eax, eax\nneg eax\ndec eax\npop ebp\nret"
+    },
+    "constructor": "push esi\nmov esi, ecx\ncall 0xadfd20\nmov dword ptr [esi], 0x1b5134c\nmov dword ptr [esi + 0x34], 0xffffffff\nmov dword ptr [esi + 0x38], 0xffffffff\nmov dword ptr [esi + 0x24], 0\nmov dword ptr [esi + 0x28], 0\nmov dword ptr [esi + 0x2c], 0\nmov dword ptr [esi + 0x30], 0\nmov dword ptr [esi + 0x3c], 0\nmov eax, dword ptr [0x1e45828]\nmov dword ptr [esi + 0x40], eax\nmov eax, esi\nmov dword ptr [esi + 0x44], 0\nmov dword ptr [esi], 0x1b513a0\npop esi\nret",
+    "placement": "mov ecx, dword ptr [esp + 4]\njmp 0xadf280"
+  },
+  {
+    "name": "Class_ee4da73f",
+    "facts": {
+      "create": 11388016,
+      "destroy": 987760,
+      "construct": 11388048,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 72,
+      "align": 4,
+      "parent": 57820144,
+      "poly": true
+    },
+    "events": [
+      [
+        "call",
+        10197600,
+        57821800,
+        [
+          [
+            "imm",
+            3998066495
+          ],
+          [
+            "imm",
+            17155184
+          ],
+          [
+            "imm",
+            6754928
+          ],
+          [
+            "imm",
+            17155216
+          ],
+          [
+            "imm",
+            6754976
+          ],
+          [
+            "imm",
+            6754992
+          ],
+          [
+            "imm",
+            72
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "store",
+        57821800,
+        [
+          "imm",
+          0
+        ]
+      ],
+      [
+        "store",
+        57821828,
+        [
+          "imm",
+          57820144
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57821800,
+        [
+          [
+            "imm",
+            4007892433
+          ],
+          [
+            "imm",
+            61
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57821800,
+        [
+          [
+            "imm",
+            3991114814
+          ],
+          [
+            "imm",
+            62
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57821800,
+        [
+          [
+            "imm",
+            1342547873
+          ],
+          [
+            "imm",
+            63
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        11392304,
+        57821800,
+        [
+          [
+            "imm",
+            3915856815
+          ],
+          [
+            "imm",
+            68
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        992896,
+        57821800,
+        [
+          [
+            "imm",
+            3876358408
+          ],
+          [
+            "imm",
+            36
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        992896,
+        57821800,
+        [
+          [
+            "imm",
+            799444858
+          ],
+          [
+            "imm",
+            40
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        992896,
+        57821800,
+        [
+          [
+            "imm",
+            3428902562
+          ],
+          [
+            "imm",
+            44
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        992896,
+        57821800,
+        [
+          [
+            "imm",
+            2308653897
+          ],
+          [
+            "imm",
+            48
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        15995301,
+        null,
+        [
+          [
+            "imm",
+            22191088
+          ]
+        ]
+      ]
+    ],
+    "event_bodies": {
+      "10197600": "mov eax, dword ptr [esp + 4]\npush ebx\nmov ebx, ecx\npush ebp\npush edi\nmov dword ptr [ebx + 4], eax\nmov eax, dword ptr [esp + 0x14]\nmov dword ptr [ebx + 8], eax\nmov eax, dword ptr [esp + 0x18]\nmov dword ptr [ebx + 0xc], eax\nmov eax, dword ptr [esp + 0x1c]\nmov dword ptr [ebx + 0x10], eax\nmov eax, dword ptr [esp + 0x20]\nmov dword ptr [ebx + 0x14], eax\nmov eax, dword ptr [esp + 0x24]\nmov dword ptr [ebx + 0x18], eax\nmov eax, dword ptr [esp + 0x28]\nmov dword ptr [ebx + 0x20], eax\nmov eax, dword ptr [esp + 0x2c]\nmov dword ptr [ebx + 0x24], eax\nmov al, byte ptr [esp + 0x30]\nmov byte ptr [ebx + 0x28], al\nmov al, byte ptr [esp + 0x34]\nmov dword ptr [ebx], 0\nmov dword ptr [ebx + 0x1c], 0\nmov byte ptr [ebx + 0x29], al\nmov byte ptr [ebx + 0x2a], 0\nmov dword ptr [ebx + 0x2c], 0\nmov dword ptr [ebx + 0x30], 0\nmov dword ptr [ebx + 0x34], 0\nmov dword ptr [ebx + 0x38], 0\nmov dword ptr [ebx + 0x3c], 0\nmov dword ptr [ebx + 0x40], 0\nmov dword ptr [ebx + 0x44], 0\nmov dword ptr [ebx + 0x48], 0\nmov dword ptr [ebx + 0x4c], 0\ncall 0x28d7e0\nmov edi, eax\nmov ecx, dword ptr [edi + 8]\nmov ebp, dword ptr [edi + 4]\nand ecx, 0x7fffffff\ncmp ebp, ecx\njne 0x9b9b71\nmov eax, ecx\ninc ecx\nshr eax, 1\nadd eax, ecx\nmov dword ptr [esp + 0x34], eax\nshl eax, 2\npush esi\npush eax\ncall 0x9d4570\nmov ecx, dword ptr [edi]\nadd esp, 4\nmov edx, dword ptr [edi + 4]\nmov esi, eax\nmov dword ptr [esp + 0x34], eax\nlea edx, [ecx + edx*4]\ncmp ecx, edx\njae 0x9b9b51\nnop dword ptr [eax]\nmov eax, dword ptr [ecx]\nlea esi, [esi + 4]\nadd ecx, 4\nmov dword ptr [esi - 4], eax\ncmp ecx, edx\njb 0x9b9b40\nmov ecx, dword ptr [edi]\ncmp dword ptr [edi + 8], 0\npop esi\njl 0x9b9b61\npush ecx\ncall 0x9d42e0\nadd esp, 4\nmov eax, dword ptr [esp + 0x30]\nmov dword ptr [edi], eax\nmov eax, dword ptr [esp + 0x34]\nmov dword ptr [edi + 4], ebp\nmov dword ptr [edi + 8], eax\nmov eax, dword ptr [edi]\nmov dword ptr [eax + ebp*4], ebx\nmov eax, ebx\ninc dword ptr [edi + 4]\nmov byte ptr [edi + 0xc], 1\npop edi\npop ebp\npop ebx\nret 0x28",
+      "994160": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 1\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "11392304": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0x3723560\npush 0\npush 0x82\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "992896": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xa\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "15995301": "push ebp\nmov ebp, esp\npush dword ptr [ebp + 8]\ncall 0xf41178\nneg eax\npop ecx\nsbb eax, eax\nneg eax\ndec eax\npop ebp\nret"
+    },
+    "constructor": "push esi\nmov esi, ecx\ncall 0xadfd20\nmov dword ptr [esi], 0x1b5134c\nmov dword ptr [esi + 0x34], 0xffffffff\nmov dword ptr [esi + 0x38], 0xffffffff\nmov dword ptr [esi + 0x24], 0\nmov dword ptr [esi + 0x28], 0\nmov dword ptr [esi + 0x2c], 0\nmov dword ptr [esi + 0x30], 0\nmov dword ptr [esi + 0x3c], 0\nmov eax, dword ptr [0x1e45828]\nmov dword ptr [esi + 0x40], eax\nmov eax, esi\nmov dword ptr [esi + 0x44], 0\nmov dword ptr [esi], 0x1b51388\npop esi\nret",
+    "placement": "mov ecx, dword ptr [esp + 4]\njmp 0xadf2e0"
+  },
+  {
+    "name": "Class_acf7065b",
+    "facts": {
+      "create": 11388992,
+      "destroy": 987760,
+      "construct": 11389024,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 84,
+      "align": 4,
+      "parent": 57820144,
+      "poly": true
+    },
+    "events": [
+      [
+        "call",
+        10197600,
+        57822120,
+        [
+          [
+            "imm",
+            2901870171
+          ],
+          [
+            "imm",
+            17156160
+          ],
+          [
+            "imm",
+            6754928
+          ],
+          [
+            "imm",
+            17156192
+          ],
+          [
+            "imm",
+            6754976
+          ],
+          [
+            "imm",
+            6754992
+          ],
+          [
+            "imm",
+            84
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "store",
+        57822120,
+        [
+          "imm",
+          0
+        ]
+      ],
+      [
+        "store",
+        57822148,
+        [
+          "imm",
+          57820144
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57822120,
+        [
+          [
+            "imm",
+            4007892433
+          ],
+          [
+            "imm",
+            61
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57822120,
+        [
+          [
+            "imm",
+            3991114814
+          ],
+          [
+            "imm",
+            62
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        994160,
+        57822120,
+        [
+          [
+            "imm",
+            1342547873
+          ],
+          [
+            "imm",
+            63
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        1613104,
+        57822120,
+        [
+          [
+            "imm",
+            1399972751
+          ],
+          [
+            "imm",
+            64
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        11392304,
+        57822120,
+        [
+          [
+            "imm",
+            3915856815
+          ],
+          [
+            "imm",
+            68
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        1612304,
+        57822120,
+        [
+          [
+            "imm",
+            1898269755
+          ],
+          [
+            "imm",
+            72
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        15995301,
+        null,
+        [
+          [
+            "imm",
+            22191120
+          ]
+        ]
+      ]
+    ],
+    "event_bodies": {
+      "10197600": "mov eax, dword ptr [esp + 4]\npush ebx\nmov ebx, ecx\npush ebp\npush edi\nmov dword ptr [ebx + 4], eax\nmov eax, dword ptr [esp + 0x14]\nmov dword ptr [ebx + 8], eax\nmov eax, dword ptr [esp + 0x18]\nmov dword ptr [ebx + 0xc], eax\nmov eax, dword ptr [esp + 0x1c]\nmov dword ptr [ebx + 0x10], eax\nmov eax, dword ptr [esp + 0x20]\nmov dword ptr [ebx + 0x14], eax\nmov eax, dword ptr [esp + 0x24]\nmov dword ptr [ebx + 0x18], eax\nmov eax, dword ptr [esp + 0x28]\nmov dword ptr [ebx + 0x20], eax\nmov eax, dword ptr [esp + 0x2c]\nmov dword ptr [ebx + 0x24], eax\nmov al, byte ptr [esp + 0x30]\nmov byte ptr [ebx + 0x28], al\nmov al, byte ptr [esp + 0x34]\nmov dword ptr [ebx], 0\nmov dword ptr [ebx + 0x1c], 0\nmov byte ptr [ebx + 0x29], al\nmov byte ptr [ebx + 0x2a], 0\nmov dword ptr [ebx + 0x2c], 0\nmov dword ptr [ebx + 0x30], 0\nmov dword ptr [ebx + 0x34], 0\nmov dword ptr [ebx + 0x38], 0\nmov dword ptr [ebx + 0x3c], 0\nmov dword ptr [ebx + 0x40], 0\nmov dword ptr [ebx + 0x44], 0\nmov dword ptr [ebx + 0x48], 0\nmov dword ptr [ebx + 0x4c], 0\ncall 0x28d7e0\nmov edi, eax\nmov ecx, dword ptr [edi + 8]\nmov ebp, dword ptr [edi + 4]\nand ecx, 0x7fffffff\ncmp ebp, ecx\njne 0x9b9b71\nmov eax, ecx\ninc ecx\nshr eax, 1\nadd eax, ecx\nmov dword ptr [esp + 0x34], eax\nshl eax, 2\npush esi\npush eax\ncall 0x9d4570\nmov ecx, dword ptr [edi]\nadd esp, 4\nmov edx, dword ptr [edi + 4]\nmov esi, eax\nmov dword ptr [esp + 0x34], eax\nlea edx, [ecx + edx*4]\ncmp ecx, edx\njae 0x9b9b51\nnop dword ptr [eax]\nmov eax, dword ptr [ecx]\nlea esi, [esi + 4]\nadd ecx, 4\nmov dword ptr [esi - 4], eax\ncmp ecx, edx\njb 0x9b9b40\nmov ecx, dword ptr [edi]\ncmp dword ptr [edi + 8], 0\npop esi\njl 0x9b9b61\npush ecx\ncall 0x9d42e0\nadd esp, 4\nmov eax, dword ptr [esp + 0x30]\nmov dword ptr [edi], eax\nmov eax, dword ptr [esp + 0x34]\nmov dword ptr [edi + 4], ebp\nmov dword ptr [edi + 8], eax\nmov eax, dword ptr [edi]\nmov dword ptr [eax + ebp*4], ebx\nmov eax, ebx\ninc dword ptr [edi + 4]\nmov byte ptr [edi + 0xc], 1\npop edi\npop ebp\npop ebx\nret 0x28",
+      "994160": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 1\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "1613104": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xf\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "11392304": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0x3723560\npush 0\npush 0x82\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "1612304": "push esi\npush 0xc\nmov esi, ecx\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0x189a34\nmov byte ptr [eax + 4], 0xb\nmov dword ptr [eax + 8], 8\nmov dword ptr [eax], 0x153f810\njmp 0x189a36\nxor eax, eax\npush dword ptr [esp + 0x10]\nmov ecx, esi\npush 0x1532fb2\npush 0\npush eax\npush 0\npush 0\npush 0x80\npush dword ptr [esp + 0x28]\npush dword ptr [esp + 0x28]\ncall 0x9bd410\npop esi\nret 0xc",
+      "15995301": "push ebp\nmov ebp, esp\npush dword ptr [ebp + 8]\ncall 0xf41178\nneg eax\npop ecx\nsbb eax, eax\nneg eax\ndec eax\npop ebp\nret"
+    },
+    "constructor": "push esi\nmov esi, ecx\ncall 0xadfd20\nmov dword ptr [esi], 0x1b5134c\nmov dword ptr [esi + 0x34], 0xffffffff\nmov dword ptr [esi + 0x38], 0xffffffff\nmov dword ptr [esi + 0x24], 0\nmov dword ptr [esi + 0x28], 0\nmov dword ptr [esi + 0x2c], 0\nmov dword ptr [esi + 0x30], 0\nmov dword ptr [esi + 0x3c], 0\nmov eax, dword ptr [0x1e45828]\nmov dword ptr [esi + 0x40], eax\nmov eax, esi\nmov dword ptr [esi + 0x44], 0\nmov dword ptr [esi], 0x1b513e8\nmov dword ptr [esi + 0x48], 0\nmov dword ptr [esi + 0x4c], 0\nmov dword ptr [esi + 0x50], 0\npop esi\nret",
+    "placement": "mov ecx, dword ptr [esp + 4]\njmp 0xadf340"
+  },
+  {
+    "name": "Class_5e46619e",
+    "facts": {
+      "create": 11388944,
+      "destroy": 987760,
+      "construct": 11388976,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 80,
+      "align": 4,
+      "parent": 57820144,
+      "poly": true
+    },
+    "events": [
+      [
+        "call",
+        10197600,
+        57822920,
+        [
+          [
+            "imm",
+            1581670814
+          ],
+          [
+            "imm",
+            17156112
+          ],
+          [
+            "imm",
+            6754928
+          ],
+          [
+            "imm",
+            17156144
+          ],
+          [
+            "imm",
+            6754976
+          ],
+          [
+            "imm",
+            6754992
+          ],
+          [
+            "imm",
+            80
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "store",
+        57822920,
+        [
+          "imm",
+          0
+        ]
+      ],
+      [
+        "store",
+        57822948,
+        [
+          "imm",
+          57820144
+        ]
+      ],
+      [
+        "call",
+        11392304,
+        57822920,
+        [
+          [
+            "imm",
+            3915856815
+          ],
+          [
+            "imm",
+            68
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        992896,
+        57822920,
+        [
+          [
+            "imm",
+            2691582042
+          ],
+          [
+            "imm",
+            72
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        992896,
+        57822920,
+        [
+          [
+            "imm",
+            3387092960
+          ],
+          [
+            "imm",
+            76
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        15995301,
+        null,
+        [
+          [
+            "imm",
+            22191136
+          ]
+        ]
+      ]
+    ],
+    "event_bodies": {
+      "10197600": "mov eax, dword ptr [esp + 4]\npush ebx\nmov ebx, ecx\npush ebp\npush edi\nmov dword ptr [ebx + 4], eax\nmov eax, dword ptr [esp + 0x14]\nmov dword ptr [ebx + 8], eax\nmov eax, dword ptr [esp + 0x18]\nmov dword ptr [ebx + 0xc], eax\nmov eax, dword ptr [esp + 0x1c]\nmov dword ptr [ebx + 0x10], eax\nmov eax, dword ptr [esp + 0x20]\nmov dword ptr [ebx + 0x14], eax\nmov eax, dword ptr [esp + 0x24]\nmov dword ptr [ebx + 0x18], eax\nmov eax, dword ptr [esp + 0x28]\nmov dword ptr [ebx + 0x20], eax\nmov eax, dword ptr [esp + 0x2c]\nmov dword ptr [ebx + 0x24], eax\nmov al, byte ptr [esp + 0x30]\nmov byte ptr [ebx + 0x28], al\nmov al, byte ptr [esp + 0x34]\nmov dword ptr [ebx], 0\nmov dword ptr [ebx + 0x1c], 0\nmov byte ptr [ebx + 0x29], al\nmov byte ptr [ebx + 0x2a], 0\nmov dword ptr [ebx + 0x2c], 0\nmov dword ptr [ebx + 0x30], 0\nmov dword ptr [ebx + 0x34], 0\nmov dword ptr [ebx + 0x38], 0\nmov dword ptr [ebx + 0x3c], 0\nmov dword ptr [ebx + 0x40], 0\nmov dword ptr [ebx + 0x44], 0\nmov dword ptr [ebx + 0x48], 0\nmov dword ptr [ebx + 0x4c], 0\ncall 0x28d7e0\nmov edi, eax\nmov ecx, dword ptr [edi + 8]\nmov ebp, dword ptr [edi + 4]\nand ecx, 0x7fffffff\ncmp ebp, ecx\njne 0x9b9b71\nmov eax, ecx\ninc ecx\nshr eax, 1\nadd eax, ecx\nmov dword ptr [esp + 0x34], eax\nshl eax, 2\npush esi\npush eax\ncall 0x9d4570\nmov ecx, dword ptr [edi]\nadd esp, 4\nmov edx, dword ptr [edi + 4]\nmov esi, eax\nmov dword ptr [esp + 0x34], eax\nlea edx, [ecx + edx*4]\ncmp ecx, edx\njae 0x9b9b51\nnop dword ptr [eax]\nmov eax, dword ptr [ecx]\nlea esi, [esi + 4]\nadd ecx, 4\nmov dword ptr [esi - 4], eax\ncmp ecx, edx\njb 0x9b9b40\nmov ecx, dword ptr [edi]\ncmp dword ptr [edi + 8], 0\npop esi\njl 0x9b9b61\npush ecx\ncall 0x9d42e0\nadd esp, 4\nmov eax, dword ptr [esp + 0x30]\nmov dword ptr [edi], eax\nmov eax, dword ptr [esp + 0x34]\nmov dword ptr [edi + 4], ebp\nmov dword ptr [edi + 8], eax\nmov eax, dword ptr [edi]\nmov dword ptr [eax + ebp*4], ebx\nmov eax, ebx\ninc dword ptr [edi + 4]\nmov byte ptr [edi + 0xc], 1\npop edi\npop ebp\npop ebx\nret 0x28",
+      "11392304": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0x3723560\npush 0\npush 0x82\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "992896": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xa\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "15995301": "push ebp\nmov ebp, esp\npush dword ptr [ebp + 8]\ncall 0xf41178\nneg eax\npop ecx\nsbb eax, eax\nneg eax\ndec eax\npop ebp\nret"
+    },
+    "constructor": "push esi\nmov esi, ecx\ncall 0xadfd20\nmov dword ptr [esi], 0x1b5134c\nmov dword ptr [esi + 0x34], 0xffffffff\nmov dword ptr [esi + 0x38], 0xffffffff\nmov dword ptr [esi + 0x24], 0\nmov dword ptr [esi + 0x28], 0\nmov dword ptr [esi + 0x2c], 0\nmov dword ptr [esi + 0x30], 0\nmov dword ptr [esi + 0x3c], 0\nmov eax, dword ptr [0x1e45828]\nmov dword ptr [esi + 0x40], eax\nmov eax, esi\nmov dword ptr [esi + 0x44], 0\nmov dword ptr [esi], 0x1b513dc\nmov dword ptr [esi + 0x48], 0x3f800000\nmov dword ptr [esi + 0x4c], 0x3f666666\npop esi\nret",
+    "placement": "mov ecx, dword ptr [esp + 4]\njmp 0xadf3b0"
+  },
+  {
+    "name": "Class_a82317ef",
+    "facts": {
+      "create": 11388224,
+      "destroy": 987760,
+      "construct": 11388256,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 72,
+      "align": 4,
+      "parent": 57820144,
+      "poly": true
+    },
+    "events": [
+      [
+        "call",
+        10197600,
+        57821224,
+        [
+          [
+            "imm",
+            2820872175
+          ],
+          [
+            "imm",
+            17155392
+          ],
+          [
+            "imm",
+            6754928
+          ],
+          [
+            "imm",
+            17155424
+          ],
+          [
+            "imm",
+            6754976
+          ],
+          [
+            "imm",
+            6754992
+          ],
+          [
+            "imm",
+            72
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "store",
+        57821224,
+        [
+          "imm",
+          0
+        ]
+      ],
+      [
+        "store",
+        57821252,
+        [
+          "imm",
+          57820144
+        ]
+      ],
+      [
+        "call",
+        11392304,
+        57821224,
+        [
+          [
+            "imm",
+            3915856815
+          ],
+          [
+            "imm",
+            68
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "call",
+        15995301,
+        null,
+        [
+          [
+            "imm",
+            22191152
+          ]
+        ]
+      ]
+    ],
+    "event_bodies": {
+      "10197600": "mov eax, dword ptr [esp + 4]\npush ebx\nmov ebx, ecx\npush ebp\npush edi\nmov dword ptr [ebx + 4], eax\nmov eax, dword ptr [esp + 0x14]\nmov dword ptr [ebx + 8], eax\nmov eax, dword ptr [esp + 0x18]\nmov dword ptr [ebx + 0xc], eax\nmov eax, dword ptr [esp + 0x1c]\nmov dword ptr [ebx + 0x10], eax\nmov eax, dword ptr [esp + 0x20]\nmov dword ptr [ebx + 0x14], eax\nmov eax, dword ptr [esp + 0x24]\nmov dword ptr [ebx + 0x18], eax\nmov eax, dword ptr [esp + 0x28]\nmov dword ptr [ebx + 0x20], eax\nmov eax, dword ptr [esp + 0x2c]\nmov dword ptr [ebx + 0x24], eax\nmov al, byte ptr [esp + 0x30]\nmov byte ptr [ebx + 0x28], al\nmov al, byte ptr [esp + 0x34]\nmov dword ptr [ebx], 0\nmov dword ptr [ebx + 0x1c], 0\nmov byte ptr [ebx + 0x29], al\nmov byte ptr [ebx + 0x2a], 0\nmov dword ptr [ebx + 0x2c], 0\nmov dword ptr [ebx + 0x30], 0\nmov dword ptr [ebx + 0x34], 0\nmov dword ptr [ebx + 0x38], 0\nmov dword ptr [ebx + 0x3c], 0\nmov dword ptr [ebx + 0x40], 0\nmov dword ptr [ebx + 0x44], 0\nmov dword ptr [ebx + 0x48], 0\nmov dword ptr [ebx + 0x4c], 0\ncall 0x28d7e0\nmov edi, eax\nmov ecx, dword ptr [edi + 8]\nmov ebp, dword ptr [edi + 4]\nand ecx, 0x7fffffff\ncmp ebp, ecx\njne 0x9b9b71\nmov eax, ecx\ninc ecx\nshr eax, 1\nadd eax, ecx\nmov dword ptr [esp + 0x34], eax\nshl eax, 2\npush esi\npush eax\ncall 0x9d4570\nmov ecx, dword ptr [edi]\nadd esp, 4\nmov edx, dword ptr [edi + 4]\nmov esi, eax\nmov dword ptr [esp + 0x34], eax\nlea edx, [ecx + edx*4]\ncmp ecx, edx\njae 0x9b9b51\nnop dword ptr [eax]\nmov eax, dword ptr [ecx]\nlea esi, [esi + 4]\nadd ecx, 4\nmov dword ptr [esi - 4], eax\ncmp ecx, edx\njb 0x9b9b40\nmov ecx, dword ptr [edi]\ncmp dword ptr [edi + 8], 0\npop esi\njl 0x9b9b61\npush ecx\ncall 0x9d42e0\nadd esp, 4\nmov eax, dword ptr [esp + 0x30]\nmov dword ptr [edi], eax\nmov eax, dword ptr [esp + 0x34]\nmov dword ptr [edi + 4], ebp\nmov dword ptr [edi + 8], eax\nmov eax, dword ptr [edi]\nmov dword ptr [eax + ebp*4], ebx\nmov eax, ebx\ninc dword ptr [edi + 4]\nmov byte ptr [edi + 0xc], 1\npop edi\npop ebp\npop ebx\nret 0x28",
+      "11392304": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0x3723560\npush 0\npush 0x82\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+      "15995301": "push ebp\nmov ebp, esp\npush dword ptr [ebp + 8]\ncall 0xf41178\nneg eax\npop ecx\nsbb eax, eax\nneg eax\ndec eax\npop ebp\nret"
+    },
+    "constructor": "push esi\nmov esi, ecx\ncall 0xadfd20\nmov dword ptr [esi], 0x1b5134c\nmov dword ptr [esi + 0x34], 0xffffffff\nmov dword ptr [esi + 0x38], 0xffffffff\nmov dword ptr [esi + 0x24], 0\nmov dword ptr [esi + 0x28], 0\nmov dword ptr [esi + 0x2c], 0\nmov dword ptr [esi + 0x30], 0\nmov dword ptr [esi + 0x3c], 0\nmov eax, dword ptr [0x1e45828]\nmov dword ptr [esi + 0x40], eax\nmov eax, esi\nmov dword ptr [esi + 0x44], 0\nmov dword ptr [esi], 0x1b513b8\npop esi\nret",
+    "placement": "mov ecx, dword ptr [esp + 4]\njmp 0xadf420"
+  },
+  {
+    "name": "UiElementEffect",
+    "facts": {
+      "create": 11389264,
+      "destroy": 987760,
+      "construct": 11389296,
+      "destruct": 987808,
+      "v2": 0,
+      "size": 216,
+      "align": 4,
+      "parent": 57817560,
+      "poly": true
+    },
+    "events": [
+      [
+        "call",
+        10197600,
+        57819000,
+        [
+          [
+            "imm",
+            257051420
+          ],
+          [
+            "imm",
+            17156432
+          ],
+          [
+            "imm",
+            6754928
+          ],
+          [
+            "imm",
+            17156464
+          ],
+          [
+            "imm",
+            6754976
+          ],
+          [
+            "imm",
+            0
+          ],
+          [
+            "imm",
+            216
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ],
+          [
+            "imm",
+            0
+          ]
+        ]
+      ],
+      [
+        "store",
+        57819000,
+        [
+          "imm",
+          0
+        ]
+      ],
+      [
+        "store",
+        57819028,
+        [
+          "imm",
+          57817560
+        ]
+      ],
+      [
+        "call",
+        15995301,
+        null,
+        [
+          [
+            "imm",
+            22191584
+          ]
+        ]
+      ]
+    ],
+    "event_bodies": {
+      "10197600": "mov eax, dword ptr [esp + 4]\npush ebx\nmov ebx, ecx\npush ebp\npush edi\nmov dword ptr [ebx + 4], eax\nmov eax, dword ptr [esp + 0x14]\nmov dword ptr [ebx + 8], eax\nmov eax, dword ptr [esp + 0x18]\nmov dword ptr [ebx + 0xc], eax\nmov eax, dword ptr [esp + 0x1c]\nmov dword ptr [ebx + 0x10], eax\nmov eax, dword ptr [esp + 0x20]\nmov dword ptr [ebx + 0x14], eax\nmov eax, dword ptr [esp + 0x24]\nmov dword ptr [ebx + 0x18], eax\nmov eax, dword ptr [esp + 0x28]\nmov dword ptr [ebx + 0x20], eax\nmov eax, dword ptr [esp + 0x2c]\nmov dword ptr [ebx + 0x24], eax\nmov al, byte ptr [esp + 0x30]\nmov byte ptr [ebx + 0x28], al\nmov al, byte ptr [esp + 0x34]\nmov dword ptr [ebx], 0\nmov dword ptr [ebx + 0x1c], 0\nmov byte ptr [ebx + 0x29], al\nmov byte ptr [ebx + 0x2a], 0\nmov dword ptr [ebx + 0x2c], 0\nmov dword ptr [ebx + 0x30], 0\nmov dword ptr [ebx + 0x34], 0\nmov dword ptr [ebx + 0x38], 0\nmov dword ptr [ebx + 0x3c], 0\nmov dword ptr [ebx + 0x40], 0\nmov dword ptr [ebx + 0x44], 0\nmov dword ptr [ebx + 0x48], 0\nmov dword ptr [ebx + 0x4c], 0\ncall 0x28d7e0\nmov edi, eax\nmov ecx, dword ptr [edi + 8]\nmov ebp, dword ptr [edi + 4]\nand ecx, 0x7fffffff\ncmp ebp, ecx\njne 0x9b9b71\nmov eax, ecx\ninc ecx\nshr eax, 1\nadd eax, ecx\nmov dword ptr [esp + 0x34], eax\nshl eax, 2\npush esi\npush eax\ncall 0x9d4570\nmov ecx, dword ptr [edi]\nadd esp, 4\nmov edx, dword ptr [edi + 4]\nmov esi, eax\nmov dword ptr [esp + 0x34], eax\nlea edx, [ecx + edx*4]\ncmp ecx, edx\njae 0x9b9b51\nnop dword ptr [eax]\nmov eax, dword ptr [ecx]\nlea esi, [esi + 4]\nadd ecx, 4\nmov dword ptr [esi - 4], eax\ncmp ecx, edx\njb 0x9b9b40\nmov ecx, dword ptr [edi]\ncmp dword ptr [edi + 8], 0\npop esi\njl 0x9b9b61\npush ecx\ncall 0x9d42e0\nadd esp, 4\nmov eax, dword ptr [esp + 0x30]\nmov dword ptr [edi], eax\nmov eax, dword ptr [esp + 0x34]\nmov dword ptr [edi + 4], ebp\nmov dword ptr [edi + 8], eax\nmov eax, dword ptr [edi]\nmov dword ptr [eax + ebp*4], ebx\nmov eax, ebx\ninc dword ptr [edi + 4]\nmov byte ptr [edi + 0xc], 1\npop edi\npop ebp\npop ebx\nret 0x28",
+      "15995301": "push ebp\nmov ebp, esp\npush dword ptr [ebp + 8]\ncall 0xf41178\nneg eax\npop ecx\nsbb eax, eax\nneg eax\ndec eax\npop ebp\nret"
+    },
+    "constructor": "push esi\nmov esi, ecx\ncall 0xadfc40\nmov dword ptr [esi], 0x1b51558\nmov eax, esi\nmov dword ptr [esi + 0xb8], 0\nmov dword ptr [esi + 0xbc], 0\nmov dword ptr [esi + 0xc0], 0\nmov dword ptr [esi + 0xc4], 0\nmov dword ptr [esi + 0xc8], 0\nmov dword ptr [esi + 0xcc], 0\nmov dword ptr [esi + 0xd0], 0\nmov byte ptr [esi + 0xd4], 0\npop esi\nret",
+    "placement": "mov ecx, dword ptr [esp + 4]\njmp 0xadfd90"
+  }
+]

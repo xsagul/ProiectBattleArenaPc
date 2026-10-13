@@ -1,0 +1,36 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 000002BCC0813630)
+0+ params, 2 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "doesnotexist.troy"
+	8	[-]	SETGLOBAL	0 -4	; AutoBuffActivateEffect
+	9	[-]	LOADK    	0 -7	; 0.5
+	10	[-]	SETGLOBAL	0 -6	; SpellDamageRatio
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -8	; PersistsThroughDeath
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -10	; "TFT_GravesSkin05"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	17	[-]	LOADBOOL 	0 0 0
+	18	[-]	SETGLOBAL	0 -11	; TriggersSpellCasts
+	19	[-]	RETURN   	0 1
+constants (11) for 000002BCC0813630:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"AutoBuffActivateEffect"
+	5	"doesnotexist.troy"
+	6	"SpellDamageRatio"
+	7	0.5
+	8	"PersistsThroughDeath"
+	9	"SpellFXOverrideSkins"
+	10	"TFT_GravesSkin05"
+	11	"TriggersSpellCasts"
+locals (0) for 000002BCC0813630:
+upvalues (0) for 000002BCC0813630:

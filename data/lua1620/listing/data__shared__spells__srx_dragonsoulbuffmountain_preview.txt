@@ -1,0 +1,34 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 000001D0A7463600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "SRX_DragonSoulBuffMountain_Preview"
+	6	[-]	SETGLOBAL	0 -3	; BuffName
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -5	; PersistsThroughDeath
+	9	[-]	LOADK    	0 -7	; -2
+	10	[-]	SETGLOBAL	0 -6	; OnPreDamagePriority
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -8	; IsDamagingSpell
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -9	; DoOnPreDamageInExpirationOrder
+	15	[-]	LOADK    	0 -11	; "DATA/Shared/Particles/deathscaress_buf.troy"
+	16	[-]	SETGLOBAL	0 -10	; AutoBuffActivateEvent
+	17	[-]	RETURN   	0 1
+constants (11) for 000001D0A7463600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffName"
+	4	"SRX_DragonSoulBuffMountain_Preview"
+	5	"PersistsThroughDeath"
+	6	"OnPreDamagePriority"
+	7	-2
+	8	"IsDamagingSpell"
+	9	"DoOnPreDamageInExpirationOrder"
+	10	"AutoBuffActivateEvent"
+	11	"DATA/Shared/Particles/deathscaress_buf.troy"
+locals (0) for 000001D0A7463600:
+upvalues (0) for 000001D0A7463600:

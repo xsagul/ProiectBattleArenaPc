@@ -1,0 +1,27 @@
+
+main <?:0,0> (12 instructions, 48 bytes at 0000026D162135C0)
+0+ params, 5 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; "DATA/Particles/maokai_sapling_activated_indicator.troy"
+	2	[-]	SETGLOBAL	0 -1	; AutoBuffActivateEffect
+	3	[-]	LOADK    	0 -4	; "C_BUFFBONE_GLB_CHEST_LOC"
+	4	[-]	SETGLOBAL	0 -3	; AutoBuffActivateAttachBoneName
+	5	[-]	NEWTABLE 	0 4 0
+	6	[-]	LOADK    	1 -6	; "ZiggsMadScientist"
+	7	[-]	LOADK    	2 -7	; "ZiggsPoolParty"
+	8	[-]	LOADK    	3 -8	; "ZiggsSnowday"
+	9	[-]	LOADK    	4 -9	; "ZiggsSkin05"
+	10	[-]	SETLIST  	0 4 1	; 1
+	11	[-]	SETGLOBAL	0 -5	; SpellFXOverrideSkins
+	12	[-]	RETURN   	0 1
+constants (9) for 0000026D162135C0:
+	1	"AutoBuffActivateEffect"
+	2	"DATA/Particles/maokai_sapling_activated_indicator.troy"
+	3	"AutoBuffActivateAttachBoneName"
+	4	"C_BUFFBONE_GLB_CHEST_LOC"
+	5	"SpellFXOverrideSkins"
+	6	"ZiggsMadScientist"
+	7	"ZiggsPoolParty"
+	8	"ZiggsSnowday"
+	9	"ZiggsSkin05"
+locals (0) for 0000026D162135C0:
+upvalues (0) for 0000026D162135C0:

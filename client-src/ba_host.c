@@ -62,7 +62,7 @@ static int WSAAPI my_recvfrom(SOCKET s, char* buf, int len, int flags, struct so
 // Each hit logs the registers, the first stack words (return address, then arguments), the chain of game return
 // addresses on the stack, and the memory at ecx and at each stack argument that is a readable pointer.
 typedef struct { unsigned edi, esi, ebp, esp, ebx, edx, ecx, eax; } Regs;  // pushad's order, lowest address first
-typedef struct { unsigned rva; int len; char name[64]; int left; } Probe;
+typedef struct { unsigned rva; int len; char name[200]; int left; } Probe;
 static Probe g_probes[64];
 static int g_probe_count;
 static void dump(const char* what, const unsigned char* p, int n) {
@@ -71,8 +71,70 @@ static void dump(const char* what, const unsigned char* p, int n) {
   for (int i = 0; i < n; ++i) fprintf(g_net, " %02x", p[i]);
   fprintf(g_net, "\n");
 }
+// --- census: what the client itself holds about units, written to ba_census.log. A probe whose name starts with
+// "census" is not logged like the others: each time its function runs (on the game's own thread; a packet handler
+// that runs often) and the period has passed, every net id of the ranges is looked up in the game's object table
+// (rva 0x286b50: thiscall(the table at [rva 0x18d9acc], net id) -> the object or 0) and the listed pieces of the
+// object are written as hex: "<net id> <address> <offset>:<bytes> ...", after a line "T <unix time in ms>".
+//   ba_probes.txt: "<rva> <len> <rounds> census <first>-<last>[,<first>-<last>...] <period ms> <off>:<len>[,...]"
+typedef void* (__attribute__((thiscall)) * FindObject)(void* table, unsigned net);
+static FILE* g_census;
+static void census(Probe* p) {
+  static unsigned lo[8], hi[8], off[24], len[24], period, last;
+  static int ranges = -1, parts;
+  if (ranges < 0) {
+    const char* c = p->name + 6;
+    for (ranges = 0; ranges < 8;) {
+      lo[ranges] = (unsigned)strtoul(c, (char**)&c, 16);
+      if (*c != '-') break;
+      hi[ranges++] = (unsigned)strtoul(c + 1, (char**)&c, 16);
+      if (*c != ',') break;
+      ++c;
+    }
+    period = (unsigned)strtoul(c, (char**)&c, 10);
+    for (parts = 0; parts < 24;) {
+      off[parts] = (unsigned)strtoul(c, (char**)&c, 16);
+      if (*c != ':') break;
+      len[parts++] = (unsigned)strtoul(c + 1, (char**)&c, 16);
+      if (*c != ',') break;
+      ++c;
+    }
+  }
+  const unsigned now = GetTickCount();
+  if (now - last < period || p->left <= 0) return;
+  void* table = *(void**)(g_base + 0x18d9acc);
+  if (!table) return;
+  last = now;
+  --p->left;
+  if (!g_census) g_census = fopen("ba_census.log", "w");
+  if (!g_census) return;
+  FILETIME ft;
+  GetSystemTimeAsFileTime(&ft);
+  const unsigned long long ms = (((unsigned long long)ft.dwHighDateTime << 32) | ft.dwLowDateTime) / 10000ULL - 11644473600000ULL;
+  fprintf(g_census, "T %llu\n", ms);
+  const FindObject find = (FindObject)(g_base + 0x286b50);
+  static char text[2 * 0x1000 + 1];
+  for (int k = 0; k < ranges; ++k)
+    for (unsigned net = lo[k]; net <= hi[k] && net >= lo[k]; ++net) {
+      const unsigned char* o = (const unsigned char*)find(table, net);
+      if (!o) continue;
+      fprintf(g_census, "%x %p", net, (void*)o);
+      for (int i = 0; i < parts; ++i) {
+        if (len[i] > 0x1000 || IsBadReadPtr(o + off[i], len[i])) continue;
+        for (unsigned b = 0; b < len[i]; ++b) {
+          text[2 * b] = "0123456789abcdef"[o[off[i] + b] >> 4];
+          text[2 * b + 1] = "0123456789abcdef"[o[off[i] + b] & 15];
+        }
+        text[2 * len[i]] = 0;
+        fprintf(g_census, " %x:%s", off[i], text);
+      }
+      fprintf(g_census, "\n");
+    }
+  fflush(g_census);
+}
 static void __cdecl probe_hit(int index, const Regs* r) {
   Probe* p = &g_probes[index];
+  if (!strncmp(p->name, "census", 6)) { census(p); return; }
   if (!g_net || p->left <= 0) return;
   --p->left;
   EnterCriticalSection(&g_net_lock);
@@ -126,7 +188,7 @@ static void install_probes(unsigned char* base) {
   char line[256];
   while (g_probe_count < 64 && fgets(line, sizeof line, f)) {
     Probe* p = &g_probes[g_probe_count];
-    if (sscanf(line, "%x %d %d %63[^\r\n]", &p->rva, &p->len, &p->left, p->name) == 4 && p->len >= 5 && p->len <= 24) ++g_probe_count;
+    if (sscanf(line, "%x %d %d %199[^\r\n]", &p->rva, &p->len, &p->left, p->name) == 4 && p->len >= 5 && p->len <= 24) ++g_probe_count;
   }
   fclose(f);
   const int n = g_probe_count;

@@ -1,0 +1,44 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 000002DFC1953600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/UX/Jade/S3Icons/SameSized/Jade_DrMundo_InfectedCleaver.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "Jade_DrMundoQ_Missile"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; 1
+	12	[-]	SETGLOBAL	0 -8	; SpellDamageRatio
+	13	[-]	LOADK    	0 -11	; "game_floatingtext_Slowed"
+	14	[-]	SETGLOBAL	0 -10	; PopupMessage1
+	15	[-]	NEWTABLE 	0 1 0
+	16	[-]	LOADK    	1 -13	; "MundoMundo"
+	17	[-]	SETLIST  	0 1 1	; 1
+	18	[-]	SETGLOBAL	0 -12	; SpellFXOverrideSkins
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -14	; IsDamagingSpell
+	21	[-]	LOADBOOL 	0 0 0
+	22	[-]	SETGLOBAL	0 -15	; TriggersSpellCasts
+	23	[-]	RETURN   	0 1
+constants (15) for 000002DFC1953600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/UX/Jade/S3Icons/SameSized/Jade_DrMundo_InfectedCleaver.dds"
+	6	"BuffName"
+	7	"Jade_DrMundoQ_Missile"
+	8	"SpellDamageRatio"
+	9	1
+	10	"PopupMessage1"
+	11	"game_floatingtext_Slowed"
+	12	"SpellFXOverrideSkins"
+	13	"MundoMundo"
+	14	"IsDamagingSpell"
+	15	"TriggersSpellCasts"
+locals (0) for 000002DFC1953600:
+upvalues (0) for 000002DFC1953600:

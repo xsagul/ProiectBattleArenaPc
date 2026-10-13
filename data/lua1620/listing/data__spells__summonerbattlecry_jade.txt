@@ -1,0 +1,37 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 00000254D8393590)
+0+ params, 4 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/UX/Jade/S3Icons/SameSized/S3_Summoner_BattleCry.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "SummonerBattleCry_Jade"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "DATA/Particles/summoner_battlecry.troy"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect2
+	11	[-]	LOADK    	0 -10	; "DATA/Particles/summoner_battlecry_oc.troy"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect3
+	13	[-]	NEWTABLE 	0 3 0
+	14	[-]	LOADK    	1 -12	; 90
+	15	[-]	LOADK    	2 -12	; 90
+	16	[-]	LOADK    	3 -12	; 90
+	17	[-]	SETLIST  	0 3 1	; 1
+	18	[-]	SETGLOBAL	0 -11	; AutoCooldownByLevel
+	19	[-]	RETURN   	0 1
+constants (12) for 00000254D8393590:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/UX/Jade/S3Icons/SameSized/S3_Summoner_BattleCry.dds"
+	5	"BuffName"
+	6	"SummonerBattleCry_Jade"
+	7	"AutoBuffActivateEffect2"
+	8	"DATA/Particles/summoner_battlecry.troy"
+	9	"AutoBuffActivateEffect3"
+	10	"DATA/Particles/summoner_battlecry_oc.troy"
+	11	"AutoCooldownByLevel"
+	12	90
+locals (0) for 00000254D8393590:
+upvalues (0) for 00000254D8393590:

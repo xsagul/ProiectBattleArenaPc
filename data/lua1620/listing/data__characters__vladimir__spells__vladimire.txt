@@ -1,0 +1,43 @@
+
+main <?:0,0> (22 instructions, 88 bytes at 00000226D64535C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirE.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "VladimirE"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "VladimirTidesOfBlood"
+	10	[-]	SETGLOBAL	0 -7	; DisplayName
+	11	[-]	LOADK    	0 -10	; 2
+	12	[-]	SETGLOBAL	0 -9	; SpellToggleSlot
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -11	; IsDeathRecapSource
+	15	[-]	NEWTABLE 	0 2 0
+	16	[-]	LOADK    	1 -13	; "Darius_ZaunKnight"
+	17	[-]	LOADK    	2 -14	; "Darius_NorseKing"
+	18	[-]	SETLIST  	0 2 1	; 1
+	19	[-]	SETGLOBAL	0 -12	; SpellFXOverrideSkins
+	20	[-]	LOADBOOL 	0 1 0
+	21	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	22	[-]	RETURN   	0 1
+constants (15) for 00000226D64535C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirE.dds"
+	5	"BuffName"
+	6	"VladimirE"
+	7	"DisplayName"
+	8	"VladimirTidesOfBlood"
+	9	"SpellToggleSlot"
+	10	2
+	11	"IsDeathRecapSource"
+	12	"SpellFXOverrideSkins"
+	13	"Darius_ZaunKnight"
+	14	"Darius_NorseKing"
+	15	"IsDamagingSpell"
+locals (0) for 00000226D64535C0:
+upvalues (0) for 00000226D64535C0:

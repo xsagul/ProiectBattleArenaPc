@@ -1,0 +1,35 @@
+
+main <?:0,0> (18 instructions, 72 bytes at 0000023C6F863780)
+0+ params, 6 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	NEWTABLE 	0 5 0
+	6	[-]	LOADK    	1 -4	; 22
+	7	[-]	LOADK    	2 -5	; 20
+	8	[-]	LOADK    	3 -6	; 18
+	9	[-]	LOADK    	4 -7	; 16
+	10	[-]	LOADK    	5 -8	; 14
+	11	[-]	SETLIST  	0 5 1	; 1
+	12	[-]	SETGLOBAL	0 -3	; AutoCooldownByLevel
+	13	[-]	NEWTABLE 	0 2 0
+	14	[-]	LOADK    	1 -10	; "iBlitz"
+	15	[-]	LOADK    	2 -11	; "Ruby_BlitzcrankSkin07"
+	16	[-]	SETLIST  	0 2 1	; 1
+	17	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	18	[-]	RETURN   	0 1
+constants (11) for 0000023C6F863780:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"AutoCooldownByLevel"
+	4	22
+	5	20
+	6	18
+	7	16
+	8	14
+	9	"SpellFXOverrideSkins"
+	10	"iBlitz"
+	11	"Ruby_BlitzcrankSkin07"
+locals (0) for 0000023C6F863780:
+upvalues (0) for 0000023C6F863780:

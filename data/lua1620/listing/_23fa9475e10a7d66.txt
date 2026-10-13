@@ -1,0 +1,51 @@
+
+main <?:0,0> (26 instructions, 104 bytes at 000001ABF56B34C0)
+0+ params, 5 slots, 0 upvalues, 0 locals, 19 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Lulu/HUD/Icons2D/Lulu_Whimsy.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "LuluWDebuff"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; "r:LOC_Silence"
+	12	[-]	SETGLOBAL	0 -8	; AutoBuffActivateEffect
+	13	[-]	LOADK    	0 -11	; "C_BUFFBONE_GLB_HEAD_LOC"
+	14	[-]	SETGLOBAL	0 -10	; AutoBuffActivateAttachBoneName
+	15	[-]	LOADK    	0 -13	; "game_floatingtext_Polymorphed"
+	16	[-]	SETGLOBAL	0 -12	; PopupMessage1
+	17	[-]	NEWTABLE 	0 4 0
+	18	[-]	LOADK    	1 -15	; "luluDarkCandy"
+	19	[-]	LOADK    	2 -16	; "luluClassic"
+	20	[-]	LOADK    	3 -17	; "luluSkin04"
+	21	[-]	LOADK    	4 -18	; "LuluSkin05"
+	22	[-]	SETLIST  	0 4 1	; 1
+	23	[-]	SETGLOBAL	0 -14	; SpellFXOverrideSkins
+	24	[-]	LOADBOOL 	0 1 0
+	25	[-]	SETGLOBAL	0 -19	; TriggersSpellCasts
+	26	[-]	RETURN   	0 1
+constants (19) for 000001ABF56B34C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Lulu/HUD/Icons2D/Lulu_Whimsy.dds"
+	6	"BuffName"
+	7	"LuluWDebuff"
+	8	"AutoBuffActivateEffect"
+	9	"r:LOC_Silence"
+	10	"AutoBuffActivateAttachBoneName"
+	11	"C_BUFFBONE_GLB_HEAD_LOC"
+	12	"PopupMessage1"
+	13	"game_floatingtext_Polymorphed"
+	14	"SpellFXOverrideSkins"
+	15	"luluDarkCandy"
+	16	"luluClassic"
+	17	"luluSkin04"
+	18	"LuluSkin05"
+	19	"TriggersSpellCasts"
+locals (0) for 000001ABF56B34C0:
+upvalues (0) for 000001ABF56B34C0:

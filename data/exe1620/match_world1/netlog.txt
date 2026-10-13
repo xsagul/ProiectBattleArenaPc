@@ -1,0 +1,35 @@
+2026-10-11T10-48-25: LogOut_File: : logfile started
+2026-10-11T10-48-25: Net Status: low-level initialize success.
+2026-10-11T10-48-25: Note: this version (1/29/2017) has new data fields added
+2026-10-11T10-48-25: time = time since start of game in ms.
+2026-10-11T10-48-25: address = address of IP address
+2026-10-11T10-48-25: incoming = total size of messages set to me in bytes. Spikes can indicate lag.
+2026-10-11T10-48-25: outgoing = total size of messages set from me in bytes. Spikes can indicate lag.
+2026-10-11T10-48-25: app_ctos = client to server bytes delta excluding overheads (app data only)
+2026-10-11T10-48-25: app_stoc = server to client bytes delta excluding overheads (app data only)
+2026-10-11T10-48-25: loss = number of packets lost. Can indicate lags.  Some node on the network is dropping packets or taking to long and we have to resend them.
+2026-10-11T10-48-25: sent = number of packets sent. Spikes can indicate lag.
+2026-10-11T10-48-25: ping = how long it takes for a packet to get back and forth. Spikes can indicate lag.
+2026-10-11T10-48-25: variance = how much the ping is changing from avg ping. Spikes can indicate lag.
+2026-10-11T10-48-25: reliable delayed = This occurs when we drop reliable packets from sending this frame because we are sending to much data. Unreliable are more likely to be dropped than reliable.
+2026-10-11T10-48-25: unreliable delayed = This occurs when we drop unreliable packets from sending this frame because we are sending to much data.
+2026-10-11T10-48-25: app update delayed = This occurs when the app is taking to long to run code caused by network packets (ie CPU) and packets are delayed until the next frame
+2026-10-11T10-48-25: Time spent in critical section (frame) = This is the time the network thread is blocking the main thread from doing anything.
+2026-10-11T10-48-25: Latency in Window = The average Latency in ms. of Reliable packets during this time slice
+2026-10-11T10-48-25: Packet Loss percentage in Window = The packet loss percentage of Reliable packets during this time slice
+2026-10-11T10-48-25: Jitter in Window = The average Jitter in ms. of Reliable packets during this time slice
+2026-10-11T10-48-25: Overall Latency Min = The lowest Latency seen in ms. of Reliable packets up to this point in time
+2026-10-11T10-48-25: Overall Latency Max = The largest Latency seen in ms. of Reliable packets up to this point in time
+2026-10-11T10-48-25: Latency Min in Window = The lowest Latency seen in ms. of Reliable packets during this time slice
+2026-10-11T10-48-25: Latency Max in Window = The largest Latency seen in ms. of Reliable packets during this time slice
+2026-10-11T10-48-25: Latency packet samples = number of packets used in determining average latency from start of game
+2026-10-11T10-48-25: Jitter packet samples = number of packets used in determining average jitter from start of game
+2026-10-11T10-48-25: reconnect = flag to indicate one or more reconnects occurred
+2026-10-11T10-48-25: [time], [address], [incoming], [outgoing], [app_ctos], [app_stoc], [loss], [sent], [ping], [variance], [reliable delayed], [unreliable delayed], [app update delayed], [Time spent in critical section (frame)], [Latency in Window], [Packet Loss percentage in Window], [Jitter in Window], [Overall Latency Min], [Overall Latency Max], [Latency Min in Window], [Latency Maxin Window], [Latency packet Samples], [Jitter Packet Samples],[reconnect]
+11519,X.X.X.X,0,0,0,0,0,0,7,0,0,0,0,0,7,0.000000,0,7,7,7,7,0,0,0
+21526,X.X.X.X,0,0,0,0,0,0,7,0,0,0,0,0,7,0.000000,0,7,7,7,7,0,0,0
+31534,X.X.X.X,0,0,0,0,0,0,7,0,0,0,0,0,7,0.000000,0,7,7,7,7,0,0,0
+41543,X.X.X.X,0,0,0,0,0,0,7,0,0,0,0,0,7,0.000000,0,7,7,7,7,0,0,0
+51547,X.X.X.X,0,0,0,0,0,0,7,0,0,0,0,0,7,0.000000,0,7,7,7,7,0,0,0
+61562,X.X.X.X,0,0,0,0,0,0,7,0,0,0,0,0,7,0.000000,0,7,7,7,7,0,0,0
+71571,X.X.X.X,0,0,0,0,0,0,7,0,0,0,0,0,7,0.000000,0,7,7,7,7,0,0,0

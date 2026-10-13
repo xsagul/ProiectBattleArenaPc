@@ -1,0 +1,51 @@
+
+main <?:0,0> (28 instructions, 112 bytes at 000001696EDE35F0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 17 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "RekSaiTunnelTime"
+	10	[-]	SETGLOBAL	0 -5	; BuffName
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -7	; IsDamagingSpell
+	13	[-]	NEWTABLE 	0 0 6
+	14	[-]	NEWTABLE 	1 5 0
+	15	[-]	LOADK    	2 -10	; 10
+	16	[-]	LOADK    	3 -10	; 10
+	17	[-]	LOADK    	4 -10	; 10
+	18	[-]	LOADK    	5 -10	; 10
+	19	[-]	LOADK    	6 -10	; 10
+	20	[-]	SETLIST  	1 5 1	; 1
+	21	[-]	SETTABLE 	0 -9 1	; "MaximumHits" -
+	22	[-]	SETTABLE 	0 -11 -12	; "CanHitCaster" 0
+	23	[-]	SETTABLE 	0 -13 -12	; "CanHitSameTarget" 0
+	24	[-]	SETTABLE 	0 -14 -12	; "CanHitSameTargetConsecutively" 0
+	25	[-]	SETTABLE 	0 -15 -16	; "CanHitEnemies" 1
+	26	[-]	SETTABLE 	0 -17 -12	; "CanHitFriends" 0
+	27	[-]	SETGLOBAL	0 -8	; ChainMissileParameters
+	28	[-]	RETURN   	0 1
+constants (17) for 000001696EDE35F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffName"
+	6	"RekSaiTunnelTime"
+	7	"IsDamagingSpell"
+	8	"ChainMissileParameters"
+	9	"MaximumHits"
+	10	10
+	11	"CanHitCaster"
+	12	0
+	13	"CanHitSameTarget"
+	14	"CanHitSameTargetConsecutively"
+	15	"CanHitEnemies"
+	16	1
+	17	"CanHitFriends"
+locals (0) for 000001696EDE35F0:
+upvalues (0) for 000001696EDE35F0:

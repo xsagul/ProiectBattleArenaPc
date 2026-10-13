@@ -1,0 +1,277 @@
+# Network Log (Version 16.20.824.8524)
+0000.5786  PacketSnd   player=1 packet=0 bytes=500
+0000.5811  PacketRcv   player=1 packet=0 bytes=100
+0000.5811  PacketSnd   player=1 packet=0 bytes=500
+0000.5817  PacketRcv   player=1 packet=0 bytes=100
+0000.5818  PlayerCon   player=1 reason=1 platformId=1
+0000.5903  MessageSnd  player=1 message=1 channel=1 bytes=35 type=1 reliable ordered
+0000.5904  MessageSnd  player=1 message=2 channel=1 bytes=6 type=64 reliable ordered
+0000.5905  PacketSnd   player=1 packet=1 bytes=46 messages=(1-1)=(1-2)
+0000.5906  MessageSnd  player=1 message=1 channel=4 bytes=12 type=841 reliable ordered
+0000.5909  PacketSnd   player=1 packet=2 bytes=15 messages=(4-1)
+0000.5912  PacketRcv   player=1 acknowledge=1
+0000.5912  PacketAck   player=1 packet=1 received roundtrip=0ms
+0000.5913  MessageAck  player=1 channel=1 sequenceNumber=1 received reliable ordered
+0000.5913  MessageAck  player=1 channel=1 sequenceNumber=2 received reliable ordered
+0000.5922  PacketRcv   player=1 packet=1 bytes=1007
+0000.5923  PacketSnd   player=1 acknowledge=1
+0000.5923  MessageRcv  player=1 message=1 channel=1 fragment=(1/11) bytes=1000 packet=1 type=618 reliable ordered
+0000.5927  PacketRcv   player=1 packet=2 bytes=1007
+0000.5927  PacketSnd   player=1 acknowledge=2
+0000.5928  MessageRcv  player=1 message=1 channel=1 fragment=(2/11) bytes=1000 packet=2 reliable ordered
+0000.5931  PacketRcv   player=1 packet=3 bytes=1007
+0000.5932  PacketSnd   player=1 acknowledge=3
+0000.5932  MessageRcv  player=1 message=1 channel=1 fragment=(3/11) bytes=1000 packet=3 reliable ordered
+0000.5935  PacketRcv   player=1 packet=4 bytes=1007
+0000.5936  PacketSnd   player=1 acknowledge=4
+0000.5936  MessageRcv  player=1 message=1 channel=1 fragment=(4/11) bytes=1000 packet=4 reliable ordered
+0000.5940  PacketRcv   player=1 packet=5 bytes=1007
+0000.5940  PacketSnd   player=1 acknowledge=5
+0000.5940  MessageRcv  player=1 message=1 channel=1 fragment=(5/11) bytes=1000 packet=5 reliable ordered
+0000.5944  PacketRcv   player=1 packet=6 bytes=1007
+0000.5944  PacketSnd   player=1 acknowledge=6
+0000.5944  MessageRcv  player=1 message=1 channel=1 fragment=(6/11) bytes=1000 packet=6 reliable ordered
+0000.5948  PacketRcv   player=1 packet=7 bytes=1007
+0000.5948  PacketSnd   player=1 acknowledge=7
+0000.5949  MessageRcv  player=1 message=1 channel=1 fragment=(7/11) bytes=1000 packet=7 reliable ordered
+0000.5955  PacketRcv   player=1 packet=8 bytes=1007
+0000.5955  PacketSnd   player=1 acknowledge=8
+0000.5955  MessageRcv  player=1 message=1 channel=1 fragment=(8/11) bytes=1000 packet=8 reliable ordered
+0000.5959  PacketRcv   player=1 packet=9 bytes=1007
+0000.5959  PacketSnd   player=1 acknowledge=9
+0000.5959  MessageRcv  player=1 message=1 channel=1 fragment=(9/11) bytes=1000 packet=9 reliable ordered
+0000.5963  PacketRcv   player=1 packet=10 bytes=1007
+0000.5963  PacketSnd   player=1 acknowledge=10
+0000.5963  MessageRcv  player=1 message=1 channel=1 fragment=(10/11) bytes=1000 packet=10 reliable ordered
+0000.5966  PacketRcv   player=1 packet=11 bytes=730
+0000.5967  PacketSnd   player=1 acknowledge=11
+0000.5967  MessageRcv  player=1 message=1 channel=1 fragment=(11/11) bytes=723 packet=11 reliable ordered
+0000.5967  MessageRcv  player=1 message=1 channel=1 bytes=10723 packet=1 type=618 reliable ordered
+0000.5969  PacketRcv   player=1 acknowledge=2
+0000.5969  PacketAck   player=1 packet=2 received roundtrip=6ms
+0000.5970  MessageAck  player=1 channel=4 sequenceNumber=1 received reliable ordered
+0000.7763  PacketRcv   player=1 packet=12 bytes=0
+0000.7764  PacketSnd   player=1 acknowledge=12
+0001.0286  PacketRcv   player=1 packet=13 bytes=0
+0001.0288  PacketSnd   player=1 acknowledge=13
+0001.3410  PacketRcv   player=1 packet=14 bytes=0
+0001.3411  PacketSnd   player=1 acknowledge=14
+0001.5934  PacketRcv   player=1 packet=15 bytes=0
+0001.5935  PacketSnd   player=1 acknowledge=15
+0001.9063  PacketRcv   player=1 packet=16 bytes=0
+0001.9064  PacketSnd   player=1 acknowledge=16
+0002.1574  PacketRcv   player=1 packet=17 bytes=0
+0002.1574  PacketSnd   player=1 acknowledge=17
+0002.4696  PacketRcv   player=1 packet=18 bytes=0
+0002.4698  PacketSnd   player=1 acknowledge=18
+0002.5905  MessageSnd  player=1 message=2 channel=4 bytes=12 type=841 reliable ordered
+0002.5905  PacketSnd   player=1 packet=3 bytes=17 messages=(4-2)
+0002.5912  PacketRcv   player=1 acknowledge=3
+0002.5912  PacketAck   player=1 packet=3 received roundtrip=0ms
+0002.5912  MessageAck  player=1 channel=4 sequenceNumber=2 received reliable ordered
+0002.7679  PacketRcv   player=1 packet=19 bytes=0
+0002.7679  PacketSnd   player=1 acknowledge=19
+0003.0209  PacketRcv   player=1 packet=20 bytes=0
+0003.0209  PacketSnd   player=1 acknowledge=20
+0003.2719  PacketRcv   player=1 packet=21 bytes=0
+0003.2720  PacketSnd   player=1 acknowledge=21
+0003.5849  PacketRcv   player=1 packet=22 bytes=0
+0003.5849  PacketSnd   player=1 acknowledge=22
+0003.8373  PacketRcv   player=1 packet=23 bytes=0
+0003.8373  PacketSnd   player=1 acknowledge=23
+0004.0918  PacketRcv   player=1 packet=24 bytes=0
+0004.0918  PacketSnd   player=1 acknowledge=24
+0004.3440  PacketRcv   player=1 packet=25 bytes=0
+0004.3441  PacketSnd   player=1 acknowledge=25
+0004.5905  MessageSnd  player=1 message=3 channel=4 bytes=13 type=841 reliable ordered
+0004.5906  PacketSnd   player=1 packet=4 bytes=18 messages=(4-3)
+0004.5912  PacketRcv   player=1 acknowledge=4
+0004.5912  PacketAck   player=1 packet=4 received roundtrip=0ms
+0004.5912  MessageAck  player=1 channel=4 sequenceNumber=3 received reliable ordered
+0004.6444  PacketRcv   player=1 packet=26 bytes=0
+0004.6444  PacketSnd   player=1 acknowledge=26
+0004.8953  PacketRcv   player=1 packet=27 bytes=0
+0004.8953  PacketSnd   player=1 acknowledge=27
+0005.1476  PacketRcv   player=1 packet=28 bytes=0
+0005.1477  PacketSnd   player=1 acknowledge=28
+0005.4009  PacketRcv   player=1 packet=29 bytes=0
+0005.4010  PacketSnd   player=1 acknowledge=29
+0005.6520  PacketRcv   player=1 packet=30 bytes=0
+0005.6521  PacketSnd   player=1 acknowledge=30
+0005.9022  PacketRcv   player=1 packet=31 bytes=0
+0005.9023  PacketSnd   player=1 acknowledge=31
+0006.1544  PacketRcv   player=1 packet=32 bytes=0
+0006.1545  PacketSnd   player=1 acknowledge=32
+0006.4048  PacketRcv   player=1 packet=33 bytes=0
+0006.4049  PacketSnd   player=1 acknowledge=33
+0006.5909  MessageSnd  player=1 message=4 channel=4 bytes=13 type=841 reliable ordered
+0006.5911  PacketSnd   player=1 packet=5 bytes=18 messages=(4-4)
+0006.5916  PacketRcv   player=1 acknowledge=5
+0006.5916  PacketAck   player=1 packet=5 received roundtrip=0ms
+0006.5917  MessageAck  player=1 channel=4 sequenceNumber=4 received reliable ordered
+0006.7051  PacketRcv   player=1 packet=34 bytes=0
+0006.7052  PacketSnd   player=1 acknowledge=34
+0006.9574  PacketRcv   player=1 packet=35 bytes=0
+0006.9574  PacketSnd   player=1 acknowledge=35
+0007.2083  PacketRcv   player=1 packet=36 bytes=0
+0007.2083  PacketSnd   player=1 acknowledge=36
+0007.5207  PacketRcv   player=1 packet=37 bytes=0
+0007.5208  PacketSnd   player=1 acknowledge=37
+0007.7728  PacketRcv   player=1 packet=38 bytes=0
+0007.7728  PacketSnd   player=1 acknowledge=38
+0008.0255  PacketRcv   player=1 packet=39 bytes=0
+0008.0256  PacketSnd   player=1 acknowledge=39
+0008.2759  PacketRcv   player=1 packet=40 bytes=0
+0008.2760  PacketSnd   player=1 acknowledge=40
+0008.5285  PacketRcv   player=1 packet=41 bytes=0
+0008.5286  PacketSnd   player=1 acknowledge=41
+0008.5909  MessageSnd  player=1 message=5 channel=4 bytes=13 type=841 reliable ordered
+0008.5910  PacketSnd   player=1 packet=6 bytes=18 messages=(4-5)
+0008.5917  PacketRcv   player=1 acknowledge=6
+0008.5917  PacketAck   player=1 packet=6 received roundtrip=0ms
+0008.5918  MessageAck  player=1 channel=4 sequenceNumber=5 received reliable ordered
+0008.7813  PacketRcv   player=1 packet=42 bytes=0
+0008.7813  PacketSnd   player=1 acknowledge=42
+0009.0933  PacketRcv   player=1 packet=43 bytes=0
+0009.0934  PacketSnd   player=1 acknowledge=43
+0009.3436  PacketRcv   player=1 packet=44 bytes=0
+0009.3436  PacketSnd   player=1 acknowledge=44
+0009.6545  PacketRcv   player=1 packet=45 bytes=0
+0009.6546  PacketSnd   player=1 acknowledge=45
+0009.9058  PacketRcv   player=1 packet=46 bytes=0
+0009.9059  PacketSnd   player=1 acknowledge=46
+0010.2182  PacketRcv   player=1 packet=47 bytes=0
+0010.2183  PacketSnd   player=1 acknowledge=47
+0010.4709  PacketRcv   player=1 packet=48 bytes=0
+0010.4710  PacketSnd   player=1 acknowledge=48
+0010.5916  MessageSnd  player=1 message=6 channel=4 bytes=13 type=841 reliable ordered
+0010.5917  PacketSnd   player=1 packet=7 bytes=18 messages=(4-6)
+0010.5923  PacketRcv   player=1 acknowledge=7
+0010.5923  PacketAck   player=1 packet=7 received roundtrip=0ms
+0010.5923  MessageAck  player=1 channel=4 sequenceNumber=6 received reliable ordered
+0010.7695  PacketRcv   player=1 packet=49 bytes=0
+0010.7696  PacketSnd   player=1 acknowledge=49
+0011.0225  PacketRcv   player=1 packet=50 bytes=0
+0011.0225  PacketSnd   player=1 acknowledge=50
+0011.3357  PacketRcv   player=1 packet=51 bytes=0
+0011.3358  PacketSnd   player=1 acknowledge=51
+0011.6477  PacketRcv   player=1 packet=52 bytes=0
+0011.6477  PacketSnd   player=1 acknowledge=52
+0011.9011  PacketRcv   player=1 packet=53 bytes=0
+0011.9011  PacketSnd   player=1 acknowledge=53
+0012.2119  PacketRcv   player=1 packet=54 bytes=0
+0012.2120  PacketSnd   player=1 acknowledge=54
+0012.5249  PacketRcv   player=1 packet=55 bytes=0
+0012.5250  PacketSnd   player=1 acknowledge=55
+0012.5925  MessageSnd  player=1 message=7 channel=4 bytes=13 type=841 reliable ordered
+0012.5926  PacketSnd   player=1 packet=8 bytes=18 messages=(4-7)
+0012.5932  PacketRcv   player=1 acknowledge=8
+0012.5932  PacketAck   player=1 packet=8 received roundtrip=0ms
+0012.5932  MessageAck  player=1 channel=4 sequenceNumber=7 received reliable ordered
+0012.7792  PacketRcv   player=1 packet=56 bytes=0
+0012.7793  PacketSnd   player=1 acknowledge=56
+0013.0318  PacketRcv   player=1 packet=57 bytes=0
+0013.0318  PacketSnd   player=1 acknowledge=57
+0013.2835  PacketRcv   player=1 packet=58 bytes=0
+0013.2835  PacketSnd   player=1 acknowledge=58
+0013.5355  PacketRcv   player=1 packet=59 bytes=0
+0013.5356  PacketSnd   player=1 acknowledge=59
+0013.7877  PacketRcv   player=1 packet=60 bytes=0
+0013.7878  PacketSnd   player=1 acknowledge=60
+0014.0396  PacketRcv   player=1 packet=61 bytes=0
+0014.0396  PacketSnd   player=1 acknowledge=61
+0014.2902  PacketRcv   player=1 packet=62 bytes=0
+0014.2903  PacketSnd   player=1 acknowledge=62
+0014.5425  PacketRcv   player=1 packet=63 bytes=0
+0014.5425  PacketSnd   player=1 acknowledge=63
+0014.5933  MessageSnd  player=1 message=8 channel=4 bytes=13 type=841 reliable ordered
+0014.5934  PacketSnd   player=1 packet=9 bytes=18 messages=(4-8)
+0014.5940  PacketRcv   player=1 acknowledge=9
+0014.5941  PacketAck   player=1 packet=9 received roundtrip=0ms
+0014.5941  MessageAck  player=1 channel=4 sequenceNumber=8 received reliable ordered
+0014.8434  PacketRcv   player=1 packet=64 bytes=0
+0014.8435  PacketSnd   player=1 acknowledge=64
+0015.0958  PacketRcv   player=1 packet=65 bytes=0
+0015.0958  PacketSnd   player=1 acknowledge=65
+0015.3470  PacketRcv   player=1 packet=66 bytes=0
+0015.3471  PacketSnd   player=1 acknowledge=66
+0015.5988  PacketRcv   player=1 packet=67 bytes=0
+0015.5988  PacketSnd   player=1 acknowledge=67
+0015.8529  PacketRcv   player=1 packet=68 bytes=0
+0015.8530  PacketSnd   player=1 acknowledge=68
+0016.1049  PacketRcv   player=1 packet=69 bytes=0
+0016.1050  PacketSnd   player=1 acknowledge=69
+0016.3559  PacketRcv   player=1 packet=70 bytes=0
+0016.3560  PacketSnd   player=1 acknowledge=70
+0016.5937  MessageSnd  player=1 message=9 channel=4 bytes=13 type=841 reliable ordered
+0016.5937  PacketSnd   player=1 packet=10 bytes=18 messages=(4-9)
+0016.5944  PacketRcv   player=1 acknowledge=10
+0016.5944  PacketAck   player=1 packet=10 received roundtrip=0ms
+0016.5944  MessageAck  player=1 channel=4 sequenceNumber=9 received reliable ordered
+0016.6538  PacketRcv   player=1 packet=71 bytes=0
+0016.6539  PacketSnd   player=1 acknowledge=71
+0016.9060  PacketRcv   player=1 packet=72 bytes=0
+0016.9061  PacketSnd   player=1 acknowledge=72
+0017.1561  PacketRcv   player=1 packet=73 bytes=0
+0017.1562  PacketSnd   player=1 acknowledge=73
+0017.4077  PacketRcv   player=1 packet=74 bytes=0
+0017.4077  PacketSnd   player=1 acknowledge=74
+0017.6618  PacketRcv   player=1 packet=75 bytes=0
+0017.6618  PacketSnd   player=1 acknowledge=75
+0017.9735  PacketRcv   player=1 packet=76 bytes=0
+0017.9735  PacketSnd   player=1 acknowledge=76
+0018.2247  PacketRcv   player=1 packet=77 bytes=0
+0018.2248  PacketSnd   player=1 acknowledge=77
+0018.5373  PacketRcv   player=1 packet=78 bytes=0
+0018.5374  PacketSnd   player=1 acknowledge=78
+0018.5941  MessageSnd  player=1 message=10 channel=4 bytes=13 type=841 reliable ordered
+0018.5942  PacketSnd   player=1 packet=11 bytes=18 messages=(4-10)
+0018.5947  PacketRcv   player=1 acknowledge=11
+0018.5948  PacketAck   player=1 packet=11 received roundtrip=0ms
+0018.5948  MessageAck  player=1 channel=4 sequenceNumber=10 received reliable ordered
+0018.8349  PacketRcv   player=1 packet=79 bytes=0
+0018.8350  PacketSnd   player=1 acknowledge=79
+0019.0888  PacketRcv   player=1 packet=80 bytes=0
+0019.0888  PacketSnd   player=1 acknowledge=80
+0019.3390  PacketRcv   player=1 packet=81 bytes=0
+0019.3390  PacketSnd   player=1 acknowledge=81
+0019.6536  PacketRcv   player=1 packet=82 bytes=0
+0019.6537  PacketSnd   player=1 acknowledge=82
+0019.9088  PacketRcv   player=1 packet=83 bytes=0
+0019.9088  PacketSnd   player=1 acknowledge=83
+0020.1607  PacketRcv   player=1 packet=84 bytes=0
+0020.1608  PacketSnd   player=1 acknowledge=84
+0020.4127  PacketRcv   player=1 packet=85 bytes=0
+0020.4128  PacketSnd   player=1 acknowledge=85
+0020.5946  MessageSnd  player=1 message=11 channel=4 bytes=13 type=841 reliable ordered
+0020.5947  PacketSnd   player=1 packet=12 bytes=18 messages=(4-11)
+0020.5952  PacketRcv   player=1 acknowledge=12
+0020.5953  PacketAck   player=1 packet=12 received roundtrip=0ms
+0020.5953  MessageAck  player=1 channel=4 sequenceNumber=11 received reliable ordered
+0020.7107  PacketRcv   player=1 packet=86 bytes=0
+0020.7107  PacketSnd   player=1 acknowledge=86
+0020.9620  PacketRcv   player=1 packet=87 bytes=0
+0020.9621  PacketSnd   player=1 acknowledge=87
+0021.2144  PacketRcv   player=1 packet=88 bytes=0
+0021.2144  PacketSnd   player=1 acknowledge=88
+0021.4662  PacketRcv   player=1 packet=89 bytes=0
+0021.4662  PacketSnd   player=1 acknowledge=89
+0021.7165  PacketRcv   player=1 packet=90 bytes=0
+0021.7166  PacketSnd   player=1 acknowledge=90
+0021.9707  PacketRcv   player=1 packet=91 bytes=0
+0021.9708  PacketSnd   player=1 acknowledge=91
+0022.2224  PacketRcv   player=1 packet=92 bytes=0
+0022.2224  PacketSnd   player=1 acknowledge=92
+0022.4750  PacketRcv   player=1 packet=93 bytes=0
+0022.4751  PacketSnd   player=1 acknowledge=93
+0022.5951  MessageSnd  player=1 message=12 channel=4 bytes=13 type=841 reliable ordered
+0022.5952  PacketSnd   player=1 packet=13 bytes=18 messages=(4-12)
+0022.5958  PacketRcv   player=1 acknowledge=13
+0022.5958  PacketAck   player=1 packet=13 received roundtrip=0ms
+0022.5958  MessageAck  player=1 channel=4 sequenceNumber=12 received reliable ordered
+0022.7749  PacketRcv   player=1 packet=94 bytes=0
+0022.7749  PacketSnd   player=1 acknowledge=94
+0023.0277  PacketRcv   player=1 packet=95 bytes=0
+0023.0277  PacketSnd   player=1 acknowledge=95
+0023.3380  PacketRcv   player=1 packet=96 bytes=0
+0023.3381  PacketSnd   player=1 acknowledge=96

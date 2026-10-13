@@ -4,8 +4,16 @@
 // match: d895f0 _SSL_CTX_add_custom_ext
 // match: d89620 _SSL_CTX_add_server_custom_ext
 // match: d89650 _SSL_CTX_has_client_custom_ext
+// match: d896a0 _add_custom_ext_intern
+// match: d897f0 _add_old_custom_ext
+// match: d898d0 _custom_ext_add
 // match: d89ae0 _custom_ext_parse_old_cb_wrap
 // match: d89b10 _custom_ext_find
 // match: d89b70 _custom_ext_free_old_cb_wrap
 // match: d89b90 _custom_ext_init
+// match: d89bb0 _custom_ext_parse
+// match: d89cd0 _custom_exts_copy
+// match: d89e50 _custom_exts_free
+#define OPENSSL_FILE "ssl\\statem\\extensions_cust.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/ssl/statem/extensions_cust.c"

@@ -14,4 +14,6 @@
 // match: e35fa0 _ctr_update
 // match: e36190 _drbg_ctr_init
 // match: e36300 _inc_128
+#define OPENSSL_FILE "crypto\\rand\\drbg_ctr.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/rand/drbg_ctr.c"

@@ -4,4 +4,6 @@
 // match: e6a1e0 _sm3_block_data_order
 // match: e6cbf0 _sm3_final
 // match: e6cd90 _sm3_init
+#define OPENSSL_FILE "crypto\\sm3\\sm3.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/sm3/sm3.c"

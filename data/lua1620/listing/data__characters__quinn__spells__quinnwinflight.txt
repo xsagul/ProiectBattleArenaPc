@@ -1,0 +1,27 @@
+
+main <?:0,0> (13 instructions, 52 bytes at 0000021B20DB35D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; 3
+	6	[-]	SETGLOBAL	0 -3	; OnPreDamagePriority
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -5	; IsDamagingSpell
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -6	; DoOnPreDamageInExpirationOrder
+	11	[-]	LOADK    	0 -8	; "DATA/Shared/Particles/deathscaress_buf.troy"
+	12	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEvent
+	13	[-]	RETURN   	0 1
+constants (8) for 0000021B20DB35D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"OnPreDamagePriority"
+	4	3
+	5	"IsDamagingSpell"
+	6	"DoOnPreDamageInExpirationOrder"
+	7	"AutoBuffActivateEvent"
+	8	"DATA/Shared/Particles/deathscaress_buf.troy"
+locals (0) for 0000021B20DB35D0:
+upvalues (0) for 0000021B20DB35D0:

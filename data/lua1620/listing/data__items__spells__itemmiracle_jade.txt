@@ -1,0 +1,41 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 000002270D3835A0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "Summoner_revive.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "SummonerReviveSpeedBoost"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; 1
+	14	[-]	SETGLOBAL	0 -9	; SpellToggleSlot
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -11	; PersistsThroughDeath
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	19	[-]	GETGLOBAL	0 -14	; EFFCREATE_UPDATE_ORIENTATION
+	20	[-]	SETGLOBAL	0 -13	; AutoBuffActivateEffectFlags
+	21	[-]	RETURN   	0 1
+constants (14) for 000002270D3835A0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"Summoner_revive.dds"
+	7	"BuffName"
+	8	"SummonerReviveSpeedBoost"
+	9	"SpellToggleSlot"
+	10	1
+	11	"PersistsThroughDeath"
+	12	"IsDamagingSpell"
+	13	"AutoBuffActivateEffectFlags"
+	14	"EFFCREATE_UPDATE_ORIENTATION"
+locals (0) for 000002270D3835A0:
+upvalues (0) for 000002270D3835A0:

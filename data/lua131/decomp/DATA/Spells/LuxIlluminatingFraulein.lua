@@ -1,0 +1,9 @@
+local L0_1, L1_1
+L0_1 = "LuxIlluminatingFraulein.dds"
+BuffTextureName = L0_1
+L0_1 = "LuxIlluminatingFraulein"
+BuffName = L0_1
+L0_1 = "LuxDebuff.troy"
+AutoBuffActivateEffect = L0_1
+L0_1 = "head"
+AutoBuffActivateAttachBoneName = L0_1

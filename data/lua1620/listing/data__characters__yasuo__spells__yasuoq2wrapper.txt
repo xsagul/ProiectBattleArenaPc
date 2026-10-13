@@ -1,0 +1,64 @@
+
+main <?:0,0> (37 instructions, 148 bytes at 0000024F24FF35D0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 21 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Yasuo/HUD/Icons2D/Yasuo_Q1.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; 1
+	10	[-]	SETGLOBAL	0 -6	; SpellToggleSlot
+	11	[-]	NEWTABLE 	0 2 0
+	12	[-]	LOADK    	1 -9	; "YasuoSkin01"
+	13	[-]	LOADK    	2 -10	; "YasuoSkin02"
+	14	[-]	SETLIST  	0 2 1	; 1
+	15	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	16	[-]	NEWTABLE 	0 1 0
+	17	[-]	LOADK    	1 -10	; "YasuoSkin02"
+	18	[-]	SETLIST  	0 1 1	; 1
+	19	[-]	SETGLOBAL	0 -11	; SpellVOOverrideSkins
+	20	[-]	LOADBOOL 	0 0 0
+	21	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	22	[-]	NEWTABLE 	0 0 6
+	23	[-]	NEWTABLE 	1 5 0
+	24	[-]	LOADK    	2 -15	; 4
+	25	[-]	LOADK    	3 -15	; 4
+	26	[-]	LOADK    	4 -15	; 4
+	27	[-]	LOADK    	5 -15	; 4
+	28	[-]	LOADK    	6 -15	; 4
+	29	[-]	SETLIST  	1 5 1	; 1
+	30	[-]	SETTABLE 	0 -14 1	; "MaximumHits" -
+	31	[-]	SETTABLE 	0 -16 -17	; "CanHitCaster" 0
+	32	[-]	SETTABLE 	0 -18 -17	; "CanHitSameTarget" 0
+	33	[-]	SETTABLE 	0 -19 -17	; "CanHitSameTargetConsecutively" 0
+	34	[-]	SETTABLE 	0 -20 -7	; "CanHitEnemies" 1
+	35	[-]	SETTABLE 	0 -21 -17	; "CanHitFriends" 0
+	36	[-]	SETGLOBAL	0 -13	; ChainMissileParameters
+	37	[-]	RETURN   	0 1
+constants (21) for 0000024F24FF35D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Yasuo/HUD/Icons2D/Yasuo_Q1.dds"
+	6	"SpellToggleSlot"
+	7	1
+	8	"SpellFXOverrideSkins"
+	9	"YasuoSkin01"
+	10	"YasuoSkin02"
+	11	"SpellVOOverrideSkins"
+	12	"IsDamagingSpell"
+	13	"ChainMissileParameters"
+	14	"MaximumHits"
+	15	4
+	16	"CanHitCaster"
+	17	0
+	18	"CanHitSameTarget"
+	19	"CanHitSameTargetConsecutively"
+	20	"CanHitEnemies"
+	21	"CanHitFriends"
+locals (0) for 0000024F24FF35D0:
+upvalues (0) for 0000024F24FF35D0:

@@ -1,0 +1,40 @@
+
+main <?:0,0> (22 instructions, 88 bytes at 0000020F00CE36A0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; CastingBreaksStealth
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Ruby_Wukong/HUD/Icons2D/Ruby_WukongCyclone.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "Ruby_WukongSpinToWin"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -9	; "Ruby_WukongSkin04"
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	15	[-]	NEWTABLE 	0 2 0
+	16	[-]	LOADK    	1 -9	; "Ruby_WukongSkin04"
+	17	[-]	LOADK    	2 -11	; "Ruby_WukongSkin05"
+	18	[-]	SETLIST  	0 2 1	; 1
+	19	[-]	SETGLOBAL	0 -10	; SpellVOOverrideSkins
+	20	[-]	LOADBOOL 	0 1 0
+	21	[-]	SETGLOBAL	0 -12	; TriggersSpellCasts
+	22	[-]	RETURN   	0 1
+constants (12) for 0000020F00CE36A0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"CastingBreaksStealth"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Ruby_Wukong/HUD/Icons2D/Ruby_WukongCyclone.dds"
+	6	"BuffName"
+	7	"Ruby_WukongSpinToWin"
+	8	"SpellFXOverrideSkins"
+	9	"Ruby_WukongSkin04"
+	10	"SpellVOOverrideSkins"
+	11	"Ruby_WukongSkin05"
+	12	"TriggersSpellCasts"
+locals (0) for 0000020F00CE36A0:
+upvalues (0) for 0000020F00CE36A0:

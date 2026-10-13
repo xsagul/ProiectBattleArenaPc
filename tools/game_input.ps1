@@ -49,7 +49,9 @@ $script:t0 = Get-Date
 $proc = $null
 while (-not $proc -or $proc.MainWindowHandle -eq 0) {
     Start-Sleep -Milliseconds 200
-    $proc = Get-Process -Name "League of Legends.unpacked" -ErrorAction SilentlyContinue | Select-Object -First 1
+    # BA_GAME_PROCESS = "League of Legends" for the 16.20 copy (game16); default = the unpacked 13.3 client
+    $gameName = if ($env:BA_GAME_PROCESS) { $env:BA_GAME_PROCESS } else { "League of Legends.unpacked" }
+    $proc = Get-Process -Name $gameName -ErrorAction SilentlyContinue | Select-Object -First 1
     if (((Get-Date) - $script:t0).TotalSeconds -gt 60) { Say "no game window"; exit 1 }
 }
 $h = $proc.MainWindowHandle

@@ -1,0 +1,21 @@
+local L0_1, L1_1, L2_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBDebugSay
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.OwnerVar = "Owner"
+L2_1.ToSay = "Slash Buff On"
+L1_1.Params = L2_1
+L0_1[1] = L1_1
+OnBuffActivateBuildingBlocks = L0_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBRemoveOverrideAutoAttack
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.OwnerVar = "Owner"
+L2_1.CancelAttack = false
+L1_1.Params = L2_1
+L0_1[1] = L1_1
+OnBuffDeactivateBuildingBlocks = L0_1

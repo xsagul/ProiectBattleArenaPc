@@ -20,6 +20,11 @@ sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.join(ROOT, 'server'))
 import match_func as M  # noqa: E402
 import packet_emu as P  # noqa: E402
+import gen_fields  # noqa: E402
+import gen_field_classes  # noqa: E402
+import gen_packet_scalars  # noqa: E402
+import gen_packet_multi  # noqa: E402
+import gen_small  # noqa: E402
 
 TEXT1 = 0x1000 + 0xfa96ec
 OUT = os.path.join(ROOT, 'client-src', 'src', 'gen')
@@ -479,10 +484,30 @@ def empty_strings(im):
     return out, len(matches)
 
 
-def library_files(label, src_dir, note, flags='', ext='.cpp', prelude=(), compiler=None, file_flags=None):
+def write_lines(path, lines):
+    """Write a generated file; a file another program holds for a moment (a virus scanner) is tried again."""
+    import time
+    for attempt in range(20):
+        try:
+            with open(path, 'w', newline=NL, encoding='utf-8') as f:
+                f.write(NL.join(lines) + NL)
+            return
+        except OSError:
+            if attempt == 19:
+                raise
+            time.sleep(0.5)
+
+
+def library_files(label, src_dir, note, flags='', ext='.cpp', prelude=(), compiler=None, file_flags=None, within=None,
+                  file_prelude=None, tree=None, aliases=None):
     """One source file per library object: it includes the library's own source file and names the client
     functions that object gives (client-src/lib_<label>.tsv from tools/match_objs.py, matches found at one place
-    only). The library's code is not rewritten: its public source is the source."""
+    only). The library's code is not rewritten: its public source is the source. within = (first rva, end rva): the
+    library's own place in the client, for a C++ library whose object also carries standard-library functions that
+    the client keeps elsewhere. file_prelude(source path inside src_dir) -> lines put before the #include (what the
+    library's own build gives each file, e.g. the file name its error messages carry). tree = the path src_dir stood
+    at when the library was built for the client: the file is included by that path (match_func.mount_tree), so
+    __FILE__ is the client's."""
     def run(im):
         mine = os.path.abspath(os.path.join(OUT, label))
         im.done = set()
@@ -495,8 +520,14 @@ def library_files(label, src_dir, note, flags='', ext='.cpp', prelude=(), compil
             p = line.rstrip(NL).split(chr(9))
             if line[0] == '#' or p[4] != '1' or int(p[0], 16) in im.done:
                 continue
+            if within and not within[0] <= int(p[0], 16) < within[1]:
+                continue
             rows.setdefault(p[2], []).append((int(p[0], 16), p[3]))
         n = 0
+        # Folded public APIs can be absent from the unique-address inventory.
+        # Still compile their complete upstream source before accepting an alias.
+        for inside in aliases or {}:
+            rows.setdefault(os.path.splitext(os.path.basename(inside))[0] + '.obj', [])
         for obj, fns in sorted(rows.items()):
             c = obj[:-4] + '.c'
             path = os.path.join(OUT, label, obj[:-4] + ext)
@@ -505,26 +536,57 @@ def library_files(label, src_dir, note, flags='', ext='.cpp', prelude=(), compil
             if os.path.exists(srcmap):
                 known = dict(x.rstrip(NL).split(chr(9)) for x in open(srcmap) if x.strip())
                 found = [os.path.join(ROOT, known[obj])] if obj in known else []
+                if not found:
+                    found = [os.path.join(ROOT, src_dir, inside) for inside in aliases or {}
+                             if os.path.splitext(os.path.basename(inside))[0] + '.obj' == obj]
             else:
                 found = glob.glob(os.path.join(ROOT, src_dir, '**', c), recursive=True)
             if len(found) != 1:
                 continue
             rel = os.path.relpath(found[0], os.path.dirname(path)).replace(chr(92), '/')
-            lines = [f'// {note}: {c}, the functions of it that are in the client (tools/match_objs.py).']
+            lines = [f'// {note}: {os.path.basename(found[0])}, the functions of it that are in the client (tools/match_objs.py).']
             if compiler:
                 lines.append(f'// compiler: {compiler}')
             if file_flags:
                 lines.append(f'// flags: {file_flags}')
             lines += [f'// match: {r:x} {sym}' + (f' {flags}' if flags else '') for r, sym in sorted(fns)]
-            lines += list(prelude) + [f'#include "{rel}"']
-            open(path, 'w', newline=NL, encoding='utf-8').write(NL.join(lines) + NL)
+            inside = os.path.relpath(found[0], os.path.join(ROOT, src_dir)).replace(chr(92), '/')
+            if tree:
+                lines.insert(1, f'// tree: {tree} = {src_dir}')
+                rel = tree + chr(92) + inside.replace('/', chr(92))
+            lines += list(prelude) + (file_prelude(inside) if file_prelude else []) + [f'#include "{rel}"']
+            write_lines(path, lines)
             bad = verify(path)
             if bad:
                 lines = [x for x in lines if not (x.startswith('// match: ') and int(x.split()[2], 16) in bad)]
-                open(path, 'w', newline=NL, encoding='utf-8').write(NL.join(lines) + NL)
+                write_lines(path, lines)
+            # Public API names can share a client address with an internal inline helper. Preserve the real
+            # library definition and require its own compiled bytes/targets before registering a folded name.
+            candidates = (aliases or {}).get(inside, ())
+            if candidates:
+                options = flags.split() or M.file_flags(path)
+                alias_obj = M.compile_obj(path, options)
+                accepted = []
+                for rva, symbol in candidates:
+                    if M.compare(path, symbol, rva, options, alias_obj)[3] is None:
+                        accepted.append(f'// same: {rva:x} {symbol}' + (f' {flags}' if flags else ''))
+                if accepted:
+                    lines[1:1] = accepted
+                    write_lines(path, lines)
             n += len(fns) - len(bad)
         return [f'// {note}: see the files in {label}/.'], n
     return run
+
+
+def openssl_file(inside):
+    """OpenSSL's own build compiles each file by its path from the top directory, with backslashes (ssl, statem,
+    statem_lib.c), so that is the file name (OPENSSL_FILE = __FILE__) its error records carry in the client."""
+    lines = ['#define OPENSSL_FILE "' + inside.replace('/', chr(92) * 2) + '"', '#define OPENSSL_LINE __LINE__']
+    if inside == 'crypto/ct/ct_log.c':
+        # The upstream VC-WIN32 Makefile supplies this build default. No
+        # directory-dependent function is claimed by the folded getter alias.
+        lines.append('#define OPENSSLDIR "C:/Program Files (x86)/Common Files/SSL"')
+    return lines
 
 
 def prune(path):
@@ -578,16 +640,35 @@ def _meta(name):
 
 
 # output file -> function writing it
-PATTERNS = {'RStringGlobals.cpp': rstring_globals, 'GlobalInstances.cpp': global_instances, 'ElfKeys.cpp': elf_keys, 'HashGlobals.cpp': hash_globals, 'MapGlobals.cpp': map_globals, 'HashTables.cpp': hash_tables, 'StringGlobals.cpp': empty_strings,
-            'Zstd.txt': library_files('zstd1.4.9', 'tools/third_party/zstd-1.4.9/lib', 'zstd 1.4.9 (facebook/zstd), compiled by Riot as C', '-O2', '.c'),
+PATTERNS = {'FieldBytes.cpp': gen_fields.byte_readers, 'FieldVarints.cpp': gen_fields.varint_readers,
+            'FieldWrappers.cpp': gen_fields.field_wrappers, 'FieldValidated.cpp': gen_fields.validated_field_wrappers,
+            'FieldInlineEnums.cpp': gen_fields.inline_validated_field_wrappers,
+            'FieldInline.cpp': gen_fields.inline_field_wrappers,
+            'FieldClasses.h': gen_field_classes.field_classes, 'FieldConstructors.cpp': gen_field_classes.field_constructors,
+            'FieldFormatAliases.h': gen_packet_scalars.format_alias_header,
+            'FieldFormatAliases.cpp': gen_packet_scalars.format_aliases, 'PacketScalars.cpp': gen_packet_scalars.packet_scalars,
+            'PacketMultiScalars.cpp': gen_packet_multi.packet_multi_scalars,
+            'VectorDestructors.cpp': gen_fields.vector_destructors, 'PacketReaders.cpp': gen_fields.packet_readers,
+            'PacketVectors.cpp': gen_fields.packet_vector_readers, 'RStringGlobals.cpp': rstring_globals, 'GlobalInstances.cpp': global_instances, 'ElfKeys.cpp': elf_keys, 'HashGlobals.cpp': hash_globals, 'MapGlobals.cpp': map_globals, 'HashTables.cpp': hash_tables, 'StringGlobals.cpp': empty_strings,
+            'Zstd.txt': library_files('zstd1.4.9', 'tools/third_party/zstd-1.4.9/lib', 'zstd 1.4.9 (facebook/zstd), compiled by Riot as C', '-O2', '.c',
+                                      aliases={'common/zstd_common.c': [(0xc4c6c0, '_ZSTD_isError')]}),
             'Zlib.txt': library_files('zlib1211', 'tools/third_party/zlib-1.2.11', 'zlib 1.2.11, compiled by Riot as C', '-O2', '.c'),
             'Yaml.txt': library_files('yaml023', 'tools/third_party/libyaml-0.2.3/src', 'libyaml 0.2.3, compiled by Riot as C', '-O2 -Itools/third_party/libyaml-0.2.3/include', '.c', ['#define YAML_VERSION_MAJOR 0', '#define YAML_VERSION_MINOR 2', '#define YAML_VERSION_PATCH 3', '#define YAML_VERSION_STRING "0.2.3"', '#define YAML_DECLARE_STATIC']),
-            'OpenSSL.txt': library_files('openssl111m', 'tools/third_party/openssl-1.1.1m', 'OpenSSL 1.1.1m (VC-WIN32 configuration, its own build options), prebuilt for the client with MSVC 14.30.30709', '', '.c', (), 'msvc-14.30.30709', '-MT -Zl -Gs0 -GF -Gy -W3 -wd4090 -O2 -Itools/third_party/openssl-1.1.1m -Itools/third_party/openssl-1.1.1m/include -Itools/third_party/openssl-1.1.1m/crypto/modes -Itools/third_party/openssl-1.1.1m/crypto/ec/curve448 -Itools/third_party/openssl-1.1.1m/crypto/ec/curve448/arch_32 -DL_ENDIAN -DOPENSSL_PIC -DOPENSSL_CPUID_OBJ -DOPENSSL_BN_ASM_PART_WORDS -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DRC4_ASM -DMD5_ASM -DRMD160_ASM -DAESNI_ASM -DVPAES_ASM -DWHIRLPOOL_ASM -DGHASH_ASM -DECP_NISTZ256_ASM -DPOLY1305_ASM -DOPENSSL_SYS_WIN32 -DWIN32_LEAN_AND_MEAN -DUNICODE -D_UNICODE -D_CRT_SECURE_NO_DEPRECATE -D_WINSOCK_DEPRECATED_NO_WARNINGS -DNDEBUG'),
-            'Curl.txt': library_files('curl7780', 'tools/third_party/curl-7.78.0', 'libcurl 7.78.0 with OpenSSL, compiled by Riot as C', '', '.c', (), None, '-O2 -Itools/third_party/curl-7.78.0/include -Itools/third_party/curl-7.78.0/lib -Itools/third_party/openssl-1.1.1m/include -DBUILDING_LIBCURL -DCURL_STATICLIB -DUSE_OPENSSL -DNDEBUG -DWIN32'),
-            'Lua.txt': library_files('lua515tp', 'tools/third_party/lua-5.1.5/src', 'Lua 5.1.5 (lua.org), compiled by Riot as C++ (default standard: C++14)', '-O2'), 'MetaClasses.h': _meta('meta_header'),
+            'OpenSSL.txt': library_files('openssl111m', 'tools/third_party/openssl-1.1.1m', 'OpenSSL 1.1.1m (VC-WIN32 configuration, its own build options), prebuilt for the client with MSVC 14.30.30709', '', '.c', (), 'msvc-14.30.30709', '-MT -Zl -Gs0 -GF -Gy -W3 -wd4090 -O2 -Itools/third_party/openssl-1.1.1m -Itools/third_party/openssl-1.1.1m/include -Itools/third_party/openssl-1.1.1m/crypto/modes -Itools/third_party/openssl-1.1.1m/crypto/ec/curve448 -Itools/third_party/openssl-1.1.1m/crypto/ec/curve448/arch_32 -DL_ENDIAN -DOPENSSL_PIC -DOPENSSL_CPUID_OBJ -DOPENSSL_BN_ASM_PART_WORDS -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DRC4_ASM -DMD5_ASM -DRMD160_ASM -DAESNI_ASM -DVPAES_ASM -DWHIRLPOOL_ASM -DGHASH_ASM -DECP_NISTZ256_ASM -DPOLY1305_ASM -DOPENSSL_SYS_WIN32 -DWIN32_LEAN_AND_MEAN -DUNICODE -D_UNICODE -D_CRT_SECURE_NO_DEPRECATE -D_WINSOCK_DEPRECATED_NO_WARNINGS -DNDEBUG', file_prelude=openssl_file, aliases={'crypto/engine/eng_lib.c': [(0x129c80, '_ENGINE_get_id')], 'crypto/evp/p_lib.c': [(0x129c80, '_EVP_PKEY_id')], 'crypto/pkcs12/p12_crpt.c': [(0xecb40, '_PKCS12_PBE_add')], 'crypto/ct/ct_log.c': [(0x129c80, '_CTLOG_get0_name')]}),
+            'Curl.txt': library_files('curl7780', 'tools/third_party/curl-7.78.0', 'libcurl 7.78.0 with OpenSSL, zlib and zstd, protocols other than HTTP(S) and FILE disabled, compiled by Riot as C (several files per compilation unit: grouping not known yet)', '', '.c', (), None, '-O2 -Itools/third_party/curl-7.78.0/include -Itools/third_party/curl-7.78.0/lib -Itools/third_party/openssl-1.1.1m/include -DBUILDING_LIBCURL -DCURL_STATICLIB -DUSE_OPENSSL -DNDEBUG -DWIN32 -DHAVE_LIBZ -DHAVE_ZLIB_H -Itools/third_party/zlib-1.2.11 -DHAVE_ZSTD -DHAVE_ZSTD_H -Itools/third_party/zstd-1.4.9/lib -DCURL_DISABLE_DICT -DCURL_DISABLE_FTP -DCURL_DISABLE_GOPHER -DCURL_DISABLE_IMAP -DCURL_DISABLE_LDAP -DCURL_DISABLE_LDAPS -DCURL_DISABLE_MQTT -DCURL_DISABLE_POP3 -DCURL_DISABLE_RTSP -DCURL_DISABLE_SMB -DCURL_DISABLE_SMTP -DCURL_DISABLE_TELNET -DCURL_DISABLE_TFTP'),
+            'FreeType.txt': library_files('freetype2101', 'tools/third_party/freetype-2.10.1/src', 'FreeType 2.10.1 (default configuration, one source file per module), compiled by Riot as C', '', '.c', (), None, '-O2 -Itools/third_party/freetype-2.10.1/include -DFT2_BUILD_LIBRARY'),
+            'Sentry.txt': library_files('sentry0417', 'tools/third_party/sentry-native-0.4.17', 'sentry-native 0.4.17 (C part; frame pointers kept), prebuilt for the client with MSVC 14.31.31106', '', '.c', (), 'msvc-14.31.31106', '-O2 -Oy- -Itools/third_party/sentry-native-0.4.17/include -Itools/third_party/sentry-native-0.4.17/src -Itools/third_party/sentry-native-0.4.17/vendor -Itools/third_party/curl-7.78.0/include -DSENTRY_BUILD_STATIC -DSENTRY_BACKEND_CRASHPAD -DSIZEOF_LONG=4 -DSENTRY_WITH_UNWINDER_DBGHELP -DNOMINMAX -D_CRT_SECURE_NO_WARNINGS -DCURL_STATICLIB -DNDEBUG', within=(0xc91c00, 0xc9d970), aliases={'src/transports/sentry_transport_none.c': [(0xe8b80, '_sentry__transport_new_default')]}),
+            'Vpx.txt': library_files('vpx180', 'tools/third_party/libvpx-1.8.0', 'libvpx 1.8.0 (configured for x86-win32-vs15, C files; frame pointers kept), prebuilt for the client with Visual Studio 2017 (ours: MSVC 14.16.27048)', '', '.c', (), 'msvc-14.16.27048', '-O2 -Oy- -Itools/third_party/libvpx-1.8.0 -Itools/third_party/libvpx-1.8.0-build -DNDEBUG -DWIN32 -D_CRT_SECURE_NO_WARNINGS', within=(0xe8a000, 0xf40000)),
+            'Vorbis.txt': library_files('vorbis136', 'tools/third_party/libvorbis-1.3.6', 'libvorbis 1.3.6 (frame pointers kept), prebuilt for the client with Visual Studio 2017 (ours: MSVC 14.16.27048)', '', '.c', (), 'msvc-14.16.27048', '-O2 -Oy- -Itools/third_party/libvorbis-1.3.6/include -Itools/third_party/libvorbis-1.3.6/lib -Itools/third_party/libogg-1.3.3/include -DNDEBUG -DWIN32', within=(0xe72000, 0xe8b000)),
+            'Ogg.txt': library_files('ogg133', 'tools/third_party/libogg-1.3.3', 'libogg (1.3.3 and 1.3.4 give the same functions; frame pointers kept), prebuilt for the client with Visual Studio 2017 (ours: MSVC 14.16.27048)', '', '.c', (), 'msvc-14.16.27048', '-O2 -Oy- -Itools/third_party/libogg-1.3.3/include -DNDEBUG -DWIN32', within=(0xf90000, 0xf92000)),
+            'Webm.txt': library_files('webm_vpx180', 'tools/third_party/libvpx-1.8.0/third_party/libwebm', 'libwebm (the copy inside libvpx 1.8.0, GetVersion 0.2.1.0; frame pointers kept, C++ exceptions on), prebuilt for the client with Visual Studio 2017 (ours: MSVC 14.16.27048)', '', '.cpp', (), 'msvc-14.16.27048', '-O2 -Oy- -EHsc -Itools/third_party/libvpx-1.8.0/third_party/libwebm -Itools/third_party/libvpx-1.8.0 -DNDEBUG -DWIN32 -D_CRT_SECURE_NO_WARNINGS', within=(0xf34000, 0xf40000)),
+            'Crashpad.txt': library_files('crashpad0417', 'tools/third_party/sentry-native-0.4.17', 'crashpad with mini_chromium (the copy inside sentry-native 0.4.17) and the sentry crashpad backend; C++17, frame pointers kept; prebuilt for the client with MSVC 14.31.31106', '', '.cpp', (), 'msvc-14.31.31106', '-O2 -Oy- -EHsc -std:c++17 -Itools/third_party/sentry-native-0.4.17/external/crashpad -Itools/third_party/sentry-native-0.4.17/external/crashpad/third_party/mini_chromium/mini_chromium -Itools/third_party/sentry-native-0.4.17/external/crashpad/compat/win -Itools/third_party/sentry-native-0.4.17/external/crashpad/compat/non_mac -Itools/third_party/sentry-native-0.4.17/external/crashpad/compat/non_elf -Itools/third_party/sentry-native-0.4.17/include -Itools/third_party/sentry-native-0.4.17/src -Itools/third_party/sentry-native-0.4.17/vendor -Itools/third_party/sentry-native-0.4.17/external/crashpad/third_party/zlib/zlib -DNOMINMAX -DUNICODE -DWIN32_LEAN_AND_MEAN -D_CRT_SECURE_NO_WARNINGS -D_HAS_EXCEPTIONS=0 -D_UNICODE -DCRASHPAD_LSS_SOURCE_EMBEDDED -DNDEBUG -DSENTRY_BUILD_STATIC -DSENTRY_BACKEND_CRASHPAD -DSIZEOF_LONG=4 -DSENTRY_WITH_UNWINDER_DBGHELP -Itools/third_party/sentry-native-0.4.17/external/crashpad/third_party/mini_chromium -DCRASHPAD_ZLIB_SOURCE_EMBEDDED', within=(0xc9a000, 0xcc0000), tree='T:\\p4\\depot\\LoL\\__MAIN__\\code\\External\\sentry\\tmp\\sentry-native'),
+            'LodePng.txt': library_files('lodepng20180611', 'tools/third_party/lodepng-20180611', 'LodePNG 20180611 (lvandeve/lodepng), compiled by Riot as C++17', '', '.cpp', within=(0xc0e480, 0xc16500)),
+            'Lua.txt': library_files('lua515tp', 'tools/third_party/lua-5.1.5/src', 'Lua 5.1.5 (lua.org), compiled by Riot as C++ (default standard: C++14) with -arch:SSE (doubles on the x87 stack)', '-O2 -arch:SSE'), 'MetaClasses.h': _meta('meta_header'),
             'MetaClasses.cpp': _meta('meta_classes'), 'MetaMembers.cpp': _meta('meta_members'),
             'MetaGetters.cpp': _meta('meta_getters'), 'BinClasses.h': _meta('bin_classes'),
             'MetaFunctions.cpp': _meta('meta_functions')}
+PATTERNS.update(gen_small.PATTERNS)
 
 
 def main():
@@ -601,7 +682,7 @@ def main():
         for attempt in range(4):
             im.done |= failed
             if hasattr(im, 'meta'):
-                for k in ('facts', 'defined', 'laid_out', 'children'):
+                for k in ('facts', 'defined', 'laid_out', 'zero_ctors', 'inline_ctors', 'native_ctors', 'children'):
                     im.meta.__dict__.pop(k, None)
             lines, n = PATTERNS[name](im)
             with open(path, 'w', newline=NL, encoding='utf-8') as f:
@@ -615,6 +696,13 @@ def main():
             # every claim checked: the ones that are not identical are left out and the file written again
             bad = verify(path)
             if not bad:
+                break
+            if name == 'MetaClasses.cpp':
+                # Keep the real metadata objects while their external callback
+                # bodies are being reconstructed. Dropping a failed initializer
+                # also drops its already identical teardown and its definition.
+                # progress.py reports these unresolved bindings explicitly.
+                print(f'{name}: {len(bad)} functions not identical, metadata definitions retained for audit')
                 break
             print(f'{name}: {len(bad)} functions not identical, written again without them')
             failed |= bad
@@ -631,7 +719,11 @@ def verify(path):
         flags = m[3].split() or M.file_flags(path)
         if tuple(flags) not in objs:
             objs[tuple(flags)] = M.compile_obj(path, flags)
-        if M.compare(path, m[2], int(m[1], 16), flags, objs[tuple(flags)])[3] is not None:
+        try:
+            same = M.compare(path, m[2], int(m[1], 16), flags, objs[tuple(flags)])[3] is None
+        except SystemExit:              # no function, or several, by that symbol text in our object
+            same = False
+        if not same:
             bad.add(int(m[1], 16))
     return bad
 

@@ -1,0 +1,11 @@
+local L0_1, L1_1
+L0_1 = "22.dds"
+BuffTextureName = L0_1
+L0_1 = "BladeRogue_TempBuff7"
+BuffName = L0_1
+L0_1 = ""
+AutoBuffActivateEffect = L0_1
+L0_1 = ""
+AutoBuffActivateAttachBoneName = L0_1
+L0_1 = {}
+OnBuffActivateBuildingBlocks = L0_1

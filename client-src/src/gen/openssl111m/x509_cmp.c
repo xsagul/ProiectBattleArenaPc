@@ -6,9 +6,14 @@
 // match: dcc3c0 _X509_CRL_match
 // match: dcc410 _X509_NAME_cmp
 // match: dcc4d0 _X509_NAME_hash
+// match: dcc560 _X509_chain_check_suiteb
 // match: dcc750 _X509_chain_up_ref
+// match: dcc7d0 _X509_check_private_key
 // match: dcc850 _X509_cmp
 // match: dcc970 _X509_find_by_subject
 // match: dccaa0 _X509_get_serialNumber
 // match: dccad0 _X509_subject_name_cmp
+// match: dccaf0 _check_suite_b
+#define OPENSSL_FILE "crypto\\x509\\x509_cmp.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/x509/x509_cmp.c"

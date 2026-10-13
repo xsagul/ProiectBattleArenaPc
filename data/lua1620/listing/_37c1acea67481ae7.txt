@@ -1,0 +1,69 @@
+
+main <?:0,0> (5 instructions, 20 bytes at 000001D52BF434C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 2 constants, 2 functions
+	1	[-]	CLOSURE  	0 0	; 000001D52BF43540
+	2	[-]	SETGLOBAL	0 -1	; OnInitClient
+	3	[-]	CLOSURE  	0 1	; 000001D52BF43700
+	4	[-]	SETGLOBAL	0 -2	; OnInitServer
+	5	[-]	RETURN   	0 1
+constants (2) for 000001D52BF434C0:
+	1	"OnInitClient"
+	2	"OnInitServer"
+locals (0) for 000001D52BF434C0:
+upvalues (0) for 000001D52BF434C0:
+
+function <?:1,10> (33 instructions, 132 bytes at 000001D52BF43540)
+0 params, 3 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	2	[-]	LOADK    	1 -2	; "HA_ChaosMinionMelee"
+	3	[-]	LOADK    	2 -3	; 3
+	4	[-]	CALL     	0 3 1
+	5	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	6	[-]	LOADK    	1 -4	; "HA_ChaosMinionRanged"
+	7	[-]	LOADK    	2 -3	; 3
+	8	[-]	CALL     	0 3 1
+	9	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	10	[-]	LOADK    	1 -5	; "HA_ChaosMinionSiege"
+	11	[-]	LOADK    	2 -3	; 3
+	12	[-]	CALL     	0 3 1
+	13	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	14	[-]	LOADK    	1 -6	; "HA_ChaosMinionSuper"
+	15	[-]	LOADK    	2 -3	; 3
+	16	[-]	CALL     	0 3 1
+	17	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	18	[-]	LOADK    	1 -7	; "HA_OrderMinionMelee"
+	19	[-]	LOADK    	2 -3	; 3
+	20	[-]	CALL     	0 3 1
+	21	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	22	[-]	LOADK    	1 -8	; "HA_OrderMinionRanged"
+	23	[-]	LOADK    	2 -3	; 3
+	24	[-]	CALL     	0 3 1
+	25	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	26	[-]	LOADK    	1 -9	; "HA_OrderMinionSiege"
+	27	[-]	LOADK    	2 -3	; 3
+	28	[-]	CALL     	0 3 1
+	29	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	30	[-]	LOADK    	1 -10	; "HA_OrderMinionSuper"
+	31	[-]	LOADK    	2 -3	; 3
+	32	[-]	CALL     	0 3 1
+	33	[-]	RETURN   	0 1
+constants (10) for 000001D52BF43540:
+	1	"PreloadCharacterWithSkinID"
+	2	"HA_ChaosMinionMelee"
+	3	3
+	4	"HA_ChaosMinionRanged"
+	5	"HA_ChaosMinionSiege"
+	6	"HA_ChaosMinionSuper"
+	7	"HA_OrderMinionMelee"
+	8	"HA_OrderMinionRanged"
+	9	"HA_OrderMinionSiege"
+	10	"HA_OrderMinionSuper"
+locals (0) for 000001D52BF43540:
+upvalues (0) for 000001D52BF43540:
+
+function <?:12,14> (1 instruction, 4 bytes at 000001D52BF43700)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000001D52BF43700:
+locals (0) for 000001D52BF43700:
+upvalues (0) for 000001D52BF43700:

@@ -1,0 +1,30 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 000001AAF98E30C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Xerath/HUD/Icons2D/Xerath_R1.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "UltBook_XerathRShots"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	NEWTABLE 	0 1 0
+	10	[-]	LOADK    	1 -8	; "CyberEzreal"
+	11	[-]	SETLIST  	0 1 1	; 1
+	12	[-]	SETGLOBAL	0 -7	; SpellFXOverrideSkins
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -9	; IsDamagingSpell
+	15	[-]	RETURN   	0 1
+constants (9) for 000001AAF98E30C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Xerath/HUD/Icons2D/Xerath_R1.dds"
+	5	"BuffName"
+	6	"UltBook_XerathRShots"
+	7	"SpellFXOverrideSkins"
+	8	"CyberEzreal"
+	9	"IsDamagingSpell"
+locals (0) for 000001AAF98E30C0:
+upvalues (0) for 000001AAF98E30C0:

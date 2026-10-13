@@ -1,0 +1,253 @@
+
+main <?:0,0> (3 instructions, 12 bytes at 000001BB7EB734C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 1 constant, 1 function
+	1	[-]	CLOSURE  	0 0	; 000001BB7EB73540
+	2	[-]	SETGLOBAL	0 -1	; CreateLevelProps
+	3	[-]	RETURN   	0 1
+constants (1) for 000001BB7EB734C0:
+	1	"CreateLevelProps"
+locals (0) for 000001BB7EB734C0:
+upvalues (0) for 000001BB7EB734C0:
+
+function <?:1,41> (193 instructions, 772 bytes at 000001BB7EB73540)
+0 params, 7 slots, 0 upvalues, 0 locals, 44 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	2	[-]	LOADK    	1 -2	; "Turret_T1_R_03"
+	3	[-]	LOADK    	2 -3	; "OrderTurretNormal"
+	4	[-]	LOADK    	3 -4	; ""
+	5	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	6	[-]	LOADK    	5 -6	; 3
+	7	[-]	LOADK    	6 -7	; 0
+	8	[-]	CALL     	0 7 1
+	9	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	10	[-]	LOADK    	1 -8	; "Turret_T1_R_02"
+	11	[-]	LOADK    	2 -9	; "OrderTurretNormal2"
+	12	[-]	LOADK    	3 -4	; ""
+	13	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	14	[-]	LOADK    	5 -10	; 2
+	15	[-]	LOADK    	6 -7	; 0
+	16	[-]	CALL     	0 7 1
+	17	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	18	[-]	LOADK    	1 -11	; "Turret_T1_C_07"
+	19	[-]	LOADK    	2 -12	; "OrderTurretDragon"
+	20	[-]	LOADK    	3 -4	; ""
+	21	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	22	[-]	LOADK    	5 -13	; 1
+	23	[-]	LOADK    	6 -7	; 0
+	24	[-]	CALL     	0 7 1
+	25	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	26	[-]	LOADK    	1 -14	; "Turret_T2_R_03"
+	27	[-]	LOADK    	2 -15	; "ChaosTurretWorm"
+	28	[-]	LOADK    	3 -4	; ""
+	29	[-]	GETGLOBAL	4 -16	; TEAM_CHAOS
+	30	[-]	LOADK    	5 -6	; 3
+	31	[-]	LOADK    	6 -7	; 0
+	32	[-]	CALL     	0 7 1
+	33	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	34	[-]	LOADK    	1 -17	; "Turret_T2_R_02"
+	35	[-]	LOADK    	2 -18	; "ChaosTurretWorm2"
+	36	[-]	LOADK    	3 -4	; ""
+	37	[-]	GETGLOBAL	4 -16	; TEAM_CHAOS
+	38	[-]	LOADK    	5 -10	; 2
+	39	[-]	LOADK    	6 -7	; 0
+	40	[-]	CALL     	0 7 1
+	41	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	42	[-]	LOADK    	1 -19	; "Turret_T2_R_01"
+	43	[-]	LOADK    	2 -20	; "ChaosTurretGiant"
+	44	[-]	LOADK    	3 -4	; ""
+	45	[-]	GETGLOBAL	4 -16	; TEAM_CHAOS
+	46	[-]	LOADK    	5 -13	; 1
+	47	[-]	LOADK    	6 -7	; 0
+	48	[-]	CALL     	0 7 1
+	49	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	50	[-]	LOADK    	1 -21	; "Turret_T1_C_05"
+	51	[-]	LOADK    	2 -3	; "OrderTurretNormal"
+	52	[-]	LOADK    	3 -4	; ""
+	53	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	54	[-]	LOADK    	5 -6	; 3
+	55	[-]	LOADK    	6 -13	; 1
+	56	[-]	CALL     	0 7 1
+	57	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	58	[-]	LOADK    	1 -22	; "Turret_T1_C_04"
+	59	[-]	LOADK    	2 -9	; "OrderTurretNormal2"
+	60	[-]	LOADK    	3 -4	; ""
+	61	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	62	[-]	LOADK    	5 -10	; 2
+	63	[-]	LOADK    	6 -13	; 1
+	64	[-]	CALL     	0 7 1
+	65	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	66	[-]	LOADK    	1 -23	; "Turret_T1_C_03"
+	67	[-]	LOADK    	2 -12	; "OrderTurretDragon"
+	68	[-]	LOADK    	3 -4	; ""
+	69	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	70	[-]	LOADK    	5 -13	; 1
+	71	[-]	LOADK    	6 -13	; 1
+	72	[-]	CALL     	0 7 1
+	73	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	74	[-]	LOADK    	1 -24	; "Turret_T1_C_01"
+	75	[-]	LOADK    	2 -25	; "OrderTurretAngel"
+	76	[-]	LOADK    	3 -4	; ""
+	77	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	78	[-]	LOADK    	5 -26	; 5
+	79	[-]	LOADK    	6 -13	; 1
+	80	[-]	CALL     	0 7 1
+	81	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	82	[-]	LOADK    	1 -27	; "Turret_T1_C_02"
+	83	[-]	LOADK    	2 -25	; "OrderTurretAngel"
+	84	[-]	LOADK    	3 -4	; ""
+	85	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	86	[-]	LOADK    	5 -28	; 4
+	87	[-]	LOADK    	6 -13	; 1
+	88	[-]	CALL     	0 7 1
+	89	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	90	[-]	LOADK    	1 -29	; "Turret_T2_C_05"
+	91	[-]	LOADK    	2 -15	; "ChaosTurretWorm"
+	92	[-]	LOADK    	3 -4	; ""
+	93	[-]	GETGLOBAL	4 -16	; TEAM_CHAOS
+	94	[-]	LOADK    	5 -6	; 3
+	95	[-]	LOADK    	6 -13	; 1
+	96	[-]	CALL     	0 7 1
+	97	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	98	[-]	LOADK    	1 -30	; "Turret_T2_C_04"
+	99	[-]	LOADK    	2 -18	; "ChaosTurretWorm2"
+	100	[-]	LOADK    	3 -4	; ""
+	101	[-]	GETGLOBAL	4 -16	; TEAM_CHAOS
+	102	[-]	LOADK    	5 -10	; 2
+	103	[-]	LOADK    	6 -13	; 1
+	104	[-]	CALL     	0 7 1
+	105	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	106	[-]	LOADK    	1 -31	; "Turret_T2_C_03"
+	107	[-]	LOADK    	2 -20	; "ChaosTurretGiant"
+	108	[-]	LOADK    	3 -4	; ""
+	109	[-]	GETGLOBAL	4 -16	; TEAM_CHAOS
+	110	[-]	LOADK    	5 -13	; 1
+	111	[-]	LOADK    	6 -13	; 1
+	112	[-]	CALL     	0 7 1
+	113	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	114	[-]	LOADK    	1 -32	; "Turret_T2_C_01"
+	115	[-]	LOADK    	2 -33	; "ChaosTurretNormal"
+	116	[-]	LOADK    	3 -4	; ""
+	117	[-]	GETGLOBAL	4 -16	; TEAM_CHAOS
+	118	[-]	LOADK    	5 -26	; 5
+	119	[-]	LOADK    	6 -13	; 1
+	120	[-]	CALL     	0 7 1
+	121	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	122	[-]	LOADK    	1 -34	; "Turret_T2_C_02"
+	123	[-]	LOADK    	2 -33	; "ChaosTurretNormal"
+	124	[-]	LOADK    	3 -4	; ""
+	125	[-]	GETGLOBAL	4 -16	; TEAM_CHAOS
+	126	[-]	LOADK    	5 -28	; 4
+	127	[-]	LOADK    	6 -13	; 1
+	128	[-]	CALL     	0 7 1
+	129	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	130	[-]	LOADK    	1 -35	; "Turret_OrderTurretShrine"
+	131	[-]	LOADK    	2 -36	; "OrderTurretShrine"
+	132	[-]	LOADK    	3 -4	; ""
+	133	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	134	[-]	LOADK    	5 -7	; 0
+	135	[-]	LOADK    	6 -13	; 1
+	136	[-]	CALL     	0 7 1
+	137	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	138	[-]	LOADK    	1 -37	; "Turret_ChaosTurretShrine"
+	139	[-]	LOADK    	2 -38	; "ChaosTurretShrine"
+	140	[-]	LOADK    	3 -4	; ""
+	141	[-]	GETGLOBAL	4 -16	; TEAM_CHAOS
+	142	[-]	LOADK    	5 -7	; 0
+	143	[-]	LOADK    	6 -13	; 1
+	144	[-]	CALL     	0 7 1
+	145	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	146	[-]	LOADK    	1 -39	; "Turret_T1_L_03"
+	147	[-]	LOADK    	2 -3	; "OrderTurretNormal"
+	148	[-]	LOADK    	3 -4	; ""
+	149	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	150	[-]	LOADK    	5 -6	; 3
+	151	[-]	LOADK    	6 -10	; 2
+	152	[-]	CALL     	0 7 1
+	153	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	154	[-]	LOADK    	1 -40	; "Turret_T1_L_02"
+	155	[-]	LOADK    	2 -9	; "OrderTurretNormal2"
+	156	[-]	LOADK    	3 -4	; ""
+	157	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	158	[-]	LOADK    	5 -10	; 2
+	159	[-]	LOADK    	6 -10	; 2
+	160	[-]	CALL     	0 7 1
+	161	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	162	[-]	LOADK    	1 -41	; "Turret_T1_C_06"
+	163	[-]	LOADK    	2 -12	; "OrderTurretDragon"
+	164	[-]	LOADK    	3 -4	; ""
+	165	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	166	[-]	LOADK    	5 -13	; 1
+	167	[-]	LOADK    	6 -10	; 2
+	168	[-]	CALL     	0 7 1
+	169	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	170	[-]	LOADK    	1 -42	; "Turret_T2_L_03"
+	171	[-]	LOADK    	2 -15	; "ChaosTurretWorm"
+	172	[-]	LOADK    	3 -4	; ""
+	173	[-]	GETGLOBAL	4 -16	; TEAM_CHAOS
+	174	[-]	LOADK    	5 -6	; 3
+	175	[-]	LOADK    	6 -10	; 2
+	176	[-]	CALL     	0 7 1
+	177	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	178	[-]	LOADK    	1 -43	; "Turret_T2_L_02"
+	179	[-]	LOADK    	2 -18	; "ChaosTurretWorm2"
+	180	[-]	LOADK    	3 -4	; ""
+	181	[-]	GETGLOBAL	4 -16	; TEAM_CHAOS
+	182	[-]	LOADK    	5 -10	; 2
+	183	[-]	LOADK    	6 -10	; 2
+	184	[-]	CALL     	0 7 1
+	185	[-]	GETGLOBAL	0 -1	; CreateChildTurret
+	186	[-]	LOADK    	1 -44	; "Turret_T2_L_01"
+	187	[-]	LOADK    	2 -20	; "ChaosTurretGiant"
+	188	[-]	LOADK    	3 -4	; ""
+	189	[-]	GETGLOBAL	4 -16	; TEAM_CHAOS
+	190	[-]	LOADK    	5 -13	; 1
+	191	[-]	LOADK    	6 -10	; 2
+	192	[-]	CALL     	0 7 1
+	193	[-]	RETURN   	0 1
+constants (44) for 000001BB7EB73540:
+	1	"CreateChildTurret"
+	2	"Turret_T1_R_03"
+	3	"OrderTurretNormal"
+	4	""
+	5	"TEAM_ORDER"
+	6	3
+	7	0
+	8	"Turret_T1_R_02"
+	9	"OrderTurretNormal2"
+	10	2
+	11	"Turret_T1_C_07"
+	12	"OrderTurretDragon"
+	13	1
+	14	"Turret_T2_R_03"
+	15	"ChaosTurretWorm"
+	16	"TEAM_CHAOS"
+	17	"Turret_T2_R_02"
+	18	"ChaosTurretWorm2"
+	19	"Turret_T2_R_01"
+	20	"ChaosTurretGiant"
+	21	"Turret_T1_C_05"
+	22	"Turret_T1_C_04"
+	23	"Turret_T1_C_03"
+	24	"Turret_T1_C_01"
+	25	"OrderTurretAngel"
+	26	5
+	27	"Turret_T1_C_02"
+	28	4
+	29	"Turret_T2_C_05"
+	30	"Turret_T2_C_04"
+	31	"Turret_T2_C_03"
+	32	"Turret_T2_C_01"
+	33	"ChaosTurretNormal"
+	34	"Turret_T2_C_02"
+	35	"Turret_OrderTurretShrine"
+	36	"OrderTurretShrine"
+	37	"Turret_ChaosTurretShrine"
+	38	"ChaosTurretShrine"
+	39	"Turret_T1_L_03"
+	40	"Turret_T1_L_02"
+	41	"Turret_T1_C_06"
+	42	"Turret_T2_L_03"
+	43	"Turret_T2_L_02"
+	44	"Turret_T2_L_01"
+locals (0) for 000001BB7EB73540:
+upvalues (0) for 000001BB7EB73540:

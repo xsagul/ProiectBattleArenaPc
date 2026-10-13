@@ -1,0 +1,102 @@
+
+main <?:0,0> (38 instructions, 152 bytes at 0000028CD51C34C0)
+0+ params, 9 slots, 0 upvalues, 0 locals, 21 constants, 1 function
+	1	[-]	NEWTABLE 	0 4 0
+	2	[-]	NEWTABLE 	1 0 2
+	3	[-]	SETTABLE 	1 -2 -3	; "Name" "BlueTop"
+	4	[-]	GETGLOBAL	2 -5	; Make3DPoint
+	5	[-]	LOADK    	3 -6	; 2715
+	6	[-]	LOADK    	4 -7	; 54
+	7	[-]	LOADK    	5 -8	; 4860
+	8	[-]	CALL     	2 4 2
+	9	[-]	SETTABLE 	1 -4 2	; "Point" -
+	10	[-]	NEWTABLE 	2 0 2
+	11	[-]	SETTABLE 	2 -2 -9	; "Name" "RedTop"
+	12	[-]	GETGLOBAL	3 -5	; Make3DPoint
+	13	[-]	LOADK    	4 -10	; 10033
+	14	[-]	LOADK    	5 -11	; 84
+	15	[-]	LOADK    	6 -12	; 12168
+	16	[-]	CALL     	3 4 2
+	17	[-]	SETTABLE 	2 -4 3	; "Point" -
+	18	[-]	NEWTABLE 	3 0 2
+	19	[-]	SETTABLE 	3 -2 -13	; "Name" "BlueBot"
+	20	[-]	GETGLOBAL	4 -5	; Make3DPoint
+	21	[-]	LOADK    	5 -14	; 4822
+	22	[-]	LOADK    	6 -15	; 74
+	23	[-]	LOADK    	7 -16	; 2805
+	24	[-]	CALL     	4 4 2
+	25	[-]	SETTABLE 	3 -4 4	; "Point" -
+	26	[-]	NEWTABLE 	4 0 2
+	27	[-]	SETTABLE 	4 -2 -17	; "Name" "RedBot"
+	28	[-]	GETGLOBAL	5 -5	; Make3DPoint
+	29	[-]	LOADK    	6 -18	; 12087
+	30	[-]	LOADK    	7 -19	; 92
+	31	[-]	LOADK    	8 -20	; 10159
+	32	[-]	CALL     	5 4 2
+	33	[-]	SETTABLE 	4 -4 5	; "Point" -
+	34	[-]	SETLIST  	0 4 1	; 1
+	35	[-]	SETGLOBAL	0 -1	; VisionBearersDefinition
+	36	[-]	CLOSURE  	0 0	; 0000028CD51C3740
+	37	[-]	SETGLOBAL	0 -21	; SpawnVisionBearers
+	38	[-]	RETURN   	0 1
+constants (21) for 0000028CD51C34C0:
+	1	"VisionBearersDefinition"
+	2	"Name"
+	3	"BlueTop"
+	4	"Point"
+	5	"Make3DPoint"
+	6	2715
+	7	54
+	8	4860
+	9	"RedTop"
+	10	10033
+	11	84
+	12	12168
+	13	"BlueBot"
+	14	4822
+	15	74
+	16	2805
+	17	"RedBot"
+	18	12087
+	19	92
+	20	10159
+	21	"SpawnVisionBearers"
+locals (0) for 0000028CD51C34C0:
+upvalues (0) for 0000028CD51C34C0:
+
+function <?:23,28> (22 instructions, 88 bytes at 0000028CD51C3740)
+0 params, 17 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; ipairs
+	2	[-]	GETGLOBAL	1 -2	; VisionBearersDefinition
+	3	[-]	CALL     	0 2 4
+	4	[-]	JMP      	15	; to 20
+	5	[-]	GETGLOBAL	5 -3	; SpawnMinion
+	6	[-]	LOADK    	6 -4	; "SRU_WallVisionBearer_"
+	7	[-]	GETTABLE 	7 4 -5	; "Name"
+	8	[-]	CONCAT   	6 6 7
+	9	[-]	LOADK    	7 -6	; "SRU_WallVisionBearer"
+	10	[-]	LOADK    	8 -7	; "Idle.lua"
+	11	[-]	GETTABLE 	9 4 -8	; "Point"
+	12	[-]	GETGLOBAL	10 -9	; TEAM_NEUTRAL
+	13	[-]	LOADBOOL 	11 0 0
+	14	[-]	LOADBOOL 	12 1 0
+	15	[-]	LOADBOOL 	13 1 0
+	16	[-]	LOADBOOL 	14 1 0
+	17	[-]	LOADBOOL 	15 1 0
+	18	[-]	LOADBOOL 	16 1 0
+	19	[-]	CALL     	5 12 1
+	20	[-]	TFORLOOP 	0 2
+	21	[-]	JMP      	-17	; to 5
+	22	[-]	RETURN   	0 1
+constants (9) for 0000028CD51C3740:
+	1	"ipairs"
+	2	"VisionBearersDefinition"
+	3	"SpawnMinion"
+	4	"SRU_WallVisionBearer_"
+	5	"Name"
+	6	"SRU_WallVisionBearer"
+	7	"Idle.lua"
+	8	"Point"
+	9	"TEAM_NEUTRAL"
+locals (0) for 0000028CD51C3740:
+upvalues (0) for 0000028CD51C3740:

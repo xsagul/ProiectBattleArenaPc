@@ -1,0 +1,41 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 0000018D6CD93600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Spells/Icons2D/Wolfman_SeverArmor.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "WarwickWHuntersMarkPackMember"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "DATA/Particles/wolfman_bloodscent_marker.troy"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -10	; "C_Buffbone_Glb_Overhead_Loc"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -12	; "HyenaWarwick"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -11	; SpellVOOverrideSkins
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -13	; IsDamagingSpell
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -14	; TriggersSpellCasts
+	21	[-]	RETURN   	0 1
+constants (14) for 0000018D6CD93600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Spells/Icons2D/Wolfman_SeverArmor.dds"
+	5	"BuffName"
+	6	"WarwickWHuntersMarkPackMember"
+	7	"AutoBuffActivateEffect"
+	8	"DATA/Particles/wolfman_bloodscent_marker.troy"
+	9	"AutoBuffActivateAttachBoneName"
+	10	"C_Buffbone_Glb_Overhead_Loc"
+	11	"SpellVOOverrideSkins"
+	12	"HyenaWarwick"
+	13	"IsDamagingSpell"
+	14	"TriggersSpellCasts"
+locals (0) for 0000018D6CD93600:
+upvalues (0) for 0000018D6CD93600:

@@ -1,0 +1,25 @@
+
+main <?:0,0> (11 instructions, 44 bytes at 0000027D890934D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "Summoner_haste.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "ItemHorn"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "DATA/Particles/Item_Horn_buf.troy"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	RETURN   	0 1
+constants (8) for 0000027D890934D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"Summoner_haste.dds"
+	5	"BuffName"
+	6	"ItemHorn"
+	7	"AutoBuffActivateEffect"
+	8	"DATA/Particles/Item_Horn_buf.troy"
+locals (0) for 0000027D890934D0:
+upvalues (0) for 0000027D890934D0:

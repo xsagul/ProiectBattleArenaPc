@@ -1,0 +1,27 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 0000021F59883600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	NEWTABLE 	0 1 0
+	6	[-]	LOADK    	1 -4	; "CyberEzreal"
+	7	[-]	SETLIST  	0 1 1	; 1
+	8	[-]	SETGLOBAL	0 -3	; SpellFXOverrideSkins
+	9	[-]	NEWTABLE 	0 1 0
+	10	[-]	LOADK    	1 -4	; "CyberEzreal"
+	11	[-]	SETLIST  	0 1 1	; 1
+	12	[-]	SETGLOBAL	0 -5	; SpellVOOverrideSkins
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -6	; IsDamagingSpell
+	15	[-]	RETURN   	0 1
+constants (6) for 0000021F59883600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"SpellFXOverrideSkins"
+	4	"CyberEzreal"
+	5	"SpellVOOverrideSkins"
+	6	"IsDamagingSpell"
+locals (0) for 0000021F59883600:
+upvalues (0) for 0000021F59883600:

@@ -4,4 +4,6 @@
 // match: dfa1f0 _CRYPTO_ctr128_encrypt
 // match: dfa310 _CRYPTO_ctr128_encrypt_ctr32
 // match: dfa460 _ctr128_inc_aligned
+#define OPENSSL_FILE "crypto\\modes\\ctr128.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/modes/ctr128.c"

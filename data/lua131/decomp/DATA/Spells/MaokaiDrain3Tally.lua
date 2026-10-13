@@ -1,0 +1,27 @@
+local L0_1, L1_1, L2_1, L3_1, L4_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBRequireVar
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.RequiredVar = "DrainAmount"
+L2_1.RequiredVarTable = "InstanceVars"
+L1_1.Params = L2_1
+L2_1 = {}
+L3_1 = BBMath
+L2_1.Function = L3_1
+L3_1 = {}
+L3_1.Src1Var = "DrainAmount"
+L3_1.Src1VarTable = "InstanceVars"
+L3_1.Src2Var = "Tally"
+L3_1.Src2VarTable = "CharVars"
+L3_1.Src1Value = 0
+L3_1.Src2Value = 0
+L3_1.DestVar = "Tally"
+L3_1.DestVarTable = "CharVars"
+L4_1 = MO_ADD
+L3_1.MathOp = L4_1
+L2_1.Params = L3_1
+L0_1[1] = L1_1
+L0_1[2] = L2_1
+OnBuffActivateBuildingBlocks = L0_1

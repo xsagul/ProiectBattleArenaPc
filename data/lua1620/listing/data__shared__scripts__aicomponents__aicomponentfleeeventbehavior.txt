@@ -1,0 +1,187 @@
+
+main <?:0,0> (40 instructions, 160 bytes at 000001D7529E34C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 12 constants, 5 functions
+	1	[-]	LOADK    	0 -2	; 1
+	2	[-]	SETGLOBAL	0 -1	; HOSTILE
+	3	[-]	LOADK    	0 -4	; 0
+	4	[-]	SETGLOBAL	0 -3	; INACTIVE
+	5	[-]	NEWTABLE 	0 0 1
+	6	[-]	SETTABLE 	0 -6 -7	; "TimerCallbackName" "TimerFlee"
+	7	[-]	SETGLOBAL	0 -5	; DefaultFleeBehavior
+	8	[-]	GETGLOBAL	0 -8	; RegisterForEvent
+	9	[-]	LOADK    	1 -9	; "ComponentInit"
+	10	[-]	GETGLOBAL	2 -5	; DefaultFleeBehavior
+	11	[-]	CALL     	0 3 1
+	12	[-]	GETGLOBAL	0 -8	; RegisterForEvent
+	13	[-]	LOADK    	1 -10	; "OnFleeBegin"
+	14	[-]	GETGLOBAL	2 -5	; DefaultFleeBehavior
+	15	[-]	CALL     	0 3 1
+	16	[-]	GETGLOBAL	0 -8	; RegisterForEvent
+	17	[-]	LOADK    	1 -11	; "OnFleeEnd"
+	18	[-]	GETGLOBAL	2 -5	; DefaultFleeBehavior
+	19	[-]	CALL     	0 3 1
+	20	[-]	GETGLOBAL	0 -8	; RegisterForEvent
+	21	[-]	LOADK    	1 -12	; "ComponentHalt"
+	22	[-]	GETGLOBAL	2 -5	; DefaultFleeBehavior
+	23	[-]	CALL     	0 3 1
+	24	[-]	GETGLOBAL	0 -5	; DefaultFleeBehavior
+	25	[-]	CLOSURE  	1 0	; 000001D7529E36C0
+	26	[-]	SETTABLE 	0 -9 1	; "ComponentInit" -
+	27	[-]	GETGLOBAL	0 -5	; DefaultFleeBehavior
+	28	[-]	CLOSURE  	1 1	; 000001D7529E3740
+	29	[-]	SETTABLE 	0 -12 1	; "ComponentHalt" -
+	30	[-]	GETGLOBAL	0 -5	; DefaultFleeBehavior
+	31	[-]	CLOSURE  	1 2	; 000001D7529E37C0
+	32	[-]	SETTABLE 	0 -10 1	; "OnFleeBegin" -
+	33	[-]	GETGLOBAL	0 -5	; DefaultFleeBehavior
+	34	[-]	CLOSURE  	1 3	; 000001D7529E38D0
+	35	[-]	SETTABLE 	0 -11 1	; "OnFleeEnd" -
+	36	[-]	CLOSURE  	0 4	; 000001D7529E1990
+	37	[-]	SETGLOBAL	0 -7	; TimerFlee
+	38	[-]	GETGLOBAL	0 -5	; DefaultFleeBehavior
+	39	[-]	RETURN   	0 2
+	40	[-]	RETURN   	0 1
+constants (12) for 000001D7529E34C0:
+	1	"HOSTILE"
+	2	1
+	3	"INACTIVE"
+	4	0
+	5	"DefaultFleeBehavior"
+	6	"TimerCallbackName"
+	7	"TimerFlee"
+	8	"RegisterForEvent"
+	9	"ComponentInit"
+	10	"OnFleeBegin"
+	11	"OnFleeEnd"
+	12	"ComponentHalt"
+locals (0) for 000001D7529E34C0:
+upvalues (0) for 000001D7529E34C0:
+
+function <?:14,17> (9 instructions, 36 bytes at 000001D7529E36C0)
+1 param, 5 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; InitTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	LOADK    	3 -3	; 0.5
+	4	[-]	LOADBOOL 	4 1 0
+	5	[-]	CALL     	1 4 1
+	6	[-]	GETGLOBAL	1 -4	; StopTimer
+	7	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	8	[-]	CALL     	1 2 1
+	9	[-]	RETURN   	0 1
+constants (4) for 000001D7529E36C0:
+	1	"InitTimer"
+	2	"TimerCallbackName"
+	3	0.5
+	4	"StopTimer"
+locals (0) for 000001D7529E36C0:
+upvalues (0) for 000001D7529E36C0:
+
+function <?:19,21> (4 instructions, 16 bytes at 000001D7529E3740)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; StopTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	CALL     	1 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 000001D7529E3740:
+	1	"StopTimer"
+	2	"TimerCallbackName"
+locals (0) for 000001D7529E3740:
+upvalues (0) for 000001D7529E3740:
+
+function <?:23,32> (16 instructions, 64 bytes at 000001D7529E37C0)
+1 param, 4 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetState
+	2	[-]	CALL     	1 1 2
+	3	[-]	GETGLOBAL	2 -2	; AI_HALTED
+	4	[-]	EQ       	0 1 2
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	2 -3	; Event
+	8	[-]	LOADK    	3 -4	; "FleeBegin"
+	9	[-]	CALL     	2 2 1
+	10	[-]	GETGLOBAL	2 -5	; TurnOffAutoAttack
+	11	[-]	GETGLOBAL	3 -6	; STOPREASON_IMMEDIATELY
+	12	[-]	CALL     	2 2 1
+	13	[-]	GETGLOBAL	2 -7	; ResetAndStartTimer
+	14	[-]	GETTABLE 	3 0 -8	; "TimerCallbackName"
+	15	[-]	CALL     	2 2 1
+	16	[-]	RETURN   	0 1
+constants (8) for 000001D7529E37C0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"Event"
+	4	"FleeBegin"
+	5	"TurnOffAutoAttack"
+	6	"STOPREASON_IMMEDIATELY"
+	7	"ResetAndStartTimer"
+	8	"TimerCallbackName"
+locals (0) for 000001D7529E37C0:
+upvalues (0) for 000001D7529E37C0:
+
+function <?:34,50> (29 instructions, 116 bytes at 000001D7529E38D0)
+1 param, 4 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetState
+	2	[-]	CALL     	1 1 2
+	3	[-]	GETGLOBAL	2 -2	; AI_HALTED
+	4	[-]	EQ       	0 1 2
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	2 -3	; StopTimer
+	8	[-]	GETTABLE 	3 0 -4	; "TimerCallbackName"
+	9	[-]	CALL     	2 2 1
+	10	[-]	GETGLOBAL	2 -5	; SetRoamState
+	11	[-]	GETGLOBAL	3 -6	; HOSTILE
+	12	[-]	CALL     	2 2 1
+	13	[-]	GETGLOBAL	2 -7	; NetSetState
+	14	[-]	GETGLOBAL	3 -8	; AI_ATTACK
+	15	[-]	CALL     	2 2 1
+	16	[-]	GETGLOBAL	2 -9	; TimerRetreat
+	17	[-]	EQ       	1 2 -10	; - nil
+	18	[-]	JMP      	2	; to 21
+	19	[-]	GETGLOBAL	2 -9	; TimerRetreat
+	20	[-]	CALL     	2 1 1
+	21	[-]	GETGLOBAL	2 -11	; TimerAttack
+	22	[-]	EQ       	1 2 -10	; - nil
+	23	[-]	JMP      	2	; to 26
+	24	[-]	GETGLOBAL	2 -11	; TimerAttack
+	25	[-]	CALL     	2 1 1
+	26	[-]	GETGLOBAL	2 -12	; Event
+	27	[-]	LOADK    	3 -13	; "FleeEnd"
+	28	[-]	CALL     	2 2 1
+	29	[-]	RETURN   	0 1
+constants (13) for 000001D7529E38D0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"StopTimer"
+	4	"TimerCallbackName"
+	5	"SetRoamState"
+	6	"HOSTILE"
+	7	"NetSetState"
+	8	"AI_ATTACK"
+	9	"TimerRetreat"
+	10	nil
+	11	"TimerAttack"
+	12	"Event"
+	13	"FleeEnd"
+locals (0) for 000001D7529E38D0:
+upvalues (0) for 000001D7529E38D0:
+
+function <?:53,59> (10 instructions, 40 bytes at 000001D7529E1990)
+0 params, 3 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; Event
+	8	[-]	LOADK    	2 -4	; "FleeTimer"
+	9	[-]	CALL     	1 2 1
+	10	[-]	RETURN   	0 1
+constants (4) for 000001D7529E1990:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"Event"
+	4	"FleeTimer"
+locals (0) for 000001D7529E1990:
+upvalues (0) for 000001D7529E1990:

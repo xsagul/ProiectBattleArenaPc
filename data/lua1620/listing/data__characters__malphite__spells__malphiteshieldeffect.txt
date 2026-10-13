@@ -1,0 +1,31 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 00000177527A3600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; "ASSETS/Characters/Malphite/HUD/Icons2D/Malphite_Passive.dds"
+	2	[-]	SETGLOBAL	0 -1	; BuffTextureName
+	3	[-]	LOADK    	0 -4	; "MalphiteObduracyEffect"
+	4	[-]	SETGLOBAL	0 -3	; BuffName
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -5	; NonDispellable
+	7	[-]	LOADK    	0 -7	; 3
+	8	[-]	SETGLOBAL	0 -6	; OnPreDamagePriority
+	9	[-]	NEWTABLE 	0 1 0
+	10	[-]	LOADK    	1 -9	; "MalphiteSkin06"
+	11	[-]	SETLIST  	0 1 1	; 1
+	12	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -10	; DoOnPreDamageInExpirationOrder
+	15	[-]	RETURN   	0 1
+constants (10) for 00000177527A3600:
+	1	"BuffTextureName"
+	2	"ASSETS/Characters/Malphite/HUD/Icons2D/Malphite_Passive.dds"
+	3	"BuffName"
+	4	"MalphiteObduracyEffect"
+	5	"NonDispellable"
+	6	"OnPreDamagePriority"
+	7	3
+	8	"SpellFXOverrideSkins"
+	9	"MalphiteSkin06"
+	10	"DoOnPreDamageInExpirationOrder"
+locals (0) for 00000177527A3600:
+upvalues (0) for 00000177527A3600:

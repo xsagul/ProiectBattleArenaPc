@@ -1,0 +1,96 @@
+
+main <?:0,0> (52 instructions, 208 bytes at 000001AFF53335F0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 38 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Jayce/HUD/Icons2D/JayceW_Ranged.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "JayceHyperCharge"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; "Jayce_Base_Hex_Buff_Ready"
+	12	[-]	SETGLOBAL	0 -8	; AutoBuffActivateEffect
+	13	[-]	LOADK    	0 -11	; "Buffbone_CSTM_Exhaust_1"
+	14	[-]	SETGLOBAL	0 -10	; AutoBuffActivateAttachBoneName
+	15	[-]	LOADK    	0 -9	; "Jayce_Base_Hex_Buff_Ready"
+	16	[-]	SETGLOBAL	0 -12	; AutoBuffActivateEffect2
+	17	[-]	LOADK    	0 -14	; "Buffbone_CSTM_Exhaust_2"
+	18	[-]	SETGLOBAL	0 -13	; AutoBuffActivateAttachBoneName2
+	19	[-]	LOADK    	0 -9	; "Jayce_Base_Hex_Buff_Ready"
+	20	[-]	SETGLOBAL	0 -15	; AutoBuffActivateEffect3
+	21	[-]	LOADK    	0 -17	; "Buffbone_CSTM_Exhaust_3"
+	22	[-]	SETGLOBAL	0 -16	; AutoBuffActivateAttachBoneName3
+	23	[-]	LOADK    	0 -19	; "r:Jayce_Hex_Buff_Ready2"
+	24	[-]	SETGLOBAL	0 -18	; AutoBuffActivateEffect4
+	25	[-]	LOADK    	0 -21	; "Buffbone_CSTM_Weapon_Gap_1"
+	26	[-]	SETGLOBAL	0 -20	; AutoBuffActivateAttachBoneName4
+	27	[-]	LOADK    	0 -23	; 2
+	28	[-]	SETGLOBAL	0 -22	; SpellToggleSlot
+	29	[-]	LOADK    	0 -25	; 3
+	30	[-]	SETGLOBAL	0 -24	; OnPreDamagePriority
+	31	[-]	NEWTABLE 	0 1 0
+	32	[-]	LOADK    	1 -27	; "JayceSkin03"
+	33	[-]	SETLIST  	0 1 1	; 1
+	34	[-]	SETGLOBAL	0 -26	; SpellFXOverrideSkins
+	35	[-]	LOADBOOL 	0 0 0
+	36	[-]	SETGLOBAL	0 -28	; IsDamagingSpell
+	37	[-]	NEWTABLE 	0 0 6
+	38	[-]	NEWTABLE 	1 5 0
+	39	[-]	LOADK    	2 -31	; 4
+	40	[-]	LOADK    	3 -31	; 4
+	41	[-]	LOADK    	4 -31	; 4
+	42	[-]	LOADK    	5 -31	; 4
+	43	[-]	LOADK    	6 -31	; 4
+	44	[-]	SETLIST  	1 5 1	; 1
+	45	[-]	SETTABLE 	0 -30 1	; "MaximumHits" -
+	46	[-]	SETTABLE 	0 -32 -33	; "CanHitCaster" 0
+	47	[-]	SETTABLE 	0 -34 -33	; "CanHitSameTarget" 0
+	48	[-]	SETTABLE 	0 -35 -33	; "CanHitSameTargetConsecutively" 0
+	49	[-]	SETTABLE 	0 -36 -37	; "CanHitEnemies" 1
+	50	[-]	SETTABLE 	0 -38 -33	; "CanHitFriends" 0
+	51	[-]	SETGLOBAL	0 -29	; ChainMissileParameters
+	52	[-]	RETURN   	0 1
+constants (38) for 000001AFF53335F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Jayce/HUD/Icons2D/JayceW_Ranged.dds"
+	6	"BuffName"
+	7	"JayceHyperCharge"
+	8	"AutoBuffActivateEffect"
+	9	"Jayce_Base_Hex_Buff_Ready"
+	10	"AutoBuffActivateAttachBoneName"
+	11	"Buffbone_CSTM_Exhaust_1"
+	12	"AutoBuffActivateEffect2"
+	13	"AutoBuffActivateAttachBoneName2"
+	14	"Buffbone_CSTM_Exhaust_2"
+	15	"AutoBuffActivateEffect3"
+	16	"AutoBuffActivateAttachBoneName3"
+	17	"Buffbone_CSTM_Exhaust_3"
+	18	"AutoBuffActivateEffect4"
+	19	"r:Jayce_Hex_Buff_Ready2"
+	20	"AutoBuffActivateAttachBoneName4"
+	21	"Buffbone_CSTM_Weapon_Gap_1"
+	22	"SpellToggleSlot"
+	23	2
+	24	"OnPreDamagePriority"
+	25	3
+	26	"SpellFXOverrideSkins"
+	27	"JayceSkin03"
+	28	"IsDamagingSpell"
+	29	"ChainMissileParameters"
+	30	"MaximumHits"
+	31	4
+	32	"CanHitCaster"
+	33	0
+	34	"CanHitSameTarget"
+	35	"CanHitSameTargetConsecutively"
+	36	"CanHitEnemies"
+	37	1
+	38	"CanHitFriends"
+locals (0) for 000001AFF53335F0:
+upvalues (0) for 000001AFF53335F0:

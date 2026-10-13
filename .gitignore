@@ -1,4 +1,4 @@
-﻿build/
+build/
 out/
 *.basr
 
@@ -50,3 +50,18 @@ client-src.zip
 tools/third_party/*.tmp/
 client-src/lib_*.src
 NUL
+game16/
+data/exe1620/*.bin
+
+# live match captures (packets + per-match session key)
+data/live/
+
+# real replays fetched through the League client (other players' Riot ids inside): stay on this computer
+data/replays16/
+data/bb16/evidence/
+data/exe1620/*.json
+*.pkl
+*.etl
+*.pcapng
+tools/third_party/LeagueSandbox-GameServer/
+

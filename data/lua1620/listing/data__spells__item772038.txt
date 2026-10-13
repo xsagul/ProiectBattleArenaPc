@@ -1,0 +1,31 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 000001BB056534D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "Item772038"
+	6	[-]	SETGLOBAL	0 -3	; BuffName
+	7	[-]	LOADK    	0 -6	; "r:772038_ElixirAgility"
+	8	[-]	SETGLOBAL	0 -5	; AutoBuffActivateEffect
+	9	[-]	LOADK    	0 -8	; "C_Buffbone_Glb_Center_Loc"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateAttachBoneName
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -9	; PersistsThroughDeath
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -10	; NonDispellable
+	15	[-]	RETURN   	0 1
+constants (10) for 000001BB056534D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffName"
+	4	"Item772038"
+	5	"AutoBuffActivateEffect"
+	6	"r:772038_ElixirAgility"
+	7	"AutoBuffActivateAttachBoneName"
+	8	"C_Buffbone_Glb_Center_Loc"
+	9	"PersistsThroughDeath"
+	10	"NonDispellable"
+locals (0) for 000001BB056534D0:
+upvalues (0) for 000001BB056534D0:

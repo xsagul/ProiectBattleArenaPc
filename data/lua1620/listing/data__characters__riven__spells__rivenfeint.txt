@@ -1,0 +1,46 @@
+
+main <?:0,0> (24 instructions, 96 bytes at 00000225172D35C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Riven/HUD/Icons2D/RivenPathoftheExile.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "RivenFeint"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "r:Riven_E_Shield"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect
+	15	[-]	LOADK    	0 -12	; 3
+	16	[-]	SETGLOBAL	0 -11	; OnPreDamagePriority
+	17	[-]	NEWTABLE 	0 2 0
+	18	[-]	LOADK    	1 -14	; "RivenSkin05"
+	19	[-]	LOADK    	2 -15	; "RivenSkin06"
+	20	[-]	SETLIST  	0 2 1	; 1
+	21	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	22	[-]	LOADBOOL 	0 0 0
+	23	[-]	SETGLOBAL	0 -16	; IsDamagingSpell
+	24	[-]	RETURN   	0 1
+constants (16) for 00000225172D35C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Riven/HUD/Icons2D/RivenPathoftheExile.dds"
+	7	"BuffName"
+	8	"RivenFeint"
+	9	"AutoBuffActivateEffect"
+	10	"r:Riven_E_Shield"
+	11	"OnPreDamagePriority"
+	12	3
+	13	"SpellFXOverrideSkins"
+	14	"RivenSkin05"
+	15	"RivenSkin06"
+	16	"IsDamagingSpell"
+locals (0) for 00000225172D35C0:
+upvalues (0) for 00000225172D35C0:

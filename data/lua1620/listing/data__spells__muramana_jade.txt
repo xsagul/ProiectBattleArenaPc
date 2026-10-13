@@ -1,0 +1,47 @@
+
+main <?:0,0> (27 instructions, 108 bytes at 000001BAB19D34D0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Items/Icons2D/773042_Muramana_Jade.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Muramana_Jade"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "R_Buffbone_Glb_Hand_Loc"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateAttachBoneName2
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -9	; IsItemToggled
+	13	[-]	NEWTABLE 	0 5 0
+	14	[-]	LOADK    	1 -11	; 0
+	15	[-]	LOADK    	2 -11	; 0
+	16	[-]	LOADK    	3 -11	; 0
+	17	[-]	LOADK    	4 -11	; 0
+	18	[-]	LOADK    	5 -11	; 0
+	19	[-]	SETLIST  	0 5 1	; 1
+	20	[-]	SETGLOBAL	0 -10	; AutoCooldownByLevel
+	21	[-]	LOADBOOL 	0 1 0
+	22	[-]	SETGLOBAL	0 -12	; PersistsThroughDeath
+	23	[-]	LOADBOOL 	0 1 0
+	24	[-]	SETGLOBAL	0 -13	; NonDispellable
+	25	[-]	LOADBOOL 	0 1 0
+	26	[-]	SETGLOBAL	0 -14	; DoOnPreDamageInExpirationOrder
+	27	[-]	RETURN   	0 1
+constants (14) for 000001BAB19D34D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Items/Icons2D/773042_Muramana_Jade.dds"
+	5	"BuffName"
+	6	"Muramana_Jade"
+	7	"AutoBuffActivateAttachBoneName2"
+	8	"R_Buffbone_Glb_Hand_Loc"
+	9	"IsItemToggled"
+	10	"AutoCooldownByLevel"
+	11	0
+	12	"PersistsThroughDeath"
+	13	"NonDispellable"
+	14	"DoOnPreDamageInExpirationOrder"
+locals (0) for 000001BAB19D34D0:
+upvalues (0) for 000001BAB19D34D0:

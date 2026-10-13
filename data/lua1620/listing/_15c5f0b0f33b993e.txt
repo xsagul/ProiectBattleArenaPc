@@ -1,0 +1,84 @@
+
+main <?:0,0> (5 instructions, 20 bytes at 000001BD132934C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 2 constants, 2 functions
+	1	[-]	CLOSURE  	0 0	; 000001BD13293540
+	2	[-]	SETGLOBAL	0 -1	; OnInitClient
+	3	[-]	CLOSURE  	0 1	; 000001BD13293730
+	4	[-]	SETGLOBAL	0 -2	; OnInitServer
+	5	[-]	RETURN   	0 1
+constants (2) for 000001BD132934C0:
+	1	"OnInitClient"
+	2	"OnInitServer"
+locals (0) for 000001BD132934C0:
+upvalues (0) for 000001BD132934C0:
+
+function <?:1,18> (49 instructions, 196 bytes at 000001BD13293540)
+0 params, 3 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	2	[-]	LOADK    	1 -2	; "HA_ChaosMinionMelee"
+	3	[-]	LOADK    	2 -3	; 6
+	4	[-]	CALL     	0 3 1
+	5	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	6	[-]	LOADK    	1 -4	; "HA_ChaosMinionRanged"
+	7	[-]	LOADK    	2 -3	; 6
+	8	[-]	CALL     	0 3 1
+	9	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	10	[-]	LOADK    	1 -5	; "HA_ChaosMinionSiege"
+	11	[-]	LOADK    	2 -3	; 6
+	12	[-]	CALL     	0 3 1
+	13	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	14	[-]	LOADK    	1 -6	; "HA_OrderMinionMelee"
+	15	[-]	LOADK    	2 -3	; 6
+	16	[-]	CALL     	0 3 1
+	17	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	18	[-]	LOADK    	1 -7	; "HA_OrderMinionRanged"
+	19	[-]	LOADK    	2 -3	; 6
+	20	[-]	CALL     	0 3 1
+	21	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	22	[-]	LOADK    	1 -8	; "HA_OrderMinionSiege"
+	23	[-]	LOADK    	2 -3	; 6
+	24	[-]	CALL     	0 3 1
+	25	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	26	[-]	LOADK    	1 -2	; "HA_ChaosMinionMelee"
+	27	[-]	LOADK    	2 -9	; 7
+	28	[-]	CALL     	0 3 1
+	29	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	30	[-]	LOADK    	1 -4	; "HA_ChaosMinionRanged"
+	31	[-]	LOADK    	2 -9	; 7
+	32	[-]	CALL     	0 3 1
+	33	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	34	[-]	LOADK    	1 -5	; "HA_ChaosMinionSiege"
+	35	[-]	LOADK    	2 -9	; 7
+	36	[-]	CALL     	0 3 1
+	37	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	38	[-]	LOADK    	1 -6	; "HA_OrderMinionMelee"
+	39	[-]	LOADK    	2 -9	; 7
+	40	[-]	CALL     	0 3 1
+	41	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	42	[-]	LOADK    	1 -7	; "HA_OrderMinionRanged"
+	43	[-]	LOADK    	2 -9	; 7
+	44	[-]	CALL     	0 3 1
+	45	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	46	[-]	LOADK    	1 -8	; "HA_OrderMinionSiege"
+	47	[-]	LOADK    	2 -9	; 7
+	48	[-]	CALL     	0 3 1
+	49	[-]	RETURN   	0 1
+constants (9) for 000001BD13293540:
+	1	"PreloadCharacterWithSkinID"
+	2	"HA_ChaosMinionMelee"
+	3	6
+	4	"HA_ChaosMinionRanged"
+	5	"HA_ChaosMinionSiege"
+	6	"HA_OrderMinionMelee"
+	7	"HA_OrderMinionRanged"
+	8	"HA_OrderMinionSiege"
+	9	7
+locals (0) for 000001BD13293540:
+upvalues (0) for 000001BD13293540:
+
+function <?:20,22> (1 instruction, 4 bytes at 000001BD13293730)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000001BD13293730:
+locals (0) for 000001BD13293730:
+upvalues (0) for 000001BD13293730:

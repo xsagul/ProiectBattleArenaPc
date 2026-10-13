@@ -1,0 +1,208 @@
+
+main <?:0,0> (42 instructions, 168 bytes at 0000021C710734C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 14 constants, 5 functions
+	1	[-]	LOADK    	0 -2	; 2
+	2	[-]	SETGLOBAL	0 -1	; RUN_IN_FEAR
+	3	[-]	LOADK    	0 -4	; 1
+	4	[-]	SETGLOBAL	0 -3	; HOSTILE
+	5	[-]	LOADK    	0 -6	; 0
+	6	[-]	SETGLOBAL	0 -5	; INACTIVE
+	7	[-]	NEWTABLE 	0 0 1
+	8	[-]	SETTABLE 	0 -8 -9	; "TimerCallbackName" "TimerFlee"
+	9	[-]	SETGLOBAL	0 -7	; DefaultFleeBehavior
+	10	[-]	GETGLOBAL	0 -10	; RegisterForEvent
+	11	[-]	LOADK    	1 -11	; "ComponentInit"
+	12	[-]	GETGLOBAL	2 -7	; DefaultFleeBehavior
+	13	[-]	CALL     	0 3 1
+	14	[-]	GETGLOBAL	0 -10	; RegisterForEvent
+	15	[-]	LOADK    	1 -12	; "OnFleeBegin"
+	16	[-]	GETGLOBAL	2 -7	; DefaultFleeBehavior
+	17	[-]	CALL     	0 3 1
+	18	[-]	GETGLOBAL	0 -10	; RegisterForEvent
+	19	[-]	LOADK    	1 -13	; "OnFleeEnd"
+	20	[-]	GETGLOBAL	2 -7	; DefaultFleeBehavior
+	21	[-]	CALL     	0 3 1
+	22	[-]	GETGLOBAL	0 -10	; RegisterForEvent
+	23	[-]	LOADK    	1 -14	; "ComponentHalt"
+	24	[-]	GETGLOBAL	2 -7	; DefaultFleeBehavior
+	25	[-]	CALL     	0 3 1
+	26	[-]	GETGLOBAL	0 -7	; DefaultFleeBehavior
+	27	[-]	CLOSURE  	1 0	; 0000021C710736E0
+	28	[-]	SETTABLE 	0 -11 1	; "ComponentInit" -
+	29	[-]	GETGLOBAL	0 -7	; DefaultFleeBehavior
+	30	[-]	CLOSURE  	1 1	; 0000021C71073760
+	31	[-]	SETTABLE 	0 -14 1	; "ComponentHalt" -
+	32	[-]	GETGLOBAL	0 -7	; DefaultFleeBehavior
+	33	[-]	CLOSURE  	1 2	; 0000021C710737E0
+	34	[-]	SETTABLE 	0 -12 1	; "OnFleeBegin" -
+	35	[-]	GETGLOBAL	0 -7	; DefaultFleeBehavior
+	36	[-]	CLOSURE  	1 3	; 0000021C71071990
+	37	[-]	SETTABLE 	0 -13 1	; "OnFleeEnd" -
+	38	[-]	CLOSURE  	0 4	; 0000021C71071B40
+	39	[-]	SETGLOBAL	0 -9	; TimerFlee
+	40	[-]	GETGLOBAL	0 -7	; DefaultFleeBehavior
+	41	[-]	RETURN   	0 2
+	42	[-]	RETURN   	0 1
+constants (14) for 0000021C710734C0:
+	1	"RUN_IN_FEAR"
+	2	2
+	3	"HOSTILE"
+	4	1
+	5	"INACTIVE"
+	6	0
+	7	"DefaultFleeBehavior"
+	8	"TimerCallbackName"
+	9	"TimerFlee"
+	10	"RegisterForEvent"
+	11	"ComponentInit"
+	12	"OnFleeBegin"
+	13	"OnFleeEnd"
+	14	"ComponentHalt"
+locals (0) for 0000021C710734C0:
+upvalues (0) for 0000021C710734C0:
+
+function <?:15,18> (9 instructions, 36 bytes at 0000021C710736E0)
+1 param, 5 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; InitTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	LOADK    	3 -3	; 0.5
+	4	[-]	LOADBOOL 	4 1 0
+	5	[-]	CALL     	1 4 1
+	6	[-]	GETGLOBAL	1 -4	; StopTimer
+	7	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	8	[-]	CALL     	1 2 1
+	9	[-]	RETURN   	0 1
+constants (4) for 0000021C710736E0:
+	1	"InitTimer"
+	2	"TimerCallbackName"
+	3	0.5
+	4	"StopTimer"
+locals (0) for 0000021C710736E0:
+upvalues (0) for 0000021C710736E0:
+
+function <?:20,22> (4 instructions, 16 bytes at 0000021C71073760)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; StopTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	CALL     	1 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 0000021C71073760:
+	1	"StopTimer"
+	2	"TimerCallbackName"
+locals (0) for 0000021C71073760:
+upvalues (0) for 0000021C71073760:
+
+function <?:24,35> (23 instructions, 92 bytes at 0000021C710737E0)
+1 param, 5 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetState
+	2	[-]	CALL     	1 1 2
+	3	[-]	GETGLOBAL	2 -2	; AI_HALTED
+	4	[-]	EQ       	0 1 2
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	2 -4	; MakeFleePoint
+	8	[-]	CALL     	2 1 2
+	9	[-]	SETGLOBAL	2 -3	; fleePoint
+	10	[-]	GETGLOBAL	2 -5	; SetStateAndMove
+	11	[-]	GETGLOBAL	3 -6	; AI_FLEEING
+	12	[-]	GETGLOBAL	4 -3	; fleePoint
+	13	[-]	CALL     	2 3 1
+	14	[-]	GETGLOBAL	2 -7	; SetRoamState
+	15	[-]	GETGLOBAL	3 -8	; RUN_IN_FEAR
+	16	[-]	CALL     	2 2 1
+	17	[-]	GETGLOBAL	2 -9	; TurnOffAutoAttack
+	18	[-]	GETGLOBAL	3 -10	; STOPREASON_IMMEDIATELY
+	19	[-]	CALL     	2 2 1
+	20	[-]	GETGLOBAL	2 -11	; ResetAndStartTimer
+	21	[-]	GETTABLE 	3 0 -12	; "TimerCallbackName"
+	22	[-]	CALL     	2 2 1
+	23	[-]	RETURN   	0 1
+constants (12) for 0000021C710737E0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"fleePoint"
+	4	"MakeFleePoint"
+	5	"SetStateAndMove"
+	6	"AI_FLEEING"
+	7	"SetRoamState"
+	8	"RUN_IN_FEAR"
+	9	"TurnOffAutoAttack"
+	10	"STOPREASON_IMMEDIATELY"
+	11	"ResetAndStartTimer"
+	12	"TimerCallbackName"
+locals (0) for 0000021C710737E0:
+upvalues (0) for 0000021C710737E0:
+
+function <?:37,52> (26 instructions, 104 bytes at 0000021C71071990)
+1 param, 4 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetState
+	2	[-]	CALL     	1 1 2
+	3	[-]	GETGLOBAL	2 -2	; AI_HALTED
+	4	[-]	EQ       	0 1 2
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	2 -3	; StopTimer
+	8	[-]	GETTABLE 	3 0 -4	; "TimerCallbackName"
+	9	[-]	CALL     	2 2 1
+	10	[-]	GETGLOBAL	2 -5	; SetRoamState
+	11	[-]	GETGLOBAL	3 -6	; HOSTILE
+	12	[-]	CALL     	2 2 1
+	13	[-]	GETGLOBAL	2 -7	; NetSetState
+	14	[-]	GETGLOBAL	3 -8	; AI_ATTACK
+	15	[-]	CALL     	2 2 1
+	16	[-]	GETGLOBAL	2 -9	; TimerRetreat
+	17	[-]	EQ       	1 2 -10	; - nil
+	18	[-]	JMP      	2	; to 21
+	19	[-]	GETGLOBAL	2 -9	; TimerRetreat
+	20	[-]	CALL     	2 1 1
+	21	[-]	GETGLOBAL	2 -11	; TimerAttack
+	22	[-]	EQ       	1 2 -10	; - nil
+	23	[-]	JMP      	2	; to 26
+	24	[-]	GETGLOBAL	2 -11	; TimerAttack
+	25	[-]	CALL     	2 1 1
+	26	[-]	RETURN   	0 1
+constants (11) for 0000021C71071990:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"StopTimer"
+	4	"TimerCallbackName"
+	5	"SetRoamState"
+	6	"HOSTILE"
+	7	"NetSetState"
+	8	"AI_ATTACK"
+	9	"TimerRetreat"
+	10	nil
+	11	"TimerAttack"
+locals (0) for 0000021C71071990:
+upvalues (0) for 0000021C71071990:
+
+function <?:55,63> (17 instructions, 68 bytes at 0000021C71071B40)
+0 params, 4 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; MakeFleePoint
+	8	[-]	CALL     	1 1 2
+	9	[-]	SETGLOBAL	1 -3	; fleePoint
+	10	[-]	GETGLOBAL	1 -5	; SetRoamState
+	11	[-]	GETGLOBAL	2 -6	; RUN_IN_FEAR
+	12	[-]	CALL     	1 2 1
+	13	[-]	GETGLOBAL	1 -7	; SetStateAndMove
+	14	[-]	GETGLOBAL	2 -8	; AI_FLEEING
+	15	[-]	GETGLOBAL	3 -3	; fleePoint
+	16	[-]	CALL     	1 3 1
+	17	[-]	RETURN   	0 1
+constants (8) for 0000021C71071B40:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"fleePoint"
+	4	"MakeFleePoint"
+	5	"SetRoamState"
+	6	"RUN_IN_FEAR"
+	7	"SetStateAndMove"
+	8	"AI_FLEEING"
+locals (0) for 0000021C71071B40:
+upvalues (0) for 0000021C71071B40:

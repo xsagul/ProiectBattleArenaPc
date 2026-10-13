@@ -1,0 +1,29 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 0000015D399234D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 0 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "doesnotexist.troy"
+	10	[-]	SETGLOBAL	0 -5	; AutoBuffActivateEffect
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -7	; PersistsThroughDeath
+	13	[-]	LOADBOOL 	0 0 0
+	14	[-]	SETGLOBAL	0 -8	; IsDamagingSpell
+	15	[-]	RETURN   	0 1
+constants (8) for 0000015D399234D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"AutoBuffActivateEffect"
+	6	"doesnotexist.troy"
+	7	"PersistsThroughDeath"
+	8	"IsDamagingSpell"
+locals (0) for 0000015D399234D0:
+upvalues (0) for 0000015D399234D0:

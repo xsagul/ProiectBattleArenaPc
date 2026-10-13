@@ -1,0 +1,44 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 0000017E658B35D0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Viktor/HUD/Icons2D/Viktor_Q_Buff.ViktorVGU.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	NEWTABLE 	0 5 0
+	8	[-]	LOADK    	1 -6	; 16
+	9	[-]	LOADK    	2 -7	; 14
+	10	[-]	LOADK    	3 -8	; 12
+	11	[-]	LOADK    	4 -9	; 10
+	12	[-]	LOADK    	5 -10	; 8
+	13	[-]	SETLIST  	0 5 1	; 1
+	14	[-]	SETGLOBAL	0 -5	; AutoCooldownByLevel
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -11	; NonDispellable
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -13	; TriggersSpellCasts
+	21	[-]	LOADK    	0 -15	; 1
+	22	[-]	SETGLOBAL	0 -14	; SetSpellDamageRatio
+	23	[-]	RETURN   	0 1
+constants (15) for 0000017E658B35D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Viktor/HUD/Icons2D/Viktor_Q_Buff.ViktorVGU.dds"
+	5	"AutoCooldownByLevel"
+	6	16
+	7	14
+	8	12
+	9	10
+	10	8
+	11	"NonDispellable"
+	12	"IsDamagingSpell"
+	13	"TriggersSpellCasts"
+	14	"SetSpellDamageRatio"
+	15	1
+locals (0) for 0000017E658B35D0:
+upvalues (0) for 0000017E658B35D0:

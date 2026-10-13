@@ -1,0 +1,343 @@
+
+main <?:0,0> (43 instructions, 172 bytes at 000002C53A073590)
+0+ params, 2 slots, 0 upvalues, 0 locals, 25 constants, 14 functions
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "GlobalLevelScript"
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -3	; DoLuaLevel
+	5	[-]	LOADK    	1 -4	; "BBLuaConversionLibrary"
+	6	[-]	CALL     	0 2 1
+	7	[-]	LOADK    	0 -6	; 25
+	8	[-]	SETGLOBAL	0 -5	; EVENT_STAGE_WELCOME_TIME
+	9	[-]	LOADK    	0 -8	; 35
+	10	[-]	SETGLOBAL	0 -7	; EVENT_STAGE_PREANNOUNCE_TIME
+	11	[-]	LOADK    	0 -10	; 30
+	12	[-]	SETGLOBAL	0 -9	; EVENT_STAGE_MINIONS_SPAWNED_TIME
+	13	[-]	LOADK    	0 -10	; 30
+	14	[-]	SETGLOBAL	0 -11	; INITIAL_TIME_TO_SPAWN
+	15	[-]	CLOSURE  	0 0	; 000002C53A071AF0
+	16	[-]	SETGLOBAL	0 -12	; OnLevelInit
+	17	[-]	CLOSURE  	0 1	; 000002C53A071C00
+	18	[-]	SETGLOBAL	0 -13	; OnLevelInitServer
+	19	[-]	CLOSURE  	0 2	; 000002C53A073D50
+	20	[-]	SETGLOBAL	0 -14	; OnPostLevelLoad
+	21	[-]	CLOSURE  	0 3	; 000002C53A073F10
+	22	[-]	SETGLOBAL	0 -15	; OnLevelReset
+	23	[-]	CLOSURE  	0 4	; 000002C53A074010
+	24	[-]	SETGLOBAL	0 -16	; OnGameStartup
+	25	[-]	CLOSURE  	0 5	; 000002C53A074090
+	26	[-]	SETGLOBAL	0 -17	; PostGameSetup
+	27	[-]	CLOSURE  	0 6	; 000002C53A074110
+	28	[-]	SETGLOBAL	0 -18	; PostGameUpdate
+	29	[-]	CLOSURE  	0 7	; 000002C53A074190
+	30	[-]	SETGLOBAL	0 -19	; HandleDestroyedObject
+	31	[-]	CLOSURE  	0 8	; 000002C53A074210
+	32	[-]	SETGLOBAL	0 -20	; OnGameSwapChampion
+	33	[-]	CLOSURE  	0 9	; 000002C53A074660
+	34	[-]	SETGLOBAL	0 -21	; OnJumpToMidGameCheat
+	35	[-]	CLOSURE  	0 10	; 000002C53A074A60
+	36	[-]	SETGLOBAL	0 -22	; EqualizeDragonsCheat
+	37	[-]	CLOSURE  	0 11	; 000002C53A0750E0
+	38	[-]	SETGLOBAL	0 -23	; EqualizeResetPlay
+	39	[-]	CLOSURE  	0 12	; 000002C53A074560
+	40	[-]	SETGLOBAL	0 -24	; OnBarracksToggled
+	41	[-]	CLOSURE  	0 13	; 000002C53A074AE0
+	42	[-]	SETGLOBAL	0 -25	; ApplySRBuffs
+	43	[-]	RETURN   	0 1
+constants (25) for 000002C53A073590:
+	1	"DoLuaShared"
+	2	"GlobalLevelScript"
+	3	"DoLuaLevel"
+	4	"BBLuaConversionLibrary"
+	5	"EVENT_STAGE_WELCOME_TIME"
+	6	25
+	7	"EVENT_STAGE_PREANNOUNCE_TIME"
+	8	35
+	9	"EVENT_STAGE_MINIONS_SPAWNED_TIME"
+	10	30
+	11	"INITIAL_TIME_TO_SPAWN"
+	12	"OnLevelInit"
+	13	"OnLevelInitServer"
+	14	"OnPostLevelLoad"
+	15	"OnLevelReset"
+	16	"OnGameStartup"
+	17	"PostGameSetup"
+	18	"PostGameUpdate"
+	19	"HandleDestroyedObject"
+	20	"OnGameSwapChampion"
+	21	"OnJumpToMidGameCheat"
+	22	"EqualizeDragonsCheat"
+	23	"EqualizeResetPlay"
+	24	"OnBarracksToggled"
+	25	"ApplySRBuffs"
+locals (0) for 000002C53A073590:
+upvalues (0) for 000002C53A073590:
+
+function <?:22,36> (34 instructions, 136 bytes at 000002C53A071AF0)
+0 params, 2 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; PreloadCharacter
+	2	[-]	LOADK    	1 -2	; "SRUAP_MageCrystal"
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -1	; PreloadCharacter
+	5	[-]	LOADK    	1 -3	; "SRUAP_Flag"
+	6	[-]	CALL     	0 2 1
+	7	[-]	GETGLOBAL	0 -1	; PreloadCharacter
+	8	[-]	LOADK    	1 -4	; "SRU_Snail"
+	9	[-]	CALL     	0 2 1
+	10	[-]	GETGLOBAL	0 -1	; PreloadCharacter
+	11	[-]	LOADK    	1 -5	; "SRU_Dragon_prop"
+	12	[-]	CALL     	0 2 1
+	13	[-]	GETGLOBAL	0 -1	; PreloadCharacter
+	14	[-]	LOADK    	1 -6	; "SRU_Bird"
+	15	[-]	CALL     	0 2 1
+	16	[-]	GETGLOBAL	0 -1	; PreloadCharacter
+	17	[-]	LOADK    	1 -7	; "SRU_Antlermouse"
+	18	[-]	CALL     	0 2 1
+	19	[-]	GETGLOBAL	0 -1	; PreloadCharacter
+	20	[-]	LOADK    	1 -8	; "SRU_Gromp_prop"
+	21	[-]	CALL     	0 2 1
+	22	[-]	GETGLOBAL	0 -1	; PreloadCharacter
+	23	[-]	LOADK    	1 -9	; "SRU_Lizard"
+	24	[-]	CALL     	0 2 1
+	25	[-]	GETGLOBAL	0 -1	; PreloadCharacter
+	26	[-]	LOADK    	1 -10	; "SRU_StoreKeeperNorth"
+	27	[-]	CALL     	0 2 1
+	28	[-]	GETGLOBAL	0 -1	; PreloadCharacter
+	29	[-]	LOADK    	1 -11	; "SRU_StoreKeeperSouth"
+	30	[-]	CALL     	0 2 1
+	31	[-]	GETGLOBAL	0 -1	; PreloadCharacter
+	32	[-]	LOADK    	1 -12	; "PromoController"
+	33	[-]	CALL     	0 2 1
+	34	[-]	RETURN   	0 1
+constants (12) for 000002C53A071AF0:
+	1	"PreloadCharacter"
+	2	"SRUAP_MageCrystal"
+	3	"SRUAP_Flag"
+	4	"SRU_Snail"
+	5	"SRU_Dragon_prop"
+	6	"SRU_Bird"
+	7	"SRU_Antlermouse"
+	8	"SRU_Gromp_prop"
+	9	"SRU_Lizard"
+	10	"SRU_StoreKeeperNorth"
+	11	"SRU_StoreKeeperSouth"
+	12	"PromoController"
+locals (0) for 000002C53A071AF0:
+upvalues (0) for 000002C53A071AF0:
+
+function <?:38,39> (1 instruction, 4 bytes at 000002C53A071C00)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000002C53A071C00:
+locals (0) for 000002C53A071C00:
+upvalues (0) for 000002C53A071C00:
+
+function <?:41,46> (8 instructions, 32 bytes at 000002C53A073D50)
+0 params, 3 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; Log
+	2	[-]	LOADK    	1 -2	; "----------------------- Regular LevelScript PostLevelLoad ----------------------------"
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -3	; SetWorldVar
+	5	[-]	LOADK    	1 -4	; "SmiteChargeStart"
+	6	[-]	LOADK    	2 -5	; 80
+	7	[-]	CALL     	0 3 1
+	8	[-]	RETURN   	0 1
+constants (5) for 000002C53A073D50:
+	1	"Log"
+	2	"----------------------- Regular LevelScript PostLevelLoad ----------------------------"
+	3	"SetWorldVar"
+	4	"SmiteChargeStart"
+	5	80
+locals (0) for 000002C53A073D50:
+upvalues (0) for 000002C53A073D50:
+
+function <?:48,53> (8 instructions, 32 bytes at 000002C53A073F10)
+0 params, 2 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; Log
+	2	[-]	LOADK    	1 -2	; "----------------------- Regular LevelScript OnLevelReset ----------------------------"
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -3	; OnGameStartup
+	5	[-]	CALL     	0 1 1
+	6	[-]	GETGLOBAL	0 -4	; OnPostLevelLoad
+	7	[-]	CALL     	0 1 1
+	8	[-]	RETURN   	0 1
+constants (4) for 000002C53A073F10:
+	1	"Log"
+	2	"----------------------- Regular LevelScript OnLevelReset ----------------------------"
+	3	"OnGameStartup"
+	4	"OnPostLevelLoad"
+locals (0) for 000002C53A073F10:
+upvalues (0) for 000002C53A073F10:
+
+function <?:55,58> (5 instructions, 20 bytes at 000002C53A074010)
+0 params, 3 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; LuaForEachChampion
+	2	[-]	GETGLOBAL	1 -2	; TEAM_UNKNOWN
+	3	[-]	LOADK    	2 -3	; "ApplySRBuffs"
+	4	[-]	CALL     	0 3 1
+	5	[-]	RETURN   	0 1
+constants (3) for 000002C53A074010:
+	1	"LuaForEachChampion"
+	2	"TEAM_UNKNOWN"
+	3	"ApplySRBuffs"
+locals (0) for 000002C53A074010:
+upvalues (0) for 000002C53A074010:
+
+function <?:60,65> (3 instructions, 12 bytes at 000002C53A074090)
+1 param, 2 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	NEWTABLE 	1 0 0
+	2	[-]	SETGLOBAL	1 -1	; POST_GAME_EVENTS
+	3	[-]	RETURN   	0 1
+constants (1) for 000002C53A074090:
+	1	"POST_GAME_EVENTS"
+locals (0) for 000002C53A074090:
+upvalues (0) for 000002C53A074090:
+
+function <?:67,68> (1 instruction, 4 bytes at 000002C53A074110)
+2 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000002C53A074110:
+locals (0) for 000002C53A074110:
+upvalues (0) for 000002C53A074110:
+
+function <?:70,72> (3 instructions, 12 bytes at 000002C53A074190)
+1 param, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	LOADBOOL 	1 1 0
+	2	[-]	RETURN   	1 2
+	3	[-]	RETURN   	0 1
+constants (0) for 000002C53A074190:
+locals (0) for 000002C53A074190:
+upvalues (0) for 000002C53A074190:
+
+function <?:77,80> (4 instructions, 16 bytes at 000002C53A074210)
+1 param, 3 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; ApplySRBuffs
+	2	[-]	MOVE     	2 0
+	3	[-]	CALL     	1 2 1
+	4	[-]	RETURN   	0 1
+constants (1) for 000002C53A074210:
+	1	"ApplySRBuffs"
+locals (0) for 000002C53A074210:
+upvalues (0) for 000002C53A074210:
+
+function <?:83,91> (23 instructions, 92 bytes at 000002C53A074660)
+1 param, 8 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetTurret
+	2	[-]	GETGLOBAL	2 -2	; TEAM_ORDER
+	3	[-]	LOADK    	3 -3	; 1
+	4	[-]	GETGLOBAL	4 -4	; HQ_TOWER1
+	5	[-]	CALL     	1 4 2
+	6	[-]	EQ       	0 0 -5	; - 0
+	7	[-]	JMP      	8	; to 16
+	8	[-]	GETGLOBAL	2 -6	; ApplyPersistentBuff
+	9	[-]	MOVE     	3 1
+	10	[-]	LOADK    	4 -7	; "DebugMidGameBuff"
+	11	[-]	LOADBOOL 	5 0 0
+	12	[-]	LOADK    	6 -3	; 1
+	13	[-]	LOADK    	7 -3	; 1
+	14	[-]	CALL     	2 6 1
+	15	[-]	JMP      	7	; to 23
+	16	[-]	GETGLOBAL	2 -6	; ApplyPersistentBuff
+	17	[-]	MOVE     	3 1
+	18	[-]	LOADK    	4 -8	; "DebugLateGameBuff"
+	19	[-]	LOADBOOL 	5 0 0
+	20	[-]	LOADK    	6 -3	; 1
+	21	[-]	LOADK    	7 -3	; 1
+	22	[-]	CALL     	2 6 1
+	23	[-]	RETURN   	0 1
+constants (8) for 000002C53A074660:
+	1	"GetTurret"
+	2	"TEAM_ORDER"
+	3	1
+	4	"HQ_TOWER1"
+	5	0
+	6	"ApplyPersistentBuff"
+	7	"DebugMidGameBuff"
+	8	"DebugLateGameBuff"
+locals (0) for 000002C53A074660:
+upvalues (0) for 000002C53A074660:
+
+function <?:94,97> (13 instructions, 52 bytes at 000002C53A074A60)
+0 params, 7 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetTurret
+	2	[-]	GETGLOBAL	1 -2	; TEAM_ORDER
+	3	[-]	LOADK    	2 -3	; 1
+	4	[-]	LOADK    	3 -4	; 0
+	5	[-]	CALL     	0 4 2
+	6	[-]	GETGLOBAL	1 -5	; ApplyPersistentBuff
+	7	[-]	MOVE     	2 0
+	8	[-]	LOADK    	3 -6	; "DebugEqualizeDragons"
+	9	[-]	LOADBOOL 	4 0 0
+	10	[-]	LOADK    	5 -3	; 1
+	11	[-]	LOADK    	6 -3	; 1
+	12	[-]	CALL     	1 6 1
+	13	[-]	RETURN   	0 1
+constants (6) for 000002C53A074A60:
+	1	"GetTurret"
+	2	"TEAM_ORDER"
+	3	1
+	4	0
+	5	"ApplyPersistentBuff"
+	6	"DebugEqualizeDragons"
+locals (0) for 000002C53A074A60:
+upvalues (0) for 000002C53A074A60:
+
+function <?:100,103> (13 instructions, 52 bytes at 000002C53A0750E0)
+0 params, 7 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetTurret
+	2	[-]	GETGLOBAL	1 -2	; TEAM_ORDER
+	3	[-]	LOADK    	2 -3	; 1
+	4	[-]	LOADK    	3 -4	; 0
+	5	[-]	CALL     	0 4 2
+	6	[-]	GETGLOBAL	1 -5	; ApplyPersistentBuff
+	7	[-]	MOVE     	2 0
+	8	[-]	LOADK    	3 -6	; "DebugResetPlay"
+	9	[-]	LOADBOOL 	4 0 0
+	10	[-]	LOADK    	5 -3	; 1
+	11	[-]	LOADK    	6 -3	; 1
+	12	[-]	CALL     	1 6 1
+	13	[-]	RETURN   	0 1
+constants (6) for 000002C53A0750E0:
+	1	"GetTurret"
+	2	"TEAM_ORDER"
+	3	1
+	4	0
+	5	"ApplyPersistentBuff"
+	6	"DebugResetPlay"
+locals (0) for 000002C53A0750E0:
+upvalues (0) for 000002C53A0750E0:
+
+function <?:106,110> (3 instructions, 12 bytes at 000002C53A074560)
+1 param, 2 slots, 0 upvalues, 0 locals, 1 constant, 0 functions
+	1	[-]	EQ       	0 0 -1	; - 0
+	2	[-]	JMP      	0	; to 3
+	3	[-]	RETURN   	0 1
+constants (1) for 000002C53A074560:
+	1	0
+locals (0) for 000002C53A074560:
+upvalues (0) for 000002C53A074560:
+
+function <?:117,122> (15 instructions, 60 bytes at 000002C53A074AE0)
+1 param, 7 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; ApplyPersistentBuff
+	2	[-]	MOVE     	2 0
+	3	[-]	LOADK    	3 -2	; "S6Test_RegionRules"
+	4	[-]	LOADBOOL 	4 0 0
+	5	[-]	LOADK    	5 -3	; 1
+	6	[-]	LOADK    	6 -3	; 1
+	7	[-]	CALL     	1 6 1
+	8	[-]	GETGLOBAL	1 -1	; ApplyPersistentBuff
+	9	[-]	MOVE     	2 0
+	10	[-]	LOADK    	3 -4	; "SRChampionBuff"
+	11	[-]	LOADBOOL 	4 0 0
+	12	[-]	LOADK    	5 -3	; 1
+	13	[-]	LOADK    	6 -3	; 1
+	14	[-]	CALL     	1 6 1
+	15	[-]	RETURN   	0 1
+constants (4) for 000002C53A074AE0:
+	1	"ApplyPersistentBuff"
+	2	"S6Test_RegionRules"
+	3	1
+	4	"SRChampionBuff"
+locals (0) for 000002C53A074AE0:
+upvalues (0) for 000002C53A074AE0:

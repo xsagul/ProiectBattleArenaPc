@@ -1,0 +1,41 @@
+
+main <?:0,0> (20 instructions, 80 bytes at 000001E2913035D0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/UX/Jade/S3Icons/SameSized/Jade_Sona_AriaofPerseverance.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Jade_SonaR"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "DATA/Shared/Particles/LOC_Stun.troy"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect2
+	11	[-]	LOADK    	0 -10	; "head"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName2
+	13	[-]	LOADK    	0 -12	; "game_floatingtext_Stunned"
+	14	[-]	SETGLOBAL	0 -11	; PopupMessage1
+	15	[-]	NEWTABLE 	0 2 0
+	16	[-]	LOADK    	1 -14	; "GuqinJade_Sona"
+	17	[-]	LOADK    	2 -15	; "PaxJade_Sona"
+	18	[-]	SETLIST  	0 2 1	; 1
+	19	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	20	[-]	RETURN   	0 1
+constants (15) for 000001E2913035D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/UX/Jade/S3Icons/SameSized/Jade_Sona_AriaofPerseverance.dds"
+	5	"BuffName"
+	6	"Jade_SonaR"
+	7	"AutoBuffActivateEffect2"
+	8	"DATA/Shared/Particles/LOC_Stun.troy"
+	9	"AutoBuffActivateAttachBoneName2"
+	10	"head"
+	11	"PopupMessage1"
+	12	"game_floatingtext_Stunned"
+	13	"SpellFXOverrideSkins"
+	14	"GuqinJade_Sona"
+	15	"PaxJade_Sona"
+locals (0) for 000001E2913035D0:
+upvalues (0) for 000001E2913035D0:

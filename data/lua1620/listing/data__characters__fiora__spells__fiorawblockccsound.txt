@@ -1,0 +1,35 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 000001790EBC35F0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Fiora/HUD/Icons2D/Fiora_Parry.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "FioraWBlockCCSound"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -7	; PersistsThroughDeath
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -9	; "FioraSkin04"
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	15	[-]	NEWTABLE 	0 1 0
+	16	[-]	LOADK    	1 -9	; "FioraSkin04"
+	17	[-]	SETLIST  	0 1 1	; 1
+	18	[-]	SETGLOBAL	0 -10	; SpellVOOverrideSkins
+	19	[-]	RETURN   	0 1
+constants (10) for 000001790EBC35F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Fiora/HUD/Icons2D/Fiora_Parry.dds"
+	5	"BuffName"
+	6	"FioraWBlockCCSound"
+	7	"PersistsThroughDeath"
+	8	"SpellFXOverrideSkins"
+	9	"FioraSkin04"
+	10	"SpellVOOverrideSkins"
+locals (0) for 000001790EBC35F0:
+upvalues (0) for 000001790EBC35F0:

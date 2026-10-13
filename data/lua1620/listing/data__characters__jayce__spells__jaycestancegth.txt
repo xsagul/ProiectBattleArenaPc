@@ -1,0 +1,69 @@
+
+main <?:0,0> (39 instructions, 156 bytes at 000002A78F0535D0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 24 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ApolloStanceDance"
+	8	[-]	SETGLOBAL	0 -4	; BuffName
+	9	[-]	LOADK    	0 -7	; 2
+	10	[-]	SETGLOBAL	0 -6	; SpellToggleSlot
+	11	[-]	LOADK    	0 -9	; 3
+	12	[-]	SETGLOBAL	0 -8	; OnPreDamagePriority
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -11	; "JayceSkin03"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -10	; SpellFXOverrideSkins
+	17	[-]	NEWTABLE 	0 2 0
+	18	[-]	LOADK    	1 -13	; "Jayce_Sentinel"
+	19	[-]	LOADK    	2 -11	; "JayceSkin03"
+	20	[-]	SETLIST  	0 2 1	; 1
+	21	[-]	SETGLOBAL	0 -12	; SpellVOOverrideSkins
+	22	[-]	LOADBOOL 	0 0 0
+	23	[-]	SETGLOBAL	0 -14	; IsDamagingSpell
+	24	[-]	NEWTABLE 	0 0 6
+	25	[-]	NEWTABLE 	1 5 0
+	26	[-]	LOADK    	2 -17	; 4
+	27	[-]	LOADK    	3 -17	; 4
+	28	[-]	LOADK    	4 -17	; 4
+	29	[-]	LOADK    	5 -17	; 4
+	30	[-]	LOADK    	6 -17	; 4
+	31	[-]	SETLIST  	1 5 1	; 1
+	32	[-]	SETTABLE 	0 -16 1	; "MaximumHits" -
+	33	[-]	SETTABLE 	0 -18 -19	; "CanHitCaster" 0
+	34	[-]	SETTABLE 	0 -20 -19	; "CanHitSameTarget" 0
+	35	[-]	SETTABLE 	0 -21 -19	; "CanHitSameTargetConsecutively" 0
+	36	[-]	SETTABLE 	0 -22 -23	; "CanHitEnemies" 1
+	37	[-]	SETTABLE 	0 -24 -19	; "CanHitFriends" 0
+	38	[-]	SETGLOBAL	0 -15	; ChainMissileParameters
+	39	[-]	RETURN   	0 1
+constants (24) for 000002A78F0535D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffName"
+	5	"ApolloStanceDance"
+	6	"SpellToggleSlot"
+	7	2
+	8	"OnPreDamagePriority"
+	9	3
+	10	"SpellFXOverrideSkins"
+	11	"JayceSkin03"
+	12	"SpellVOOverrideSkins"
+	13	"Jayce_Sentinel"
+	14	"IsDamagingSpell"
+	15	"ChainMissileParameters"
+	16	"MaximumHits"
+	17	4
+	18	"CanHitCaster"
+	19	0
+	20	"CanHitSameTarget"
+	21	"CanHitSameTargetConsecutively"
+	22	"CanHitEnemies"
+	23	1
+	24	"CanHitFriends"
+locals (0) for 000002A78F0535D0:
+upvalues (0) for 000002A78F0535D0:

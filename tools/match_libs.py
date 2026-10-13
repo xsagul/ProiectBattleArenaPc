@@ -43,6 +43,11 @@ def members(path):
         i += 60 + size + (size & 1)
 
 
+# The compiler writes these beside every function that needs unwinding; one shape serves any function, so finding
+# the bytes of a library's funclet in the client says nothing about whose funclet it is.
+EH_FUNCLETS = ('__ehhandler$', '__unwindfunclet$', '__catch$')
+
+
 def functions(obj):
     """(symbol, code bytes, relocated offsets) of every function in one COFF object."""
     if len(obj) < 20:
@@ -76,7 +81,7 @@ def functions(obj):
         lst.sort()
         starts = sorted({v for v, _, t in lst if t == 0x20})    # labels inside a function do not end it
         for value, name, typ in lst:
-            if typ != 0x20:
+            if typ != 0x20 or name.startswith(EH_FUNCLETS):
                 continue
             end = min([v for v in starts if v > value] + [size])
             code = obj[raw + value:raw + end]

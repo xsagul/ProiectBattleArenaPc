@@ -1,0 +1,40 @@
+
+main <?:0,0> (22 instructions, 88 bytes at 0000017EB2B334C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Teemo/HUD/Icons2D/Ruby_Teemo_RTrap_Teemo_R.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "Ruby_Teemo_RTrap"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	NEWTABLE 	0 2 0
+	12	[-]	LOADK    	1 -9	; "AstronautRuby_Teemo_RTrap"
+	13	[-]	LOADK    	2 -10	; "Ruby_Teemo_RTrapSkin08"
+	14	[-]	SETLIST  	0 2 1	; 1
+	15	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	16	[-]	NEWTABLE 	0 1 0
+	17	[-]	LOADK    	1 -10	; "Ruby_Teemo_RTrapSkin08"
+	18	[-]	SETLIST  	0 1 1	; 1
+	19	[-]	SETGLOBAL	0 -11	; SpellVOOverrideSkins
+	20	[-]	LOADBOOL 	0 0 0
+	21	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	22	[-]	RETURN   	0 1
+constants (12) for 0000017EB2B334C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Teemo/HUD/Icons2D/Ruby_Teemo_RTrap_Teemo_R.dds"
+	6	"BuffName"
+	7	"Ruby_Teemo_RTrap"
+	8	"SpellFXOverrideSkins"
+	9	"AstronautRuby_Teemo_RTrap"
+	10	"Ruby_Teemo_RTrapSkin08"
+	11	"SpellVOOverrideSkins"
+	12	"IsDamagingSpell"
+locals (0) for 0000017EB2B334C0:
+upvalues (0) for 0000017EB2B334C0:

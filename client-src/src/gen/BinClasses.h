@@ -3,6 +3,14 @@
 // the client has them as functions of their own. The members are not laid out yet (unknownXX).
 #pragma once
 #include "MetaClasses.h"
+#include "UiResourceRefs.h"
+#include "ReflectedBuffers.h"
+#include "ReflectedElementDefaults.h"
+#include "MetaPlacementSupport.h"
+#include "VfxRuntimePointers.h"
+#include "UiElementOwners.h"
+#include "PolyPlacementGlobals.h"
+#include <cstring>
 
 struct AISpellData
 {
@@ -33,7 +41,9 @@ static_assert(sizeof(AbilityObject) == 0x28, "size from the description");
 struct AbilityPrompt
 {
     AbilityPrompt();          // rva 0x710d60
-    u8 unknown00[0x3c];
+    UiHashLink AnimLink;     // +0x0, serialized hash at the first word
+    UiHashLink TextLink;     // +0x18, serialized hash at the first word
+    u8 unknown30[0xc];
 };
 static_assert(sizeof(AbilityPrompt) == 0x3c, "size from the description");
 
@@ -119,8 +129,9 @@ static_assert(sizeof(AbilityResourceStateData) == 0x20, "size from the descripti
 
 struct AbilityResourceThresholdIndicatorRange
 {
-    float rangeStart = 0.0f;     // +0x0
-    float rangeEnd = 0.0f;     // +0x4
+    AbilityResourceThresholdIndicatorRange() { rangeStart = 0; rangeEnd = 0; }
+    float rangeStart;     // +0x0
+    float rangeEnd;     // +0x4
 };
 static_assert(sizeof(AbilityResourceThresholdIndicatorRange) == 0x8, "size from the description");
 
@@ -134,7 +145,14 @@ static_assert(sizeof(AbilityResourceTypeConfig) == 0x1a8, "size from the descrip
 
 struct AbilityResourceTypeData
 {
-    u8 unknown00[0x1c];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u16 unknown0c = 0x0;
+    u8 unknown0e[0x2];
+    u32 unknown10 = 0x0;
+    u32 unknown14 = 0x0;
+    u32 unknown18 = 0x0;
 };
 static_assert(sizeof(AbilityResourceTypeData) == 0x1c, "size from the description");
 
@@ -325,6 +343,7 @@ static_assert(sizeof(ILogicIntDriver) == 0x4, "size from the description");
 
 struct ILogicBoolDriver : ILogicIntDriver
 {
+    ILogicBoolDriver();          // rva 0xa21cf0
     const MetaClass* GetClass() const override;
 };
 static_assert(sizeof(ILogicBoolDriver) == 0x4, "size from the description");
@@ -360,7 +379,7 @@ static_assert(sizeof(AnchorDouble) == 0x14, "size from the description");
 struct AnchorSingle : AnchorBase
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x8];
+    ::Vector2 Anchor{g_UiAnchorX, g_UiAnchorY}; // +0x4
 };
 static_assert(sizeof(AnchorSingle) == 0xc, "size from the description");
 
@@ -373,7 +392,9 @@ static_assert(sizeof(IInputSourceBool) == 0x4, "size from the description");
 struct AndInputSourceBool : IInputSourceBool
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(AndInputSourceBool) == 0x10, "size from the description");
 
@@ -386,7 +407,9 @@ static_assert(sizeof(IScriptCondition) == 0x4, "size from the description");
 struct AndScriptCondition : IScriptCondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(AndScriptCondition) == 0x10, "size from the description");
 
@@ -493,6 +516,7 @@ static_assert(sizeof(AnnouncementStyleTwoIconsFlanking) == 0x40, "size from the 
 struct ViewController : BinObject
 {
     const MetaClass* GetClass() const override;
+    void PostLoad(); // rva 0xaefdb0
     u8 unknown04[0x34];
 };
 static_assert(sizeof(ViewController) == 0x38, "size from the description");
@@ -627,14 +651,18 @@ static_assert(sizeof(AttackSpeedParametricUpdater) == 0x4, "size from the descri
 
 struct AudioStatusEvents
 {
-    u8 unknown00[0x24];
+    MetaString rtpcName;     // +0x0, reflected lifetime
+    MetaString startEvent;     // +0xc, reflected lifetime
+    MetaString stopEvent;     // +0x18, reflected lifetime
 };
 static_assert(sizeof(AudioStatusEvents) == 0x24, "size from the description");
 
 struct AudioSystemDataProperties
 {
     ~AudioSystemDataProperties();         // rva 0x1f43e0
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(AudioSystemDataProperties) == 0xc, "size from the description");
 
@@ -672,7 +700,9 @@ static_assert(sizeof(BankUnit) == 0x28, "size from the description");
 struct BankUnitList
 {
     ~BankUnitList();         // rva 0x1f4450
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(BankUnitList) == 0xc, "size from the description");
 
@@ -783,12 +813,13 @@ static_assert(sizeof(BaseItemAdvice) == 0xc, "size from the description");
 
 struct BaseItemAdviceSet
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<BaseItemAdvice> mAdvices;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(BaseItemAdviceSet) == 0xc, "size from the description");
 
 struct BaseLoadoutData : BinObject
 {
+    BaseLoadoutData();          // rva 0x22f580
     const MetaClass* GetClass() const override;
     u8 unknown04[0x48];
 };
@@ -871,7 +902,9 @@ static_assert(sizeof(RScript) == 0x4, "size from the description");
 struct BehaviorScript : RScript
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(BehaviorScript) == 0x10, "size from the description");
 
@@ -883,9 +916,10 @@ static_assert(sizeof(BehaviorScriptContainer) == 0x18, "size from the descriptio
 
 struct BerserkTargetingParameters
 {
-    u32 mAffectsTypeFlags = 0;     // +0x0
-    u32 mAffectsStatusFlags = 0;     // +0x4
-    float radius = 0.0f;     // +0x8
+    BerserkTargetingParameters() { mAffectsTypeFlags = 0; mAffectsStatusFlags = 0; radius = 0; }
+    u32 mAffectsTypeFlags;     // +0x0
+    u32 mAffectsStatusFlags;     // +0x4
+    float radius;     // +0x8
 };
 static_assert(sizeof(BerserkTargetingParameters) == 0xc, "size from the description");
 
@@ -1001,7 +1035,9 @@ static_assert(sizeof(BroadcastViewController) == 0xe8, "size from the descriptio
 struct IGameCalculationPartWithBuffCounter : IGameCalculationPart
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x1c];
+    ::HashValue mBuffName;     // +0x4
+    ::MetaString mIconKey;     // +0x8
+    ::MetaString mScalingTagKey;     // +0x14
 };
 static_assert(sizeof(IGameCalculationPartWithBuffCounter) == 0x20, "size from the description");
 
@@ -1049,7 +1085,9 @@ static_assert(sizeof(BuffDisplayList) == 0xd0, "size from the description");
 
 struct BuffModifier
 {
-    u8 unknown00[0x14];
+    ::HashValue ModifierId = {0x0};     // +0x0
+    u32 DescriptionAppendPriority = 0;     // +0x4
+    ::MetaString DescriptionAppendTra;     // +0x8
 };
 static_assert(sizeof(BuffModifier) == 0x14, "size from the description");
 
@@ -1062,8 +1100,11 @@ static_assert(sizeof(BuffStackingSettings) == 0x10, "size from the description")
 
 struct BuffStackingTemplate
 {
-    ~BuffStackingTemplate();         // rva 0x9bab90
-    u8 unknown00[0x1c];
+    ::MetaString name;     // +0x0
+    int maxStacks = 0;     // +0xc
+    int StacksToAdd = 0;     // +0x10
+    bool StacksExclusive = false;     // +0x14
+    u32 BuffAddType = 1;     // +0x18
 };
 static_assert(sizeof(BuffStackingTemplate) == 0x1c, "size from the description");
 
@@ -1076,7 +1117,11 @@ static_assert(sizeof(IGameCalculationPartByCharLevel) == 0x4, "size from the des
 struct ByCharLevelBreakpointsCalculationPart : IGameCalculationPartByCharLevel
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x14];
+    float mLevel1Value = 0.0f;
+    float mInitialBonusPerLevel = 0.0f;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
 };
 static_assert(sizeof(ByCharLevelBreakpointsCalculationPart) == 0x18, "size from the description");
 
@@ -1114,7 +1159,12 @@ static_assert(sizeof(CCScoreMultipliers) == 0x50, "size from the description");
 
 struct CSSIcon
 {
-    u8 unknown00[0x18];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x41a00000;
+    u32 unknown0c = 0x41a00000;
+    u32 unknown10 = 0x0;
+    u32 unknown14 = 0x0;
 };
 static_assert(sizeof(CSSIcon) == 0x18, "size from the description");
 
@@ -1128,7 +1178,12 @@ static_assert(sizeof(CSSSheet) == 0x28, "size from the description");
 
 struct CSSStyle
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0xff000000;
+    u8 unknown04 = 0x0;
+    u8 unknown05[0x3];
+    u16 unknown08 = 0x0;
+    u8 unknown0a = 0x0;
+    u8 unknown0b[0x1];
 };
 static_assert(sizeof(CSSStyle) == 0xc, "size from the description");
 
@@ -1154,10 +1209,11 @@ static_assert(sizeof(CameraConfig) == 0x98, "size from the description");
 
 struct CameraTrapezoid
 {
-    float mMaxZDown = 0.0f;     // +0x0
-    float mMaxZUp = 0.0f;     // +0x4
-    float mMaxXTop = 0.0f;     // +0x8
-    float mMaxXBottom = 0.0f;     // +0xc
+    CameraTrapezoid() { mMaxZDown = 0; mMaxZUp = 0; mMaxXTop = 0; mMaxXBottom = 0; }
+    float mMaxZDown;     // +0x0
+    float mMaxZUp;     // +0x4
+    float mMaxXTop;     // +0x8
+    float mMaxXBottom;     // +0xc
 };
 static_assert(sizeof(CameraTrapezoid) == 0x10, "size from the description");
 
@@ -1199,7 +1255,9 @@ static_assert(sizeof(CastOnMovementComplete) == 0x8, "size from the description"
 struct CatalogEntry : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x1c];
+    MetaString contentId;
+    u32 itemID = 0;
+    MetaString offerId;
 };
 static_assert(sizeof(CatalogEntry) == 0x20, "size from the description");
 
@@ -1213,7 +1271,12 @@ static_assert(sizeof(CcBehaviorsConfig) == 0x10, "size from the description");
 struct CelebrationLabFields
 {
     ~CelebrationLabFields();         // rva 0x6a6930
-    u8 unknown00[0x18];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
 };
 static_assert(sizeof(CelebrationLabFields) == 0x18, "size from the description");
 
@@ -1273,13 +1336,16 @@ static_assert(sizeof(ChampionItemRecommendations) == 0x30, "size from the descri
 
 struct ChampionMasteryMap
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(ChampionMasteryMap) == 0xc, "size from the description");
 
 struct ChampionPerkKeystoneUiData
 {
-    u8 unknown00[0x30];
+    UiHashLink KeystoneIcon;     // +0x0, serialized hash at the first word
+    UiHashLink KeystoneSubstyleIcon;     // +0x18, serialized hash at the first word
 };
 static_assert(sizeof(ChampionPerkKeystoneUiData) == 0x30, "size from the description");
 
@@ -1314,7 +1380,7 @@ static_assert(sizeof(ChampionTransformSelectionViewController) == 0x1d8, "size f
 struct ChangeHeightSolver : MissileTriggeredActionSpec
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(ChangeHeightSolver) == 0x8, "size from the description");
 
@@ -1344,14 +1410,16 @@ static_assert(sizeof(ChangeMovementSpeedCheat) == 0x4c, "size from the descripti
 struct ChangeTurnRadius : MissileTriggeredActionSpec
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x1c];
+    u32 unknown04[4] = {};
+    u32 unknown14[2] = {};
+    u32 unknown1c = 0;
 };
 static_assert(sizeof(ChangeTurnRadius) == 0x20, "size from the description");
 
 struct Character : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString name;     // +0x4
 };
 static_assert(sizeof(Character) == 0x10, "size from the description");
 
@@ -1377,7 +1445,16 @@ static_assert(sizeof(CharacterLevelRequirement) == 0x8, "size from the descripti
 struct CharacterPassiveData : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x28];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
+    u32 unknown18 = 0;
+    u32 unknown1c = 0;
+    u8 mDisplayFlags = 0;
+    u32 unknown24 = 0;
+    bool mAllowOnClones = true;
 };
 static_assert(sizeof(CharacterPassiveData) == 0x2c, "size from the description");
 
@@ -1439,7 +1516,9 @@ static_assert(sizeof(CheatMenuUIData) == 0x4c, "size from the description");
 
 struct CheatPage
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(CheatPage) == 0xc, "size from the description");
 
@@ -1468,13 +1547,19 @@ static_assert(sizeof(CircleMovement) == 0x44, "size from the description");
 struct ClampSubPartsCalculationPart : IGameCalculationPart
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x14];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
 };
 static_assert(sizeof(ClampSubPartsCalculationPart) == 0x18, "size from the description");
 
 struct ClashLogo
 {
-    u8 unknown00[0x14];
+    u32 mClashLogoId = 0;     // +0x0
+    u32 mClashLogoColorId = 0;     // +0x4
+    ::MetaString mLogoPath;     // +0x8
 };
 static_assert(sizeof(ClashLogo) == 0x14, "size from the description");
 
@@ -1487,21 +1572,49 @@ static_assert(sizeof(MapComponent) == 0x4, "size from the description");
 struct Class_096b3514 : MapComponent
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(Class_096b3514) == 0x8, "size from the description");
 
 struct UiElementIData : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x10];
+    ::MetaString name; // +0x4
+    UiSceneLink Scene; // +0x10
 };
 static_assert(sizeof(UiElementIData) == 0x14, "size from the description");
 
-struct UiElementData : UiElementIData
+struct UiPositionBase : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown14[0x10];
+};
+static_assert(sizeof(UiPositionBase) == 0x4, "size from the description");
+
+struct UiPositionRect : UiPositionBase
+{
+    UiPositionRect();          // rva 0xae0ac0
+    const MetaClass* GetClass() const override;
+    ::Vector4 m_eae44d07 = g_UiDefaultRect; // +0x4
+    u16 m_df3f6504 = 0; // +0x14
+    u16 m_6240fc33 = 0; // +0x16
+    UiDataOwner<AnchorBase> Anchors{new AnchorSingle()}; // +0x18
+    bool IgnoreGlobalScale = false; // +0x1c
+    bool DisablePixelSnappingX = false; // +0x1d
+    bool DisablePixelSnappingY = false; // +0x1e
+    bool DisableResolutionDownscale = false; // +0x1f
+};
+static_assert(sizeof(UiPositionRect) == 0x20, "size from the description");
+
+struct UiElementData : UiElementIData
+{
+    UiElementData();          // rva 0xadfd20
+    const MetaClass* GetClass() const override;
+    bool Enabled = false; // +0x14
+    bool BlockInputEvents = false; // +0x15
+    bool m_59939874 = false; // +0x16
+    u32 m_3e2f4733 = 0; // +0x18
+    u32 Layer = 0; // +0x1c
+    UiDataOwner<UiPositionBase> Position{new UiPositionRect}; // +0x20
 };
 static_assert(sizeof(UiElementData) == 0x24, "size from the description");
 
@@ -1771,7 +1884,9 @@ static_assert(sizeof(Class_adbd2900) == 0x34, "size from the description");
 struct Class_b662e8c6 : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(Class_b662e8c6) == 0x10, "size from the description");
 
@@ -1789,10 +1904,12 @@ struct Class_b9f51fac : IScriptBlock
 };
 static_assert(sizeof(Class_b9f51fac) == 0x10, "size from the description");
 
-struct Class_bafabcc8 : BinObject
+struct Class_bafabcc8 : LevelSingleton<Class_bafabcc8>, BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x14];
+    Class_bafabcc8() : LevelSingleton<Class_bafabcc8>(this) {}
+    ReflectedBuffer<u32> m_ed45c0f6;
+    std::list<u32> unknown10;
 };
 static_assert(sizeof(Class_bafabcc8) == 0x18, "size from the description");
 
@@ -1833,7 +1950,8 @@ static_assert(sizeof(Class_cd164709) == 0x68, "size from the description");
 struct Class_d1fc1863 : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x10];
+    u32 unknown04 = 0;
+    MetaString name;
 };
 static_assert(sizeof(Class_d1fc1863) == 0x14, "size from the description");
 
@@ -1887,7 +2005,11 @@ static_assert(sizeof(Class_ee4da73f) == 0x48, "size from the description");
 struct Class_f083449f : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x14];
+    float multiplier = 0.0f;
+    int Count = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
 };
 static_assert(sizeof(Class_f083449f) == 0x18, "size from the description");
 
@@ -1922,7 +2044,9 @@ static_assert(sizeof(ClearSkillsSumsCooldownCheat) == 0x44, "size from the descr
 struct ClearTargetAndKeepMoving : MissileTriggeredActionSpec
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0x7f7fffff;
+    u32 unknown08 = 0x7f7fffff;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(ClearTargetAndKeepMoving) == 0x10, "size from the description");
 
@@ -1963,14 +2087,19 @@ static_assert(sizeof(CoinsPromoDialogViewController) == 0xa0, "size from the des
 
 struct CollectiblesEsportsTeamData
 {
-    u8 unknown00[0x28];
+    u32 teamId = 0;
+    MetaString shortName;
+    MetaString fullName;
+    MetaString leagueName;
 };
 static_assert(sizeof(CollectiblesEsportsTeamData) == 0x28, "size from the description");
 
 struct ColorChooserMaterialDriver : ILogicDriver
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x24];
+    u32 unknown04 = 0;
+    Vector4 mColorOn{1.0f, 0.0f, 0.0f, 1.0f};
+    Vector4 mColorOff{0.0f, 0.0f, 1.0f, 1.0f};
 };
 static_assert(sizeof(ColorChooserMaterialDriver) == 0x28, "size from the description");
 
@@ -2012,15 +2141,17 @@ static_assert(sizeof(CompanionLoadoutGridButtonData) == 0x64, "size from the des
 
 struct CompanionSpeciesData
 {
-    ~CompanionSpeciesData();         // rva 0x9bab90
-    u8 unknown00[0x10];
+    ::MetaString mSpeciesName;     // +0x0
+    u32 mSpeciesId = 0;     // +0xc
 };
 static_assert(sizeof(CompanionSpeciesData) == 0x10, "size from the description");
 
 struct ComparisonScriptCondition : IScriptCondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 Operation = 0;
 };
 static_assert(sizeof(ComparisonScriptCondition) == 0x10, "size from the description");
 
@@ -2042,7 +2173,11 @@ static_assert(sizeof(ConditionBoolClipData) == 0x44, "size from the description"
 
 struct ConditionFloatPairData
 {
-    u8 unknown00[0x14];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
+    u32 unknown10 = 0xffffffff;
 };
 static_assert(sizeof(ConditionFloatPairData) == 0x14, "size from the description");
 
@@ -2122,7 +2257,15 @@ static_assert(sizeof(ContextualActionPlayAnimation) == 0x14, "size from the desc
 struct ContextualActionPlayAudio : IContextualAction
 {
     const MetaClass* GetClass() const override;
-    u8 unknown0c[0x44];
+    ::MetaString mSelfEventName;     // +0xc
+    ::MetaString mAllyEventName;     // +0x18
+    ::MetaString mEnemyEventName;     // +0x24
+    ::MetaString mSpectatorEventName;     // +0x30
+    bool mWaitForAnnouncerQueue;     // +0x3c
+    bool mResolveEventUsingStolenLines;     // +0x3d
+    bool mResolveEventAsTarget;     // +0x3e
+    ::MetaString mAuxBusName;     // +0x40
+    float mWaitTimeout;     // +0x4c
 };
 static_assert(sizeof(ContextualActionPlayAudio) == 0x50, "size from the description");
 
@@ -2157,7 +2300,9 @@ static_assert(sizeof(ContextualConditionAmountHealed) == 0xc, "size from the des
 struct ContextualConditionAnyOtherHero : IContextualCondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(ContextualConditionAnyOtherHero) == 0x10, "size from the description");
 
@@ -2191,7 +2336,10 @@ static_assert(sizeof(ContextualConditionChanceToPlay) == 0x8, "size from the des
 struct ContextualConditionCharacter : IContextualCondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x10];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u8 mCharacterType = 0;
 };
 static_assert(sizeof(ContextualConditionCharacter) == 0x14, "size from the description");
 
@@ -2213,21 +2361,24 @@ static_assert(sizeof(ContextualConditionCharacterDistance) == 0xc, "size from th
 struct ContextualConditionCharacterFormName : ICharacterSubcondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString mFormName;     // +0x4
 };
 static_assert(sizeof(ContextualConditionCharacterFormName) == 0x10, "size from the description");
 
 struct ContextualConditionCharacterHasCAC : ICharacterSubcondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(ContextualConditionCharacterHasCAC) == 0x10, "size from the description");
 
 struct ContextualConditionCharacterHasTimeRemainingForAnimation : ICharacterSubcondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x8];
+    HashValue mAnimationName{(u32)g_3715cc8};
+    float mMinRemainingTime = 0.5f;
 };
 static_assert(sizeof(ContextualConditionCharacterHasTimeRemainingForAnimation) == 0xc, "size from the description");
 
@@ -2262,21 +2413,24 @@ static_assert(sizeof(ContextualConditionCharacterLevel) == 0x8, "size from the d
 struct ContextualConditionCharacterMetadata : ICharacterSubcondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x18];
+    MetaString mCategory;
+    MetaString mData;
 };
 static_assert(sizeof(ContextualConditionCharacterMetadata) == 0x1c, "size from the description");
 
 struct ContextualConditionCharacterName : ICharacterSubcondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(ContextualConditionCharacterName) == 0x10, "size from the description");
 
 struct ContextualConditionCharacterPlayingAnimation : ICharacterSubcondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    HashValue mAnimationNameHash{(u32)g_3715cc8};
 };
 static_assert(sizeof(ContextualConditionCharacterPlayingAnimation) == 0x8, "size from the description");
 
@@ -2297,7 +2451,9 @@ static_assert(sizeof(ContextualConditionCharacterRole) == 0x8, "size from the de
 struct ContextualConditionCharacterSkinID : ICharacterSubcondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(ContextualConditionCharacterSkinID) == 0x10, "size from the description");
 
@@ -2388,7 +2544,9 @@ static_assert(sizeof(ContextualConditionItemCanBePurchased) == 0x8, "size from t
 struct ContextualConditionItemID : IContextualCondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(ContextualConditionItemID) == 0x10, "size from the description");
 
@@ -2444,7 +2602,9 @@ static_assert(sizeof(ContextualConditionMapRegionName) == 0x18, "size from the d
 struct ContextualConditionMarkerName : IContextualCondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(ContextualConditionMarkerName) == 0x10, "size from the description");
 
@@ -2475,7 +2635,7 @@ static_assert(sizeof(ContextualConditionNearbyChampionCount) == 0x10, "size from
 struct ContextualConditionNegation : IContextualCondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(ContextualConditionNegation) == 0x8, "size from the description");
 
@@ -2562,14 +2722,18 @@ static_assert(sizeof(ContextualConditionShopOpenCount) == 0x8, "size from the de
 struct ContextualConditionSituationHasRecentlyRun : IContextualCondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x8];
+    HashValue mSituationNameHash{(u32)g_3715cc8};
+    float mTime = 0.0f;
 };
 static_assert(sizeof(ContextualConditionSituationHasRecentlyRun) == 0xc, "size from the description");
 
 struct ContextualConditionSpell : IContextualCondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x10];
+    u32 mSpellSlot = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
 };
 static_assert(sizeof(ContextualConditionSpell) == 0x14, "size from the description");
 
@@ -2633,20 +2797,42 @@ static_assert(sizeof(ContextualConditionTurretPosition) == 0x8, "size from the d
 
 struct ContextualRule
 {
-    u8 unknown00[0x2c];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
+    u32 unknown10 = 0x0;
+    u32 unknown14 = 0x0;
+    u32 unknown18 = 0x0;
+    u32 unknown1c = 0xffffffff;
+    u16 unknown20 = 0x1;
+    u8 unknown22 = 0x0;
+    u8 unknown23[0x1];
+    u32 unknown24 = 0x0;
+    u8 unknown28[0x4];
 };
 static_assert(sizeof(ContextualRule) == 0x2c, "size from the description");
 
 struct ContextualSituation
 {
-    u8 unknown00[0x1c];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
+    u32 unknown10 = 0x0;
+    u8 unknown14 = 0x0;
+    u8 unknown15[0x3];
+    u32 unknown18 = 0x0;
 };
 static_assert(sizeof(ContextualSituation) == 0x1c, "size from the description");
 
 struct CooldownEffectUiData
 {
     CooldownEffectUiData();          // rva 0x586c00
-    u8 unknown00[0x60];
+    UiHashLink CooldownText;     // +0x0, serialized hash at the first word
+    UiHashLink RadialEffect;     // +0x18, serialized hash at the first word
+    UiHashLink CooldownCompleteEffect;     // +0x30, serialized hash at the first word
+    UiHashLink CooldownJumpEffect;     // +0x48, serialized hash at the first word
 };
 static_assert(sizeof(CooldownEffectUiData) == 0x60, "size from the description");
 
@@ -2689,7 +2875,10 @@ static_assert(sizeof(CreateNeutralCamp) == 0x48, "size from the description");
 struct CrowdControlFilter : IStatStoneLogicDriver
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x10];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    bool TrackDuration = true;
 };
 static_assert(sizeof(CrowdControlFilter) == 0x14, "size from the description");
 
@@ -2703,7 +2892,11 @@ static_assert(sizeof(CursorConfig) == 0x5d0, "size from the description");
 struct CursorData
 {
     CursorData();          // rva 0x61b990
-    u8 unknown00[0x38];
+    Vector2 mHotSpot = {0,0};     // +0x0, reflected lifetime
+    MetaString mTextureName;     // +0x8, reflected lifetime
+    MetaString mColorblindTextureName;     // +0x14, reflected lifetime
+    MetaString mTargetChampionsOnlyTextureName;     // +0x20, reflected lifetime
+    MetaString mColorblindTargetChampionsOnlyTextureName;     // +0x2c, reflected lifetime
 };
 static_assert(sizeof(CursorData) == 0x38, "size from the description");
 
@@ -2711,7 +2904,7 @@ struct CursorDataCaptureCooldownContext
 {
     CursorDataCaptureCooldownContext();          // rva 0x61ba00
     ~CursorDataCaptureCooldownContext();         // rva 0x622440
-    u8 unknown00[0x188];
+    CursorData mData[7];     // +0x0, fixed array; no buffer pointer
 };
 static_assert(sizeof(CursorDataCaptureCooldownContext) == 0x188, "size from the description");
 
@@ -2719,7 +2912,7 @@ struct CursorDataTeamContext
 {
     CursorDataTeamContext();          // rva 0x61ba90
     ~CursorDataTeamContext();         // rva 0x622480
-    u8 unknown00[0xa8];
+    CursorData mData[3];     // +0x0, fixed array; no buffer pointer
 };
 static_assert(sizeof(CursorDataTeamContext) == 0xa8, "size from the description");
 
@@ -2732,7 +2925,9 @@ static_assert(sizeof(CurveTheDifferenceHeightSolver) == 0x8, "size from the desc
 
 struct CustomAbilitiesUiData
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(CustomAbilitiesUiData) == 0xc, "size from the description");
 
@@ -2753,7 +2948,8 @@ static_assert(sizeof(CustomNeutralCampSpawnBehavior) == 0x8c, "size from the des
 struct CustomReductionMultiplierCalculationPart : IGameCalculationPart
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x8];
+    u32 unknown04 = 0;
+    float mMaximumReductionPercent = 0.0f;
 };
 static_assert(sizeof(CustomReductionMultiplierCalculationPart) == 0xc, "size from the description");
 
@@ -2795,7 +2991,9 @@ static_assert(sizeof(CustomTableSet) == 0xc, "size from the description");
 
 struct CustomTargeterDefinitions
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(CustomTargeterDefinitions) == 0xc, "size from the description");
 
@@ -2951,14 +3149,26 @@ static_assert(sizeof(DeathRecapViewController) == 0x1ad8, "size from the descrip
 
 struct DeathTimes
 {
-    u8 unknown00[0x2c];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
+    u32 unknown10 = 0x0;
+    u32 unknown14 = 0x0;
+    u32 unknown18 = 0x0;
+    u32 unknown1c = 0x0;
+    u32 unknown20 = 0x0;
+    u32 unknown24 = 0x0;
+    u16 unknown28 = 0x101;
+    u8 unknown2a[0x2];
 };
 static_assert(sizeof(DeathTimes) == 0x2c, "size from the description");
 
 struct DeathTimesScalingPoint
 {
-    u32 mStartTime = 0;     // +0x0
-    float mPercentIncrease = 0.0f;     // +0x4
+    DeathTimesScalingPoint() { mStartTime = 0; mPercentIncrease = 0; }
+    u32 mStartTime;     // +0x0
+    float mPercentIncrease;     // +0x4
 };
 static_assert(sizeof(DeathTimesScalingPoint) == 0x8, "size from the description");
 
@@ -2977,13 +3187,18 @@ static_assert(sizeof(DecelToLocationMovement) == 0x48, "size from the descriptio
 
 struct DefaultSplashedPerkStyle
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(DefaultSplashedPerkStyle) == 0xc, "size from the description");
 
 struct DefaultStatModPerkSet
 {
-    u8 unknown00[0x10];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(DefaultStatModPerkSet) == 0x10, "size from the description");
 
@@ -3006,7 +3221,11 @@ static_assert(sizeof(Defaultvisibility) == 0x10, "size from the description");
 struct DelayInputSourceBool : IInputSourceBool
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x14];
+    u32 unknown04 = 0;
+    float DelayTurningOn = 0.5f;
+    float DelayTurningOff = 0.5f;
+    u8 unknown10 = 0;
+    u32 unknown14 = 0xbf800000;
 };
 static_assert(sizeof(DelayInputSourceBool) == 0x18, "size from the description");
 
@@ -3113,14 +3332,20 @@ static_assert(sizeof(DragDirection) == 0x4, "size from the description");
 
 struct DragonUITunables
 {
-    u8 unknown00[0x10];
+    u8 unknown00 = 0x0;
+    u8 unknown01[0x3];
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
 };
 static_assert(sizeof(DragonUITunables) == 0x10, "size from the description");
 
 struct DrawAreaList : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(DrawAreaList) == 0x10, "size from the description");
 
@@ -3133,10 +3358,11 @@ static_assert(sizeof(DrawFx) == 0x2dc, "size from the description");
 
 struct DrawablePositionLocator
 {
-    u32 basePosition = 0;     // +0x0
-    float distanceOffset = 0.0f;     // +0x4
-    float angleOffsetRadian = 0.0f;     // +0x8
-    u32 orientationType = 0;     // +0xc
+    DrawablePositionLocator() { basePosition = 0; distanceOffset = 0; angleOffsetRadian = 0; orientationType = 0; }
+    u32 basePosition;     // +0x0
+    float distanceOffset;     // +0x4
+    float angleOffsetRadian;     // +0x8
+    u32 orientationType;     // +0xc
 };
 static_assert(sizeof(DrawablePositionLocator) == 0x10, "size from the description");
 
@@ -3180,7 +3406,9 @@ static_assert(sizeof(ESportLeagueEntry) == 0x18, "size from the description");
 
 struct ESportTeamEntry
 {
-    u8 unknown00[0x24];
+    MetaString teamName;     // +0x0, reflected lifetime
+    MetaString leagueName;     // +0xc, reflected lifetime
+    MetaString TextureName;     // +0x18, reflected lifetime
 };
 static_assert(sizeof(ESportTeamEntry) == 0x24, "size from the description");
 
@@ -3211,7 +3439,8 @@ static_assert(sizeof(ElementalSelectionViewController) == 0x528, "size from the 
 
 struct EmblemData
 {
-    u8 unknown00[0x10];
+    float mLoadingScreenScale = 0.8f;     // +0x0
+    ::MetaString mImagePath;     // +0x4
 };
 static_assert(sizeof(EmblemData) == 0x10, "size from the description");
 
@@ -3282,7 +3511,16 @@ static_assert(sizeof(EnableLookAtEventData) == 0x18, "size from the description"
 
 struct EnchantmentGroup
 {
-    u8 unknown00[0x24];
+    u8 unknown00 = 0x0;
+    u8 unknown01[0x3];
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
+    u32 unknown10 = 0x0;
+    u32 unknown14 = 0x0;
+    u32 unknown18 = 0x0;
+    u32 unknown1c = 0x0;
+    u32 unknown20 = 0x0;
 };
 static_assert(sizeof(EnchantmentGroup) == 0x24, "size from the description");
 
@@ -3357,8 +3595,8 @@ static_assert(sizeof(EsportsBannerConfiguration) == 0x60, "size from the descrip
 
 struct EsportsBannerData
 {
-    ~EsportsBannerData();         // rva 0x9bab90
-    u8 unknown00[0x10];
+    ::MetaString bannerName;     // +0x0
+    u32 Team = 0;     // +0xc
 };
 static_assert(sizeof(EsportsBannerData) == 0x10, "size from the description");
 
@@ -3382,7 +3620,7 @@ static_assert(sizeof(EsportsBannerOptions) == 0x28, "size from the description")
 
 struct EsportsData
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<MetaString> leagues;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(EsportsData) == 0xc, "size from the description");
 
@@ -3410,22 +3648,24 @@ static_assert(sizeof(ExperienceCurveData) == 0x34, "size from the description");
 
 struct ExperienceModData
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<float> mPlayerMinionSplitXp;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(ExperienceModData) == 0xc, "size from the description");
 
 struct ExponentSubPartsCalculationPart : IGameCalculationPart
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x8];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(ExponentSubPartsCalculationPart) == 0xc, "size from the description");
 
 struct ExtraJointChainData
 {
-    ::HashValue StartingJointName = {0x0};     // +0x0
-    ::HashValue EndingJointName = {0x0};     // +0x4
-    float RightBias = 0.0f;     // +0x8
+    ExtraJointChainData() { StartingJointName.value = 0; EndingJointName.value = 0; RightBias = 0; }
+    ::HashValue StartingJointName;     // +0x0
+    ::HashValue EndingJointName;     // +0x4
+    float RightBias;     // +0x8
 };
 static_assert(sizeof(ExtraJointChainData) == 0xc, "size from the description");
 
@@ -3491,7 +3731,11 @@ static_assert(sizeof(FeatureAudioDataProperties) == 0xa4, "size from the descrip
 struct FixedDistanceIgnoringTerrain : MissileBehaviorSpec
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x14];
+    float mMaximumDistance = 0.0f;
+    float mMinimumGapBetweenTerrainWalls = 0.0f;
+    u32 unknown0c = 0xffffffff;
+    u32 unknown10 = 0x7f7fffff;
+    u32 unknown14 = 0;
 };
 static_assert(sizeof(FixedDistanceIgnoringTerrain) == 0x18, "size from the description");
 
@@ -3547,26 +3791,42 @@ static_assert(sizeof(FixedTimeSplineMovement) == 0x44, "size from the descriptio
 
 struct FlexTypeFloat
 {
-    u32 mFlexID = 0;     // +0x0
-    float mValue = 0.0f;     // +0x4
+    FlexTypeFloat() { mFlexID = 0; mValue = 0; }
+    u32 mFlexID;     // +0x0
+    float mValue;     // +0x4
 };
 static_assert(sizeof(FlexTypeFloat) == 0x8, "size from the description");
 
 struct FlexValueFloat
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(FlexValueFloat) == 0xc, "size from the description");
 
 struct FlexValueVector2
 {
-    u8 unknown00[0x10];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(FlexValueVector2) == 0x10, "size from the description");
 
+struct ValueVector3
+{
+    VfxConstantVector3 constantValue; // +0x0
+    VfxOwnedPointer<VfxAnimatedVector3fVariableData> dynamics; // +0xc
+    ValueVector3() = default;
+    ValueVector3(const Vector3& value) : constantValue(value) {}
+};
+static_assert(sizeof(ValueVector3) == 0x10, "size from the description");
+
 struct FlexValueVector3
 {
-    u8 unknown00[0x14];
+    u32 mFlexID = 0; // +0x0
+    ::ValueVector3 mValue{g_JungleDefaultPosition}; // +4
 };
 static_assert(sizeof(FlexValueVector3) == 0x14, "size from the description");
 
@@ -3654,8 +3914,11 @@ static_assert(sizeof(FloatTextFormattingData) == 0xe8, "size from the descriptio
 
 struct FloatTextIconData
 {
-    ~FloatTextIconData();         // rva 0x9bab90
-    u8 unknown00[0x24];
+    ::MetaString mIconFileName;     // +0x0
+    ::Color mColor = {255, 255, 255, 255};     // +0xc
+    ::Vector2 mDisplaySize = {0.0f, 0.0f};     // +0x10
+    ::Vector2 mOffset = {0.0f, 0.0f};     // +0x18
+    u32 mAlignment = 0;     // +0x20
 };
 static_assert(sizeof(FloatTextIconData) == 0x24, "size from the description");
 
@@ -3668,7 +3931,7 @@ static_assert(sizeof(FloatingHealthBarBurstData) == 0x38, "size from the descrip
 
 struct FloatingHealthBarBurstHealData
 {
-    float healTimeWindow;     // +0x0
+    float healTimeWindow = 0.1f;     // +0x0
     float healTriggerPercent = 0.1f;     // +0x4
     float healFadeDuration = 0.2f;     // +0x8
 };
@@ -3691,6 +3954,7 @@ static_assert(sizeof(FloatingInfoBarViewController) == 0xa0, "size from the desc
 
 struct FloatingTextDamageDisplayTypeList
 {
+    FloatingTextDamageDisplayTypeList() { std::memset(unknown00, 0, 0x48); }
     u8 unknown00[0x48];
 };
 static_assert(sizeof(FloatingTextDamageDisplayTypeList) == 0x48, "size from the description");
@@ -3704,7 +3968,7 @@ static_assert(sizeof(FloatingTextGlobalConfig) == 0x118, "size from the descript
 
 struct FloatingTextOverride
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<ReflectedPair<u32, bool>> OverriddenFloatingTextTypes;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(FloatingTextOverride) == 0xc, "size from the description");
 
@@ -3717,6 +3981,7 @@ static_assert(sizeof(FloatingTextTunables) == 0x3c, "size from the description")
 
 struct FloatingTextTypeList
 {
+    FloatingTextTypeList() { std::memset(unknown00, 0, 0x94); }
     u8 unknown00[0x94];
 };
 static_assert(sizeof(FloatingTextTypeList) == 0x94, "size from the description");
@@ -3724,7 +3989,7 @@ static_assert(sizeof(FloatingTextTypeList) == 0x94, "size from the description")
 struct FloorFloatMaterialDriver : ILogicFloatDriver
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(FloorFloatMaterialDriver) == 0x8, "size from the description");
 
@@ -3744,7 +4009,9 @@ static_assert(sizeof(FontLocaleResolutions) == 0x18, "size from the description"
 
 struct FontLocaleType
 {
-    u8 unknown00[0x24];
+    MetaString localeName = {"en_us"};     // +0x0, reflected lifetime
+    MetaString mFontFilePath;     // +0xc, reflected lifetime
+    MetaString FontFilePathBold;     // +0x18, reflected lifetime
 };
 static_assert(sizeof(FontLocaleType) == 0x24, "size from the description");
 
@@ -3760,14 +4027,18 @@ static_assert(sizeof(FontResolution) == 0x14, "size from the description");
 
 struct FontResolutionData
 {
-    u8 unknown00[0x10];
+    u8 unknown00 = 0x1;
+    u8 unknown01[0x3];
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
 };
 static_assert(sizeof(FontResolutionData) == 0x10, "size from the description");
 
 struct FontType
 {
     ~FontType();         // rva 0x2338b0
-    u8 unknown00[0xc];
+    ReflectedBuffer<FontLocaleType> localeTypes;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(FontType) == 0xc, "size from the description");
 
@@ -3865,14 +4136,17 @@ static_assert(sizeof(GDSMapObjectExtraInfo) == 0x4, "size from the description")
 struct GDSMapObjectAnimationInfo : GDSMapObjectExtraInfo
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x14];
+    ::MetaString defaultAnimation;     // +0x4
+    bool looping = true;     // +0x10
+    bool destroyOnCompletion = false;     // +0x11
+    float duration = 0.0f;     // +0x14
 };
 static_assert(sizeof(GDSMapObjectAnimationInfo) == 0x18, "size from the description");
 
 struct GDSMapObjectBannerInfo : GDSMapObjectExtraInfo
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    u32 BannerData = 0; // serialized MetaLink, four-byte non-owning storage
 };
 static_assert(sizeof(GDSMapObjectBannerInfo) == 0x8, "size from the description");
 
@@ -3920,7 +4194,7 @@ static_assert(sizeof(GameModeAutoItemPurchasingConfig) == 0x34, "size from the d
 
 struct GameModeChampionList
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<UiHashKey> mChampions;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(GameModeChampionList) == 0xc, "size from the description");
 
@@ -3947,7 +4221,9 @@ static_assert(sizeof(GameModeConstantFloat) == 0x8, "size from the description")
 struct GameModeConstantFloatPerLevel : GameModeConstant
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(GameModeConstantFloatPerLevel) == 0x10, "size from the description");
 
@@ -3961,21 +4237,23 @@ static_assert(sizeof(GameModeConstantInteger) == 0x8, "size from the description
 struct GameModeConstantString : GameModeConstant
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString mValue;     // +0x4
 };
 static_assert(sizeof(GameModeConstantString) == 0x10, "size from the description");
 
 struct GameModeConstantStringVector : GameModeConstant
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(GameModeConstantStringVector) == 0x10, "size from the description");
 
 struct GameModeConstantTRAKey : GameModeConstant
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString mValue;     // +0x4
 };
 static_assert(sizeof(GameModeConstantTRAKey) == 0x10, "size from the description");
 
@@ -4005,13 +4283,15 @@ static_assert(sizeof(GameModeConstantsGroup) == 0x20, "size from the description
 struct GameModeDefaultStats
 {
     ~GameModeDefaultStats();         // rva 0x233820
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(GameModeDefaultStats) == 0xc, "size from the description");
 
 struct GameModeItemList
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<UiHashKey> mItems;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(GameModeItemList) == 0xc, "size from the description");
 
@@ -4025,7 +4305,7 @@ static_assert(sizeof(GameModeMapData) == 0x118, "size from the description");
 
 struct GameModeSpellList
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<UiHashKey> spells;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(GameModeSpellList) == 0xc, "size from the description");
 
@@ -4097,6 +4377,7 @@ static_assert(sizeof(GameplayFeatureToggles) == 0x8, "size from the description"
 
 struct MapPlaceable : BinObject
 {
+    MapPlaceable();          // rva 0xa22bb0
     const MetaClass* GetClass() const override;
     u8 unknown04[0x54];
 };
@@ -4104,6 +4385,7 @@ static_assert(sizeof(MapPlaceable) == 0x58, "size from the description");
 
 struct GenericMapPlaceable : MapPlaceable
 {
+    GenericMapPlaceable();          // rva 0xa21380
     const MetaClass* GetClass() const override;
 };
 static_assert(sizeof(GenericMapPlaceable) == 0x58, "size from the description");
@@ -4135,7 +4417,8 @@ static_assert(sizeof(GearSelectionViewController) == 0xd8, "size from the descri
 struct GearSkinUpgrade : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x10];
+    u32 unknown04 = 0;
+    MetaString mBoneToAttachTo;
 };
 static_assert(sizeof(GearSkinUpgrade) == 0x14, "size from the description");
 
@@ -4178,7 +4461,7 @@ static_assert(sizeof(GetMapPropBoolDynamicMaterialBoolDriver) == 0x10, "size fro
 struct GetMapPropFloatDynamicMaterialFloatDriver : ILogicFloatDriver
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString mKeyName;     // +0x4
 };
 static_assert(sizeof(GetMapPropFloatDynamicMaterialFloatDriver) == 0x10, "size from the description");
 
@@ -4199,7 +4482,8 @@ static_assert(sizeof(GetSequenceObjectDynamicMaterialBoolDriver) == 0x14, "size 
 struct GetSequenceObjectDynamicMaterialFloatDriver : ILogicFloatDriver
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x10];
+    MetaString mKeyName;
+    u32 unknown10 = 0;
 };
 static_assert(sizeof(GetSequenceObjectDynamicMaterialFloatDriver) == 0x14, "size from the description");
 
@@ -4476,7 +4760,10 @@ static_assert(sizeof(HealthDynamicMaterialFloatDriver) == 0x4, "size from the de
 struct HealthMeter
 {
     HealthMeter();          // rva 0x7112c0
-    u8 unknown00[0x58];
+    UiHashLink Meter;     // +0x0, serialized hash at the first word
+    UiHashLink ValueText;     // +0x18, serialized hash at the first word
+    UiHashLink FadeBar;     // +0x30, serialized hash at the first word
+    u8 unknown48[0x10];
 };
 static_assert(sizeof(HealthMeter) == 0x58, "size from the description");
 
@@ -4535,27 +4822,31 @@ static_assert(sizeof(HeroFloatingInfoBorderTypeData) == 0xa8, "size from the des
 struct HeroFloatingInfoCharacterStateIndicatorData
 {
     ~HeroFloatingInfoCharacterStateIndicatorData();         // rva 0x621e20
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(HeroFloatingInfoCharacterStateIndicatorData) == 0xc, "size from the description");
 
 struct HeroFloatingInfoCharacterStateIndicatorList
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<UiHashLink> StateIndicatorList;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(HeroFloatingInfoCharacterStateIndicatorList) == 0xc, "size from the description");
 
 struct HeroFloatingInfoIconData
 {
     HeroFloatingInfoIconData();          // rva 0x5894b0
-    u8 unknown00[0x48];
+    UiHashLink Icon;     // +0x0, serialized hash at the first word
+    UiHashLink HighlightAnim;     // +0x18, serialized hash at the first word
+    UiHashLink border;     // +0x30, serialized hash at the first word
 };
 static_assert(sizeof(HeroFloatingInfoIconData) == 0x48, "size from the description");
 
 struct HeroFloatingInfoIconsData
 {
     ~HeroFloatingInfoIconsData();         // rva 0x58ac50
-    u8 unknown00[0xc];
+    ReflectedBuffer<HeroFloatingInfoIconData> icons;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(HeroFloatingInfoIconsData) == 0xc, "size from the description");
 
@@ -4606,7 +4897,8 @@ static_assert(sizeof(HudBannerData) == 0x24, "size from the description");
 
 struct HudCalloutIdentifier
 {
-    u8 unknown00[0x30];
+    UiHashLink Frame;     // +0x0, serialized hash at the first word
+    UiHashLink Portrait;     // +0x18, serialized hash at the first word
 };
 static_assert(sizeof(HudCalloutIdentifier) == 0x30, "size from the description");
 
@@ -4650,14 +4942,21 @@ static_assert(sizeof(HudItemShopExpandingPanelDefinition) == 0xc4, "size from th
 struct HudItemShopItemDetailsClickDataDefinition
 {
     HudItemShopItemDetailsClickDataDefinition();          // rva 0x5894b0
-    u8 unknown00[0x48];
+    UiHashLink ItemBriefTextDefinition;     // +0x0, serialized hash at the first word
+    UiHashLink ClickRegionDefinition;     // +0x18, serialized hash at the first word
+    UiHashLink HoverIconDefinition;     // +0x30, serialized hash at the first word
 };
 static_assert(sizeof(HudItemShopItemDetailsClickDataDefinition) == 0x48, "size from the description");
 
 struct HudItemShopItemDetailsDefinition
 {
     HudItemShopItemDetailsDefinition();          // rva 0x7130f0
-    u8 unknown00[0x84];
+    UiHashLink TitleTextDefinition;     // +0x0, serialized hash at the first word
+    UiHashLink CostTextDefinition;     // +0x18, serialized hash at the first word
+    UiHashLink BodyDefinition;     // +0x30, serialized hash at the first word
+    UiHashLink ItemIconDefinition;     // +0x48, serialized hash at the first word
+    UiHashLink GoldIconDefinition;     // +0x60, serialized hash at the first word
+    UiHashKey ClickData;     // +0x78, native hash-key lifetime
 };
 static_assert(sizeof(HudItemShopItemDetailsDefinition) == 0x84, "size from the description");
 
@@ -4677,7 +4976,11 @@ static_assert(sizeof(HudItemShopItemIconDefinition) == 0x28c, "size from the des
 
 struct HudItemShopQuickBuyData
 {
-    u8 unknown00[0x18];
+    ReflectedBuffer<UiHashKey> items;     // +0x0, count and signed ownership capacity
+    u32 unknown0c = 0x1;
+    u8 unknown10 = 0x0;
+    u8 unknown11[0x3];
+    u32 unknown14 = 0xffffffff;
 };
 static_assert(sizeof(HudItemShopQuickBuyData) == 0x18, "size from the description");
 
@@ -4699,7 +5002,7 @@ static_assert(sizeof(HudKillCalloutTemplateData) == 0x1e0, "size from the descri
 
 struct HudMenuTransitionData
 {
-    float TransitionTime;     // +0x0
+    float TransitionTime = 0.1f;     // +0x0
     float TransitionStartDelaySecs = 0.0f;     // +0x4
     u8 minAlpha = 0;     // +0x8
     u8 maxAlpha = 0xff;     // +0x9
@@ -4709,14 +5012,20 @@ static_assert(sizeof(HudMenuTransitionData) == 0xc, "size from the description")
 
 struct HudMessageDisplayData
 {
-    u8 unknown00[0x14];
+    u32 unknown00 = 0x3dcccccd;
+    u32 unknown04 = 0x0;
+    u16 unknown08 = 0xff00;
+    u8 unknown0a = 0x0;
+    u8 unknown0b[0x1];
+    u32 unknown0c = 0x40a00000;
+    u32 unknown10 = 0x4;
 };
 static_assert(sizeof(HudMessageDisplayData) == 0x14, "size from the description");
 
 struct HudOptionalBinData
 {
-    ~HudOptionalBinData();         // rva 0x9bab90
-    u8 unknown00[0x10];
+    ::MetaString mName;     // +0x0
+    u32 mPriority = 0;     // +0xc
 };
 static_assert(sizeof(HudOptionalBinData) == 0x10, "size from the description");
 
@@ -4754,7 +5063,10 @@ static_assert(sizeof(HudReplaySlider) == 0x1e4, "size from the description");
 
 struct HudReplaySliderData
 {
-    u8 unknown00[0x10];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x3f800000;
 };
 static_assert(sizeof(HudReplaySliderData) == 0x10, "size from the description");
 
@@ -4933,7 +5245,7 @@ static_assert(sizeof(IconElementDataExtension) == 0x4, "size from the descriptio
 struct IconElementCircleMaskeExtension : IconElementDataExtension
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(IconElementCircleMaskeExtension) == 0x8, "size from the description");
 
@@ -4947,7 +5259,8 @@ static_assert(sizeof(IconElementGradientExtension) == 0x4c, "size from the descr
 
 struct IconLink
 {
-    u8 unknown00[0x30];
+    UiHashLink ActiveIcon;     // +0x0, serialized hash at the first word
+    UiHashLink DisabledIcon;     // +0x18, serialized hash at the first word
 };
 static_assert(sizeof(IconLink) == 0x30, "size from the description");
 
@@ -5010,13 +5323,22 @@ static_assert(sizeof(InfoNubData) == 0x4, "size from the description");
 struct InhibitorWaveBehavior : IMinionWaveBehavior
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x10];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    int DefaultSpawnCount = 0;
 };
 static_assert(sizeof(InhibitorWaveBehavior) == 0x14, "size from the description");
 
 struct InputControlSet
 {
-    u8 unknown00[0x1c];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
+    u32 unknown18 = 0;
 };
 static_assert(sizeof(InputControlSet) == 0x1c, "size from the description");
 
@@ -5054,21 +5376,26 @@ static_assert(sizeof(InputEventFloat) == 0x44, "size from the description");
 struct InputSourceBoolAsFloat : IInputSourceFloat
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    float OnValue = 1.0f;
+    float OffValue = 0.0f;
 };
 static_assert(sizeof(InputSourceBoolAsFloat) == 0x10, "size from the description");
 
 struct InputSourceFloatAsBool : IInputSourceBool
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x8];
+    u32 unknown04 = 0;
+    float Threshold = 0.5f;
 };
 static_assert(sizeof(InputSourceFloatAsBool) == 0xc, "size from the description");
 
 struct InputSourceFloatRemap : IInputSourceFloat
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    float scale = 1.0f;
+    float Bias = -1.0f;
 };
 static_assert(sizeof(InputSourceFloatRemap) == 0x10, "size from the description");
 
@@ -5115,7 +5442,8 @@ static_assert(sizeof(IntTableSet) == 0xc, "size from the description");
 
 struct ValueFloat
 {
-    u8 unknown00[0x8];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(ValueFloat) == 0x8, "size from the description");
 
@@ -5127,7 +5455,9 @@ static_assert(sizeof(IntegratedValueFloat) == 0xc, "size from the description");
 
 struct ValueVector2
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(ValueVector2) == 0xc, "size from the description");
 
@@ -5136,12 +5466,6 @@ struct IntegratedValueVector2 : ValueVector2
     u8 unknown0c[0x4];
 };
 static_assert(sizeof(IntegratedValueVector2) == 0x10, "size from the description");
-
-struct ValueVector3
-{
-    u8 unknown00[0x10];
-};
-static_assert(sizeof(ValueVector3) == 0x10, "size from the description");
 
 struct IntegratedValueVector3 : ValueVector3
 {
@@ -5270,8 +5594,7 @@ static_assert(sizeof(IsTurningParametricUpdater) == 0x4, "size from the descript
 
 struct ItemAdviceAttribute
 {
-    ~ItemAdviceAttribute();         // rva 0x9bab90
-    u8 unknown00[0xc];
+    ::MetaString mAttribute;     // +0x0
 };
 static_assert(sizeof(ItemAdviceAttribute) == 0xc, "size from the description");
 
@@ -5293,7 +5616,9 @@ static_assert(sizeof(ItemDataAvailability) == 0x3, "size from the description");
 
 struct ItemDataBuild
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(ItemDataBuild) == 0xc, "size from the description");
 
@@ -5308,20 +5633,33 @@ static_assert(sizeof(ItemDataClient) == 0xa8, "size from the description");
 struct ItemDataValue : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x14];
+    MetaString mName;
+    float mValue = 0.0f;
+    u32 unknown14 = 0;
 };
 static_assert(sizeof(ItemDataValue) == 0x18, "size from the description");
 
 struct ItemDataValues
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<ItemDataValue> DataValues;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(ItemDataValues) == 0xc, "size from the description");
 
 struct ItemGroup
 {
-    ItemGroup();          // rva 0x2b1c20
-    u8 unknown00[0x30];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0xffffffff;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x5;
+    u32 unknown10 = 0x0;
+    u8 unknown14 = 0x0;
+    u8 unknown15[0x3];
+    u32 unknown18 = 0x0;
+    u32 unknown1c = 0x0;
+    u32 unknown20 = 0x0;
+    u32 unknown24 = 0x0;
+    u32 unknown28 = 0x0;
+    u32 unknown2c = 0x0;
 };
 static_assert(sizeof(ItemGroup) == 0x30, "size from the description");
 
@@ -5334,13 +5672,14 @@ static_assert(sizeof(ItemModifier) == 0xf0, "size from the description");
 
 struct ItemRecOverrideRange
 {
-    u8 unknown00[0x10];
+    ReflectedBuffer<UiHashKey> items;     // +0x0, count and signed ownership capacity
+    u32 unknown0c = 0x6;
 };
 static_assert(sizeof(ItemRecOverrideRange) == 0x10, "size from the description");
 
 struct ItemRecommendationChoices
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<u32> mChoices;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(ItemRecommendationChoices) == 0xc, "size from the description");
 
@@ -5366,7 +5705,7 @@ static_assert(sizeof(ItemRecommendationContextList) == 0x4c, "size from the desc
 
 struct ItemRecommendationItemList
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<u32> mItemList;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(ItemRecommendationItemList) == 0xc, "size from the description");
 
@@ -5394,28 +5733,31 @@ static_assert(sizeof(ItemRecommendationOverride) == 0x4c, "size from the descrip
 
 struct ItemRecommendationOverrideContext
 {
-    u32 mMapID = 0;     // +0x0
-    ::HashValue mModeNameStringId = {0x0};     // +0x4
-    ::HashValue mPosition = {0x0};     // +0x8
+    ItemRecommendationOverrideContext() { mMapID = 0; mModeNameStringId.value = 0; mPosition.value = 0; }
+    u32 mMapID;     // +0x0
+    ::HashValue mModeNameStringId;     // +0x4
+    ::HashValue mPosition;     // +0x8
 };
 static_assert(sizeof(ItemRecommendationOverrideContext) == 0xc, "size from the description");
 
 struct ItemRecommendationOverrideSet
 {
     ~ItemRecommendationOverrideSet();         // rva 0x2b4f30
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(ItemRecommendationOverrideSet) == 0xc, "size from the description");
 
 struct ItemRecommendationOverrideStartingItemBundle
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<UiHashKey> items;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(ItemRecommendationOverrideStartingItemBundle) == 0xc, "size from the description");
 
 struct ItemRecommendationOverrideStartingItemSet
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<UiHashKey> mStartingItems;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(ItemRecommendationOverrideStartingItemSet) == 0xc, "size from the description");
 
@@ -5491,33 +5833,43 @@ static_assert(sizeof(JungleAction) == 0x4, "size from the description");
 
 struct JungleLocationMapInformation
 {
-    ~JungleLocationMapInformation();         // rva 0x9bab90
-    u8 unknown00[0x1c];
+    MetaString name;     // +0x0, reflected lifetime
+    Vector3 Position = g_JungleDefaultPosition;     // +0xc, reflected lifetime
+    u8 Index = 0;     // +0x18, reflected lifetime
+    u8 Location = 0;     // +0x19, reflected lifetime
 };
 static_assert(sizeof(JungleLocationMapInformation) == 0x1c, "size from the description");
 
 struct JunglePath : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(JunglePath) == 0x10, "size from the description");
 
 struct JunglePathRecommendation
 {
-    u8 unknown00[0x18];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
 };
 static_assert(sizeof(JunglePathRecommendation) == 0x18, "size from the description");
 
 struct JunglePathRecommendations
 {
-    u8 unknown00[0x18];
+    UiHashKey DataDrivenPath;     // +0x0, reflected hash and native runtime key state
+    UiHashKey DesignerOverridePath;     // +0xc, reflected hash and native runtime key state
 };
 static_assert(sizeof(JunglePathRecommendations) == 0x18, "size from the description");
 
 struct JungleRecommendationMapInformation
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<JungleLocationMapInformation> JungleLocationInformation;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(JungleRecommendationMapInformation) == 0xc, "size from the description");
 
@@ -5539,7 +5891,10 @@ static_assert(sizeof(KeyFrameFloatMapClipAccessoryData) == 0x14, "size from the 
 struct KeyInputSourceBool : IInputSourceBool
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x20];
+    MetaString KeySequence;
+    MetaString IniKeyValue;
+    u32 unknown1c = 0;
+    u8 unknown20 = 0;
 };
 static_assert(sizeof(KeyInputSourceBool) == 0x24, "size from the description");
 
@@ -5580,14 +5935,25 @@ static_assert(sizeof(KillingSpreeFilter) == 0x8, "size from the description");
 
 struct LaneData
 {
-    u8 unknown00[0x18];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
 };
 static_assert(sizeof(LaneData) == 0x18, "size from the description");
 
 struct LaunchAreaData : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x24];
+    float radius = 325.0f;
+    float InnerRadius = 0.0f;
+    float TargetDistance = 9e+02f;
+    float InnerAreaTargetDistance = 0.0f;
+    float DivergenceTolerance = 2e+02f;
+    MetaString IndicatorTextureName;
+    float IndicatorRadius = 135.0f;
 };
 static_assert(sizeof(LaunchAreaData) == 0x28, "size from the description");
 
@@ -5658,7 +6024,9 @@ static_assert(sizeof(LerpVec4LogicDriver) == 0x50, "size from the description");
 struct LevelControlScript : RScript
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(LevelControlScript) == 0x10, "size from the description");
 
@@ -5728,9 +6096,19 @@ static_assert(sizeof(LoLFeatureToggles) == 0x48, "size from the description");
 
 struct LoLSpellPreloadData
 {
-    LoLSpellPreloadData();          // rva 0x510370
     ~LoLSpellPreloadData();         // rva 0x512b90
-    u8 unknown00[0x30];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
+    u32 unknown10 = 0x0;
+    u32 unknown14 = 0x0;
+    u32 unknown18 = 0x0;
+    u32 unknown1c = 0x0;
+    u32 unknown20 = 0x0;
+    u32 unknown24 = 0x0;
+    u32 unknown28 = 0x0;
+    u32 unknown2c = 0x0;
 };
 static_assert(sizeof(LoLSpellPreloadData) == 0x30, "size from the description");
 
@@ -5751,7 +6129,10 @@ static_assert(sizeof(LoadScreenTipConfiguration) == 0xc, "size from the descript
 
 struct LoadScreenTipSet
 {
-    u8 unknown00[0x10];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(LoadScreenTipSet) == 0x10, "size from the description");
 
@@ -5766,7 +6147,10 @@ static_assert(sizeof(LoadingScreenBasicViewController) == 0x140, "size from the 
 struct LoadingScreenChallengeTokenData
 {
     LoadingScreenChallengeTokenData();          // rva 0x586c00
-    u8 unknown00[0x60];
+    UiHashLink ChallengeTokenGroup;     // +0x0, serialized hash at the first word
+    UiHashLink ChallengeTokenIcon;     // +0x18, serialized hash at the first word
+    UiHashLink ChallengeTokenCapstoneIcon;     // +0x30, serialized hash at the first word
+    UiHashLink ChallengeTokenHitRegion;     // +0x48, serialized hash at the first word
 };
 static_assert(sizeof(LoadingScreenChallengeTokenData) == 0x60, "size from the description");
 
@@ -5795,7 +6179,9 @@ static_assert(sizeof(LoadingScreenClash) == 0x90, "size from the description");
 struct LoadingScreenClashTeam
 {
     LoadingScreenClashTeam();          // rva 0x5894b0
-    u8 unknown00[0x48];
+    UiHashLink TeamNameText;     // +0x0, serialized hash at the first word
+    UiHashLink TeamtagText;     // +0x18, serialized hash at the first word
+    UiHashLink TeamLogoIcon;     // +0x30, serialized hash at the first word
 };
 static_assert(sizeof(LoadingScreenClashTeam) == 0x48, "size from the description");
 
@@ -5809,7 +6195,9 @@ static_assert(sizeof(LoadingScreenClassicViewController) == 0x1d8, "size from th
 struct LoadingScreenEmblemData
 {
     ~LoadingScreenEmblemData();         // rva 0x58a7f0
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(LoadingScreenEmblemData) == 0xc, "size from the description");
 
@@ -5855,7 +6243,8 @@ static_assert(sizeof(LoadingScreenPlayerCardClassicData) == 0x440, "size from th
 
 struct LoadingScreenPlayerCardClassicSpellData
 {
-    u8 unknown00[0x30];
+    UiHashLink Icon;     // +0x0, serialized hash at the first word
+    UiHashLink Frame;     // +0x18, serialized hash at the first word
 };
 static_assert(sizeof(LoadingScreenPlayerCardClassicSpellData) == 0x30, "size from the description");
 
@@ -5899,7 +6288,9 @@ static_assert(sizeof(LoadingScreenPlayerCardsViewController) == 0x90, "size from
 struct LoadingScreenProgressMeter
 {
     LoadingScreenProgressMeter();          // rva 0x658020
-    u8 unknown00[0x44];
+    UiHashLink Meter;     // +0x0, serialized hash at the first word
+    UiHashLink Text;     // +0x18, serialized hash at the first word
+    u8 unknown30[0x14];
 };
 static_assert(sizeof(LoadingScreenProgressMeter) == 0x44, "size from the description");
 
@@ -5919,7 +6310,9 @@ static_assert(sizeof(LoadingScreenRatedData) == 0x3c, "size from the description
 
 struct LoadingScreenRatedTierIconData
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(LoadingScreenRatedTierIconData) == 0xc, "size from the description");
 
@@ -5934,14 +6327,22 @@ static_assert(sizeof(LoadingScreenRegaliaData) == 0xe8, "size from the descripti
 struct LoadingScreenSummonerNameData
 {
     LoadingScreenSummonerNameData();          // rva 0x6582d0
-    u8 unknown00[0x14];
+private:
+    __forceinline LoadingScreenSummonerNameData(int blue);
+public:
+    ReflectedBuffer<UiHashLink> SummonerName;     // +0x0, count and signed ownership capacity
+    u8 unknown0c[0x8];
 };
 static_assert(sizeof(LoadingScreenSummonerNameData) == 0x14, "size from the description");
 
 struct LoadingScreenSummonerTitleData
 {
     LoadingScreenSummonerTitleData();          // rva 0x6582d0
-    u8 unknown00[0x14];
+private:
+    __forceinline LoadingScreenSummonerTitleData(int blue);
+public:
+    ReflectedBuffer<UiHashLink> SummonerTitle;     // +0x0, count and signed ownership capacity
+    u8 unknown0c[0x8];
 };
 static_assert(sizeof(LoadingScreenSummonerTitleData) == 0x14, "size from the description");
 
@@ -6039,7 +6440,8 @@ static_assert(sizeof(LobbyBottomButtons) == 0x120, "size from the description");
 
 struct LobbyLabFields
 {
-    u8 unknown00[0x4];
+    ~LobbyLabFields() { std::memset(this, 0, 0x4); }
+    u32 unknown00 = 0;
 };
 static_assert(sizeof(LobbyLabFields) == 0x4, "size from the description");
 
@@ -6111,14 +6513,14 @@ static_assert(sizeof(LockRootOrientationRigPoseModifierData) == 0x4, "size from 
 struct LogicDriverBoolParametricUpdater : IBooleanParametricUpdater
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(LogicDriverBoolParametricUpdater) == 0x8, "size from the description");
 
 struct LogicDriverFloatParametricUpdater : IFloatParametricUpdater
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(LogicDriverFloatParametricUpdater) == 0x8, "size from the description");
 
@@ -6249,16 +6651,21 @@ static_assert(sizeof(LootItem) == 0x7c, "size from the description");
 
 struct LootItemDetails
 {
-    u32 mStoreId = 0;     // +0x0
-    u32 mRarity = 0;     // +0x4
-    u32 mValue = 0;     // +0x8
+    LootItemDetails() { mStoreId = 0; mRarity = 0; mValue = 0; }
+    u32 mStoreId;     // +0x0
+    u32 mRarity;     // +0x4
+    u32 mValue;     // +0x8
 };
 static_assert(sizeof(LootItemDetails) == 0xc, "size from the description");
 
 struct LootItemLineElements
 {
     LootItemLineElements();          // rva 0x587b10
-    u8 unknown00[0x78];
+    UiHashLink LootLineItemNameText;     // +0x0, serialized hash at the first word
+    UiHashLink LootLineItemDropRateText;     // +0x18, serialized hash at the first word
+    UiHashLink LootLineItemSpacing;     // +0x30, serialized hash at the first word
+    UiHashLink LootLineItemButton;     // +0x48, serialized hash at the first word
+    UiHashLink LootLineItemGroup;     // +0x60, serialized hash at the first word
 };
 static_assert(sizeof(LootItemLineElements) == 0x78, "size from the description");
 
@@ -6315,14 +6722,18 @@ static_assert(sizeof(LuaPropertyDataFloat) == 0x8, "size from the description");
 struct LuaPropertyDataFloatArray : LuaPropertyData
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(LuaPropertyDataFloatArray) == 0x10, "size from the description");
 
 struct LuaPropertyDataGlobalRef : LuaPropertyData
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    HashValue LookupKey{0x0};
+    float Coefficient = 1.0f;
 };
 static_assert(sizeof(LuaPropertyDataGlobalRef) == 0x10, "size from the description");
 
@@ -6337,7 +6748,9 @@ static_assert(sizeof(LuaPropertyDataGlobals) == 0x24, "size from the description
 struct LuaPropertyDataIntArray : LuaPropertyData
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(LuaPropertyDataIntArray) == 0x10, "size from the description");
 
@@ -6351,21 +6764,25 @@ static_assert(sizeof(LuaPropertyDataInteger) == 0x8, "size from the description"
 struct LuaPropertyDataString : LuaPropertyData
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString value;     // +0x4
 };
 static_assert(sizeof(LuaPropertyDataString) == 0x10, "size from the description");
 
 struct LuaPropertyDataStringArray : LuaPropertyData
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(LuaPropertyDataStringArray) == 0x10, "size from the description");
 
 struct LuaTableData : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(LuaTableData) == 0x10, "size from the description");
 
@@ -6386,8 +6803,9 @@ static_assert(sizeof(MapAction) == 0x10, "size from the description");
 
 struct MapActionAnimationData
 {
-    ~MapActionAnimationData();         // rva 0x9bab90
-    u8 unknown00[0x10];
+    ::MetaString AnimationName;     // +0x0
+    bool looping = false;     // +0xc
+    bool ForceRestart = false;     // +0xd
 };
 static_assert(sizeof(MapActionAnimationData) == 0x10, "size from the description");
 
@@ -6482,7 +6900,9 @@ static_assert(sizeof(MapAlternateAsset) == 0x4c, "size from the description");
 struct MapAlternateAssets
 {
     ~MapAlternateAssets();         // rva 0x34b950
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(MapAlternateAssets) == 0xc, "size from the description");
 
@@ -6535,13 +6955,17 @@ static_assert(sizeof(MapCamera) == 0x6c, "size from the description");
 
 struct MapCharacterList
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(MapCharacterList) == 0xc, "size from the description");
 
 struct MapCharacterListContainer
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(MapCharacterListContainer) == 0xc, "size from the description");
 
@@ -6561,7 +6985,7 @@ static_assert(sizeof(MapClouds) == 0x64, "size from the description");
 
 struct MapCloudsLayer
 {
-    ::Vector2 direction;     // +0x0
+    ::Vector2 direction = {1.0f, 0.0f};     // +0x0
     float scale = 1e+01f;     // +0x8
     float speed = 0.001f;     // +0xc
 };
@@ -6577,14 +7001,16 @@ static_assert(sizeof(MapContainer) == 0x40, "size from the description");
 struct MapContainsOtherMaps : MapComponent
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(MapContainsOtherMaps) == 0x8, "size from the description");
 
 struct MapContextualClick : MapComponent
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(MapContextualClick) == 0x10, "size from the description");
 
@@ -6597,7 +7023,7 @@ static_assert(sizeof(MapCubemapProbe) == 0x70, "size from the description");
 
 struct MapCubemapRegion
 {
-    ::Vector3 Min;     // +0x0
+    ::Vector3 Min = {-1e+03f, -1e+03f, -1e+03f};     // +0x0
     ::Vector3 Max = {1e+03f, 1e+03f, 1e+03f};     // +0xc
 };
 static_assert(sizeof(MapCubemapRegion) == 0x18, "size from the description");
@@ -6655,7 +7081,9 @@ static_assert(sizeof(MapDynamicSpotlight) == 0x294, "size from the description")
 struct MapLaneComponent : MapComponent
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(MapLaneComponent) == 0x10, "size from the description");
 
@@ -6682,14 +7110,16 @@ static_assert(sizeof(MapLocator) == 0x58, "size from the description");
 
 struct MapLocatorArray
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<MapLocator> locators;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(MapLocatorArray) == 0xc, "size from the description");
 
 struct MapMaterialSwap
 {
     ~MapMaterialSwap();         // rva 0x256600
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(MapMaterialSwap) == 0xc, "size from the description");
 
@@ -6704,21 +7134,24 @@ static_assert(sizeof(MapMotionPath) == 0x78, "size from the description");
 struct MapNavGrid : MapComponent
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString NavGridPath;     // +0x4
 };
 static_assert(sizeof(MapNavGrid) == 0x10, "size from the description");
 
 struct MapNavigationGridOverlay : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x18];
+    MetaString navGridFileName;
+    MetaString regionsFilename;
 };
 static_assert(sizeof(MapNavigationGridOverlay) == 0x1c, "size from the description");
 
 struct MapNavigationGridOverlays
 {
     ~MapNavigationGridOverlays();         // rva 0x256600
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(MapNavigationGridOverlays) == 0xc, "size from the description");
 
@@ -6732,7 +7165,7 @@ static_assert(sizeof(MapParticle) == 0x88, "size from the description");
 
 struct MapParticleGroups
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<MetaString> groups;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(MapParticleGroups) == 0xc, "size from the description");
 
@@ -6759,14 +7192,16 @@ static_assert(sizeof(MapPathLineSegment) == 0x20, "size from the description");
 
 struct MapPerInstanceInfo
 {
-    ~MapPerInstanceInfo();         // rva 0x9bab90
-    u8 unknown00[0x1c];
+    ::MetaString shadowMapPath;     // +0x0
+    ::Vector4 shadowMapUVScaleAndBias = {1.0f, 1.0f, 0.0f, 0.0f};     // +0xc
 };
 static_assert(sizeof(MapPerInstanceInfo) == 0x1c, "size from the description");
 
 struct MapPlaceableContainer
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(MapPlaceableContainer) == 0xc, "size from the description");
 
@@ -6779,8 +7214,7 @@ static_assert(sizeof(MapPlaceableLinkGroup) == 0x34, "size from the description"
 
 struct MapPlaceableName
 {
-    ~MapPlaceableName();         // rva 0x9bab90
-    u8 unknown00[0xc];
+    ::MetaString PlaceableName;     // +0x0
 };
 static_assert(sizeof(MapPlaceableName) == 0xc, "size from the description");
 
@@ -6799,7 +7233,7 @@ static_assert(sizeof(MapPointLight) == 0x68, "size from the description");
 
 struct MapPointLightType
 {
-    ::Vector4 lightColor;     // +0x0
+    ::Vector4 lightColor = {1.0f, 1.0f, 1.0f, 1.0f};     // +0x0
     float radius = 5e+02f;     // +0x10
     bool castStaticShadows = true;     // +0x14
     float HdrScale = 5.0f;     // +0x18
@@ -6832,7 +7266,7 @@ static_assert(sizeof(MapSkin) == 0xe4, "size from the description");
 
 struct MapSkinColorizationPostEffect
 {
-    ::Vector3 mMultipliersRGB;     // +0x0
+    ::Vector3 mMultipliersRGB = {1.0f, 1.0f, 1.0f};     // +0x0
     float mMultipliersSaturation = 1.0f;     // +0xc
 };
 static_assert(sizeof(MapSkinColorizationPostEffect) == 0x10, "size from the description");
@@ -6855,7 +7289,9 @@ static_assert(sizeof(MapSunProperties) == 0xb0, "size from the description");
 struct MapTerrainPaint : MapGraphicsFeature
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x14];
+    MetaString TerrainPaintTexturePath;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
 };
 static_assert(sizeof(MapTerrainPaint) == 0x18, "size from the description");
 
@@ -6884,7 +7320,10 @@ static_assert(sizeof(MapUniquePointLight) == 0x74, "size from the description");
 struct MapVisibilityFlagDefinition : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x18];
+    ::HashValue name = {0x0};     // +0x4
+    ::MetaString PublicName;     // +0x8
+    u8 BitIndex = 0;     // +0x14
+    float TransitionTime = 3.0f;     // +0x18
 };
 static_assert(sizeof(MapVisibilityFlagDefinition) == 0x1c, "size from the description");
 
@@ -6905,25 +7344,36 @@ static_assert(sizeof(MapVisibilityFlagRange) == 0x8, "size from the description"
 
 struct MaskData
 {
-    u8 unknown00[0x14];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
 };
 static_assert(sizeof(MaskData) == 0x14, "size from the description");
 
 struct MasteryBadgeConfig
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<MasteryBadgeData> mBadges;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(MasteryBadgeConfig) == 0xc, "size from the description");
 
 struct MasteryBadgeData
 {
-    u8 unknown00[0x20];
+    ::HashValue mName = {0x0};     // +0x0
+    ::MetaString mParticleName;     // +0x4
+    float mRenderScale = 1.0f;     // +0x10
+    float mVerticalOffset = 0.0f;     // +0x14
+    int mSummonerIconId = -1;     // +0x18
+    u32 mMasteryLevel = 0;     // +0x1c
 };
 static_assert(sizeof(MasteryBadgeData) == 0x20, "size from the description");
 
 struct MasteryData
 {
-    u8 unknown00[0x24];
+    MetaString texture;     // +0x0, reflected lifetime
+    MetaString LevelTraKey;     // +0xc, reflected lifetime
+    MetaString DetailsTraKey;     // +0x18, reflected lifetime
 };
 static_assert(sizeof(MasteryData) == 0x24, "size from the description");
 
@@ -6981,7 +7431,9 @@ static_assert(sizeof(MaxAllSkillsCheat) == 0x48, "size from the description");
 struct MaxMaterialDriver : ILogicDriver
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(MaxMaterialDriver) == 0x10, "size from the description");
 
@@ -6995,7 +7447,7 @@ static_assert(sizeof(MessageBoxDialog) == 0x2c8, "size from the description");
 
 struct MicroTicksPerStandardTickData
 {
-    float minHealth;     // +0x0
+    float minHealth = 1e+03f;     // +0x0
     u32 microTicksBetween = 9;     // +0x4
 };
 static_assert(sizeof(MicroTicksPerStandardTickData) == 0x8, "size from the description");
@@ -7003,7 +7455,9 @@ static_assert(sizeof(MicroTicksPerStandardTickData) == 0x8, "size from the descr
 struct MinMaterialDriver : ILogicDriver
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(MinMaterialDriver) == 0x10, "size from the description");
 
@@ -7044,7 +7498,9 @@ static_assert(sizeof(MinimapIconBehavior) == 0x8, "size from the description");
 
 struct MinimapIconBehaviorSet
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(MinimapIconBehaviorSet) == 0xc, "size from the description");
 
@@ -7059,7 +7515,10 @@ static_assert(sizeof(MinimapIconChangeOpacity) == 0x14, "size from the descripti
 
 struct MinimapIconColorData
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0xff000000;
+    u32 unknown04 = 0xff000000;
+    u8 unknown08 = 0x0;
+    u8 unknown09[0x3];
 };
 static_assert(sizeof(MinimapIconColorData) == 0xc, "size from the description");
 
@@ -7120,7 +7579,9 @@ static_assert(sizeof(MinimapPingEffectDefinition) == 0x24, "size from the descri
 struct MinimapPingTypeContainer
 {
     ~MinimapPingTypeContainer();         // rva 0x65e370
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(MinimapPingTypeContainer) == 0xc, "size from the description");
 
@@ -7150,7 +7611,12 @@ static_assert(sizeof(Missile) == 0x3f8, "size from the description");
 struct MissileAttachedTargetingDefinition : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x28];
+    u8 mEndPositionType = 0;
+    MetaString mLineTextureName;
+    float mLineTextureWidth = 1e+01f;
+    MetaString mLineEndTextureName;
+    float mLineEndTextureWidth = 1e+01f;
+    float mLineEndTextureHeight = 1e+01f;
 };
 static_assert(sizeof(MissileAttachedTargetingDefinition) == 0x2c, "size from the description");
 
@@ -7165,7 +7631,7 @@ static_assert(sizeof(MissileClient) == 0x418, "size from the description");
 struct MissileGroupSpawnerSpec : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(MissileGroupSpawnerSpec) == 0x8, "size from the description");
 
@@ -7214,7 +7680,10 @@ static_assert(sizeof(MissionsPanelViewController) == 0x370, "size from the descr
 struct MobileCatalogData : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x14];
+    ::MetaString ItemInstanceId;     // +0x4
+    bool Active = false;     // +0x10
+    bool incrementalPurchase = false;     // +0x11
+    int purchaseRateLimit = -1;     // +0x14
 };
 static_assert(sizeof(MobileCatalogData) == 0x18, "size from the description");
 
@@ -7258,7 +7727,11 @@ static_assert(sizeof(ModeSelectViewController) == 0x178, "size from the descript
 
 struct ModifierAddedCalculationPart
 {
-    u8 unknown00[0x10];
+    u16 unknown00 = 0x21;
+    u8 unknown02[0x2];
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
 };
 static_assert(sizeof(ModifierAddedCalculationPart) == 0x10, "size from the description");
 
@@ -7289,7 +7762,8 @@ static_assert(sizeof(MovingTowardEnemyParametricUpdater) == 0x4, "size from the 
 
 struct MultiDragonSoulSlotUiData
 {
-    u8 unknown00[0x30];
+    UiHashLink SoulIconSlot;     // +0x0, serialized hash at the first word
+    UiHashLink SoulSourceEmptyIcon;     // +0x18, serialized hash at the first word
 };
 static_assert(sizeof(MultiDragonSoulSlotUiData) == 0x30, "size from the description");
 
@@ -7361,7 +7835,9 @@ static_assert(sizeof(NeutralMinionCampCommon) == 0x2c8, "size from the descripti
 
 struct NeutralMinionSpawnConfig
 {
-    u8 unknown00[0x24];
+    MetaString MapObjectName;     // +0x0, reflected lifetime
+    MetaString m_2b88e11e;     // +0xc, reflected lifetime
+    MetaString SpawnAnimationName;     // +0x18, reflected lifetime
 };
 static_assert(sizeof(NeutralMinionSpawnConfig) == 0x24, "size from the description");
 
@@ -7376,7 +7852,12 @@ static_assert(sizeof(NeutralTimerData) == 0xf4, "size from the description");
 struct NeutralTimerElements
 {
     NeutralTimerElements();          // rva 0x716b60
-    u8 unknown00[0x7c];
+    UiHashLink TimerText;     // +0x0, serialized hash at the first word
+    UiHashLink AliveIcon;     // +0x18, serialized hash at the first word
+    UiHashLink DeadIcon;     // +0x30, serialized hash at the first word
+    UiHashLink Backdrop;     // +0x48, serialized hash at the first word
+    UiHashLink VoteForButton;     // +0x60, serialized hash at the first word
+    u8 unknown78[0x4];
 };
 static_assert(sizeof(NeutralTimerElements) == 0x7c, "size from the description");
 
@@ -7416,7 +7897,7 @@ static_assert(sizeof(NextSpellVarsTable) == 0x4, "size from the description");
 struct NotInputSourceBool : IInputSourceBool
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(NotInputSourceBool) == 0x8, "size from the description");
 
@@ -7430,7 +7911,7 @@ static_assert(sizeof(NotMaterialDriver) == 0x8, "size from the description");
 struct NotScriptCondition : IScriptCondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(NotScriptCondition) == 0x8, "size from the description");
 
@@ -7618,7 +8099,10 @@ static_assert(sizeof(OffScreenPoiConfigData) == 0x44, "size from the description
 struct OffScreenPoiItemData
 {
     OffScreenPoiItemData();          // rva 0x586c00
-    u8 unknown00[0x60];
+    UiHashLink Frame;     // +0x0, serialized hash at the first word
+    UiHashLink Portrait;     // +0x18, serialized hash at the first word
+    UiHashLink Text;     // +0x30, serialized hash at the first word
+    UiHashLink Region;     // +0x48, serialized hash at the first word
 };
 static_assert(sizeof(OffScreenPoiItemData) == 0x60, "size from the description");
 
@@ -7691,15 +8175,17 @@ static_assert(sizeof(OptionItemDropdown) == 0x60, "size from the description");
 
 struct OptionItemDropdownItem
 {
-    ~OptionItemDropdownItem();         // rva 0x9bab90
-    u8 unknown00[0x10];
+    ::MetaString TRAKey;     // +0x0
+    int value = 0;     // +0xc
 };
 static_assert(sizeof(OptionItemDropdownItem) == 0x10, "size from the description");
 
 struct OptionItemFilter_And : IOptionItemFilter
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(OptionItemFilter_And) == 0x10, "size from the description");
 
@@ -7712,7 +8198,7 @@ static_assert(sizeof(OptionItemFilter_ClassicMusicAllowed) == 0x4, "size from th
 struct OptionItemFilter_FeatureToggle : IOptionItemFilter
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString ToggleName;     // +0x4
 };
 static_assert(sizeof(OptionItemFilter_FeatureToggle) == 0x10, "size from the description");
 
@@ -7752,14 +8238,14 @@ static_assert(sizeof(OptionItemFilter_Map) == 0x10, "size from the description")
 struct OptionItemFilter_Mutator : IOptionItemFilter
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString Mutator;     // +0x4
 };
 static_assert(sizeof(OptionItemFilter_Mutator) == 0x10, "size from the description");
 
 struct OptionItemFilter_Not : IOptionItemFilter
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(OptionItemFilter_Not) == 0x8, "size from the description");
 
@@ -8006,7 +8492,8 @@ static_assert(sizeof(OptionTemplateSecondaryHotkeys_Button) == 0x18, "size from 
 
 struct OptionTemplateSecondaryHotkeys_Label
 {
-    u8 unknown00[0x30];
+    UiHashLink backgroundElement;     // +0x0, serialized hash at the first word
+    UiHashLink TextElement;     // +0x18, serialized hash at the first word
 };
 static_assert(sizeof(OptionTemplateSecondaryHotkeys_Label) == 0x30, "size from the description");
 
@@ -8036,14 +8523,18 @@ static_assert(sizeof(OptionsViewController) == 0x260, "size from the description
 struct OrInputSourceBool : IInputSourceBool
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(OrInputSourceBool) == 0x10, "size from the description");
 
 struct OrScriptCondition : IScriptCondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(OrScriptCondition) == 0x10, "size from the description");
 
@@ -8065,14 +8556,20 @@ static_assert(sizeof(OverrideAutoAttackCastTimeData) == 0x8, "size from the desc
 
 struct OverridePerkSelectionSet
 {
-    u8 unknown00[0x14];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
 };
 static_assert(sizeof(OverridePerkSelectionSet) == 0x14, "size from the description");
 
 struct PackFormationData : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(PackFormationData) == 0x10, "size from the description");
 
@@ -8099,7 +8596,8 @@ static_assert(sizeof(ParametricMovement) == 0x44, "size from the description");
 struct ParametricMovementEntry : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x8];
+    float value = 0.0f;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(ParametricMovementEntry) == 0xc, "size from the description");
 
@@ -8117,7 +8615,9 @@ static_assert(sizeof(ParametricMovementType_AngleFromTarget) == 0x4, "size from 
 
 struct ParametricPairData
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(ParametricPairData) == 0xc, "size from the description");
 
@@ -8131,8 +8631,9 @@ static_assert(sizeof(ParticleEventData) == 0x3c, "size from the description");
 
 struct ParticleEventDataPair
 {
-    ::HashValue mBoneName = {0x0};     // +0x0
-    ::HashValue mTargetBoneName = {0x0};     // +0x4
+    ParticleEventDataPair() { mBoneName.value = 0; mTargetBoneName.value = 0; }
+    ::HashValue mBoneName;     // +0x0
+    ::HashValue mTargetBoneName;     // +0x4
 };
 static_assert(sizeof(ParticleEventDataPair) == 0x8, "size from the description");
 
@@ -8181,19 +8682,23 @@ static_assert(sizeof(Pawn) == 0x2a4, "size from the description");
 
 struct PerLocaleTooltipAdjustments
 {
-    int TitleYAdjustment = 0;     // +0x0
-    int TopHrYPreAdjustment = 0;     // +0x4
-    int TopHrYPostAdjustment = 0;     // +0x8
-    int BottomHrYPreAdjustment = 0;     // +0xc
-    int BottomHrYPostAdjustment = 0;     // +0x10
-    int BottomYPaddingAdjustment = 0;     // +0x14
+    PerLocaleTooltipAdjustments() { TitleYAdjustment = 0; TopHrYPreAdjustment = 0; TopHrYPostAdjustment = 0; BottomHrYPreAdjustment = 0; BottomHrYPostAdjustment = 0; BottomYPaddingAdjustment = 0; }
+    int TitleYAdjustment;     // +0x0
+    int TopHrYPreAdjustment;     // +0x4
+    int TopHrYPostAdjustment;     // +0x8
+    int BottomHrYPreAdjustment;     // +0xc
+    int BottomHrYPostAdjustment;     // +0x10
+    int BottomYPaddingAdjustment;     // +0x14
 };
 static_assert(sizeof(PerLocaleTooltipAdjustments) == 0x18, "size from the description");
 
 struct PercentageOfBuffNameElapsed : IGameCalculationPart
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x20];
+    HashValue buffName{0x0};
+    MetaString IconKey;
+    MetaString ScalingTagKey;
+    float Coefficient = 1.0f;
 };
 static_assert(sizeof(PercentageOfBuffNameElapsed) == 0x24, "size from the description");
 
@@ -8213,25 +8718,32 @@ static_assert(sizeof(PerkBuff) == 0x28, "size from the description");
 
 struct PerkConfig
 {
-    u8 unknown00[0x14];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
 };
 static_assert(sizeof(PerkConfig) == 0x14, "size from the description");
 
 struct PerkEffectAmountPerMode
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<ReflectedPair<HashValue, float>> mEffectAmountPerMode;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(PerkEffectAmountPerMode) == 0xc, "size from the description");
 
 struct PerkReplacement
 {
-    u8 unknown00[0x18];
+    UiHashKey mReplaceTarget;     // +0x0, reflected hash and native runtime key state
+    UiHashKey mReplaceWith;     // +0xc, reflected hash and native runtime key state
 };
 static_assert(sizeof(PerkReplacement) == 0x18, "size from the description");
 
 struct PerkReplacementList
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(PerkReplacementList) == 0xc, "size from the description");
 
@@ -8245,7 +8757,15 @@ static_assert(sizeof(PerkScript) == 0x40, "size from the description");
 struct PerkScriptData : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x24];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
+    u32 unknown18 = 0;
+    u32 unknown1c = 0;
+    u32 unknown20 = 0;
+    u32 unknown24 = 0;
 };
 static_assert(sizeof(PerkScriptData) == 0x28, "size from the description");
 
@@ -8265,14 +8785,26 @@ static_assert(sizeof(PerkStyle) == 0xbc, "size from the description");
 
 struct PerkSubStyleBonus
 {
-    u8 unknown00[0x8];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(PerkSubStyleBonus) == 0x8, "size from the description");
 
 struct PersistentEffectConditionData
 {
-    PersistentEffectConditionData();          // rva 0x278c60
-    u8 unknown00[0x30];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x0;
+    u8 unknown08 = 0x0;
+    u8 unknown09[0x3];
+    u32 unknown0c = 0x0;
+    u32 unknown10 = 0x0;
+    u32 unknown14 = 0x0;
+    u32 unknown18 = 0x0;
+    u32 unknown1c = 0x0;
+    u32 unknown20 = 0x0;
+    u32 unknown24 = 0x0;
+    u32 unknown28 = 0x0;
+    u32 unknown2c = 0x0;
 };
 static_assert(sizeof(PersistentEffectConditionData) == 0x30, "size from the description");
 
@@ -8327,7 +8859,13 @@ static_assert(sizeof(PingSecondaryRadialViewController) == 0x1f8, "size from the
 
 struct PlatformSpellInfo
 {
-    u8 unknown00[0x18];
+    u32 unknown00 = 0xffffffff;
+    u32 unknown04 = 0xffffffff;
+    u8 unknown08 = 0x0;
+    u8 unknown09[0x3];
+    u32 unknown0c = 0x0;
+    u32 unknown10 = 0x0;
+    u32 unknown14 = 0x0;
 };
 static_assert(sizeof(PlatformSpellInfo) == 0x18, "size from the description");
 
@@ -8373,7 +8911,11 @@ static_assert(sizeof(PlayerPerksViewController) == 0xf0, "size from the descript
 struct PlayerPortraitUiData
 {
     PlayerPortraitUiData();          // rva 0x587b10
-    u8 unknown00[0x78];
+    UiHashLink Icon;     // +0x0, serialized hash at the first word
+    UiHashLink LevelText;     // +0x18, serialized hash at the first word
+    UiHashLink RespawnTimer;     // +0x30, serialized hash at the first word
+    UiHashLink VoiceChatHalo;     // +0x48, serialized hash at the first word
+    UiHashLink TooltipRegion;     // +0x60, serialized hash at the first word
 };
 static_assert(sizeof(PlayerPortraitUiData) == 0x78, "size from the description");
 
@@ -8415,7 +8957,7 @@ static_assert(sizeof(PlayerStatStonesViewController) == 0x2f0, "size from the de
 
 struct PoiFadeData
 {
-    float FadeupTimeSecs;     // +0x0
+    float FadeupTimeSecs = 1.0f;     // +0x0
     float FullVisTimeSecs = 1.0f;     // +0x4
     float FadeDownTimeSecs = 1.0f;     // +0x8
     float MinAlphaTimeSecs = 1.0f;     // +0xc
@@ -8466,7 +9008,10 @@ static_assert(sizeof(PostGameViewController) == 0x2d70, "size from the descripti
 struct PracticeToolButtonDefinition
 {
     PracticeToolButtonDefinition();          // rva 0x586c00
-    u8 unknown00[0x60];
+    UiHashLink TitleText;     // +0x0, serialized hash at the first word
+    UiHashLink ToggleVfx;     // +0x18, serialized hash at the first word
+    UiHashLink Portrait;     // +0x30, serialized hash at the first word
+    UiHashLink Button;     // +0x48, serialized hash at the first word
 };
 static_assert(sizeof(PracticeToolButtonDefinition) == 0x60, "size from the description");
 
@@ -8488,14 +9033,17 @@ static_assert(sizeof(PreloadCharacters) == 0xc, "size from the description");
 struct ProductOfSubPartsCalculationPart : IGameCalculationPart
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x8];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(ProductOfSubPartsCalculationPart) == 0xc, "size from the description");
 
 struct ProgressBarDisplayData
 {
     ProgressBarDisplayData();          // rva 0x5894b0
-    u8 unknown00[0x48];
+    UiHashLink Meter;     // +0x0, serialized hash at the first word
+    UiHashLink TitleText;     // +0x18, serialized hash at the first word
+    UiHashLink TimerText;     // +0x30, serialized hash at the first word
 };
 static_assert(sizeof(ProgressBarDisplayData) == 0x48, "size from the description");
 
@@ -8509,21 +9057,32 @@ static_assert(sizeof(ProgressBarViewController) == 0x158, "size from the descrip
 
 struct alignas(8) PropertyOverrideLoadable
 {
-    u8 unknown00[0x18];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
+    u8 unknown10 = 0x0;
+    u8 unknown11[0x7];
 };
 static_assert(sizeof(PropertyOverrideLoadable) == 0x18, "size from the description");
 
 struct PurchaseDialogSubPurchaseElements
 {
     PurchaseDialogSubPurchaseElements();          // rva 0x587b10
-    u8 unknown00[0x78];
+    UiHashLink SubPurchaseIcon;     // +0x0, serialized hash at the first word
+    UiHashLink SubPurchaseIconFrame;     // +0x18, serialized hash at the first word
+    UiHashLink SubPurchaseDivider;     // +0x30, serialized hash at the first word
+    UiHashLink SubPurchaseTitle;     // +0x48, serialized hash at the first word
+    UiHashLink SubPurchaseGroup;     // +0x60, serialized hash at the first word
 };
 static_assert(sizeof(PurchaseDialogSubPurchaseElements) == 0x78, "size from the description");
 
 struct PurchaseDialogSubPurchaseHeaderElements
 {
     PurchaseDialogSubPurchaseHeaderElements();          // rva 0x5894b0
-    u8 unknown00[0x48];
+    UiHashLink HeaderText;     // +0x0, serialized hash at the first word
+    UiHashLink HeaderSpace;     // +0x18, serialized hash at the first word
+    UiHashLink HeaderGroup;     // +0x30, serialized hash at the first word
 };
 static_assert(sizeof(PurchaseDialogSubPurchaseHeaderElements) == 0x48, "size from the description");
 
@@ -8566,20 +9125,20 @@ static_assert(sizeof(QueueDisplayData) == 0x90, "size from the description");
 
 struct RadialMenuButtonDefinitionBase
 {
-    u8 unknown00[0x18];
+    UiHashLink DefaultIcon;     // +0x0, serialized hash at the first word
 };
 static_assert(sizeof(RadialMenuButtonDefinitionBase) == 0x18, "size from the description");
 
 struct RadialMenuHoverButtonDefinition : RadialMenuButtonDefinitionBase
 {
-    u8 unknown18[0x18];
+    UiHashLink HoverIcon;     // +0x18, serialized hash at the first word
 };
 static_assert(sizeof(RadialMenuHoverButtonDefinition) == 0x30, "size from the description");
 
 struct RandomChanceScriptCondition : IScriptCondition
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(RandomChanceScriptCondition) == 0x8, "size from the description");
 
@@ -8608,20 +9167,34 @@ static_assert(sizeof(RatioConversion) == 0x8, "size from the description");
 
 struct RecSpellRankUpInfo
 {
-    u8 unknown00[0x2c];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u8 unknown0c = 0x0;
+    u8 unknown0d[0x3];
+    u32 unknown10 = 0x3;
+    u32 unknown14 = 0x0;
+    u32 unknown18 = 0x1;
+    u32 unknown1c = 0x2;
+    u32 unknown20 = 0x0;
+    u32 unknown24 = 0x0;
+    u32 unknown28 = 0x0;
 };
 static_assert(sizeof(RecSpellRankUpInfo) == 0x2c, "size from the description");
 
 struct RecSpellRankUpInfoList
 {
     ~RecSpellRankUpInfoList();         // rva 0x233aa0
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(RecSpellRankUpInfoList) == 0xc, "size from the description");
 
 struct RecSpellRecommendations
 {
-    u8 unknown00[0x18];
+    UiHashKey RecSpellRankUpInfolist;     // +0x0, reflected hash and native runtime key state
+    UiHashKey DesignerRecSpellOverride;     // +0xc, reflected hash and native runtime key state
 };
 static_assert(sizeof(RecSpellRecommendations) == 0x18, "size from the description");
 
@@ -8683,34 +9256,48 @@ static_assert(sizeof(RegaliaLookup) == 0x30, "size from the description");
 
 struct RegaliaPrestigeCrestList
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(RegaliaPrestigeCrestList) == 0xc, "size from the description");
 
 struct RegaliaRankedBannerMap
 {
     ~RegaliaRankedBannerMap();         // rva 0x256600
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(RegaliaRankedBannerMap) == 0xc, "size from the description");
 
 struct RegaliaRankedCrestEntry
 {
     ~RegaliaRankedCrestEntry();         // rva 0x257170
-    u8 unknown00[0x1c];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
+    u32 unknown18 = 0;
 };
 static_assert(sizeof(RegaliaRankedCrestEntry) == 0x1c, "size from the description");
 
 struct RegaliaRankedCrestMap
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(RegaliaRankedCrestMap) == 0xc, "size from the description");
 
 struct RegaliaRatedBadgeMap
 {
     ~RegaliaRatedBadgeMap();         // rva 0x256650
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(RegaliaRatedBadgeMap) == 0xc, "size from the description");
 
@@ -8723,14 +9310,18 @@ static_assert(sizeof(RegionSettings) == 0x14, "size from the description");
 
 struct RegionsThatAllowContent
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<HashValue> mRegionList;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(RegionsThatAllowContent) == 0xc, "size from the description");
 
 struct RemapFloatMaterialDriver : ILogicFloatDriver
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x14];
+    u32 unknown04 = 0;
+    float mMinValue = 0.0f;
+    float mMaxValue = 1.0f;
+    float mOutputMinValue = 0.0f;
+    float mOutputMaxValue = 1.0f;
 };
 static_assert(sizeof(RemapFloatMaterialDriver) == 0x18, "size from the description");
 
@@ -8858,14 +9449,16 @@ static_assert(sizeof(RetiredStatStoneData) == 0x14, "size from the description")
 struct ReturnToCaster : MissileTriggeredActionSpec
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x8];
+    bool mPreserveSpeed = false;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(ReturnToCaster) == 0xc, "size from the description");
 
 struct ReturnToCasterOnMovementComplete : MissileBehaviorSpec
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x8];
+    bool mPreserveSpeed = false;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(ReturnToCasterOnMovementComplete) == 0xc, "size from the description");
 
@@ -8899,33 +9492,41 @@ static_assert(sizeof(RoleOpponentConstraintInfo) == 0x4, "size from the descript
 
 struct RotatingBanner
 {
-    u8 unknown00[0x8];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(RotatingBanner) == 0x8, "size from the description");
 
 struct alignas(8) RotatingBannerEntry
 {
-    u8 unknown00[0x10];
+    u32 unknown00 = 0x0;
+    u8 unknown04[0x4];
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
 };
 static_assert(sizeof(RotatingBannerEntry) == 0x10, "size from the description");
 
 struct RotatingBannerSet
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(RotatingBannerSet) == 0xc, "size from the description");
 
 struct RotatingWaveBehavior : IMinionWaveBehavior
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(RotatingWaveBehavior) == 0x10, "size from the description");
 
 struct RunSpeedRatioFloatDriver : ILogicFloatDriver
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    u32 unknown04 = 0x3f800000;
 };
 static_assert(sizeof(RunSpeedRatioFloatDriver) == 0x8, "size from the description");
 
@@ -9000,21 +9601,27 @@ static_assert(sizeof(ScoreboardViewController) == 0xbc8, "size from the descript
 struct ScriptBtInverter : IScriptSequence
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(ScriptBtInverter) == 0x10, "size from the description");
 
 struct ScriptBtSelector : IScriptSequence
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(ScriptBtSelector) == 0x10, "size from the description");
 
 struct ScriptBtSequence : IScriptSequence
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(ScriptBtSequence) == 0x10, "size from the description");
 
@@ -9069,28 +9676,28 @@ static_assert(sizeof(ScriptGlobalProperties) == 0x7c, "size from the description
 struct ScriptPreloadCharacter : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString PreloadResourceName;     // +0x4
 };
 static_assert(sizeof(ScriptPreloadCharacter) == 0x10, "size from the description");
 
 struct ScriptPreloadModule : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString PreloadResourceName;     // +0x4
 };
 static_assert(sizeof(ScriptPreloadModule) == 0x10, "size from the description");
 
 struct ScriptPreloadParticle : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString PreloadResourceName;     // +0x4
 };
 static_assert(sizeof(ScriptPreloadParticle) == 0x10, "size from the description");
 
 struct ScriptPreloadSpell : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString PreloadResourceName;     // +0x4
 };
 static_assert(sizeof(ScriptPreloadSpell) == 0x10, "size from the description");
 
@@ -9117,13 +9724,16 @@ static_assert(sizeof(SelectorMovement) == 0x40, "size from the description");
 struct SelectorMovementEntry : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x8];
+    float WEIGHT = 1.0f;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(SelectorMovementEntry) == 0xc, "size from the description");
 
 struct SelectorPairData
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0xffffffff;
 };
 static_assert(sizeof(SelectorPairData) == 0xc, "size from the description");
 
@@ -9142,14 +9752,24 @@ static_assert(sizeof(SelfAoe) == 0x4, "size from the description");
 struct Sequence : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x1c];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
+    u32 unknown18 = 0;
+    u32 unknown1c = 0;
 };
 static_assert(sizeof(Sequence) == 0x20, "size from the description");
 
 struct SequenceCategory : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x1c];
+    MetaString name;
+    HashValue Hash{0x0};
+    u32 unknown14 = 0;
+    u32 unknown18 = 0;
+    u32 unknown1c = 0;
 };
 static_assert(sizeof(SequenceCategory) == 0x20, "size from the description");
 
@@ -9170,14 +9790,17 @@ static_assert(sizeof(SequenceLocationObject) == 0x48, "size from the description
 struct SequenceObjectSelector : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x10];
+    ::MetaString name;     // +0x4
+    ::HashValue Hash = {0x0};     // +0x10
 };
 static_assert(sizeof(SequenceObjectSelector) == 0x14, "size from the description");
 
 struct SequencePhase : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x14];
+    u32 type = 0;     // +0x4
+    ::MetaString name;     // +0x8
+    float DefaultDuration = 1.0f;     // +0x14
 };
 static_assert(sizeof(SequencePhase) == 0x18, "size from the description");
 
@@ -9194,14 +9817,24 @@ static_assert(sizeof(SequencePhaseOverride) == 0x14, "size from the description"
 struct SequenceTable : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x28];
+    u8 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
+    u32 unknown18 = 0;
+    u32 unknown1c = 0;
+    u32 unknown20 = 0;
+    u32 unknown24 = 0;
+    u32 unknown28 = 0;
 };
 static_assert(sizeof(SequenceTable) == 0x2c, "size from the description");
 
 struct SequenceTableEntry : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x8];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(SequenceTableEntry) == 0xc, "size from the description");
 
@@ -9215,7 +9848,8 @@ static_assert(sizeof(SequenceTiming) == 0x14, "size from the description");
 struct SequenceType : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x10];
+    ::MetaString name;     // +0x4
+    ::HashValue Hash = {0x0};     // +0x10
 };
 static_assert(sizeof(SequenceType) == 0x14, "size from the description");
 
@@ -9256,8 +9890,8 @@ static_assert(sizeof(SetVarInTableBlock) == 0x18, "size from the description");
 
 struct ShaderLogicalParameter
 {
-    ~ShaderLogicalParameter();         // rva 0x9bab90
-    u8 unknown00[0x10];
+    ::MetaString name;     // +0x0
+    u32 fields = 0;     // +0xc
 };
 static_assert(sizeof(ShaderLogicalParameter) == 0x10, "size from the description");
 
@@ -9269,8 +9903,8 @@ static_assert(sizeof(ShaderPhysicalParameter) == 0x28, "size from the descriptio
 
 struct ShaderStaticSwitch
 {
-    ~ShaderStaticSwitch();         // rva 0x9bab90
-    u8 unknown00[0x10];
+    ::MetaString name;     // +0x0
+    bool onByDefault = false;     // +0xc
 };
 static_assert(sizeof(ShaderStaticSwitch) == 0x10, "size from the description");
 
@@ -9282,7 +9916,7 @@ static_assert(sizeof(ShaderTexture) == 0x18, "size from the description");
 
 struct ShadowOverrideSettings
 {
-    float ShadowBias;     // +0x0
+    float ShadowBias = 0.006f;     // +0x0
     float TopDownCamNearClipDistance = 3e+03f;     // +0x4
     float FreeCameraShadowExtentXz = 3e+03f;     // +0x8
     float FreeCamShadowNearClipDistance = 1.5e+03f;     // +0xc
@@ -9315,7 +9949,10 @@ static_assert(sizeof(SimpleItemSlots) == 0x540, "size from the description");
 struct SineMaterialDriver : ILogicFloatDriver
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x10];
+    u32 unknown04 = 0;
+    float mFrequency = 1.0f;
+    float mScale = 1.0f;
+    float mBias = 0.0f;
 };
 static_assert(sizeof(SineMaterialDriver) == 0x14, "size from the description");
 
@@ -9338,13 +9975,19 @@ static_assert(sizeof(SinusoidalHeightSolver) == 0x10, "size from the description
 
 struct SkinAnimationProperties
 {
-    u8 unknown00[0x4];
+    ~SkinAnimationProperties() { std::memset(this, 0, 0x4); }
+    u32 unknown00 = 0;
 };
 static_assert(sizeof(SkinAnimationProperties) == 0x4, "size from the description");
 
 struct SkinAudioProperties
 {
-    u8 unknown00[0x18];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
 };
 static_assert(sizeof(SkinAudioProperties) == 0x18, "size from the description");
 
@@ -9372,21 +10015,27 @@ static_assert(sizeof(SkinCharacterMetaDataProperties) == 0x38, "size from the de
 
 struct SkinCharacterMetaDataProperties_SpawningSkinOffset
 {
-    ~SkinCharacterMetaDataProperties_SpawningSkinOffset();         // rva 0x9bab90
-    u8 unknown00[0x10];
+    ::MetaString tag;     // +0x0
+    int offset = 0;     // +0xc
 };
 static_assert(sizeof(SkinCharacterMetaDataProperties_SpawningSkinOffset) == 0x10, "size from the description");
 
 struct SkinEmblem
 {
-    u8 unknown00[0x8];
+    ~SkinEmblem() { std::memset(this, 0, 0x4); }
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x5;
 };
 static_assert(sizeof(SkinEmblem) == 0x8, "size from the description");
 
 struct SkinFilterData : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x14];
+    u32 FilterType = 0;
+    bool UseValidParentForChroma = true;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
 };
 static_assert(sizeof(SkinFilterData) == 0x18, "size from the description");
 
@@ -9412,13 +10061,16 @@ static_assert(sizeof(SkinScaleParametricUpdater) == 0x4, "size from the descript
 
 struct SkinSummonerEmoteLoadout
 {
+    SkinSummonerEmoteLoadout() { std::memset(unknown00, 0, 0x28); }
     u8 unknown00[0x50];
 };
 static_assert(sizeof(SkinSummonerEmoteLoadout) == 0x50, "size from the description");
 
 struct SkinUpgradeData
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(SkinUpgradeData) == 0xc, "size from the description");
 
@@ -9514,7 +10166,8 @@ static_assert(sizeof(SpawnAiTurret) == 0x2c, "size from the description");
 struct SpawningUIDefinition : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x10];
+    ::MetaString buffNameFilter;     // +0x4
+    int maxNumberOfUnits = 0;     // +0x10
 };
 static_assert(sizeof(SpawningUIDefinition) == 0x14, "size from the description");
 
@@ -9551,32 +10204,40 @@ static_assert(sizeof(SpellDataResourceClient) == 0x70, "size from the descriptio
 struct SpellDataValue : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x2c];
+    MetaString mName;
+    u32 unknown10[4] = {};
+    u32 unknown20[2] = {};
+    u32 unknown28 = 0;
+    u32 unknown2c = 0;
 };
 static_assert(sizeof(SpellDataValue) == 0x30, "size from the description");
 
 struct SpellDataValueVector
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<SpellDataValue> SpellDataValues;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(SpellDataValueVector) == 0xc, "size from the description");
 
 struct SpellEffectAmount
 {
+    SpellEffectAmount() { std::memset(unknown00, 0, 0x1c); }
     u8 unknown00[0x1c];
 };
 static_assert(sizeof(SpellEffectAmount) == 0x1c, "size from the description");
 
 struct SpellEvolutionUiData
 {
-    u8 unknown00[0x30];
+    UiHashLink Icon;     // +0x0, serialized hash at the first word
+    UiHashLink Button;     // +0x18, serialized hash at the first word
 };
 static_assert(sizeof(SpellEvolutionUiData) == 0x30, "size from the description");
 
 struct SpellLevelUpInfo
 {
     ~SpellLevelUpInfo();         // rva 0x233b40
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(SpellLevelUpInfo) == 0xc, "size from the description");
 
@@ -9639,6 +10300,7 @@ static_assert(sizeof(SpellRankIntDriver) == 0x8, "size from the description");
 
 struct SpellRankPipsUiData
 {
+    SpellRankPipsUiData() { std::memset(unknown00, 0, 0x10); }
     u8 unknown00[0x10];
 };
 static_assert(sizeof(SpellRankPipsUiData) == 0x10, "size from the description");
@@ -9659,14 +10321,18 @@ static_assert(sizeof(SpellRankUpRequirements) == 0xc, "size from the description
 
 struct SpellSlotBasicUiDefinition
 {
-    u8 unknown00[0x30];
+    UiHashLink ContentElement;     // +0x0, serialized hash at the first word
+    UiHashLink MouseoverRegion;     // +0x18, serialized hash at the first word
 };
 static_assert(sizeof(SpellSlotBasicUiDefinition) == 0x30, "size from the description");
 
 struct SpellSlotBuffTimerData
 {
     SpellSlotBuffTimerData();          // rva 0x586c00
-    u8 unknown00[0x60];
+    UiHashLink TimerBorderBg;     // +0x0, serialized hash at the first word
+    UiHashLink TimerBorderFx;     // +0x18, serialized hash at the first word
+    UiHashLink TimerBarBg;     // +0x30, serialized hash at the first word
+    UiHashLink TimerBarFill;     // +0x48, serialized hash at the first word
 };
 static_assert(sizeof(SpellSlotBuffTimerData) == 0x60, "size from the description");
 
@@ -9696,13 +10362,19 @@ static_assert(sizeof(SpellSlotEqualOrGreaterThanLevelRequirement) == 0xc, "size 
 struct SpellSlotSimpleUiDefinition : SpellSlotBasicUiDefinition
 {
     SpellSlotSimpleUiDefinition();          // rva 0x587b10
-    u8 unknown30[0x48];
+    UiHashLink CooldownFx;     // +0x30, serialized hash at the first word
+    UiHashLink OverlayHandle;     // +0x48, serialized hash at the first word
+    UiHashLink unknownLink60;     // +0x60, serialized hash at the first word
 };
 static_assert(sizeof(SpellSlotSimpleUiDefinition) == 0x78, "size from the description");
 
 struct alignas(8) SponsoredBanner
 {
-    u8 unknown00[0x10];
+    ~SponsoredBanner() { std::memset(this, 0, 0x4); }
+    u32 unknown00 = 0x0;
+    u8 unknown04[0x4];
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
 };
 static_assert(sizeof(SponsoredBanner) == 0x10, "size from the description");
 
@@ -9767,14 +10439,16 @@ static_assert(sizeof(StatFilterDefinition) == 0x24, "size from the description")
 
 struct StatFormulaData
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<ReflectedPair<u8, float>> StatComponents;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(StatFormulaData) == 0xc, "size from the description");
 
 struct StatFormulaDataList
 {
     ~StatFormulaDataList();         // rva 0x233820
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(StatFormulaDataList) == 0xc, "size from the description");
 
@@ -9813,7 +10487,10 @@ static_assert(sizeof(StatStoneData) == 0x84, "size from the description");
 
 struct StatStoneEventToTrack
 {
-    u8 unknown00[0x10];
+    u32 unknown00 = 0xe8;
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
 };
 static_assert(sizeof(StatStoneEventToTrack) == 0x10, "size from the description");
 
@@ -9826,7 +10503,9 @@ static_assert(sizeof(StatStoneMasteryEffectLookup) == 0x10, "size from the descr
 
 struct StatStoneMasteryEffects
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(StatStoneMasteryEffects) == 0xc, "size from the description");
 
@@ -9862,7 +10541,13 @@ static_assert(sizeof(StatUIData) == 0x34, "size from the description");
 
 struct StateAnimTransitionData
 {
-    u8 unknown00[0x18];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x10001;
+    u16 unknown08 = 0x1;
+    u8 unknown0a[0x2];
+    u32 unknown0c = 0x0;
+    u32 unknown10 = 0x0;
+    u32 unknown14 = 0xffffffff;
 };
 static_assert(sizeof(StateAnimTransitionData) == 0x18, "size from the description");
 
@@ -9890,8 +10575,8 @@ static_assert(sizeof(StaticMaterialPassDef) == 0x64, "size from the description"
 
 struct StaticMaterialShaderParamDef
 {
-    ~StaticMaterialShaderParamDef();         // rva 0x9bab90
-    u8 unknown00[0x1c];
+    ::MetaString name;     // +0x0
+    ::Vector4 value = {0.0f, 0.0f, 0.0f, 0.0f};     // +0xc
 };
 static_assert(sizeof(StaticMaterialShaderParamDef) == 0x1c, "size from the description");
 
@@ -9910,8 +10595,8 @@ static_assert(sizeof(StaticMaterialSharedTextureDef) == 0x24, "size from the des
 
 struct StaticMaterialSwitchDef
 {
-    ~StaticMaterialSwitchDef();         // rva 0x9bab90
-    u8 unknown00[0x10];
+    ::MetaString name;     // +0x0
+    bool on = true;     // +0xc
 };
 static_assert(sizeof(StaticMaterialSwitchDef) == 0x10, "size from the description");
 
@@ -9941,7 +10626,10 @@ static_assert(sizeof(StealthCharacterFade) == 0xc, "size from the description");
 
 struct StealthCharacterFadeInstance
 {
-    u8 unknown00[0x8];
+    ~StealthCharacterFadeInstance() { std::memset(this, 0, 0x4); }
+    u32 unknown00 = 0x0;
+    u16 unknown04 = 0x0;
+    u8 unknown06[0x2];
 };
 static_assert(sizeof(StealthCharacterFadeInstance) == 0x8, "size from the description");
 
@@ -9967,12 +10655,29 @@ static_assert(sizeof(StealthFadeColorEffect) == 0x18, "size from the description
 struct StealthVfx
 {
     StealthVfx();          // rva 0x13d720
-    u8 unknown00[0x3c];
+    MetaString effectName;     // +0x0, reflected lifetime
+    MetaString EffectNameForOtherTeam;     // +0xc, reflected lifetime
+    MetaString boneName;     // +0x18, reflected lifetime
+    u8 FowTeam;     // +0x24, reflected lifetime
+    u8 SpecificTeamOnly;     // +0x25, reflected lifetime
+    bool HidefromSpectator;     // +0x26, reflected lifetime
+    float FowVisibilityRadius;     // +0x28, reflected lifetime
+    bool UseOwnerFacing;     // +0x2c, reflected lifetime
+    bool UseTargetObject;     // +0x2d, reflected lifetime
+    bool UseKeywordObject;     // +0x2e, reflected lifetime
+    bool OnlySendToOwner;     // +0x2f, reflected lifetime
+    float scale;     // +0x30, reflected lifetime
+    float TimeoutInFow;     // +0x34, reflected lifetime
+    bool PersistentThroughReconnect;     // +0x38, reflected lifetime
+    bool AttachToCamera;     // +0x39, reflected lifetime
+    bool UseAttachmentForMeshOnly;     // +0x3a, reflected lifetime
+    bool SendIfOnScreenOrDiscard;     // +0x3b, reflected lifetime
 };
 static_assert(sizeof(StealthVfx) == 0x3c, "size from the description");
 
 struct StealthVfxInstance
 {
+    ~StealthVfxInstance() { std::memset(this, 0, 0x4); }
     u8 unknown00[0xc];
 };
 static_assert(sizeof(StealthVfxInstance) == 0xc, "size from the description");
@@ -9993,7 +10698,14 @@ static_assert(sizeof(StoreCategoryButtonDefinition) == 0x1c, "size from the desc
 struct StoreCategoryInventoryFilter : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x28];
+    MetaString mInventoryType;
+    u8 mOrder = 0;
+    u32 unknown14 = 0;
+    u32 unknown18 = 0;
+    u32 unknown1c = 0;
+    u32 unknown20 = 0;
+    u32 unknown24 = 0;
+    u32 unknown28 = 0;
 };
 static_assert(sizeof(StoreCategoryInventoryFilter) == 0x2c, "size from the description");
 
@@ -10038,7 +10750,7 @@ static_assert(sizeof(StoreViewPurchases) == 0x1c4, "size from the description");
 struct StringGet : IStringGet
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString value;     // +0x4
 };
 static_assert(sizeof(StringGet) == 0x10, "size from the description");
 
@@ -10095,7 +10807,9 @@ static_assert(sizeof(SubmeshVisibilityEventData) == 0x30, "size from the descrip
 struct SumOfSubPartsCalculationPart : IGameCalculationPart
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(SumOfSubPartsCalculationPart) == 0x10, "size from the description");
 
@@ -10109,13 +10823,18 @@ static_assert(sizeof(SummonerEmote) == 0x60, "size from the description");
 
 struct SummonerEmoteSettings
 {
-    u8 unknown00[0x8];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(SummonerEmoteSettings) == 0x8, "size from the description");
 
 struct SummonerIconData
 {
-    u8 unknown00[0x24];
+    u32 iconId = 0;
+    u32 esportsTeam = 0; // serialized MetaLink, four-byte non-owning storage
+    MetaString gameTexture;
+    bool GoldEsportsSupportIcon = false;
+    MetaString eSportsEventMutator;
 };
 static_assert(sizeof(SummonerIconData) == 0x24, "size from the description");
 
@@ -10135,25 +10854,35 @@ static_assert(sizeof(SummonerNameUiData) == 0x18, "size from the description");
 
 struct SummonerSpellPerkReplacement
 {
-    u8 unknown00[0x18];
+    UiHashKey mSummonerSpellRequired;     // +0x0, reflected hash and native runtime key state
+    UiHashKey mReplaceCurrentPerkWith;     // +0xc, reflected hash and native runtime key state
 };
 static_assert(sizeof(SummonerSpellPerkReplacement) == 0x18, "size from the description");
 
 struct SummonerSpellPerkReplacementList
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(SummonerSpellPerkReplacementList) == 0xc, "size from the description");
 
 struct SurrenderData
 {
-    u8 unknown00[0x20];
+    u32 unknown00 = 0x40a00000;
+    u32 unknown04 = 0x43340000;
+    u32 unknown08 = 0x43340000;
+    u32 unknown0c = 0x42b40000;
+    u32 unknown10 = 0x43340000;
+    u32 unknown14 = 0x0;
+    u32 unknown18 = 0x0;
+    u32 unknown1c = 0x0;
 };
 static_assert(sizeof(SurrenderData) == 0x20, "size from the description");
 
 struct SurrenderTypeData
 {
-    float VoteTimeout;     // +0x0
+    float VoteTimeout = 6e+01f;     // +0x0
     float windowLength = 6e+01f;     // +0x4
     float startTime = 1.2e+03f;     // +0x8
     float percentageRequired = 0.7f;     // +0xc
@@ -10191,13 +10920,16 @@ static_assert(sizeof(SwitchCase) == 0x18, "size from the description");
 
 struct SwitchIntPairData
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0xffffffff;
 };
 static_assert(sizeof(SwitchIntPairData) == 0xc, "size from the description");
 
 struct SwitchMaterialDriverElement
 {
-    u8 unknown00[0x8];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(SwitchMaterialDriverElement) == 0x8, "size from the description");
 
@@ -10217,7 +10949,8 @@ static_assert(sizeof(SyncCircleMovement) == 0x40, "size from the description");
 
 struct SyncGroupData
 {
-    u8 unknown00[0x8];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(SyncGroupData) == 0x8, "size from the description");
 
@@ -10231,7 +10964,7 @@ static_assert(sizeof(SyncedAnimationEventData) == 0x18, "size from the descripti
 struct SyncedAnimationRigPoseModifierData : BaseRigPoseModifierData
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    u32 unknown04 = 0xffffffff;
 };
 static_assert(sizeof(SyncedAnimationRigPoseModifierData) == 0x8, "size from the description");
 
@@ -10277,7 +11010,15 @@ static_assert(sizeof(TFTBattlepassViewController) == 0x908, "size from the descr
 
 struct TFTBotLoadoutConfiguration
 {
-    u8 unknown00[0x24];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
+    u32 unknown18 = 0;
+    u32 unknown1c = 0;
+    u32 unknown20 = 0;
 };
 static_assert(sizeof(TFTBotLoadoutConfiguration) == 0x24, "size from the description");
 
@@ -10315,7 +11056,7 @@ static_assert(sizeof(TFTCombatRecapViewController) == 0x530, "size from the desc
 
 struct TFTCompanionBucket
 {
-    u8 unknown00[0xc];
+    ReflectedBuffer<UiHashKey> Companions;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(TFTCompanionBucket) == 0xc, "size from the description");
 
@@ -10385,7 +11126,10 @@ static_assert(sizeof(TFTItemCodexViewController) == 0x318, "size from the descri
 
 struct TFTItemList
 {
-    u8 unknown00[0x10];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(TFTItemList) == 0x10, "size from the description");
 
@@ -10430,7 +11174,12 @@ static_assert(sizeof(TFTNotificationData) == 0x70, "size from the description");
 struct TFTPhaseData : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x20];
+    u32 unknown04 = 0;
+    bool mEnabled = false;
+    float mDuration = 0.0f;
+    u32 mDisplay = 0;
+    MetaString mLabel;
+    u32 unknown20 = 0;
 };
 static_assert(sizeof(TFTPhaseData) == 0x24, "size from the description");
 
@@ -10461,7 +11210,9 @@ static_assert(sizeof(TFTSetData) == 0xc4, "size from the description");
 struct TFTStageData : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(TFTStageData) == 0x10, "size from the description");
 
@@ -10482,13 +11233,22 @@ static_assert(sizeof(TFTStreak) == 0x18, "size from the description");
 struct TFTStreakData : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x18];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
+    u32 unknown18 = 0;
 };
 static_assert(sizeof(TFTStreakData) == 0x1c, "size from the description");
 
 struct TFTTraitContributionData
 {
-    u8 unknown00[0x10];
+    u8 unknown00[0x4];
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x1;
+    u16 unknown0c = 0x1;
+    u8 unknown0e[0x2];
 };
 static_assert(sizeof(TFTTraitContributionData) == 0x10, "size from the description");
 
@@ -10546,7 +11306,9 @@ static_assert(sizeof(TargetFrameViewController) == 0x398, "size from the descrip
 struct TargetHasBuffFilter : IStatStoneLogicDriver
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(TargetHasBuffFilter) == 0x10, "size from the description");
 
@@ -10612,9 +11374,10 @@ static_assert(sizeof(TargeterDefinitionAoe) == 0x94, "size from the description"
 
 struct TargeterDefinitionAoeScalar
 {
-    float Scalar = 0.0f;     // +0x0
-    float MinAdjustedRadius = 0.0f;     // +0x4
-    float MaxAdjustedRadius = 0.0f;     // +0x8
+    TargeterDefinitionAoeScalar() { Scalar = 0; MinAdjustedRadius = 0; MaxAdjustedRadius = 0; }
+    float Scalar;     // +0x0
+    float MinAdjustedRadius;     // +0x4
+    float MaxAdjustedRadius;     // +0x8
 };
 static_assert(sizeof(TargeterDefinitionAoeScalar) == 0xc, "size from the description");
 
@@ -10693,7 +11456,16 @@ static_assert(sizeof(TargeterDefinitionWall) == 0x74, "size from the description
 struct TargetingForgivenessDefinitions : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x28];
+    float ForgivenessRange = 0.0f;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
+    u32 unknown18 = 0;
+    u32 unknown1c = 0;
+    bool OverrideAffectsFlags = false;
+    u32 mAffectsTypeOverride = 0;
+    u32 mAffectsStatusOverride = 0;
 };
 static_assert(sizeof(TargetingForgivenessDefinitions) == 0x2c, "size from the description");
 
@@ -10751,7 +11523,8 @@ static_assert(sizeof(TerrainType) == 0xac, "size from the description");
 struct TextInfoNubData : InfoNubData
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x18];
+    MetaString TitleKey;
+    MetaString BodyKey;
 };
 static_assert(sizeof(TextInfoNubData) == 0x1c, "size from the description");
 
@@ -10770,7 +11543,7 @@ static_assert(sizeof(TftAnimClipModifier) == 0x4, "size from the description");
 struct TftAnimClipOverrideModifier : TftAnimClipModifier
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString Animation;     // +0x4
 };
 static_assert(sizeof(TftAnimClipOverrideModifier) == 0x10, "size from the description");
 
@@ -10797,7 +11570,9 @@ static_assert(sizeof(TftArmoryActionButtonData) == 0x58, "size from the descript
 
 struct TftArmoryButtonStyleData
 {
-    u8 unknown00[0x34];
+    UiHashLink ItemButton;     // +0x0, serialized hash at the first word
+    UiHashLink description;     // +0x18, serialized hash at the first word
+    u8 unknown30[0x4];
 };
 static_assert(sizeof(TftArmoryButtonStyleData) == 0x34, "size from the description");
 
@@ -10826,7 +11601,9 @@ static_assert(sizeof(TftAugmentDisplayData) == 0x68, "size from the description"
 struct TftBannerIconData
 {
     TftBannerIconData();          // rva 0x5894b0
-    u8 unknown00[0x48];
+    UiHashLink Group;     // +0x0, serialized hash at the first word
+    UiHashLink Icon;     // +0x18, serialized hash at the first word
+    UiHashLink Button;     // +0x30, serialized hash at the first word
 };
 static_assert(sizeof(TftBannerIconData) == 0x48, "size from the description");
 
@@ -10841,7 +11618,10 @@ static_assert(sizeof(TftBaseTraitSetData) == 0x38, "size from the description");
 struct TftBattlepassSelectedRewardBannerUiData
 {
     TftBattlepassSelectedRewardBannerUiData();          // rva 0x586c00
-    u8 unknown00[0x60];
+    UiHashLink ClaimText;     // +0x0, serialized hash at the first word
+    UiHashLink LockText;     // +0x18, serialized hash at the first word
+    UiHashLink ClaimReadyGroup;     // +0x30, serialized hash at the first word
+    UiHashLink LockGroup;     // +0x48, serialized hash at the first word
 };
 static_assert(sizeof(TftBattlepassSelectedRewardBannerUiData) == 0x60, "size from the description");
 
@@ -10862,7 +11642,10 @@ static_assert(sizeof(TftChangeDamageSkinCheat) == 0x44, "size from the descripti
 struct TftCharacterRoleCardHeaderData
 {
     TftCharacterRoleCardHeaderData();          // rva 0x586c00
-    u8 unknown00[0x60];
+    UiHashLink Group;     // +0x0, serialized hash at the first word
+    UiHashLink Icon;     // +0x18, serialized hash at the first word
+    UiHashLink title;     // +0x30, serialized hash at the first word
+    UiHashLink description;     // +0x48, serialized hash at the first word
 };
 static_assert(sizeof(TftCharacterRoleCardHeaderData) == 0x60, "size from the description");
 
@@ -10925,6 +11708,7 @@ static_assert(sizeof(TftCutsceneAddMapProp) == 0x18, "size from the description"
 
 struct TftCutsceneClip : TftCutsceneEntry
 {
+    TftCutsceneClip();          // rva 0x557440
     const MetaClass* GetClass() const override;
     float duration;     // +0xc
 };
@@ -10947,7 +11731,9 @@ static_assert(sizeof(TftCutsceneInitializer) == 0x4, "size from the description"
 struct TftCutsceneArenaLocatorInitializer : TftCutsceneInitializer
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x1c];
+    ::MetaString LocatorBlackboardName;     // +0x4
+    ::MetaString CutscenePositionLocatorName;     // +0x10
+    bool IsLocatorArenaSpecific;     // +0x1c
 };
 static_assert(sizeof(TftCutsceneArenaLocatorInitializer) == 0x20, "size from the description");
 
@@ -11000,7 +11786,8 @@ static_assert(sizeof(TftCutsceneCamSfxClip) == 0x34, "size from the description"
 struct TftCutsceneVfxClip : TftCutsceneClip
 {
     const MetaClass* GetClass() const override;
-    u8 unknown10[0x18];
+    ::MetaString BlackboardVfxSource;     // +0x10
+    ::MetaString effectKey;     // +0x1c
 };
 static_assert(sizeof(TftCutsceneVfxClip) == 0x28, "size from the description");
 
@@ -11116,7 +11903,11 @@ static_assert(sizeof(TftDamageFxContainer) == 0x28, "size from the description")
 
 struct TftDamageSkinDescriptor
 {
-    u8 unknown00[0x1c];
+    u32 EffectType = 0;     // +0x0
+    ::MetaString effectKey;     // +0x4
+    u32 AttachedToBone = 0;     // +0x10
+    float EffectDelay = 0.0f;     // +0x14
+    u32 TriggeredBy = 0;     // +0x18
 };
 static_assert(sizeof(TftDamageSkinDescriptor) == 0x1c, "size from the description");
 
@@ -11130,27 +11921,36 @@ static_assert(sizeof(TftDragDropGroupProperty) == 0x34, "size from the descripti
 
 struct TftDropRateSlot
 {
-    u8 unknown00[0x30];
+    UiHashLink TierIcon;     // +0x0, serialized hash at the first word
+    UiHashLink Text;     // +0x18, serialized hash at the first word
 };
 static_assert(sizeof(TftDropRateSlot) == 0x30, "size from the description");
 
 struct TftDropRateTable : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(TftDropRateTable) == 0x10, "size from the description");
 
 struct TftDropRates : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x14];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
 };
 static_assert(sizeof(TftDropRates) == 0x18, "size from the description");
 
 struct TftEffectAmount
 {
-    u8 unknown00[0x14];
+    ::HashValue name = {0x0};     // +0x0
+    float value = 0.0f;     // +0x4
+    ::MetaString formatString;     // +0x8
 };
 static_assert(sizeof(TftEffectAmount) == 0x14, "size from the description");
 
@@ -11231,7 +12031,11 @@ static_assert(sizeof(TftHudUnitShopDropRate) == 0x10c, "size from the descriptio
 struct TftItemCodexHeaderData
 {
     TftItemCodexHeaderData();          // rva 0x587b10
-    u8 unknown00[0x78];
+    UiHashLink Group;     // +0x0, serialized hash at the first word
+    UiHashLink MainItemIcon;     // +0x18, serialized hash at the first word
+    UiHashLink MainItemName;     // +0x30, serialized hash at the first word
+    UiHashLink MainItemBrief;     // +0x48, serialized hash at the first word
+    UiHashLink MainItemMainText;     // +0x60, serialized hash at the first word
 };
 static_assert(sizeof(TftItemCodexHeaderData) == 0x78, "size from the description");
 
@@ -11253,7 +12057,9 @@ static_assert(sizeof(TftItemCombineTooltipData) == 0xe8, "size from the descript
 struct TftItemComposition : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(TftItemComposition) == 0x10, "size from the description");
 
@@ -11286,41 +12092,53 @@ static_assert(sizeof(TftMapCharacterList) == 0x18, "size from the description");
 
 struct TftMapCharacterRecordData
 {
-    u8 unknown00[0x1c];
+    u8 unknown00 = 0x0;
+    u8 unknown01[0x3];
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
+    u32 unknown10 = 0x0;
+    u32 unknown14 = 0x0;
+    u32 unknown18 = 0x0;
 };
 static_assert(sizeof(TftMapCharacterRecordData) == 0x1c, "size from the description");
 
 struct TftMapCharacterSkinData
 {
-    ~TftMapCharacterSkinData();         // rva 0x9bab90
-    u8 unknown00[0xc];
+    ::MetaString SquareIconTexturePath;     // +0x0
 };
 static_assert(sizeof(TftMapCharacterSkinData) == 0xc, "size from the description");
 
 struct TftMapGroupData
 {
-    ~TftMapGroupData();         // rva 0x9bab90
-    u8 unknown00[0x10];
+    ::MetaString mName;     // +0x0
+    u32 mId = 0;     // +0xc
 };
 static_assert(sizeof(TftMapGroupData) == 0x10, "size from the description");
 
 struct TftMapItemData
 {
-    u8 unknown00[0x28];
+    MetaString name;     // +0x0, reflected lifetime
+    MetaString NameId;     // +0xc, reflected lifetime
+    u32 itemID;     // +0x18, reflected lifetime
+    MetaString IconPath;     // +0x1c, reflected lifetime
 };
 static_assert(sizeof(TftMapItemData) == 0x28, "size from the description");
 
 struct TftMapItemList
 {
     ~TftMapItemList();         // rva 0x558de0
-    u8 unknown00[0xc];
+    ReflectedBuffer<TftMapItemData> items;     // +0x0, count and signed ownership capacity
 };
 static_assert(sizeof(TftMapItemList) == 0xc, "size from the description");
 
 struct TftMapModeData
 {
     ~TftMapModeData();         // rva 0x559f70
-    u8 unknown00[0x10];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(TftMapModeData) == 0x10, "size from the description");
 
@@ -11333,8 +12151,7 @@ static_assert(sizeof(TftMapSetData) == 0x60, "size from the description");
 
 struct TftMapShopData
 {
-    ~TftMapShopData();         // rva 0x9bab90
-    u8 unknown00[0xc];
+    ::MetaString displayName;     // +0x0
 };
 static_assert(sizeof(TftMapShopData) == 0xc, "size from the description");
 
@@ -11363,7 +12180,9 @@ static_assert(sizeof(TftMapTraitData) == 0x34, "size from the description");
 struct TftMapTraitList
 {
     ~TftMapTraitList();         // rva 0x558be0
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(TftMapTraitList) == 0xc, "size from the description");
 
@@ -11427,19 +12246,23 @@ static_assert(sizeof(TftPlayerPlacementDynamicMaterialFloatDriver) == 0x8, "size
 
 struct TftRegalia
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(TftRegalia) == 0xc, "size from the description");
 
 struct TftRequiredUnitProperty
 {
-    u8 unknown00[0x8];
+    u8 unknown00 = 0x0;
+    u8 unknown01[0x3];
+    u32 unknown04 = 0x0;
 };
 static_assert(sizeof(TftRequiredUnitProperty) == 0x8, "size from the description");
 
 struct TftScoreboardDelays
 {
-    float WinStreakLevel1LoopStartDelaySecs;     // +0x0
+    float WinStreakLevel1LoopStartDelaySecs = 0.5f;     // +0x0
     float WinStreakLevel2LoopStartDelaySecs = 0.5f;     // +0x4
     float CombatStateSlideInTimeSecs = 0.5f;     // +0x8
 };
@@ -11486,13 +12309,15 @@ static_assert(sizeof(TftShopData) == 0xa4, "size from the description");
 
 struct TftShopDataList
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(TftShopDataList) == 0xc, "size from the description");
 
 struct TftShopMobileDelays
 {
-    float AutoOpenShopInPlanningPhaseDelaySecs;     // +0x0
+    float AutoOpenShopInPlanningPhaseDelaySecs = 1.5f;     // +0x0
     float CloseReminderDelaySecs = 3.0f;     // +0x4
 };
 static_assert(sizeof(TftShopMobileDelays) == 0x8, "size from the description");
@@ -11514,14 +12339,19 @@ static_assert(sizeof(TftSocialPanelViewController) == 0x248, "size from the desc
 struct TftStageRoundData : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(TftStageRoundData) == 0x10, "size from the description");
 
 struct TftStageRoundDataTemplate
 {
     TftStageRoundDataTemplate();          // rva 0x586c00
-    u8 unknown00[0x60];
+    UiHashLink Group;     // +0x0, serialized hash at the first word
+    UiHashLink RoundStateIcon;     // +0x18, serialized hash at the first word
+    UiHashLink ActiveIcon;     // +0x30, serialized hash at the first word
+    UiHashLink HitRegion;     // +0x48, serialized hash at the first word
 };
 static_assert(sizeof(TftStageRoundDataTemplate) == 0x60, "size from the description");
 
@@ -11590,21 +12420,29 @@ static_assert(sizeof(TftTeamPlannerMemberData) == 0xfc, "size from the descripti
 struct TftTeamPlannerMemberDisplayTrait
 {
     ~TftTeamPlannerMemberDisplayTrait();         // rva 0x5d4e40
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(TftTeamPlannerMemberDisplayTrait) == 0xc, "size from the description");
 
 struct TftTeamPlannerMemberTraitData
 {
     TftTeamPlannerMemberTraitData();          // rva 0x5894b0
-    u8 unknown00[0x48];
+    UiHashLink Group;     // +0x0, serialized hash at the first word
+    UiHashLink Icon;     // +0x18, serialized hash at the first word
+    UiHashLink Background;     // +0x30, serialized hash at the first word
 };
 static_assert(sizeof(TftTeamPlannerMemberTraitData) == 0x48, "size from the description");
 
 struct TftTeamPlannerTierData
 {
     TftTeamPlannerTierData();          // rva 0x587b10
-    u8 unknown00[0x78];
+    UiHashLink Group;     // +0x0, serialized hash at the first word
+    UiHashLink TierTitle;     // +0x18, serialized hash at the first word
+    UiHashLink TierCostText;     // +0x30, serialized hash at the first word
+    UiHashLink TierCostIcon;     // +0x48, serialized hash at the first word
+    UiHashLink TierChampionListLayout;     // +0x60, serialized hash at the first word
 };
 static_assert(sizeof(TftTeamPlannerTierData) == 0x78, "size from the description");
 
@@ -11626,7 +12464,10 @@ static_assert(sizeof(TftTraitData) == 0x78, "size from the description");
 
 struct TftTraitList
 {
-    u8 unknown00[0x10];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(TftTraitList) == 0x10, "size from the description");
 
@@ -11640,7 +12481,8 @@ static_assert(sizeof(TftTraitTrackerTraitDataTemplate) == 0x1f8, "size from the 
 
 struct TftTraitTrackerTraitIconData
 {
-    u8 unknown00[0x30];
+    UiHashLink DefaultIcon;     // +0x0, serialized hash at the first word
+    UiHashLink HoverIcon;     // +0x18, serialized hash at the first word
 };
 static_assert(sizeof(TftTraitTrackerTraitIconData) == 0x30, "size from the description");
 
@@ -11696,7 +12538,9 @@ static_assert(sizeof(TftTrovesBannerTable) == 0x34, "size from the description")
 
 struct TftTrovesBannerTableEntry
 {
-    u8 unknown00[0x8];
+    ~TftTrovesBannerTableEntry() { std::memset(this, 0, 0x4); }
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(TftTrovesBannerTableEntry) == 0x8, "size from the description");
 
@@ -11711,20 +12555,30 @@ static_assert(sizeof(TftTrovesViewController) == 0x1b0, "size from the descripti
 struct TftUnitAttachmentLargeSlotData
 {
     TftUnitAttachmentLargeSlotData();          // rva 0x5894b0
-    u8 unknown00[0x48];
+    UiHashLink Frame;     // +0x0, serialized hash at the first word
+    UiHashLink Icon;     // +0x18, serialized hash at the first word
+    UiHashLink Text;     // +0x30, serialized hash at the first word
 };
 static_assert(sizeof(TftUnitAttachmentLargeSlotData) == 0x48, "size from the description");
 
 struct TftUnitAttachmentSlotsData
 {
-    u8 unknown00[0x18];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
 };
 static_assert(sizeof(TftUnitAttachmentSlotsData) == 0x18, "size from the description");
 
 struct TftUnitAttachmentStandardSlotData
 {
     TftUnitAttachmentStandardSlotData();          // rva 0x586c00
-    u8 unknown00[0x60];
+    UiHashLink Frame;     // +0x0, serialized hash at the first word
+    UiHashLink Icon;     // +0x18, serialized hash at the first word
+    UiHashLink Overlay;     // +0x30, serialized hash at the first word
+    UiHashLink Text;     // +0x48, serialized hash at the first word
 };
 static_assert(sizeof(TftUnitAttachmentStandardSlotData) == 0x60, "size from the description");
 
@@ -11739,7 +12593,9 @@ static_assert(sizeof(TftUnitFloatingInfoBarData) == 0x188, "size from the descri
 struct TftUnitInfoCharacterRoleData
 {
     TftUnitInfoCharacterRoleData();          // rva 0x5894b0
-    u8 unknown00[0x48];
+    UiHashLink Button;     // +0x0, serialized hash at the first word
+    UiHashLink Icon;     // +0x18, serialized hash at the first word
+    UiHashLink Text;     // +0x30, serialized hash at the first word
 };
 static_assert(sizeof(TftUnitInfoCharacterRoleData) == 0x48, "size from the description");
 
@@ -11781,7 +12637,8 @@ static_assert(sizeof(TftUnitPropertyNames) == 0x10, "size from the description")
 struct TftUnitPropertyOverride : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x8];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(TftUnitPropertyOverride) == 0xc, "size from the description");
 
@@ -11815,7 +12672,7 @@ static_assert(sizeof(TftUnitPropertyValueInteger) == 0x8, "size from the descrip
 struct TftUnitPropertyValueString : TftUnitPropertyValue
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString value;     // +0x4
 };
 static_assert(sizeof(TftUnitPropertyValueString) == 0x10, "size from the description");
 
@@ -11864,13 +12721,17 @@ static_assert(sizeof(TimeMultiplierCheat) == 0x44, "size from the description");
 struct TimedVariableWaveBehavior : IMinionWaveBehavior
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x10];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    int DefaultSpawnCount = 0;
 };
 static_assert(sizeof(TimedVariableWaveBehavior) == 0x14, "size from the description");
 
 struct TimedWaveBehaviorInfo
 {
-    u8 unknown00[0x8];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(TimedWaveBehaviorInfo) == 0x8, "size from the description");
 
@@ -11945,8 +12806,9 @@ static_assert(sizeof(ToggleTeamCheat) == 0x44, "size from the description");
 
 struct ToolEducationData
 {
-    int firstItem = 0;     // +0x0
-    int skillOrder = 0;     // +0x4
+    ToolEducationData() { firstItem = 0; skillOrder = 0; }
+    int firstItem;     // +0x0
+    int skillOrder;     // +0x4
 };
 static_assert(sizeof(ToolEducationData) == 0x8, "size from the description");
 
@@ -11981,7 +12843,10 @@ static_assert(sizeof(TooltipInstanceItem) == 0x74, "size from the description");
 struct TooltipInstanceList
 {
     ~TooltipInstanceList();         // rva 0xa39730
-    u8 unknown00[0x10];
+    u32 unknown00 = 0x1;
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
 };
 static_assert(sizeof(TooltipInstanceList) == 0x10, "size from the description");
 
@@ -12022,7 +12887,11 @@ static_assert(sizeof(TouchOverlayViewController) == 0x80, "size from the descrip
 
 struct TrackData
 {
-    u8 unknown00[0x10];
+    u16 unknown00 = 0x0;
+    u8 unknown02[0x2];
+    u32 unknown04 = 0x3f800000;
+    u32 unknown08 = 0xffffffff;
+    u32 unknown0c = 0x0;
 };
 static_assert(sizeof(TrackData) == 0x10, "size from the description");
 
@@ -12044,7 +12913,8 @@ static_assert(sizeof(TraitInfoNubData) == 0x1c, "size from the description");
 struct TransitionClipBlendData : BaseBlendData
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x8];
+    HashValue mClipName{0x0};
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(TransitionClipBlendData) == 0xc, "size from the description");
 
@@ -12146,14 +13016,27 @@ static_assert(sizeof(TurretFirstBloodLogic) == 0x4, "size from the description")
 struct UIElementI : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x28];
+    ~UIElementI() override = default;
+    ::MetaString name; // +0x4
+    u32 unknown10=0, unknown14=0;
+    ::MetaString secondName; // +0x18
+    u32 unknown24=0, unknown28=0;
 };
 static_assert(sizeof(UIElementI) == 0x2c, "size from the description");
 
 struct UIElement : UIElementI
 {
+    UIElement();          // rva 0xadfb60
     const MetaClass* GetClass() const override;
-    u8 unknown2c[0x54];
+    ~UIElement() override;
+    int unknown2c=-1;
+    UiAllocationOwner12 unknown30;
+    u32 unknown34=0, unknown38=0;
+    float unknown3c=FLT_MAX, unknown40, unknown44=FLT_MAX, unknown48;
+    u32 unknown4c=0, unknown50=0, unknown54=0, unknown58=0, unknown5c=0, unknown60=0;
+    float unknown64=1, unknown68=1, unknown6c=1, unknown70=1, unknown74=1;
+    u32 flags78=0x3000400;
+    int unknown7c=-1;
 };
 static_assert(sizeof(UIElement) == 0x80, "size from the description");
 
@@ -12199,13 +13082,14 @@ static_assert(sizeof(UISceneViewPane) == 0xfc, "size from the description");
 struct UVScaleBiasFromAnimationDynamicMaterialDriver : ILogicDriver
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x10];
+    ::MetaString mSubMeshName;     // +0x4
+    u32 mUvAnimIndex = 0;     // +0x10
 };
 static_assert(sizeof(UVScaleBiasFromAnimationDynamicMaterialDriver) == 0x14, "size from the description");
 
 struct UiAbilityPromptAnimData
 {
-    ::Color PulseStartColor;     // +0x0
+    ::Color PulseStartColor = {193, 251, 255, 255};     // +0x0
     ::Color PulseEndColor = {219, 252, 255, 255};     // +0x4
     ::Vector2 PulseNativeOffset = {0.0f, 0.01f};     // +0x8
     float pulseTime = 0.4f;     // +0x10
@@ -12228,7 +13112,8 @@ static_assert(sizeof(UiChatPaneDefinition) == 0x2c, "size from the description")
 
 struct UiClashTeam
 {
-    u8 unknown00[0x30];
+    UiHashLink TagText;     // +0x0, serialized hash at the first word
+    UiHashLink LogoIcon;     // +0x18, serialized hash at the first word
 };
 static_assert(sizeof(UiClashTeam) == 0x30, "size from the description");
 
@@ -12241,15 +13126,22 @@ static_assert(sizeof(UiComboBoxDefinition) == 0xa8, "size from the description")
 
 struct UiComboBoxSoundEvents
 {
-    ~UiComboBoxSoundEvents();         // rva 0x9bab90
-    u8 unknown00[0xc];
+    ::MetaString OnSelectionEvent;     // +0x0
 };
 static_assert(sizeof(UiComboBoxSoundEvents) == 0xc, "size from the description");
 
 struct UiElementAsset : UIElement
 {
+    UiElementAsset();          // rva 0xadfc40
     const MetaClass* GetClass() const override;
-    u8 unknown80[0x38];
+    ~UiElementAsset() override;
+    UiNullableAssetReference unknown80;
+    bool unknown84;
+    u8 pad85[3];
+    u32 unknown88=0, unknown8c=0;
+    float unknown90=1, unknown94=1;
+    ::Vector4 unknown98;
+    float unknowna8, unknownac, unknownb0, unknownb4;
 };
 static_assert(sizeof(UiElementAsset) == 0xb8, "size from the description");
 
@@ -12315,7 +13207,10 @@ static_assert(sizeof(UiElementGroupButtonSoundEvents) == 0x60, "size from the de
 
 struct UiElementGroupButtonState
 {
-    u8 unknown00[0x10];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(UiElementGroupButtonState) == 0x10, "size from the description");
 
@@ -12389,6 +13284,7 @@ static_assert(sizeof(UiElementGroupSliderSoundEvents) == 0x24, "size from the de
 
 struct UiElementGroupSliderState
 {
+    UiElementGroupSliderState() { std::memset(unknown00, 0, 0xc); }
     u8 unknown00[0xc];
 };
 static_assert(sizeof(UiElementGroupSliderState) == 0xc, "size from the description");
@@ -12661,13 +13557,15 @@ static_assert(sizeof(UiMissionObjectiveData) == 0xc4, "size from the description
 
 struct UiMultiKillIconData
 {
-    u8 unknown00[0x30];
+    UiHashLink Icon;     // +0x0, serialized hash at the first word
+    UiHashLink Region;     // +0x18, serialized hash at the first word
 };
 static_assert(sizeof(UiMultiKillIconData) == 0x30, "size from the description");
 
 struct UiPerkSummonerSpecialistSelectorButtonData
 {
-    u8 unknown00[0x30];
+    UiHashLink Button;     // +0x0, serialized hash at the first word
+    UiHashLink SpellIcon;     // +0x18, serialized hash at the first word
 };
 static_assert(sizeof(UiPerkSummonerSpecialistSelectorButtonData) == 0x30, "size from the description");
 
@@ -12700,25 +13598,11 @@ struct UiPlayerPortraitData
 };
 static_assert(sizeof(UiPlayerPortraitData) == 0x68, "size from the description");
 
-struct UiPositionBase : BinObject
-{
-    const MetaClass* GetClass() const override;
-};
-static_assert(sizeof(UiPositionBase) == 0x4, "size from the description");
-
 struct UiPositionFullScreen : UiPositionBase
 {
     const MetaClass* GetClass() const override;
 };
 static_assert(sizeof(UiPositionFullScreen) == 0x4, "size from the description");
-
-struct UiPositionRect : UiPositionBase
-{
-    UiPositionRect();          // rva 0xae0ac0
-    const MetaClass* GetClass() const override;
-    u8 unknown04[0x1c];
-};
-static_assert(sizeof(UiPositionRect) == 0x20, "size from the description");
 
 struct UiPositionPolygon : UiPositionRect
 {
@@ -12802,7 +13686,7 @@ static_assert(sizeof(UiTargetStatsMenu) == 0x54, "size from the description");
 
 struct UiTeamFightOffScreenDifferentiationData
 {
-    float PlayerOffscreenTimer;     // +0x0
+    float PlayerOffscreenTimer = 5.0f;     // +0x0
     float NearlyOnScreenRange = 2.7e+03f;     // +0x4
     u8 PlayerOffscreenAlphaValue = 0x64;     // +0x8
 };
@@ -12819,7 +13703,9 @@ static_assert(sizeof(UiTeamFightTeamData) == 0x194, "size from the description")
 struct UiTeamFightTeamHealthMeterData
 {
     UiTeamFightTeamHealthMeterData();          // rva 0x5894b0
-    u8 unknown00[0x48];
+    UiHashLink Backdrop;     // +0x0, serialized hash at the first word
+    UiHashLink TotalHealthFill;     // +0x18, serialized hash at the first word
+    UiHashLink OnscreenHealthFill;     // +0x30, serialized hash at the first word
 };
 static_assert(sizeof(UiTeamFightTeamHealthMeterData) == 0x48, "size from the description");
 
@@ -12831,14 +13717,17 @@ static_assert(sizeof(UiTeamFightTeamMemberData) == 0x114, "size from the descrip
 
 struct UiTeamFightTeamScoreData
 {
-    u8 unknown00[0x30];
+    UiHashLink ScoreText;     // +0x0, serialized hash at the first word
+    UiHashLink ScoreUnderlay;     // +0x18, serialized hash at the first word
 };
 static_assert(sizeof(UiTeamFightTeamScoreData) == 0x30, "size from the description");
 
 struct UiTeamIdentityData
 {
     UiTeamIdentityData();          // rva 0x5894b0
-    u8 unknown00[0x48];
+    UiHashLink NameLink;     // +0x0, serialized hash at the first word
+    UiHashLink TagLink;     // +0x18, serialized hash at the first word
+    UiHashLink LogoLink;     // +0x30, serialized hash at the first word
 };
 static_assert(sizeof(UiTeamIdentityData) == 0x48, "size from the description");
 
@@ -12859,7 +13748,8 @@ static_assert(sizeof(UiUnitStatusData) == 0x50, "size from the description");
 
 struct UiUnitStatusDurationBarData
 {
-    u8 unknown00[0x30];
+    UiHashLink StatusDurationBar;     // +0x0, serialized hash at the first word
+    UiHashLink TenacityBar;     // +0x18, serialized hash at the first word
 };
 static_assert(sizeof(UiUnitStatusDurationBarData) == 0x30, "size from the description");
 
@@ -12880,7 +13770,9 @@ static_assert(sizeof(UnitLevelUiData) == 0x18, "size from the description");
 struct UnitShopDisplayTraitData
 {
     ~UnitShopDisplayTraitData();         // rva 0x5d4f60
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(UnitShopDisplayTraitData) == 0xc, "size from the description");
 
@@ -12895,26 +13787,41 @@ static_assert(sizeof(UnitShopItemData) == 0x2f8, "size from the description");
 struct UnitShopItemFrameData
 {
     UnitShopItemFrameData();          // rva 0x5894b0
-    u8 unknown00[0x48];
+    UiHashLink Default;     // +0x0, serialized hash at the first word
+    UiHashLink hover;     // +0x18, serialized hash at the first word
+    UiHashLink clicked;     // +0x30, serialized hash at the first word
 };
 static_assert(sizeof(UnitShopItemFrameData) == 0x48, "size from the description");
 
 struct UnitShopItemTraitData
 {
     UnitShopItemTraitData();          // rva 0x587b10
-    u8 unknown00[0x78];
+    UiHashLink TraitNub;     // +0x0, serialized hash at the first word
+    UiHashLink Highlight;     // +0x18, serialized hash at the first word
+    UiHashLink NameText;     // +0x30, serialized hash at the first word
+    UiHashLink Icon;     // +0x48, serialized hash at the first word
+    UiHashLink Background;     // +0x60, serialized hash at the first word
 };
 static_assert(sizeof(UnitShopItemTraitData) == 0x78, "size from the description");
 
 struct UnitStatUiData
 {
-    u8 unknown00[0x30];
+    UiHashLink Text;     // +0x0, serialized hash at the first word
+    UiHashLink HoverTarget;     // +0x18, serialized hash at the first word
 };
 static_assert(sizeof(UnitStatUiData) == 0x30, "size from the description");
 
 struct UnitStatsUiData
 {
-    u8 unknown00[0x24];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
+    u32 unknown18 = 0;
+    u32 unknown1c = 0;
+    u32 unknown20 = 0;
 };
 static_assert(sizeof(UnitStatsUiData) == 0x24, "size from the description");
 
@@ -12939,14 +13846,20 @@ static_assert(sizeof(UnrevealedTarget) == 0x234, "size from the description");
 
 struct UpdaterData
 {
-    u8 unknown00[0x14];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0xffffffff;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
+    u32 unknown10 = 0x0;
 };
 static_assert(sizeof(UpdaterData) == 0x14, "size from the description");
 
 struct UpdaterResourceData
 {
     ~UpdaterResourceData();         // rva 0x9f3db0
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(UpdaterResourceData) == 0xc, "size from the description");
 
@@ -12966,7 +13879,11 @@ static_assert(sizeof(UseableData) == 0x20, "size from the description");
 
 struct ValueColor
 {
-    u8 unknown00[0x14];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
 };
 static_assert(sizeof(ValueColor) == 0x14, "size from the description");
 
@@ -13039,31 +13956,81 @@ static_assert(sizeof(VfxAlphaErosionDefinitionData) == 0x48, "size from the desc
 
 struct VfxAnimatedColorVariableData
 {
-    u8 unknown00[0x48];
+    ::Vector4 unknown00 = {};
+    u32 unknown10 = 0x0;
+    u32 unknown14 = 0x0;
+    u32 unknown18 = 0x0;
+    u32 unknown1c = 0x0;
+    u32 unknown20 = 0x0;
+    u32 unknown24 = 0x0;
+    u8 unknown28 = 0x0;
+    u8 unknown29[0x1];
+    u16 unknown2a = 0x0;
+    u32 unknown2c = 0x0;
+    u32 unknown30 = 0xffffffff;
+    u8 unknown34[0x10];
+    u32 unknown44 = 0x0;
 };
 static_assert(sizeof(VfxAnimatedColorVariableData) == 0x48, "size from the description");
 
 struct VfxAnimatedFloatVariableData
 {
-    u8 unknown00[0x30];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
+    u32 unknown10 = 0x0;
+    u32 unknown14 = 0x0;
+    u32 unknown18 = 0x0;
+    u8 unknown1c = 0x0;
+    u8 unknown1d[0x1];
+    u16 unknown1e = 0x0;
+    u32 unknown20 = 0x0;
+    u32 unknown24 = 0xffffffff;
+    u8 unknown28[0x4];
+    u32 unknown2c = 0x0;
 };
 static_assert(sizeof(VfxAnimatedFloatVariableData) == 0x30, "size from the description");
 
 struct VfxAnimatedVector2fVariableData
 {
-    u8 unknown00[0x38];
+    ::Vector2 unknown00 = {};
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
+    u32 unknown10 = 0x0;
+    u32 unknown14 = 0x0;
+    u32 unknown18 = 0x0;
+    u32 unknown1c = 0x0;
+    u8 unknown20 = 0x0;
+    u8 unknown21[0x1];
+    u16 unknown22 = 0x0;
+    u32 unknown24 = 0x0;
+    u32 unknown28 = 0xffffffff;
+    u8 unknown2c[0x8];
+    u32 unknown34 = 0x0;
 };
 static_assert(sizeof(VfxAnimatedVector2fVariableData) == 0x38, "size from the description");
 
 struct VfxAnimatedVector3fVariableData
 {
-    u8 unknown00[0x40];
+    VfxProbabilityOwners probabilityTables; // +0x0
+    ReflectedBuffer<float> times; // +0xc
+    ReflectedBuffer<Vector3> values; // +0x18
+    u8 unknown24 = 0;
+    u8 unknown25;
+    u16 unknown26 = 0;
+    u32 unknown28 = 0;
+    u32 unknown2c = 0xffffffff;
+    u8 unknown30[12];
+    VfxRawAllocation unknown3c;
 };
 static_assert(sizeof(VfxAnimatedVector3fVariableData) == 0x40, "size from the description");
 
 struct VfxAssetRemap
 {
-    u8 unknown00[0x14];
+    u32 type = 0;     // +0x0
+    ::HashValue oldAsset = {0x0};     // +0x4
+    ::MetaString newAsset;     // +0x8
 };
 static_assert(sizeof(VfxAssetRemap) == 0x14, "size from the description");
 
@@ -13083,7 +14050,17 @@ static_assert(sizeof(VfxChildIdentifier) == 0x14, "size from the description");
 
 struct VfxChildParticleSetDefinitionData
 {
-    u8 unknown00[0x28];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
+    u32 unknown10 = 0x0;
+    u32 unknown14 = 0x0;
+    u32 unknown18 = 0x0;
+    u32 unknown1c = 0x0;
+    u8 unknown20 = 0x0;
+    u8 unknown21[0x3];
+    u32 unknown24 = 0x0;
 };
 static_assert(sizeof(VfxChildParticleSetDefinitionData) == 0x28, "size from the description");
 
@@ -13097,7 +14074,9 @@ static_assert(sizeof(VfxColorOverLifeMaterialDriver) == 0x50, "size from the des
 
 struct VfxDistortionDefinitionData
 {
-    u8 unknown00[0x14];
+    float distortion = 0.0f;     // +0x0
+    u8 distortionMode = 1;     // +0x4
+    ::MetaString normalMapTexture;     // +0x8
 };
 static_assert(sizeof(VfxDistortionDefinitionData) == 0x14, "size from the description");
 
@@ -13124,7 +14103,17 @@ static_assert(sizeof(VfxEmitterDefinitionData) == 0x360, "size from the descript
 
 struct VfxEmitterFiltering
 {
-    u8 unknown00[0x28];
+    u32 unknown00 = 0x0;
+    u32 unknown04 = 0x0;
+    u32 unknown08 = 0x0;
+    u32 unknown0c = 0x0;
+    u32 unknown10 = 0x0;
+    u32 unknown14 = 0x0;
+    u32 unknown18 = 0x0;
+    u32 unknown1c = 0x0;
+    u32 unknown20 = 0x0;
+    u16 unknown24 = 0x0;
+    u8 unknown26[0x2];
 };
 static_assert(sizeof(VfxEmitterFiltering) == 0x28, "size from the description");
 
@@ -13138,13 +14127,21 @@ static_assert(sizeof(VfxEmitterLegacySimple) == 0x48, "size from the description
 
 struct VfxFieldAccelerationDefinitionData
 {
-    u8 unknown00[0x14];
+    bool isLocalSpace = true; // +0x0
+    ::ValueVector3 acceleration; // +0x4
 };
 static_assert(sizeof(VfxFieldAccelerationDefinitionData) == 0x14, "size from the description");
 
 struct VfxFieldAttractionDefinitionData
 {
-    u8 unknown00[0x20];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
+    u32 unknown18 = 0;
+    u32 unknown1c = 0;
 };
 static_assert(sizeof(VfxFieldAttractionDefinitionData) == 0x20, "size from the description");
 
@@ -13157,7 +14154,14 @@ static_assert(sizeof(VfxFieldCollectionDefinitionData) == 0x3c, "size from the d
 
 struct VfxFieldDragDefinitionData
 {
-    u8 unknown00[0x20];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
+    u32 unknown18 = 0;
+    u32 unknown1c = 0;
 };
 static_assert(sizeof(VfxFieldDragDefinitionData) == 0x20, "size from the description");
 
@@ -13170,13 +14174,22 @@ static_assert(sizeof(VfxFieldNoiseDefinitionData) == 0x34, "size from the descri
 
 struct VfxFieldOrbitalDefinitionData
 {
-    u8 unknown00[0x14];
+    bool isLocalSpace = true; // +0x0
+    ::ValueVector3 direction{{0.0f,1.0f,0.0f}};
 };
 static_assert(sizeof(VfxFieldOrbitalDefinitionData) == 0x14, "size from the description");
 
 struct VfxFlexShapeDefinitionData
 {
-    u8 unknown00[0x24];
+    float ScaleBirthTranslationByBoundObjectSize = 0.0f; // +0x0
+    float scaleBirthScaleByBoundObjectSize = 0.0f; // +0x4
+    float scaleBirthScaleByBoundObjectHeight = 0.0f; // +0x8
+    float scaleBirthScaleByBoundObjectRadius = 0.0f; // +0xc
+    float scaleEmitOffsetByBoundObjectSize = 0.0f; // +0x10
+    float scaleEmitOffsetByBoundObjectHeight = 0.0f; // +0x14
+    float scaleEmitOffsetByBoundObjectRadius = 0.0f; // +0x18
+    VfxOwnedPointer<FlexTypeFloat> flexScaleEmitOffset; // +0x1c
+    VfxOwnedPointer<FlexValueVector3> flexBirthTranslation; // +0x20
 };
 static_assert(sizeof(VfxFlexShapeDefinitionData) == 0x24, "size from the description");
 
@@ -13213,7 +14226,9 @@ static_assert(sizeof(VfxMeshDefinitionData) == 0x58, "size from the description"
 
 struct VfxMigrationResources
 {
-    u8 unknown00[0xc];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
 };
 static_assert(sizeof(VfxMigrationResources) == 0xc, "size from the description");
 
@@ -13226,7 +14241,8 @@ static_assert(sizeof(VfxPaletteDefinitionData) == 0x48, "size from the descripti
 
 struct VfxParentInheritanceParams
 {
-    u8 unknown00[0x14];
+    u8 Mode = 0; // +0x0
+    ::ValueVector3 RelativeOffset{g_JungleDefaultPosition};
 };
 static_assert(sizeof(VfxParentInheritanceParams) == 0x14, "size from the description");
 
@@ -13329,13 +14345,24 @@ static_assert(sizeof(VfxPrimitiveRay) == 0x8, "size from the description");
 
 struct VfxProbabilityTableData
 {
-    u8 unknown00[0x20];
+    ReflectedBuffer<float> keyTimes; // +0x0
+    ReflectedBuffer<float> keyValues; // +0xc
+    float singleValue = 1.0f; // +0x18
+    bool unknown1c = true;
+    bool unknown1d = false;
+    u8 unknown1e[2];
 };
 static_assert(sizeof(VfxProbabilityTableData) == 0x20, "size from the description");
 
 struct VfxProjectionDefinitionData
 {
-    u8 unknown00[0x1c];
+    u32 unknown00 = 0x40a00000;
+    u32 unknown04 = 0x43480000;
+    u32 unknown08 = 0x3f800000;
+    u32 unknown0c = 0x3f800000;
+    u32 unknown10 = 0x3f800000;
+    u32 unknown14 = 0x3f800000;
+    u32 unknown18 = 0x0;
 };
 static_assert(sizeof(VfxProjectionDefinitionData) == 0x1c, "size from the description");
 
@@ -13366,7 +14393,14 @@ static_assert(sizeof(VfxSineMaterialDriver) == 0x10, "size from the description"
 
 struct VfxSoftParticleDefinitionData
 {
-    u8 unknown00[0x20];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
+    u32 unknown18 = 0;
+    u32 unknown1c = 0;
 };
 static_assert(sizeof(VfxSoftParticleDefinitionData) == 0x20, "size from the description");
 
@@ -13388,7 +14422,11 @@ static_assert(sizeof(VfxTextureMultDefinitionData) == 0x7c, "size from the descr
 
 struct VfxTrailDefinitionData
 {
-    u8 unknown00[0x1c];
+    ::ValueVector3 mBirthTilingSize; // +0x0
+    float mCutoff = 0; // +0x10
+    int mMaxAddedPerFrame = 0; // +0x14
+    u8 mSmoothingMode = 0; // +0x18
+    u8 mMode = 0; // +0x19
 };
 static_assert(sizeof(VfxTrailDefinitionData) == 0x1c, "size from the description");
 
@@ -13401,7 +14439,9 @@ static_assert(sizeof(ViewControllerFilterI) == 0x4, "size from the description")
 struct ViewControllerFilter_And : ViewControllerFilterI
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(ViewControllerFilter_And) == 0x10, "size from the description");
 
@@ -13421,28 +14461,30 @@ static_assert(sizeof(ViewControllerFilter_Clash) == 0x4, "size from the descript
 struct ViewControllerFilter_Map : ViewControllerFilterI
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString Map;     // +0x4
 };
 static_assert(sizeof(ViewControllerFilter_Map) == 0x10, "size from the description");
 
 struct ViewControllerFilter_Mode : ViewControllerFilterI
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    ::MetaString Mode;     // +0x4
 };
 static_assert(sizeof(ViewControllerFilter_Mode) == 0x10, "size from the description");
 
 struct ViewControllerFilter_Not : ViewControllerFilterI
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x4];
+    u32 unknown04 = 0;
 };
 static_assert(sizeof(ViewControllerFilter_Not) == 0x8, "size from the description");
 
 struct ViewControllerFilter_Or : ViewControllerFilterI
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0xc];
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(ViewControllerFilter_Or) == 0x10, "size from the description");
 
@@ -13454,14 +14496,24 @@ static_assert(sizeof(ViewControllerFilter_Spectator) == 0x4, "size from the desc
 
 struct ViewControllerList
 {
-    u8 unknown00[0x10];
+    u32 unknown00 = 0;
+    u32 unknown04 = 0;
+    u32 unknown08 = 0;
+    u32 unknown0c = 0;
 };
 static_assert(sizeof(ViewControllerList) == 0x10, "size from the description");
 
 struct ViewControllerSet : BinObject
 {
     const MetaClass* GetClass() const override;
-    u8 unknown04[0x28];
+    MetaString ClientState;
+    u32 unknown10 = 0;
+    u32 unknown14 = 0;
+    u32 unknown18 = 0;
+    u32 unknown1c = 0;
+    u32 unknown20 = 0;
+    u32 unknown24 = 0;
+    u8 unknown28 = 0;
 };
 static_assert(sizeof(ViewControllerSet) == 0x2c, "size from the description");
 
@@ -13531,8 +14583,12 @@ static_assert(sizeof(X3DSharedConstantBufferDef) == 0x2c, "size from the descrip
 
 struct X3DSharedConstantDef
 {
-    ~X3DSharedConstantDef();         // rva 0x9bab90
-    u8 unknown00[0x20];
+    ::MetaString name;     // +0x0
+    u32 type = 0;     // +0xc
+    u32 Count = 1;     // +0x10
+    int register_ = -1;     // +0x14
+    bool SetManually = false;     // +0x18
+    u32 PlatformMask = 0;     // +0x1c
 };
 static_assert(sizeof(X3DSharedConstantDef) == 0x20, "size from the description");
 
@@ -13545,8 +14601,11 @@ static_assert(sizeof(X3DSharedData) == 0x1c, "size from the description");
 
 struct X3DSharedTextureDef
 {
-    ~X3DSharedTextureDef();         // rva 0x9bab90
-    u8 unknown00[0x1c];
+    ::MetaString name;     // +0x0
+    u32 type = 0;     // +0xc
+    u8 frequency = 0;     // +0x10
+    int register_ = -1;     // +0x14
+    u32 PlatformMask = 0;     // +0x18
 };
 static_assert(sizeof(X3DSharedTextureDef) == 0x1c, "size from the description");
 

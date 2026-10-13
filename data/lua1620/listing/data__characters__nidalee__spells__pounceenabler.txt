@@ -1,0 +1,44 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 000001F3330D35D0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Nidalee/HUD/Textures/Nidalee_OnTheProwl.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "PounceEnabler"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	NEWTABLE 	0 5 0
+	12	[-]	LOADK    	1 -9	; 20
+	13	[-]	LOADK    	2 -10	; 18
+	14	[-]	LOADK    	3 -11	; 16
+	15	[-]	LOADK    	4 -12	; 14
+	16	[-]	LOADK    	5 -13	; 12
+	17	[-]	SETLIST  	0 5 1	; 1
+	18	[-]	SETGLOBAL	0 -8	; AutoCooldownByLevel
+	19	[-]	NEWTABLE 	0 1 0
+	20	[-]	LOADK    	1 -15	; "RocketTristana"
+	21	[-]	SETLIST  	0 1 1	; 1
+	22	[-]	SETGLOBAL	0 -14	; SpellFXOverrideSkins
+	23	[-]	RETURN   	0 1
+constants (15) for 000001F3330D35D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Nidalee/HUD/Textures/Nidalee_OnTheProwl.dds"
+	6	"BuffName"
+	7	"PounceEnabler"
+	8	"AutoCooldownByLevel"
+	9	20
+	10	18
+	11	16
+	12	14
+	13	12
+	14	"SpellFXOverrideSkins"
+	15	"RocketTristana"
+locals (0) for 000001F3330D35D0:
+upvalues (0) for 000001F3330D35D0:

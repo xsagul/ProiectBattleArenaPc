@@ -1,0 +1,40 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 00000151C4633600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Nautilus/HUD/Icons2D/Nautilus_Target.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "NautilusGrandLineTarget"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; 1
+	10	[-]	SETGLOBAL	0 -7	; SpellDamageRatio
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -9	; PersistsThroughDeath
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -10	; NonDispellable
+	15	[-]	NEWTABLE 	0 1 0
+	16	[-]	LOADK    	1 -12	; "NautilusAstronaut"
+	17	[-]	SETLIST  	0 1 1	; 1
+	18	[-]	SETGLOBAL	0 -11	; SpellFXOverrideSkins
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -13	; IsDamagingSpell
+	21	[-]	RETURN   	0 1
+constants (13) for 00000151C4633600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Nautilus/HUD/Icons2D/Nautilus_Target.dds"
+	5	"BuffName"
+	6	"NautilusGrandLineTarget"
+	7	"SpellDamageRatio"
+	8	1
+	9	"PersistsThroughDeath"
+	10	"NonDispellable"
+	11	"SpellFXOverrideSkins"
+	12	"NautilusAstronaut"
+	13	"IsDamagingSpell"
+locals (0) for 00000151C4633600:
+upvalues (0) for 00000151C4633600:

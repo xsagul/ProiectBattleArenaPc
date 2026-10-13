@@ -1,0 +1,43 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 0000026CCC0335F0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; 1
+	6	[-]	SETGLOBAL	0 -3	; ChannelDuration
+	7	[-]	LOADK    	0 -6	; "ASSETS/UX/Jade/S3Icons/SameSized/Jade_GragasDrunkenRage.dds"
+	8	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	9	[-]	LOADK    	0 -8	; "Jade_GragasW"
+	10	[-]	SETGLOBAL	0 -7	; BuffName
+	11	[-]	LOADK    	0 -10	; "L_BUFFBONE_GLB_HAND_LOC"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName
+	13	[-]	LOADK    	0 -12	; "R_BUFFBONE_GLB_HAND_LOC"
+	14	[-]	SETGLOBAL	0 -11	; AutoBuffActivateAttachBoneName2
+	15	[-]	NEWTABLE 	0 5 0
+	16	[-]	LOADK    	1 -14	; 50
+	17	[-]	LOADK    	2 -14	; 50
+	18	[-]	LOADK    	3 -14	; 50
+	19	[-]	LOADK    	4 -14	; 50
+	20	[-]	LOADK    	5 -14	; 50
+	21	[-]	SETLIST  	0 5 1	; 1
+	22	[-]	SETGLOBAL	0 -13	; AutoCooldownByLevel
+	23	[-]	RETURN   	0 1
+constants (14) for 0000026CCC0335F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"ChannelDuration"
+	4	1
+	5	"BuffTextureName"
+	6	"ASSETS/UX/Jade/S3Icons/SameSized/Jade_GragasDrunkenRage.dds"
+	7	"BuffName"
+	8	"Jade_GragasW"
+	9	"AutoBuffActivateAttachBoneName"
+	10	"L_BUFFBONE_GLB_HAND_LOC"
+	11	"AutoBuffActivateAttachBoneName2"
+	12	"R_BUFFBONE_GLB_HAND_LOC"
+	13	"AutoCooldownByLevel"
+	14	50
+locals (0) for 0000026CCC0335F0:
+upvalues (0) for 0000026CCC0335F0:

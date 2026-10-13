@@ -1,0 +1,19 @@
+{
+  "id": "owned-string-control",
+  "role": "training-control",
+  "learning_use": "training",
+  "source": "owned_seed.cpp",
+  "symbol": "??0OwnedSeed@@QAE@PBD@Z",
+  "rva": "0x9b78e0",
+  "expected_size": 88,
+  "expected_targets": {"?Pool_Alloc@@YAPAXI@Z": "0x9d4570"},
+  "flags": ["-O2", "-std:c++17"],
+  "seed_interpretation": "Algorithm, three-word layout, and ABI supplied from prior analysis; register solution withheld from seed.",
+  "function": {
+    "signature": "OwnedSeed::OwnedSeed(const char* text)",
+    "member": true,
+    "constructor": true,
+    "parameters": [{"name": "text", "capture": "value"}],
+    "member_fields": ["data", "size", "capacity"]
+  }
+}

@@ -1,0 +1,814 @@
+
+main <?:0,0> (41 instructions, 164 bytes at 0000025F7D9C34D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 21 constants, 18 functions
+	1	[-]	LOADK    	0 -2	; 500
+	2	[-]	SETGLOBAL	0 -1	; FEAR_WANDER_DISTANCE
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -3	; ClickCloseToTargetAttackMove
+	5	[-]	CLOSURE  	0 0	; 0000025F7D9C3800
+	6	[-]	SETGLOBAL	0 -4	; OnInit
+	7	[-]	CLOSURE  	0 1	; 0000025F7D9C19B0
+	8	[-]	SETGLOBAL	0 -5	; OnTargetLost
+	9	[-]	CLOSURE  	0 2	; 0000025F7D9C1A30
+	10	[-]	SETGLOBAL	0 -6	; OnCallForHelp
+	11	[-]	CLOSURE  	0 3	; 0000025F7D9C1AD0
+	12	[-]	SETGLOBAL	0 -7	; OnTauntBegin
+	13	[-]	CLOSURE  	0 4	; 0000025F7D9C3E90
+	14	[-]	SETGLOBAL	0 -8	; OnTauntEnd
+	15	[-]	CLOSURE  	0 5	; 0000025F7D9C3FD0
+	16	[-]	SETGLOBAL	0 -9	; OnFearBegin
+	17	[-]	CLOSURE  	0 6	; 0000025F7D9C4190
+	18	[-]	SETGLOBAL	0 -10	; TimerDistanceScan
+	19	[-]	CLOSURE  	0 7	; 0000025F7D9C43A0
+	20	[-]	SETGLOBAL	0 -11	; OnFearEnd
+	21	[-]	CLOSURE  	0 8	; 0000025F7D9C44B0
+	22	[-]	SETGLOBAL	0 -12	; TimerFeared
+	23	[-]	CLOSURE  	0 9	; 0000025F7D9C45C0
+	24	[-]	SETGLOBAL	0 -13	; OnFleeBegin
+	25	[-]	CLOSURE  	0 10	; 0000025F7D9C4750
+	26	[-]	SETGLOBAL	0 -14	; OnFleeEnd
+	27	[-]	CLOSURE  	0 11	; 0000025F7D9C5120
+	28	[-]	SETGLOBAL	0 -15	; TimerFlee
+	29	[-]	CLOSURE  	0 12	; 0000025F7D9C5210
+	30	[-]	SETGLOBAL	0 -16	; TimerCheckAttack
+	31	[-]	CLOSURE  	0 13	; 0000025F7D9C6140
+	32	[-]	SETGLOBAL	0 -17	; OnCanMove
+	33	[-]	CLOSURE  	0 14	; 0000025F7D9C6040
+	34	[-]	SETGLOBAL	0 -18	; OnCanAttack
+	35	[-]	CLOSURE  	0 15	; 0000025F7D9C63C0
+	36	[-]	SETGLOBAL	0 -19	; OnOrder
+	37	[-]	CLOSURE  	0 16	; 0000025F7D9C64C0
+	38	[-]	SETGLOBAL	0 -20	; TimerFindEnemies
+	39	[-]	CLOSURE  	0 17	; 0000025F7D9C56C0
+	40	[-]	SETGLOBAL	0 -21	; HaltAI
+	41	[-]	RETURN   	0 1
+constants (21) for 0000025F7D9C34D0:
+	1	"FEAR_WANDER_DISTANCE"
+	2	500
+	3	"ClickCloseToTargetAttackMove"
+	4	"OnInit"
+	5	"OnTargetLost"
+	6	"OnCallForHelp"
+	7	"OnTauntBegin"
+	8	"OnTauntEnd"
+	9	"OnFearBegin"
+	10	"TimerDistanceScan"
+	11	"OnFearEnd"
+	12	"TimerFeared"
+	13	"OnFleeBegin"
+	14	"OnFleeEnd"
+	15	"TimerFlee"
+	16	"TimerCheckAttack"
+	17	"OnCanMove"
+	18	"OnCanAttack"
+	19	"OnOrder"
+	20	"TimerFindEnemies"
+	21	"HaltAI"
+locals (0) for 0000025F7D9C34D0:
+upvalues (0) for 0000025F7D9C34D0:
+
+function <?:5,16> (36 instructions, 144 bytes at 0000025F7D9C3800)
+0 params, 4 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SetState
+	2	[-]	GETGLOBAL	1 -2	; AI_HARDIDLE
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -3	; InitTimer
+	5	[-]	LOADK    	1 -4	; "TimerFeared"
+	6	[-]	LOADK    	2 -5	; 1
+	7	[-]	LOADBOOL 	3 1 0
+	8	[-]	CALL     	0 4 1
+	9	[-]	GETGLOBAL	0 -3	; InitTimer
+	10	[-]	LOADK    	1 -6	; "TimerFlee"
+	11	[-]	LOADK    	2 -7	; 0.5
+	12	[-]	LOADBOOL 	3 1 0
+	13	[-]	CALL     	0 4 1
+	14	[-]	GETGLOBAL	0 -3	; InitTimer
+	15	[-]	LOADK    	1 -8	; "TimerCheckAttack"
+	16	[-]	LOADK    	2 -9	; 0.2
+	17	[-]	LOADBOOL 	3 1 0
+	18	[-]	CALL     	0 4 1
+	19	[-]	GETGLOBAL	0 -3	; InitTimer
+	20	[-]	LOADK    	1 -10	; "TimerDistanceScan"
+	21	[-]	LOADK    	2 -9	; 0.2
+	22	[-]	LOADBOOL 	3 1 0
+	23	[-]	CALL     	0 4 1
+	24	[-]	GETGLOBAL	0 -11	; StopTimer
+	25	[-]	LOADK    	1 -4	; "TimerFeared"
+	26	[-]	CALL     	0 2 1
+	27	[-]	GETGLOBAL	0 -11	; StopTimer
+	28	[-]	LOADK    	1 -6	; "TimerFlee"
+	29	[-]	CALL     	0 2 1
+	30	[-]	GETGLOBAL	0 -13	; GetIsGameFeatureEnabled
+	31	[-]	LOADK    	1 -12	; "ClickCloseToTargetAttackMove"
+	32	[-]	CALL     	0 2 2
+	33	[-]	SETGLOBAL	0 -12	; ClickCloseToTargetAttackMove
+	34	[-]	LOADBOOL 	0 0 0
+	35	[-]	RETURN   	0 2
+	36	[-]	RETURN   	0 1
+constants (13) for 0000025F7D9C3800:
+	1	"SetState"
+	2	"AI_HARDIDLE"
+	3	"InitTimer"
+	4	"TimerFeared"
+	5	1
+	6	"TimerFlee"
+	7	0.5
+	8	"TimerCheckAttack"
+	9	0.2
+	10	"TimerDistanceScan"
+	11	"StopTimer"
+	12	"ClickCloseToTargetAttackMove"
+	13	"GetIsGameFeatureEnabled"
+locals (0) for 0000025F7D9C3800:
+upvalues (0) for 0000025F7D9C3800:
+
+function <?:20,22> (3 instructions, 12 bytes at 0000025F7D9C19B0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	RETURN   	0 2
+	3	[-]	RETURN   	0 1
+constants (0) for 0000025F7D9C19B0:
+locals (0) for 0000025F7D9C19B0:
+upvalues (0) for 0000025F7D9C19B0:
+
+function <?:26,27> (1 instruction, 4 bytes at 0000025F7D9C1A30)
+2 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000025F7D9C1A30:
+locals (0) for 0000025F7D9C1A30:
+upvalues (0) for 0000025F7D9C1A30:
+
+function <?:30,43> (17 instructions, 68 bytes at 0000025F7D9C1AD0)
+0 params, 4 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; GetTauntTarget
+	8	[-]	CALL     	1 1 2
+	9	[-]	SETGLOBAL	1 -3	; tauntTarget
+	10	[-]	GETGLOBAL	1 -3	; tauntTarget
+	11	[-]	EQ       	1 1 -5	; - nil
+	12	[-]	JMP      	4	; to 17
+	13	[-]	GETGLOBAL	1 -6	; SetStateAndCloseToTarget
+	14	[-]	GETGLOBAL	2 -7	; AI_TAUNTED
+	15	[-]	GETGLOBAL	3 -3	; tauntTarget
+	16	[-]	CALL     	1 3 1
+	17	[-]	RETURN   	0 1
+constants (7) for 0000025F7D9C1AD0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"tauntTarget"
+	4	"GetTauntTarget"
+	5	nil
+	6	"SetStateAndCloseToTarget"
+	7	"AI_TAUNTED"
+locals (0) for 0000025F7D9C1AD0:
+upvalues (0) for 0000025F7D9C1AD0:
+
+function <?:47,64> (25 instructions, 100 bytes at 0000025F7D9C3E90)
+0 params, 4 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; GetTauntTarget
+	8	[-]	CALL     	1 1 2
+	9	[-]	SETGLOBAL	1 -3	; tauntTarget
+	10	[-]	GETGLOBAL	1 -3	; tauntTarget
+	11	[-]	EQ       	1 1 -5	; - nil
+	12	[-]	JMP      	5	; to 18
+	13	[-]	GETGLOBAL	1 -6	; SetStateAndCloseToTarget
+	14	[-]	GETGLOBAL	2 -7	; AI_SOFTATTACK
+	15	[-]	GETGLOBAL	3 -3	; tauntTarget
+	16	[-]	CALL     	1 3 1
+	17	[-]	JMP      	7	; to 25
+	18	[-]	GETGLOBAL	1 -8	; NetSetState
+	19	[-]	GETGLOBAL	2 -9	; AI_IDLE
+	20	[-]	CALL     	1 2 1
+	21	[-]	GETGLOBAL	1 -10	; TimerDistanceScan
+	22	[-]	CALL     	1 1 1
+	23	[-]	GETGLOBAL	1 -11	; TimerCheckAttack
+	24	[-]	CALL     	1 1 1
+	25	[-]	RETURN   	0 1
+constants (11) for 0000025F7D9C3E90:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"tauntTarget"
+	4	"GetTauntTarget"
+	5	nil
+	6	"SetStateAndCloseToTarget"
+	7	"AI_SOFTATTACK"
+	8	"NetSetState"
+	9	"AI_IDLE"
+	10	"TimerDistanceScan"
+	11	"TimerCheckAttack"
+locals (0) for 0000025F7D9C3E90:
+upvalues (0) for 0000025F7D9C3E90:
+
+function <?:68,80> (23 instructions, 92 bytes at 0000025F7D9C3FD0)
+0 params, 4 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; MakeWanderPoint
+	8	[-]	GETGLOBAL	2 -5	; GetFearLeashPoint
+	9	[-]	CALL     	2 1 2
+	10	[-]	GETGLOBAL	3 -6	; FEAR_WANDER_DISTANCE
+	11	[-]	CALL     	1 3 2
+	12	[-]	SETGLOBAL	1 -3	; wanderPoint
+	13	[-]	GETGLOBAL	1 -7	; SetStateAndMove
+	14	[-]	GETGLOBAL	2 -8	; AI_FEARED
+	15	[-]	GETGLOBAL	3 -3	; wanderPoint
+	16	[-]	CALL     	1 3 1
+	17	[-]	GETGLOBAL	1 -9	; TurnOffAutoAttack
+	18	[-]	GETGLOBAL	2 -10	; STOPREASON_MOVING
+	19	[-]	CALL     	1 2 1
+	20	[-]	GETGLOBAL	1 -11	; ResetAndStartTimer
+	21	[-]	LOADK    	2 -12	; "TimerFeared"
+	22	[-]	CALL     	1 2 1
+	23	[-]	RETURN   	0 1
+constants (12) for 0000025F7D9C3FD0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"wanderPoint"
+	4	"MakeWanderPoint"
+	5	"GetFearLeashPoint"
+	6	"FEAR_WANDER_DISTANCE"
+	7	"SetStateAndMove"
+	8	"AI_FEARED"
+	9	"TurnOffAutoAttack"
+	10	"STOPREASON_MOVING"
+	11	"ResetAndStartTimer"
+	12	"TimerFeared"
+locals (0) for 0000025F7D9C3FD0:
+upvalues (0) for 0000025F7D9C3FD0:
+
+function <?:82,101> (36 instructions, 144 bytes at 0000025F7D9C4190)
+0 params, 5 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	1 0 1
+	5	[-]	JMP      	3	; to 9
+	6	[-]	GETGLOBAL	1 -3	; AI_HARDIDLE
+	7	[-]	EQ       	0 0 1
+	8	[-]	JMP      	1	; to 10
+	9	[-]	RETURN   	0 1
+	10	[-]	GETGLOBAL	1 -4	; AI_ATTACKMOVESTATE
+	11	[-]	EQ       	0 0 1
+	12	[-]	JMP      	23	; to 36
+	13	[-]	GETGLOBAL	1 -5	; GetTargetOrFindTargetInAcR
+	14	[-]	CALL     	1 1 2
+	15	[-]	EQ       	1 1 -6	; - nil
+	16	[-]	JMP      	7	; to 24
+	17	[-]	GETGLOBAL	2 -7	; SetStateAndCloseToTarget
+	18	[-]	GETGLOBAL	3 -8	; AI_SOFTATTACK
+	19	[-]	MOVE     	4 1
+	20	[-]	CALL     	2 3 1
+	21	[-]	LOADBOOL 	2 1 0
+	22	[-]	RETURN   	2 2
+	23	[-]	JMP      	12	; to 36
+	24	[-]	GETGLOBAL	2 -9	; DistanceBetweenObjectAndTargetPosSq
+	25	[-]	GETGLOBAL	3 -10	; me
+	26	[-]	CALL     	2 2 2
+	27	[-]	LE       	0 2 -11	; - 100
+	28	[-]	JMP      	7	; to 36
+	29	[-]	GETGLOBAL	2 -12	; NetSetState
+	30	[-]	GETGLOBAL	3 -13	; AI_STANDING
+	31	[-]	CALL     	2 2 1
+	32	[-]	GETGLOBAL	2 -14	; ClearTargetPosInPos
+	33	[-]	CALL     	2 1 1
+	34	[-]	LOADBOOL 	2 1 0
+	35	[-]	RETURN   	2 2
+	36	[-]	RETURN   	0 1
+constants (14) for 0000025F7D9C4190:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"AI_HARDIDLE"
+	4	"AI_ATTACKMOVESTATE"
+	5	"GetTargetOrFindTargetInAcR"
+	6	nil
+	7	"SetStateAndCloseToTarget"
+	8	"AI_SOFTATTACK"
+	9	"DistanceBetweenObjectAndTargetPosSq"
+	10	"me"
+	11	100
+	12	"NetSetState"
+	13	"AI_STANDING"
+	14	"ClearTargetPosInPos"
+locals (0) for 0000025F7D9C4190:
+upvalues (0) for 0000025F7D9C4190:
+
+function <?:104,116> (17 instructions, 68 bytes at 0000025F7D9C43A0)
+0 params, 3 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; StopTimer
+	8	[-]	LOADK    	2 -4	; "TimerFeared"
+	9	[-]	CALL     	1 2 1
+	10	[-]	GETGLOBAL	1 -5	; NetSetState
+	11	[-]	GETGLOBAL	2 -6	; AI_IDLE
+	12	[-]	CALL     	1 2 1
+	13	[-]	GETGLOBAL	1 -7	; TimerDistanceScan
+	14	[-]	CALL     	1 1 1
+	15	[-]	GETGLOBAL	1 -8	; TimerCheckAttack
+	16	[-]	CALL     	1 1 1
+	17	[-]	RETURN   	0 1
+constants (8) for 0000025F7D9C43A0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"StopTimer"
+	4	"TimerFeared"
+	5	"NetSetState"
+	6	"AI_IDLE"
+	7	"TimerDistanceScan"
+	8	"TimerCheckAttack"
+locals (0) for 0000025F7D9C43A0:
+upvalues (0) for 0000025F7D9C43A0:
+
+function <?:120,130> (17 instructions, 68 bytes at 0000025F7D9C44B0)
+0 params, 4 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; MakeWanderPoint
+	8	[-]	GETGLOBAL	2 -5	; GetFearLeashPoint
+	9	[-]	CALL     	2 1 2
+	10	[-]	GETGLOBAL	3 -6	; FEAR_WANDER_DISTANCE
+	11	[-]	CALL     	1 3 2
+	12	[-]	SETGLOBAL	1 -3	; wanderPoint
+	13	[-]	GETGLOBAL	1 -7	; SetStateAndMove
+	14	[-]	GETGLOBAL	2 -8	; AI_FEARED
+	15	[-]	GETGLOBAL	3 -3	; wanderPoint
+	16	[-]	CALL     	1 3 1
+	17	[-]	RETURN   	0 1
+constants (8) for 0000025F7D9C44B0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"wanderPoint"
+	4	"MakeWanderPoint"
+	5	"GetFearLeashPoint"
+	6	"FEAR_WANDER_DISTANCE"
+	7	"SetStateAndMove"
+	8	"AI_FEARED"
+locals (0) for 0000025F7D9C44B0:
+upvalues (0) for 0000025F7D9C44B0:
+
+function <?:133,143> (20 instructions, 80 bytes at 0000025F7D9C45C0)
+0 params, 4 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; MakeFleePoint
+	8	[-]	CALL     	1 1 2
+	9	[-]	SETGLOBAL	1 -3	; fleePoint
+	10	[-]	GETGLOBAL	1 -5	; SetStateAndMove
+	11	[-]	GETGLOBAL	2 -6	; AI_FLEEING
+	12	[-]	GETGLOBAL	3 -3	; fleePoint
+	13	[-]	CALL     	1 3 1
+	14	[-]	GETGLOBAL	1 -7	; TurnOffAutoAttack
+	15	[-]	GETGLOBAL	2 -8	; STOPREASON_MOVING
+	16	[-]	CALL     	1 2 1
+	17	[-]	GETGLOBAL	1 -9	; ResetAndStartTimer
+	18	[-]	LOADK    	2 -10	; "TimerFlee"
+	19	[-]	CALL     	1 2 1
+	20	[-]	RETURN   	0 1
+constants (10) for 0000025F7D9C45C0:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"fleePoint"
+	4	"MakeFleePoint"
+	5	"SetStateAndMove"
+	6	"AI_FLEEING"
+	7	"TurnOffAutoAttack"
+	8	"STOPREASON_MOVING"
+	9	"ResetAndStartTimer"
+	10	"TimerFlee"
+locals (0) for 0000025F7D9C45C0:
+upvalues (0) for 0000025F7D9C45C0:
+
+function <?:146,161> (26 instructions, 104 bytes at 0000025F7D9C4750)
+0 params, 5 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -3	; StopTimer
+	8	[-]	LOADK    	2 -4	; "TimerFlee"
+	9	[-]	CALL     	1 2 1
+	10	[-]	GETGLOBAL	1 -5	; GetFleeTarget
+	11	[-]	CALL     	1 1 2
+	12	[-]	EQ       	1 1 -6	; - nil
+	13	[-]	JMP      	5	; to 19
+	14	[-]	GETGLOBAL	2 -7	; SetStateAndCloseToTarget
+	15	[-]	GETGLOBAL	3 -8	; AI_SOFTATTACK
+	16	[-]	MOVE     	4 1
+	17	[-]	CALL     	2 3 1
+	18	[-]	JMP      	7	; to 26
+	19	[-]	GETGLOBAL	2 -9	; NetSetState
+	20	[-]	GETGLOBAL	3 -10	; AI_IDLE
+	21	[-]	CALL     	2 2 1
+	22	[-]	GETGLOBAL	2 -11	; TimerDistanceScan
+	23	[-]	CALL     	2 1 1
+	24	[-]	GETGLOBAL	2 -12	; TimerCheckAttack
+	25	[-]	CALL     	2 1 1
+	26	[-]	RETURN   	0 1
+constants (12) for 0000025F7D9C4750:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"StopTimer"
+	4	"TimerFlee"
+	5	"GetFleeTarget"
+	6	nil
+	7	"SetStateAndCloseToTarget"
+	8	"AI_SOFTATTACK"
+	9	"NetSetState"
+	10	"AI_IDLE"
+	11	"TimerDistanceScan"
+	12	"TimerCheckAttack"
+locals (0) for 0000025F7D9C4750:
+upvalues (0) for 0000025F7D9C4750:
+
+function <?:164,171> (14 instructions, 56 bytes at 0000025F7D9C5120)
+0 params, 4 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; AI_HALTED
+	4	[-]	EQ       	0 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	RETURN   	0 1
+	7	[-]	GETGLOBAL	1 -4	; MakeFleePoint
+	8	[-]	CALL     	1 1 2
+	9	[-]	SETGLOBAL	1 -3	; fleePoint
+	10	[-]	GETGLOBAL	1 -5	; SetStateAndMove
+	11	[-]	GETGLOBAL	2 -6	; AI_FLEEING
+	12	[-]	GETGLOBAL	3 -3	; fleePoint
+	13	[-]	CALL     	1 3 1
+	14	[-]	RETURN   	0 1
+constants (6) for 0000025F7D9C5120:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"fleePoint"
+	4	"MakeFleePoint"
+	5	"SetStateAndMove"
+	6	"AI_FLEEING"
+locals (0) for 0000025F7D9C5120:
+upvalues (0) for 0000025F7D9C5120:
+
+function <?:173,242> (121 instructions, 484 bytes at 0000025F7D9C5210)
+0 params, 5 slots, 0 upvalues, 0 locals, 30 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetState
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; lastState
+	4	[-]	EQ       	1 0 1
+	5	[-]	JMP      	1	; to 7
+	6	[-]	SETGLOBAL	0 -2	; lastState
+	7	[-]	GETGLOBAL	1 -3	; AI_HALTED
+	8	[-]	EQ       	0 0 1
+	9	[-]	JMP      	1	; to 11
+	10	[-]	RETURN   	0 1
+	11	[-]	GETGLOBAL	1 -4	; AI_SOFTATTACK
+	12	[-]	EQ       	0 0 1
+	13	[-]	JMP      	73	; to 87
+	14	[-]	GETGLOBAL	1 -5	; IsTargetLost
+	15	[-]	CALL     	1 1 2
+	16	[-]	EQ       	1 1 -6	; - true
+	17	[-]	JMP      	4	; to 22
+	18	[-]	GETGLOBAL	1 -7	; GetTarget
+	19	[-]	CALL     	1 1 2
+	20	[-]	EQ       	0 1 -8	; - nil
+	21	[-]	JMP      	48	; to 70
+	22	[-]	GETGLOBAL	1 -9	; LastAutoAttackFinished
+	23	[-]	CALL     	1 1 2
+	24	[-]	EQ       	0 1 -10	; - false
+	25	[-]	JMP      	6	; to 32
+	26	[-]	GETGLOBAL	1 -11	; InitTimer
+	27	[-]	LOADK    	2 -12	; "TimerCheckAttack"
+	28	[-]	LOADK    	3 -13	; 0.1
+	29	[-]	LOADBOOL 	4 1 0
+	30	[-]	CALL     	1 4 1
+	31	[-]	RETURN   	0 1
+	32	[-]	GETGLOBAL	1 -14	; IsAutoAcquireTargetEnabled
+	33	[-]	CALL     	1 1 2
+	34	[-]	EQ       	1 1 -10	; - false
+	35	[-]	JMP      	7	; to 43
+	36	[-]	GETGLOBAL	1 -15	; recentlyDidNewMoveOrder
+	37	[-]	TEST     	1 0 0
+	38	[-]	JMP      	8	; to 47
+	39	[-]	GETGLOBAL	1 -16	; GetCanIMove
+	40	[-]	CALL     	1 1 2
+	41	[-]	TEST     	1 0 1
+	42	[-]	JMP      	4	; to 47
+	43	[-]	GETGLOBAL	1 -4	; AI_SOFTATTACK
+	44	[-]	EQ       	1 0 1
+	45	[-]	JMP      	1	; to 47
+	46	[-]	RETURN   	0 1
+	47	[-]	GETGLOBAL	1 -18	; FindTargetInAcR
+	48	[-]	CALL     	1 1 2
+	49	[-]	SETGLOBAL	1 -17	; newTarget
+	50	[-]	GETGLOBAL	1 -17	; newTarget
+	51	[-]	EQ       	1 1 -8	; - nil
+	52	[-]	JMP      	12	; to 65
+	53	[-]	GETGLOBAL	1 -19	; CanSeeMe
+	54	[-]	GETGLOBAL	2 -17	; newTarget
+	55	[-]	CALL     	1 2 2
+	56	[-]	TEST     	1 0 0
+	57	[-]	JMP      	4	; to 62
+	58	[-]	GETGLOBAL	1 -20	; SetStateAndCloseToTarget
+	59	[-]	GETGLOBAL	2 -4	; AI_SOFTATTACK
+	60	[-]	GETGLOBAL	3 -17	; newTarget
+	61	[-]	CALL     	1 3 1
+	62	[-]	LOADBOOL 	1 1 0
+	63	[-]	RETURN   	1 2
+	64	[-]	JMP      	4	; to 69
+	65	[-]	GETGLOBAL	1 -21	; NetSetState
+	66	[-]	GETGLOBAL	2 -22	; AI_STANDING
+	67	[-]	CALL     	1 2 1
+	68	[-]	RETURN   	0 1
+	69	[-]	RETURN   	0 1
+	70	[-]	GETGLOBAL	1 -23	; TargetInAttackRange
+	71	[-]	CALL     	1 1 2
+	72	[-]	EQ       	0 1 -6	; - true
+	73	[-]	JMP      	5	; to 79
+	74	[-]	GETGLOBAL	1 -24	; TurnOnAutoAttack
+	75	[-]	GETGLOBAL	2 -7	; GetTarget
+	76	[-]	CALL     	2 1 0
+	77	[-]	CALL     	1 0 1
+	78	[-]	RETURN   	0 1
+	79	[-]	GETGLOBAL	1 -25	; TargetInCancelAttackRange
+	80	[-]	CALL     	1 1 2
+	81	[-]	EQ       	0 1 -10	; - false
+	82	[-]	JMP      	33	; to 116
+	83	[-]	GETGLOBAL	1 -26	; TurnOffAutoAttack
+	84	[-]	GETGLOBAL	2 -27	; STOPREASON_MOVING
+	85	[-]	CALL     	1 2 1
+	86	[-]	JMP      	29	; to 116
+	87	[-]	GETGLOBAL	1 -28	; AI_TAUNTED
+	88	[-]	EQ       	1 0 1
+	89	[-]	JMP      	3	; to 93
+	90	[-]	GETGLOBAL	1 -29	; AI_BERSERK
+	91	[-]	EQ       	0 0 1
+	92	[-]	JMP      	17	; to 110
+	93	[-]	GETGLOBAL	1 -23	; TargetInAttackRange
+	94	[-]	CALL     	1 1 2
+	95	[-]	EQ       	0 1 -6	; - true
+	96	[-]	JMP      	5	; to 102
+	97	[-]	GETGLOBAL	1 -24	; TurnOnAutoAttack
+	98	[-]	GETGLOBAL	2 -7	; GetTarget
+	99	[-]	CALL     	2 1 0
+	100	[-]	CALL     	1 0 1
+	101	[-]	RETURN   	0 1
+	102	[-]	GETGLOBAL	1 -25	; TargetInCancelAttackRange
+	103	[-]	CALL     	1 1 2
+	104	[-]	EQ       	0 1 -10	; - false
+	105	[-]	JMP      	10	; to 116
+	106	[-]	GETGLOBAL	1 -26	; TurnOffAutoAttack
+	107	[-]	GETGLOBAL	2 -27	; STOPREASON_MOVING
+	108	[-]	CALL     	1 2 1
+	109	[-]	JMP      	6	; to 116
+	110	[-]	GETGLOBAL	1 -30	; IsMoving
+	111	[-]	CALL     	1 1 2
+	112	[-]	TEST     	1 0 0
+	113	[-]	JMP      	2	; to 116
+	114	[-]	LOADBOOL 	1 0 0
+	115	[-]	RETURN   	1 2
+	116	[-]	GETGLOBAL	1 -11	; InitTimer
+	117	[-]	LOADK    	2 -12	; "TimerCheckAttack"
+	118	[-]	LOADK    	3 -13	; 0.1
+	119	[-]	LOADBOOL 	4 1 0
+	120	[-]	CALL     	1 4 1
+	121	[-]	RETURN   	0 1
+constants (30) for 0000025F7D9C5210:
+	1	"GetState"
+	2	"lastState"
+	3	"AI_HALTED"
+	4	"AI_SOFTATTACK"
+	5	"IsTargetLost"
+	6	true
+	7	"GetTarget"
+	8	nil
+	9	"LastAutoAttackFinished"
+	10	false
+	11	"InitTimer"
+	12	"TimerCheckAttack"
+	13	0.1
+	14	"IsAutoAcquireTargetEnabled"
+	15	"recentlyDidNewMoveOrder"
+	16	"GetCanIMove"
+	17	"newTarget"
+	18	"FindTargetInAcR"
+	19	"CanSeeMe"
+	20	"SetStateAndCloseToTarget"
+	21	"NetSetState"
+	22	"AI_STANDING"
+	23	"TargetInAttackRange"
+	24	"TurnOnAutoAttack"
+	25	"TargetInCancelAttackRange"
+	26	"TurnOffAutoAttack"
+	27	"STOPREASON_MOVING"
+	28	"AI_TAUNTED"
+	29	"AI_BERSERK"
+	30	"IsMoving"
+locals (0) for 0000025F7D9C5210:
+upvalues (0) for 0000025F7D9C5210:
+
+function <?:245,246> (1 instruction, 4 bytes at 0000025F7D9C6140)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000025F7D9C6140:
+locals (0) for 0000025F7D9C6140:
+upvalues (0) for 0000025F7D9C6140:
+
+function <?:250,251> (1 instruction, 4 bytes at 0000025F7D9C6040)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000025F7D9C6040:
+locals (0) for 0000025F7D9C6040:
+upvalues (0) for 0000025F7D9C6040:
+
+function <?:253,297> (94 instructions, 376 bytes at 0000025F7D9C63C0)
+4 params, 11 slots, 0 upvalues, 0 locals, 30 constants, 0 functions
+	1	[-]	GETGLOBAL	4 -1	; ORDER_ATTACKTO
+	2	[-]	EQ       	0 0 4
+	3	[-]	JMP      	20	; to 24
+	4	[-]	GETGLOBAL	4 -2	; SetStateAndCloseToTarget
+	5	[-]	GETGLOBAL	5 -3	; AI_HARDATTACK
+	6	[-]	MOVE     	6 1
+	7	[-]	CALL     	4 3 1
+	8	[-]	GETGLOBAL	4 -4	; AssignTargetPosInPos
+	9	[-]	CALL     	4 1 1
+	10	[-]	GETGLOBAL	4 -5	; TargetInAttackRange
+	11	[-]	CALL     	4 1 2
+	12	[-]	EQ       	0 4 -6	; - true
+	13	[-]	JMP      	5	; to 19
+	14	[-]	GETGLOBAL	4 -7	; TurnOnAutoAttack
+	15	[-]	GETGLOBAL	5 -8	; GetTarget
+	16	[-]	CALL     	5 1 0
+	17	[-]	CALL     	4 0 1
+	18	[-]	JMP      	3	; to 22
+	19	[-]	GETGLOBAL	4 -9	; TurnOffAutoAttack
+	20	[-]	GETGLOBAL	5 -10	; STOPREASON_MOVING
+	21	[-]	CALL     	4 2 1
+	22	[-]	LOADBOOL 	4 1 0
+	23	[-]	RETURN   	4 2
+	24	[-]	GETGLOBAL	4 -11	; ORDER_ATTACKMOVE
+	25	[-]	EQ       	0 0 4
+	26	[-]	JMP      	67	; to 94
+	27	[-]	GETGLOBAL	4 -12	; ClickCloseToTargetAttackMove
+	28	[-]	TEST     	4 0 0
+	29	[-]	JMP      	35	; to 65
+	30	[-]	GETGLOBAL	4 -13	; IsTargetedAttackMoveEnabled
+	31	[-]	CALL     	4 1 2
+	32	[-]	TEST     	4 0 0
+	33	[-]	JMP      	31	; to 65
+	34	[-]	GETGLOBAL	4 -15	; FindTargetNearestPosition
+	35	[-]	MOVE     	5 2
+	36	[-]	GETGLOBAL	6 -16	; ATTACKMOVE_CLICK_TARGET_DISTANCE
+	37	[-]	CALL     	4 3 2
+	38	[-]	SETGLOBAL	4 -14	; newTarget
+	39	[-]	GETGLOBAL	4 -14	; newTarget
+	40	[-]	EQ       	1 4 -17	; - nil
+	41	[-]	JMP      	25	; to 67
+	42	[-]	GETGLOBAL	4 -18	; GetPos
+	43	[-]	GETGLOBAL	5 -14	; newTarget
+	44	[-]	CALL     	4 2 2
+	45	[-]	GETGLOBAL	5 -19	; GetAttackRange
+	46	[-]	CALL     	5 1 2
+	47	[-]	GETGLOBAL	6 -20	; ATTACKMOVE_CLICK_TARGET_RANGE_ADDITION
+	48	[-]	ADD      	5 5 6
+	49	[-]	GETGLOBAL	6 -21	; DistanceBetweenObjectBounds
+	50	[-]	GETGLOBAL	7 -22	; me
+	51	[-]	GETGLOBAL	8 -14	; newTarget
+	52	[-]	CALL     	6 3 2
+	53	[-]	LT       	0 5 6
+	54	[-]	JMP      	12	; to 67
+	55	[-]	GETGLOBAL	7 -23	; IsDistanceBetweenObjectBoundAndPointLessThan
+	56	[-]	GETGLOBAL	8 -14	; newTarget
+	57	[-]	MOVE     	9 2
+	58	[-]	GETGLOBAL	10 -24	; ATTACKMOVE_CLICK_TARGET_FAR_RANGE_CLICK_TOLERANCE
+	59	[-]	CALL     	7 4 2
+	60	[-]	EQ       	0 7 -25	; - false
+	61	[-]	JMP      	5	; to 67
+	62	[-]	LOADNIL  	7 7
+	63	[-]	SETGLOBAL	7 -14	; newTarget
+	64	[-]	JMP      	2	; to 67
+	65	[-]	LOADNIL  	4 4
+	66	[-]	SETGLOBAL	4 -14	; newTarget
+	67	[-]	GETGLOBAL	4 -14	; newTarget
+	68	[-]	EQ       	1 4 -17	; - nil
+	69	[-]	JMP      	5	; to 75
+	70	[-]	GETGLOBAL	4 -26	; IsValidEnemy
+	71	[-]	GETGLOBAL	5 -14	; newTarget
+	72	[-]	CALL     	4 2 2
+	73	[-]	TEST     	4 0 1
+	74	[-]	JMP      	3	; to 78
+	75	[-]	GETGLOBAL	4 -27	; FindTargetInAcR
+	76	[-]	CALL     	4 1 2
+	77	[-]	SETGLOBAL	4 -14	; newTarget
+	78	[-]	GETGLOBAL	4 -14	; newTarget
+	79	[-]	EQ       	1 4 -17	; - nil
+	80	[-]	JMP      	6	; to 87
+	81	[-]	GETGLOBAL	4 -2	; SetStateAndCloseToTarget
+	82	[-]	GETGLOBAL	5 -28	; AI_SOFTATTACK
+	83	[-]	GETGLOBAL	6 -14	; newTarget
+	84	[-]	CALL     	4 3 1
+	85	[-]	LOADBOOL 	4 1 0
+	86	[-]	RETURN   	4 2
+	87	[-]	GETGLOBAL	4 -29	; SetStateAndMoveInPos
+	88	[-]	GETGLOBAL	5 -30	; AI_ATTACKMOVESTATE
+	89	[-]	CALL     	4 2 1
+	90	[-]	GETGLOBAL	4 -4	; AssignTargetPosInPos
+	91	[-]	CALL     	4 1 1
+	92	[-]	LOADBOOL 	4 1 0
+	93	[-]	RETURN   	4 2
+	94	[-]	RETURN   	0 1
+constants (30) for 0000025F7D9C63C0:
+	1	"ORDER_ATTACKTO"
+	2	"SetStateAndCloseToTarget"
+	3	"AI_HARDATTACK"
+	4	"AssignTargetPosInPos"
+	5	"TargetInAttackRange"
+	6	true
+	7	"TurnOnAutoAttack"
+	8	"GetTarget"
+	9	"TurnOffAutoAttack"
+	10	"STOPREASON_MOVING"
+	11	"ORDER_ATTACKMOVE"
+	12	"ClickCloseToTargetAttackMove"
+	13	"IsTargetedAttackMoveEnabled"
+	14	"newTarget"
+	15	"FindTargetNearestPosition"
+	16	"ATTACKMOVE_CLICK_TARGET_DISTANCE"
+	17	nil
+	18	"GetPos"
+	19	"GetAttackRange"
+	20	"ATTACKMOVE_CLICK_TARGET_RANGE_ADDITION"
+	21	"DistanceBetweenObjectBounds"
+	22	"me"
+	23	"IsDistanceBetweenObjectBoundAndPointLessThan"
+	24	"ATTACKMOVE_CLICK_TARGET_FAR_RANGE_CLICK_TOLERANCE"
+	25	false
+	26	"IsValidEnemy"
+	27	"FindTargetInAcR"
+	28	"AI_SOFTATTACK"
+	29	"SetStateAndMoveInPos"
+	30	"AI_ATTACKMOVESTATE"
+locals (0) for 0000025F7D9C63C0:
+upvalues (0) for 0000025F7D9C63C0:
+
+function <?:300,301> (1 instruction, 4 bytes at 0000025F7D9C64C0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000025F7D9C64C0:
+locals (0) for 0000025F7D9C64C0:
+upvalues (0) for 0000025F7D9C64C0:
+
+function <?:305,313> (16 instructions, 64 bytes at 0000025F7D9C56C0)
+0 params, 2 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; StopTimer
+	2	[-]	LOADK    	1 -2	; "TimerCheckAttack"
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -1	; StopTimer
+	5	[-]	LOADK    	1 -3	; "TimerFeared"
+	6	[-]	CALL     	0 2 1
+	7	[-]	GETGLOBAL	0 -1	; StopTimer
+	8	[-]	LOADK    	1 -4	; "TimerFlee"
+	9	[-]	CALL     	0 2 1
+	10	[-]	GETGLOBAL	0 -5	; TurnOffAutoAttack
+	11	[-]	GETGLOBAL	1 -6	; STOPREASON_IMMEDIATELY
+	12	[-]	CALL     	0 2 1
+	13	[-]	GETGLOBAL	0 -7	; NetSetState
+	14	[-]	GETGLOBAL	1 -8	; AI_HALTED
+	15	[-]	CALL     	0 2 1
+	16	[-]	RETURN   	0 1
+constants (8) for 0000025F7D9C56C0:
+	1	"StopTimer"
+	2	"TimerCheckAttack"
+	3	"TimerFeared"
+	4	"TimerFlee"
+	5	"TurnOffAutoAttack"
+	6	"STOPREASON_IMMEDIATELY"
+	7	"NetSetState"
+	8	"AI_HALTED"
+locals (0) for 0000025F7D9C56C0:
+upvalues (0) for 0000025F7D9C56C0:

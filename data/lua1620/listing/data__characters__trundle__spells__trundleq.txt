@@ -1,0 +1,39 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 00000206AB7035C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Trundle/HUD/Icons2D/Trundle_Q.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "TrundleQ"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -10	; "ClassicTrundle"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -9	; SpellVOOverrideSkins
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -11	; IsDamagingSpell
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -12	; TriggersSpellCasts
+	21	[-]	RETURN   	0 1
+constants (12) for 00000206AB7035C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Trundle/HUD/Icons2D/Trundle_Q.dds"
+	7	"BuffName"
+	8	"TrundleQ"
+	9	"SpellVOOverrideSkins"
+	10	"ClassicTrundle"
+	11	"IsDamagingSpell"
+	12	"TriggersSpellCasts"
+locals (0) for 00000206AB7035C0:
+upvalues (0) for 00000206AB7035C0:

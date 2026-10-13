@@ -1,0 +1,51 @@
+
+main <?:0,0> (27 instructions, 108 bytes at 000001FCFB923610)
+0+ params, 2 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/UX/Jade/S3Icons/SameSized/Nautilus_Wrath.project_jade.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "Jade_NautilusW_Shield"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "BUFFBONE_CSTM_L_EYE"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName2
+	15	[-]	LOADK    	0 -12	; "BUFFBONE_CSTM_R_EYE"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateAttachBoneName3
+	17	[-]	LOADK    	0 -14	; 3
+	18	[-]	SETGLOBAL	0 -13	; OnPreDamagePriority
+	19	[-]	NEWTABLE 	0 1 0
+	20	[-]	LOADK    	1 -16	; "Jade_NautilusAstronaut"
+	21	[-]	SETLIST  	0 1 1	; 1
+	22	[-]	SETGLOBAL	0 -15	; SpellFXOverrideSkins
+	23	[-]	LOADBOOL 	0 0 0
+	24	[-]	SETGLOBAL	0 -17	; IsDamagingSpell
+	25	[-]	LOADBOOL 	0 1 0
+	26	[-]	SETGLOBAL	0 -18	; DoOnPreDamageInExpirationOrder
+	27	[-]	RETURN   	0 1
+constants (18) for 000001FCFB923610:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/UX/Jade/S3Icons/SameSized/Nautilus_Wrath.project_jade.dds"
+	7	"BuffName"
+	8	"Jade_NautilusW_Shield"
+	9	"AutoBuffActivateAttachBoneName2"
+	10	"BUFFBONE_CSTM_L_EYE"
+	11	"AutoBuffActivateAttachBoneName3"
+	12	"BUFFBONE_CSTM_R_EYE"
+	13	"OnPreDamagePriority"
+	14	3
+	15	"SpellFXOverrideSkins"
+	16	"Jade_NautilusAstronaut"
+	17	"IsDamagingSpell"
+	18	"DoOnPreDamageInExpirationOrder"
+locals (0) for 000001FCFB923610:
+upvalues (0) for 000001FCFB923610:

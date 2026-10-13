@@ -1,0 +1,33 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 00000254444235F0)
+0+ params, 4 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/UX/Jade/S3Icons/SameSized/Jade_Sivir_Deadeye.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Jade_SivirR"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "C_Buffbone_Glb_Layout_Loc"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateAttachBoneName
+	11	[-]	NEWTABLE 	0 3 0
+	12	[-]	LOADK    	1 -10	; 90
+	13	[-]	LOADK    	2 -10	; 90
+	14	[-]	LOADK    	3 -10	; 90
+	15	[-]	SETLIST  	0 3 1	; 1
+	16	[-]	SETGLOBAL	0 -9	; AutoCooldownByLevel
+	17	[-]	RETURN   	0 1
+constants (10) for 00000254444235F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/UX/Jade/S3Icons/SameSized/Jade_Sivir_Deadeye.dds"
+	5	"BuffName"
+	6	"Jade_SivirR"
+	7	"AutoBuffActivateAttachBoneName"
+	8	"C_Buffbone_Glb_Layout_Loc"
+	9	"AutoCooldownByLevel"
+	10	90
+locals (0) for 00000254444235F0:
+upvalues (0) for 00000254444235F0:

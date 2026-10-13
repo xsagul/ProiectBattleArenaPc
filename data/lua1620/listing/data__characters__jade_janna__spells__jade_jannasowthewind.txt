@@ -1,0 +1,49 @@
+
+main <?:0,0> (27 instructions, 108 bytes at 000001F2E7DF3600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "Jade_Janna_Jade_Janna_Zephyr.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "Jade_JannaSowTheWind"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "C_BUFFBONE_GLB_HEAD_LOC"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName
+	15	[-]	LOADK    	0 -12	; 1
+	16	[-]	SETGLOBAL	0 -11	; SpellDamageRatio
+	17	[-]	NEWTABLE 	0 1 0
+	18	[-]	LOADK    	1 -14	; "Jade_JannaForecast"
+	19	[-]	SETLIST  	0 1 1	; 1
+	20	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	21	[-]	NEWTABLE 	0 1 0
+	22	[-]	LOADK    	1 -14	; "Jade_JannaForecast"
+	23	[-]	SETLIST  	0 1 1	; 1
+	24	[-]	SETGLOBAL	0 -15	; SpellVOOverrideSkins
+	25	[-]	LOADBOOL 	0 1 0
+	26	[-]	SETGLOBAL	0 -16	; IsDamagingSpell
+	27	[-]	RETURN   	0 1
+constants (16) for 000001F2E7DF3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"Jade_Janna_Jade_Janna_Zephyr.dds"
+	7	"BuffName"
+	8	"Jade_JannaSowTheWind"
+	9	"AutoBuffActivateAttachBoneName"
+	10	"C_BUFFBONE_GLB_HEAD_LOC"
+	11	"SpellDamageRatio"
+	12	1
+	13	"SpellFXOverrideSkins"
+	14	"Jade_JannaForecast"
+	15	"SpellVOOverrideSkins"
+	16	"IsDamagingSpell"
+locals (0) for 000001F2E7DF3600:
+upvalues (0) for 000001F2E7DF3600:

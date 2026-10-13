@@ -5,4 +5,6 @@
 // match: e69710 _MDC2_Init
 // match: e69750 _MDC2_Update
 // match: e697f0 _mdc2_body
+#define OPENSSL_FILE "crypto\\mdc2\\mdc2dgst.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/mdc2/mdc2dgst.c"

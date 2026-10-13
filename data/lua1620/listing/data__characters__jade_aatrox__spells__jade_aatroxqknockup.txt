@@ -1,0 +1,43 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 000001873D303600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "Aatrox_Q.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "Jade_AatroxQ"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -9	; IsDeathRecapSource
+	15	[-]	LOADK    	0 -11	; "game_floatingtext_Knockup"
+	16	[-]	SETGLOBAL	0 -10	; PopupMessage1
+	17	[-]	NEWTABLE 	0 1 0
+	18	[-]	LOADK    	1 -13	; "ZhaoYunXinZhao"
+	19	[-]	SETLIST  	0 1 1	; 1
+	20	[-]	SETGLOBAL	0 -12	; SpellFXOverrideSkins
+	21	[-]	LOADBOOL 	0 1 0
+	22	[-]	SETGLOBAL	0 -14	; IsDamagingSpell
+	23	[-]	RETURN   	0 1
+constants (14) for 000001873D303600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"Aatrox_Q.dds"
+	7	"BuffName"
+	8	"Jade_AatroxQ"
+	9	"IsDeathRecapSource"
+	10	"PopupMessage1"
+	11	"game_floatingtext_Knockup"
+	12	"SpellFXOverrideSkins"
+	13	"ZhaoYunXinZhao"
+	14	"IsDamagingSpell"
+locals (0) for 000001873D303600:
+upvalues (0) for 000001873D303600:

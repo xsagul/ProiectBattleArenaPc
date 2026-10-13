@@ -1,0 +1,32 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 000001EB2C273640)
+0+ params, 2 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; "ASSETS/Characters/NEXUSBLITZ_SorakaBot/HUD/Icons2D/NEXUSBLITZ_SorakaBot_Q.NexusBlitzSummer2020.dds"
+	2	[-]	SETGLOBAL	0 -1	; BuffTextureName
+	3	[-]	LOADK    	0 -4	; "NEXUSBLITZ_SorakaBotQ"
+	4	[-]	SETGLOBAL	0 -3	; BuffName
+	5	[-]	LOADK    	0 -6	; "DATA/Shared/Particles/Global_Slow.troy"
+	6	[-]	SETGLOBAL	0 -5	; AutoBuffActivateEffect
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -7	; IsDeathRecapSource
+	9	[-]	LOADK    	0 -9	; "game_floatingtext_Slowed"
+	10	[-]	SETGLOBAL	0 -8	; PopupMessage1
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -11	; "NEXUSBLITZ_SorakaBotSkin04"
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -10	; SpellFXOverrideSkins
+	15	[-]	RETURN   	0 1
+constants (11) for 000001EB2C273640:
+	1	"BuffTextureName"
+	2	"ASSETS/Characters/NEXUSBLITZ_SorakaBot/HUD/Icons2D/NEXUSBLITZ_SorakaBot_Q.NexusBlitzSummer2020.dds"
+	3	"BuffName"
+	4	"NEXUSBLITZ_SorakaBotQ"
+	5	"AutoBuffActivateEffect"
+	6	"DATA/Shared/Particles/Global_Slow.troy"
+	7	"IsDeathRecapSource"
+	8	"PopupMessage1"
+	9	"game_floatingtext_Slowed"
+	10	"SpellFXOverrideSkins"
+	11	"NEXUSBLITZ_SorakaBotSkin04"
+locals (0) for 000001EB2C273640:
+upvalues (0) for 000001EB2C273640:

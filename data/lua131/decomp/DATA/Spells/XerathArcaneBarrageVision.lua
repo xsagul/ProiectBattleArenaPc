@@ -1,0 +1,23 @@
+local L0_1, L1_1, L2_1
+L0_1 = true
+PersistsThroughDeath = L0_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBRemovePerceptionBubble
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.BubbleIDVar = "Bubble"
+L2_1.BubbleIDVarTable = "InstanceVars"
+L1_1.Params = L2_1
+L0_1[1] = L1_1
+OnBuffDeactivateBuildingBlocks = L0_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBRequireVar
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.RequiredVar = "Bubble"
+L2_1.RequiredVarTable = "InstanceVars"
+L1_1.Params = L2_1
+L0_1[1] = L1_1
+OnBuffActivateBuildingBlocks = L0_1

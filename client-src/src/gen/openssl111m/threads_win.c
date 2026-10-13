@@ -5,7 +5,11 @@
 // match: dda500 _CRYPTO_THREAD_compare_id
 // match: dda510 _CRYPTO_THREAD_get_local
 // match: dda540 _CRYPTO_THREAD_init_local
+// match: dda560 _CRYPTO_THREAD_lock_free
+// match: dda590 _CRYPTO_THREAD_lock_new
 // match: dda5e0 _CRYPTO_THREAD_run_once
 // match: dda630 _CRYPTO_THREAD_set_local
 // match: dda660 _CRYPTO_atomic_add
+#define OPENSSL_FILE "crypto\\threads_win.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/threads_win.c"

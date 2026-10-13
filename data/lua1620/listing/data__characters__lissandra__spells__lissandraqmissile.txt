@@ -1,0 +1,53 @@
+
+main <?:0,0> (28 instructions, 112 bytes at 000002706C943600)
+0+ params, 3 slots, 0 upvalues, 0 locals, 19 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Lissandra/HUD/Icons2D/Lissandra_Q.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "LissandraQ"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; "DATA/Shared/Particles/Global_Freeze.troy"
+	12	[-]	SETGLOBAL	0 -8	; AutoBuffActivateEffect
+	13	[-]	LOADK    	0 -11	; 1
+	14	[-]	SETGLOBAL	0 -10	; SpellDamageRatio
+	15	[-]	LOADK    	0 -13	; "game_floatingtext_Slowed"
+	16	[-]	SETGLOBAL	0 -12	; PopupMessage1
+	17	[-]	NEWTABLE 	0 2 0
+	18	[-]	LOADK    	1 -15	; "Lissandra_skin01"
+	19	[-]	LOADK    	2 -16	; "lissandraSkin02"
+	20	[-]	SETLIST  	0 2 1	; 1
+	21	[-]	SETGLOBAL	0 -14	; SpellFXOverrideSkins
+	22	[-]	NEWTABLE 	0 1 0
+	23	[-]	LOADK    	1 -18	; "ZombieBrand"
+	24	[-]	SETLIST  	0 1 1	; 1
+	25	[-]	SETGLOBAL	0 -17	; SpellVOOverrideSkins
+	26	[-]	LOADBOOL 	0 1 0
+	27	[-]	SETGLOBAL	0 -19	; IsDamagingSpell
+	28	[-]	RETURN   	0 1
+constants (19) for 000002706C943600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Lissandra/HUD/Icons2D/Lissandra_Q.dds"
+	6	"BuffName"
+	7	"LissandraQ"
+	8	"AutoBuffActivateEffect"
+	9	"DATA/Shared/Particles/Global_Freeze.troy"
+	10	"SpellDamageRatio"
+	11	1
+	12	"PopupMessage1"
+	13	"game_floatingtext_Slowed"
+	14	"SpellFXOverrideSkins"
+	15	"Lissandra_skin01"
+	16	"lissandraSkin02"
+	17	"SpellVOOverrideSkins"
+	18	"ZombieBrand"
+	19	"IsDamagingSpell"
+locals (0) for 000002706C943600:
+upvalues (0) for 000002706C943600:

@@ -1,0 +1,23 @@
+
+main <?:0,0> (3 instructions, 12 bytes at 0000025AA4DC34C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 1 constant, 1 function
+	1	[-]	CLOSURE  	0 0	; 0000025AA4DC3540
+	2	[-]	SETGLOBAL	0 -1	; OnInitServer
+	3	[-]	RETURN   	0 1
+constants (1) for 0000025AA4DC34C0:
+	1	"OnInitServer"
+locals (0) for 0000025AA4DC34C0:
+upvalues (0) for 0000025AA4DC34C0:
+
+function <?:1,4> (5 instructions, 20 bytes at 0000025AA4DC3540)
+0 params, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; ApplyPersistentBuffToAllChampions
+	2	[-]	LOADK    	1 -2	; "DefianceSpawn"
+	3	[-]	LOADBOOL 	2 0 0
+	4	[-]	CALL     	0 3 1
+	5	[-]	RETURN   	0 1
+constants (2) for 0000025AA4DC3540:
+	1	"ApplyPersistentBuffToAllChampions"
+	2	"DefianceSpawn"
+locals (0) for 0000025AA4DC3540:
+upvalues (0) for 0000025AA4DC3540:

@@ -1,0 +1,104 @@
+
+main <?:0,0> (6 instructions, 24 bytes at 0000010B95C434C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 3 constants, 1 function
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "Spawning"
+	3	[-]	CALL     	0 2 1
+	4	[-]	CLOSURE  	0 0	; 0000010B95C43540
+	5	[-]	SETGLOBAL	0 -3	; CreateLevelProps
+	6	[-]	RETURN   	0 1
+constants (3) for 0000010B95C434C0:
+	1	"DoLuaShared"
+	2	"Spawning"
+	3	"CreateLevelProps"
+locals (0) for 0000010B95C434C0:
+upvalues (0) for 0000010B95C434C0:
+
+function <?:3,17> (65 instructions, 260 bytes at 0000010B95C43540)
+0 params, 7 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	2	[-]	LOADK    	1 -2	; "Turret_T1_C_02"
+	3	[-]	LOADK    	2 -3	; "Turret"
+	4	[-]	LOADK    	3 -4	; "NB"
+	5	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	6	[-]	LOADK    	5 -6	; 2
+	7	[-]	LOADK    	6 -7	; 1
+	8	[-]	CALL     	0 7 1
+	9	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	10	[-]	LOADK    	1 -8	; "Turret_T1_C_04"
+	11	[-]	LOADK    	2 -3	; "Turret"
+	12	[-]	LOADK    	3 -4	; "NB"
+	13	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	14	[-]	LOADK    	5 -9	; 4
+	15	[-]	LOADK    	6 -7	; 1
+	16	[-]	CALL     	0 7 1
+	17	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	18	[-]	LOADK    	1 -10	; "Turret_T1_C_03"
+	19	[-]	LOADK    	2 -3	; "Turret"
+	20	[-]	LOADK    	3 -4	; "NB"
+	21	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	22	[-]	LOADK    	5 -11	; 3
+	23	[-]	LOADK    	6 -7	; 1
+	24	[-]	CALL     	0 7 1
+	25	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	26	[-]	LOADK    	1 -12	; "Turret_T1_R_01"
+	27	[-]	LOADK    	2 -3	; "Turret"
+	28	[-]	LOADK    	3 -4	; "NB"
+	29	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	30	[-]	LOADK    	5 -7	; 1
+	31	[-]	LOADK    	6 -13	; 0
+	32	[-]	CALL     	0 7 1
+	33	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	34	[-]	LOADK    	1 -14	; "Turret_T2_C_02"
+	35	[-]	LOADK    	2 -3	; "Turret"
+	36	[-]	LOADK    	3 -4	; "NB"
+	37	[-]	GETGLOBAL	4 -15	; TEAM_CHAOS
+	38	[-]	LOADK    	5 -6	; 2
+	39	[-]	LOADK    	6 -7	; 1
+	40	[-]	CALL     	0 7 1
+	41	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	42	[-]	LOADK    	1 -16	; "Turret_T2_C_04"
+	43	[-]	LOADK    	2 -3	; "Turret"
+	44	[-]	LOADK    	3 -4	; "NB"
+	45	[-]	GETGLOBAL	4 -15	; TEAM_CHAOS
+	46	[-]	LOADK    	5 -9	; 4
+	47	[-]	LOADK    	6 -7	; 1
+	48	[-]	CALL     	0 7 1
+	49	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	50	[-]	LOADK    	1 -17	; "Turret_T2_C_03"
+	51	[-]	LOADK    	2 -3	; "Turret"
+	52	[-]	LOADK    	3 -4	; "NB"
+	53	[-]	GETGLOBAL	4 -15	; TEAM_CHAOS
+	54	[-]	LOADK    	5 -11	; 3
+	55	[-]	LOADK    	6 -7	; 1
+	56	[-]	CALL     	0 7 1
+	57	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	58	[-]	LOADK    	1 -18	; "Turret_T2_R_01"
+	59	[-]	LOADK    	2 -3	; "Turret"
+	60	[-]	LOADK    	3 -4	; "NB"
+	61	[-]	GETGLOBAL	4 -15	; TEAM_CHAOS
+	62	[-]	LOADK    	5 -7	; 1
+	63	[-]	LOADK    	6 -13	; 0
+	64	[-]	CALL     	0 7 1
+	65	[-]	RETURN   	0 1
+constants (18) for 0000010B95C43540:
+	1	"SpawnTurret"
+	2	"Turret_T1_C_02"
+	3	"Turret"
+	4	"NB"
+	5	"TEAM_ORDER"
+	6	2
+	7	1
+	8	"Turret_T1_C_04"
+	9	4
+	10	"Turret_T1_C_03"
+	11	3
+	12	"Turret_T1_R_01"
+	13	0
+	14	"Turret_T2_C_02"
+	15	"TEAM_CHAOS"
+	16	"Turret_T2_C_04"
+	17	"Turret_T2_C_03"
+	18	"Turret_T2_R_01"
+locals (0) for 0000010B95C43540:
+upvalues (0) for 0000010B95C43540:

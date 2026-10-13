@@ -34,6 +34,35 @@ def _at(lst, rank):
     return 0.0
 
 
+def _missile_speed(sd):
+    """the speed in the spell's own missile (mMissileSpec), for spells whose missileSpeed is left 0 (Ezreal Q)"""
+    mv = (sd.get('mMissileSpec') or {}).get('movementComponent') or {}
+    return float(mv.get('mSpeed', 0) or 0)
+
+
+def missile_spell(champion, spell, cone=False):
+    """the separate missile spell of a spell that has no missile of its own (RocketGrab -> RocketGrabMissile): a
+    spell of the champion named after it that carries an mMissileSpec; the plain '<spell>Missile' / '<spell>Mis'
+    first, never a returning or visual-only one [the choice among several is ours]"""
+    allsp = BT.champion_spells(champion)
+    if 'mMissileSpec' in allsp.get(spell, {}).get('mSpell', {}):
+        return None
+    cand = [n for n, v in allsp.items() if n != spell and n.lower().startswith(spell.lower())
+            and 'mMissileSpec' in v.get('mSpell', {})]
+    for suffix in ('missile', 'mis', 'missile1', 'mis1', 'spell'):
+        for n in cand:
+            if n.lower() == spell.lower() + suffix:
+                return n
+    if cone:
+        # a cone's missiles are often named '<spell>Attack' (Ashe's Volley -> VolleyAttack)
+        for n in cand:
+            if n.lower() == spell.lower() + 'attack':
+                return n
+    cand = [n for n in cand if not any(w in n.lower() for w in ('return', 'vis', 'attack', 'dummy', 'ammo', 'self'))]
+    # of several, the first of a series ('...One', '...1') before the others, then the shortest name
+    return min(cand, key=lambda n: (not n.lower().endswith(('one', '1')), len(n), n)) if cand else None
+
+
 def shape(champion, spell, rank=1):
     sp = BT.champion_spells(champion).get(spell, {})
     sd = sp.get('mSpell', {})
@@ -48,7 +77,8 @@ def shape(champion, spell, rank=1):
         'width': float(sd.get('mLineWidth', 0) or 0),
         'cone_angle': float(sd.get('castConeAngle', 0) or 0),
         'cone_distance': float(sd.get('castConeDistance', 0) or 0),
-        'missile_speed': float(sd.get('missileSpeed', 0) or 0),
+        'missile_speed': float(sd.get('missileSpeed', 0) or 0) or _missile_speed(sd),
+        'own_missile': 'mMissileSpec' in sd,
         'scripted': bool(int(sd.get('flags', 0) or 0) & 4),
     }
 
@@ -165,7 +195,8 @@ def hits(sh, caster, aim, units):
     if t == 'Cone':
         dirx, dirz = ax - cx, az - cz
         dn = math.hypot(dirx, dirz) or 1.0
-        half = math.radians((sh['cone_angle'] or 45.0) / 2)
+        # castConeAngle is the HALF angle: Annie W 24.76 (its cone is 49.52 degrees), Cassiopeia R 40 (80), Ashe W 20 (40)
+        half = math.radians(sh['cone_angle'] or 22.5)
         L = sh['cone_distance'] if sh['cone_distance'] > 100 else (sh['range'] or 500.0)
         for n, (x, z), ur in units:
             vx, vz = x - cx, z - cz

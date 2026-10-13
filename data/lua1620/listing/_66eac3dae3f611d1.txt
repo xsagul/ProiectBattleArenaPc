@@ -1,0 +1,255 @@
+
+main <?:0,0> (6 instructions, 24 bytes at 0000013A7E0B34C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 3 constants, 1 function
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "Spawning"
+	3	[-]	CALL     	0 2 1
+	4	[-]	CLOSURE  	0 0	; 0000013A7E0B3540
+	5	[-]	SETGLOBAL	0 -3	; CreateLevelProps
+	6	[-]	RETURN   	0 1
+constants (3) for 0000013A7E0B34C0:
+	1	"DoLuaShared"
+	2	"Spawning"
+	3	"CreateLevelProps"
+locals (0) for 0000013A7E0B34C0:
+upvalues (0) for 0000013A7E0B34C0:
+
+function <?:3,42> (193 instructions, 772 bytes at 0000013A7E0B3540)
+0 params, 7 slots, 0 upvalues, 0 locals, 41 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	2	[-]	LOADK    	1 -2	; "Turret_T1_R_03"
+	3	[-]	LOADK    	2 -3	; "Turret"
+	4	[-]	LOADK    	3 -4	; "SR_Outer"
+	5	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	6	[-]	LOADK    	5 -6	; 3
+	7	[-]	LOADK    	6 -7	; 0
+	8	[-]	CALL     	0 7 1
+	9	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	10	[-]	LOADK    	1 -8	; "Turret_T1_R_02"
+	11	[-]	LOADK    	2 -3	; "Turret"
+	12	[-]	LOADK    	3 -9	; "SR_Inner"
+	13	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	14	[-]	LOADK    	5 -10	; 2
+	15	[-]	LOADK    	6 -7	; 0
+	16	[-]	CALL     	0 7 1
+	17	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	18	[-]	LOADK    	1 -11	; "Turret_T1_C_07"
+	19	[-]	LOADK    	2 -3	; "Turret"
+	20	[-]	LOADK    	3 -12	; "SR_Inhibitor"
+	21	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	22	[-]	LOADK    	5 -13	; 1
+	23	[-]	LOADK    	6 -7	; 0
+	24	[-]	CALL     	0 7 1
+	25	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	26	[-]	LOADK    	1 -14	; "Turret_T2_R_03"
+	27	[-]	LOADK    	2 -3	; "Turret"
+	28	[-]	LOADK    	3 -4	; "SR_Outer"
+	29	[-]	GETGLOBAL	4 -15	; TEAM_CHAOS
+	30	[-]	LOADK    	5 -6	; 3
+	31	[-]	LOADK    	6 -7	; 0
+	32	[-]	CALL     	0 7 1
+	33	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	34	[-]	LOADK    	1 -16	; "Turret_T2_R_02"
+	35	[-]	LOADK    	2 -3	; "Turret"
+	36	[-]	LOADK    	3 -9	; "SR_Inner"
+	37	[-]	GETGLOBAL	4 -15	; TEAM_CHAOS
+	38	[-]	LOADK    	5 -10	; 2
+	39	[-]	LOADK    	6 -7	; 0
+	40	[-]	CALL     	0 7 1
+	41	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	42	[-]	LOADK    	1 -17	; "Turret_T2_R_01"
+	43	[-]	LOADK    	2 -3	; "Turret"
+	44	[-]	LOADK    	3 -12	; "SR_Inhibitor"
+	45	[-]	GETGLOBAL	4 -15	; TEAM_CHAOS
+	46	[-]	LOADK    	5 -13	; 1
+	47	[-]	LOADK    	6 -7	; 0
+	48	[-]	CALL     	0 7 1
+	49	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	50	[-]	LOADK    	1 -18	; "Turret_T1_C_05"
+	51	[-]	LOADK    	2 -3	; "Turret"
+	52	[-]	LOADK    	3 -4	; "SR_Outer"
+	53	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	54	[-]	LOADK    	5 -6	; 3
+	55	[-]	LOADK    	6 -13	; 1
+	56	[-]	CALL     	0 7 1
+	57	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	58	[-]	LOADK    	1 -19	; "Turret_T1_C_04"
+	59	[-]	LOADK    	2 -3	; "Turret"
+	60	[-]	LOADK    	3 -9	; "SR_Inner"
+	61	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	62	[-]	LOADK    	5 -10	; 2
+	63	[-]	LOADK    	6 -13	; 1
+	64	[-]	CALL     	0 7 1
+	65	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	66	[-]	LOADK    	1 -20	; "Turret_T1_C_03"
+	67	[-]	LOADK    	2 -3	; "Turret"
+	68	[-]	LOADK    	3 -12	; "SR_Inhibitor"
+	69	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	70	[-]	LOADK    	5 -13	; 1
+	71	[-]	LOADK    	6 -13	; 1
+	72	[-]	CALL     	0 7 1
+	73	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	74	[-]	LOADK    	1 -21	; "Turret_T1_C_01"
+	75	[-]	LOADK    	2 -3	; "Turret"
+	76	[-]	LOADK    	3 -22	; "SR_Nexus"
+	77	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	78	[-]	LOADK    	5 -23	; 5
+	79	[-]	LOADK    	6 -13	; 1
+	80	[-]	CALL     	0 7 1
+	81	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	82	[-]	LOADK    	1 -24	; "Turret_T1_C_02"
+	83	[-]	LOADK    	2 -3	; "Turret"
+	84	[-]	LOADK    	3 -22	; "SR_Nexus"
+	85	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	86	[-]	LOADK    	5 -25	; 4
+	87	[-]	LOADK    	6 -13	; 1
+	88	[-]	CALL     	0 7 1
+	89	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	90	[-]	LOADK    	1 -26	; "Turret_T2_C_05"
+	91	[-]	LOADK    	2 -3	; "Turret"
+	92	[-]	LOADK    	3 -4	; "SR_Outer"
+	93	[-]	GETGLOBAL	4 -15	; TEAM_CHAOS
+	94	[-]	LOADK    	5 -6	; 3
+	95	[-]	LOADK    	6 -13	; 1
+	96	[-]	CALL     	0 7 1
+	97	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	98	[-]	LOADK    	1 -27	; "Turret_T2_C_04"
+	99	[-]	LOADK    	2 -3	; "Turret"
+	100	[-]	LOADK    	3 -9	; "SR_Inner"
+	101	[-]	GETGLOBAL	4 -15	; TEAM_CHAOS
+	102	[-]	LOADK    	5 -10	; 2
+	103	[-]	LOADK    	6 -13	; 1
+	104	[-]	CALL     	0 7 1
+	105	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	106	[-]	LOADK    	1 -28	; "Turret_T2_C_03"
+	107	[-]	LOADK    	2 -3	; "Turret"
+	108	[-]	LOADK    	3 -12	; "SR_Inhibitor"
+	109	[-]	GETGLOBAL	4 -15	; TEAM_CHAOS
+	110	[-]	LOADK    	5 -13	; 1
+	111	[-]	LOADK    	6 -13	; 1
+	112	[-]	CALL     	0 7 1
+	113	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	114	[-]	LOADK    	1 -29	; "Turret_T2_C_01"
+	115	[-]	LOADK    	2 -3	; "Turret"
+	116	[-]	LOADK    	3 -22	; "SR_Nexus"
+	117	[-]	GETGLOBAL	4 -15	; TEAM_CHAOS
+	118	[-]	LOADK    	5 -23	; 5
+	119	[-]	LOADK    	6 -13	; 1
+	120	[-]	CALL     	0 7 1
+	121	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	122	[-]	LOADK    	1 -30	; "Turret_T2_C_02"
+	123	[-]	LOADK    	2 -3	; "Turret"
+	124	[-]	LOADK    	3 -22	; "SR_Nexus"
+	125	[-]	GETGLOBAL	4 -15	; TEAM_CHAOS
+	126	[-]	LOADK    	5 -25	; 4
+	127	[-]	LOADK    	6 -13	; 1
+	128	[-]	CALL     	0 7 1
+	129	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	130	[-]	LOADK    	1 -31	; "Turret_OrderTurretShrine"
+	131	[-]	LOADK    	2 -32	; "SRUAP_Turret_Order5"
+	132	[-]	LOADK    	3 -33	; ""
+	133	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	134	[-]	LOADK    	5 -7	; 0
+	135	[-]	LOADK    	6 -13	; 1
+	136	[-]	CALL     	0 7 1
+	137	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	138	[-]	LOADK    	1 -34	; "Turret_ChaosTurretShrine"
+	139	[-]	LOADK    	2 -35	; "SRUAP_MageCrystal"
+	140	[-]	LOADK    	3 -33	; ""
+	141	[-]	GETGLOBAL	4 -15	; TEAM_CHAOS
+	142	[-]	LOADK    	5 -7	; 0
+	143	[-]	LOADK    	6 -13	; 1
+	144	[-]	CALL     	0 7 1
+	145	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	146	[-]	LOADK    	1 -36	; "Turret_T1_L_03"
+	147	[-]	LOADK    	2 -3	; "Turret"
+	148	[-]	LOADK    	3 -4	; "SR_Outer"
+	149	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	150	[-]	LOADK    	5 -6	; 3
+	151	[-]	LOADK    	6 -10	; 2
+	152	[-]	CALL     	0 7 1
+	153	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	154	[-]	LOADK    	1 -37	; "Turret_T1_L_02"
+	155	[-]	LOADK    	2 -3	; "Turret"
+	156	[-]	LOADK    	3 -9	; "SR_Inner"
+	157	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	158	[-]	LOADK    	5 -10	; 2
+	159	[-]	LOADK    	6 -10	; 2
+	160	[-]	CALL     	0 7 1
+	161	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	162	[-]	LOADK    	1 -38	; "Turret_T1_C_06"
+	163	[-]	LOADK    	2 -3	; "Turret"
+	164	[-]	LOADK    	3 -12	; "SR_Inhibitor"
+	165	[-]	GETGLOBAL	4 -5	; TEAM_ORDER
+	166	[-]	LOADK    	5 -13	; 1
+	167	[-]	LOADK    	6 -10	; 2
+	168	[-]	CALL     	0 7 1
+	169	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	170	[-]	LOADK    	1 -39	; "Turret_T2_L_03"
+	171	[-]	LOADK    	2 -3	; "Turret"
+	172	[-]	LOADK    	3 -4	; "SR_Outer"
+	173	[-]	GETGLOBAL	4 -15	; TEAM_CHAOS
+	174	[-]	LOADK    	5 -6	; 3
+	175	[-]	LOADK    	6 -10	; 2
+	176	[-]	CALL     	0 7 1
+	177	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	178	[-]	LOADK    	1 -40	; "Turret_T2_L_02"
+	179	[-]	LOADK    	2 -3	; "Turret"
+	180	[-]	LOADK    	3 -9	; "SR_Inner"
+	181	[-]	GETGLOBAL	4 -15	; TEAM_CHAOS
+	182	[-]	LOADK    	5 -10	; 2
+	183	[-]	LOADK    	6 -10	; 2
+	184	[-]	CALL     	0 7 1
+	185	[-]	GETGLOBAL	0 -1	; SpawnTurret
+	186	[-]	LOADK    	1 -41	; "Turret_T2_L_01"
+	187	[-]	LOADK    	2 -3	; "Turret"
+	188	[-]	LOADK    	3 -12	; "SR_Inhibitor"
+	189	[-]	GETGLOBAL	4 -15	; TEAM_CHAOS
+	190	[-]	LOADK    	5 -13	; 1
+	191	[-]	LOADK    	6 -10	; 2
+	192	[-]	CALL     	0 7 1
+	193	[-]	RETURN   	0 1
+constants (41) for 0000013A7E0B3540:
+	1	"SpawnTurret"
+	2	"Turret_T1_R_03"
+	3	"Turret"
+	4	"SR_Outer"
+	5	"TEAM_ORDER"
+	6	3
+	7	0
+	8	"Turret_T1_R_02"
+	9	"SR_Inner"
+	10	2
+	11	"Turret_T1_C_07"
+	12	"SR_Inhibitor"
+	13	1
+	14	"Turret_T2_R_03"
+	15	"TEAM_CHAOS"
+	16	"Turret_T2_R_02"
+	17	"Turret_T2_R_01"
+	18	"Turret_T1_C_05"
+	19	"Turret_T1_C_04"
+	20	"Turret_T1_C_03"
+	21	"Turret_T1_C_01"
+	22	"SR_Nexus"
+	23	5
+	24	"Turret_T1_C_02"
+	25	4
+	26	"Turret_T2_C_05"
+	27	"Turret_T2_C_04"
+	28	"Turret_T2_C_03"
+	29	"Turret_T2_C_01"
+	30	"Turret_T2_C_02"
+	31	"Turret_OrderTurretShrine"
+	32	"SRUAP_Turret_Order5"
+	33	""
+	34	"Turret_ChaosTurretShrine"
+	35	"SRUAP_MageCrystal"
+	36	"Turret_T1_L_03"
+	37	"Turret_T1_L_02"
+	38	"Turret_T1_C_06"
+	39	"Turret_T2_L_03"
+	40	"Turret_T2_L_02"
+	41	"Turret_T2_L_01"
+locals (0) for 0000013A7E0B3540:
+upvalues (0) for 0000013A7E0B3540:

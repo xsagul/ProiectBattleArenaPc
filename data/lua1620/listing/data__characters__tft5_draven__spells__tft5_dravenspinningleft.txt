@@ -1,0 +1,32 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 000002B4547F3610)
+0+ params, 4 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	NEWTABLE 	0 3 0
+	10	[-]	LOADK    	1 -6	; "TFT5_Draven_Gladiator"
+	11	[-]	LOADK    	2 -7	; "TFT5_DravenSkin03"
+	12	[-]	LOADK    	3 -8	; "TFT5_DravenSkin04"
+	13	[-]	SETLIST  	0 3 1	; 1
+	14	[-]	SETGLOBAL	0 -5	; SpellFXOverrideSkins
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -9	; IsDamagingSpell
+	17	[-]	RETURN   	0 1
+constants (9) for 000002B4547F3610:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"SpellFXOverrideSkins"
+	6	"TFT5_Draven_Gladiator"
+	7	"TFT5_DravenSkin03"
+	8	"TFT5_DravenSkin04"
+	9	"IsDamagingSpell"
+locals (0) for 000002B4547F3610:
+upvalues (0) for 000002B4547F3610:

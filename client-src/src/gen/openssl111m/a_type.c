@@ -6,4 +6,6 @@
 // match: deb100 _ASN1_TYPE_pack_sequence
 // match: deb1a0 _ASN1_TYPE_set
 // match: deb1f0 _ASN1_TYPE_unpack_sequence
+#define OPENSSL_FILE "crypto\\asn1\\a_type.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/asn1/a_type.c"

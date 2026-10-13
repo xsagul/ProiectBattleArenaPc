@@ -4,15 +4,25 @@
 // match: d82df0 _SSL_CTX_add_session
 // match: d82fc0 _SSL_CTX_flush_sessions
 // match: d83040 _SSL_CTX_remove_session
+// match: d830e0 _SSL_SESSION_free
 // match: d83210 _SSL_SESSION_get0_cipher
 // match: d83220 _SSL_SESSION_get_time
 // match: d83230 _SSL_SESSION_is_resumable
 // match: d83260 _SSL_SESSION_list_remove
+// match: d832f0 _SSL_SESSION_new
 // match: d833e0 _SSL_SESSION_set_cipher
 // match: d83400 _SSL_SESSION_set_protocol_version
 // match: d83410 _SSL_SESSION_up_ref
 // match: d83430 _SSL_get_session
+// match: d83440 _SSL_set_session
 // match: d83530 _lookup_sess_in_cache
+// match: d836a0 _ssl_clear_bad_session
+// match: d836f0 _ssl_generate_session_id
+// match: d83890 _ssl_get_new_session
+// match: d83bb0 _ssl_get_prev_session
+// match: d84020 _ssl_session_dup
 // match: d842e0 _timeout_cb
 // match: dbe9f0 _SSL_CTX_get_timeout
+#define OPENSSL_FILE "ssl\\ssl_sess.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/ssl/ssl_sess.c"

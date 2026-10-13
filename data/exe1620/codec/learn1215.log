@@ -1,0 +1,18 @@
+struct 0x1037ac0
+  0x1037ac0 field 0: bits 4..4 +0x10 1 B 0:const 1:const
+  0x1037ac0 field 1: bits 3..3 +0x18 308 B 0:struct(0x1012ba0) 1:const
+  0x1037ac0 field 2: bits 0..2 +0x150 4 B 0:varint 1:const 2:const 3:varint 4:varint 5:const 6:const 7:varint
+struct 0x1012ba0
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1493, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1164, in learn
+    sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc).learn()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 165, in __init__
+    self.fields = self.split(r)
+                  ^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 213, in split
+    assert p == cursor, f'{self.fn:#x}: field {k} starts at {p}, expected {cursor}'
+           ^^^^^^^^^^^
+AssertionError: 0x1012ba0: field 33 starts at 129, expected 125

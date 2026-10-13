@@ -1,0 +1,41 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 0000029AC6B73630)
+0+ params, 2 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Particles/LuxPrismaWrap.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "LuxShield"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "r:Nautilus_W_Shield_01"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect
+	15	[-]	LOADK    	0 -12	; 3
+	16	[-]	SETGLOBAL	0 -11	; OnPreDamagePriority
+	17	[-]	LOADBOOL 	0 0 0
+	18	[-]	SETGLOBAL	0 -13	; IsDamagingSpell
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -14	; DoOnPreDamageInExpirationOrder
+	21	[-]	RETURN   	0 1
+constants (14) for 0000029AC6B73630:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Particles/LuxPrismaWrap.dds"
+	7	"BuffName"
+	8	"LuxShield"
+	9	"AutoBuffActivateEffect"
+	10	"r:Nautilus_W_Shield_01"
+	11	"OnPreDamagePriority"
+	12	3
+	13	"IsDamagingSpell"
+	14	"DoOnPreDamageInExpirationOrder"
+locals (0) for 0000029AC6B73630:
+upvalues (0) for 0000029AC6B73630:

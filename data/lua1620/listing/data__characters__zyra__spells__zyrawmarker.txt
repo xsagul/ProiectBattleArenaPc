@@ -1,0 +1,66 @@
+
+main <?:0,0> (37 instructions, 148 bytes at 0000027D368535C0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 23 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Zyra/HUD/Icons2D/ZyraW.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "ZyraSeedMarker"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -9	; PersistsThroughDeath
+	15	[-]	NEWTABLE 	0 2 0
+	16	[-]	LOADK    	1 -11	; "Zyra_hellvine"
+	17	[-]	LOADK    	2 -12	; "ZyraSkin02"
+	18	[-]	SETLIST  	0 2 1	; 1
+	19	[-]	SETGLOBAL	0 -10	; SpellFXOverrideSkins
+	20	[-]	LOADBOOL 	0 1 0
+	21	[-]	SETGLOBAL	0 -13	; IsDamagingSpell
+	22	[-]	NEWTABLE 	0 0 6
+	23	[-]	NEWTABLE 	1 5 0
+	24	[-]	LOADK    	2 -16	; 10
+	25	[-]	LOADK    	3 -16	; 10
+	26	[-]	LOADK    	4 -16	; 10
+	27	[-]	LOADK    	5 -16	; 10
+	28	[-]	LOADK    	6 -16	; 10
+	29	[-]	SETLIST  	1 5 1	; 1
+	30	[-]	SETTABLE 	0 -15 1	; "MaximumHits" -
+	31	[-]	SETTABLE 	0 -17 -18	; "CanHitCaster" 0
+	32	[-]	SETTABLE 	0 -19 -18	; "CanHitSameTarget" 0
+	33	[-]	SETTABLE 	0 -20 -18	; "CanHitSameTargetConsecutively" 0
+	34	[-]	SETTABLE 	0 -21 -22	; "CanHitEnemies" 1
+	35	[-]	SETTABLE 	0 -23 -18	; "CanHitFriends" 0
+	36	[-]	SETGLOBAL	0 -14	; ChainMissileParameters
+	37	[-]	RETURN   	0 1
+constants (23) for 0000027D368535C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Zyra/HUD/Icons2D/ZyraW.dds"
+	7	"BuffName"
+	8	"ZyraSeedMarker"
+	9	"PersistsThroughDeath"
+	10	"SpellFXOverrideSkins"
+	11	"Zyra_hellvine"
+	12	"ZyraSkin02"
+	13	"IsDamagingSpell"
+	14	"ChainMissileParameters"
+	15	"MaximumHits"
+	16	10
+	17	"CanHitCaster"
+	18	0
+	19	"CanHitSameTarget"
+	20	"CanHitSameTargetConsecutively"
+	21	"CanHitEnemies"
+	22	1
+	23	"CanHitFriends"
+locals (0) for 0000027D368535C0:
+upvalues (0) for 0000027D368535C0:

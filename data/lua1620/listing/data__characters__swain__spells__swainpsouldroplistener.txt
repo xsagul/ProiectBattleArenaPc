@@ -1,0 +1,41 @@
+
+main <?:0,0> (22 instructions, 88 bytes at 000001F3163D3600)
+0+ params, 3 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "SwainPSoulDropListener"
+	10	[-]	SETGLOBAL	0 -5	; BuffName
+	11	[-]	LOADK    	0 -8	; "game_floatingtext_Suppressed"
+	12	[-]	SETGLOBAL	0 -7	; PopupMessage1
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -9	; PersistsThroughDeath
+	15	[-]	NEWTABLE 	0 2 0
+	16	[-]	LOADK    	1 -11	; "SyndraJusticar"
+	17	[-]	LOADK    	2 -12	; "SyndraSkin02"
+	18	[-]	SETLIST  	0 2 1	; 1
+	19	[-]	SETGLOBAL	0 -10	; SpellFXOverrideSkins
+	20	[-]	LOADBOOL 	0 1 0
+	21	[-]	SETGLOBAL	0 -13	; IsDamagingSpell
+	22	[-]	RETURN   	0 1
+constants (13) for 000001F3163D3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffName"
+	6	"SwainPSoulDropListener"
+	7	"PopupMessage1"
+	8	"game_floatingtext_Suppressed"
+	9	"PersistsThroughDeath"
+	10	"SpellFXOverrideSkins"
+	11	"SyndraJusticar"
+	12	"SyndraSkin02"
+	13	"IsDamagingSpell"
+locals (0) for 000001F3163D3600:
+upvalues (0) for 000001F3163D3600:

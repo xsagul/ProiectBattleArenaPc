@@ -1,0 +1,23 @@
+
+main <?:0,0> (12 instructions, 48 bytes at 000001298CCE35A0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; DoesntTriggerSpellCasts
+	3	[-]	NEWTABLE 	0 2 0
+	4	[-]	LOADK    	1 -3	; "AzirSkin01"
+	5	[-]	LOADK    	2 -4	; "AzirSkin02"
+	6	[-]	SETLIST  	0 2 1	; 1
+	7	[-]	SETGLOBAL	0 -2	; SpellFXOverrideSkins
+	8	[-]	NEWTABLE 	0 1 0
+	9	[-]	LOADK    	1 -4	; "AzirSkin02"
+	10	[-]	SETLIST  	0 1 1	; 1
+	11	[-]	SETGLOBAL	0 -5	; SpellVOOverrideSkins
+	12	[-]	RETURN   	0 1
+constants (5) for 000001298CCE35A0:
+	1	"DoesntTriggerSpellCasts"
+	2	"SpellFXOverrideSkins"
+	3	"AzirSkin01"
+	4	"AzirSkin02"
+	5	"SpellVOOverrideSkins"
+locals (0) for 000001298CCE35A0:
+upvalues (0) for 000001298CCE35A0:

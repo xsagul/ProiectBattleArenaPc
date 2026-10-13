@@ -1,0 +1,94 @@
+
+main <?:0,0> (13 instructions, 52 bytes at 0000028FDA0E34C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 7 constants, 3 functions
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "GlobalLevelScript"
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -3	; DoLuaLevel
+	5	[-]	LOADK    	1 -4	; "BBLuaConversionLibrary"
+	6	[-]	CALL     	0 2 1
+	7	[-]	CLOSURE  	0 0	; 0000028FDA0E35C0
+	8	[-]	SETGLOBAL	0 -5	; OnLevelInit
+	9	[-]	CLOSURE  	0 1	; 0000028FDA0E36A0
+	10	[-]	SETGLOBAL	0 -6	; OnGameStartup
+	11	[-]	CLOSURE  	0 2	; 0000028FDA0E3720
+	12	[-]	SETGLOBAL	0 -7	; PostGameUpdate
+	13	[-]	RETURN   	0 1
+constants (7) for 0000028FDA0E34C0:
+	1	"DoLuaShared"
+	2	"GlobalLevelScript"
+	3	"DoLuaLevel"
+	4	"BBLuaConversionLibrary"
+	5	"OnLevelInit"
+	6	"OnGameStartup"
+	7	"PostGameUpdate"
+locals (0) for 0000028FDA0E34C0:
+upvalues (0) for 0000028FDA0E34C0:
+
+function <?:4,12> (8 instructions, 32 bytes at 0000028FDA0E35C0)
+0 params, 3 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	2	[-]	LOADK    	1 -2	; "PracticeTool_TargetDummy"
+	3	[-]	LOADK    	2 -3	; 0
+	4	[-]	CALL     	0 3 1
+	5	[-]	GETGLOBAL	0 -4	; LoadLevelScriptIntoScript
+	6	[-]	LOADK    	1 -5	; "EndOfGame.lua"
+	7	[-]	CALL     	0 2 1
+	8	[-]	RETURN   	0 1
+constants (5) for 0000028FDA0E35C0:
+	1	"PreloadCharacterWithSkinID"
+	2	"PracticeTool_TargetDummy"
+	3	0
+	4	"LoadLevelScriptIntoScript"
+	5	"EndOfGame.lua"
+locals (0) for 0000028FDA0E35C0:
+upvalues (0) for 0000028FDA0E35C0:
+
+function <?:14,15> (1 instruction, 4 bytes at 0000028FDA0E36A0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000028FDA0E36A0:
+locals (0) for 0000028FDA0E36A0:
+upvalues (0) for 0000028FDA0E36A0:
+
+function <?:17,32> (26 instructions, 104 bytes at 0000028FDA0E3720)
+2 params, 12 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETGLOBAL	4 -1	; pairs
+	2	[-]	GETGLOBAL	5 -2	; POST_GAME_EVENTS
+	3	[-]	CALL     	4 2 4
+	4	[-]	JMP      	19	; to 24
+	5	[-]	GETTABLE 	9 8 -3	; "delay"
+	6	[-]	LT       	0 9 0
+	7	[-]	JMP      	16	; to 24
+	8	[-]	GETGLOBAL	9 -4	; ClientSide_CameraMoveCameraFromCurrentPositionToPoint
+	9	[-]	GETTABLE 	10 8 -5	; "cameraLocation"
+	10	[-]	GETTABLE 	11 8 -6	; "travelTime"
+	11	[-]	CALL     	9 3 1
+	12	[-]	GETTABLE 	9 8 -7	; "soundFile"
+	13	[-]	TEST     	9 0 0
+	14	[-]	JMP      	3	; to 18
+	15	[-]	GETGLOBAL	9 -8	; ClientSide_PlaySoundFile
+	16	[-]	GETTABLE 	10 8 -7	; "soundFile"
+	17	[-]	CALL     	9 2 1
+	18	[-]	GETGLOBAL	9 -9	; table
+	19	[-]	GETTABLE 	9 9 -10	; "remove"
+	20	[-]	GETGLOBAL	10 -2	; POST_GAME_EVENTS
+	21	[-]	MOVE     	11 7
+	22	[-]	CALL     	9 3 1
+	23	[-]	JMP      	2	; to 26
+	24	[-]	TFORLOOP 	4 2
+	25	[-]	JMP      	-21	; to 5
+	26	[-]	RETURN   	0 1
+constants (10) for 0000028FDA0E3720:
+	1	"pairs"
+	2	"POST_GAME_EVENTS"
+	3	"delay"
+	4	"ClientSide_CameraMoveCameraFromCurrentPositionToPoint"
+	5	"cameraLocation"
+	6	"travelTime"
+	7	"soundFile"
+	8	"ClientSide_PlaySoundFile"
+	9	"table"
+	10	"remove"
+locals (0) for 0000028FDA0E3720:
+upvalues (0) for 0000028FDA0E3720:

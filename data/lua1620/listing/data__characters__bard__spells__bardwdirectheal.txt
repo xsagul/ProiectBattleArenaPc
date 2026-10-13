@@ -1,0 +1,38 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 00000236E90435D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Bard/HUD/Icons2D/Bard_W.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Eye_Of_The_Storm"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -7	; PersistsThroughDeath
+	11	[-]	LOADK    	0 -9	; 3
+	12	[-]	SETGLOBAL	0 -8	; OnPreDamagePriority
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -10	; IsDamagingSpell
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -11	; DoOnPreDamageInExpirationOrder
+	17	[-]	LOADK    	0 -13	; "DATA/Shared/Particles/deathscaress_buf.troy"
+	18	[-]	SETGLOBAL	0 -12	; AutoBuffActivateEvent
+	19	[-]	RETURN   	0 1
+constants (13) for 00000236E90435D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Bard/HUD/Icons2D/Bard_W.dds"
+	5	"BuffName"
+	6	"Eye_Of_The_Storm"
+	7	"PersistsThroughDeath"
+	8	"OnPreDamagePriority"
+	9	3
+	10	"IsDamagingSpell"
+	11	"DoOnPreDamageInExpirationOrder"
+	12	"AutoBuffActivateEvent"
+	13	"DATA/Shared/Particles/deathscaress_buf.troy"
+locals (0) for 00000236E90435D0:
+upvalues (0) for 00000236E90435D0:

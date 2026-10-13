@@ -1,0 +1,44 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 0000019CCA7634C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Cherry_Plant_Powerup/HUD/Icons2D/Cherry_Plant_Powerup_Circle.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Cherry_HiveMind_Name"
+	8	[-]	SETGLOBAL	0 -5	; DisplayName
+	9	[-]	LOADK    	0 -8	; 0.5
+	10	[-]	SETGLOBAL	0 -7	; SpellDamageRatio
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -9	; IsDeathRecapSource
+	13	[-]	LOADK    	0 -11	; "game_floatingtext_Snared"
+	14	[-]	SETGLOBAL	0 -10	; PopupMessage1
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -12	; PersistsThroughDeath
+	17	[-]	NEWTABLE 	0 1 0
+	18	[-]	LOADK    	1 -14	; "lissandraSkin02"
+	19	[-]	SETLIST  	0 1 1	; 1
+	20	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	21	[-]	LOADBOOL 	0 0 0
+	22	[-]	SETGLOBAL	0 -15	; TriggersSpellCasts
+	23	[-]	RETURN   	0 1
+constants (15) for 0000019CCA7634C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Cherry_Plant_Powerup/HUD/Icons2D/Cherry_Plant_Powerup_Circle.dds"
+	5	"DisplayName"
+	6	"Cherry_HiveMind_Name"
+	7	"SpellDamageRatio"
+	8	0.5
+	9	"IsDeathRecapSource"
+	10	"PopupMessage1"
+	11	"game_floatingtext_Snared"
+	12	"PersistsThroughDeath"
+	13	"SpellFXOverrideSkins"
+	14	"lissandraSkin02"
+	15	"TriggersSpellCasts"
+locals (0) for 0000019CCA7634C0:
+upvalues (0) for 0000019CCA7634C0:

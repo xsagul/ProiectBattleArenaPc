@@ -1,0 +1,61 @@
+
+main <?:0,0> (33 instructions, 132 bytes at 00000180A34335C0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 22 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Rengar/HUD/Icons2D/Rengar_E.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "RengarE"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "DATA/Shared/Particles/Global_Slow.troy"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect
+	15	[-]	NEWTABLE 	0 5 0
+	16	[-]	LOADK    	1 -12	; 12
+	17	[-]	LOADK    	2 -13	; 11
+	18	[-]	LOADK    	3 -14	; 10
+	19	[-]	LOADK    	4 -15	; 9
+	20	[-]	LOADK    	5 -16	; 8
+	21	[-]	SETLIST  	0 5 1	; 1
+	22	[-]	SETGLOBAL	0 -11	; AutoCooldownByLevel
+	23	[-]	LOADBOOL 	0 1 0
+	24	[-]	SETGLOBAL	0 -17	; IsDeathRecapSource
+	25	[-]	LOADK    	0 -19	; "game_floatingtext_Slowed"
+	26	[-]	SETGLOBAL	0 -18	; PopupMessage2
+	27	[-]	NEWTABLE 	0 1 0
+	28	[-]	LOADK    	1 -21	; "HunterRengar"
+	29	[-]	SETLIST  	0 1 1	; 1
+	30	[-]	SETGLOBAL	0 -20	; SpellFXOverrideSkins
+	31	[-]	LOADBOOL 	0 1 0
+	32	[-]	SETGLOBAL	0 -22	; IsDamagingSpell
+	33	[-]	RETURN   	0 1
+constants (22) for 00000180A34335C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Rengar/HUD/Icons2D/Rengar_E.dds"
+	7	"BuffName"
+	8	"RengarE"
+	9	"AutoBuffActivateEffect"
+	10	"DATA/Shared/Particles/Global_Slow.troy"
+	11	"AutoCooldownByLevel"
+	12	12
+	13	11
+	14	10
+	15	9
+	16	8
+	17	"IsDeathRecapSource"
+	18	"PopupMessage2"
+	19	"game_floatingtext_Slowed"
+	20	"SpellFXOverrideSkins"
+	21	"HunterRengar"
+	22	"IsDamagingSpell"
+locals (0) for 00000180A34335C0:
+upvalues (0) for 00000180A34335C0:

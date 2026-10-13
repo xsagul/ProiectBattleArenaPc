@@ -1,0 +1,33 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 000001FE29A43600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	NEWTABLE 	0 1 0
+	10	[-]	LOADK    	1 -6	; "JannaForecast"
+	11	[-]	SETLIST  	0 1 1	; 1
+	12	[-]	SETGLOBAL	0 -5	; SpellFXOverrideSkins
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -6	; "JannaForecast"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -7	; SpellVOOverrideSkins
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -8	; IsDamagingSpell
+	19	[-]	RETURN   	0 1
+constants (8) for 000001FE29A43600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"SpellFXOverrideSkins"
+	6	"JannaForecast"
+	7	"SpellVOOverrideSkins"
+	8	"IsDamagingSpell"
+locals (0) for 000001FE29A43600:
+upvalues (0) for 000001FE29A43600:

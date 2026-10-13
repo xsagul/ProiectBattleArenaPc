@@ -1,0 +1,30 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 0000028662AF3600)
+0+ params, 6 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	NEWTABLE 	0 5 0
+	8	[-]	LOADK    	1 -5	; 22
+	9	[-]	LOADK    	2 -6	; 18
+	10	[-]	LOADK    	3 -7	; 14
+	11	[-]	LOADK    	4 -8	; 10
+	12	[-]	LOADK    	5 -9	; 6
+	13	[-]	SETLIST  	0 5 1	; 1
+	14	[-]	SETGLOBAL	0 -4	; AutoCooldownByLevel
+	15	[-]	RETURN   	0 1
+constants (9) for 0000028662AF3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"AutoCooldownByLevel"
+	5	22
+	6	18
+	7	14
+	8	10
+	9	6
+locals (0) for 0000028662AF3600:
+upvalues (0) for 0000028662AF3600:

@@ -1,0 +1,34 @@
+
+main <?:0,0> (20 instructions, 80 bytes at 00000201B8AF34C0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	NEWTABLE 	0 5 0
+	6	[-]	LOADK    	1 -4	; 0
+	7	[-]	LOADK    	2 -4	; 0
+	8	[-]	LOADK    	3 -4	; 0
+	9	[-]	LOADK    	4 -4	; 0
+	10	[-]	LOADK    	5 -4	; 0
+	11	[-]	SETLIST  	0 5 1	; 1
+	12	[-]	SETGLOBAL	0 -3	; AutoCooldownByLevel
+	13	[-]	NEWTABLE 	0 2 0
+	14	[-]	LOADK    	1 -6	; "BloodkingVladimir"
+	15	[-]	LOADK    	2 -7	; "VladimirSkin06"
+	16	[-]	SETLIST  	0 2 1	; 1
+	17	[-]	SETGLOBAL	0 -5	; SpellFXOverrideSkins
+	18	[-]	LOADBOOL 	0 1 0
+	19	[-]	SETGLOBAL	0 -8	; IsDamagingSpell
+	20	[-]	RETURN   	0 1
+constants (8) for 00000201B8AF34C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"AutoCooldownByLevel"
+	4	0
+	5	"SpellFXOverrideSkins"
+	6	"BloodkingVladimir"
+	7	"VladimirSkin06"
+	8	"IsDamagingSpell"
+locals (0) for 00000201B8AF34C0:
+upvalues (0) for 00000201B8AF34C0:

@@ -1,0 +1,35 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 0000014D48E33610)
+0+ params, 2 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Camille/HUD/Icons2D/Camille_Passive.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "CamillePassiveShieldPhysical"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; -2
+	10	[-]	SETGLOBAL	0 -7	; OnPreDamagePriority
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -9	; IsDamagingSpell
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -10	; DoOnPreDamageInExpirationOrder
+	15	[-]	LOADK    	0 -12	; "DATA/Shared/Particles/deathscaress_buf.troy"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateEvent
+	17	[-]	RETURN   	0 1
+constants (12) for 0000014D48E33610:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Camille/HUD/Icons2D/Camille_Passive.dds"
+	5	"BuffName"
+	6	"CamillePassiveShieldPhysical"
+	7	"OnPreDamagePriority"
+	8	-2
+	9	"IsDamagingSpell"
+	10	"DoOnPreDamageInExpirationOrder"
+	11	"AutoBuffActivateEvent"
+	12	"DATA/Shared/Particles/deathscaress_buf.troy"
+locals (0) for 0000014D48E33610:
+upvalues (0) for 0000014D48E33610:

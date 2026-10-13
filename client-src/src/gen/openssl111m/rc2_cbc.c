@@ -4,4 +4,6 @@
 // match: e260f0 _RC2_cbc_encrypt
 // match: e265e0 _RC2_decrypt
 // match: e26730 _RC2_encrypt
+#define OPENSSL_FILE "crypto\\rc2\\rc2_cbc.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/rc2/rc2_cbc.c"

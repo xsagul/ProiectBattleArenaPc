@@ -6,4 +6,6 @@
 // match: df8510 _OPENSSL_isservice
 // match: df8630 _OPENSSL_showfatal
 // match: df8910 _ossl_strtouint64
+#define OPENSSL_FILE "crypto\\cryptlib.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/cryptlib.c"

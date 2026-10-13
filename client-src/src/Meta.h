@@ -6,6 +6,7 @@
 // descriptions (rva 0x89210, 0x87940, 0x87660 and the others generated in gen/MetaClasses.cpp).
 #pragma once
 #include "types.h"
+#include "RString.h"
 #include <new>     // operator new: Riot's replacement at rva 0x9bb8d0; placement new without a null test
 
 // FNV-1a of the lower-case text: the hash .bin files use for class and member names.
@@ -23,7 +24,7 @@ struct MetaClass
 {
     typedef void* (*CreateFn)();
     typedef void (*DestroyFn)(void*);
-    typedef void* (*ConstructFn)(void*);
+    typedef void (*ConstructFn)(void*);
     typedef void (*DestructFn)(void*);
     typedef void (*Virtual2Fn)(void*);
 
@@ -60,7 +61,7 @@ struct MetaClass
 // The functions a description points at, one per class (identical code folding gives most of them one address).
 template <class T> void* MetaCreate();
 template <class T> void MetaDestroy(void* p);
-template <class T> void* MetaConstruct(void* p);
+template <class T> void MetaConstruct(void* p);
 template <class T> void MetaDestruct(void* p);
 template <class T> void MetaVirtual2(void* p);
 template <class T> const MetaClass* MetaStaticClass();   // the description of T, from a function of T's own file
@@ -83,6 +84,14 @@ struct Matrix44 { float m[16]; };
 struct Color { u8 r, g, b, a; };
 struct HashValue { u32 value; };
 struct FileLink { u64 value; };
+// The reflected string has the measured twelve-byte string representation,
+// initialization and ownership cleanup. The wrapper keeps its reflection tag.
+struct MetaString : RString {
+    MetaString() = default;
+    MetaString(const char* text); // rva 0x9b78e0, copies into owned pool storage
+    MetaString(const MetaString& other); // rva 0x9b7840, deep copy
+};
+static_assert(sizeof(MetaString) == 12, "reflected string representation");
 template <class T> struct MetaEmbed;     // code 0x83: a T held by value
 template <class T> struct MetaLink;      // code 0x84: a reference to a T by name
 template <class T> struct MetaPointer;   // code 0x82: an owned T or derived

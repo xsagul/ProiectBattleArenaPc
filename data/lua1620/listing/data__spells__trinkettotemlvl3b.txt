@@ -1,0 +1,47 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 0000029B27233530)
+0+ params, 10 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "096_Eye_of_the_Observer.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Magical_Sight_Ward"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "DATA/Particles/Ward_Vision_Idle.troy"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	NEWTABLE 	0 9 0
+	12	[-]	LOADK    	1 -10	; "SightWardBat"
+	13	[-]	LOADK    	2 -11	; "SightWardStone"
+	14	[-]	LOADK    	3 -12	; "SightWardSpider"
+	15	[-]	LOADK    	4 -13	; "SightWardTree"
+	16	[-]	LOADK    	5 -14	; "SightWardGhost"
+	17	[-]	LOADK    	6 -15	; "SightWardSnowMan"
+	18	[-]	LOADK    	7 -16	; "SightWardGingerBread"
+	19	[-]	LOADK    	8 -17	; "SightWardLantern"
+	20	[-]	LOADK    	9 -18	; "SightWardBanner"
+	21	[-]	SETLIST  	0 9 1	; 1
+	22	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	23	[-]	RETURN   	0 1
+constants (18) for 0000029B27233530:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"096_Eye_of_the_Observer.dds"
+	5	"BuffName"
+	6	"Magical_Sight_Ward"
+	7	"AutoBuffActivateEffect"
+	8	"DATA/Particles/Ward_Vision_Idle.troy"
+	9	"SpellFXOverrideSkins"
+	10	"SightWardBat"
+	11	"SightWardStone"
+	12	"SightWardSpider"
+	13	"SightWardTree"
+	14	"SightWardGhost"
+	15	"SightWardSnowMan"
+	16	"SightWardGingerBread"
+	17	"SightWardLantern"
+	18	"SightWardBanner"
+locals (0) for 0000029B27233530:
+upvalues (0) for 0000029B27233530:

@@ -4,4 +4,6 @@
 // match: e5dab0 _CAST_cbc_encrypt
 // match: e5dfe0 _CAST_decrypt
 // match: e5e400 _CAST_encrypt
+#define OPENSSL_FILE "crypto\\cast\\c_enc.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/cast/c_enc.c"

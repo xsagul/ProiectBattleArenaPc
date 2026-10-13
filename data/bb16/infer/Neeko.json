@@ -1,0 +1,16629 @@
+{
+ "sr_2026_s1_rolebound_mid_quest": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "neekoq"
+    ],
+    0.5
+   ],
+   [
+    [
+     "my hit",
+     "neekowpassive"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 749.844,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    241
+   ],
+   [
+    "neekobasicattack",
+    204
+   ],
+   [
+    "#6a4229fc",
+    197
+   ],
+   [
+    "neekoe",
+    147
+   ],
+   [
+    "neekowpassive",
+    98
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.5
+   ]
+  ]
+ },
+ "4641wardplacementcounter": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    7
+   ],
+   [
+    "neekobasicattack",
+    7
+   ],
+   [
+    "neekoq",
+    4
+   ],
+   [
+    "perks_aery_tar",
+    3
+   ],
+   [
+    "perks_arcanecomet_mis",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": []
+ },
+ "challengeschampiontrackerbuff": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    7
+   ],
+   [
+    "neekobasicattack",
+    7
+   ],
+   [
+    "neekoq",
+    4
+   ],
+   [
+    "perks_aery_tar",
+    3
+   ],
+   [
+    "perks_arcanecomet_mis",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": []
+ },
+ "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua": {
+  "n": 145,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    250000.0,
+    145
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.897
+   ],
+   [
+    [
+     "hit",
+     "neekoq"
+    ],
+    0.028
+   ],
+   [
+    [
+     "cast",
+     "neekoe"
+    ],
+    0.021
+   ],
+   [
+    [
+     "cast",
+     "neekow"
+    ],
+    0.014
+   ],
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.014
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.014
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "neekoq"
+    ],
+    0.361
+   ],
+   [
+    [
+     "my hit",
+     "neekobasicattack"
+    ],
+    0.208
+   ],
+   [
+    [
+     "my hit",
+     "neekoe"
+    ],
+    0.16
+   ],
+   [
+    [
+     "my hit",
+     "neekowpassive"
+    ],
+    0.132
+   ],
+   [
+    [
+     "my hit",
+     "neekor"
+    ],
+    0.056
+   ]
+  ],
+  "lived_med": 4.463,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    419
+   ],
+   [
+    "neekobasicattack",
+    338
+   ],
+   [
+    "neekoe",
+    284
+   ],
+   [
+    "neekowpassive",
+    262
+   ],
+   [
+    "#6a4229fc",
+    260
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.083
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.021
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.014
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.014
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.014
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.007
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.31
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.993
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.152
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.152
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.007
+   ],
+   [
+    [
+     "slot",
+     46,
+     "NeekoRDummySpell"
+    ],
+    0.007
+   ]
+  ]
+ },
+ "neekopassive": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    7
+   ],
+   [
+    "neekobasicattack",
+    7
+   ],
+   [
+    "neekoq",
+    4
+   ],
+   [
+    "perks_aery_tar",
+    3
+   ],
+   [
+    "perks_arcanecomet_mis",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": []
+ },
+ "neekomonsterreactiontracker": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    7
+   ],
+   [
+    "neekobasicattack",
+    7
+   ],
+   [
+    "neekoq",
+    4
+   ],
+   [
+    "perks_aery_tar",
+    3
+   ],
+   [
+    "perks_arcanecomet_mis",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": []
+ },
+ "srhomeguardspeed": {
+  "n": 45,
+  "games": 3,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    25000.0,
+    45
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "exaltedwithminibaronnashor_recall"
+    ],
+    0.022
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.978
+   ],
+   [
+    [
+     "my hit",
+     "3152missile"
+    ],
+    0.022
+   ]
+  ],
+  "lived_med": 16.743,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "3152missile",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.644
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Hide"
+    ],
+    0.067
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Hide"
+    ],
+    0.111
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.111
+   ]
+  ]
+ },
+ "s4spawnlockspeed": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    16.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 21.648,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "itemsmitecounter": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    19
+   ],
+   [
+    "neekobasicattack",
+    18
+   ],
+   [
+    "#6a4229fc",
+    17
+   ],
+   [
+    "perks_aery_tar",
+    5
+   ],
+   [
+    "neekoe",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "#0cf347e6": {
+  "n": 39,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    39
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.974
+   ],
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.026
+   ],
+   [
+    [
+     "end",
+     "neekowhaste"
+    ],
+    0.026
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.974
+   ],
+   [
+    [
+     "my cast",
+     "neekow2"
+    ],
+    0.026
+   ]
+  ],
+  "lived_med": 3.361,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "3152missile",
+    3
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Hide"
+    ],
+    0.308
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.154
+   ]
+  ]
+ },
+ "sharedwardbuff": {
+  "n": 64,
+  "games": 3,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    150.0,
+    45
+   ],
+   [
+    90.0,
+    3
+   ],
+   [
+    95.118,
+    1
+   ],
+   [
+    99.529,
+    1
+   ],
+   [
+    101.471,
+    1
+   ],
+   [
+    103.412,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.703
+   ],
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    0.297
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Resolve/UnflinchingResists/UnflinchingResists.lua"
+    ],
+    0.016
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "itemghostward"
+    ],
+    0.516
+   ],
+   [
+    [
+     "time"
+    ],
+    0.306
+   ],
+   [
+    [
+     "death"
+    ],
+    0.177
+   ]
+  ],
+  "lived_med": 90.201,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.828
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.406
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.297
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.016
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.141
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.172
+   ]
+  ]
+ },
+ "sharedstealthwardbuff": {
+  "n": 64,
+  "games": 3,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    64
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.703
+   ],
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    0.297
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Resolve/UnflinchingResists/UnflinchingResists.lua"
+    ],
+    0.016
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "itemghostward"
+    ],
+    0.532
+   ],
+   [
+    [
+     "death"
+    ],
+    0.468
+   ]
+  ],
+  "lived_med": 90.201,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.828
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.406
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.297
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.016
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.141
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.172
+   ]
+  ]
+ },
+ "relicyellowward": {
+  "n": 19,
+  "games": 3,
+  "self": 0.0,
+  "type": 6,
+  "durations": [
+   [
+    90.0,
+    3
+   ],
+   [
+    95.118,
+    1
+   ],
+   [
+    99.529,
+    1
+   ],
+   [
+    101.471,
+    1
+   ],
+   [
+    103.412,
+    1
+   ],
+   [
+    105.706,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Resolve/UnflinchingResists/UnflinchingResists.lua"
+    ],
+    0.053
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.833
+   ],
+   [
+    [
+     "death"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 99.542,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.316
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.105
+   ]
+  ]
+ },
+ "neekoproximitydetector": {
+  "n": 119,
+  "games": 3,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    119
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.908
+   ],
+   [
+    [
+     "cast",
+     "neekoe"
+    ],
+    0.034
+   ],
+   [
+    [
+     "hit",
+     "neekoe"
+    ],
+    0.017
+   ],
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    0.017
+   ],
+   [
+    [
+     "end",
+     "neekowhaste"
+    ],
+    0.008
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.008
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.95
+   ],
+   [
+    [
+     "death"
+    ],
+    0.034
+   ],
+   [
+    [
+     "my cast",
+     "neekor"
+    ],
+    0.008
+   ],
+   [
+    [
+     "my cast",
+     "summonerdot"
+    ],
+    0.008
+   ]
+  ],
+  "lived_med": 1.002,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.126
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.05
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.008
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.008
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.008
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.008
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.849
+   ],
+   [
+    [
+     "slot",
+     47,
+     "NeekoDataSelector"
+    ],
+    0.345
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.084
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.025
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW"
+    ],
+    0.008
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoRIndicatorMis"
+    ],
+    0.008
+   ]
+  ]
+ },
+ "neekowpassive": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 18,
+  "period_med": 7.85,
+  "on_hit": [
+   [
+    "neekoq",
+    39
+   ],
+   [
+    "neekobasicattack",
+    36
+   ],
+   [
+    "#6a4229fc",
+    25
+   ],
+   [
+    "neekowpassiveattack",
+    18
+   ],
+   [
+    "neekoe",
+    15
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "neekowpassivecounter": {
+  "n": 250,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    250
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "neekobasicattack"
+    ],
+    0.788
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.42
+   ],
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.176
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.064
+   ],
+   [
+    [
+     "none"
+    ],
+    0.044
+   ],
+   [
+    [
+     "cast",
+     "neekoe"
+    ],
+    0.024
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "neekobasicattack"
+    ],
+    0.544
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.408
+   ],
+   [
+    [
+     "other"
+    ],
+    0.028
+   ],
+   [
+    [
+     "my hit",
+     "hallucinatefull"
+    ],
+    0.004
+   ],
+   [
+    [
+     "my hit",
+     "#03ec6bd2"
+    ],
+    0.004
+   ]
+  ],
+  "lived_med": 1.479,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    251
+   ],
+   [
+    "neekoq",
+    178
+   ],
+   [
+    "neekoe",
+    126
+   ],
+   [
+    "#6a4229fc",
+    105
+   ],
+   [
+    "perks_aery_tar",
+    32
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.656
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.064
+   ],
+   [
+    [
+     "slot",
+     52,
+     "PlantHawkshot"
+    ],
+    0.016
+   ],
+   [
+    [
+     "slot",
+     52,
+     "PlantHawkshotAudio"
+    ],
+    0.016
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.008
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.588
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.064
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.012
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.008
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.004
+   ],
+   [
+    [
+     "slot",
+     47,
+     "NeekoDataSelector"
+    ],
+    0.004
+   ]
+  ]
+ },
+ "neekowclone": {
+  "n": 155,
+  "games": 3,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    3.0,
+    155
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "neekow"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "exaltedwithbaronnashorvfx"
+    ],
+    0.032
+   ],
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.006
+   ],
+   [
+    [
+     "end",
+     "3171speed"
+    ],
+    0.006
+   ],
+   [
+    [
+     "end",
+     "recall"
+    ],
+    0.006
+   ],
+   [
+    [
+     "hit",
+     "neekoq"
+    ],
+    0.006
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.818
+   ],
+   [
+    [
+     "other"
+    ],
+    0.169
+   ],
+   [
+    [
+     "my cast",
+     "neekoe"
+    ],
+    0.006
+   ],
+   [
+    [
+     "my cast",
+     "neekow2"
+    ],
+    0.006
+   ]
+  ],
+  "lived_med": 3.108,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "slot",
+     1,
+     "NeekoW2"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.284
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.077
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.006
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Hide"
+    ],
+    0.006
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.155
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW"
+    ],
+    0.987
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.013
+   ],
+   [
+    [
+     "slot",
+     47,
+     "NeekoDataSelector"
+    ],
+    0.006
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.006
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.006
+   ]
+  ]
+ },
+ "neekowhaste": {
+  "n": 528,
+  "games": 3,
+  "self": 0.706,
+  "type": 15,
+  "durations": [
+   [
+    3.0,
+    298
+   ],
+   [
+    1.0,
+    230
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "neekow"
+    ],
+    0.564
+   ],
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.508
+   ],
+   [
+    [
+     "end",
+     "neekowpassiveready"
+    ],
+    0.436
+   ],
+   [
+    [
+     "hit",
+     "neekowpassiveattack"
+    ],
+    0.348
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.133
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.034
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.924
+   ],
+   [
+    [
+     "other"
+    ],
+    0.07
+   ],
+   [
+    [
+     "my cast",
+     "neekoq"
+    ],
+    0.002
+   ],
+   [
+    [
+     "my cast",
+     "neekow2"
+    ],
+    0.002
+   ],
+   [
+    [
+     "my hit",
+     "burning"
+    ],
+    0.002
+   ]
+  ],
+  "lived_med": 3.007,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    114
+   ],
+   [
+    "neekoe",
+    80
+   ],
+   [
+    "neekobasicattack",
+    60
+   ],
+   [
+    "perks_aery_tar",
+    44
+   ],
+   [
+    "neekowpassive",
+    35
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.366
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW2"
+    ],
+    0.564
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.458
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.432
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.43
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.034
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.737
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW"
+    ],
+    0.481
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.019
+   ],
+   [
+    [
+     "slot",
+     47,
+     "NeekoDataSelector"
+    ],
+    0.008
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.004
+   ],
+   [
+    [
+     "slot",
+     46,
+     "NeekoWPassiveAttack"
+    ],
+    0.004
+   ]
+  ]
+ },
+ "neekowpassiveready": {
+  "n": 300,
+  "games": 3,
+  "self": 0.833,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    300
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "neekowpassivecounter"
+    ],
+    0.833
+   ],
+   [
+    [
+     "hit",
+     "neekobasicattack"
+    ],
+    0.803
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.343
+   ],
+   [
+    [
+     "cast",
+     "neekow"
+    ],
+    0.17
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.053
+   ],
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    0.027
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "neekowpassive"
+    ],
+    0.976
+   ],
+   [
+    [
+     "other"
+    ],
+    0.016
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.008
+   ]
+  ],
+  "lived_med": 1.336,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekowpassive",
+    294
+   ],
+   [
+    "neekoq",
+    230
+   ],
+   [
+    "neekowpassiveattack",
+    203
+   ],
+   [
+    "neekoe",
+    130
+   ],
+   [
+    "#6a4229fc",
+    97
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.657
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    3.847
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW2"
+    ],
+    0.167
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.053
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.01
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.007
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.21
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.823
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.82
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.073
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.007
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW"
+    ],
+    0.003
+   ]
+  ]
+ },
+ "item2003": {
+  "n": 6,
+  "games": 3,
+  "self": 1.0,
+  "type": 14,
+  "durations": [
+   [
+    14.75,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "item2003"
+    ],
+    0.833
+   ],
+   [
+    [
+     "none"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 14.975,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    25
+   ],
+   [
+    "#6a4229fc",
+    16
+   ],
+   [
+    "neekoq",
+    15
+   ],
+   [
+    "neekowpassive",
+    10
+   ],
+   [
+    "neekowpassiveattack",
+    10
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.167
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.167
+   ]
+  ],
+  "at_end": []
+ },
+ "neekoeroot": {
+  "n": 404,
+  "games": 3,
+  "self": 0.0,
+  "type": 12,
+  "durations": [
+   [
+    2.0,
+    74
+   ],
+   [
+    3.0,
+    55
+   ],
+   [
+    2.25,
+    52
+   ],
+   [
+    2.5,
+    47
+   ],
+   [
+    0.7,
+    41
+   ],
+   [
+    1.5,
+    36
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "neekoe"
+    ],
+    1.149
+   ],
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    0.178
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.064
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.042
+   ],
+   [
+    [
+     "hit",
+     "neekoq"
+    ],
+    0.035
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.032
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.552
+   ],
+   [
+    [
+     "death"
+    ],
+    0.42
+   ],
+   [
+    [
+     "other"
+    ],
+    0.02
+   ],
+   [
+    [
+     "my cast",
+     "neekoq"
+    ],
+    0.007
+   ]
+  ],
+  "lived_med": 1.071,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.493
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.896
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.064
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.022
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.02
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.012
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.636
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.05
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.047
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.025
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW"
+    ],
+    0.005
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.002
+   ]
+  ]
+ },
+ "summonerdot": {
+  "n": 12,
+  "games": 3,
+  "self": 0.333,
+  "type": 13,
+  "durations": [
+   [
+    5.0,
+    12
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerdot"
+    ],
+    0.667
+   ],
+   [
+    [
+     "none"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "summonerdot"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.083
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.583
+   ],
+   [
+    [
+     "time"
+    ],
+    0.417
+   ]
+  ],
+  "lived_med": 4.137,
+  "ticks": 33,
+  "period_med": 1.07,
+  "on_hit": [
+   [
+    "neekoq",
+    3
+   ],
+   [
+    "neekoe",
+    2
+   ],
+   [
+    "neekowpassive",
+    1
+   ],
+   [
+    "neekowpassiveattack",
+    1
+   ],
+   [
+    "burning",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.917
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.667
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.083
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.083
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.25
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW"
+    ],
+    0.167
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3137_Heal_Missile"
+    ],
+    0.083
+   ]
+  ]
+ },
+ "grievouswound": {
+  "n": 22,
+  "games": 3,
+  "self": 0.636,
+  "type": 3,
+  "durations": [
+   [
+    5.0,
+    12
+   ],
+   [
+    3.0,
+    10
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerdot"
+    ],
+    0.409
+   ],
+   [
+    [
+     "none"
+    ],
+    0.409
+   ],
+   [
+    [
+     "cast",
+     "neekow2"
+    ],
+    0.091
+   ],
+   [
+    [
+     "hit",
+     "summonerdot"
+    ],
+    0.091
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.045
+   ],
+   [
+    [
+     "cast",
+     "neekow"
+    ],
+    0.045
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.682
+   ],
+   [
+    [
+     "time"
+    ],
+    0.318
+   ]
+  ],
+  "lived_med": 3.841,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "summonerdot",
+    11
+   ],
+   [
+    "neekoe",
+    9
+   ],
+   [
+    "perks_aery_tar",
+    8
+   ],
+   [
+    "neekor",
+    8
+   ],
+   [
+    "neekowpassive",
+    7
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.273
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.455
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.636
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.364
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.227
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.091
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.091
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW"
+    ],
+    0.136
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3137_Heal_Missile"
+    ],
+    0.045
+   ]
+  ]
+ },
+ "recall": {
+  "n": 42,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    7.9,
+    42
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.595
+   ],
+   [
+    [
+     "other"
+    ],
+    0.357
+   ],
+   [
+    [
+     "my cast",
+     "neekoe"
+    ],
+    0.024
+   ],
+   [
+    [
+     "my cast",
+     "neekow"
+    ],
+    0.024
+   ]
+  ],
+  "lived_med": 7.949,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.548
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Hide"
+    ],
+    0.476
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.238
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW"
+    ],
+    0.024
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW2"
+    ],
+    0.024
+   ]
+  ]
+ },
+ "ASSETS/Perks/Styles/Resolve/UnflinchingResists/UnflinchingResists.lua": {
+  "n": 25,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    2.0,
+    25
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.88
+   ],
+   [
+    [
+     "hit",
+     "neekor"
+    ],
+    0.12
+   ],
+   [
+    [
+     "end",
+     "nautilusgrandlinetarget"
+    ],
+    0.08
+   ],
+   [
+    [
+     "end",
+     "#037122c1"
+    ],
+    0.04
+   ],
+   [
+    [
+     "end",
+     "nautilusanchordragglobalroot"
+    ],
+    0.04
+   ],
+   [
+    [
+     "end",
+     "neekor2"
+    ],
+    0.04
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.8
+   ],
+   [
+    [
+     "time"
+    ],
+    0.12
+   ],
+   [
+    [
+     "my hit",
+     "neekobasicattack"
+    ],
+    0.04
+   ],
+   [
+    [
+     "my hit",
+     "hallucinatefull"
+    ],
+    0.04
+   ]
+  ],
+  "lived_med": 4.142,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    20
+   ],
+   [
+    "summonerdot",
+    19
+   ],
+   [
+    "neekobasicattack",
+    13
+   ],
+   [
+    "neekoe",
+    11
+   ],
+   [
+    "perks_aery_tar",
+    10
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.84
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.64
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.2
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.08
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.04
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.04
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.44
+   ]
+  ]
+ },
+ "shacoboxslow": {
+  "n": 6,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.637,
+    2
+   ],
+   [
+    0.85,
+    2
+   ],
+   [
+    1.275,
+    1
+   ],
+   [
+    1.7,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    0.167
+   ],
+   [
+    [
+     "hit",
+     "neekoe"
+    ],
+    0.167
+   ],
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.167
+   ],
+   [
+    [
+     "hit",
+     "neekowpassiveattack"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "neekowpassiveready"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.833
+   ],
+   [
+    [
+     "other"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 1.34,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.167
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.167
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.833
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.167
+   ]
+  ]
+ },
+ "shacoboxsnare": {
+  "n": 6,
+  "games": 3,
+  "self": 1.0,
+  "type": 12,
+  "durations": [
+   [
+    0.3,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    0.167
+   ],
+   [
+    [
+     "hit",
+     "neekoe"
+    ],
+    0.167
+   ],
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.167
+   ],
+   [
+    [
+     "hit",
+     "neekowpassiveattack"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "neekowpassiveready"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.501,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.667
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.167
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.167
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.167
+   ]
+  ],
+  "at_end": []
+ },
+ "flee": {
+  "n": 8,
+  "games": 3,
+  "self": 1.0,
+  "type": 29,
+  "durations": [
+   [
+    0.85,
+    3
+   ],
+   [
+    0.637,
+    2
+   ],
+   [
+    1.275,
+    1
+   ],
+   [
+    1.7,
+    1
+   ],
+   [
+    1.062,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.625
+   ],
+   [
+    [
+     "end",
+     "hweieqflee"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    0.125
+   ],
+   [
+    [
+     "hit",
+     "neekoe"
+    ],
+    0.125
+   ],
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.125
+   ],
+   [
+    [
+     "hit",
+     "neekowpassiveattack"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.875
+   ],
+   [
+    [
+     "other"
+    ],
+    0.125
+   ]
+  ],
+  "lived_med": 1.27,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    2
+   ],
+   [
+    "neekoq",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.125
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.625
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.125
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.125
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.125
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.75
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.125
+   ]
+  ]
+ },
+ "sru_crabspeedboost": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    2.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.5
+   ],
+   [
+    [
+     "my hit",
+     "perks_aery_tar"
+    ],
+    0.25
+   ],
+   [
+    [
+     "my hit",
+     "neekobasicattack"
+    ],
+    0.25
+   ]
+  ],
+  "lived_med": 0.167,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "perks_aery_tar",
+    1
+   ],
+   [
+    "neekobasicattack",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ]
+  ]
+ },
+ "sr_2026_s2_rolebound_roamingbank": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 41.97,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    4
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ],
+   [
+    "neekoq",
+    2
+   ],
+   [
+    "neekowpassiveattack",
+    2
+   ],
+   [
+    "neekowpassive",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "slow": {
+  "n": 35,
+  "games": 3,
+  "self": 0.6,
+  "type": 11,
+  "durations": [
+   [
+    1.5,
+    12
+   ],
+   [
+    2.55,
+    11
+   ],
+   [
+    0.3,
+    5
+   ],
+   [
+    1.25,
+    4
+   ],
+   [
+    1.2,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.886
+   ],
+   [
+    [
+     "end",
+     "3869shield"
+    ],
+    0.4
+   ],
+   [
+    [
+     "end",
+     "syndraestun"
+    ],
+    0.086
+   ],
+   [
+    [
+     "end",
+     "3171speed"
+    ],
+    0.029
+   ],
+   [
+    [
+     "end",
+     "2503burn"
+    ],
+    0.029
+   ],
+   [
+    [
+     "end",
+     "shacoboxslow"
+    ],
+    0.029
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.657
+   ],
+   [
+    [
+     "other"
+    ],
+    0.286
+   ],
+   [
+    [
+     "my hit",
+     "neekoq"
+    ],
+    0.029
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.029
+   ]
+  ],
+  "lived_med": 2.571,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    16
+   ],
+   [
+    "neekoe",
+    8
+   ],
+   [
+    "neekor",
+    6
+   ],
+   [
+    "#6a4229fc",
+    5
+   ],
+   [
+    "neekobasicattack",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.429
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.343
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.143
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.114
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.057
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.029
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.286
+   ],
+   [
+    [
+     "slot",
+     46,
+     "NeekoWPassiveAttack"
+    ],
+    0.029
+   ]
+  ]
+ },
+ "neekor": {
+  "n": 27,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    1.25,
+    27
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "neekor"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.269,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "3152missile",
+    7
+   ],
+   [
+    "neekoq",
+    5
+   ],
+   [
+    "neekowpassive",
+    4
+   ],
+   [
+    "perks_aery_tar",
+    3
+   ],
+   [
+    "neekowpassiveattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoRIndicatorMis"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.074
+   ],
+   [
+    [
+     "slot",
+     46,
+     "NeekoRDummySpell"
+    ],
+    0.963
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.037
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.037
+   ]
+  ]
+ },
+ "neekor2": {
+  "n": 26,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    0.85,
+    26
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "neekor"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cast",
+     "neekordummyspell"
+    ],
+    0.962
+   ],
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    0.038
+   ],
+   [
+    [
+     "end",
+     "3171speed"
+    ],
+    0.038
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.038
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.668,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekor",
+    24
+   ],
+   [
+    "neekoq",
+    3
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "summonerdot",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.115
+   ],
+   [
+    [
+     "slot",
+     46,
+     "NeekoRDummySpell"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.077
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.038
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.038
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.077
+   ]
+  ]
+ },
+ "neekobubbledebuff": {
+  "n": 61,
+  "games": 3,
+  "self": 0.0,
+  "type": 30,
+  "durations": [
+   [
+    0.6,
+    61
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "neekor"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cast",
+     "neekordummyspell"
+    ],
+    0.967
+   ],
+   [
+    [
+     "end",
+     "3171speed"
+    ],
+    0.049
+   ],
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    0.033
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.016
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.984
+   ],
+   [
+    [
+     "other"
+    ],
+    0.016
+   ]
+  ],
+  "lived_med": 0.601,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.443
+   ],
+   [
+    [
+     "slot",
+     46,
+     "NeekoRDummySpell"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.885
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.115
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.049
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.016
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.311
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.115
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.098
+   ]
+  ]
+ },
+ "stun": {
+  "n": 94,
+  "games": 3,
+  "self": 0.309,
+  "type": 5,
+  "durations": [
+   [
+    0.75,
+    73
+   ],
+   [
+    1.25,
+    6
+   ],
+   [
+    1.0,
+    6
+   ],
+   [
+    0.85,
+    3
+   ],
+   [
+    1.275,
+    3
+   ],
+   [
+    0.6,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "neekor"
+    ],
+    2.649
+   ],
+   [
+    [
+     "none"
+    ],
+    0.277
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.234
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.074
+   ],
+   [
+    [
+     "end",
+     "nautilusgrandlinetarget"
+    ],
+    0.053
+   ],
+   [
+    [
+     "end",
+     "syndrapassivemarker"
+    ],
+    0.032
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.947
+   ],
+   [
+    [
+     "other"
+    ],
+    0.043
+   ],
+   [
+    [
+     "my hit",
+     "neekoq"
+    ],
+    0.011
+   ]
+  ],
+  "lived_med": 0.769,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    6
+   ],
+   [
+    "neekor",
+    6
+   ],
+   [
+    "neekoe",
+    5
+   ],
+   [
+    "#6a4229fc",
+    3
+   ],
+   [
+    "summonerdot",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.479
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.351
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.245
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.234
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.074
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.053
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.266
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.085
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.074
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.074
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.011
+   ],
+   [
+    [
+     "slot",
+     46,
+     "NeekoWPassiveAttack"
+    ],
+    0.011
+   ]
+  ]
+ },
+ "nautiluspassivecheck": {
+  "n": 12,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    6.0,
+    12
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.917
+   ],
+   [
+    [
+     "cast",
+     "summonerdot"
+    ],
+    0.083
+   ],
+   [
+    [
+     "end",
+     "neekowhaste"
+    ],
+    0.083
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 6.181,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    16
+   ],
+   [
+    "summonerdot",
+    9
+   ],
+   [
+    "neekobasicattack",
+    5
+   ],
+   [
+    "perks_aery_tar",
+    5
+   ],
+   [
+    "neekowpassive",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.167
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.083
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW"
+    ],
+    0.083
+   ]
+  ]
+ },
+ "nautiluspassiveroot": {
+  "n": 12,
+  "games": 3,
+  "self": 1.0,
+  "type": 12,
+  "durations": [
+   [
+    0.85,
+    8
+   ],
+   [
+    1.062,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.917
+   ],
+   [
+    [
+     "cast",
+     "summonerdot"
+    ],
+    0.083
+   ],
+   [
+    [
+     "end",
+     "neekowhaste"
+    ],
+    0.083
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.035,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "summonerdot",
+    5
+   ],
+   [
+    "neekoq",
+    3
+   ],
+   [
+    "neekobasicattack",
+    1
+   ],
+   [
+    "neekoe",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.167
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ],
+   [
+    [
+     "slot",
+     46,
+     "NeekoWPassiveAttack"
+    ],
+    0.083
+   ]
+  ]
+ },
+ "nautiluswdot": {
+  "n": 10,
+  "games": 3,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    1.5,
+    10
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.7
+   ],
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cast",
+     "summonerdot"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "neekowhaste"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cast",
+     "neekor"
+    ],
+    0.1
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.7
+   ],
+   [
+    [
+     "other"
+    ],
+    0.3
+   ]
+  ],
+  "lived_med": 1.57,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    5
+   ],
+   [
+    "neekowpassive",
+    2
+   ],
+   [
+    "neekowpassiveattack",
+    2
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ],
+   [
+    "neekobasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.3
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.3
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.8
+   ]
+  ]
+ },
+ "nautilussplashzoneslow": {
+  "n": 15,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.062,
+    15
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "hit",
+     "neekor"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "neekowhaste"
+    ],
+    0.067
+   ],
+   [
+    [
+     "cast",
+     "neekor"
+    ],
+    0.067
+   ],
+   [
+    [
+     "cast",
+     "neekoe"
+    ],
+    0.067
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.067
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.533
+   ],
+   [
+    [
+     "other"
+    ],
+    0.467
+   ]
+  ],
+  "lived_med": 1.269,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "summonerdot",
+    4
+   ],
+   [
+    "neekoe",
+    4
+   ],
+   [
+    "neekoq",
+    4
+   ],
+   [
+    "perks_aery_tar",
+    3
+   ],
+   [
+    "neekobasicattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.267
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.267
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.067
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.067
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.067
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ],
+   [
+    [
+     "slot",
+     47,
+     "NeekoDataSelector"
+    ],
+    0.067
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.067
+   ]
+  ]
+ },
+ "nautilusanchordragglobalroot": {
+  "n": 6,
+  "games": 3,
+  "self": 1.0,
+  "type": 5,
+  "durations": [
+   [
+    0.85,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.833
+   ],
+   [
+    [
+     "end",
+     "summonerexhaust"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "summonerexhaustdebuff"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "nautilusknockup"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "stun"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "hweisignature"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.334,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.833
+   ],
+   [
+    [
+     "fx_until_end",
+     126216260
+    ],
+    0.833
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.167
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.167
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.167
+   ]
+  ]
+ },
+ "nautilusanchordragroot": {
+  "n": 6,
+  "games": 3,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.8,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.833
+   ],
+   [
+    [
+     "end",
+     "summonerexhaust"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "summonerexhaustdebuff"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "nautilusknockup"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "stun"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "hweisignature"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.869,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ],
+   [
+    "summonerdot",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.833
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.167
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     47,
+     "NeekoDataSelector"
+    ],
+    0.167
+   ]
+  ]
+ },
+ "nautilusminorknockaway": {
+  "n": 6,
+  "games": 3,
+  "self": 1.0,
+  "type": 5,
+  "durations": [
+   [
+    0.425,
+    5
+   ],
+   [
+    0.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "nautilusanchordragglobalroot"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.568,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "perks_aery_tar",
+    1
+   ],
+   [
+    "summonerdot",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.167
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     47,
+     "NeekoDataSelector"
+    ],
+    0.167
+   ]
+  ]
+ },
+ "dariusaxegrabcone": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    1.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.036,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ]
+  ],
+  "at_end": []
+ },
+ "dariuseslow": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.85,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.07,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "dariushemo": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    5.1,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 6.482,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "nautilusgrandlinetarget": {
+  "n": 5,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    1.0,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.8
+   ],
+   [
+    [
+     "cast",
+     "neekordummyspell"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "neekor"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.6
+   ],
+   [
+    [
+     "time"
+    ],
+    0.4
+   ]
+  ],
+  "lived_med": 1.47,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    3
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ],
+   [
+    "neekobasicattack",
+    1
+   ],
+   [
+    "summonerdot",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.2
+   ],
+   [
+    [
+     "slot",
+     46,
+     "NeekoRDummySpell"
+    ],
+    0.2
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.2
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.2
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.2
+   ]
+  ]
+ },
+ "#037122c1": {
+  "n": 17,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    2.5,
+    17
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.882
+   ],
+   [
+    [
+     "cast",
+     "neekoe"
+    ],
+    0.118
+   ],
+   [
+    [
+     "end",
+     "nautiluspassiveroot"
+    ],
+    0.059
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.824
+   ],
+   [
+    [
+     "other"
+    ],
+    0.176
+   ]
+  ],
+  "lived_med": 2.505,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    15
+   ],
+   [
+    "neekoe",
+    11
+   ],
+   [
+    "#6a4229fc",
+    9
+   ],
+   [
+    "neekoq",
+    8
+   ],
+   [
+    "hallucinatefull",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.588
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.412
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.059
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.235
+   ]
+  ]
+ },
+ "nautilusknockup": {
+  "n": 5,
+  "games": 3,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    1.0,
+    3
+   ],
+   [
+    1.5,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "nautilusgrandlinetarget"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "#037122c1"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.077,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "summonerdot",
+    2
+   ],
+   [
+    "neekoe",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.2
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.6
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.2
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.2
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.2
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.8
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.2
+   ]
+  ]
+ },
+ "dravendoubleshotmissile": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.7,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "#037122c1"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.871,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    3
+   ],
+   [
+    "neekor",
+    3
+   ],
+   [
+    "summonerdot",
+    2
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ],
+   [
+    "neekoe",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.25
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "dravendoubleshot": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.5,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "#037122c1"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.401,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.25
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ],
+   [
+    [
+     "slot",
+     46,
+     "NeekoWPassiveAttack"
+    ],
+    0.25
+   ]
+  ]
+ },
+ "2508burn": {
+  "n": 6,
+  "games": 3,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    2.9,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "neekowhaste"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 3.04,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    4
+   ],
+   [
+    "summonerdot",
+    2
+   ],
+   [
+    "neekoq",
+    2
+   ],
+   [
+    "neekobasicattack",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.167
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.833
+   ]
+  ],
+  "at_end": []
+ },
+ "planthealthslow": {
+  "n": 13,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.3,
+    13
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "2503burn"
+    ],
+    0.077
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.769
+   ],
+   [
+    [
+     "other"
+    ],
+    0.231
+   ]
+  ],
+  "lived_med": 0.468,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "sr_2026_s1_rolebound_mid_questcompleted": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "sr_2026_s1_rolebound_mid_quest"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "neekoq"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "neekowpassiveattack"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "neekowpassiveready"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    20
+   ],
+   [
+    "neekoe",
+    16
+   ],
+   [
+    "#6a4229fc",
+    14
+   ],
+   [
+    "neekobasicattack",
+    11
+   ],
+   [
+    "neekowpassive",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.5
+   ]
+  ],
+  "at_end": []
+ },
+ "feats_noxianbootupgradebuff": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "sr_2026_s1_rolebound_mid_quest"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "neekoq"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "neekowpassiveattack"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "neekowpassiveready"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    20
+   ],
+   [
+    "neekoe",
+    16
+   ],
+   [
+    "#6a4229fc",
+    14
+   ],
+   [
+    "neekobasicattack",
+    11
+   ],
+   [
+    "neekowpassive",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.5
+   ]
+  ],
+  "at_end": []
+ },
+ "feats_noxianbootpurchasebuff": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "sr_2026_s1_rolebound_mid_quest"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "neekoq"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "neekowpassiveattack"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "neekowpassiveready"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    20
+   ],
+   [
+    "neekoe",
+    16
+   ],
+   [
+    "#6a4229fc",
+    14
+   ],
+   [
+    "neekobasicattack",
+    11
+   ],
+   [
+    "neekowpassive",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.5
+   ]
+  ],
+  "at_end": []
+ },
+ "3171speed": {
+  "n": 54,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    4.0,
+    54
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "neekoq"
+    ],
+    0.722
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.722
+   ],
+   [
+    [
+     "hit",
+     "neekoe"
+    ],
+    0.278
+   ],
+   [
+    [
+     "hit",
+     "neekor"
+    ],
+    0.13
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.074
+   ],
+   [
+    [
+     "none"
+    ],
+    0.056
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.537
+   ],
+   [
+    [
+     "other"
+    ],
+    0.444
+   ],
+   [
+    [
+     "my hit",
+     "neekowpassive"
+    ],
+    0.019
+   ]
+  ],
+  "lived_med": 4.212,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    54
+   ],
+   [
+    "neekobasicattack",
+    51
+   ],
+   [
+    "perks_aery_tar",
+    50
+   ],
+   [
+    "neekowpassive",
+    46
+   ],
+   [
+    "neekoe",
+    27
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.019
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.722
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.037
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.037
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.019
+   ],
+   [
+    [
+     "slot",
+     53,
+     "TeleportChannelBar4500"
+    ],
+    0.019
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.296
+   ],
+   [
+    [
+     "slot",
+     46,
+     "NeekoRDummySpell"
+    ],
+    0.019
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW2"
+    ],
+    0.019
+   ]
+  ]
+ },
+ "srx_dragonsoulbuffhextech_preview": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    7
+   ],
+   [
+    "neekobasicattack",
+    3
+   ],
+   [
+    "#6a4229fc",
+    3
+   ],
+   [
+    "neekoe",
+    3
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "2503burn": {
+  "n": 17,
+  "games": 3,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    2.9,
+    17
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.706
+   ],
+   [
+    [
+     "hit",
+     "neekoe"
+    ],
+    0.118
+   ],
+   [
+    [
+     "hit",
+     "neekoq"
+    ],
+    0.118
+   ],
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    0.059
+   ],
+   [
+    [
+     "hit",
+     "neekobasicattack"
+    ],
+    0.059
+   ],
+   [
+    [
+     "end",
+     "neekowpassivecounter"
+    ],
+    0.059
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.529
+   ],
+   [
+    [
+     "other"
+    ],
+    0.471
+   ]
+  ],
+  "lived_med": 3.128,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    23
+   ],
+   [
+    "hallucinatefull",
+    12
+   ],
+   [
+    "neekoe",
+    11
+   ],
+   [
+    "perks_aery_tar",
+    8
+   ],
+   [
+    "neekobasicattack",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.882
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.941
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.294
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.176
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.059
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.235
+   ]
+  ]
+ },
+ "bansheesveil": {
+  "n": 6,
+  "games": 3,
+  "self": 1.0,
+  "type": 4,
+  "durations": [
+   [
+    25000.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 67.74,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    37
+   ],
+   [
+    "neekowpassive",
+    36
+   ],
+   [
+    "neekoe",
+    31
+   ],
+   [
+    "neekobasicattack",
+    26
+   ],
+   [
+    "#6a4229fc",
+    7
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.333
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "plantsatchelknockback": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    1.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.801,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "FaelightSeenByWardBuffBar": {
+  "n": 12,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    12
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.917
+   ],
+   [
+    [
+     "cast",
+     "trinketsweeperlvl3"
+    ],
+    0.083
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.607,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    7
+   ],
+   [
+    "neekoq",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.167
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.083
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ]
+  ]
+ },
+ "summonerexhaustslow": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    2.55,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "neekor2"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.739,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "summonerdot",
+    3
+   ],
+   [
+    "neekoe",
+    1
+   ],
+   [
+    "neekobasicattack",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "summonerexhaust": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "neekor2"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.008,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "summonerdot",
+    3
+   ],
+   [
+    "neekoe",
+    1
+   ],
+   [
+    "neekobasicattack",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     78637603
+    ],
+    1.0
+   ]
+  ]
+ },
+ "summonerexhaustdebuff": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "neekor2"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.008,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "summonerdot",
+    3
+   ],
+   [
+    "neekoe",
+    1
+   ],
+   [
+    "neekobasicattack",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     78637603
+    ],
+    1.0
+   ]
+  ]
+ },
+ "sru_dragon_hextech_attack2_slow": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.7,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.772,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     47,
+     "NeekoDataSelector"
+    ],
+    1.0
+   ]
+  ]
+ },
+ "srx_dragonbuffhextech": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekowpassive",
+    17
+   ],
+   [
+    "#6a4229fc",
+    14
+   ],
+   [
+    "neekobasicattack",
+    13
+   ],
+   [
+    "neekoq",
+    9
+   ],
+   [
+    "neekoe",
+    9
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SRX_DragonBuffHextech"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "4005debuff": {
+  "n": 9,
+  "games": 3,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    4.0,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.778
+   ],
+   [
+    [
+     "end",
+     "syndrapassivemarker"
+    ],
+    0.222
+   ],
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    0.111
+   ],
+   [
+    [
+     "hit",
+     "neekoe"
+    ],
+    0.111
+   ],
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.111
+   ],
+   [
+    [
+     "hit",
+     "neekowpassiveattack"
+    ],
+    0.111
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.444
+   ],
+   [
+    [
+     "time"
+    ],
+    0.444
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.111
+   ]
+  ],
+  "lived_med": 3.445,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "hallucinatefull",
+    8
+   ],
+   [
+    "neekor",
+    6
+   ],
+   [
+    "#6a4229fc",
+    5
+   ],
+   [
+    "neekoq",
+    4
+   ],
+   [
+    "neekoe",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.444
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.667
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.111
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.111
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.111
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.222
+   ]
+  ]
+ },
+ "burning": {
+  "n": 10,
+  "games": 3,
+  "self": 0.3,
+  "type": 13,
+  "durations": [
+   [
+    3.0,
+    10
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "burning"
+    ],
+    0.4
+   ],
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.4
+   ],
+   [
+    [
+     "hit",
+     "neekowpassiveattack"
+    ],
+    0.4
+   ],
+   [
+    [
+     "end",
+     "neekowpassiveready"
+    ],
+    0.4
+   ],
+   [
+    [
+     "none"
+    ],
+    0.2
+   ],
+   [
+    [
+     "hit",
+     "neekobasicattack"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.5
+   ],
+   [
+    [
+     "time"
+    ],
+    0.3
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.1
+   ],
+   [
+    [
+     "death"
+    ],
+    0.1
+   ]
+  ],
+  "lived_med": 3.206,
+  "ticks": 31,
+  "period_med": 1.07,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.3
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.4
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.4
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.4
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.3
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.2
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.6
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.2
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.2
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.1
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.1
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.1
+   ]
+  ]
+ },
+ "blessingofthelizardelderslow": {
+  "n": 9,
+  "games": 3,
+  "self": 0.333,
+  "type": 11,
+  "durations": [
+   [
+    3.0,
+    6
+   ],
+   [
+    2.1,
+    2
+   ],
+   [
+    2.55,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "burning"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "neekowpassiveattack"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "neekowpassiveready"
+    ],
+    0.333
+   ],
+   [
+    [
+     "none"
+    ],
+    0.222
+   ],
+   [
+    [
+     "hit",
+     "neekobasicattack"
+    ],
+    0.222
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.444
+   ],
+   [
+    [
+     "time"
+    ],
+    0.444
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.111
+   ]
+  ],
+  "lived_med": 3.073,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.333
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.444
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.333
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.222
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.444
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.111
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.111
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.111
+   ]
+  ]
+ },
+ "itemsmiteslow": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.7,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.5
+   ],
+   [
+    [
+     "time"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 1.768,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "86"
+    ],
+    0.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ]
+  ]
+ },
+ "exaltedwithbaronnashor": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    180.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "crestoftheancientgolemvfx"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardeldervfx"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 32.349,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    14
+   ],
+   [
+    "neekoq",
+    13
+   ],
+   [
+    "hallucinatefull",
+    12
+   ],
+   [
+    "#6a4229fc",
+    8
+   ],
+   [
+    "neekowpassiveattack",
+    7
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "exaltedwithbaronnashorvfx": {
+  "n": 8,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    99999.0,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "neekow"
+    ],
+    0.625
+   ],
+   [
+    [
+     "none"
+    ],
+    0.375
+   ],
+   [
+    [
+     "end",
+     "crestoftheancientgolemvfx"
+    ],
+    0.125
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardeldervfx"
+    ],
+    0.125
+   ],
+   [
+    [
+     "hit",
+     "neekoq"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "neekow"
+    ],
+    0.5
+   ],
+   [
+    [
+     "other"
+    ],
+    0.375
+   ],
+   [
+    [
+     "my hit",
+     "neekoq"
+    ],
+    0.125
+   ]
+  ],
+  "lived_med": 11.868,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    14
+   ],
+   [
+    "neekoq",
+    13
+   ],
+   [
+    "hallucinatefull",
+    12
+   ],
+   [
+    "#6a4229fc",
+    8
+   ],
+   [
+    "neekowpassiveattack",
+    7
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW2"
+    ],
+    0.625
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.875
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW2"
+    ],
+    0.625
+   ]
+  ]
+ },
+ "trinketsweeperlvl3": {
+  "n": 18,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    8.0,
+    18
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "trinketsweeperlvl3"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 8.206,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    28
+   ],
+   [
+    "#6a4229fc",
+    4
+   ],
+   [
+    "neekoq",
+    3
+   ],
+   [
+    "neekoe",
+    3
+   ],
+   [
+    "sorakabasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.111
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.889
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.111
+   ]
+  ]
+ },
+ "avatarbuffoffensiveburn": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    4.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "hit",
+     "neekobasicattack"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "neekowpassivecounter"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.5
+   ],
+   [
+    [
+     "other"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 4.041,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "hallucinatefull",
+    4
+   ],
+   [
+    "neekoq",
+    3
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ],
+   [
+    "neekowpassive",
+    2
+   ],
+   [
+    "neekowpassiveattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.75
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "planthawkshotbuff": {
+  "n": 23,
+  "games": 3,
+  "self": 0.261,
+  "type": 3,
+  "durations": [
+   [
+    12.0,
+    14
+   ],
+   [
+    3.0,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.957
+   ],
+   [
+    [
+     "cast",
+     "neekoe"
+    ],
+    0.043
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.522
+   ],
+   [
+    [
+     "death"
+    ],
+    0.391
+   ],
+   [
+    [
+     "time"
+    ],
+    0.087
+   ]
+  ],
+  "lived_med": 8.594,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    7
+   ],
+   [
+    "neekoq",
+    6
+   ],
+   [
+    "neekobasicattack",
+    2
+   ],
+   [
+    "summonerdot",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.261
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.174
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.391
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.043
+   ]
+  ]
+ },
+ "4628marker": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.013,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    1
+   ],
+   [
+    "neekowpassive",
+    1
+   ],
+   [
+    "neekowpassiveattack",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "nautilusminorknockup": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    1.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.136,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "barondebuff": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    8.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 8.507,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    10
+   ],
+   [
+    "neekobasicattack",
+    10
+   ],
+   [
+    "burning",
+    10
+   ],
+   [
+    "neekowpassive",
+    5
+   ],
+   [
+    "neekowpassiveattack",
+    5
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "rolerules_support": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    1
+   ],
+   [
+    "perks_arcanecomet_mis",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "supportitempurchasebuff": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    1
+   ],
+   [
+    "perks_arcanecomet_mis",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "s14_support_charge_display": {
+  "n": 64,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    20.0,
+    33
+   ],
+   [
+    25000.0,
+    6
+   ],
+   [
+    18.363,
+    2
+   ],
+   [
+    65.0,
+    1
+   ],
+   [
+    17.488,
+    1
+   ],
+   [
+    9.906,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.516
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.219
+   ],
+   [
+    [
+     "hit",
+     "neekoq"
+    ],
+    0.203
+   ],
+   [
+    [
+     "hit",
+     "neekobasicattack"
+    ],
+    0.188
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.172
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.141
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.5
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.219
+   ],
+   [
+    [
+     "my hit",
+     "neekoq"
+    ],
+    0.078
+   ],
+   [
+    [
+     "my hit",
+     "neekobasicattack"
+    ],
+    0.078
+   ],
+   [
+    [
+     "my hit",
+     "neekoe"
+    ],
+    0.047
+   ]
+  ],
+  "lived_med": 13.421,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    81
+   ],
+   [
+    "neekoq",
+    80
+   ],
+   [
+    "neekowpassive",
+    27
+   ],
+   [
+    "neekowpassiveattack",
+    26
+   ],
+   [
+    "neekoe",
+    23
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.281
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.141
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    0.094
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.078
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.062
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.062
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.234
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.141
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.078
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.062
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.047
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.047
+   ]
+  ]
+ },
+ "talentreaperpersistenteffects": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_gold_display"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 237.592,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    81
+   ],
+   [
+    "neekoq",
+    77
+   ],
+   [
+    "neekowpassive",
+    28
+   ],
+   [
+    "neekowpassiveattack",
+    27
+   ],
+   [
+    "neekoe",
+    23
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.75
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.25
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.25
+   ]
+  ]
+ },
+ "sr_2026_s1_rolebound_support_quest": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 823.728,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    81
+   ],
+   [
+    "neekoq",
+    80
+   ],
+   [
+    "neekowpassive",
+    28
+   ],
+   [
+    "neekowpassiveattack",
+    27
+   ],
+   [
+    "neekoe",
+    24
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua": {
+  "n": 34,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    34
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "#01701b21"
+    ],
+    0.971
+   ],
+   [
+    [
+     "none"
+    ],
+    0.912
+   ],
+   [
+    [
+     "cast",
+     "neekoe"
+    ],
+    0.029
+   ],
+   [
+    [
+     "end",
+     "monkeykingdoubleattackdebuff"
+    ],
+    0.029
+   ],
+   [
+    [
+     "cast",
+     "neekow"
+    ],
+    0.029
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.029
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "neekoq"
+    ],
+    0.333
+   ],
+   [
+    [
+     "my hit",
+     "neekoe"
+    ],
+    0.242
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.242
+   ],
+   [
+    [
+     "my hit",
+     "3152missile"
+    ],
+    0.061
+   ],
+   [
+    [
+     "other"
+    ],
+    0.061
+   ]
+  ],
+  "lived_med": 33.515,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    69
+   ],
+   [
+    "neekoq",
+    53
+   ],
+   [
+    "neekoe",
+    27
+   ],
+   [
+    "neekowpassive",
+    20
+   ],
+   [
+    "neekowpassiveattack",
+    19
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.088
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.059
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.029
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.029
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.029
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.441
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.471
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW"
+    ],
+    0.029
+   ]
+  ]
+ },
+ "s14_support_gold_display": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    250000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 423.809,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    81
+   ],
+   [
+    "neekoq",
+    80
+   ],
+   [
+    "neekowpassive",
+    28
+   ],
+   [
+    "neekowpassiveattack",
+    27
+   ],
+   [
+    "neekoe",
+    24
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "#01701b21": {
+  "n": 33,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    15.765,
+    4
+   ],
+   [
+    15.059,
+    4
+   ],
+   [
+    12.941,
+    4
+   ],
+   [
+    12.235,
+    4
+   ],
+   [
+    17.882,
+    3
+   ],
+   [
+    20.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.879
+   ],
+   [
+    [
+     "hit",
+     "neekoq"
+    ],
+    0.515
+   ],
+   [
+    [
+     "hit",
+     "neekoe"
+    ],
+    0.364
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.273
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.242
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 15.259,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    99
+   ],
+   [
+    "neekobasicattack",
+    55
+   ],
+   [
+    "#f86f3d33",
+    25
+   ],
+   [
+    "neekoe",
+    25
+   ],
+   [
+    "neekowpassive",
+    21
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.485
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.515
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.485
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    0.242
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW"
+    ],
+    0.03
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.03
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.061
+   ]
+  ]
+ },
+ "#0d398291": {
+  "n": 41,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    41
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.927
+   ],
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    0.024
+   ],
+   [
+    [
+     "cast",
+     "neekoe"
+    ],
+    0.024
+   ],
+   [
+    [
+     "cast",
+     "neekow"
+    ],
+    0.024
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "neekoq"
+    ],
+    0.35
+   ],
+   [
+    [
+     "my hit",
+     "neekoe"
+    ],
+    0.275
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.2
+   ],
+   [
+    [
+     "my hit",
+     "3152missile"
+    ],
+    0.075
+   ],
+   [
+    [
+     "other"
+    ],
+    0.075
+   ]
+  ],
+  "lived_med": 20.808,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    90
+   ],
+   [
+    "neekoq",
+    66
+   ],
+   [
+    "neekoe",
+    29
+   ],
+   [
+    "neekowpassive",
+    25
+   ],
+   [
+    "neekowpassiveattack",
+    24
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.561
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.366
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.341
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW"
+    ],
+    0.024
+   ]
+  ]
+ },
+ "headbutttarget": {
+  "n": 7,
+  "games": 3,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.75,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.571
+   ],
+   [
+    [
+     "time"
+    ],
+    0.429
+   ]
+  ],
+  "lived_med": 0.435,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.143
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.143
+   ]
+  ]
+ },
+ "syndrapassivemarker": {
+  "n": 13,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    4.0,
+    13
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "headbutttarget"
+    ],
+    0.077
+   ],
+   [
+    [
+     "end",
+     "neekor2"
+    ],
+    0.077
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.615
+   ],
+   [
+    [
+     "time"
+    ],
+    0.385
+   ]
+  ],
+  "lived_med": 1.403,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    8
+   ],
+   [
+    "neekobasicattack",
+    4
+   ],
+   [
+    "neekoq",
+    3
+   ],
+   [
+    "#6a4229fc",
+    3
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.077
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.385
+   ]
+  ],
+  "at_end": []
+ },
+ "syndraestun": {
+  "n": 8,
+  "games": 3,
+  "self": 1.0,
+  "type": 5,
+  "durations": [
+   [
+    1.25,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "syndrapassivemarker"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "headbutttarget"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.278,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    3
+   ],
+   [
+    "#6a4229fc",
+    3
+   ],
+   [
+    "perks_arcanecomet_mis",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.125
+   ]
+  ],
+  "at_end": []
+ },
+ "syndraebump": {
+  "n": 8,
+  "games": 3,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.25,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "syndrapassivemarker"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "headbutttarget"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.401,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.125
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.875
+   ]
+  ]
+ },
+ "syndrawslow": {
+  "n": 6,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.5,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.833
+   ],
+   [
+    [
+     "cast",
+     "neekoe"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "3050_enemybuff"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "syndraestun"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "summonerhealcheck"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "syndrapassivemarker"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 1.746,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    2
+   ],
+   [
+    "neekoq",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.167
+   ]
+  ]
+ },
+ "jammerdevice": {
+  "n": 13,
+  "games": 3,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    13
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "jammerdevice"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "death"
+    ],
+    0.583
+   ],
+   [
+    [
+     "my cast",
+     "jammerdevice"
+    ],
+    0.417
+   ]
+  ],
+  "lived_med": 59.684,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.385
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.231
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.462
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.077
+   ]
+  ]
+ },
+ "#08bbf8d1": {
+  "n": 9,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    2.0,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerheal"
+    ],
+    0.778
+   ],
+   [
+    [
+     "cast",
+     "neekoe"
+    ],
+    0.111
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.111
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.152,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    7
+   ],
+   [
+    "neekoe",
+    6
+   ],
+   [
+    "neekobasicattack",
+    1
+   ],
+   [
+    "neekowpassive",
+    1
+   ],
+   [
+    "neekowpassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    6.556
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.778
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.222
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.444
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW"
+    ],
+    0.222
+   ]
+  ]
+ },
+ "summonerheal": {
+  "n": 15,
+  "games": 3,
+  "self": 0.533,
+  "type": 15,
+  "durations": [
+   [
+    1.0,
+    15
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerheal"
+    ],
+    0.933
+   ],
+   [
+    [
+     "none"
+    ],
+    0.067
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.135,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    3
+   ],
+   [
+    "neekobasicattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    6.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.933
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.933
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.267
+   ]
+  ],
+  "at_end": []
+ },
+ "summonerhealcheck": {
+  "n": 15,
+  "games": 3,
+  "self": 0.533,
+  "type": 3,
+  "durations": [
+   [
+    30.0,
+    15
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerheal"
+    ],
+    0.933
+   ],
+   [
+    [
+     "none"
+    ],
+    0.067
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.5
+   ],
+   [
+    [
+     "time"
+    ],
+    0.429
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.071
+   ]
+  ],
+  "lived_med": 27.58,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    53
+   ],
+   [
+    "neekobasicattack",
+    26
+   ],
+   [
+    "neekowpassive",
+    12
+   ],
+   [
+    "neekoe",
+    12
+   ],
+   [
+    "neekowpassiveattack",
+    10
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    6.667
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.933
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.267
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.2
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.4
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW"
+    ],
+    0.067
+   ]
+  ]
+ },
+ "syndraemissile": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.5,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.5
+   ],
+   [
+    [
+     "other"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 0.267,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.5
+   ]
+  ]
+ },
+ "syndraedebuff": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.5,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.5
+   ],
+   [
+    [
+     "other"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 0.267,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.5
+   ]
+  ]
+ },
+ "srx_dragonbuffcloud": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    3
+   ],
+   [
+    "neekowpassive",
+    1
+   ],
+   [
+    "neekowpassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "itemghostward": {
+  "n": 45,
+  "games": 3,
+  "self": 0.0,
+  "type": 6,
+  "durations": [
+   [
+    150.0,
+    45
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "itemghostward"
+    ],
+    0.727
+   ],
+   [
+    [
+     "death"
+    ],
+    0.182
+   ],
+   [
+    [
+     "time"
+    ],
+    0.091
+   ]
+  ],
+  "lived_med": 83.617,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.756
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.444
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.022
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.156
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.244
+   ]
+  ]
+ },
+ "pulverize": {
+  "n": 5,
+  "games": 3,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    1.0,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "headbutttarget"
+    ],
+    0.4
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.203,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    1
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.8
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.4
+   ]
+  ]
+ },
+ "srx_dragonbuffocean": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekowpassive",
+    36
+   ],
+   [
+    "neekoq",
+    28
+   ],
+   [
+    "qiyanaq_rock",
+    23
+   ],
+   [
+    "neekobasicattack",
+    15
+   ],
+   [
+    "#6a4229fc",
+    11
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "DoggySnaxMissile"
+    ],
+    0.5
+   ]
+  ],
+  "at_end": []
+ },
+ "srx_dragonsoulbuffmountain_preview": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    8
+   ],
+   [
+    "#6a4229fc",
+    3
+   ],
+   [
+    "#f86f3d33",
+    2
+   ],
+   [
+    "neekobasicattack",
+    2
+   ],
+   [
+    "neekoe",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "DoggySnaxMissile"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "yoneedeathmark": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "cast",
+     "neekor"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "yonerstun"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.75
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.25
+   ]
+  ],
+  "lived_med": 2.079,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.75
+   ]
+  ]
+ },
+ "monkeykingdoubleattackdebuff": {
+  "n": 6,
+  "games": 3,
+  "self": 1.0,
+  "type": 28,
+  "durations": [
+   [
+    3.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "talentreaperpersistenteffects"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "FaelightSeenByWardBuffBar"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.167
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 3.084,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    9
+   ],
+   [
+    "#6a4229fc",
+    3
+   ],
+   [
+    "neekowpassive",
+    1
+   ],
+   [
+    "neekowpassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.833
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.833
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Idle"
+    ],
+    0.167
+   ]
+  ]
+ },
+ "sr_2026_s1_rolebound_support_questcompleted": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "sr_2026_s1_rolebound_support_quest"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_gold_display"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "talentreaperpersistenteffects"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    4
+   ],
+   [
+    "neekoe",
+    2
+   ],
+   [
+    "#6a4229fc",
+    1
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "s11support_quest_completion_buff": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "sr_2026_s1_rolebound_support_quest"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_gold_display"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "talentreaperpersistenteffects"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    4
+   ],
+   [
+    "neekoe",
+    2
+   ],
+   [
+    "#6a4229fc",
+    1
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    1
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "crestoftheancientgolem": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    120.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "burning"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "neekowpassiveattack"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardeldervfx"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "neekowpassiveready"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 120.25,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    46
+   ],
+   [
+    "neekowpassive",
+    34
+   ],
+   [
+    "neekoe",
+    28
+   ],
+   [
+    "neekobasicattack",
+    25
+   ],
+   [
+    "#6a4229fc",
+    13
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "crestoftheancientgolemvfx": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    99999.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardeldervfx"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.25
+   ],
+   [
+    [
+     "hit",
+     "burning"
+    ],
+    0.25
+   ],
+   [
+    [
+     "hit",
+     "neekowpassiveattack"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "neekowpassiveready"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 120.25,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    46
+   ],
+   [
+    "neekowpassive",
+    34
+   ],
+   [
+    "neekoe",
+    28
+   ],
+   [
+    "neekobasicattack",
+    25
+   ],
+   [
+    "#6a4229fc",
+    13
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.75
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.25
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.25
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.25
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.25
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ]
+  ]
+ },
+ "3869shield": {
+  "n": 26,
+  "games": 3,
+  "self": 0.462,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    26
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "neekow"
+    ],
+    0.538
+   ],
+   [
+    [
+     "none"
+    ],
+    0.423
+   ],
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.038
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.247,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    46
+   ],
+   [
+    "neekobasicattack",
+    32
+   ],
+   [
+    "neekoe",
+    19
+   ],
+   [
+    "neekowpassive",
+    12
+   ],
+   [
+    "neekowpassiveattack",
+    11
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     1,
+     "NeekoW2"
+    ],
+    0.538
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.423
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.962
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW"
+    ],
+    0.5
+   ]
+  ]
+ },
+ "3869shieldprotectionbuff": {
+  "n": 11,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    16.364,
+    11
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.636
+   ],
+   [
+    [
+     "cast",
+     "3152active"
+    ],
+    0.182
+   ],
+   [
+    [
+     "end",
+     "FaelightSeenByWardBuffBar"
+    ],
+    0.091
+   ],
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    0.091
+   ],
+   [
+    [
+     "cast",
+     "neekordummyspell"
+    ],
+    0.091
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.909
+   ],
+   [
+    [
+     "time"
+    ],
+    0.091
+   ]
+  ],
+  "lived_med": 19.56,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    26
+   ],
+   [
+    "neekobasicattack",
+    11
+   ],
+   [
+    "#6a4229fc",
+    11
+   ],
+   [
+    "neekoe",
+    10
+   ],
+   [
+    "neekor",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.636
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.091
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3152Missile"
+    ],
+    0.091
+   ]
+  ],
+  "at_end": []
+ },
+ "3050_enemybuff": {
+  "n": 5,
+  "games": 3,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    0.3,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.6
+   ],
+   [
+    [
+     "hit",
+     "neekor"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.2
+   ],
+   [
+    [
+     "cast",
+     "3152active"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.8
+   ],
+   [
+    [
+     "my cast",
+     "neekoq"
+    ],
+    0.2
+   ]
+  ],
+  "lived_med": 2.506,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    5
+   ],
+   [
+    "neekoq",
+    5
+   ],
+   [
+    "#6a4229fc",
+    2
+   ],
+   [
+    "perks_arcanecomet_mis",
+    1
+   ],
+   [
+    "perks_arcanecomet_mis_arc",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.8
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3152Missile"
+    ],
+    0.2
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.2
+   ],
+   [
+    [
+     "cooldown",
+     "8f"
+    ],
+    0.2
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.4
+   ]
+  ]
+ },
+ "exaltedwithminibaronnashor_recall": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 61.599,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    8
+   ],
+   [
+    "neekoq",
+    8
+   ],
+   [
+    "neekobasicattack",
+    4
+   ],
+   [
+    "neekowpassive",
+    1
+   ],
+   [
+    "neekowpassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ]
+ },
+ "superrecall": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    3.9,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.982,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "monkeykingspinknockup": {
+  "n": 5,
+  "games": 3,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    0.6,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.6
+   ],
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    0.2
+   ],
+   [
+    [
+     "cast",
+     "neekordummyspell"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "neekor"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.601,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    1
+   ],
+   [
+    "neekoq",
+    1
+   ],
+   [
+    "neekobasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.8
+   ],
+   [
+    [
+     "slot",
+     46,
+     "NeekoRDummySpell"
+    ],
+    0.2
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.4
+   ]
+  ]
+ },
+ "3071blackcleavershred": {
+  "n": 5,
+  "games": 3,
+  "self": 1.0,
+  "type": 28,
+  "durations": [
+   [
+    6.0,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.6
+   ],
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    0.2
+   ],
+   [
+    [
+     "cast",
+     "neekordummyspell"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "neekowhaste"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.6
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.4
+   ]
+  ],
+  "lived_med": 6.68,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    16
+   ],
+   [
+    "#6a4229fc",
+    7
+   ],
+   [
+    "neekoe",
+    5
+   ],
+   [
+    "neekowpassive",
+    1
+   ],
+   [
+    "neekowpassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.2
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     1,
+     "NeekoW"
+    ],
+    0.2
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.2
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "rivenknockback": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.5,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "3152active"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.635,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3152Missile"
+    ],
+    0.5
+   ]
+  ],
+  "at_end": []
+ },
+ "root": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 12,
+  "durations": [
+   [
+    0.375,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "3152active"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.635,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3152Missile"
+    ],
+    0.5
+   ]
+  ],
+  "at_end": []
+ },
+ "zhonyasringshield": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 18,
+  "durations": [
+   [
+    2.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "item2420"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.638,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "item2420": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "item2420"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "junglebufftransferitem": {
+  "n": 1,
+  "games": 3,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    60.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "death"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.871,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "6333bleed": {
+  "n": 3,
+  "games": 3,
+  "self": 0.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "neekoq"
+    ],
+    1.333
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.667
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/ArcaneComet/ArcaneCometSnipe.lua"
+    ],
+    0.667
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 6.534,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_ArcaneComet_Mis_Arc"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    1.667
+   ]
+  ]
+ },
+ "yonerstun": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 5,
+  "durations": [
+   [
+    1.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.267,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "yonerknockback": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    1.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "yonerstun"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.1,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "yonerknockup": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    0.75,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "yonerknockback"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.939,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "hweisignature": {
+  "n": 25,
+  "games": 3,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    4.0,
+    25
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.76
+   ],
+   [
+    [
+     "hit",
+     "neekoq"
+    ],
+    0.12
+   ],
+   [
+    [
+     "end",
+     "hweieqflee"
+    ],
+    0.08
+   ],
+   [
+    [
+     "cast",
+     "neekoe"
+    ],
+    0.08
+   ],
+   [
+    [
+     "cast",
+     "neekow"
+    ],
+    0.04
+   ],
+   [
+    [
+     "end",
+     "neekowhaste"
+    ],
+    0.04
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.64
+   ],
+   [
+    [
+     "other"
+    ],
+    0.36
+   ]
+  ],
+  "lived_med": 4.042,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    19
+   ],
+   [
+    "neekoe",
+    9
+   ],
+   [
+    "perks_aery_tar",
+    8
+   ],
+   [
+    "#6a4229fc",
+    7
+   ],
+   [
+    "neekobasicattack",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.36
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.04
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.4
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.48
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.04
+   ]
+  ]
+ },
+ "hweiqelavadps": {
+  "n": 7,
+  "games": 3,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    0.5,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.714
+   ],
+   [
+    [
+     "end",
+     "hweisignature"
+    ],
+    0.286
+   ],
+   [
+    [
+     "hit",
+     "neekoq"
+    ],
+    0.143
+   ],
+   [
+    [
+     "end",
+     "hweieepull"
+    ],
+    0.143
+   ],
+   [
+    [
+     "end",
+     "neekowhaste"
+    ],
+    0.143
+   ],
+   [
+    [
+     "cast",
+     "neekoe"
+    ],
+    0.143
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.571
+   ],
+   [
+    [
+     "time"
+    ],
+    0.429
+   ]
+  ],
+  "lived_med": 0.935,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    4
+   ],
+   [
+    "neekoe",
+    3
+   ],
+   [
+    "perks_aery_tar",
+    3
+   ],
+   [
+    "neekobasicattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.286
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.714
+   ]
+  ],
+  "at_end": []
+ },
+ "hweiqeslow": {
+  "n": 7,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.5,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.714
+   ],
+   [
+    [
+     "end",
+     "hweisignature"
+    ],
+    0.286
+   ],
+   [
+    [
+     "hit",
+     "neekoq"
+    ],
+    0.143
+   ],
+   [
+    [
+     "end",
+     "hweieepull"
+    ],
+    0.143
+   ],
+   [
+    [
+     "end",
+     "neekowhaste"
+    ],
+    0.143
+   ],
+   [
+    [
+     "cast",
+     "neekoe"
+    ],
+    0.143
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.571
+   ],
+   [
+    [
+     "time"
+    ],
+    0.429
+   ]
+  ],
+  "lived_med": 0.935,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    4
+   ],
+   [
+    "neekoe",
+    3
+   ],
+   [
+    "perks_aery_tar",
+    3
+   ],
+   [
+    "neekobasicattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.286
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.714
+   ]
+  ],
+  "at_end": []
+ },
+ "hweisharedslowbuff": {
+  "n": 13,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    2.55,
+    13
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.769
+   ],
+   [
+    [
+     "end",
+     "hweieepull"
+    ],
+    0.308
+   ],
+   [
+    [
+     "end",
+     "hweisignature"
+    ],
+    0.154
+   ],
+   [
+    [
+     "end",
+     "hweieqflee"
+    ],
+    0.154
+   ],
+   [
+    [
+     "hit",
+     "neekoq"
+    ],
+    0.077
+   ],
+   [
+    [
+     "end",
+     "neekowhaste"
+    ],
+    0.077
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.923
+   ],
+   [
+    [
+     "my hit",
+     "neekoe"
+    ],
+    0.077
+   ]
+  ],
+  "lived_med": 1.203,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    8
+   ],
+   [
+    "neekoe",
+    7
+   ],
+   [
+    "perks_aery_tar",
+    5
+   ],
+   [
+    "neekobasicattack",
+    2
+   ],
+   [
+    "neekor",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.615
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.308
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.462
+   ]
+  ]
+ },
+ "hweieepull": {
+  "n": 7,
+  "games": 3,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    1.0,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.857
+   ],
+   [
+    [
+     "cast",
+     "neekow"
+    ],
+    0.143
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.2,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    3
+   ],
+   [
+    "neekoe",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.714
+   ]
+  ]
+ },
+ "hweiee": {
+  "n": 7,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.062,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "hweieepull"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.236,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    3
+   ],
+   [
+    "perks_aery_tar",
+    3
+   ],
+   [
+    "neekoq",
+    3
+   ],
+   [
+    "neekobasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.714
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.143
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "warwickwenemy": {
+  "n": 10,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    10
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.9
+   ],
+   [
+    [
+     "end",
+     "hweisharedslowbuff"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "hweir"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "hweirdespair"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "hweirdespairslow"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cast",
+     "neekow"
+    ],
+    0.1
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 17.106,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    26
+   ],
+   [
+    "neekobasicattack",
+    23
+   ],
+   [
+    "neekoq",
+    23
+   ],
+   [
+    "#6a4229fc",
+    17
+   ],
+   [
+    "neekowpassive",
+    10
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.8
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.4
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.1
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.1
+   ]
+  ]
+ },
+ "itemcrystalflaskcharge": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "neekow"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "recall"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "my cast",
+     "itemcrystalflask"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 126.692,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    72
+   ],
+   [
+    "#6a4229fc",
+    60
+   ],
+   [
+    "neekobasicattack",
+    50
+   ],
+   [
+    "neekoe",
+    48
+   ],
+   [
+    "neekowpassive",
+    31
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Hide"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": []
+ },
+ "summonerteleport": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    8.0,
+    1
+   ],
+   [
+    5.166,
+    1
+   ],
+   [
+    5.272,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "teleportchannelbar4500"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 5.276,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     53,
+     "TeleportChannelBar4500"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "teleport_target": {
+  "n": 3,
+  "games": 3,
+  "self": 0.0,
+  "type": 5,
+  "durations": [
+   [
+    8.0,
+    1
+   ],
+   [
+    5.166,
+    1
+   ],
+   [
+    5.272,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "teleportchannelbar4500"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 5.41,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     53,
+     "TeleportChannelBar4500"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.667
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ]
+  ]
+ },
+ "s12_summonerteleportmanager": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "summonerteleport"
+    ],
+    0.75
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.0,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    77
+   ],
+   [
+    "#6a4229fc",
+    64
+   ],
+   [
+    "neekoe",
+    58
+   ],
+   [
+    "neekobasicattack",
+    53
+   ],
+   [
+    "neekowpassive",
+    33
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.75
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     5,
+     "S12_SummonerTeleportUpgrade"
+    ],
+    0.25
+   ]
+  ]
+ },
+ "itemcrystalflask": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 14,
+  "durations": [
+   [
+    12.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemcrystalflask"
+    ],
+    0.667
+   ],
+   [
+    [
+     "none"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 12.113,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    7
+   ],
+   [
+    "#6a4229fc",
+    5
+   ],
+   [
+    "neekobasicattack",
+    3
+   ],
+   [
+    "neekowpassive",
+    3
+   ],
+   [
+    "neekowpassiveattack",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "a3"
+    ],
+    0.667
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "hweieqflee": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 29,
+  "durations": [
+   [
+    0.85,
+    1
+   ],
+   [
+    1.062,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "neekordummyspell"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.0,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.5
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.5
+   ]
+  ]
+ },
+ "hweieqslow": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.85,
+    1
+   ],
+   [
+    1.062,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "hweieqflee"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "neekordummyspell"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.27,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "hweir": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "hweisignature"
+    ],
+    0.667
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.067,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    4
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ],
+   [
+    "neekoq",
+    2
+   ],
+   [
+    "neekor",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "hweirdespair": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.25,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "hweisignature"
+    ],
+    0.667
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.067,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    4
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ],
+   [
+    "neekoq",
+    2
+   ],
+   [
+    "neekor",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "hweirdespairslow": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.3,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "hweisignature"
+    ],
+    0.667
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.067,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    4
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ],
+   [
+    "neekoq",
+    2
+   ],
+   [
+    "neekor",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "khazixpslow": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.7,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "itemcrystalflaskcharge"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "neekor"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "warwickwenemy"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.5
+   ],
+   [
+    [
+     "time"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 1.734,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ],
+  "at_end": []
+ },
+ "itemglory": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "itemcrystalflaskcharge"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "neekor"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "warwickwenemy"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "khazixpslow"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    8
+   ],
+   [
+    "neekoq",
+    7
+   ],
+   [
+    "neekoe",
+    7
+   ],
+   [
+    "neekobasicattack",
+    6
+   ],
+   [
+    "neekowpassive",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "srt_2024_horde_dot": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "neekow"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    20
+   ],
+   [
+    "neekoe",
+    8
+   ],
+   [
+    "neekobasicattack",
+    6
+   ],
+   [
+    "#6a4229fc",
+    4
+   ],
+   [
+    "neekowpassive",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SRT_2024_Horde_DoT"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "srt_2024_horde_summoner": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    15
+   ],
+   [
+    "neekoe",
+    9
+   ],
+   [
+    "#6a4229fc",
+    4
+   ],
+   [
+    "neekobasicattack",
+    4
+   ],
+   [
+    "neekowpassive",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SRT_2024_Horde_Summoner"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "hweiewroot": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 12,
+  "durations": [
+   [
+    1.19,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.437,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "sorakaqregen": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    2.7,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "neekoe"
+    ],
+    0.25
+   ],
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.25
+   ],
+   [
+    [
+     "hit",
+     "neekowpassiveattack"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "neekowpassiveready"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.839,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoe",
+    5
+   ],
+   [
+    "neekoq",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.25
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.25
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ]
+  ]
+ },
+ "summonerteleporthaste": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    4.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "summonerteleport"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s12_summonerteleportmanager"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.14,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    1
+   ],
+   [
+    "neekobasicattack",
+    1
+   ],
+   [
+    "neekowpassive",
+    1
+   ],
+   [
+    "neekowpassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "srt_2024_horde_dot_buff": {
+  "n": 6,
+  "games": 3,
+  "self": 0.0,
+  "type": 13,
+  "durations": [
+   [
+    4.6,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    1.333
+   ],
+   [
+    [
+     "hit",
+     "neekobasicattack"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "neekowpassivecounter"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "qiyanaq_rock"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.833
+   ],
+   [
+    [
+     "time"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 10.281,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    7.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.833
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "srx_dragonbuffinfernal": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    52
+   ],
+   [
+    "neekowpassive",
+    20
+   ],
+   [
+    "neekoq",
+    19
+   ],
+   [
+    "neekoe",
+    14
+   ],
+   [
+    "#6a4229fc",
+    9
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SRX_DragonSoulBuffInfernal"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "srx_dragonsoulbuffocean_preview": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    52
+   ],
+   [
+    "neekowpassive",
+    20
+   ],
+   [
+    "neekoq",
+    19
+   ],
+   [
+    "neekoe",
+    14
+   ],
+   [
+    "#6a4229fc",
+    9
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SRX_DragonSoulBuffInfernal"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "3876healthsizeupdisplay": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    2.5,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.575,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    5
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "3876msbufffalloff": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    2.5,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.575,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    5
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "warwickw": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    9.299,
+    1
+   ],
+   [
+    9.488,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 9.73,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekowpassive",
+    10
+   ],
+   [
+    "neekoe",
+    4
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "8010visualdebuff": {
+  "n": 19,
+  "games": 3,
+  "self": 0.0,
+  "type": 28,
+  "durations": [
+   [
+    6.0,
+    19
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.895
+   ],
+   [
+    [
+     "hit",
+     "neekoq"
+    ],
+    0.579
+   ],
+   [
+    [
+     "hit",
+     "neekor"
+    ],
+    0.368
+   ],
+   [
+    [
+     "hit",
+     "neekoe"
+    ],
+    0.316
+   ],
+   [
+    [
+     "none"
+    ],
+    0.105
+   ],
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    0.053
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.737
+   ],
+   [
+    [
+     "time"
+    ],
+    0.263
+   ]
+  ],
+  "lived_med": 6.254,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.789
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.895
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.579
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    0.105
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.053
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.053
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.947
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.158
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.158
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.105
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.053
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.053
+   ]
+  ]
+ },
+ "khazixwsight": {
+  "n": 7,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    2.25,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.857
+   ],
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    0.143
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.384,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "qiyanaq_rock",
+    5
+   ],
+   [
+    "neekoq",
+    5
+   ],
+   [
+    "perks_aery_tar",
+    4
+   ],
+   [
+    "burning",
+    4
+   ],
+   [
+    "neekobasicattack",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.429
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.286
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.143
+   ]
+  ]
+ },
+ "khazixwevoslow": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.912,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.104,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "qiyanaq_rock",
+    4
+   ],
+   [
+    "neekoq",
+    2
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ],
+   [
+    "neekobasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "blessingofthelizardelder": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    120.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 143.04,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "burning",
+    29
+   ],
+   [
+    "neekoq",
+    25
+   ],
+   [
+    "neekobasicattack",
+    24
+   ],
+   [
+    "neekowpassive",
+    11
+   ],
+   [
+    "neekowpassiveattack",
+    11
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "blessingofthelizardeldervfx": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    99999.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "burning"
+    ],
+    0.333
+   ],
+   [
+    [
+     "hit",
+     "neekowpassiveattack"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "neekowpassiveready"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "crestoftheancientgolemvfx"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "my hit",
+     "neekowpassive"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 60.203,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "burning",
+    29
+   ],
+   [
+    "neekoq",
+    25
+   ],
+   [
+    "neekobasicattack",
+    24
+   ],
+   [
+    "neekowpassive",
+    11
+   ],
+   [
+    "neekowpassiveattack",
+    11
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "khazixwisolatedslow": {
+  "n": 4,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.912,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.07,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "burning",
+    4
+   ],
+   [
+    "neekoq",
+    2
+   ],
+   [
+    "neekobasicattack",
+    2
+   ],
+   [
+    "neekoe",
+    2
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "item3153botrkstacks": {
+  "n": 2,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    6.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "neekowpassive"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "burning"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "neekowpassiveattack"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardeldervfx"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "neekowpassiveready"
+    ],
+    0.5
+   ],
+   [
+    [
+     "none"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.5
+   ],
+   [
+    [
+     "other"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 6.173,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    5
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ],
+   [
+    "neekoe",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     45,
+     "NeekoWPassiveMissile"
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.5
+   ]
+  ],
+  "at_end": []
+ },
+ "barontarget": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    8.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.494,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    1
+   ],
+   [
+    "burning",
+    1
+   ],
+   [
+    "neekobasicattack",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "4633stackcounter": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    4.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.2,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekobasicattack",
+    3
+   ],
+   [
+    "perks_aery_tar",
+    3
+   ],
+   [
+    "neekoq",
+    2
+   ],
+   [
+    "neekowpassive",
+    1
+   ],
+   [
+    "neekowpassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.333
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     47,
+     "NeekoDataSelector"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "4633enragebuff": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    3.833,
+    1
+   ],
+   [
+    2.593,
+    1
+   ],
+   [
+    2.831,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "4633stackcounter"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "nautilusknockup"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 10.716,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    7
+   ],
+   [
+    "perks_aery_tar",
+    4
+   ],
+   [
+    "neekoe",
+    3
+   ],
+   [
+    "neekowpassive",
+    2
+   ],
+   [
+    "neekowpassiveattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     47,
+     "NeekoDataSelector"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "yunarawslow": {
+  "n": 3,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.275,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "nautilussplashzoneslow"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.336,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    4
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ],
+   [
+    "burning",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.333
+   ]
+  ],
+  "at_end": []
+ },
+ "yunaraw2slow": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.85,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "neekoe"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.102,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "suppression": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 25,
+  "durations": [
+   [
+    1.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "item3153botrkstacks"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "khazixwevoslow"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.521,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    2
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "3153slow": {
+  "n": 1,
+  "games": 3,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.85,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "neekoq"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "item3153botrkstacks"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "khazixwevoslow"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.087,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "neekoq",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "51"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ }
+}

@@ -1,0 +1,35 @@
+
+main <?:0,0> (18 instructions, 72 bytes at 0000023DB5D135C0)
+0+ params, 5 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; 1
+	8	[-]	SETGLOBAL	0 -4	; SpellDamageRatio
+	9	[-]	NEWTABLE 	0 4 0
+	10	[-]	LOADK    	1 -7	; "PaxSona"
+	11	[-]	LOADK    	2 -8	; "SonaDJGenre03Skin06"
+	12	[-]	LOADK    	3 -9	; "SonaDJGenre01Skin06"
+	13	[-]	LOADK    	4 -10	; "SonaDJGenre02Skin06"
+	14	[-]	SETLIST  	0 4 1	; 1
+	15	[-]	SETGLOBAL	0 -6	; SpellFXOverrideSkins
+	16	[-]	LOADBOOL 	0 1 0
+	17	[-]	SETGLOBAL	0 -11	; IsDamagingSpell
+	18	[-]	RETURN   	0 1
+constants (11) for 0000023DB5D135C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"SpellDamageRatio"
+	5	1
+	6	"SpellFXOverrideSkins"
+	7	"PaxSona"
+	8	"SonaDJGenre03Skin06"
+	9	"SonaDJGenre01Skin06"
+	10	"SonaDJGenre02Skin06"
+	11	"IsDamagingSpell"
+locals (0) for 0000023DB5D135C0:
+upvalues (0) for 0000023DB5D135C0:

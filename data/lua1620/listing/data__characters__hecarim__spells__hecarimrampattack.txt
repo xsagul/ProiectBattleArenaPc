@@ -1,0 +1,56 @@
+
+main <?:0,0> (29 instructions, 116 bytes at 0000027DC6F935F0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 21 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Spells/Icons2D/3057_Sheen.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "HecarimRampAttack"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "r:Hecarim_E_weapon_buf"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect
+	15	[-]	LOADK    	0 -12	; "Weapon"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateAttachBoneName
+	17	[-]	LOADK    	0 -14	; "r:Hecarim_E_weapon_buf2"
+	18	[-]	SETGLOBAL	0 -13	; AutoBuffActivateEffect2
+	19	[-]	LOADK    	0 -16	; "BUFFBONE_GLB_WEAPON_1"
+	20	[-]	SETGLOBAL	0 -15	; AutoBuffActivateAttachBoneName2
+	21	[-]	LOADK    	0 -18	; 1
+	22	[-]	SETGLOBAL	0 -17	; SpellToggleSlot
+	23	[-]	NEWTABLE 	0 1 0
+	24	[-]	LOADK    	1 -20	; "HecarimArcade"
+	25	[-]	SETLIST  	0 1 1	; 1
+	26	[-]	SETGLOBAL	0 -19	; SpellFXOverrideSkins
+	27	[-]	LOADBOOL 	0 1 0
+	28	[-]	SETGLOBAL	0 -21	; IsDamagingSpell
+	29	[-]	RETURN   	0 1
+constants (21) for 0000027DC6F935F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Spells/Icons2D/3057_Sheen.dds"
+	7	"BuffName"
+	8	"HecarimRampAttack"
+	9	"AutoBuffActivateEffect"
+	10	"r:Hecarim_E_weapon_buf"
+	11	"AutoBuffActivateAttachBoneName"
+	12	"Weapon"
+	13	"AutoBuffActivateEffect2"
+	14	"r:Hecarim_E_weapon_buf2"
+	15	"AutoBuffActivateAttachBoneName2"
+	16	"BUFFBONE_GLB_WEAPON_1"
+	17	"SpellToggleSlot"
+	18	1
+	19	"SpellFXOverrideSkins"
+	20	"HecarimArcade"
+	21	"IsDamagingSpell"
+locals (0) for 0000027DC6F935F0:
+upvalues (0) for 0000027DC6F935F0:

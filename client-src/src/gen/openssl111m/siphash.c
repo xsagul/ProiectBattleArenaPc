@@ -5,4 +5,6 @@
 // match: e59f90 _SipHash_Init
 // match: e5a160 _SipHash_Update
 // match: e5a670 _SipHash_set_hash_size
+#define OPENSSL_FILE "crypto\\siphash\\siphash.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/siphash/siphash.c"

@@ -1,0 +1,224 @@
+
+main <?:0,0> (31 instructions, 124 bytes at 000002A0BF8234D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 16 constants, 5 functions
+	1	[-]	GETGLOBAL	0 -2	; GetAttackRange
+	2	[-]	CALL     	0 1 2
+	3	[-]	ADD      	0 0 -3	; - 200
+	4	[-]	SETGLOBAL	0 -1	; MIN_FIGHT_DIST
+	5	[-]	GETGLOBAL	0 -1	; MIN_FIGHT_DIST
+	6	[-]	GETGLOBAL	1 -1	; MIN_FIGHT_DIST
+	7	[-]	MUL      	0 0 1
+	8	[-]	SETGLOBAL	0 -4	; MIN_FIGHT_DIST_SQ
+	9	[-]	GETGLOBAL	0 -2	; GetAttackRange
+	10	[-]	CALL     	0 1 2
+	11	[-]	ADD      	0 0 -6	; - 800
+	12	[-]	SETGLOBAL	0 -5	; MIN_ENGAGE_DIST
+	13	[-]	GETGLOBAL	0 -5	; MIN_ENGAGE_DIST
+	14	[-]	GETGLOBAL	1 -5	; MIN_ENGAGE_DIST
+	15	[-]	MUL      	0 0 1
+	16	[-]	SETGLOBAL	0 -7	; MIN_ENGAGE_DIST_SQ
+	17	[-]	LOADK    	0 -9	; 0
+	18	[-]	SETGLOBAL	0 -8	; AI_ATTACK
+	19	[-]	LOADK    	0 -11	; 1
+	20	[-]	SETGLOBAL	0 -10	; AI_FOLLOW
+	21	[-]	CLOSURE  	0 0	; 000002A0BF8236F0
+	22	[-]	SETGLOBAL	0 -12	; FindNearestTower
+	23	[-]	CLOSURE  	0 1	; 000002A0BF8238B0
+	24	[-]	SETGLOBAL	0 -13	; UpdatePriority
+	25	[-]	CLOSURE  	0 2	; 000002A0BF8219B0
+	26	[-]	SETGLOBAL	0 -14	; BeginTask
+	27	[-]	CLOSURE  	0 3	; 000002A0BF821A30
+	28	[-]	SETGLOBAL	0 -15	; OnTargetLost
+	29	[-]	CLOSURE  	0 4	; 000002A0BF821AD0
+	30	[-]	SETGLOBAL	0 -16	; Tick
+	31	[-]	RETURN   	0 1
+constants (16) for 000002A0BF8234D0:
+	1	"MIN_FIGHT_DIST"
+	2	"GetAttackRange"
+	3	200
+	4	"MIN_FIGHT_DIST_SQ"
+	5	"MIN_ENGAGE_DIST"
+	6	800
+	7	"MIN_ENGAGE_DIST_SQ"
+	8	"AI_ATTACK"
+	9	0
+	10	"AI_FOLLOW"
+	11	1
+	12	"FindNearestTower"
+	13	"UpdatePriority"
+	14	"BeginTask"
+	15	"OnTargetLost"
+	16	"Tick"
+locals (0) for 000002A0BF8234D0:
+upvalues (0) for 000002A0BF8234D0:
+
+function <?:9,27> (36 instructions, 144 bytes at 000002A0BF8236F0)
+1 param, 12 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetStructures
+	2	[-]	GETGLOBAL	2 -2	; GetOtherTeam
+	3	[-]	CALL     	2 1 0
+	4	[-]	CALL     	1 0 2
+	5	[-]	LOADNIL  	2 2
+	6	[-]	GETGLOBAL	3 -3	; GetMaxTravelDistSquared
+	7	[-]	CALL     	3 1 2
+	8	[-]	LOADK    	4 -4	; 1
+	9	[-]	LEN      	5 1
+	10	[-]	LOADK    	6 -4	; 1
+	11	[-]	FORPREP  	4 22	; to 34
+	12	[-]	GETGLOBAL	8 -5	; GetObject
+	13	[-]	GETTABLE 	9 1 7
+	14	[-]	CALL     	8 2 2
+	15	[-]	GETGLOBAL	9 -6	; GetDistSquared
+	16	[-]	GETGLOBAL	10 -7	; GetPos
+	17	[-]	MOVE     	11 8
+	18	[-]	CALL     	10 2 2
+	19	[-]	GETGLOBAL	11 -7	; GetPos
+	20	[-]	CALL     	11 1 0
+	21	[-]	CALL     	9 0 2
+	22	[-]	GETGLOBAL	10 -8	; IsDead
+	23	[-]	MOVE     	11 8
+	24	[-]	CALL     	10 2 2
+	25	[-]	TEST     	10 0 1
+	26	[-]	JMP      	7	; to 34
+	27	[-]	GETGLOBAL	10 -9	; MIN_ENGAGE_DIST_SQ
+	28	[-]	LT       	0 9 10
+	29	[-]	JMP      	4	; to 34
+	30	[-]	LT       	0 9 3
+	31	[-]	JMP      	2	; to 34
+	32	[-]	MOVE     	2 8
+	33	[-]	MOVE     	3 9
+	34	[-]	FORLOOP  	4 -23	; to 12
+	35	[-]	RETURN   	2 2
+	36	[-]	RETURN   	0 1
+constants (9) for 000002A0BF8236F0:
+	1	"GetStructures"
+	2	"GetOtherTeam"
+	3	"GetMaxTravelDistSquared"
+	4	1
+	5	"GetObject"
+	6	"GetDistSquared"
+	7	"GetPos"
+	8	"IsDead"
+	9	"MIN_ENGAGE_DIST_SQ"
+locals (0) for 000002A0BF8236F0:
+upvalues (0) for 000002A0BF8236F0:
+
+function <?:29,44> (19 instructions, 76 bytes at 000002A0BF8238B0)
+1 param, 5 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	SETTABLE 	0 -1 -2	; "Priority" 0
+	2	[-]	SELF     	1 0 -3	; "FindNearestTower"
+	3	[-]	CALL     	1 2 2
+	4	[-]	TEST     	1 0 0
+	5	[-]	JMP      	13	; to 19
+	6	[-]	GETGLOBAL	2 -4	; GetHP
+	7	[-]	MOVE     	3 1
+	8	[-]	CALL     	2 2 2
+	9	[-]	GETGLOBAL	3 -5	; GetMaxHP
+	10	[-]	MOVE     	4 1
+	11	[-]	CALL     	3 2 2
+	12	[-]	DIV      	2 2 3
+	13	[-]	LT       	0 2 -6	; - 0.2
+	14	[-]	JMP      	3	; to 18
+	15	[-]	SUB      	3 -7 2	; 1 -
+	16	[-]	SETTABLE 	0 -1 3	; "Priority" -
+	17	[-]	JMP      	1	; to 19
+	18	[-]	SETTABLE 	0 -1 -8	; "Priority" 0.4
+	19	[-]	RETURN   	0 1
+constants (8) for 000002A0BF8238B0:
+	1	"Priority"
+	2	0
+	3	"FindNearestTower"
+	4	"GetHP"
+	5	"GetMaxHP"
+	6	0.2
+	7	1
+	8	0.4
+locals (0) for 000002A0BF8238B0:
+upvalues (0) for 000002A0BF8238B0:
+
+function <?:46,49> (4 instructions, 16 bytes at 000002A0BF8219B0)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; TurnOffAutoAttack
+	2	[-]	GETGLOBAL	2 -2	; STOPREASON_TARGET_LOST
+	3	[-]	CALL     	1 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 000002A0BF8219B0:
+	1	"TurnOffAutoAttack"
+	2	"STOPREASON_TARGET_LOST"
+locals (0) for 000002A0BF8219B0:
+upvalues (0) for 000002A0BF8219B0:
+
+function <?:51,54> (1 instruction, 4 bytes at 000002A0BF821A30)
+1 param, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000002A0BF821A30:
+locals (0) for 000002A0BF821A30:
+upvalues (0) for 000002A0BF821A30:
+
+function <?:57,81> (49 instructions, 196 bytes at 000002A0BF821AD0)
+1 param, 8 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetState
+	2	[-]	CALL     	1 1 2
+	3	[-]	SELF     	2 0 -2	; "FindNearestTower"
+	4	[-]	CALL     	2 2 2
+	5	[-]	TEST     	2 0 0
+	6	[-]	JMP      	42	; to 49
+	7	[-]	GETGLOBAL	3 -3	; GetPos
+	8	[-]	MOVE     	4 2
+	9	[-]	CALL     	3 2 2
+	10	[-]	GETGLOBAL	4 -4	; GetDistSquared
+	11	[-]	GETGLOBAL	5 -3	; GetPos
+	12	[-]	CALL     	5 1 2
+	13	[-]	MOVE     	6 3
+	14	[-]	CALL     	4 3 2
+	15	[-]	GETGLOBAL	5 -5	; AI_FOLLOW
+	16	[-]	EQ       	0 1 5
+	17	[-]	JMP      	13	; to 31
+	18	[-]	GETGLOBAL	5 -6	; MIN_FIGHT_DIST_SQ
+	19	[-]	LT       	0 4 5
+	20	[-]	JMP      	5	; to 26
+	21	[-]	GETGLOBAL	5 -7	; SetStateAndCloseToTarget
+	22	[-]	GETGLOBAL	6 -8	; AI_ATTACK
+	23	[-]	MOVE     	7 2
+	24	[-]	CALL     	5 3 1
+	25	[-]	JMP      	23	; to 49
+	26	[-]	GETGLOBAL	5 -9	; SetStateAndMove
+	27	[-]	GETGLOBAL	6 -5	; AI_FOLLOW
+	28	[-]	MOVE     	7 3
+	29	[-]	CALL     	5 3 1
+	30	[-]	JMP      	18	; to 49
+	31	[-]	GETGLOBAL	5 -8	; AI_ATTACK
+	32	[-]	EQ       	0 1 5
+	33	[-]	JMP      	15	; to 49
+	34	[-]	GETGLOBAL	5 -10	; TargetInAttackRange
+	35	[-]	CALL     	5 1 2
+	36	[-]	TEST     	5 0 0
+	37	[-]	JMP      	4	; to 42
+	38	[-]	GETGLOBAL	5 -11	; TurnOnAutoAttack
+	39	[-]	MOVE     	6 2
+	40	[-]	CALL     	5 2 1
+	41	[-]	JMP      	7	; to 49
+	42	[-]	GETGLOBAL	5 -12	; TurnOffAutoAttack
+	43	[-]	GETGLOBAL	6 -13	; STOPREASON_MOVING
+	44	[-]	CALL     	5 2 1
+	45	[-]	GETGLOBAL	5 -9	; SetStateAndMove
+	46	[-]	GETGLOBAL	6 -5	; AI_FOLLOW
+	47	[-]	MOVE     	7 3
+	48	[-]	CALL     	5 3 1
+	49	[-]	RETURN   	0 1
+constants (13) for 000002A0BF821AD0:
+	1	"GetState"
+	2	"FindNearestTower"
+	3	"GetPos"
+	4	"GetDistSquared"
+	5	"AI_FOLLOW"
+	6	"MIN_FIGHT_DIST_SQ"
+	7	"SetStateAndCloseToTarget"
+	8	"AI_ATTACK"
+	9	"SetStateAndMove"
+	10	"TargetInAttackRange"
+	11	"TurnOnAutoAttack"
+	12	"TurnOffAutoAttack"
+	13	"STOPREASON_MOVING"
+locals (0) for 000002A0BF821AD0:
+upvalues (0) for 000002A0BF821AD0:

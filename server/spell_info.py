@@ -13,7 +13,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, '..')
 BAINFO = os.path.join(ROOT, 'tools', 'bin', 'bainfo.exe')
-GAME = r'C:\Users\Sorin\Desktop\ProiectBattleArenaPc\game\DATA\FINAL\Champions'
+GAME = os.path.join(ROOT, 'game16' if os.environ.get('BA_PATCH') == '1620' else 'game', 'DATA', 'FINAL', 'Champions')
 _cache = {}
 
 
@@ -147,12 +147,31 @@ def attack_times(champion, attack_speed_mod=1.0):
     server tick, 30 one tick off)"""
     r = char_record(champion)
     asp = float(r['attackSpeed'])
+    period = 1 / (asp * attack_speed_mod)
+    if 'basicAttack.mAttackCastTime' in r:
+        windup = float(r['basicAttack.mAttackCastTime']) / attack_speed_mod
+        return period, windup
     pct = 0.3 + float(r.get('basicAttack.mAttackDelayCastOffsetPercent', 0))
     ratio = float(r.get('basicAttack.mAttackDelayCastOffsetPercentAttackSpeedRatio', 1))
-    period = 1 / (asp * attack_speed_mod)
     base = pct / asp
     return period, base + (period * pct - base) * ratio
 
 
+def basic_attack_missile_speed(champion):
+    """Missile speed of a champion's basic attack: 0 for melee, > 0 for ranged (e.g. 2750 for Jinx, 2500 for Ashe)"""
+    r = char_record(champion)
+    atk_range = float(r.get('attackRange', 125.0))
+    if atk_range <= 300.0:
+        return 0.0
+    raw = raw_fields(champion)
+    for k in (f'{champion}BasicAttack', f'{champion}BasicAttack2', f'{champion}CritAttack', f'{champion}QAttack'):
+        if k in raw and 'missileSpeed' in raw[k]:
+            spd = float(raw[k]['missileSpeed'])
+            if spd > 0:
+                return spd
+    return 2000.0
+
+
 if __name__ == '__main__':
     print(json.dumps(spells(sys.argv[1]), indent=1))
+

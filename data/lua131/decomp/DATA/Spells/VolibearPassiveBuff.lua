@@ -1,0 +1,21 @@
+local L0_1, L1_1, L2_1
+L0_1 = "VolibearPassive.dds "
+BuffTextureName = L0_1
+L0_1 = "VolibearPassiveBuff"
+BuffName = L0_1
+L0_1 = true
+PersistsThroughDeath = L0_1
+L0_1 = true
+NonDispellable = L0_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBSetBuffToolTipVar
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.Value = 0
+L2_1.ValueVar = "RegenTooltip"
+L2_1.ValueVarTable = "CharVars"
+L2_1.Index = 1
+L1_1.Params = L2_1
+L0_1[1] = L1_1
+BuffOnUpdateStatsBuildingBlocks = L0_1

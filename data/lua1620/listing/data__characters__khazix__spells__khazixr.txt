@@ -1,0 +1,70 @@
+
+main <?:0,0> (39 instructions, 156 bytes at 000002A3245A35C0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 25 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Khazix/HUD/Icons2D/Khazix_R_count.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "KhazixR"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; 4
+	14	[-]	SETGLOBAL	0 -9	; SpellToggleSlot
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -11	; PersistsThroughDeath
+	17	[-]	NEWTABLE 	0 2 0
+	18	[-]	LOADK    	1 -13	; "KhazixDroid"
+	19	[-]	LOADK    	2 -14	; "KhazixSkin02"
+	20	[-]	SETLIST  	0 2 1	; 1
+	21	[-]	SETGLOBAL	0 -12	; SpellFXOverrideSkins
+	22	[-]	LOADBOOL 	0 1 0
+	23	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	24	[-]	NEWTABLE 	0 0 6
+	25	[-]	NEWTABLE 	1 5 0
+	26	[-]	LOADK    	2 -18	; 10
+	27	[-]	LOADK    	3 -18	; 10
+	28	[-]	LOADK    	4 -18	; 10
+	29	[-]	LOADK    	5 -18	; 10
+	30	[-]	LOADK    	6 -18	; 10
+	31	[-]	SETLIST  	1 5 1	; 1
+	32	[-]	SETTABLE 	0 -17 1	; "MaximumHits" -
+	33	[-]	SETTABLE 	0 -19 -20	; "CanHitCaster" 0
+	34	[-]	SETTABLE 	0 -21 -20	; "CanHitSameTarget" 0
+	35	[-]	SETTABLE 	0 -22 -20	; "CanHitSameTargetConsecutively" 0
+	36	[-]	SETTABLE 	0 -23 -24	; "CanHitEnemies" 1
+	37	[-]	SETTABLE 	0 -25 -20	; "CanHitFriends" 0
+	38	[-]	SETGLOBAL	0 -16	; ChainMissileParameters
+	39	[-]	RETURN   	0 1
+constants (25) for 000002A3245A35C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Khazix/HUD/Icons2D/Khazix_R_count.dds"
+	7	"BuffName"
+	8	"KhazixR"
+	9	"SpellToggleSlot"
+	10	4
+	11	"PersistsThroughDeath"
+	12	"SpellFXOverrideSkins"
+	13	"KhazixDroid"
+	14	"KhazixSkin02"
+	15	"IsDamagingSpell"
+	16	"ChainMissileParameters"
+	17	"MaximumHits"
+	18	10
+	19	"CanHitCaster"
+	20	0
+	21	"CanHitSameTarget"
+	22	"CanHitSameTargetConsecutively"
+	23	"CanHitEnemies"
+	24	1
+	25	"CanHitFriends"
+locals (0) for 000002A3245A35C0:
+upvalues (0) for 000002A3245A35C0:

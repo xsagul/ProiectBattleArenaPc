@@ -5,4 +5,6 @@
 // match: e69e70 _WHIRLPOOL_Final
 // match: e69f70 _WHIRLPOOL_Init
 // match: e69f90 _WHIRLPOOL_Update
+#define OPENSSL_FILE "crypto\\whrlpool\\wp_dgst.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/whrlpool/wp_dgst.c"

@@ -4,4 +4,6 @@
 // match: e28420 _SEED_decrypt
 // match: e29180 _SEED_encrypt
 // match: e29ee0 _SEED_set_key
+#define OPENSSL_FILE "crypto\\seed\\seed.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/seed/seed.c"

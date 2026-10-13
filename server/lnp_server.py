@@ -28,7 +28,7 @@ Once connected (read in the client's receive layers, vtable order):
   lnp_server.py [--replay-574] [--frag N] <port>     logs every datagram, decrypted, to stdout
   --own-79 [--set79 "1.skin=0"]                      champion creations built by us (create_hero.py)
 """
-import base64, collections, os, socket, struct, sys, time
+import base64, collections, math, os, socket, struct, sys, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lnp import Lnp, checksum, parse
 import lol_packets as LP
@@ -104,6 +104,8 @@ def main():
     args = sys.argv[1:]
     send_574 = '--replay-574' in args
     frag_size = 1000
+    # bytes before the encrypted body in a client datagram: 8 on 13.3, 12 on 16.20 (measured: match_hello)
+    id_len = int(args[args.index('--id-len') + 1]) if '--id-len' in args else 8; s2c = [b'']   # 16.20: our datagrams start with bytes 8..11 of the client's header (hello_probe16.py)
     if '--frag' in args:
         frag_size = int(args[args.index('--frag') + 1])
     frag_mode = args[args.index('--frag-mode') + 1] if '--frag-mode' in args else 'after'
@@ -155,6 +157,7 @@ def main():
     port = int(args[-1])
     lnp = Lnp(KEY)
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     s.bind(('127.0.0.1', port))
     s.settimeout(0.01)
     t0 = time.time()
@@ -165,7 +168,7 @@ def main():
 
     def send_data(addr, st, payload, what, quiet=False):
         st.seq = st.seq % 0x7FFF + 1          # top bit marks ack packets, 0 control packets
-        s.sendto(build(lnp, st.seq, payload), addr)
+        s.sendto(s2c[0] + build(lnp, st.seq, payload), addr)
         if not quiet:
             print(f'{time.time() - t0:8.3f} snd data seq {st.seq} len {len(payload)} {what}', flush=True)
 
@@ -192,6 +195,7 @@ def main():
     # --start-only: the start state alone (keyframe 1), none of the match that followed: the world after the start
     # is our server's
     start_only = '--start-only' in args
+    pass_kinds = {int(x) for x in args[args.index('--pass-kinds') + 1].split(',')} if '--pass-kinds' in args else set()
     if replay_path:
         import rofl_packets as R
         def spectator_stream(r):
@@ -201,6 +205,15 @@ def main():
                 if (e['type'] == 1 and not start_only) or (e['type'] == 2 and e['id'] == 1):
                     for b in R.blocks(r.payload(e)):
                         yield e, b
+            if start_only and pass_kinds:
+                # control experiment (--pass-kinds "98,518,..."): after the start state, the replay's own packets of
+                # these kinds go to the client untouched, to tell what our own packets of a kind do differently
+                yield None, (0.0, 0, -1, 0, b'')
+                for e in r.entries:
+                    if e['type'] == 1:
+                        for b in R.blocks(r.payload(e)):
+                            if b[2] in pass_kinds:
+                                yield e, b
         stream = spectator_stream(R.Rofl(replay_path))
     # --hero-spells "GarenQ,GarenW,GarenE,GarenR": the spells the hero's slots 0..3 get (packet 259, pkt_schema)
     hero_spells = args[args.index('--hero-spells') + 1].split(',') if '--hero-spells' in args else []
@@ -285,6 +298,10 @@ def main():
             'mAttackRange': f('attackRange', 125), 'mMoveSpeed': f('baseMoveSpeed', 325),
             'mAttackSpeedMod': 1.0 + g(0.0, f('attackSpeedPerLevel')) / 100.0,
             'mLevelRef': level, 'mExp': exp, 'mIsTargetable': 1, 'mIsTargetableToTeamFlags': 4, 'mScaleSkinCoef': 1.0,
+            # what the hero may do. Riot's server sends it in the first seconds of the match (replay: 0xa000003 at
+            # 4.0 s, 0x200000f with ActionState2 = 4 from 5.1 s on, the value of a hero free to act). Without it the
+            # client let the hero walk but never sent an attack order: nothing could be attacked.
+            'ActionState': 0x200000f, 'ActionState2': 4,
         }
         # the items' stat mods (items133: items.bin ItemData): flat health / mana / damage / armor / magic resist,
         # attack speed percent, ability haste, crit, movement speed
@@ -308,6 +325,10 @@ def main():
             values['mCrit'] = mods.get('mFlatCritChanceMod', 0)
             values['mMoveSpeed'] = (values['mMoveSpeed'] + mods.get('mFlatMovementSpeedMod', 0)) * \
                 (1 + mods.get('mPercentMovementSpeedMod', 0))
+        # the health is what the hero has left: full minus the damage taken (hero_takes), back up with time (hero_regen)
+        own_hero_state.update(max_hp=values['mMaxHP'], armor=values['mArmor'], regen=values['mHPRegenRate'],
+                              max_par=values['mMaxPAR'])
+        values['mHP'] = max(0.0, values['mMaxHP'] - own_hero_state.get('lost', 0.0))
         if start_only:
             # the hero's gold (500 at the start, the replay's first value for every hero) and the can-cast bits of the
             # summoner spells and recall (0x2030, the replay's first value)
@@ -338,7 +359,9 @@ def main():
         if stack_slot is not None and not used:
             slot_ = stack_slot
         before = S_['gold']
-        sc728, tr728 = PSb.Schema.load(728), PTb.Tree(728)
+        # only the encoder is needed here, and only once: building the decoder tree of 728 took 0.9 s on every
+        # purchase (the item appeared in the inventory seconds after the click)
+        sc728 = schema_cache.get(728) or schema_cache.setdefault(728, PSb.Schema.load(728))
         for u in used:
             v = {'+0xa': '00', '+0xb': '00', '+0xc': struct.pack('<f', before).hex(), '+0x10': f'{u:02x}'}
             send_message(addr, st, 1, struct.pack('<HI', 728, hero) + sc728.encode(v), f'728 item out of slot {u}')
@@ -348,7 +371,7 @@ def main():
             S_['stacks'][slot_] += 1
         else:
             S_['inv'][slot_], S_['stacks'][slot_] = item_id, 1
-        sc15 = PSb.Schema.load(15)
+        sc15 = schema_cache.get(15) or schema_cache.setdefault(15, PSb.Schema.load(15))
         v = {'+0xa': '01',
              '+0xc': {'+0x4': f'{S_["stacks"][slot_]:02x}', '+0x8': struct.pack('<f', float(it_.get('priceTotal', cost))).hex(),
                       '+0xc': struct.pack('<I', item_id).hex(), '+0x10': f'{slot_:02x}', '+0x12': '0000'},
@@ -444,16 +467,34 @@ def main():
                         own_hero_state['dirty'] = True
                     break
             bt, ch, pid, obj, body = pending
+            if pid == -1:
+                # the start state is all sent; what follows are the replay's packets of the passed kinds
+                own_hero_state['start_sent'] = True
+                own_hero_state['dirty'] = True
+                pending = None
+                continue
             if pid == 574:
                 pending = None
                 continue
+            if pass_kinds and start_only and own_hero_state.get('start_sent') and pid in (552, 595):
+                # passed movement / replication packets are batches: the ten champions are taken out (they are ours
+                # to move and to describe), the minions, monsters and structures of the real stream stay
+                for h_ in list(hero_names):
+                    if body is None:
+                        break
+                    body = LP.without_unit(body, h_) if pid == 552 else LP.take_unit(body, h_)[0]
+                if body is None:
+                    pending = None
+                    continue
             if pid == 259 and obj == hero and (hero_spells or hero_champion != 'Darius'):
                 # 259 = a spell put in a slot (+0xc+0x7 slot, +0x18 the spell's name): our hero's own spells
                 sc_, tree_ = spell_codec()
                 v_ = PS2.decode(tree_, sc_, struct.pack('<HI', 259, obj) + body)
                 slot_ = int(v_['+0xc']['+0x7'], 16) if v_ and isinstance(v_['+0xc'], dict) and '+0x7' in v_['+0xc'] else None
                 if slot_ is not None and slot_ < len(engine_spells):
-                    v_['+0x18'] = {'text': engine_spells[slot_].encode().hex()}
+                    # the name travels with its terminating zero (the replay's own: "DariusCleave\0"); without it
+                    # the client finds no such spell and leaves the slot empty: no icon, no level-up, no cast
+                    v_['+0x18'] = {'text': (engine_spells[slot_].encode() + b'\0').hex()}
                     body = sc_.encode(v_)
                     print(f'our 259: slot {slot_} = {engine_spells[slot_]}', flush=True)
             if pid == 79 and own_79 is not None:
@@ -552,8 +593,14 @@ def main():
             # mReplicatedSpellCanCastBitsLower1 (group 0 bit 3): summoner spells 4, 5 and recall 13 as in the
             # replay's first value (0x2030), plus every learned spell
             bits = 0x2030 | sum(1 << k for k, v in st.skills.items() if v > 0)
-            unit = LP.replication_unit(hero, {0: [(3, LP.packed_int(bits))]})
-            send_message(addr, st, 2, struct.pack('<HI', 595, 0) + LP.join_595(LP.TEMPLATE_595[0], unit, LP.TEMPLATE_595[1]),
+            # The client applies a replication packet only when its counter is newer than the last one it took.
+            # The fixed head and trailer of a replay packet carry an old counter: once any of our own 595 (hero
+            # stats, gold) had gone out, these bits were ignored - the point showed, the spell could not be cast.
+            import repl_codec as RC
+            hp_counter[0] += 1
+            game_now_ = stream_t0[1] + (time.time() - stream_t0[0]) * speed if stream_t0 else 0.0
+            send_message(addr, st, 2, struct.pack('<HI', 595, 0) +
+                         RC.packet([(hero, {'mReplicatedSpellCanCastBitsLower1': bits}, RC.HERO)], game_now_, hp_counter[0]),
                          f'595 can-cast bits {bits:#x}')
 
     def cast_q(addr, st, t):
@@ -639,7 +686,7 @@ def main():
             scheduled.append((at + secs, addr, cast_tpl['ch522'], struct.pack('<HI', 522, target) + sc2.encode(w),
                               f'our 522: buff {name} off {target:#x} slot {bslot:#x}'))
 
-    def engine_hits(addr, st, spell, slot, rank, aim):
+    def engine_hits(addr, st, spell, slot, rank, aim, aimed=None):
         """who the cast hits and for how much (spell_engine.py: shape and damage from the spell's data); every hit
         lowers the target's health (595), shows its damage (263) and may kill"""
         import positions as POs
@@ -648,22 +695,29 @@ def main():
         champ = hero_champion
         sh = SE.shape(champ, spell, rank)
         game_now_ = stream_t0[1] + (time.time() - stream_t0[0]) * speed if stream_t0 else 0.0
-        my_team = hero_teams.get(hero)
+        my_team = 'red' if hero_teams.get(hero) in ('red', 200) else 'blue'
         units = []
-        for net, name in hero_names.items():
-            if net == hero or net in dead_units or hero_teams.get(net) == my_team:
-                continue
-            pos = POs.at(net, game_now_)
-            if pos:
-                units.append((net, pos, unit_radius(name)))
-        for net, m in minions.items():
-            if net in dead_units or m['team'] == my_team or not (m['spawn'] <= game_now_ < (m['death'] or 1e9)):
-                continue
-            pos = POs.at(net, game_now_)
-            if pos:
-                units.append((net, pos, 48.0))       # lane minion radius [approximation]
+        if world_[0] is not None:
+            # our own world (world.py): enemy lane minions, the jungle's monsters, the enemy champions
+            units = world_[0].targets_for(my_team, game_now_)
+        else:
+            for net, name in hero_names.items():
+                if net == hero or net in dead_units or hero_teams.get(net) == my_team:
+                    continue
+                pos = POs.at(net, game_now_)
+                if pos:
+                    units.append((net, pos, unit_radius(name)))
+            for net, m in minions.items():
+                if net in dead_units or m['team'] == my_team or not (m['spawn'] <= game_now_ < (m['death'] or 1e9)):
+                    continue
+                pos = POs.at(net, game_now_)
+                if pos:
+                    units.append((net, pos, 48.0))       # lane minion radius [approximation]
         me = hero_pos(st)
         got = SE.hits(sh, me, aim, units)
+        if aimed is not None:
+            # a targeted spell hits the unit the client named in its request, when that one can be hit
+            got = [(n_, math.hypot(p_[0] - me[0], p_[1] - me[1])) for n_, p_, r_ in units if n_ == aimed] or got
         rec = SI.char_record(champ)
         stats = SCc.Stats(ad=(char_level_value(float(rec['baseDamage']), float(rec['damagePerLevel']), 1), 0.0),
                           ap=(0.0, 0.0))
@@ -688,8 +742,8 @@ def main():
                 v['+0x10'] = f'{kind:02x}'            # 0 physical, 1 magic, 2 true (replay: Azir 1, Darius R 2)
                 v['+0xa'], v['+0x1c'], v['+0x1d'] = '00', '04', '00'
                 return v
-            only263.declared = {263: ['+0x14', '+0x10', '+0xa', '+0x1c', '+0x1d']}
-            emit_template(addr, st, 'darius_aa_hit', {0x4000001e: hero, 0x4000026b: net}, at, only263)
+            if world_[0] is None:
+                emit_template(addr, st, 'darius_aa_hit', {0x4000001e: hero, 0x4000026b: net}, at, only263)
             apply_damage(addr, st, net, dmg, at, source=f'spell:{slot}:{spell}:{kind}')
             print(f'engine: {spell} -> {net:#x}: {dmg:.1f} ({"magic" if kind else "physical"}, {calc_name} {raw:.1f}) '
                   f'at +{at - time.time():.2f} s', flush=True)
@@ -734,6 +788,8 @@ def main():
         if not is_self:
             face(st, me, aim)
         cd = data['cd_override'] if 'cd_override' in data else cooldown(spell, level) if data.get('cooldown') else 0.0
+        st.spell_cds = getattr(st, 'spell_cds', {})
+        st.spell_cds[slot] = now + cd
         mana = SI.at_level(data['mana'], level) if data.get('mana') else 0.0
 
         def fix(k, p, v):
@@ -854,7 +910,7 @@ def main():
         import spell_info as SI
         return SI.char_record(hero_champion)
 
-    def generic_cast(addr, st, t, slot, target, caster):
+    def generic_cast(addr, st, t, slot, target, caster, target_net=0):
         """any spell of the hero (--hero-spells, slot 0..3): our own 49 (spell named by its ELF hash, its rank's
         cooldown and mana from the game files), 65 (the spell's animation) and 271 (its cooldown), built on the
         replay's first Q of the hero as a template (pkt_schema decodes it once)"""
@@ -882,9 +938,42 @@ def main():
         st.cast_count = getattr(st, 'cast_count', 0x100) + 1
         f32 = lambda x: struct.pack('<f', x).hex()
         u32 = lambda x: struct.pack('<I', x).hex()
+        # The cast's places as Riot's server writes them (measured on the replay's casts, the caster's place known
+        # from its own path): 49 +0xc+0x60 = where the CASTER stands, +0xc+0x4c = the target place -- a line
+        # missile's is the end of its flight, caster + aimed direction x cast range (JavelinToss 1498 away with
+        # castRange 1500, BlindMonkQOne 1200), a ground spell's is the aimed place, a targeted spell's the unit's
+        # place (and the unit in +0xc+0x8), a self spell's the caster's; +0xc+0x28 = where the caster looked when
+        # the cast began; heights are the ground's (navgrid.height). We wrote the TARGET into both places and took
+        # the caster's place from the request, where it is the aimed place for every aimed spell: start = end,
+        # direction 0 -- no missile of a champion outside the replay had anywhere to fly.
+        import math
+        import navgrid as NGc
+        ground = NGc.grid().height
+        me = hero_pos(st)
+        sh = SE.shape(hero_champion, spell, level)
+        kind = sh['targeting']
         tx, tz = target
-        cx, cz = caster
-        y = 171.0                                  # the fountain's height (from 79); the terrain's is not read yet
+        dx, dz = tx - me[0], tz - me[1]
+        n = math.hypot(dx, dz)
+        ux, uz = (dx / n, dz / n) if n > 1e-3 else getattr(st, 'facing', (0.0, 1.0))
+        rng = sh['range']
+        y_me = ground(*me)
+        aimed = None
+        unit_at = world_[0].place(target_net, game_t) if world_[0] is not None and target_net and target_net != hero else None
+        if kind in ('Self', 'SelfAoe'):
+            point, y_pt = me, y_me
+        elif kind in ('Target', 'TargetOrLocation') and unit_at is not None:
+            aimed, point = target_net, unit_at
+            y_pt = ground(*point)
+        elif kind in ('direction', 'DragDirection', 'WallDetection') or (
+                kind in ('Location', 'LocationClamped') and sh['width'] > 0 and sh['missile_speed'] > 0):
+            L = rng or n
+            point, y_pt = (me[0] + ux * L, me[1] + uz * L), y_me
+        else:
+            L = min(n, rng) if rng else n
+            point = (me[0] + ux * L, me[1] + uz * L)
+            y_pt = y_me if kind == 'Cone' else ground(*point)
+        tx, tz = point
         sc49, v49 = cast_tpl[49]
         v = copy.deepcopy(v49)
         c = v['+0xc']
@@ -899,35 +988,93 @@ def main():
         c['+0x58'] = f32(total)
         c['+0x78'] = f32(game_t)
         c['+0x8c']['+0x10'] = f32(game_t + windup)
-        at = (cx, y, cz) if data.get('targeting', '').startswith('Self') else (tx, y, tz)
-        c['+0x4c'] = c['+0x60'] = struct.pack('<3f', *at).hex()
-        dx, dz = tx - cx, tz - cz
-        n = (dx * dx + dz * dz) ** 0.5 or 1.0
-        c['+0x28'] = struct.pack('<3f', dx / n, 0.0, dz / n).hex()
-        c['+0x1c'] = u32(0x40100000 + 2 * st.cast_count)
-        c['+0xc4'] = u32(0x40100001 + 2 * st.cast_count)
-        c['+0x8'] = []
+        c['+0x4c'] = struct.pack('<3f', point[0], y_pt, point[1]).hex()
+        c['+0x60'] = struct.pack('<3f', me[0], y_me, me[1]).hex()
+        c['+0x28'] = facing_hex(st)
+        if kind not in ('Self', 'SelfAoe'):
+            face(st, me, point)
+        # ids of the cast and of its missile: one counter of their own (the attacks' ids come from another rule;
+        # two live objects under one id replace each other in the client)
+        st.obj_ids = getattr(st, 'obj_ids', 0x40300000) + 2
+        c['+0x1c'] = u32(st.obj_ids)
+        c['+0xc4'] = u32(st.obj_ids + 1)
+        c['+0x8'] = [{'+0x4': u32(aimed), '+0x8': '00'}] if aimed else []
         send_message(addr, st, cast_tpl['ch49'], struct.pack('<HI', 49, hero) + sc49.encode(v),
-                     f'our 49: {spell} (slot {slot}, rank {level}, cooldown {cd}, mana {mana}, windup {windup:.3f}, total {total:.3f})')
-        # the client plays a spell's animation (and its particles) by itself from 49, unless the spell's flags have bit 4
-        # (script-driven spells): for those Riot's server sends the animation (65) -- measured on every cast of the
-        # replay (docs/MIGRARE_12.23.md, "Cine animă o abilitate")
-        scripted = int(SI.raw_fields(hero_champion).get(spell, {}).get('flags', '0')) & 4
-        if scripted and data.get('animation') and 65 in cast_tpl and '--no-anim' not in args:
+                     f'our 49: {spell} (slot {slot}, rank {level}, cooldown {cd}, mana {mana}, windup {windup:.3f}, total {total:.3f}; '
+                     f'{kind} from ({me[0]:.0f}, {me[1]:.0f}) to ({point[0]:.0f}, {point[1]:.0f})' + (f' on {aimed:#x}' if aimed else '') + ')')
+        if sh.get('own_missile'):
+            # The spell's own missile leaves when the cast time is over: 779 naming the cast (49 +0xc+0xc4), one tick
+            # after the windup (replay: every one of 88 Lee Sin Q, 145 of 146 Nidalee Q, 57 of 60 Jhin Q, +0.014 s
+            # median; no cast of a spell without an mMissileSpec of its own gets one). Seen in the client with
+            # Caitlyn's Q (match_spells1: the bullet flies its line); before, such spells did their damage with
+            # nothing flying.
+            sc779 = PS2.Schema.load(779)
+            scheduled.append((now + windup + 0.014, addr, 1, struct.pack('<HI', 779, hero) + sc779.encode({'+0xc': c['+0xc4']}),
+                              f'779 {spell}: its missile leaves'))
+        elif EXTRA_MISSILE and kind not in ('Self', 'SelfAoe') and SE.missile_spell(hero_champion, spell, kind == 'Cone'):
+            # The missile is a spell of its own (RocketGrab -> RocketGrabMissile, Volley -> VolleyAttack). Riot's
+            # server puts that spell in an extra slot (259, slot 0x2d) when the cast time is over and creates the
+            # missile with a packet we cannot write yet (117). In its place the missile spell is cast like a spell
+            # that owns its missile: 259, its own 49 from that slot, 779 naming it. Seen in the client with
+            # Caitlyn's E (the net) and R (the bullet flies to its target), match_spells1 [the way is ours; which
+            # spell is THE missile when several are named after the cast is our choice: spell_engine.missile_spell].
+            # A cone's missiles: as many as the spell's own 'NumberOf...' value says (else 3), spread over the cone
+            # (castConeAngle each side) [approximation].
+            ms = SE.missile_spell(hero_champion, spell, kind == 'Cone')
+            ways = [(ux, uz)]
+            if kind == 'Cone':
+                count = next((int(SI.at_level(v_, level)) for k_, v_ in data.get('values', {}).items()
+                              if k_.lower().startswith('numberof') and v_), 3)
+                half = math.radians(sh['cone_angle'] or 22.5)
+                base = math.atan2(uz, ux)
+                ways = [(math.cos(a_), math.sin(a_)) for a_ in
+                        (base - half + 2 * half * i_ / max(count - 1, 1) for i_ in range(count))]
+            sc259 = spell_codec()[0]
+            v259 = {'+0xc': {'+0x4': '00', '+0x5': '00', '+0x6': '00', '+0x7': '2d', '+0x8': '02000000'},
+                    '+0x18': {'text': (ms.encode() + b'\0').hex()}}
+            at2 = now + windup + 0.014
+            scheduled.append((at2, addr, 1, struct.pack('<HI', 259, hero) + sc259.encode(v259), f'our 259: slot 45 = {ms}'))
+            sc779 = PS2.Schema.load(779)
+            reach = math.hypot(point[0] - me[0], point[1] - me[1]) if kind != 'Cone' else (sh['cone_distance'] or rng or 600.0)
+            for wx_, wz_ in ways:
+                st.obj_ids += 2
+                v2 = copy.deepcopy(v)
+                c2 = v2['+0xc']
+                c2['+0x8c']['+0x14'] = c2['+0xbc'] = u32(SI.elf(ms))
+                c2['+0x34'] = '2d'
+                c2['+0x24'] = f32(0.0)
+                c2['+0x84'] = c2['+0xc8'] = f32(0.0)
+                c2['+0x78'] = f32(game_t + windup)
+                c2['+0x8c']['+0x10'] = f32(game_t + windup)
+                c2['+0x1c'], c2['+0xc4'] = u32(st.obj_ids), u32(st.obj_ids + 1)
+                if len(ways) > 1:
+                    c2['+0x4c'] = struct.pack('<3f', me[0] + wx_ * reach, y_me, me[1] + wz_ * reach).hex()
+                st.cast_count += 1
+                c2['+0x80'] = u32(st.cast_count)
+                scheduled.append((at2, addr, cast_tpl['ch49'], struct.pack('<HI', 49, hero) + sc49.encode(v2),
+                                  f'our 49: {ms} (the missile of {spell}, slot 45)'))
+                scheduled.append((at2, addr, 1, struct.pack('<HI', 779, hero) + sc779.encode({'+0xc': c2['+0xc4']}),
+                                  f'779 {ms}: the missile leaves'))
+        # Play the spell's animation and particles (packet 65) for all champions
+        anim_name = data.get('animation')
+        empowers = data.get('targeting', '').startswith('Self') and (spell + 'Attack') in SI.spells(hero_champion)
+        if anim_name and 65 in cast_tpl and '--no-anim' not in args and not empowers:
             sc65, v65 = cast_tpl[65]
             v = copy.deepcopy(v65)
-            v['+0xc'] = {'text': data['animation'].encode().hex()}
-            send_message(addr, st, cast_tpl['ch65'], struct.pack('<HI', 65, hero) + sc65.encode(v), f'our 65: {data["animation"]}')
-        if 271 in cast_tpl:
+            v['+0xc'] = {'text': anim_name.encode().hex()}
+            send_message(addr, st, cast_tpl['ch65'], struct.pack('<HI', 65, hero) + sc65.encode(v), f'our 65: {anim_name}')
+        st.spell_cds = getattr(st, 'spell_cds', {})
+        st.spell_cds[slot] = now + cd
+        if 271 in cast_tpl and cd > 0:
             sc271, v271 = cast_tpl[271]
             v = copy.deepcopy(v271)
             v['+0x10'] = f'{slot:02x}'
             v['+0x14'] = v['+0x18'] = f32(cd)
-            scheduled.append((now + windup, addr, cast_tpl['ch271'], struct.pack('<HI', 271, hero) + sc271.encode(v),
-                              f'our 271: slot {slot} cooldown {cd}'))
+            send_message(addr, st, cast_tpl['ch271'], struct.pack('<HI', 271, hero) + sc271.encode(v),
+                         f'our 271: slot {slot} cooldown {cd:.1f}')
         # what the spell does besides the cast: buffs and held animations (spell_effects.py, sources there)
-        import spell_effects as SE
-        for kind, name, secs, btype in SE.effects(spell, data, level):
+        import spell_effects as SEf
+        for kind, name, secs, btype in SEf.effects(spell, data, level):
             if kind == 'buff' and 693 in cast_tpl:
                 add_buff(addr, st, hero, name, secs, btype, now + windup)
             elif kind == 'hold' and 65 in cast_tpl and '--no-anim' not in args:
@@ -937,7 +1084,13 @@ def main():
                 v['+0x24'] = f32(secs)
                 v['+0x31'] = '01'
                 send_message(addr, st, cast_tpl['ch65'], struct.pack('<HI', 65, hero) + sc65.encode(v), f'our 65: {name} held {secs} s')
-        engine_hits(addr, st, spell, slot, level, (tx, tz))
+        if empowers:
+            # how long the next attack stays empowered is not read from the data yet [approximation: 4.5 s]
+            st.next_attack_spell = {'spell': spell, 'slot': slot, 'rank': level, 'until': now + 4.5,
+                                    'animation': SI.spells(hero_champion)[spell + 'Attack'].get('animation') or data.get('animation')}
+            print(f'{spell}: the next basic attack within 4.5 s is {spell}Attack', flush=True)
+            return
+        engine_hits(addr, st, spell, slot, level, target, aimed)
         if '--shots-on-cast' in args:
             for dt in (0.15, 0.4, 0.8, 1.5):
                 cast_shots.append(now + dt)
@@ -1221,10 +1374,22 @@ def main():
         import spell_info as SI
         aa = st.aa
         me = hero_pos(st)
-        tp = POs.at(aa['target'], game_now)
+        size = unit_radius(hero_names.get(aa['target']))
+        if world_[0] is not None:
+            # every unit of the match is our world's (world.py: lane minions, turrets, monsters, the other champions):
+            # where it is now; the order is over once it is gone (dead, or a turret still protected)
+            w_ = world_[0]
+            tp = w_.place(aa['target'], game_now) if w_.knows(aa['target']) else None
+            tu_ = w_.turrets.get(aa['target'])
+            if tp is None or (tu_ is not None and not tu_.open):
+                st.aa = None
+                return False
+            size = w_.body(aa['target'])
+        else:
+            tp = POs.at(aa['target'], game_now)
         if tp is None:
             return True
-        rng = float(SI.char_record(hero_names.get(hero, 'Darius'))['attackRange']) + unit_radius(hero_names.get(hero)) +             unit_radius(hero_names.get(aa['target']))
+        rng = float(SI.char_record(hero_names.get(hero, 'Darius'))['attackRange']) + unit_radius(hero_names.get(hero)) + size
         d = math.hypot(tp[0] - me[0], tp[1] - me[1])
         aa['me'], aa['tp'] = me, tp
         if d <= rng:
@@ -1246,6 +1411,7 @@ def main():
     # --test-hp "40000022=200": a test knob, the unit starts with that much health (to reach a kill quickly)
     test_hp = {int(a, 16): float(b) for a, b in (x.split('=') for x in args[args.index('--test-hp') + 1].split(';'))}         if '--test-hp' in args else {}
     hp_counter = [1000000]
+    WORLD_NET = 0x40001000           # net ids from here up are units of our own world (world.NET_BASE)
 
     def max_hp(target):
         import spell_info as SI
@@ -1268,6 +1434,26 @@ def main():
         import repl_codec as RC
         if target in dead_units:
             return None
+        if world_[0] is not None:
+            # a unit of our own world (lane minion, turret, monster, another champion): its health, its death and
+            # what follows are the world's business; gold and experience for a kill come back as events (world_events)
+            w_ = world_[0]
+            if not w_.knows(target):
+                return None
+            game_at = stream_t0[1] + (at - stream_t0[0]) * speed if stream_t0 else 0.0
+            kind = 0
+            is_basic = True
+            if source.startswith('spell:'):
+                _, sl_, sp_name_, k_ = source.split(':')
+                kind = int(k_)
+                is_basic = False
+            for ch_, data_, what_ in w_.hit(game_at, hero, target, dmg, show=True, kind=kind, is_basic=is_basic):
+                send_message(addr, st, ch_, data_, what_, quiet=False)
+            if w_.place(target, game_at) is None:
+                print(f'{target:#x} killed by the hero', flush=True)
+                if getattr(st, 'aa', None) and st.aa.get('target') == target:
+                    st.aa = None
+            return 0.0
         if target not in unit_hp:
             m = test_hp.get(target) or max_hp(target)
             if m is None:
@@ -1277,8 +1463,7 @@ def main():
         hp_counter[0] += 1
         game_at = stream_t0[1] + (at - stream_t0[0]) * speed if stream_t0 else 0.0
         if target in minions:
-            unit = LP.replication_unit(target, {3: [(0, struct.pack('<f', unit_hp[target]))]})
-            body595 = LP.join_595(LP.TEMPLATE_595[0], unit, LP.TEMPLATE_595[1])
+            body595 = RC.packet([(target, {'mHP': unit_hp[target]}, 'lane_minion')], game_at, hp_counter[0])
         else:
             body595 = RC.packet([(target, {'mHP': unit_hp[target]}, RC.HERO)], game_at, hp_counter[0])
         send_message(addr, st, 2, struct.pack('<HI', 595, 0) + body595, f'our 595: {target:#x} health {unit_hp[target]:.1f}')
@@ -1297,6 +1482,154 @@ def main():
         game_now_ = stream_t0[1] + (time.time() - stream_t0[0]) * speed if stream_t0 else 0.0
         send_message(addr, st, 2, struct.pack('<HI', 595, 0) + RC.packet([(hero, {'mGold': st.gold, 'mGoldTotal': st.gold_total}, RC.HERO)], game_now_, hp_counter[0]),
                      f'our 595: hero gold {st.gold:.0f}')
+
+    # ---- our hero as a target of our world (world.py: turrets, minions), its health, death, return and levels ----
+    FOUNTAIN = (394.77, 461.57)                 # the blue fountain (the map's own point)
+    # experience a level needs in all (the usual table: 280 for level 2, +100 more each level)
+    XP_LEVELS = [280, 660, 1140, 1720, 2400, 3180, 4060, 5040, 6120, 7300, 8580, 9960, 11440, 13020, 14700, 16480, 18360]
+
+    def game_time():
+        return stream_t0[1] + (time.time() - stream_t0[0]) * speed if stream_t0 else 0.0
+
+    def hero_health(addr, st, why):
+        """our hero's health as it is now (595 mHP)"""
+        import repl_codec as RC
+        hp = max(0.0, own_hero_state.get('max_hp', 600.0) - own_hero_state.get('lost', 0.0))
+        hp_counter[0] += 1
+        send_message(addr, st, 2, struct.pack('<HI', 595, 0) + RC.packet([(hero, {'mHP': hp}, RC.HERO)], game_time(), hp_counter[0]),
+                     f'our 595: hero health {hp:.0f} ({why})', quiet=True)
+        return hp
+
+    def hero_takes(addr, st, source, raw):
+        """a turret's or a minion's attack lands on our hero: physical damage through its armor, the number (263),
+        the new health and, at zero, its death"""
+        if getattr(st, 'dead', False) or world_[0] is None:
+            return
+        if getattr(st, 'recalling', None):
+            st.recalling = None
+            print(f'Recall cancelled by damage from {source:#x}!', flush=True)
+        dmg = raw * 100.0 / (100.0 + own_hero_state.get('armor', 30.0))
+        own_hero_state['lost'] = own_hero_state.get('lost', 0.0) + dmg
+        ch_, data_, what_ = world_[0].damage_number(hero, source, dmg)
+        send_message(addr, st, ch_, data_, what_, quiet=True)
+        if hero_health(addr, st, f'hit by {source:#x} for {dmg:.0f}') <= 0:
+            hero_dies(addr, st, source)
+
+    def hero_dies(addr, st, killer):
+        """our hero's death as the replay's (Jax at 308.379 s): target cleared (740), 568, the death time (780, 417
+        with the killer), 440; it stops where it is (552 with one point) and comes back at the fountain later"""
+        w_ = world_[0]
+        level = own_hero_state['progress'][0]
+        dt = death_time(level, game_time())
+        st.dead, st.alive_at = True, time.time() + dt / speed
+        st.aa = None
+        f32 = struct.pack('<f', dt).hex()
+        me = hero_pos(st)
+        for ch_, data_, what_ in (
+                w_.real['attack_740'][1].as_sent(hero, '740 hero target cleared'),
+                w_.real['herodeath_568'][0].as_sent(hero, '568 (hero death)'),
+                w_.real['herodeath_780'][0].packet(hero, lambda v: v.update({'+0xc': f32}), f'780 death time {dt:.1f}'),
+                w_.real['herodeath_417'][0].packet(hero, lambda v: v.update({'+0xc': f32, '+0x2c': struct.pack('<I', killer).hex()}),
+                                                   f'417 hero dies (killer {killer:#x})'),
+                w_.real['herodeath_440'][0].packet(hero, lambda v: v.update({'+0xc': struct.pack('<I', hero).hex()}), '440 (hero death)')):
+            send_message(addr, st, ch_, data_, what_)
+        send_path(addr, st, [me], 'dies')
+        print(f'hero killed by {killer:#x}: back in {dt:.1f} s', flush=True)
+
+    def hero_returns(addr, st):
+        """the hero alive again at its fountain (the replay's Jax at 322.393 s: 128 with the place and the mana, a
+        552 with that one point, full health)"""
+        st.dead = False
+        own_hero_state['lost'] = 0.0
+        mana = float(own_hero_state.get('max_par', 0.0))
+        ch_, data_, what_ = world_[0].real['respawn_128'][0].packet(
+            hero, lambda v: v.update({'+0xc': struct.pack('<ff', *FOUNTAIN).hex(), '+0x14': struct.pack('<f', mana).hex()}),
+            '128 hero alive again')
+        send_message(addr, st, ch_, data_, what_)
+        st.pos, st.path = FOUNTAIN, None
+        send_path(addr, st, [FOUNTAIN], 'is back at the fountain')
+        own_hero_state['dirty'] = True
+        print('hero alive again at the fountain', flush=True)
+
+    def hero_regen(addr, st, dt):
+        """health coming back: the champion's own regeneration, and 8.5 % of its health a second at the fountain"""
+        import math
+        lost = own_hero_state.get('lost', 0.0)
+        if lost <= 0 or getattr(st, 'dead', False):
+            return
+        gain = own_hero_state.get('regen', 1.5) * dt
+        if math.dist(hero_pos(st), FOUNTAIN) < 1000.0:
+            gain += 0.085 * own_hero_state.get('max_hp', 600.0) * dt
+        own_hero_state['lost'] = max(0.0, lost - gain)
+        if int(lost) != int(own_hero_state['lost']):
+            hero_health(addr, st, 'regeneration')
+
+    def hero_xp(addr, st, amount):
+        """experience for our hero; a new level = 606 (level, one more skill point) and the level's stats (595)"""
+        level, exp = own_hero_state['progress']
+        exp += amount
+        while level < 18 and exp >= XP_LEVELS[level - 1]:
+            level += 1
+            b = LP.BODIES.get(f'606:{level},1')
+            if b:
+                send_message(addr, st, 1, struct.pack('<HI', 606, hero) + bytes.fromhex(b[0]), f'606 hero level {level}')
+            print(f'hero reaches level {level}', flush=True)
+        own_hero_state['progress'] = (level, exp)
+        own_hero_state['dirty'] = True
+
+    def world_events(addr, st):
+        """what our world did to the champions since the last tick"""
+        w_ = world_[0]
+        events, w_.events = w_.events, []
+        for ev in events:
+            if ev[0] == 'hero_hit' and ev[3] == hero:
+                hero_takes(addr, st, ev[2], ev[4])
+            elif ev[0] == 'xp' and ev[2] == hero:
+                xp_val = ev[3]
+                try:
+                    import pkt_schema as PSw
+                    sc46 = schema_cache.get(46) or schema_cache.setdefault(46, PSw.Schema.load(46))
+                    v46 = {'+0xc': struct.pack('<f', float(xp_val)).hex(),
+                           '+0x10': struct.pack('<I', hero).hex()}
+                    send_message(addr, st, 1, struct.pack('<HI', 46, hero) + sc46.encode(v46),
+                                 f'46 give xp +{xp_val:.1f}')
+                except Exception as ex:
+                    print(f'packet 46 error: {ex}', flush=True)
+                hero_xp(addr, st, xp_val)
+            elif ev[0] == 'gold' and ev[2] == hero:
+                gold_val = ev[3]
+                target_minion = ev[4] if len(ev) > 4 else 0
+                try:
+                    import pkt_schema as PSw
+                    sc453 = schema_cache.get(453) or schema_cache.setdefault(453, PSw.Schema.load(453))
+                    v453 = {'+0xc': struct.pack('<f', float(gold_val)).hex(),
+                            '+0x10': struct.pack('<I', hero).hex(),
+                            '+0x14': '00',
+                            '+0x18': struct.pack('<I', target_minion).hex() if target_minion else '00000000'}
+                    send_message(addr, st, 1, struct.pack('<HI', 453, hero) + sc453.encode(v453),
+                                 f'453 last-hit gold +{gold_val:.0f} from {target_minion:#x}')
+                except Exception as ex:
+                    print(f'packet 453 error: {ex}', flush=True)
+                give_gold(addr, st, gold_val)
+            elif ev[0] == 'turret_dead':
+                print(f'turret {ev[2]:#x} ({ev[3]}) fell, killer {ev[4]:#x}', flush=True)
+            elif ev[0] == 'inhibitor_dead':
+                print(f'inhibitor {ev[2]:#x} ({ev[3]} {ev[4]}) fell, killer {ev[5]:#x}', flush=True)
+            elif ev[0] == 'inhibitor_respawn':
+                print(f'inhibitor {ev[2]:#x} ({ev[3]} {ev[4]}) respawned!', flush=True)
+            elif ev[0] == 'game_over':
+                print(f'THE MATCH IS OVER: the {ev[2]} nexus fell (killer {ev[3]:#x})', flush=True)
+            elif ev[0] == 'fountain_heal' and ev[2] == hero:
+                max_h = max_hp(hero) or 600.0
+                curr_h = unit_hp.get(hero, max_h)
+                if curr_h < max_h:
+                    unit_hp[hero] = min(max_h, curr_h + 0.10 * max_h)
+                    hp_counter[0] += 1
+                    import repl_codec as RC
+                    body_ = RC.packet([(hero, {'mHP': unit_hp[hero]}, RC.HERO)], game_time(), hp_counter[0])
+                    send_message(addr, st, 2, struct.pack('<HI', 595, 0) + body_, f'595 fountain heal {unit_hp[hero]:.0f}/{max_h:.0f}', quiet=True)
+            elif ev[0] == 'champion_dead':
+                print(f'champion {hero_names.get(ev[2], hex(ev[2]))} ({ev[3]}) died, killer {ev[4]:#x}', flush=True)
 
     # what the replay says about a champion's death (every one of its 53, data/exe133/codec/417.all.jsonl ...):
     # - the death time (417 / 780 +0xc) = DeathTimes.mTimeDeadPerLevel[level] x (1 + increase), the increase growing
@@ -1563,7 +1896,11 @@ def main():
         me_xyz = (me2[0], 171.0, me2[1])
         tg_pos = struct.pack('<3f', tp2[0], 171.0, tp2[1]).hex()
         target = aa['target']
-        hit_at = math.ceil(windup * 30 - 1e-6) / 30
+        mspeed = SI.basic_attack_missile_speed(champ)
+        is_ranged = mspeed > 0
+        dist = math.hypot(tp2[0] - me2[0], tp2[1] - me2[1])
+        flight = (dist / mspeed) if (is_ranged and mspeed > 0) else 0.0
+        hit_at = math.ceil((windup + flight) * 30 - 1e-6) / 30
         if armed:
             name = f'attack_{armed["atk_slot"]:02x}_{armed["attack"]}'
             if not os.path.exists(os.path.join(AUTO_DIR, champ, name + '.json')):
@@ -1587,6 +1924,12 @@ def main():
         tv = tpl['packets'][0]['values']['+0xc']['+0x8']
         ids[int.from_bytes(bytes.fromhex(tv), 'little')] = target
         emit_template(addr, st, f'auto/{champ}/{name}', ids, 0, fix)
+        if is_ranged and mspeed > 0:
+            attack_id = 0x40100001 + 4 * st.cast_count
+            mid = struct.pack('<I', attack_id).hex()
+            sc779 = PS2.Schema.load(779)
+            pkt779 = struct.pack('<HI', 779, hero) + sc779.encode({'+0xc': mid})
+            scheduled.append((now + windup, addr, 1, pkt779, f'779 {champ} attack missile'))
         # damage: an armed attack = the spell's damage calculation; a basic attack = AD; through armor / MR
         kind = 0
         if armed:
@@ -1609,7 +1952,8 @@ def main():
             v['+0xa'], v['+0x1c'], v['+0x1d'] = '00', '04', '00' if armed else '01'
             return v
         only263.declared = {263: ['+0x14', '+0x10', '+0xa', '+0x1c', '+0x1d']}
-        emit_template(addr, st, 'darius_aa_hit', {0x4000001e: hero, 0x4000026b: target}, time.time() + hit_at, only263)
+        if world_[0] is None:
+            emit_template(addr, st, 'darius_aa_hit', {0x4000001e: hero, 0x4000026b: target}, time.time() + hit_at, only263)
         src = f'spell:{armed["slot"]}:{armed["attack"]}:{kind}' if armed else f'attack0x40'
         apply_damage(addr, st, target, dmg, time.time() + hit_at, source=src)
         if champ == 'Darius':
@@ -1653,15 +1997,37 @@ def main():
         if armed is not None or os.path.exists(os.path.join(AUTO_DIR, champ, 'attack_40.json')):
             auto_attack_tick(addr, st, aa, champ, period, windup, armed)
             return
-        hit_at = math.ceil(windup * 30 - 1e-6) / 30
+        rec = SI.char_record(champ)
+        attack_range = float(rec.get('attackRange', 125.0))
+        mspeed = SI.basic_attack_missile_speed(champ)
+        is_ranged = mspeed > 0 or attack_range > 300.0
+        me2, tp2 = aa.get('me', (554.0, 581.0)), aa.get('tp', (704.0, 631.0))
+        dist = math.hypot(tp2[0] - me2[0], tp2[1] - me2[1])
+        flight = (dist / mspeed) if (is_ranged and mspeed > 0) else 0.0
+        hit_at = math.ceil((windup + flight) * 30 - 1e-6) / 30
         f32 = lambda x: struct.pack('<f', x).hex()
         now = time.time()
         st.cast_count = getattr(st, 'cast_count', 0x100) + 2
         attack_id = 0x40100001 + 4 * st.cast_count
         slot = random.choice((0x40, 0x41))         # mAttackProbability 0.5 / extraAttacks 0.5
-        me2, tp2 = aa.get('me', (554.0, 581.0)), aa.get('tp', (704.0, 631.0))
         me_xyz = (me2[0], 171.0, me2[1])
         tg_pos = struct.pack('<3f', tp2[0], 171.0, tp2[1]).hex()
+
+        # Send champion basic attack animation via packet 65
+        atk_anim = None
+        for atk_k in (f'{champ}BasicAttack', f'{champ}BasicAttack2', f'{champ}CritAttack'):
+            if atk_k in SI.spells(champ):
+                atk_anim = SI.spells(champ)[atk_k].get('animation')
+                if atk_anim:
+                    break
+        atk_anim = atk_anim or random.choice(['Attack1', 'Attack2'])
+        if 65 in cast_tpl and '--no-anim' not in args:
+            import copy as _cp
+            sc65, v65 = cast_tpl[65]
+            v65 = _cp.deepcopy(v65)
+            v65['+0xc'] = {'text': atk_anim.encode().hex()}
+            send_message(addr, st, cast_tpl['ch65'], struct.pack('<HI', 65, hero) + sc65.encode(v65),
+                         f'our 65: {atk_anim} ({champ} basic attack)')
 
         def fix(k, p, v):
             if p['pid'] == 592:
@@ -1669,15 +2035,44 @@ def main():
                 a['+0x4'] = struct.pack('<I', st.cast_count).hex()
                 a['+0xc'] = f'{slot:02x}'
                 a['+0x1c'] = '80'
+                a['+0x20'] = struct.pack('<I', attack_id).hex()
                 a['+0x24'] = tg_pos
                 v['+0x3c'] = struct.pack('<ff', me_xyz[0], me_xyz[2]).hex()
             if p['pid'] == 516:
                 v['+0xc'] = tg_pos
             return v
-        fix.declared = {592: ['+0xc+0x1c']}
+        fix.declared = {592: ['+0xc+0x4', '+0xc+0x1c', '+0xc+0x24', '+0xc+0x20', '+0x3c'], 516: ['+0xc']}
         face(st, me2, tp2)
         emit_template(addr, st, 'darius_aa', {0x4000001e: hero, 0x4000026b: aa['target'], 0x400006f2: attack_id}, 0, fix)
+        if is_ranged and mspeed > 0:
+            mid = struct.pack('<I', attack_id).hex()
+            sc779 = PS2.Schema.load(779)
+            pkt779 = struct.pack('<HI', 779, hero) + sc779.encode({'+0xc': mid})
+            scheduled.append((now + windup, addr, 1, pkt779, f'779 {champ} attack missile'))
         dmg, ad, armor = hit_damage(aa['target'])
+        emp = getattr(st, 'next_attack_spell', None)
+        if emp and now > emp['until']:
+            emp = st.next_attack_spell = None
+        if emp:
+            # the attack a self-cast spell empowered: that spell's strike animation and its damage calculation
+            # (through armor or magic resist as the formula says), then the spell is used up
+            import copy
+            import spell_calc as SCc_
+            import spell_engine as SEng_
+            st.next_attack_spell = None
+            dm = SEng_.damage(champ, emp['spell'], emp['rank'], 1, SCc_.Stats(ad=(ad, 0.0)))
+            if dm:
+                tr = SI.char_record(hero_names[aa['target']]) if hero_names.get(aa['target']) else {}
+                resist = char_level_value(float(tr.get('baseArmor', 0)), float(tr.get('armorPerLevel', 0)), 1) if dm[1] == 0 else \
+                    char_level_value(float(tr.get('baseSpellBlock', 30)), float(tr.get('spellBlockPerLevel', 0)), 1) if tr else 0.0
+                dmg = dm[0] * 100 / (100 + resist)
+            if emp.get('animation') and 65 in cast_tpl:
+                sc65, v65 = cast_tpl[65]
+                v65 = copy.deepcopy(v65)
+                v65['+0xc'] = {'text': emp['animation'].encode().hex()}
+                send_message(addr, st, cast_tpl['ch65'], struct.pack('<HI', 65, hero) + sc65.encode(v65),
+                             f'our 65: {emp["animation"]} (the empowered attack of {emp["spell"]})')
+            print(f'empowered attack: {emp["spell"]} rank {emp["rank"]}, damage {dmg:.1f}', flush=True)
 
         def fix_hit(k, p, v):
             if p['pid'] in (453, 61, 522):
@@ -1690,8 +2085,10 @@ def main():
             return v
         fix_hit.declared = {263: ['+0x14', '+0xa', '+0x1c', '+0x1d']}
         apply_damage(addr, st, aa['target'], dmg, time.time() + hit_at, source=f'attack{slot:#x}')
-        hemo_hit_at(addr, st, aa['target'], time.time() + hit_at)
-        emit_template(addr, st, 'darius_aa_hit', {0x4000001e: hero, 0x4000026b: aa['target']}, time.time() + hit_at, fix_hit)
+        if champ == 'Darius':
+            hemo_hit_at(addr, st, aa['target'], time.time() + hit_at)
+        if world_[0] is None:
+            emit_template(addr, st, 'darius_aa_hit', {0x4000001e: hero, 0x4000026b: aa['target']}, time.time() + hit_at, fix_hit)
         print(f'attack {slot:#x} on {aa["target"]:#x}: period {period:.3f}, hit at +{hit_at:.3f}, damage {dmg:.2f} '
               f'(AD {ad:.1f}, armor {armor:.1f})', flush=True)
         if '--shots-on-cast' in args and not aa.get('shots'):
@@ -1707,6 +2104,14 @@ def main():
             a_, b_ = item.split(':')
             x_, z_ = b_.split(',')
             auto_teleport.append([float(a_), float(x_), float(z_)])
+    # --world-do "40:xp=300;60:raze": test aids for our world at those game seconds -- experience for the hero (a
+    # level-up without waiting for minions), or the red mid turrets, nexus turrets and nexus falling to the hero one
+    # after the other (a turret's fall and the end of the match without playing half an hour)
+    world_do = []
+    if '--world-do' in args:
+        for item in args[args.index('--world-do') + 1].split(';'):
+            a_, b_ = item.split(':')
+            world_do.append([float(a_), b_])
     auto_attack = []
     if '--auto-attack' in args:
         for item in args[args.index('--auto-attack') + 1].split(';'):
@@ -1722,12 +2127,15 @@ def main():
             a_, b_ = item.split(':')
             auto_w.append([float(a_), int(b_, 16)])
 
-    # --auto-cast "12:0;14:1": at those game seconds the server casts those slots itself (as if 16 came)
+    # --auto-cast "12:0;14:1:7800,7800": at those game seconds the server casts those slots itself (as if 16
+    # came), towards that place when one is given
     auto_cast = []
     if '--auto-cast' in args:
         for item in args[args.index('--auto-cast') + 1].split(';'):
-            a_, b_ = item.split(':')
-            auto_cast.append([float(a_), int(b_)])
+            p_ = item.split(':')
+            auto_cast.append([float(p_[0]), int(p_[1])] + ([float(x_) for x_ in p_[2].split(',')] if len(p_) > 2 else [900.0, 900.0]))
+    # --no-extra-missile: without the separate missile spell's own cast (see generic_cast)
+    EXTRA_MISSILE = '--no-extra-missile' not in args
 
     # --auto-q <game second>: the server levels Q and casts it by itself at that game time (no input needed)
     auto_q = float(args[args.index('--auto-q') + 1]) if '--auto-q' in args else None
@@ -1762,6 +2170,8 @@ def main():
             d, addr = s.recvfrom(4096)
         except socket.timeout:
             d = None
+        except ConnectionResetError:
+            d = None                      # the client closed its socket (the match ended): nothing to read
         t = time.time() - t0
         due = sorted([x for x in scheduled if x[0] <= time.time()], key=lambda x: x[0])
         for x in due:
@@ -1771,19 +2181,71 @@ def main():
                 continue
             send_message(x[1], peers[x[1]], x[2], x[3], x[4])
         if stream_t0 is not None:
+            game_now = stream_t0[1] + (time.time() - stream_t0[0]) * speed
             for a, st in peers.items():
                 if st.connected:
+                    if not getattr(st, 'barrier_down', False) and game_now >= 15.0:
+                        st.barrier_down = True
+                        print(f'{t:8.3f} [Match Time 0:15] Fountain barrier dropped! Spawn platform opened.', flush=True)
                     pump_stream(a, st)
             game_now = stream_t0[1] + (time.time() - stream_t0[0]) * speed
-            if start_only and own_hero_state.get('start_sent'):
+            if start_only and own_hero_state.get('start_sent') and '--no-world' not in args:
                 # our own Summoner's Rift (world.py): lane minion waves
                 if world_[0] is None:
                     import world as WORLD
                     world_[0] = WORLD.World()
+                    world_[0].counter = hp_counter      # one counter for every replication packet we send
+                    if os.environ.get('WORLD_STATE_LOG'):
+                        # a test aid: what the world holds, every second and at every death, with the wall clock
+                        # (to set against what the client holds: ba_host.dll's census, tools/census.py)
+                        world_[0].died = []
+                        world_[0].state_log = open(os.environ['WORLD_STATE_LOG'], 'w')
+                        world_[0].state_next = 0.0
+                for a, st in peers.items():             # where our hero is: turrets and minions may attack it
+                    if st.connected and hero is not None:
+                        world_[0].set_hero(hero, 'blue', hero_pos(st), alive=not getattr(st, 'dead', False),
+                                           radius=unit_radius(hero_champion))
                 for ch_, data_, what_ in world_[0].tick(game_now):
                     for a, st in peers.items():
                         if st.connected:
-                            send_message(a, st, ch_, data_, what_, quiet=not what_.startswith('552'))
+                            send_message(a, st, ch_, data_, what_, quiet=what_[:3] not in ('310', '417', '128', '634', '137'))
+                if world_[0].died is not None:
+                    w_ = world_[0]
+                    for td_, net_, src_ in w_.died:
+                        w_.state_log.write(f'D {time.time() * 1000:.0f} {td_:.3f} {net_:x} {src_:x}\n')
+                    del w_.died[:]
+                    if game_now >= w_.state_next:
+                        w_.state_next = game_now + 1.0
+                        w_.state_log.write(f'T {time.time() * 1000:.0f} {game_now:.3f}\n')
+                        for net_, m_ in w_.minions.items():
+                            p_ = m_.pos(game_now) or (0.0, 0.0)
+                            w_.state_log.write(f'{net_:x} {m_.team} {m_.lane} {m_.kind} {m_.hp:.1f} {p_[0]:.0f} {p_[1]:.0f} '
+                                               f'{m_.target or 0:x} {int(m_.standing)}{int(m_.chasing)}\n')
+                        for net_, h_ in w_.heroes.items():
+                            w_.state_log.write(f'{net_:x} hero - - 0 {h_["pos"][0]:.0f} {h_["pos"][1]:.0f} 0 00\n')
+                        w_.state_log.flush()
+                for a, st in peers.items():
+                    if st.connected and hero is not None:
+                        world_events(a, st)
+                        if getattr(st, 'dead', False) and time.time() >= st.alive_at:
+                            hero_returns(a, st)
+                        if getattr(st, 'recalling', None) and time.time() >= st.recalling:
+                            st.recalling = None
+                            team_ = 'red' if hero_teams.get(hero) in ('red', 200) else 'blue'
+                            fountain = (394.77, 461.57) if team_ == 'blue' else (14340.42, 14391.08)
+                            st.hero_pos = fountain
+                            if world_[0] is not None:
+                                world_[0].set_hero(hero, team_, fountain)
+                            send_path(a, st, [fountain], 'recall teleport')
+                            r = world_[0].real['respawn_128'][0] if (world_[0] and 'respawn_128' in world_[0].real) else None
+                            if r:
+                                fpos = struct.pack('<ff', fountain[0], fountain[1]).hex()
+                                ch, data, what = r.packet(hero, lambda v: v.update({'+0xc': fpos, '+0x14': '00000000'}), 'respawn_128 recall')
+                                send_message(a, st, ch, data, '128 recall to fountain')
+                            print(f'{game_now:8.3f}   Recall completed! Champion teleported to fountain.', flush=True)
+                        if game_now - own_hero_state.get('regen_t', game_now) >= 1.0 or 'regen_t' not in own_hero_state:
+                            hero_regen(a, st, game_now - own_hero_state.get('regen_t', game_now))
+                            own_hero_state['regen_t'] = game_now
             if hero_values and hero is not None and game_now >= next_hero_595:
                 # --hero-set "mGold=9999;...": our own 595 for the hero, by value name (repl_codec.py), every 2 s
                 import repl_codec as RC
@@ -1814,6 +2276,20 @@ def main():
                                          f'552 test teleport to ({tp_[1]:.0f}, {tp_[2]:.0f})')
                             st.pos, st.path = (tp_[1], tp_[2]), None
                     tp_[0] = 1e9
+            for wd_ in world_do:
+                if game_now >= wd_[0] and world_[0] is not None and hero is not None:
+                    for a, st in peers.items():
+                        if not st.connected:
+                            continue
+                        if wd_[1].startswith('xp='):
+                            hero_xp(a, st, float(wd_[1][3:]))
+                        elif wd_[1] == 'raze':
+                            for tier_ in ('outer', 'inner', 'inhibitor', 'nexus', 'hq'):
+                                for tu_ in list(world_[0].turrets.values()):
+                                    if tu_.team == 'red' and tu_.tier == tier_ and (tier_ in ('nexus', 'hq') or tu_.lane == 'mid'):
+                                        for ch_, data_, what_ in world_[0].hit(game_now, hero, tu_.net, 99999.0):
+                                            send_message(a, st, ch_, data_, what_)
+                    wd_[0] = 1e9
             for aa_ in auto_attack:
                 if game_now >= aa_[0] and hero is not None:
                     for a, st in peers.items():
@@ -1822,7 +2298,9 @@ def main():
                     aa_[0] = 1e9
             for a, st in peers.items():
                 if st.connected and getattr(st, 'aa', None) and chase(a, st, game_now) and time.time() >= st.aa['next']:
+                    aa_now = st.aa
                     attack_tick(a, st)
+                    st.aa_ready = aa_now['next']
             hemo_ticks()
             for aw in auto_w:
                 if game_now >= aw[0] and hero is not None:
@@ -1841,7 +2319,7 @@ def main():
                         if st.connected:
                             if st.skills.get(ac[1], 0) == 0:
                                 skill_up(a, st, ac[1], t)
-                            generic_cast(a, st, t, ac[1], (900.0, 900.0), (554.0, 581.0))
+                            generic_cast(a, st, t, ac[1], (ac[2], ac[3]), hero_pos(st))
                     ac[0] = 1e9
             if auto_q is not None and hero is not None:
                 for a, st in peers.items():
@@ -1863,7 +2341,7 @@ def main():
                     if st.connected:
                         send_data(a, st, b'', 'keepalive', quiet=stream_t0 is not None)
             continue
-        prefix, body = d[:8], d[8:]
+        prefix, body = d[:id_len], d[id_len:]; s2c[0] = prefix[8:12]
         m = parse(lnp.open(body))
         extra = m['extra'] if m['extra'] is not None else NO_EXTRA
         ok = checksum(m['seq'], PEER, extra, m['payload']) == m['crc']
@@ -1881,14 +2359,14 @@ def main():
                 print(f'{t:8.3f} peer {addr} connected (client nonce {cn:016x}, flag {flag})', flush=True)
                 st.connected = True
             reply = struct.pack('<QQB', cn, server_nonce, flag).ljust(100, b'\0')
-            s.sendto(build(lnp, 0, reply), addr)
+            s.sendto(s2c[0] + build(lnp, 0, reply), addr)
             print(f'{t:8.3f} snd accept', flush=True)
             continue
         if seq == 0:
             print(f'{t:8.3f}   control len {len(p)}: {p[:32].hex()}', flush=True)
             continue
         st.got(seq)
-        s.sendto(build(lnp, (-st.latest) & 0xFFFF, b'', extra=st.mask), addr)
+        s.sendto(s2c[0] + build(lnp, (-st.latest) & 0xFFFF, b'', extra=st.mask), addr)
         if m['flag']:   # zstd (the client compresses larger packets; [Network] CompressionLevel 3)
             import zstandard
             p = zstandard.ZstdDecompressor().decompress(p, max_output_size=0x44c)
@@ -1901,22 +2379,48 @@ def main():
                 if slot is not None and own_574 is None:
                     body[2] = SLOT_BYTE[slot]
                 send_message(addr, st, 1, struct.pack('<HI', 574, 0) + bytes(body), f'packet 574 (slot {slot})')
+            if getattr(st, 'dead', False) and pid in (491, 16):
+                continue                              # a dead hero neither walks nor casts
             if pid == 491 and hero is not None:
+                if getattr(st, 'recalling', None):
+                    st.recalling = None
+                    print(f'{t:8.3f}   Recall cancelled by movement!', flush=True)
                 o = LP.decode_491(data[6:])
                 # order type and target through the codec learnt from the client's writer (c2s_codec.py, c2s_491.json)
                 import c2s_codec as CC
                 o2 = CC.decode(CC.load(491), data[6:])
+                game_now = stream_t0[1] + (time.time() - stream_t0[0]) * speed if stream_t0 else 0.0
+                team_ = 'red' if hero_teams.get(hero) in ('red', 200) else 'blue'
+                fountain = (394.77, 461.57) if team_ == 'blue' else (14340.42, 14391.08)
                 if o2:
                     o_type = o2[0x10][0]
                     o_target = struct.unpack('<I', o2[0x14])[0]
                     print(f'{t:8.3f}   order type {o_type} target {o_target:#x} +0x18 {o2[0x18].hex()}', flush=True)
                     if o_type == 3 and o_target:
-                        st.aa = {'target': o_target, 'next': 0}
+                        if game_now < 15.0:
+                            print(f'{t:8.3f}   [0:00-0:15 FOUNTAIN BARRIER] attack order outside spawn blocked', flush=True)
+                        elif not (getattr(st, 'aa', None) and st.aa.get('target') == o_target):
+                            # the same order again leaves the running attack alone; another target keeps the time
+                            # the next attack may start (the hero has one attack timer, not one per click)
+                            st.aa = {'target': o_target, 'next': getattr(st, 'aa_ready', 0.0)}
                     elif o_type == 2:
                         st.aa = None
                 print(f'{t:8.3f}   order {o}', flush=True)
                 if o and o['type'] == 2 and o.get('path'):
-                    send_path(addr, st, [hero_pos(st)] + [W.to_world(p_) for p_ in o['path'][1:]], 'moves (order)')
+                    raw_pts = [hero_pos(st)] + [W.to_world(p_) for p_ in o['path'][1:]]
+                    if game_now < 15.0:
+                        clamped_pts = [raw_pts[0]]
+                        for pt in raw_pts[1:]:
+                            dx, dz = pt[0] - fountain[0], pt[1] - fountain[1]
+                            dist = math.hypot(dx, dz)
+                            if dist > 950.0:
+                                sc_ = 950.0 / dist
+                                clamped_pts.append((fountain[0] + dx * sc_, fountain[1] + dz * sc_))
+                            else:
+                                clamped_pts.append(pt)
+                        raw_pts = clamped_pts
+                        print(f'{t:8.3f}   [0:00-0:15 FOUNTAIN BARRIER] movement clamped inside spawn platform', flush=True)
+                    send_path(addr, st, raw_pts, 'moves (order)')
             if pid == 782 and hero is not None and own_hero:
                 # 782 = the client's purchase request (codec learnt from its writer: c2s_codec, c2s_782.json)
                 import c2s_codec as CC
@@ -1931,13 +2435,28 @@ def main():
                 import c2s_codec as CC
                 req = CC.decode(CC.load(16), data[6:])
                 if req:
+                    # +0xc the unit a targeted spell is cast on (the hero itself for a self cast), +0x10 the aimed
+                    # place, +0x24 the slot, +0x34 the spell; +0x1c / +0x28 hold the hero's place in one and the
+                    # aimed place in the other, which of them depends on the kind of cast -- the hero's place
+                    # is the server's own (hero_pos), never the request's
                     slot_ = req[0x24][0]
                     tx, tz = struct.unpack('<ff', req[0x10])
                     cx, cz = struct.unpack('<ff', req[0x1c])
+                    target_net_ = struct.unpack('<I', req[0xc])[0]
                     spell_hash = struct.unpack('<I', req[0x34])[0]
                     print(f'{t:8.3f}   cast request: slot {slot_}, spell hash {spell_hash:#x}, target ({tx:.0f}, {tz:.0f}), '
                           f'caster at ({cx:.0f}, {cz:.0f}), +0x18 {req[0x18].hex()}', flush=True)
-                if req and not hero_spells and req[0x24][0] == 1 and hero_champion == 'Darius':
+                if not req:
+                    continue
+                st.spell_cds = getattr(st, 'spell_cds', {})
+                if time.time() < st.spell_cds.get(slot_, 0.0):
+                    rem_cd = st.spell_cds[slot_] - time.time()
+                    print(f'{t:8.3f}   DROP cast request slot {slot_}: on cooldown ({rem_cd:.2f}s remaining)', flush=True)
+                    continue
+                if spell_hash == 0x0568d0ac or slot_ in (6, 13):
+                    st.recalling = time.time() + 8.0
+                    print(f'{t:8.3f}   Recall started! Channeling for 8.0s...', flush=True)
+                elif not hero_spells and slot_ == 1 and hero_champion == 'Darius':
                     aa_ = getattr(st, 'aa', None)
                     if aa_:
                         darius_w(addr, st, aa_['target'], 'both')
@@ -1945,10 +2464,13 @@ def main():
                         aa_['next'] = time.time() + SIw.attack_times('Darius')[0]
                     else:
                         darius_w(addr, st, 0, 'cast')
-                elif req and req[0x24][0] in (4, 5):
-                    summoner_cast(addr, st, req[0x24][0], (tx, tz))
-                elif req and req[0x24][0] < len(engine_spells):
-                    generic_cast(addr, st, t, req[0x24][0], (tx, tz), (cx, cz))
+                elif slot_ in (4, 5):
+                    summoner_cast(addr, st, slot_, (tx, tz))
+                elif slot_ < len(engine_spells):
+                    if st.skills.get(slot_, 0) == 0:
+                        print(f'{t:8.3f}   DROP cast request slot {slot_}: spell not learned yet (level 0)', flush=True)
+                        continue
+                    generic_cast(addr, st, t, slot_, (tx, tz), (cx, cz), target_net_)
                 elif q_reply:
                     cast_q(addr, st, t)
             if pid == 527 and stream is not None and stream_t0 is None:

@@ -6,4 +6,6 @@
 // match: dc8d80 _EVP_get_cipherbyname
 // match: dc8db0 _EVP_get_digestbyname
 // match: dc8de0 _evp_cleanup_int
+#define OPENSSL_FILE "crypto\\evp\\names.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/evp/names.c"

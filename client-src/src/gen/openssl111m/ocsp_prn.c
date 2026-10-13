@@ -4,4 +4,6 @@
 // match: dd6f00 _OCSP_cert_status_str
 // match: dd6f30 _OCSP_crl_reason_str
 // match: dd6f60 _OCSP_response_status_str
+#define OPENSSL_FILE "crypto\\ocsp\\ocsp_prn.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/ocsp/ocsp_prn.c"

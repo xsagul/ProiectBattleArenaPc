@@ -1,0 +1,61 @@
+
+main <?:0,0> (34 instructions, 136 bytes at 0000016B767634C0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 21 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "SylasR.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "SylasR"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -9	; PersistsThroughDeath
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -10	; NonDispellable
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -11	; IsDamagingSpell
+	19	[-]	NEWTABLE 	0 0 6
+	20	[-]	NEWTABLE 	1 5 0
+	21	[-]	LOADK    	2 -14	; 10
+	22	[-]	LOADK    	3 -14	; 10
+	23	[-]	LOADK    	4 -14	; 10
+	24	[-]	LOADK    	5 -14	; 10
+	25	[-]	LOADK    	6 -14	; 10
+	26	[-]	SETLIST  	1 5 1	; 1
+	27	[-]	SETTABLE 	0 -13 1	; "MaximumHits" -
+	28	[-]	SETTABLE 	0 -15 -16	; "CanHitCaster" 0
+	29	[-]	SETTABLE 	0 -17 -16	; "CanHitSameTarget" 0
+	30	[-]	SETTABLE 	0 -18 -16	; "CanHitSameTargetConsecutively" 0
+	31	[-]	SETTABLE 	0 -19 -20	; "CanHitEnemies" 1
+	32	[-]	SETTABLE 	0 -21 -16	; "CanHitFriends" 0
+	33	[-]	SETGLOBAL	0 -12	; ChainMissileParameters
+	34	[-]	RETURN   	0 1
+constants (21) for 0000016B767634C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"SylasR.dds"
+	7	"BuffName"
+	8	"SylasR"
+	9	"PersistsThroughDeath"
+	10	"NonDispellable"
+	11	"IsDamagingSpell"
+	12	"ChainMissileParameters"
+	13	"MaximumHits"
+	14	10
+	15	"CanHitCaster"
+	16	0
+	17	"CanHitSameTarget"
+	18	"CanHitSameTargetConsecutively"
+	19	"CanHitEnemies"
+	20	1
+	21	"CanHitFriends"
+locals (0) for 0000016B767634C0:
+upvalues (0) for 0000016B767634C0:

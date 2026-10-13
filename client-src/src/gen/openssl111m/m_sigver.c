@@ -5,4 +5,7 @@
 // match: de90a0 _EVP_DigestSignFinal
 // match: de92f0 _EVP_DigestVerify
 // match: de9460 _EVP_DigestVerifyFinal
+// match: de95b0 _do_sigver_init
+#define OPENSSL_FILE "crypto\\evp\\m_sigver.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/evp/m_sigver.c"

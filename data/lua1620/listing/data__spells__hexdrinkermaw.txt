@@ -1,0 +1,26 @@
+
+main <?:0,0> (11 instructions, 44 bytes at 0000021C144634D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; "3155_Hexdrinker.dds"
+	2	[-]	SETGLOBAL	0 -1	; BuffTextureName
+	3	[-]	LOADK    	0 -4	; "HexdrunkEmpowered"
+	4	[-]	SETGLOBAL	0 -3	; BuffName
+	5	[-]	LOADK    	0 -6	; "DATA/Particles/hexTech_dmg_shield_duration.troy"
+	6	[-]	SETGLOBAL	0 -5	; AutoBuffActivateEffect
+	7	[-]	LOADK    	0 -8	; 2
+	8	[-]	SETGLOBAL	0 -7	; OnPreDamagePriority
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -9	; DoOnPreDamageInExpirationOrder
+	11	[-]	RETURN   	0 1
+constants (9) for 0000021C144634D0:
+	1	"BuffTextureName"
+	2	"3155_Hexdrinker.dds"
+	3	"BuffName"
+	4	"HexdrunkEmpowered"
+	5	"AutoBuffActivateEffect"
+	6	"DATA/Particles/hexTech_dmg_shield_duration.troy"
+	7	"OnPreDamagePriority"
+	8	2
+	9	"DoOnPreDamageInExpirationOrder"
+locals (0) for 0000021C144634D0:
+upvalues (0) for 0000021C144634D0:

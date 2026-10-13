@@ -8,4 +8,6 @@
 // match: dd3b30 _X509_set_issuer_name
 // match: dd3b50 _X509_up_ref
 // match: dd3b70 _x509_init_sig_info
+#define OPENSSL_FILE "crypto\\x509\\x509_set.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/x509/x509_set.c"

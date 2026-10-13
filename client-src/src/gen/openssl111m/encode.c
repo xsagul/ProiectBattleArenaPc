@@ -4,8 +4,13 @@
 // match: e1bc90 _EVP_DecodeFinal
 // match: e1bce0 _EVP_DecodeInit
 // match: e1bd00 _EVP_DecodeUpdate
+// match: e1bee0 _EVP_ENCODE_CTX_free
+// match: e1bf00 _EVP_ENCODE_CTX_new
 // match: e1bf20 _EVP_EncodeFinal
 // match: e1bf70 _EVP_EncodeInit
+// match: e1bf90 _EVP_EncodeUpdate
 // match: e1c0e0 _evp_decodeblock_int
 // match: e1c260 _evp_encodeblock_int
+#define OPENSSL_FILE "crypto\\evp\\encode.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/evp/encode.c"

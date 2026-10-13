@@ -1,0 +1,15 @@
+local L0_1, L1_1
+L0_1 = false
+NotSingleTargetSpell = L0_1
+L0_1 = false
+DoesntTriggerSpellCasts = L0_1
+L0_1 = 3
+ChannelDuration = L0_1
+L0_1 = "Enrage_buf.troy"
+AutoBuffActivateEffect = L0_1
+L0_1 = "L_hand"
+AutoBuffActivateAttachBoneName = L0_1
+L0_1 = "Enrage_buf.troy"
+AutoBuffActivateEffect2 = L0_1
+L0_1 = "R_hand"
+AutoBuffActivateAttachBoneName2 = L0_1

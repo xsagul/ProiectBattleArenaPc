@@ -8,4 +8,6 @@
 // match: e2b1d0 _cmac_signctx_init
 // match: e2b220 _pkey_cmac_ctrl
 // match: e2b2b0 _pkey_cmac_ctrl_str
+#define OPENSSL_FILE "crypto\\cmac\\cm_pmeth.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/cmac/cm_pmeth.c"

@@ -1,0 +1,46 @@
+
+main <?:0,0> (27 instructions, 108 bytes at 000001D0E61234C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Kogmaw/HUD/Icons2D/KogMaw_IcathianSurprise.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -7	; IsDeathRecapSource
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -8	; PersistsThroughDeath
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -9	; NonDispellable
+	17	[-]	NEWTABLE 	0 1 0
+	18	[-]	LOADK    	1 -11	; "KogMawSkin08"
+	19	[-]	SETLIST  	0 1 1	; 1
+	20	[-]	SETGLOBAL	0 -10	; SpellFXOverrideSkins
+	21	[-]	NEWTABLE 	0 1 0
+	22	[-]	LOADK    	1 -11	; "KogMawSkin08"
+	23	[-]	SETLIST  	0 1 1	; 1
+	24	[-]	SETGLOBAL	0 -12	; SpellVOOverrideSkins
+	25	[-]	LOADBOOL 	0 0 0
+	26	[-]	SETGLOBAL	0 -13	; IsDamagingSpell
+	27	[-]	RETURN   	0 1
+constants (13) for 000001D0E61234C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Kogmaw/HUD/Icons2D/KogMaw_IcathianSurprise.dds"
+	7	"IsDeathRecapSource"
+	8	"PersistsThroughDeath"
+	9	"NonDispellable"
+	10	"SpellFXOverrideSkins"
+	11	"KogMawSkin08"
+	12	"SpellVOOverrideSkins"
+	13	"IsDamagingSpell"
+locals (0) for 000001D0E61234C0:
+upvalues (0) for 000001D0E61234C0:

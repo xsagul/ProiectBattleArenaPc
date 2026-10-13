@@ -6,4 +6,6 @@
 // match: e15730 _bn_mul_normal
 // match: e15830 _bn_mul_part_recursive
 // match: e15cb0 _bn_mul_recursive
+#define OPENSSL_FILE "crypto\\bn\\bn_mul.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/bn/bn_mul.c"

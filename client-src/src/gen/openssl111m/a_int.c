@@ -4,10 +4,20 @@
 // match: e07220 _ASN1_ENUMERATED_get
 // match: e072b0 _ASN1_INTEGER_cmp
 // match: e07300 _ASN1_INTEGER_get
+// match: e07360 _ASN1_INTEGER_get_uint64
 // match: e07400 _ASN1_INTEGER_set
+// match: e07460 _asn1_get_uint64
+// match: e074f0 _asn1_string_get_int64
 // match: e07630 _asn1_string_set_int64
+// match: e076e0 _asn1_string_to_bn
+// match: e07770 _bn_to_asn1_string
+// match: e07870 _c2i_ASN1_INTEGER
+// match: e07940 _c2i_ibuf
+// match: e07ac0 _c2i_uint64_int
 // match: e07b70 _i2c_ASN1_INTEGER
 // match: e07b90 _i2c_ibuf
 // match: e07cd0 _i2c_uint64_int
 // match: e07d40 _twos_complement
+#define OPENSSL_FILE "crypto\\asn1\\a_int.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/asn1/a_int.c"

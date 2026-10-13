@@ -1,0 +1,34 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 000001D89D1735A0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Ahri/HUD/Icons2D/Ahri_Charm.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "AhriE"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "game_floatingtext_Charmed"
+	10	[-]	SETGLOBAL	0 -7	; PopupMessage1
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -10	; "AhriSkin04"
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -9	; SpellVOOverrideSkins
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -11	; IsDamagingSpell
+	17	[-]	RETURN   	0 1
+constants (11) for 000001D89D1735A0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Ahri/HUD/Icons2D/Ahri_Charm.dds"
+	5	"BuffName"
+	6	"AhriE"
+	7	"PopupMessage1"
+	8	"game_floatingtext_Charmed"
+	9	"SpellVOOverrideSkins"
+	10	"AhriSkin04"
+	11	"IsDamagingSpell"
+locals (0) for 000001D89D1735A0:
+upvalues (0) for 000001D89D1735A0:

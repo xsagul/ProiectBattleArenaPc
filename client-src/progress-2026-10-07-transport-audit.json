@@ -1,0 +1,150 @@
+{
+  "identical_functions": 17225,
+  "nonidentical_functions": 11,
+  "code_bytes": 15925652,
+  "failures": [
+    {
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\client-src\\src\\LnpAppObserver.cpp",
+      "rva": "0x2ec600",
+      "symbol": "?Update@LnpAppObserver@@QAEXXZ",
+      "flags": [
+        "-O2",
+        "-std:c++17"
+      ],
+      "bytes": 509,
+      "identical_bytes": 92,
+      "first_difference": 8,
+      "detail": "ours                                            Riot\n   0x0 push ebp                                    0x0 push ebp\n   0x1 mov ebp, esp                                0x1 mov ebp, esp\n   0x3 and esp, 0xfffffff8                         0x3 and esp, 0xfffffff8\n   0x6 sub esp, 0x80                               0x6 sub esp, 0x88   <<\n   0xc push ebx                                    0xc push ebx\n   0xd xor eax, eax                                0xd xor eax, eax\n   0xf xorps xmm0, xmm0                            0xf xorps xmm0, xmm0\n  0x12 push ebp                                   0x12 push ebp\n  0x13 push esi                                   0x13 push esi\n  0x14 push edi                                   0x14 push edi\n  0x15 mov edi, ecx                               0x15 mov edi, ecx\n  0x17 movlpd qword ptr [esp + 0x58], xmm0        0x17 movlpd qword ptr [esp + 0x48], xmm0   <<\n  0x1d mov dword ptr [esp + 0x1c], edi            0x1d mov dword ptr [esp + 0x24], edi   <<\n  0x21 or ebp, 0xffffffff                         0x21 or ebp, 0xffffffff\n  0x24 mov word ptr [esp + 0x60], ax              0x24 mov word ptr [esp + 0x50], ax   <<\n  0x29 mov dword ptr [esp + 0x62], eax            0x29 mov dword ptr [esp + 0x52], eax   <<\n  0x2d movsd qword ptr [esp + 0x68], xmm0         0x2d movsd qword ptr [esp + 0x58], xmm0   <<\n  0x33 mov dword ptr [esp + 0x70], eax            0x33 mov dword ptr [esp + 0x60], eax   <<\n  0x37 mov dword ptr [esp + 0x74], eax            0x37 mov dword ptr [esp + 0x64], eax   <<\n  0x3b mov dword ptr [esp + 0x78], eax            0x3b mov dword ptr [esp + 0x68], eax   <<\n  0x3f mov dword ptr [esp + 0x7c], eax            0x3f mov dword ptr [esp + 0x6c], eax   <<\n  0x43 mov dword ptr [esp + 0x80], eax            0x43 mov dword ptr [esp + 0x70], eax   <<\n  0x4a mov word ptr [esp + 0x84], ax              0x47 mov word ptr [esp + 0x74], ax   <<\n  0x52 mov dword ptr [esp + 0x88], eax            0x4c mov dword ptr [esp + 0x78], eax   <<\n  0x59 nop dword ptr [eax]                        0x50 mov ebx, dword ptr [edi + 0x140]   <<\n  0x60 mov ebx, dword ptr [edi + 0x140]           0x56 mov esi, dword ptr [ebx + 0x54]   <<\n  0x66 mov esi, dword ptr [ebx + 0x54]            0x59 nop    <<\n  0x69 nop                                        0x5a test esi, esi   <<\n  0x6a test esi, esi                              0x5c je 0x1da   <<\n  0x6c je 0x1d8                                   0x62 mov eax, dword ptr [esi]   <<\n  0x72 mov eax, dword ptr [esi]                   0x64 mov ecx, dword ptr [esi + 0xc]   <<\n  0x74 mov dword ptr [esp + 0x40], eax            0x67 mov dword ptr [esp + 0x30], eax   <<\n  0x78 mov eax, dword ptr [esi + 8]               0x6b mov eax, dword ptr [esi + 8]   <<\n  0x7b mov ecx, dword ptr [esi + 0xc]             0x6e mov dword ptr [esp + 0x38], eax   <<\n  0x7e mov dword ptr [esp + 0x48], eax            0x72 movzx eax, byte ptr [esi + 0x10]   <<\n  0x82 mov dword ptr [esp + 0x4c], ecx            0x76 mov byte ptr [esp + 0x40], al   <<\n  0x86 lea ecx, [esp + 0x58]                      0x7a movzx eax, byte ptr [esi + 0x11]   <<\n  0x8a movzx eax, byte ptr [esi + 0x10]           0x7e mov byte ptr [esp + 0x41], al   <<\n  0x8e mov byte ptr [esp + 0x50], al              0x82 lea eax, [esi + 0x18]   <<\n  0x92 movzx eax, byte ptr [esi + 0x11]           0x85 mov dword ptr [esp + 0x3c], ecx   <<\n  0x96 mov byte ptr [esp + 0x51], al              0x89 lea ecx, [esp + 0x48]   <<\n  0x9a lea eax, [esi + 0x18]                      0x8d push eax\n  0x9d push eax                                   0x8e call 0xfffed2c0\n  0x9e call 0xa3                                  0x93 mov dword ptr [edi + 0x140], esi\n  0xa3 mov dword ptr [edi + 0x140], esi           0x99 mov ebx, dword ptr [ebx + 0x50]   <<\n  0xa9 mov ebx, dword ptr [ebx + 0x50]            0x9c test ebx, ebx   <<\n  0xac test ebx, ebx                              0x9e je 0xfa   <<\n  0xae je 0x10a                                   0xa0 inc dword ptr [ebx + 0xfcc0]   <<\n  0xb0 inc dword ptr [ebx + 0xfcc0]               0xa6 cmp dword ptr [ebx + 0xfcc0], 0x2de   <<\n  0xb6 cmp dword ptr [ebx + 0xfcc0], 0x2de        0xb0 jne 0xfa   <<\n  0xc0 jne 0x10a                                  0xb2 mov esi, 0x2de   <<\n  0xc2 mov esi, 0x2de                             0xb7 lea edi, [ebx + 0xfc8c]   <<\n  0xc7 lea edi, [ebx + 0xfc8c]                    0xbd nop dword ptr [eax]   <<\n  0xcd nop dword ptr [eax]                        0xc0 mov ecx, dword ptr [edi - 0x58]   <<\n  0xd0 mov ecx, dword ptr [edi - 0x58]            0xc3 lea edi, [edi - 0x58]   <<\n  0xd3 lea edi, [edi - 0x58]                      0xc6 dec esi   <<\n  0xd6 dec esi                                    0xc7 test ecx, ecx   <<\n  0xd7 test ecx, ecx                              0xc9 je 0xe2   <<\n  0xd9 je 0xf2                                    0xcb sub ecx, 4   <<\n  0xdb sub ecx, 4                                 0xce mov eax, ebp   <<"
+    },
+    {
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\client-src\\src\\LnpDatagram.cpp",
+      "rva": "0x2efe50",
+      "symbol": "?Write@LnpDatagram@@QAE_NAAULnpBuffer@@AAULnpCrypto@@@Z",
+      "flags": [
+        "-O2",
+        "-std:c++17"
+      ],
+      "bytes": 437,
+      "identical_bytes": 239,
+      "first_difference": 55,
+      "detail": "ours                                            Riot\n  0x2b call 0x30                                  0x2b call 0xffffe550\n  0x30 mov ecx, dword ptr [ebp]                   0x30 mov ecx, dword ptr [ebp]\n  0x33 movzx edx, word ptr [ebp + 6]              0x33 movzx edx, word ptr [ebp + 6]\n  0x37 movzx eax, word ptr [edi + 8]              0x37 mov ax, word ptr [edi + 8]   <<\n  0x3b mov word ptr [edx + ecx], ax               0x3b mov word ptr [edx + ecx], ax\n  0x3f mov cx, word ptr [ebp + 6]                 0x3f mov cx, word ptr [ebp + 6]\n  0x43 add cx, 2                                  0x43 add cx, 2\n  0x47 movzx eax, cx                              0x47 movzx eax, cx\n  0x4a add eax, 4                                 0x4a add eax, 4\n  0x4d mov word ptr [ebp + 6], cx                 0x4d mov word ptr [ebp + 6], cx\n  0x51 push eax                                   0x51 push eax\n  0x52 mov ecx, ebp                               0x52 mov ecx, ebp\n  0x54 call 0x59                                  0x54 call 0xffffe550\n  0x59 movzx ecx, word ptr [ebp + 6]              0x59 movzx ecx, word ptr [ebp + 6]\n  0x5d mov eax, dword ptr [ebp]                   0x5d mov eax, dword ptr [ebp]\n  0x60 mov dword ptr [ecx + eax], esi             0x60 mov dword ptr [ecx + eax], esi\n  0x63 mov cx, word ptr [ebp + 6]                 0x63 mov cx, word ptr [ebp + 6]\n  0x67 add cx, 4                                  0x67 add cx, 4\n  0x6b movzx eax, cx                              0x6b movzx eax, cx\n  0x6e inc eax                                    0x6e inc eax\n  0x6f mov word ptr [ebp + 6], cx                 0x6f mov word ptr [ebp + 6], cx\n  0x73 push eax                                   0x73 push eax\n  0x74 mov ecx, ebp                               0x74 mov ecx, ebp\n  0x76 call 0x7b                                  0x76 call 0xffffe550\n  0x7b movzx ecx, word ptr [ebp + 6]              0x7b movzx ecx, word ptr [ebp + 6]\n  0x7f test bl, bl                                0x7f test bl, bl\n  0x81 mov eax, dword ptr [ebp]                   0x81 mov eax, dword ptr [ebp]\n  0x84 setne dl                                   0x84 setne dl\n  0x87 mov byte ptr [ecx + eax], dl               0x87 mov byte ptr [ecx + eax], dl\n  0x8a mov ax, word ptr [ebp + 6]                 0x8a mov cx, word ptr [ebp + 6]   <<\n  0x8e inc ax                                     0x8e inc cx   <<\n  0x90 mov word ptr [ebp + 6], ax                 0x90 mov word ptr [ebp + 6], cx   <<\n  0x94 cmp word ptr [edi + 8], 0                  0x94 cmp word ptr [edi + 8], 0\n  0x99 movzx edx, ax                              0x99 movzx eax, cx   <<\n  0x9c movzx ecx, ax                              0x9c mov ecx, eax   <<\n  0x9f jge 0xcd                                   0x9e jge 0xd2   <<\n  0xa1 mov esi, dword ptr [edi + 0x20]            0xa0 mov esi, dword ptr [edi + 0x20]   <<\n  0xa4 lea eax, [edx + 8]                         0xa3 lea eax, [ecx + 8]   <<\n  0xa7 mov edi, dword ptr [edi + 0x24]            0xa6 mov edi, dword ptr [edi + 0x24]   <<\n  0xaa mov ecx, ebp                               0xa9 mov ecx, ebp\n  0xac push eax                                   0xab push eax\n  0xad call 0xb2                                  0xac call 0xffffe550\n  0xb2 movzx ecx, word ptr [ebp + 6]              0xb1 movzx ecx, word ptr [ebp + 6]   <<\n  0xb6 mov eax, dword ptr [ebp]                   0xb5 mov eax, dword ptr [ebp]   <<\n  0xb9 mov dword ptr [ecx + eax], esi             0xb8 mov dword ptr [ecx + eax], esi   <<\n  0xbc mov dword ptr [ecx + eax + 4], edi         0xbb mov dword ptr [ecx + eax + 4], edi   <<\n  0xc0 add word ptr [ebp + 6], 8                  0xbf mov cx, word ptr [ebp + 6]   <<\n  0xc5 movzx ecx, word ptr [ebp + 6]              0xc3 mov edi, dword ptr [esp + 0x10]   <<\n  0xc9 mov edi, dword ptr [esp + 0x10]            0xc7 add cx, 8   <<\n  0xcd movzx esi, word ptr [edi + 0x56]           0xcb movzx eax, cx   <<\n  0xd1 mov edi, dword ptr [edi + 0x50]            0xce mov word ptr [ebp + 6], cx   <<\n  0xd4 movzx eax, cx                              0xd2 movzx esi, word ptr [edi + 0x56]   <<\n  0xd7 test si, si                                0xd6 mov edi, dword ptr [edi + 0x50]   <<\n  0xda je 0x101                                   0xd9 movzx ebx, ax   <<\n  0xdc lea eax, [ecx + esi]                       0xdc test si, si   <<\n  0xdf mov ecx, ebp                               0xdf je 0x105\n  0xe1 push eax                                   0xe1 add eax, esi\n  0xe2 call 0xe7                                  0xe3 mov ecx, ebp\n  0xe7 movzx eax, word ptr [ebp + 6]              0xe5 push eax   <<\n  0xeb add eax, dword ptr [ebp]                   0xe6 call 0xffffe550   <<"
+    },
+    {
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\client-src\\src\\LnpMessage_Read.cpp",
+      "rva": "0x2dcd40",
+      "symbol": "?Read@LnpMessage@@QAE_NAAULnpBuffer@@ABU1@@Z",
+      "flags": [
+        "-O2",
+        "-std:c++17"
+      ],
+      "bytes": 360,
+      "identical_bytes": 282,
+      "first_difference": 17,
+      "detail": "ours                                            Riot\n   0x8 push edi                                    0x8 push edi\n   0x9 mov edi, ecx                                0x9 mov edi, ecx\n   0xb movzx ecx, word ptr [esi + 8]               0xb movzx ecx, word ptr [esi + 8]\n   0xf movzx ebx, word ptr [esi + 6]               0xf movzx ebp, word ptr [esi + 6]   <<\n  0x13 mov edx, ecx                               0x13 mov edx, ecx\n  0x15 lea eax, [edx + 2]                         0x15 lea eax, [edx + 2]\n  0x18 cmp eax, ebx                               0x18 cmp eax, ebp   <<\n  0x1a ja 0x34                                    0x1a ja 0x34\n  0x1c mov eax, dword ptr [esi]                   0x1c mov eax, dword ptr [esi]\n  0x1e mov bl, 1                                  0x1e mov bl, 1\n  0x20 movzx eax, word ptr [edx + eax]            0x20 movzx eax, word ptr [edx + eax]\n  0x24 mov dword ptr [esp + 0x10], eax            0x24 mov dword ptr [esp + 0x10], eax\n  0x28 lea eax, [ecx + 2]                         0x28 lea eax, [ecx + 2]\n  0x2b mov word ptr [esi + 8], ax                 0x2b mov word ptr [esi + 8], ax\n  0x2f movzx edx, ax                              0x2f movzx edx, ax\n  0x32 jmp 0x36                                   0x32 jmp 0x36\n  0x34 xor bl, bl                                 0x34 xor bl, bl\n  0x36 mov cx, word ptr [esp + 0x10]              0x36 mov cx, word ptr [esp + 0x10]\n  0x3b mov al, byte ptr [esp + 0x10]              0x3b mov al, byte ptr [esp + 0x10]\n  0x3f mov ebp, dword ptr [esp + 0x1c]            0x3f shr cx, 1   <<\n  0x43 and al, 1                                  0x42 and al, 1   <<\n  0x45 shr cx, 1                                  0x44 mov word ptr [esp + 0x10], cx   <<\n  0x48 mov word ptr [esp + 0x10], cx              0x49 mov bh, cl   <<\n  0x4d mov bh, cl                                 0x4b shr cx, 1   <<\n  0x4f shr cx, 1                                  0x4e and bh, 1   <<\n  0x52 and bh, 1                                  0x51 mov byte ptr [esp + 0x18], al   <<\n  0x55 mov byte ptr [esp + 0x18], al              0x55 mov al, cl   <<\n  0x59 mov al, cl                                 0x57 mov word ptr [esp + 0x10], cx   <<\n  0x5b mov word ptr [esp + 0x10], cx              0x5c shr cx, 1   <<\n  0x60 shr cx, 1                                  0x5f mov word ptr [esp + 0x10], cx   <<\n  0x63 mov word ptr [esp + 0x10], cx              0x64 test al, 1   <<\n  0x68 test al, 1                                 0x66 je 0x74   <<\n  0x6a je 0x74                                    0x68 mov ecx, dword ptr [esp + 0x1c]   <<\n  0x6c mov al, byte ptr [ebp + 0xb]               0x6c mov al, byte ptr [ecx + 0xb]   <<\n  0x6f mov byte ptr [edi + 0xb], al               0x6f mov byte ptr [edi + 0xb], al\n  0x72 jmp 0x96                                   0x72 jmp 0x96\n  0x74 movzx ecx, dx                              0x74 movzx ecx, dx\n  0x77 movzx edx, word ptr [esi + 6]              0x77 lea eax, [ecx + 1]   <<\n  0x7b lea eax, [ecx + 1]                         0x7a cmp eax, ebp   <<\n  0x7e cmp eax, edx                               0x7c ja 0x8e   <<\n  0x80 ja 0x92                                    0x7e mov eax, dword ptr [esi]   <<\n  0x82 mov eax, dword ptr [esi]                   0x80 mov al, byte ptr [ecx + eax]   <<\n  0x84 mov al, byte ptr [ecx + eax]               0x83 mov byte ptr [edi + 0xb], al   <<\n  0x87 mov byte ptr [edi + 0xb], al               0x86 mov al, 1   <<\n  0x8a mov al, 1                                  0x88 inc word ptr [esi + 8]   <<\n  0x8c inc word ptr [esi + 8]                     0x8c jmp 0x90   <<\n  0x90 jmp 0x94                                   0x8e xor al, al   <<\n  0x92 xor al, al                                 0x90 mov ecx, dword ptr [esp + 0x1c]   <<\n  0x94 and bl, al                                 0x94 and bl, al\n  0x96 test bh, bh                                0x96 test bh, bh\n  0x98 je 0xa6                                    0x98 je 0xa6\n  0x9a mov ax, word ptr [ebp + 8]                 0x9a mov ax, word ptr [ecx + 8]   <<\n  0x9e inc ax                                     0x9e inc ax\n  0xa0 mov word ptr [edi + 8], ax                 0xa0 mov word ptr [edi + 8], ax\n  0xa4 jmp 0xcc                                   0xa4 jmp 0xcc\n  0xa6 movzx edx, word ptr [esi + 8]              0xa6 movzx edx, word ptr [esi + 8]\n  0xaa movzx eax, word ptr [esi + 6]              0xaa movzx eax, word ptr [esi + 6]\n  0xae lea ecx, [edx + 2]                         0xae lea ecx, [edx + 2]\n  0xb1 cmp ecx, eax                               0xb1 cmp ecx, eax\n  0xb3 ja 0xc8                                    0xb3 ja 0xc8"
+    },
+    {
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\client-src\\src\\LnpWorker_Post.cpp",
+      "rva": "0x2dd220",
+      "symbol": "?Post1@LnpWorker@@QAEX_KE@Z",
+      "flags": [
+        "-O2",
+        "-std:c++17"
+      ],
+      "bytes": 172,
+      "identical_bytes": 145,
+      "first_difference": 33,
+      "detail": "ours                                            Riot\n  0x15 mov esi, ecx                               0x15 mov esi, ecx\n  0x17 lea ecx, [esp + 4]                         0x17 lea ecx, [esp + 4]\n  0x1b call 0x20                                  0x1b call 0xffff88c0\n  0x20 mov eax, dword ptr [esp + 0x10c]           0x20 mov ecx, dword ptr [0x1e59adc]   <<\n  0x27 mov ecx, dword ptr [0]                     0x26 mov eax, dword ptr [esp + 0x10c]\n  0x2d mov edx, dword ptr [esp + 0x110]           0x2d mov edx, dword ptr [esp + 0x110]\n  0x34 mov dword ptr [esp + 4], eax               0x34 mov dword ptr [esp + 4], eax\n  0x38 mov al, byte ptr [esp + 0x114]             0x38 mov al, byte ptr [esp + 0x114]\n  0x3f mov dword ptr [esp + 0x10], 1              0x3f mov ecx, dword ptr [ecx + 0x20]   <<\n  0x47 mov dword ptr [esp + 8], edx               0x42 mov dword ptr [esp + 0x10], 1   <<\n  0x4b mov byte ptr [esp + 0xc], al               0x4a mov dword ptr [esp + 8], edx   <<\n  0x4f mov ecx, dword ptr [ecx + 0x20]            0x4e mov byte ptr [esp + 0xc], al\n  0x52 call 0x57                                  0x52 call 0x74f710\n  0x57 lea eax, [esp + 4]                         0x57 lea eax, [esp + 4]\n  0x5b push eax                                   0x5b push eax\n  0x5c lea ecx, [esi + 0x40]                      0x5c lea ecx, [esi + 0x40]\n  0x5f fstp qword ptr [esp + 0x50]                0x5f fstp qword ptr [esp + 0x50]\n  0x63 call 0x68                                  0x63 call 0xff00\n  0x68 mov ecx, dword ptr [esp + 0xd8]            0x68 mov ecx, dword ptr [esp + 0xd8]\n  0x6f pop esi                                    0x6f pop esi\n  0x70 test ecx, ecx                              0x70 test ecx, ecx\n  0x72 je 0x8c                                    0x72 je 0x8c\n  0x74 add ecx, -4                                0x74 add ecx, -4\n  0x77 or eax, 0xffffffff                         0x77 or eax, 0xffffffff\n  0x7a lock xadd dword ptr [ecx], eax             0x7a lock xadd dword ptr [ecx], eax\n  0x7e cmp eax, 1                                 0x7e cmp eax, 1\n  0x81 jne 0x8c                                   0x81 jne 0x8c\n  0x83 push ecx                                   0x83 push ecx\n  0x84 call 0x89                                  0x84 call 0xc812d9\n  0x89 add esp, 4                                 0x89 add esp, 4\n  0x8c lea ecx, [esp + 0x10]                      0x8c lea ecx, [esp + 0x10]\n  0x90 call 0x95                                  0x90 call 0xffffbcd0\n  0x95 mov ecx, dword ptr [esp + 0x100]           0x95 mov ecx, dword ptr [esp + 0x100]\n  0x9c xor ecx, esp                               0x9c xor ecx, esp\n  0x9e call 0xa3                                  0x9e call 0xc63f9a\n  0xa3 add esp, 0x104                             0xa3 add esp, 0x104\n  0xa9 ret 0xc                                    0xa9 ret 0xc"
+    },
+    {
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\client-src\\src\\LnpWorker_Post.cpp",
+      "rva": "0x2dd2d0",
+      "symbol": "?Post2@LnpWorker@@QAEX_KEE@Z",
+      "flags": [
+        "-O2",
+        "-std:c++17"
+      ],
+      "bytes": 183,
+      "identical_bytes": 153,
+      "first_difference": 63,
+      "detail": "ours                                            Riot\n  0x2d mov edx, dword ptr [esp + 0x110]           0x2d mov edx, dword ptr [esp + 0x110]\n  0x34 mov dword ptr [esp + 4], eax               0x34 mov dword ptr [esp + 4], eax\n  0x38 mov al, byte ptr [esp + 0x114]             0x38 mov al, byte ptr [esp + 0x114]\n  0x3f mov byte ptr [esp + 0xc], al               0x3f mov ecx, dword ptr [ecx + 0x20]   <<\n  0x43 mov al, byte ptr [esp + 0x118]             0x42 mov byte ptr [esp + 0xc], al   <<\n  0x4a mov dword ptr [esp + 0x10], 2              0x46 mov al, byte ptr [esp + 0x118]   <<\n  0x52 mov dword ptr [esp + 8], edx               0x4d mov dword ptr [esp + 0x10], 2   <<\n  0x56 mov byte ptr [esp + 0xd], al               0x55 mov dword ptr [esp + 8], edx   <<\n  0x5a mov ecx, dword ptr [ecx + 0x20]            0x59 mov byte ptr [esp + 0xd], al\n  0x5d call 0x62                                  0x5d call 0x74f660\n  0x62 lea eax, [esp + 4]                         0x62 lea eax, [esp + 4]\n  0x66 push eax                                   0x66 push eax\n  0x67 lea ecx, [esi + 0x40]                      0x67 lea ecx, [esi + 0x40]\n  0x6a fstp qword ptr [esp + 0x50]                0x6a fstp qword ptr [esp + 0x50]\n  0x6e call 0x73                                  0x6e call 0xfe50\n  0x73 mov ecx, dword ptr [esp + 0xd8]            0x73 mov ecx, dword ptr [esp + 0xd8]\n  0x7a pop esi                                    0x7a pop esi\n  0x7b test ecx, ecx                              0x7b test ecx, ecx\n  0x7d je 0x97                                    0x7d je 0x97\n  0x7f add ecx, -4                                0x7f add ecx, -4\n  0x82 or eax, 0xffffffff                         0x82 or eax, 0xffffffff\n  0x85 lock xadd dword ptr [ecx], eax             0x85 lock xadd dword ptr [ecx], eax\n  0x89 cmp eax, 1                                 0x89 cmp eax, 1\n  0x8c jne 0x97                                   0x8c jne 0x97\n  0x8e push ecx                                   0x8e push ecx\n  0x8f call 0x94                                  0x8f call 0xc81229\n  0x94 add esp, 4                                 0x94 add esp, 4\n  0x97 lea ecx, [esp + 0x10]                      0x97 lea ecx, [esp + 0x10]\n  0x9b call 0xa0                                  0x9b call 0xffffbc20\n  0xa0 mov ecx, dword ptr [esp + 0x100]           0xa0 mov ecx, dword ptr [esp + 0x100]\n  0xa7 xor ecx, esp                               0xa7 xor ecx, esp\n  0xa9 call 0xae                                  0xa9 call 0xc63eea\n  0xae add esp, 0x104                             0xae add esp, 0x104\n  0xb4 ret 0x10                                   0xb4 ret 0x10"
+    },
+    {
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\client-src\\src\\Transport_Small.cpp",
+      "rva": "0x2e4990",
+      "symbol": "?ReplayApiEnabled@Object2e4990@@QBE_NXZ",
+      "flags": [
+        "-O2",
+        "-std:c++17"
+      ],
+      "bytes": 35,
+      "identical_bytes": 27,
+      "first_difference": 5,
+      "detail": "ours                                            Riot\n   0x0 cmp dword ptr [ecx + 0x74], 0               0x0 cmp dword ptr [ecx + 0x74], 0\n   0x4 je 0x20                                     0x4 je 0x21\n   0x6 push 0                                      0x6 push 0\n   0x8 push 0                                      0x8 push 0x1afa4a4\n   0xd push 0                                      0xd push 0x1ae9a84\n  0x12 call 0x17                                  0x12 call 0x6b1ae0\n  0x17 add esp, 0xc                               0x17 add esp, 0xc\n  0x1a test al, al                                0x1a test al, al\n  0x1c setne al                                   0x1c je 0x21   <<\n  0x1f ret                                        0x1e mov al, 1   <<\n  0x20 xor al, al                                 0x20 ret    <<\n  0x22 ret                                        0x21 xor al, al   <<"
+    },
+    {
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\client-src\\src\\ZoneD_Small.cpp",
+      "rva": "0x2f2780",
+      "symbol": "?Clone@Object2f2780@@QBEPAXPAX@Z",
+      "flags": [
+        "-O2",
+        "-std:c++17"
+      ],
+      "bytes": 31,
+      "identical_bytes": 15,
+      "first_difference": 4,
+      "detail": "ours                                            Riot\n   0x0 mov eax, dword ptr [esp + 4]                0x0 mov eax, dword ptr [esp + 4]\n   0x4 mov dword ptr [eax], 0                      0x4 push esi\n   0xa mov edx, dword ptr [ecx + 4]                0x5 mov esi, ecx   <<\n   0xd mov dword ptr [eax + 4], edx                0x7 mov dword ptr [eax], 0x1afadfc   <<\n  0x10 mov edx, dword ptr [ecx + 0xc]              0xd mov edx, dword ptr [esi + 4]   <<\n  0x13 mov cl, byte ptr [ecx + 8]                 0x10 mov dword ptr [eax + 4], edx   <<\n  0x16 mov byte ptr [eax + 8], cl                 0x13 mov cl, byte ptr [esi + 8]   <<\n  0x19 mov dword ptr [eax + 0xc], edx             0x16 mov byte ptr [eax + 8], cl   <<\n  0x1c ret 4                                      0x19 mov ecx, dword ptr [esi + 0xc]   <<"
+    },
+    {
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\client-src\\src\\gen\\MetaClasses.cpp",
+      "rva": "0x950f0",
+      "symbol": "??__ESkinSummonerEmoteLoadout_Meta@@YAXXZ",
+      "flags": [
+        "-O2",
+        "-std:c++17"
+      ],
+      "bytes": 89,
+      "identical_bytes": 89,
+      "first_difference": 19,
+      "detail": "same bytes, different targets:\n  +0x13: ours names ??$MetaConstruct@USkinSummonerEmoteLoadout@@@@YAPAXPAX@Z, the client has the rebuilt _fe_0 there"
+    },
+    {
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\client-src\\src\\gen\\MetaClasses.cpp",
+      "rva": "0x96910",
+      "symbol": "??__ERegaliaRankedCrestEntry_Meta@@YAXXZ",
+      "flags": [
+        "-O2",
+        "-std:c++17"
+      ],
+      "bytes": 124,
+      "identical_bytes": 124,
+      "first_difference": 16,
+      "detail": "same bytes, different targets:\n  +0x10: ours names ??$MetaConstruct@URegaliaRankedCrestEntry@@@@YAPAXPAX@Z, the client has the rebuilt _t2_hints_funcs_init there"
+    },
+    {
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\client-src\\src\\gen\\MetaClasses.cpp",
+      "rva": "0xb2d40",
+      "symbol": "??__ESpellEffectAmount_Meta@@YAXXZ",
+      "flags": [
+        "-O2",
+        "-std:c++17"
+      ],
+      "bytes": 86,
+      "identical_bytes": 86,
+      "first_difference": 16,
+      "detail": "same bytes, different targets:\n  +0x10: ours names ??$MetaConstruct@USpellEffectAmount@@@@YAPAXPAX@Z, the client has the rebuilt _BIO_ADDR_clear there"
+    },
+    {
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\client-src\\src\\gen\\MetaClasses.cpp",
+      "rva": "0xd9100",
+      "symbol": "??__EInputControlSet_Meta@@YAXXZ",
+      "flags": [
+        "-O2",
+        "-std:c++17"
+      ],
+      "bytes": 127,
+      "identical_bytes": 127,
+      "first_difference": 19,
+      "detail": "same bytes, different targets:\n  +0x13: ours names ??$MetaConstruct@UInputControlSet@@@@YAPAXPAX@Z, the client has the rebuilt _t2_hints_funcs_init there"
+    }
+  ]
+}

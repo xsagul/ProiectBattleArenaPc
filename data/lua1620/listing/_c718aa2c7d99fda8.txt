@@ -1,0 +1,171 @@
+
+main <?:0,0> (70 instructions, 280 bytes at 000001D95DD134C0)
+0+ params, 9 slots, 0 upvalues, 0 locals, 28 constants, 1 function
+	1	[-]	NEWTABLE 	0 4 0
+	2	[-]	NEWTABLE 	1 0 4
+	3	[-]	SETTABLE 	1 -2 -3	; "Name" "BlueLeft"
+	4	[-]	GETGLOBAL	2 -5	; TEAM_ORDER
+	5	[-]	SETTABLE 	1 -4 2	; "Team" -
+	6	[-]	GETGLOBAL	2 -7	; Make3DPoint
+	7	[-]	LOADK    	3 -8	; 2600
+	8	[-]	LOADK    	4 -9	; 95
+	9	[-]	LOADK    	5 -10	; 4600
+	10	[-]	CALL     	2 4 2
+	11	[-]	SETTABLE 	1 -6 2	; "Start" -
+	12	[-]	GETGLOBAL	2 -7	; Make3DPoint
+	13	[-]	LOADK    	3 -12	; 2700
+	14	[-]	LOADK    	4 -13	; 0
+	15	[-]	LOADK    	5 -14	; 5000
+	16	[-]	CALL     	2 4 2
+	17	[-]	SETTABLE 	1 -11 2	; "End" -
+	18	[-]	NEWTABLE 	2 0 4
+	19	[-]	SETTABLE 	2 -2 -15	; "Name" "BlueRight"
+	20	[-]	GETGLOBAL	3 -5	; TEAM_ORDER
+	21	[-]	SETTABLE 	2 -4 3	; "Team" -
+	22	[-]	GETGLOBAL	3 -7	; Make3DPoint
+	23	[-]	LOADK    	4 -10	; 4600
+	24	[-]	LOADK    	5 -9	; 95
+	25	[-]	LOADK    	6 -16	; 2800
+	26	[-]	CALL     	3 4 2
+	27	[-]	SETTABLE 	2 -6 3	; "Start" -
+	28	[-]	GETGLOBAL	3 -7	; Make3DPoint
+	29	[-]	LOADK    	4 -14	; 5000
+	30	[-]	LOADK    	5 -17	; 100
+	31	[-]	LOADK    	6 -18	; 2900
+	32	[-]	CALL     	3 4 2
+	33	[-]	SETTABLE 	2 -11 3	; "End" -
+	34	[-]	NEWTABLE 	3 0 4
+	35	[-]	SETTABLE 	3 -2 -19	; "Name" "PurpleLeft"
+	36	[-]	GETGLOBAL	4 -20	; TEAM_CHAOS
+	37	[-]	SETTABLE 	3 -4 4	; "Team" -
+	38	[-]	GETGLOBAL	4 -7	; Make3DPoint
+	39	[-]	LOADK    	5 -21	; 10200
+	40	[-]	LOADK    	6 -9	; 95
+	41	[-]	LOADK    	7 -22	; 12200
+	42	[-]	CALL     	4 4 2
+	43	[-]	SETTABLE 	3 -6 4	; "Start" -
+	44	[-]	GETGLOBAL	4 -7	; Make3DPoint
+	45	[-]	LOADK    	5 -23	; 9800
+	46	[-]	LOADK    	6 -9	; 95
+	47	[-]	LOADK    	7 -24	; 12000
+	48	[-]	CALL     	4 4 2
+	49	[-]	SETTABLE 	3 -11 4	; "End" -
+	50	[-]	NEWTABLE 	4 0 4
+	51	[-]	SETTABLE 	4 -2 -25	; "Name" "PurpleRight"
+	52	[-]	GETGLOBAL	5 -20	; TEAM_CHAOS
+	53	[-]	SETTABLE 	4 -4 5	; "Team" -
+	54	[-]	GETGLOBAL	5 -7	; Make3DPoint
+	55	[-]	LOADK    	6 -26	; 12300
+	56	[-]	LOADK    	7 -9	; 95
+	57	[-]	LOADK    	8 -27	; 10300
+	58	[-]	CALL     	5 4 2
+	59	[-]	SETTABLE 	4 -6 5	; "Start" -
+	60	[-]	GETGLOBAL	5 -7	; Make3DPoint
+	61	[-]	LOADK    	6 -22	; 12200
+	62	[-]	LOADK    	7 -9	; 95
+	63	[-]	LOADK    	8 -23	; 9800
+	64	[-]	CALL     	5 4 2
+	65	[-]	SETTABLE 	4 -11 5	; "End" -
+	66	[-]	SETLIST  	0 4 1	; 1
+	67	[-]	SETGLOBAL	0 -1	; TeleporterDefinitions
+	68	[-]	CLOSURE  	0 0	; 000001D95DD13830
+	69	[-]	SETGLOBAL	0 -28	; SpawnTeleporters
+	70	[-]	RETURN   	0 1
+constants (28) for 000001D95DD134C0:
+	1	"TeleporterDefinitions"
+	2	"Name"
+	3	"BlueLeft"
+	4	"Team"
+	5	"TEAM_ORDER"
+	6	"Start"
+	7	"Make3DPoint"
+	8	2600
+	9	95
+	10	4600
+	11	"End"
+	12	2700
+	13	0
+	14	5000
+	15	"BlueRight"
+	16	2800
+	17	100
+	18	2900
+	19	"PurpleLeft"
+	20	"TEAM_CHAOS"
+	21	10200
+	22	12200
+	23	9800
+	24	12000
+	25	"PurpleRight"
+	26	12300
+	27	10300
+	28	"SpawnTeleporters"
+locals (0) for 000001D95DD134C0:
+upvalues (0) for 000001D95DD134C0:
+
+function <?:29,44> (49 instructions, 196 bytes at 000001D95DD13830)
+0 params, 18 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; ipairs
+	2	[-]	GETGLOBAL	1 -2	; TeleporterDefinitions
+	3	[-]	CALL     	0 2 4
+	4	[-]	JMP      	42	; to 47
+	5	[-]	GETGLOBAL	5 -3	; SpawnMinion
+	6	[-]	LOADK    	6 -4	; "S5Test_BaseTeleporter_"
+	7	[-]	GETTABLE 	7 4 -5	; "Name"
+	8	[-]	CONCAT   	6 6 7
+	9	[-]	LOADK    	7 -6	; "S5Test_BaseTeleporter"
+	10	[-]	LOADK    	8 -7	; "Idle.lua"
+	11	[-]	GETTABLE 	9 4 -8	; "Start"
+	12	[-]	GETTABLE 	10 4 -9	; "Team"
+	13	[-]	LOADBOOL 	11 0 0
+	14	[-]	LOADBOOL 	12 1 0
+	15	[-]	LOADBOOL 	13 1 0
+	16	[-]	LOADBOOL 	14 1 0
+	17	[-]	LOADBOOL 	15 1 0
+	18	[-]	LOADBOOL 	16 1 0
+	19	[-]	CALL     	5 12 2
+	20	[-]	GETGLOBAL	6 -10	; FaceDirection
+	21	[-]	MOVE     	7 5
+	22	[-]	GETTABLE 	8 4 -11	; "End"
+	23	[-]	CALL     	6 3 1
+	24	[-]	GETGLOBAL	6 -3	; SpawnMinion
+	25	[-]	LOADK    	7 -4	; "S5Test_BaseTeleporter_"
+	26	[-]	GETTABLE 	8 4 -5	; "Name"
+	27	[-]	CONCAT   	7 7 8
+	28	[-]	LOADK    	8 -6	; "S5Test_BaseTeleporter"
+	29	[-]	LOADK    	9 -7	; "Idle.lua"
+	30	[-]	GETTABLE 	10 4 -11	; "End"
+	31	[-]	GETTABLE 	11 4 -9	; "Team"
+	32	[-]	LOADBOOL 	12 0 0
+	33	[-]	LOADBOOL 	13 1 0
+	34	[-]	LOADBOOL 	14 1 0
+	35	[-]	LOADBOOL 	15 1 0
+	36	[-]	LOADBOOL 	16 1 0
+	37	[-]	LOADBOOL 	17 1 0
+	38	[-]	CALL     	6 12 2
+	39	[-]	GETGLOBAL	7 -10	; FaceDirection
+	40	[-]	MOVE     	8 6
+	41	[-]	GETTABLE 	9 4 -8	; "Start"
+	42	[-]	CALL     	7 3 1
+	43	[-]	GETGLOBAL	7 -12	; LinkVisibility
+	44	[-]	MOVE     	8 5
+	45	[-]	MOVE     	9 6
+	46	[-]	CALL     	7 3 1
+	47	[-]	TFORLOOP 	0 2
+	48	[-]	JMP      	-44	; to 5
+	49	[-]	RETURN   	0 1
+constants (12) for 000001D95DD13830:
+	1	"ipairs"
+	2	"TeleporterDefinitions"
+	3	"SpawnMinion"
+	4	"S5Test_BaseTeleporter_"
+	5	"Name"
+	6	"S5Test_BaseTeleporter"
+	7	"Idle.lua"
+	8	"Start"
+	9	"Team"
+	10	"FaceDirection"
+	11	"End"
+	12	"LinkVisibility"
+locals (0) for 000001D95DD13830:
+upvalues (0) for 000001D95DD13830:

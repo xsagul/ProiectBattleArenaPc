@@ -1,0 +1,50 @@
+
+main <?:0,0> (10 instructions, 40 bytes at 0000022799DD34C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 5 constants, 2 functions
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "SR_NeutralMinionSpawn"
+	3	[-]	CALL     	0 2 1
+	4	[-]	CLOSURE  	0 0	; 0000022799DD35A0
+	5	[-]	SETGLOBAL	0 -3	; OverrideNeutralMinionSpawnDefaults
+	6	[-]	CLOSURE  	0 1	; 0000022799DD36A0
+	7	[-]	SETGLOBAL	0 -4	; NeutralMinionOverride
+	8	[-]	GETGLOBAL	0 -5	; NeutralMinionSpawnInit
+	9	[-]	CALL     	0 1 1
+	10	[-]	RETURN   	0 1
+constants (5) for 0000022799DD34C0:
+	1	"DoLuaShared"
+	2	"SR_NeutralMinionSpawn"
+	3	"OverrideNeutralMinionSpawnDefaults"
+	4	"NeutralMinionOverride"
+	5	"NeutralMinionSpawnInit"
+locals (0) for 0000022799DD34C0:
+upvalues (0) for 0000022799DD34C0:
+
+function <?:7,11> (9 instructions, 36 bytes at 0000022799DD35A0)
+0 params, 2 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; 3
+	2	[-]	SETGLOBAL	0 -1	; DRAGONS_TO_ELDER
+	3	[-]	GETGLOBAL	0 -4	; MINION_SPAWN_START_TIME
+	4	[-]	SUB      	0 -5 0	; 1200 -
+	5	[-]	SETGLOBAL	0 -3	; BARON_SPAWN_TIME
+	6	[-]	GETGLOBAL	0 -4	; MINION_SPAWN_START_TIME
+	7	[-]	SUB      	0 -7 0	; 600 -
+	8	[-]	SETGLOBAL	0 -6	; HERALD_SPAWN_TIME
+	9	[-]	RETURN   	0 1
+constants (7) for 0000022799DD35A0:
+	1	"DRAGONS_TO_ELDER"
+	2	3
+	3	"BARON_SPAWN_TIME"
+	4	"MINION_SPAWN_START_TIME"
+	5	1200
+	6	"HERALD_SPAWN_TIME"
+	7	600
+locals (0) for 0000022799DD35A0:
+upvalues (0) for 0000022799DD35A0:
+
+function <?:13,15> (1 instruction, 4 bytes at 0000022799DD36A0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000022799DD36A0:
+locals (0) for 0000022799DD36A0:
+upvalues (0) for 0000022799DD36A0:

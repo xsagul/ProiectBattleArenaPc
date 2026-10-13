@@ -1,0 +1,41 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 00000209F9BC35F0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Senna/HUD/Icons2D/Senna_PassiveHaste.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "SennaPassiveHaste"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	NEWTABLE 	0 5 0
+	12	[-]	LOADK    	1 -9	; 20
+	13	[-]	LOADK    	2 -10	; 16
+	14	[-]	LOADK    	3 -11	; 12
+	15	[-]	LOADK    	4 -12	; 8
+	16	[-]	LOADK    	5 -13	; 4
+	17	[-]	SETLIST  	0 5 1	; 1
+	18	[-]	SETGLOBAL	0 -8	; AutoCooldownByLevel
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -14	; TriggersSpellCasts
+	21	[-]	RETURN   	0 1
+constants (14) for 00000209F9BC35F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Senna/HUD/Icons2D/Senna_PassiveHaste.dds"
+	6	"BuffName"
+	7	"SennaPassiveHaste"
+	8	"AutoCooldownByLevel"
+	9	20
+	10	16
+	11	12
+	12	8
+	13	4
+	14	"TriggersSpellCasts"
+locals (0) for 00000209F9BC35F0:
+upvalues (0) for 00000209F9BC35F0:

@@ -1,0 +1,70 @@
+struct 0xf9aa40
+  0xf9aa40 field 0: bits 0..0 +0x10 28 B 0:struct(0xf9a550) 1:const
+struct 0xf9a550
+  0xf9a550 field 0: bits 3..3 +0x8 16 B 0:const 1:seq(struct)
+  0xf9a550 field 1: bits 0..2 +0x18 4 B 0:varint 1:varint 2:const 3:const 4:varint 5:const 6:const 7:varint
+struct 0xfbbce0
+  0xfbbce0 field 0: bits 0..2 +0x8 4 B 0:fixed 1:const 2:fixed 3:const 4:fixed 5:const 6:const 7:fixed
+  0xfbbce0 field 1: bits 24..24 +0x10 114 B 0:struct(0xfb9610) 1:const
+  0xfbbce0 field 2: bits 6..8 +0x88 4 B 0:const 1:fixed 2:fixed 3:const 4:const 5:fixed 6:const 7:fixed
+  0xfbbce0 field 3: bits 12..14 +0x8c 2 B 0:const 1:varint 2:varint 3:const 4:const 5:varint 6:const 7:varint
+  0xfbbce0 field 4: bits 15..17 +0x90 4 B 0:const 1:const 2:fixed 3:const 4:fixed 5:fixed 6:const 7:fixed
+  0xfbbce0 field 5: bits 3..5 +0x94 4 B 0:fixed 1:fixed 2:const 3:const 4:const 5:fixed 6:fixed 7:const
+  0xfbbce0 field 6: bits 9..11 +0x98 4 B 0:fixed 1:fixed 2:const 3:fixed 4:fixed 5:const 6:const 7:const
+  0xfbbce0 field 7: bits 21..23 +0x9c 2 B 0:varint 1:const 2:const 3:const 4:varint 5:varint 6:const 7:varint
+  0xfbbce0 field 8: bits 18..20 +0xa0 4 B 0:const 1:const 2:fixed 3:fixed 4:fixed 5:const 6:fixed 7:const
+struct 0xfb9610
+    0xfb9610 field 0 mode 0: not a text (0xfb9610 field 0 mode 0: length 2 byte 0 -> []); trying a seq of numbers
+  0xfb9610 field 0: bits 9..9 +0x8 16 B 0:seq(varint) 1:const
+  0xfb9610 field 1: bits 19..21 +0x18 4 B 0:varint 1:varint 2:const 3:const 4:varint 5:const 6:const 7:varint
+    0xfb9610 field 2 mode 0: seq of 0xfbb140, never filled in the replay: left unlearnt
+  0xfb9610 field 2: bits 22..22 +0x20 16 B 0:seq(struct) 1:const
+  0xfb9610 field 3: bits 16..18 +0x30 2 B 0:const 1:varint 2:const 3:varint 4:varint 5:const 6:varint 7:const
+  0xfb9610 field 4: bits 7..8 +0x38 16 B 0:text 1:text 2:text 3:const
+  0xfb9610 field 5: bits 0..1 +0x48 16 B 0:text 1:const 2:text 3:text
+    0xfb9610 field 6 mode 1: left unlearnt (ValueError: 1 is not in list)
+  0xfb9610 field 6: bits 6..6 +0x58 16 B 0:const 1:unknown
+  0xfb9610 field 7: bits 5..5 +0x68 1 B 0:const 1:const
+  0xfb9610 field 8: bits 2..4 +0x6c 4 B 0:const 1:fixed 2:const 3:const 4:fixed 5:fixed 6:fixed 7:const
+  0xfb9610 field 9: bits 13..15 +0x70 1 B 0:const 1:const 2:fixed 3:fixed 4:const 5:fixed 6:const 7:fixed
+  0xfb9610 field 10: bits 10..12 +0x71 1 B 0:const 1:fixed 2:const 3:fixed 4:const 5:fixed 6:const 7:fixed
+struct 0xfbb140
+  0xfbb140 field 0: bits 0..2 +0x8 4 B 0:const 1:const 2:fixed 3:fixed 4:const 5:fixed 6:const 7:fixed
+  0xfbb140 field 1: bits 3..5 +0xc 4 B 0:varint 1:varint 2:const 3:const 4:varint 5:const 6:const 7:varint
+-> C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\..\data\exe1620\codec\491.tree.json
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1517, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1192, in learn
+    verify_orders(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1283, in verify_orders
+    base = decode(T, sc, T.wire)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1356, in decode
+    return read_struct(sc, r, r.obj, sc.structs[sc.root])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1000, in read_struct
+    out[f'+{fl["off"]:#x}'] = read_field(schema, r, obj, fl, field_kind(fl))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 963, in read_field
+    return read_struct(schema, r, a + mode.get('at', 0), schema.structs[mode['type']])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1000, in read_struct
+    out[f'+{fl["off"]:#x}'] = read_field(schema, r, obj, fl, field_kind(fl))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 976, in read_field
+    out.append(read_struct(schema, r, ptr + mode['stride'] * i, schema.structs[el['type']]))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1000, in read_struct
+    out[f'+{fl["off"]:#x}'] = read_field(schema, r, obj, fl, field_kind(fl))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 963, in read_field
+    return read_struct(schema, r, a + mode.get('at', 0), schema.structs[mode['type']])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1000, in read_struct
+    out[f'+{fl["off"]:#x}'] = read_field(schema, r, obj, fl, field_kind(fl))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 976, in read_field
+    out.append(read_struct(schema, r, ptr + mode['stride'] * i, schema.structs[el['type']]))
+                                            ~~~~^^^^^^^^^^
+KeyError: 'stride'

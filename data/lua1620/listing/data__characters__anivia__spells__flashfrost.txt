@@ -1,0 +1,53 @@
+
+main <?:0,0> (29 instructions, 116 bytes at 0000022FCD6035C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Anivia/HUD/Icons2D/Anivia_Q.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "Flash_Frost"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "doesnotexist.troy"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect
+	15	[-]	LOADK    	0 -12	; "C_BUFFBONE_GLB_HEAD_LOC"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateAttachBoneName
+	17	[-]	LOADK    	0 -14	; 1
+	18	[-]	SETGLOBAL	0 -13	; SpellToggleSlot
+	19	[-]	NEWTABLE 	0 1 0
+	20	[-]	LOADK    	1 -16	; "BlackIceAnivia"
+	21	[-]	SETLIST  	0 1 1	; 1
+	22	[-]	SETGLOBAL	0 -15	; SpellFXOverrideSkins
+	23	[-]	NEWTABLE 	0 1 0
+	24	[-]	LOADK    	1 -16	; "BlackIceAnivia"
+	25	[-]	SETLIST  	0 1 1	; 1
+	26	[-]	SETGLOBAL	0 -17	; SpellVOOverrideSkins
+	27	[-]	LOADBOOL 	0 1 0
+	28	[-]	SETGLOBAL	0 -18	; IsDamagingSpell
+	29	[-]	RETURN   	0 1
+constants (18) for 0000022FCD6035C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Anivia/HUD/Icons2D/Anivia_Q.dds"
+	7	"BuffName"
+	8	"Flash_Frost"
+	9	"AutoBuffActivateEffect"
+	10	"doesnotexist.troy"
+	11	"AutoBuffActivateAttachBoneName"
+	12	"C_BUFFBONE_GLB_HEAD_LOC"
+	13	"SpellToggleSlot"
+	14	1
+	15	"SpellFXOverrideSkins"
+	16	"BlackIceAnivia"
+	17	"SpellVOOverrideSkins"
+	18	"IsDamagingSpell"
+locals (0) for 0000022FCD6035C0:
+upvalues (0) for 0000022FCD6035C0:

@@ -1,0 +1,35 @@
+
+main <?:0,0> (18 instructions, 72 bytes at 00000199E0F33600)
+0+ params, 3 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	GETGLOBAL	0 -3	; True
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -4	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -6	; 1
+	8	[-]	SETGLOBAL	0 -5	; SpellDamageRatio
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -7	; PersistsThroughDeath
+	11	[-]	NEWTABLE 	0 2 0
+	12	[-]	LOADK    	1 -9	; "FrostFireBrand"
+	13	[-]	LOADK    	2 -10	; "ZombieBrand"
+	14	[-]	SETLIST  	0 2 1	; 1
+	15	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	16	[-]	LOADBOOL 	0 1 0
+	17	[-]	SETGLOBAL	0 -11	; IsDamagingSpell
+	18	[-]	RETURN   	0 1
+constants (11) for 00000199E0F33600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"True"
+	4	"DoesntTriggerSpellCasts"
+	5	"SpellDamageRatio"
+	6	1
+	7	"PersistsThroughDeath"
+	8	"SpellFXOverrideSkins"
+	9	"FrostFireBrand"
+	10	"ZombieBrand"
+	11	"IsDamagingSpell"
+locals (0) for 00000199E0F33600:
+upvalues (0) for 00000199E0F33600:

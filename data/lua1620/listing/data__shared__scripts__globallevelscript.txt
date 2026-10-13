@@ -1,0 +1,80 @@
+
+main <?:0,0> (18 instructions, 72 bytes at 0000026F993035C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 14 constants, 1 function
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "ObjectTags"
+	3	[-]	CALL     	0 2 1
+	4	[-]	LOADK    	0 -4	; 5
+	5	[-]	SETGLOBAL	0 -3	; EVENT_STAGE_WELCOME_TIME
+	6	[-]	LOADK    	0 -6	; 60
+	7	[-]	SETGLOBAL	0 -5	; EVENT_STAGE_PREANNOUNCE_TIME
+	8	[-]	LOADK    	0 -8	; 0
+	9	[-]	SETGLOBAL	0 -7	; EVENT_STAGE_FINISHED
+	10	[-]	LOADK    	0 -10	; 1
+	11	[-]	SETGLOBAL	0 -9	; EVENT_STAGE_WELCOME
+	12	[-]	LOADK    	0 -12	; 2
+	13	[-]	SETGLOBAL	0 -11	; EVENT_STAGE_PREANNOUNCE
+	14	[-]	GETGLOBAL	0 -9	; EVENT_STAGE_WELCOME
+	15	[-]	SETGLOBAL	0 -13	; NextEventStage
+	16	[-]	CLOSURE  	0 0	; 0000026F99303730
+	17	[-]	SETGLOBAL	0 -14	; UpdateEventTimers
+	18	[-]	RETURN   	0 1
+constants (14) for 0000026F993035C0:
+	1	"DoLuaShared"
+	2	"ObjectTags"
+	3	"EVENT_STAGE_WELCOME_TIME"
+	4	5
+	5	"EVENT_STAGE_PREANNOUNCE_TIME"
+	6	60
+	7	"EVENT_STAGE_FINISHED"
+	8	0
+	9	"EVENT_STAGE_WELCOME"
+	10	1
+	11	"EVENT_STAGE_PREANNOUNCE"
+	12	2
+	13	"NextEventStage"
+	14	"UpdateEventTimers"
+locals (0) for 0000026F993035C0:
+upvalues (0) for 0000026F993035C0:
+
+function <?:18,31> (28 instructions, 112 bytes at 0000026F99303730)
+1 param, 3 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; NextEventStage
+	2	[-]	GETGLOBAL	2 -2	; EVENT_STAGE_FINISHED
+	3	[-]	EQ       	0 1 2
+	4	[-]	JMP      	2	; to 7
+	5	[-]	RETURN   	0 1
+	6	[-]	JMP      	21	; to 28
+	7	[-]	GETGLOBAL	1 -1	; NextEventStage
+	8	[-]	GETGLOBAL	2 -3	; EVENT_STAGE_WELCOME
+	9	[-]	EQ       	0 1 2
+	10	[-]	JMP      	8	; to 19
+	11	[-]	LE       	0 -4 0	; 20 -
+	12	[-]	JMP      	15	; to 28
+	13	[-]	GETGLOBAL	1 -5	; NotifyGlobalEvent
+	14	[-]	LOADK    	2 -6	; "OnStartGameMessage1"
+	15	[-]	CALL     	1 2 1
+	16	[-]	GETGLOBAL	1 -7	; EVENT_STAGE_PREANNOUNCE
+	17	[-]	SETGLOBAL	1 -1	; NextEventStage
+	18	[-]	JMP      	9	; to 28
+	19	[-]	GETGLOBAL	1 -1	; NextEventStage
+	20	[-]	GETGLOBAL	2 -7	; EVENT_STAGE_PREANNOUNCE
+	21	[-]	EQ       	0 1 2
+	22	[-]	JMP      	5	; to 28
+	23	[-]	GETGLOBAL	1 -8	; EVENT_STAGE_PREANNOUNCE_TIME
+	24	[-]	LE       	0 1 0
+	25	[-]	JMP      	2	; to 28
+	26	[-]	GETGLOBAL	1 -2	; EVENT_STAGE_FINISHED
+	27	[-]	SETGLOBAL	1 -1	; NextEventStage
+	28	[-]	RETURN   	0 1
+constants (8) for 0000026F99303730:
+	1	"NextEventStage"
+	2	"EVENT_STAGE_FINISHED"
+	3	"EVENT_STAGE_WELCOME"
+	4	20
+	5	"NotifyGlobalEvent"
+	6	"OnStartGameMessage1"
+	7	"EVENT_STAGE_PREANNOUNCE"
+	8	"EVENT_STAGE_PREANNOUNCE_TIME"
+locals (0) for 0000026F99303730:
+upvalues (0) for 0000026F99303730:

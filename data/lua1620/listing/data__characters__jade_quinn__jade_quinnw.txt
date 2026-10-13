@@ -1,0 +1,42 @@
+
+main <?:0,0> (22 instructions, 88 bytes at 00000212CBDF35C0)
+0+ params, 5 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; 3
+	10	[-]	SETGLOBAL	0 -6	; OnPreDamagePriority
+	11	[-]	NEWTABLE 	0 4 0
+	12	[-]	LOADK    	1 -9	; "PhoenixQuinn"
+	13	[-]	LOADK    	2 -10	; "QuinnValor_Phoenix"
+	14	[-]	LOADK    	3 -11	; "QuinnSkin02"
+	15	[-]	LOADK    	4 -12	; "QuinnValorSkin02"
+	16	[-]	SETLIST  	0 4 1	; 1
+	17	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	18	[-]	LOADBOOL 	0 1 0
+	19	[-]	SETGLOBAL	0 -13	; IsDamagingSpell
+	20	[-]	LOADBOOL 	0 1 0
+	21	[-]	SETGLOBAL	0 -14	; DoOnPreDamageInExpirationOrder
+	22	[-]	RETURN   	0 1
+constants (14) for 00000212CBDF35C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.dds"
+	6	"OnPreDamagePriority"
+	7	3
+	8	"SpellFXOverrideSkins"
+	9	"PhoenixQuinn"
+	10	"QuinnValor_Phoenix"
+	11	"QuinnSkin02"
+	12	"QuinnValorSkin02"
+	13	"IsDamagingSpell"
+	14	"DoOnPreDamageInExpirationOrder"
+locals (0) for 00000212CBDF35C0:
+upvalues (0) for 00000212CBDF35C0:

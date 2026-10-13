@@ -1,0 +1,51 @@
+
+main <?:0,0> (27 instructions, 108 bytes at 000001DC956D3600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/TFT_Nidalee/HUD/Icons2D/TFT_Nidalee_E1.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "TFT_Nidalee_PrimalSurge"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "r:TFT_Nidalee_E_Buf"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect3
+	15	[-]	LOADK    	0 -12	; "L_BUFFBONE_GLB_HAND_LOC"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateAttachBoneName3
+	17	[-]	LOADK    	0 -10	; "r:TFT_Nidalee_E_Buf"
+	18	[-]	SETGLOBAL	0 -13	; AutoBuffActivateEffect4
+	19	[-]	LOADK    	0 -15	; "R_BUFFBONE_GLB_HAND_LOC"
+	20	[-]	SETGLOBAL	0 -14	; AutoBuffActivateAttachBoneName4
+	21	[-]	NEWTABLE 	0 1 0
+	22	[-]	LOADK    	1 -17	; "HeadhunterTFT_Nidalee"
+	23	[-]	SETLIST  	0 1 1	; 1
+	24	[-]	SETGLOBAL	0 -16	; SpellFXOverrideSkins
+	25	[-]	LOADBOOL 	0 0 0
+	26	[-]	SETGLOBAL	0 -18	; IsDamagingSpell
+	27	[-]	RETURN   	0 1
+constants (18) for 000001DC956D3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/TFT_Nidalee/HUD/Icons2D/TFT_Nidalee_E1.dds"
+	7	"BuffName"
+	8	"TFT_Nidalee_PrimalSurge"
+	9	"AutoBuffActivateEffect3"
+	10	"r:TFT_Nidalee_E_Buf"
+	11	"AutoBuffActivateAttachBoneName3"
+	12	"L_BUFFBONE_GLB_HAND_LOC"
+	13	"AutoBuffActivateEffect4"
+	14	"AutoBuffActivateAttachBoneName4"
+	15	"R_BUFFBONE_GLB_HAND_LOC"
+	16	"SpellFXOverrideSkins"
+	17	"HeadhunterTFT_Nidalee"
+	18	"IsDamagingSpell"
+locals (0) for 000001DC956D3600:
+upvalues (0) for 000001DC956D3600:

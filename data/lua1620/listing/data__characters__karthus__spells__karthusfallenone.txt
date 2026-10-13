@@ -1,0 +1,48 @@
+
+main <?:0,0> (27 instructions, 108 bytes at 00000181AE2035F0)
+0+ params, 4 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; 3
+	10	[-]	SETGLOBAL	0 -5	; ChannelDuration
+	11	[-]	NEWTABLE 	0 3 0
+	12	[-]	LOADK    	1 -8	; 180
+	13	[-]	LOADK    	2 -9	; 150
+	14	[-]	LOADK    	3 -10	; 120
+	15	[-]	SETLIST  	0 3 1	; 1
+	16	[-]	SETGLOBAL	0 -7	; AutoCooldownByLevel
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -11	; PersistsThroughDeath
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -12	; NonDispellable
+	21	[-]	NEWTABLE 	0 1 0
+	22	[-]	LOADK    	1 -14	; "KarthusSkin04"
+	23	[-]	SETLIST  	0 1 1	; 1
+	24	[-]	SETGLOBAL	0 -13	; SpellVOOverrideSkins
+	25	[-]	LOADBOOL 	0 1 0
+	26	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	27	[-]	RETURN   	0 1
+constants (15) for 00000181AE2035F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"ChannelDuration"
+	6	3
+	7	"AutoCooldownByLevel"
+	8	180
+	9	150
+	10	120
+	11	"PersistsThroughDeath"
+	12	"NonDispellable"
+	13	"SpellVOOverrideSkins"
+	14	"KarthusSkin04"
+	15	"IsDamagingSpell"
+locals (0) for 00000181AE2035F0:
+upvalues (0) for 00000181AE2035F0:

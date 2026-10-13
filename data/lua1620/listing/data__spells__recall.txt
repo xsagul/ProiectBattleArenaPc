@@ -1,0 +1,48 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 00000130D5D034C0)
+0+ params, 5 slots, 0 upvalues, 0 locals, 17 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; CastingBreaksStealth
+	7	[-]	LOADK    	0 -5	; 8
+	8	[-]	SETGLOBAL	0 -4	; ChannelDuration
+	9	[-]	LOADK    	0 -7	; "Icon_Spell_SummonerSpell_Recall_01.dds"
+	10	[-]	SETGLOBAL	0 -6	; BuffTextureName
+	11	[-]	LOADK    	0 -9	; "Recall"
+	12	[-]	SETGLOBAL	0 -8	; BuffName
+	13	[-]	NEWTABLE 	0 4 0
+	14	[-]	LOADK    	1 -11	; "OktoberGragas"
+	15	[-]	LOADK    	2 -12	; "MetalWingedJudicator"
+	16	[-]	LOADK    	3 -13	; "ClericSoraka"
+	17	[-]	LOADK    	4 -14	; "SpiritUdyr"
+	18	[-]	SETLIST  	0 4 1	; 1
+	19	[-]	SETGLOBAL	0 -10	; SpellFXOverrideSkins
+	20	[-]	NEWTABLE 	0 2 0
+	21	[-]	LOADK    	1 -16	; "ZombieBrand"
+	22	[-]	LOADK    	2 -17	; "CyberNocturne"
+	23	[-]	SETLIST  	0 2 1	; 1
+	24	[-]	SETGLOBAL	0 -15	; SpellVOOverrideSkins
+	25	[-]	RETURN   	0 1
+constants (17) for 00000130D5D034C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"CastingBreaksStealth"
+	4	"ChannelDuration"
+	5	8
+	6	"BuffTextureName"
+	7	"Icon_Spell_SummonerSpell_Recall_01.dds"
+	8	"BuffName"
+	9	"Recall"
+	10	"SpellFXOverrideSkins"
+	11	"OktoberGragas"
+	12	"MetalWingedJudicator"
+	13	"ClericSoraka"
+	14	"SpiritUdyr"
+	15	"SpellVOOverrideSkins"
+	16	"ZombieBrand"
+	17	"CyberNocturne"
+locals (0) for 00000130D5D034C0:
+upvalues (0) for 00000130D5D034C0:

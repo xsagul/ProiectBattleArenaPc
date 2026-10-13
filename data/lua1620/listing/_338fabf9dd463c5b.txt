@@ -1,0 +1,309 @@
+
+main <?:0,0> (22 instructions, 88 bytes at 000001BCFE1434C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 14 constants, 5 functions
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "SR_LevelScript"
+	3	[-]	CALL     	0 2 1
+	4	[-]	LOADK    	0 -4	; 60
+	5	[-]	SETGLOBAL	0 -3	; EVENT_STAGE_WELCOME_TIME
+	6	[-]	LOADK    	0 -6	; 20
+	7	[-]	SETGLOBAL	0 -5	; EVENT_STAGE_PREANNOUNCE_TIME
+	8	[-]	LOADK    	0 -8	; 65
+	9	[-]	SETGLOBAL	0 -7	; EVENT_STAGE_MINIONS_SPAWNED_TIME
+	10	[-]	CLOSURE  	0 0	; 000001BCFE143690
+	11	[-]	SETGLOBAL	0 -9	; OverrideDefaultDefines
+	12	[-]	CLOSURE  	0 1	; 000001BCFE141990
+	13	[-]	SETGLOBAL	0 -10	; OverrideDefaultMinionInfo
+	14	[-]	CLOSURE  	0 2	; 000001BCFE141A30
+	15	[-]	SETGLOBAL	0 -11	; OverrideDefaultTables
+	16	[-]	CLOSURE  	0 3	; 000001BCFE145A90
+	17	[-]	SETGLOBAL	0 -12	; OverrideMinionSpawnInfo
+	18	[-]	CLOSURE  	0 4	; 000001BCFE145B10
+	19	[-]	SETGLOBAL	0 -13	; DoAdditionalPreloads
+	20	[-]	GETGLOBAL	0 -14	; Init
+	21	[-]	CALL     	0 1 1
+	22	[-]	RETURN   	0 1
+constants (14) for 000001BCFE1434C0:
+	1	"DoLuaShared"
+	2	"SR_LevelScript"
+	3	"EVENT_STAGE_WELCOME_TIME"
+	4	60
+	5	"EVENT_STAGE_PREANNOUNCE_TIME"
+	6	20
+	7	"EVENT_STAGE_MINIONS_SPAWNED_TIME"
+	8	65
+	9	"OverrideDefaultDefines"
+	10	"OverrideDefaultMinionInfo"
+	11	"OverrideDefaultTables"
+	12	"OverrideMinionSpawnInfo"
+	13	"DoAdditionalPreloads"
+	14	"Init"
+locals (0) for 000001BCFE1434C0:
+upvalues (0) for 000001BCFE1434C0:
+
+function <?:10,130> (133 instructions, 532 bytes at 000001BCFE143690)
+0 params, 2 slots, 0 upvalues, 0 locals, 82 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; 30000
+	2	[-]	SETGLOBAL	0 -1	; WAVE_SPAWN_RATE
+	3	[-]	LOADK    	0 -4	; 600
+	4	[-]	SETGLOBAL	0 -3	; FIRST_SPAWN_RATE_DELAY
+	5	[-]	LOADK    	0 -2	; 30000
+	6	[-]	SETGLOBAL	0 -5	; FIRST_CHANGED_SPAWN_RATE
+	7	[-]	LOADK    	0 -7	; 1200
+	8	[-]	SETGLOBAL	0 -6	; SECOND_SPAWN_RATE_DELAY
+	9	[-]	LOADK    	0 -2	; 30000
+	10	[-]	SETGLOBAL	0 -8	; SECOND_CHANGED_SPAWN_RATE
+	11	[-]	LOADK    	0 -10	; 40
+	12	[-]	SETGLOBAL	0 -9	; MINION_MOVE_SPEED_INCREASE_AMOUNT
+	13	[-]	NEWTABLE 	0 0 25
+	14	[-]	SETTABLE 	0 -12 -13	; "DefaultNumPerWave" 3
+	15	[-]	SETTABLE 	0 -14 -15	; "ArmorMax" 16
+	16	[-]	SETTABLE 	0 -16 -17	; "Armor" 0
+	17	[-]	SETTABLE 	0 -18 -17	; "ArmorUpgrade" 0
+	18	[-]	SETTABLE 	0 -19 -20	; "ArmorUpgradeGrowth" 0.085
+	19	[-]	SETTABLE 	0 -21 -17	; "MagicResistance" 0
+	20	[-]	SETTABLE 	0 -22 -23	; "MagicResistanceUpgrade" 0.625
+	21	[-]	SETTABLE 	0 -24 -17	; "HPBonus" 0
+	22	[-]	SETTABLE 	0 -25 -26	; "MaxBonus" 845
+	23	[-]	SETTABLE 	0 -27 -28	; "HPUpgrade" 22
+	24	[-]	SETTABLE 	0 -29 -30	; "HPUpgradeGrowth" 0.3
+	25	[-]	SETTABLE 	0 -31 -32	; "HPUpgradeLate" 10.25
+	26	[-]	SETTABLE 	0 -33 -17	; "HPUpgradeGrowthLate" 0
+	27	[-]	SETTABLE 	0 -34 -17	; "HPInhibitor" 0
+	28	[-]	SETTABLE 	0 -35 -36	; "DamageMax" 68
+	29	[-]	SETTABLE 	0 -37 -17	; "DamageBonus" 0
+	30	[-]	SETTABLE 	0 -38 -17	; "DamageUpgrade" 0
+	31	[-]	SETTABLE 	0 -39 -40	; "DamageUpgradeLate" 3.41
+	32	[-]	SETTABLE 	0 -41 -17	; "DamageInhibitor" 0
+	33	[-]	SETTABLE 	0 -42 -43	; "ExpGiven" 48
+	34	[-]	SETTABLE 	0 -44 -17	; "ExpBonus" 0
+	35	[-]	SETTABLE 	0 -45 -17	; "ExpUpgrade" 0
+	36	[-]	SETTABLE 	0 -46 -17	; "ExpInhibitor" 0
+	37	[-]	GETGLOBAL	1 -48	; MELEE_GOLD
+	38	[-]	SETTABLE 	0 -47 1	; "GoldGiven" -
+	39	[-]	SETTABLE 	0 -49 -17	; "GoldBonus" 0
+	40	[-]	GETGLOBAL	1 -51	; MELEE_CASTER_GOLD_UPGRADE
+	41	[-]	SETTABLE 	0 -50 1	; "GoldUpgrade" -
+	42	[-]	SETTABLE 	0 -52 -17	; "GoldInhibitor" 0
+	43	[-]	SETTABLE 	0 -53 -17	; "GoldShared" 0
+	44	[-]	SETTABLE 	0 -54 -17	; "GoldShareUpgrade" 0
+	45	[-]	SETTABLE 	0 -55 -17	; "GoldMaximumBonus" 0
+	46	[-]	SETTABLE 	0 -56 -17	; "LocalGoldGiven" 0
+	47	[-]	GETGLOBAL	1 -58	; MELEE_SHARE_LASTHIT
+	48	[-]	SETTABLE 	0 -57 1	; "LocalGoldGivenOnLastHit" -
+	49	[-]	GETGLOBAL	1 -60	; MELEE_SHARE_MISS
+	50	[-]	SETTABLE 	0 -59 1	; "LocalGoldBonus" -
+	51	[-]	SETTABLE 	0 -61 -17	; "MoveSpeedBaseIncrease" 0
+	52	[-]	SETGLOBAL	0 -11	; MeleeDefaultMinionInfo
+	53	[-]	NEWTABLE 	0 0 25
+	54	[-]	SETTABLE 	0 -12 -13	; "DefaultNumPerWave" 3
+	55	[-]	SETTABLE 	0 -14 -17	; "ArmorMax" 0
+	56	[-]	SETTABLE 	0 -16 -17	; "Armor" 0
+	57	[-]	SETTABLE 	0 -18 -17	; "ArmorUpgrade" 0
+	58	[-]	SETTABLE 	0 -19 -17	; "ArmorUpgradeGrowth" 0
+	59	[-]	SETTABLE 	0 -21 -17	; "MagicResistance" 0
+	60	[-]	SETTABLE 	0 -22 -63	; "MagicResistanceUpgrade" 1
+	61	[-]	SETTABLE 	0 -24 -17	; "HPBonus" 0
+	62	[-]	SETTABLE 	0 -25 -64	; "MaxBonus" 195
+	63	[-]	SETTABLE 	0 -27 -65	; "HPUpgrade" 6
+	64	[-]	SETTABLE 	0 -29 -17	; "HPUpgradeGrowth" 0
+	65	[-]	SETTABLE 	0 -31 -66	; "HPUpgradeLate" 2.25
+	66	[-]	SETTABLE 	0 -33 -17	; "HPUpgradeGrowthLate" 0
+	67	[-]	SETTABLE 	0 -34 -17	; "HPInhibitor" 0
+	68	[-]	SETTABLE 	0 -35 -67	; "DamageMax" 97
+	69	[-]	SETTABLE 	0 -37 -17	; "DamageBonus" 0
+	70	[-]	SETTABLE 	0 -38 -68	; "DamageUpgrade" 1.5
+	71	[-]	SETTABLE 	0 -39 -13	; "DamageUpgradeLate" 3
+	72	[-]	SETTABLE 	0 -41 -17	; "DamageInhibitor" 0
+	73	[-]	SETTABLE 	0 -42 -69	; "ExpGiven" 24
+	74	[-]	SETTABLE 	0 -44 -17	; "ExpBonus" 0
+	75	[-]	SETTABLE 	0 -45 -17	; "ExpUpgrade" 0
+	76	[-]	SETTABLE 	0 -46 -17	; "ExpInhibitor" 0
+	77	[-]	GETGLOBAL	1 -70	; CASTER_GOLD
+	78	[-]	SETTABLE 	0 -47 1	; "GoldGiven" -
+	79	[-]	SETTABLE 	0 -49 -17	; "GoldBonus" 0
+	80	[-]	GETGLOBAL	1 -51	; MELEE_CASTER_GOLD_UPGRADE
+	81	[-]	SETTABLE 	0 -50 1	; "GoldUpgrade" -
+	82	[-]	SETTABLE 	0 -52 -17	; "GoldInhibitor" 0
+	83	[-]	SETTABLE 	0 -53 -17	; "GoldShared" 0
+	84	[-]	SETTABLE 	0 -54 -17	; "GoldShareUpgrade" 0
+	85	[-]	SETTABLE 	0 -55 -17	; "GoldMaximumBonus" 0
+	86	[-]	SETTABLE 	0 -56 -17	; "LocalGoldGiven" 0
+	87	[-]	GETGLOBAL	1 -71	; CASTER_SHARE_LASTHIT
+	88	[-]	SETTABLE 	0 -57 1	; "LocalGoldGivenOnLastHit" -
+	89	[-]	GETGLOBAL	1 -72	; CASTER_SHARE_MISS
+	90	[-]	SETTABLE 	0 -59 1	; "LocalGoldBonus" -
+	91	[-]	SETTABLE 	0 -61 -17	; "MoveSpeedBaseIncrease" 0
+	92	[-]	SETGLOBAL	0 -62	; CasterDefaultMinionInfo
+	93	[-]	NEWTABLE 	0 0 25
+	94	[-]	SETTABLE 	0 -12 -17	; "DefaultNumPerWave" 0
+	95	[-]	SETTABLE 	0 -14 -17	; "ArmorMax" 0
+	96	[-]	SETTABLE 	0 -16 -17	; "Armor" 0
+	97	[-]	SETTABLE 	0 -18 -17	; "ArmorUpgrade" 0
+	98	[-]	SETTABLE 	0 -19 -17	; "ArmorUpgradeGrowth" 0
+	99	[-]	SETTABLE 	0 -21 -17	; "MagicResistance" 0
+	100	[-]	SETTABLE 	0 -22 -68	; "MagicResistanceUpgrade" 1.5
+	101	[-]	SETTABLE 	0 -24 -17	; "HPBonus" 0
+	102	[-]	SETTABLE 	0 -25 -74	; "MaxBonus" 10000
+	103	[-]	SETTABLE 	0 -27 -75	; "HPUpgrade" 62
+	104	[-]	SETTABLE 	0 -29 -17	; "HPUpgradeGrowth" 0
+	105	[-]	SETTABLE 	0 -31 -76	; "HPUpgradeLate" 25
+	106	[-]	SETTABLE 	0 -33 -17	; "HPUpgradeGrowthLate" 0
+	107	[-]	SETTABLE 	0 -34 -17	; "HPInhibitor" 0
+	108	[-]	SETTABLE 	0 -35 -74	; "DamageMax" 10000
+	109	[-]	SETTABLE 	0 -37 -17	; "DamageBonus" 0
+	110	[-]	SETTABLE 	0 -38 -68	; "DamageUpgrade" 1.5
+	111	[-]	SETTABLE 	0 -39 -17	; "DamageUpgradeLate" 0
+	112	[-]	SETTABLE 	0 -41 -17	; "DamageInhibitor" 0
+	113	[-]	SETTABLE 	0 -42 -77	; "ExpGiven" 75
+	114	[-]	SETTABLE 	0 -44 -17	; "ExpBonus" 0
+	115	[-]	SETTABLE 	0 -45 -17	; "ExpUpgrade" 0
+	116	[-]	SETTABLE 	0 -46 -17	; "ExpInhibitor" 0
+	117	[-]	GETGLOBAL	1 -78	; CANNON_GOLD
+	118	[-]	SETTABLE 	0 -47 1	; "GoldGiven" -
+	119	[-]	SETTABLE 	0 -49 -17	; "GoldBonus" 0
+	120	[-]	GETGLOBAL	1 -79	; CANNON_GOLD_UPGRADE
+	121	[-]	SETTABLE 	0 -50 1	; "GoldUpgrade" -
+	122	[-]	SETTABLE 	0 -52 -17	; "GoldInhibitor" 0
+	123	[-]	SETTABLE 	0 -53 -17	; "GoldShared" 0
+	124	[-]	SETTABLE 	0 -54 -17	; "GoldShareUpgrade" 0
+	125	[-]	SETTABLE 	0 -55 -80	; "GoldMaximumBonus" 33
+	126	[-]	SETTABLE 	0 -56 -17	; "LocalGoldGiven" 0
+	127	[-]	GETGLOBAL	1 -81	; CANNON_SHARE_LASTHIT
+	128	[-]	SETTABLE 	0 -57 1	; "LocalGoldGivenOnLastHit" -
+	129	[-]	GETGLOBAL	1 -82	; CANNON_SHARE_MISS
+	130	[-]	SETTABLE 	0 -59 1	; "LocalGoldBonus" -
+	131	[-]	SETTABLE 	0 -61 -17	; "MoveSpeedBaseIncrease" 0
+	132	[-]	SETGLOBAL	0 -73	; CannonDefaultMinionInfo
+	133	[-]	RETURN   	0 1
+constants (82) for 000001BCFE143690:
+	1	"WAVE_SPAWN_RATE"
+	2	30000
+	3	"FIRST_SPAWN_RATE_DELAY"
+	4	600
+	5	"FIRST_CHANGED_SPAWN_RATE"
+	6	"SECOND_SPAWN_RATE_DELAY"
+	7	1200
+	8	"SECOND_CHANGED_SPAWN_RATE"
+	9	"MINION_MOVE_SPEED_INCREASE_AMOUNT"
+	10	40
+	11	"MeleeDefaultMinionInfo"
+	12	"DefaultNumPerWave"
+	13	3
+	14	"ArmorMax"
+	15	16
+	16	"Armor"
+	17	0
+	18	"ArmorUpgrade"
+	19	"ArmorUpgradeGrowth"
+	20	0.085
+	21	"MagicResistance"
+	22	"MagicResistanceUpgrade"
+	23	0.625
+	24	"HPBonus"
+	25	"MaxBonus"
+	26	845
+	27	"HPUpgrade"
+	28	22
+	29	"HPUpgradeGrowth"
+	30	0.3
+	31	"HPUpgradeLate"
+	32	10.25
+	33	"HPUpgradeGrowthLate"
+	34	"HPInhibitor"
+	35	"DamageMax"
+	36	68
+	37	"DamageBonus"
+	38	"DamageUpgrade"
+	39	"DamageUpgradeLate"
+	40	3.41
+	41	"DamageInhibitor"
+	42	"ExpGiven"
+	43	48
+	44	"ExpBonus"
+	45	"ExpUpgrade"
+	46	"ExpInhibitor"
+	47	"GoldGiven"
+	48	"MELEE_GOLD"
+	49	"GoldBonus"
+	50	"GoldUpgrade"
+	51	"MELEE_CASTER_GOLD_UPGRADE"
+	52	"GoldInhibitor"
+	53	"GoldShared"
+	54	"GoldShareUpgrade"
+	55	"GoldMaximumBonus"
+	56	"LocalGoldGiven"
+	57	"LocalGoldGivenOnLastHit"
+	58	"MELEE_SHARE_LASTHIT"
+	59	"LocalGoldBonus"
+	60	"MELEE_SHARE_MISS"
+	61	"MoveSpeedBaseIncrease"
+	62	"CasterDefaultMinionInfo"
+	63	1
+	64	195
+	65	6
+	66	2.25
+	67	97
+	68	1.5
+	69	24
+	70	"CASTER_GOLD"
+	71	"CASTER_SHARE_LASTHIT"
+	72	"CASTER_SHARE_MISS"
+	73	"CannonDefaultMinionInfo"
+	74	10000
+	75	62
+	76	25
+	77	75
+	78	"CANNON_GOLD"
+	79	"CANNON_GOLD_UPGRADE"
+	80	33
+	81	"CANNON_SHARE_LASTHIT"
+	82	"CANNON_SHARE_MISS"
+locals (0) for 000001BCFE143690:
+upvalues (0) for 000001BCFE143690:
+
+function <?:132,134> (1 instruction, 4 bytes at 000001BCFE141990)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000001BCFE141990:
+locals (0) for 000001BCFE141990:
+upvalues (0) for 000001BCFE141990:
+
+function <?:137,146> (10 instructions, 40 bytes at 000001BCFE141A30)
+0 params, 2 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	NEWTABLE 	0 0 4
+	2	[-]	GETGLOBAL	1 -3	; WAVE_SPAWN_RATE
+	3	[-]	SETTABLE 	0 -2 1	; "WaveSpawnRate" -
+	4	[-]	SETTABLE 	0 -4 -5	; "SingleMinionSpawnDelay" 700
+	5	[-]	GETGLOBAL	1 -7	; EXP_GIVEN_RADIUS
+	6	[-]	SETTABLE 	0 -6 1	; "ExpRadius" -
+	7	[-]	GETGLOBAL	1 -9	; GOLD_GIVEN_RADIUS
+	8	[-]	SETTABLE 	0 -8 1	; "GoldRadius" -
+	9	[-]	SETGLOBAL	0 -1	; SpawnTable
+	10	[-]	RETURN   	0 1
+constants (9) for 000001BCFE141A30:
+	1	"SpawnTable"
+	2	"WaveSpawnRate"
+	3	"WAVE_SPAWN_RATE"
+	4	"SingleMinionSpawnDelay"
+	5	700
+	6	"ExpRadius"
+	7	"EXP_GIVEN_RADIUS"
+	8	"GoldRadius"
+	9	"GOLD_GIVEN_RADIUS"
+locals (0) for 000001BCFE141A30:
+upvalues (0) for 000001BCFE141A30:
+
+function <?:148,149> (1 instruction, 4 bytes at 000001BCFE145A90)
+3 params, 3 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000001BCFE145A90:
+locals (0) for 000001BCFE145A90:
+upvalues (0) for 000001BCFE145A90:
+
+function <?:151,153> (1 instruction, 4 bytes at 000001BCFE145B10)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000001BCFE145B10:
+locals (0) for 000001BCFE145B10:
+upvalues (0) for 000001BCFE145B10:

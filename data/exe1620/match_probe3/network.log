@@ -1,0 +1,33 @@
+# Network Log (Version 16.20.824.8524)
+0000.6157  PacketSnd   player=1 packet=0 bytes=500
+0000.6179  PacketRcv   player=1 packet=0 bytes=100
+0000.6180  PacketSnd   player=1 packet=0 bytes=500
+0000.6185  PacketRcv   player=1 packet=0 bytes=100
+0000.6186  PlayerCon   player=1 reason=1 platformId=1
+0000.6272  MessageSnd  player=1 message=1 channel=1 bytes=35 type=1 reliable ordered
+0000.6274  MessageSnd  player=1 message=2 channel=1 bytes=6 type=64 reliable ordered
+0000.6275  PacketSnd   player=1 packet=1 bytes=46 messages=(1-1)=(1-2)
+0000.6275  MessageSnd  player=1 message=1 channel=4 bytes=12 type=841 reliable ordered
+0000.6278  PacketSnd   player=1 packet=2 bytes=15 messages=(4-1)
+0000.6281  PacketRcv   player=1 acknowledge=1
+0000.6281  PacketAck   player=1 packet=1 received roundtrip=0ms
+0000.6281  MessageAck  player=1 channel=1 sequenceNumber=1 received reliable ordered
+0000.6282  MessageAck  player=1 channel=1 sequenceNumber=2 received reliable ordered
+0001.1277  PacketSnd   player=1 packet=3 bytes=0
+0001.6283  PacketSnd   player=1 packet=4 bytes=0
+0002.1288  PacketSnd   player=1 packet=5 bytes=0
+0002.6273  MessageSnd  player=1 message=2 channel=4 bytes=12 type=841 reliable ordered
+0002.6275  PacketSnd   player=1 packet=6 bytes=17 messages=(4-2)
+0003.1298  PacketSnd   player=1 packet=7 bytes=0
+0003.6304  PacketSnd   player=1 packet=8 bytes=0
+0004.1309  PacketSnd   player=1 packet=9 bytes=0
+0004.6277  MessageSnd  player=1 message=3 channel=4 bytes=13 type=841 reliable ordered
+0004.6309  PacketSnd   player=1 packet=10 bytes=18 messages=(4-3)
+0005.1320  PacketSnd   player=1 packet=11 bytes=0
+0005.6325  PacketSnd   player=1 packet=12 bytes=0
+0006.1330  PacketSnd   player=1 packet=13 bytes=0
+0006.6287  MessageSnd  player=1 message=4 channel=4 bytes=13 type=841 reliable ordered
+0006.6288  PacketSnd   player=1 packet=14 bytes=18 messages=(4-4)
+0007.1341  PacketSnd   player=1 packet=15 bytes=0
+0007.6346  PacketSnd   player=1 packet=16 bytes=0
+0008.1350  PacketSnd   player=1 packet=17 bytes=0

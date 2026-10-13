@@ -1,0 +1,56 @@
+
+main <?:0,0> (30 instructions, 120 bytes at 00000298D6F234D0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 20 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "Summoner_Backtrack.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "SummonerBarrier"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; 3
+	12	[-]	SETGLOBAL	0 -8	; OnPreDamagePriority
+	13	[-]	LOADBOOL 	0 0 0
+	14	[-]	SETGLOBAL	0 -10	; IsDamagingSpell
+	15	[-]	NEWTABLE 	0 0 6
+	16	[-]	NEWTABLE 	1 5 0
+	17	[-]	LOADK    	2 -13	; 4
+	18	[-]	LOADK    	3 -13	; 4
+	19	[-]	LOADK    	4 -13	; 4
+	20	[-]	LOADK    	5 -13	; 4
+	21	[-]	LOADK    	6 -13	; 4
+	22	[-]	SETLIST  	1 5 1	; 1
+	23	[-]	SETTABLE 	0 -12 1	; "MaximumHits" -
+	24	[-]	SETTABLE 	0 -14 -15	; "CanHitCaster" 0
+	25	[-]	SETTABLE 	0 -16 -15	; "CanHitSameTarget" 0
+	26	[-]	SETTABLE 	0 -17 -15	; "CanHitSameTargetConsecutively" 0
+	27	[-]	SETTABLE 	0 -18 -19	; "CanHitEnemies" 1
+	28	[-]	SETTABLE 	0 -20 -15	; "CanHitFriends" 0
+	29	[-]	SETGLOBAL	0 -11	; ChainMissileParameters
+	30	[-]	RETURN   	0 1
+constants (20) for 00000298D6F234D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"Summoner_Backtrack.dds"
+	6	"BuffName"
+	7	"SummonerBarrier"
+	8	"OnPreDamagePriority"
+	9	3
+	10	"IsDamagingSpell"
+	11	"ChainMissileParameters"
+	12	"MaximumHits"
+	13	4
+	14	"CanHitCaster"
+	15	0
+	16	"CanHitSameTarget"
+	17	"CanHitSameTargetConsecutively"
+	18	"CanHitEnemies"
+	19	1
+	20	"CanHitFriends"
+locals (0) for 00000298D6F234D0:
+upvalues (0) for 00000298D6F234D0:

@@ -1,58 +1,64 @@
-// Lua 5.1.5 (lua.org), compiled by Riot as C++ (default standard: C++14): lapi.c, the functions of it that are in the client (tools/match_objs.py).
-// match: c16400 ?f_call@@YAXPAUlua_State@@PAX@Z -O2
-// match: c16520 ?luaA_pushobject@@YAXPAUlua_State@@PBUlua_TValue@@@Z -O2
-// match: c16550 ?lua_call@@YAXPAUlua_State@@HH@Z -O2
-// match: c16590 ?lua_checkstack@@YAHPAUlua_State@@H@Z -O2
-// match: c16600 ?lua_concat@@YAXPAUlua_State@@H@Z -O2
-// match: c16680 ?lua_createtable@@YAXPAUlua_State@@HH@Z -O2
-// match: c16700 ?lua_equal@@YAHPAUlua_State@@HH@Z -O2
-// match: c16ba0 ?lua_getfenv@@YAXPAUlua_State@@H@Z -O2
-// match: c16c10 ?lua_getfield@@YAXPAUlua_State@@HPBD@Z -O2
-// match: c16c70 ?lua_getmetatable@@YAHPAUlua_State@@H@Z -O2
-// match: c16cd0 ?lua_gettable@@YAXPAUlua_State@@H@Z -O2
-// match: c16d00 ?lua_gettop@@YAHPAUlua_State@@@Z -O2
-// match: c16d10 ?lua_getupvalue@@YAPBDPAUlua_State@@HH@Z -O2
-// match: c16df0 ?lua_iscfunction@@YAHPAUlua_State@@H@Z -O2
-// match: c16e20 ?lua_isnumber@@YAHPAUlua_State@@H@Z -O2
-// match: c16e60 ?lua_isstring@@YAHPAUlua_State@@H@Z -O2
-// match: c16e90 ?lua_isuserdata@@YAHPAUlua_State@@H@Z -O2
-// match: c16ec0 ?lua_lessthan@@YAHPAUlua_State@@HH@Z -O2
-// match: c16f10 ?lua_load@@YAHPAUlua_State@@P6APBD0PAXPAI@Z1PBD@Z -O2
-// match: c16f50 ?lua_newthread@@YAPAUlua_State@@PAU1@@Z -O2
-// match: c16f90 ?lua_newuserdata@@YAPAXPAUlua_State@@I@Z -O2
-// match: c16ff0 ?lua_next@@YAHPAUlua_State@@H@Z -O2
-// match: c17030 ?lua_objlen@@YAIPAUlua_State@@H@Z -O2
-// match: c170a0 ?lua_pcall@@YAHPAUlua_State@@HHH@Z -O2
-// match: c17110 ?lua_pushboolean@@YAXPAUlua_State@@H@Z -O2
-// match: c17130 ?lua_pushcclosure@@YAXPAUlua_State@@P6AH0@ZH@Z -O2
-// match: c171d0 ?lua_pushfstring@@YAPBDPAUlua_State@@PBDZZ -O2
-// match: c17230 ?lua_pushlightuserdata@@YAXPAUlua_State@@PAX@Z -O2
-// match: c17250 ?lua_pushlstring@@YAXPAUlua_State@@PBDI@Z -O2
-// match: c17290 ?lua_pushnil@@YAXPAUlua_State@@@Z -O2
-// match: c172d0 ?lua_pushstring@@YAXPAUlua_State@@PBD@Z -O2
-// match: c17340 ?lua_pushthread@@YAHPAUlua_State@@@Z -O2
-// match: c17360 ?lua_pushvalue@@YAXPAUlua_State@@H@Z -O2
-// match: c17390 ?lua_pushvfstring@@YAPBDPAUlua_State@@PBDPAD@Z -O2
-// match: c173c0 ?lua_rawequal@@YAHPAUlua_State@@HH@Z -O2
-// match: c17400 ?lua_rawget@@YAXPAUlua_State@@H@Z -O2
-// match: c17440 ?lua_rawgeti@@YAXPAUlua_State@@HH@Z -O2
-// match: c17480 ?lua_rawset@@YAXPAUlua_State@@H@Z -O2
-// match: c174f0 ?lua_rawseti@@YAXPAUlua_State@@HH@Z -O2
-// match: c175b0 ?lua_replace@@YAXPAUlua_State@@H@Z -O2
-// match: c17690 ?lua_setfenv@@YAHPAUlua_State@@H@Z -O2
-// match: c17710 ?lua_setfield@@YAXPAUlua_State@@HPBD@Z -O2
-// match: c17770 ?lua_setlevel@@YAXPAUlua_State@@0@Z -O2
-// match: c17790 ?lua_setmetatable@@YAHPAUlua_State@@H@Z -O2
-// match: c17840 ?lua_settable@@YAXPAUlua_State@@H@Z -O2
-// match: c17870 ?lua_settop@@YAXPAUlua_State@@H@Z -O2
-// match: c178c0 ?lua_setupvalue@@YAPBDPAUlua_State@@HH@Z -O2
-// match: c17980 ?lua_status@@YAHPAUlua_State@@@Z -O2
-// match: c17990 ?lua_toboolean@@YAHPAUlua_State@@H@Z -O2
-// match: c17a30 ?lua_tolstring@@YAPBDPAUlua_State@@HPAI@Z -O2
-// match: c17ab0 ?lua_tonumber@@YANPAUlua_State@@H@Z -O2
-// match: c17b60 ?lua_tothread@@YAPAUlua_State@@PAU1@H@Z -O2
-// match: c17b80 ?lua_touserdata@@YAPAXPAUlua_State@@H@Z -O2
-// match: c17bb0 ?lua_type@@YAHPAUlua_State@@H@Z -O2
-// match: c17bd0 ?lua_typename@@YAPBDPAUlua_State@@H@Z -O2
-// match: c17bf0 ?lua_xmove@@YAXPAUlua_State@@0H@Z -O2
+// Lua 5.1.5 (lua.org), compiled by Riot as C++ (default standard: C++14) with -arch:SSE (doubles on the x87 stack): lapi.c, the functions of it that are in the client (tools/match_objs.py).
+// match: c16400 ?f_call@@YAXPAUlua_State@@PAX@Z -O2 -arch:SSE
+// match: c16520 ?luaA_pushobject@@YAXPAUlua_State@@PBUlua_TValue@@@Z -O2 -arch:SSE
+// match: c16550 ?lua_call@@YAXPAUlua_State@@HH@Z -O2 -arch:SSE
+// match: c16590 ?lua_checkstack@@YAHPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c16600 ?lua_concat@@YAXPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c16680 ?lua_createtable@@YAXPAUlua_State@@HH@Z -O2 -arch:SSE
+// match: c16700 ?lua_equal@@YAHPAUlua_State@@HH@Z -O2 -arch:SSE
+// match: c16a40 ?lua_gc@@YAHPAUlua_State@@HH@Z -O2 -arch:SSE
+// match: c16ba0 ?lua_getfenv@@YAXPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c16c10 ?lua_getfield@@YAXPAUlua_State@@HPBD@Z -O2 -arch:SSE
+// match: c16c70 ?lua_getmetatable@@YAHPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c16cd0 ?lua_gettable@@YAXPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c16d00 ?lua_gettop@@YAHPAUlua_State@@@Z -O2 -arch:SSE
+// match: c16d10 ?lua_getupvalue@@YAPBDPAUlua_State@@HH@Z -O2 -arch:SSE
+// match: c16da0 ?lua_insert@@YAXPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c16df0 ?lua_iscfunction@@YAHPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c16e20 ?lua_isnumber@@YAHPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c16e60 ?lua_isstring@@YAHPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c16e90 ?lua_isuserdata@@YAHPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c16ec0 ?lua_lessthan@@YAHPAUlua_State@@HH@Z -O2 -arch:SSE
+// match: c16f10 ?lua_load@@YAHPAUlua_State@@P6APBD0PAXPAI@Z1PBD@Z -O2 -arch:SSE
+// match: c16f50 ?lua_newthread@@YAPAUlua_State@@PAU1@@Z -O2 -arch:SSE
+// match: c16f90 ?lua_newuserdata@@YAPAXPAUlua_State@@I@Z -O2 -arch:SSE
+// match: c16ff0 ?lua_next@@YAHPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c17030 ?lua_objlen@@YAIPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c170a0 ?lua_pcall@@YAHPAUlua_State@@HHH@Z -O2 -arch:SSE
+// match: c17110 ?lua_pushboolean@@YAXPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c17130 ?lua_pushcclosure@@YAXPAUlua_State@@P6AH0@ZH@Z -O2 -arch:SSE
+// match: c171d0 ?lua_pushfstring@@YAPBDPAUlua_State@@PBDZZ -O2 -arch:SSE
+// match: c17200 ?lua_pushinteger@@YAXPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c17230 ?lua_pushlightuserdata@@YAXPAUlua_State@@PAX@Z -O2 -arch:SSE
+// match: c17250 ?lua_pushlstring@@YAXPAUlua_State@@PBDI@Z -O2 -arch:SSE
+// match: c17290 ?lua_pushnil@@YAXPAUlua_State@@@Z -O2 -arch:SSE
+// match: c172b0 ?lua_pushnumber@@YAXPAUlua_State@@N@Z -O2 -arch:SSE
+// match: c172d0 ?lua_pushstring@@YAXPAUlua_State@@PBD@Z -O2 -arch:SSE
+// match: c17340 ?lua_pushthread@@YAHPAUlua_State@@@Z -O2 -arch:SSE
+// match: c17360 ?lua_pushvalue@@YAXPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c17390 ?lua_pushvfstring@@YAPBDPAUlua_State@@PBDPAD@Z -O2 -arch:SSE
+// match: c173c0 ?lua_rawequal@@YAHPAUlua_State@@HH@Z -O2 -arch:SSE
+// match: c17400 ?lua_rawget@@YAXPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c17440 ?lua_rawgeti@@YAXPAUlua_State@@HH@Z -O2 -arch:SSE
+// match: c17480 ?lua_rawset@@YAXPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c174f0 ?lua_rawseti@@YAXPAUlua_State@@HH@Z -O2 -arch:SSE
+// match: c17560 ?lua_remove@@YAXPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c175b0 ?lua_replace@@YAXPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c17690 ?lua_setfenv@@YAHPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c17710 ?lua_setfield@@YAXPAUlua_State@@HPBD@Z -O2 -arch:SSE
+// match: c17770 ?lua_setlevel@@YAXPAUlua_State@@0@Z -O2 -arch:SSE
+// match: c17790 ?lua_setmetatable@@YAHPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c17840 ?lua_settable@@YAXPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c17870 ?lua_settop@@YAXPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c178c0 ?lua_setupvalue@@YAPBDPAUlua_State@@HH@Z -O2 -arch:SSE
+// match: c17980 ?lua_status@@YAHPAUlua_State@@@Z -O2 -arch:SSE
+// match: c17990 ?lua_toboolean@@YAHPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c17a30 ?lua_tolstring@@YAPBDPAUlua_State@@HPAI@Z -O2 -arch:SSE
+// match: c17ab0 ?lua_tonumber@@YANPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c17af0 ?lua_topointer@@YAPBXPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c17b60 ?lua_tothread@@YAPAUlua_State@@PAU1@H@Z -O2 -arch:SSE
+// match: c17b80 ?lua_touserdata@@YAPAXPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c17bb0 ?lua_type@@YAHPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c17bd0 ?lua_typename@@YAPBDPAUlua_State@@H@Z -O2 -arch:SSE
+// match: c17bf0 ?lua_xmove@@YAXPAUlua_State@@0H@Z -O2 -arch:SSE
 #include "../../../../tools/third_party/lua-5.1.5/src/lapi.c"

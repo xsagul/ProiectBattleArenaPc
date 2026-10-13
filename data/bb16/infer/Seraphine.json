@@ -1,0 +1,16101 @@
+{
+ "rolerules_support": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinebasicattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    11.0
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "supportitempurchasebuff": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinebasicattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    11.0
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "s14_support_charge_display": {
+  "n": 259,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    20.0,
+    130
+   ],
+   [
+    25000.0,
+    17
+   ],
+   [
+    65.0,
+    4
+   ],
+   [
+    19.8,
+    3
+   ],
+   [
+    19.833,
+    2
+   ],
+   [
+    19.699,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.521
+   ],
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    0.201
+   ],
+   [
+    [
+     "hit",
+     "seraphinebasicattack"
+    ],
+    0.17
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassiveattack"
+    ],
+    0.12
+   ],
+   [
+    [
+     "hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.112
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.1
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.475
+   ],
+   [
+    [
+     "my hit",
+     "#6a4229fc"
+    ],
+    0.189
+   ],
+   [
+    [
+     "my hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.093
+   ],
+   [
+    [
+     "other"
+    ],
+    0.089
+   ],
+   [
+    [
+     "my hit",
+     "seraphinepassiveattack"
+    ],
+    0.066
+   ]
+  ],
+  "lived_med": 10.39,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    243
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    165
+   ],
+   [
+    "seraphinebasicattack",
+    156
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    139
+   ],
+   [
+    "seraphinepassiveattack",
+    95
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.452
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.22
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.1
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.031
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.015
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.015
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.282
+   ],
+   [
+    [
+     "slot",
+     52,
+     "TalentReaperVFX"
+    ],
+    0.22
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.104
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.012
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQSecondaryMissile"
+    ],
+    0.012
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQInitialMissile"
+    ],
+    0.004
+   ]
+  ]
+ },
+ "talentreaperpersistenteffects": {
+  "n": 15,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    15
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.933
+   ],
+   [
+    [
+     "end",
+     "s14_support_gold_display"
+    ],
+    0.267
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.267
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.067
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.933
+   ],
+   [
+    [
+     "my cast",
+     "seraphineq"
+    ],
+    0.067
+   ]
+  ],
+  "lived_med": 194.49,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    244
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    164
+   ],
+   [
+    "seraphinebasicattack",
+    157
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    139
+   ],
+   [
+    "seraphinepassiveattack",
+    95
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.4
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.267
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.267
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.267
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.867
+   ]
+  ]
+ },
+ "sr_2026_s1_rolebound_support_quest": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 783.849,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    244
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    165
+   ],
+   [
+    "seraphinebasicattack",
+    157
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    139
+   ],
+   [
+    "seraphinepassiveattack",
+    95
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    11.0
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "4641wardplacementcounter": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinebasicattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    11.0
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "challengeschampiontrackerbuff": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinebasicattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    11.0
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua": {
+  "n": 356,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    250000.0,
+    356
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.812
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.045
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.042
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.028
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget2"
+    ],
+    0.011
+   ],
+   [
+    [
+     "cast",
+     "seraphineqcastecho"
+    ],
+    0.011
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "seraphinew"
+    ],
+    0.286
+   ],
+   [
+    [
+     "other"
+    ],
+    0.181
+   ],
+   [
+    [
+     "my hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.167
+   ],
+   [
+    [
+     "my hit",
+     "seraphineemissile"
+    ],
+    0.113
+   ],
+   [
+    [
+     "my hit",
+     "seraphinepassivenotesmissiletarget2"
+    ],
+    0.091
+   ]
+  ],
+  "lived_med": 5.979,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    327
+   ],
+   [
+    "seraphinebasicattack",
+    303
+   ],
+   [
+    "seraphineemissile",
+    166
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    162
+   ],
+   [
+    "#6a4229fc",
+    128
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.289
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.011
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.011
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.011
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.011
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.008
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.528
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.59
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Ally"
+    ],
+    0.402
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.295
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineWCast"
+    ],
+    0.295
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.213
+   ]
+  ]
+ },
+ "#0eab29c1": {
+  "n": 30,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    30
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.967
+   ],
+   [
+    [
+     "end",
+     "#02eb3801"
+    ],
+    0.9
+   ],
+   [
+    [
+     "hit",
+     "seraphinebasicattack"
+    ],
+    0.033
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.433
+   ],
+   [
+    [
+     "my hit",
+     "seraphineemissile"
+    ],
+    0.3
+   ],
+   [
+    [
+     "other"
+    ],
+    0.167
+   ],
+   [
+    [
+     "my hit",
+     "seraphiner"
+    ],
+    0.067
+   ],
+   [
+    [
+     "my hit",
+     "perks_aery_tar"
+    ],
+    0.033
+   ]
+  ],
+  "lived_med": 49.596,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    68
+   ],
+   [
+    "seraphinebasicattack",
+    61
+   ],
+   [
+    "#6a4229fc",
+    43
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    35
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    26
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.133
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    0.1
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.733
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.767
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQInitialMissile"
+    ],
+    0.067
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.067
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.033
+   ],
+   [
+    [
+     "slot",
+     46,
+     "SeraphinePassiveAttack"
+    ],
+    0.033
+   ]
+  ]
+ },
+ "seraphinepassive": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinebasicattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    11.0
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "aa"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "ab"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "seraphinepassiveechostage2": {
+  "n": 275,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    275
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.455
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.255
+   ],
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.247
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.069
+   ],
+   [
+    [
+     "none"
+    ],
+    0.044
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget1"
+    ],
+    0.018
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.909
+   ],
+   [
+    [
+     "my cast",
+     "seraphineq"
+    ],
+    0.022
+   ],
+   [
+    [
+     "my cast",
+     "seraphinee"
+    ],
+    0.018
+   ],
+   [
+    [
+     "my hit",
+     "seraphineemissile"
+    ],
+    0.011
+   ],
+   [
+    [
+     "my cast",
+     "seraphiner"
+    ],
+    0.007
+   ]
+  ],
+  "lived_med": 5.326,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinebasicattack",
+    176
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    162
+   ],
+   [
+    "seraphineqsecondarymissile",
+    152
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    135
+   ],
+   [
+    "seraphineemissile",
+    100
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.975
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.033
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.956
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQCast"
+    ],
+    0.455
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineECast"
+    ],
+    0.255
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineWCast"
+    ],
+    0.247
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.942
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.924
+   ],
+   [
+    [
+     "slot",
+     50,
+     "SeraphineQInitialMissile"
+    ],
+    0.415
+   ],
+   [
+    [
+     "slot",
+     50,
+     "SeraphineEMissile"
+    ],
+    0.258
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.051
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQCast"
+    ],
+    0.022
+   ]
+  ]
+ },
+ "srhomeguardspeed": {
+  "n": 57,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    25000.0,
+    57
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "recall"
+    ],
+    0.07
+   ],
+   [
+    [
+     "end",
+     "exaltedwithminibaronnashor_recall"
+    ],
+    0.053
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.982
+   ],
+   [
+    [
+     "my cast",
+     "seraphinewcastecho"
+    ],
+    0.018
+   ]
+  ],
+  "lived_med": 19.475,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinebasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.386
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Hide"
+    ],
+    0.053
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Hide"
+    ],
+    0.193
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.123
+   ]
+  ]
+ },
+ "s14_support_gold_display": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    250000.0,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.875
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.875
+   ],
+   [
+    [
+     "my cast",
+     "seraphineq"
+    ],
+    0.125
+   ]
+  ],
+  "lived_med": 399.856,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    244
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    165
+   ],
+   [
+    "seraphinebasicattack",
+    157
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    139
+   ],
+   [
+    "seraphinepassiveattack",
+    95
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.125
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "s4spawnlockspeed": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    16.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 25.922,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "#0cf347e6": {
+  "n": 45,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    45
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 3.473,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinebasicattack",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Hide"
+    ],
+    0.6
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.067
+   ]
+  ]
+ },
+ "trinketsweeperlvl3": {
+  "n": 50,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    8.0,
+    50
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "trinketsweeperlvl3"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.02
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 8.141,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinebasicattack",
+    74
+   ],
+   [
+    "seraphineemissile",
+    13
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    11
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    10
+   ],
+   [
+    "#6a4229fc",
+    8
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.84
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.96
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.92
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.14
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQSecondaryMissile"
+    ],
+    0.02
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineEMissile"
+    ],
+    0.02
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.02
+   ]
+  ]
+ },
+ "seraphinepassivenotesbuff": {
+  "n": 948,
+  "games": 4,
+  "self": 0.506,
+  "type": 2,
+  "durations": [
+   [
+    6.0,
+    948
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.341
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.262
+   ],
+   [
+    [
+     "cast",
+     "seraphiner"
+    ],
+    0.04
+   ],
+   [
+    [
+     "end",
+     "seraphinepassiveechostage2"
+    ],
+    0.015
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget2"
+    ],
+    0.015
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.802
+   ],
+   [
+    [
+     "time"
+    ],
+    0.161
+   ],
+   [
+    [
+     "my hit",
+     "seraphinepassiveattack"
+    ],
+    0.014
+   ],
+   [
+    [
+     "my hit",
+     "seraphinebasicattack"
+    ],
+    0.008
+   ],
+   [
+    [
+     "my hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.003
+   ]
+  ],
+  "lived_med": 3.059,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    416
+   ],
+   [
+    "seraphineemissile",
+    220
+   ],
+   [
+    "perks_aery_tar",
+    79
+   ],
+   [
+    "seraphinebasicattack",
+    72
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    37
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.312
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.064
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.985
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQInitialMissile"
+    ],
+    0.32
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineEMissile"
+    ],
+    0.277
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.026
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.241
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQSecondaryMissile"
+    ],
+    0.013
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.003
+   ],
+   [
+    [
+     "slot",
+     52,
+     "2530HealMissile"
+    ],
+    0.003
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.003
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.002
+   ]
+  ]
+ },
+ "seraphinepassivenotesaarange": {
+  "n": 481,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    6.0,
+    481
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.356
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.331
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.27
+   ],
+   [
+    [
+     "cast",
+     "seraphiner"
+    ],
+    0.025
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget2"
+    ],
+    0.012
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget1"
+    ],
+    0.008
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.74
+   ],
+   [
+    [
+     "time"
+    ],
+    0.19
+   ],
+   [
+    [
+     "my hit",
+     "seraphinepassiveattack"
+    ],
+    0.027
+   ],
+   [
+    [
+     "my hit",
+     "seraphinebasicattack"
+    ],
+    0.017
+   ],
+   [
+    [
+     "my hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.006
+   ]
+  ],
+  "lived_med": 4.579,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    416
+   ],
+   [
+    "seraphineemissile",
+    220
+   ],
+   [
+    "perks_aery_tar",
+    79
+   ],
+   [
+    "seraphinebasicattack",
+    72
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    37
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.95
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.817
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.996
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQInitialMissile"
+    ],
+    0.312
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineEMissile"
+    ],
+    0.287
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.029
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.262
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQSecondaryMissile"
+    ],
+    0.012
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQCast"
+    ],
+    0.002
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.002
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.002
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.002
+   ]
+  ]
+ },
+ "#02eb3801": {
+  "n": 27,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    15.0,
+    27
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "#0eab29c1"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.778
+   ],
+   [
+    [
+     "hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.556
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.519
+   ],
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    0.296
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.296
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 15.112,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    65
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    56
+   ],
+   [
+    "seraphineqsecondarymissile",
+    51
+   ],
+   [
+    "seraphinebasicattack",
+    41
+   ],
+   [
+    "seraphinepassiveattack",
+    38
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.778
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQInitialMissile"
+    ],
+    0.074
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.074
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.037
+   ],
+   [
+    [
+     "slot",
+     46,
+     "SeraphinePassiveAttack"
+    ],
+    0.037
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.037
+   ]
+  ]
+ },
+ "#04d5c471": {
+  "n": 54,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    20.0,
+    54
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.63
+   ],
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    0.5
+   ],
+   [
+    [
+     "none"
+    ],
+    0.185
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.13
+   ],
+   [
+    [
+     "hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.13
+   ],
+   [
+    [
+     "end",
+     "#0eab29c1"
+    ],
+    0.093
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 20.133,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    187
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    160
+   ],
+   [
+    "seraphineqsecondarymissile",
+    158
+   ],
+   [
+    "seraphineemissile",
+    89
+   ],
+   [
+    "seraphinebasicattack",
+    68
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.796
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.63
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.241
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.056
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.037
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    0.037
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.148
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.019
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQSecondaryMissile"
+    ],
+    0.019
+   ],
+   [
+    [
+     "slot",
+     46,
+     "SeraphinePassiveAttack"
+    ],
+    0.019
+   ]
+  ]
+ },
+ "seraphineeslow": {
+  "n": 222,
+  "games": 4,
+  "self": 0.0,
+  "type": 11,
+  "durations": [
+   [
+    1.1,
+    105
+   ],
+   [
+    1.2,
+    50
+   ],
+   [
+    0.935,
+    22
+   ],
+   [
+    1.128,
+    9
+   ],
+   [
+    1.3,
+    6
+   ],
+   [
+    0.879,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    0.977
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.23
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.131
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.095
+   ],
+   [
+    [
+     "cast",
+     "seraphineqcastecho"
+    ],
+    0.059
+   ],
+   [
+    [
+     "end",
+     "#0eab29c1"
+    ],
+    0.054
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.662
+   ],
+   [
+    [
+     "other"
+    ],
+    0.194
+   ],
+   [
+    [
+     "death"
+    ],
+    0.122
+   ],
+   [
+    [
+     "my cast",
+     "seraphinepassiveattack"
+    ],
+    0.014
+   ],
+   [
+    [
+     "my cast",
+     "seraphinew"
+    ],
+    0.005
+   ]
+  ],
+  "lived_med": 1.236,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.59
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.775
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.225
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    0.045
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.041
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.036
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.604
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.032
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.023
+   ],
+   [
+    [
+     "slot",
+     50,
+     "SeraphineQInitialMissile"
+    ],
+    0.023
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.018
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQCast"
+    ],
+    0.014
+   ]
+  ]
+ },
+ "seraphineeroot": {
+  "n": 118,
+  "games": 4,
+  "self": 0.0,
+  "type": 12,
+  "durations": [
+   [
+    1.1,
+    44
+   ],
+   [
+    1.2,
+    38
+   ],
+   [
+    1.3,
+    6
+   ],
+   [
+    0.935,
+    5
+   ],
+   [
+    1.128,
+    5
+   ],
+   [
+    0.79,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    0.966
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.119
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.093
+   ],
+   [
+    [
+     "none"
+    ],
+    0.068
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.068
+   ],
+   [
+    [
+     "cast",
+     "seraphineqcastecho"
+    ],
+    0.068
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.653
+   ],
+   [
+    [
+     "other"
+    ],
+    0.178
+   ],
+   [
+    [
+     "death"
+    ],
+    0.161
+   ],
+   [
+    [
+     "my cast",
+     "seraphinewcastecho"
+    ],
+    0.008
+   ]
+  ],
+  "lived_med": 1.136,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.093
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.11
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.11
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.042
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.034
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.025
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.203
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.025
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.025
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.017
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQCast"
+    ],
+    0.017
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.008
+   ]
+  ]
+ },
+ "#0f1b5ee1": {
+  "n": 14,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    4.0,
+    14
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.643
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.143
+   ],
+   [
+    [
+     "cast",
+     "seraphineecastecho"
+    ],
+    0.071
+   ],
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    0.071
+   ],
+   [
+    [
+     "end",
+     "seraphinepassiveechostage2"
+    ],
+    0.071
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.071
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.571
+   ],
+   [
+    [
+     "time"
+    ],
+    0.357
+   ],
+   [
+    [
+     "my hit",
+     "perks_aery_tar"
+    ],
+    0.071
+   ]
+  ],
+  "lived_med": 4.042,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    7
+   ],
+   [
+    "perks_aery_tar",
+    5
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    5
+   ],
+   [
+    "seraphinepassiveattack",
+    4
+   ],
+   [
+    "seraphineemissile",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.286
+   ],
+   [
+    [
+     "slot",
+     50,
+     "SeraphineEMissile"
+    ],
+    0.071
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.071
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.071
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    0.071
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.857
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.214
+   ]
+  ]
+ },
+ "lucianwdebuff": {
+  "n": 9,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    6.0,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.778
+   ],
+   [
+    [
+     "cast",
+     "seraphineecastecho"
+    ],
+    0.111
+   ],
+   [
+    [
+     "cast",
+     "seraphiner"
+    ],
+    0.111
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 6.091,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    10
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    9
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    7
+   ],
+   [
+    "seraphineemissile",
+    6
+   ],
+   [
+    "seraphinepassiveattack",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.111
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "item2003": {
+  "n": 7,
+  "games": 4,
+  "self": 1.0,
+  "type": 14,
+  "durations": [
+   [
+    14.75,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "item2003"
+    ],
+    0.714
+   ],
+   [
+    [
+     "none"
+    ],
+    0.286
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 14.93,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    19
+   ],
+   [
+    "seraphinebasicattack",
+    10
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    8
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    7
+   ],
+   [
+    "seraphinepassiveattack",
+    6
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "summonerheal": {
+  "n": 47,
+  "games": 4,
+  "self": 0.532,
+  "type": 15,
+  "durations": [
+   [
+    1.0,
+    47
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerheal"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.17
+   ],
+   [
+    [
+     "end",
+     "luxeslow"
+    ],
+    0.043
+   ],
+   [
+    [
+     "hit",
+     "seraphiner"
+    ],
+    0.043
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget2"
+    ],
+    0.043
+   ],
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    0.043
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.102,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    8
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    8
+   ],
+   [
+    "seraphineqsecondarymissile",
+    3
+   ],
+   [
+    "seraphiner",
+    3
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.064
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.766
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.936
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.17
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Ally"
+    ],
+    0.17
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.043
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.553
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.106
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQCast"
+    ],
+    0.085
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.064
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQInitialMissile"
+    ],
+    0.043
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.043
+   ]
+  ]
+ },
+ "summonerhealcheck": {
+  "n": 47,
+  "games": 4,
+  "self": 0.532,
+  "type": 3,
+  "durations": [
+   [
+    30.0,
+    47
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "summonerheal"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.17
+   ],
+   [
+    [
+     "end",
+     "luxeslow"
+    ],
+    0.043
+   ],
+   [
+    [
+     "hit",
+     "seraphiner"
+    ],
+    0.043
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget2"
+    ],
+    0.043
+   ],
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    0.043
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.756
+   ],
+   [
+    [
+     "other"
+    ],
+    0.244
+   ]
+  ],
+  "lived_med": 30.114,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    99
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    85
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    78
+   ],
+   [
+    "seraphinebasicattack",
+    48
+   ],
+   [
+    "seraphineemissile",
+    34
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.064
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.936
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.17
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Ally"
+    ],
+    0.17
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.064
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.043
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.362
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQInitialMissile"
+    ],
+    0.021
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.021
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.021
+   ]
+  ]
+ },
+ "seraphinewshield": {
+  "n": 447,
+  "games": 4,
+  "self": 0.548,
+  "type": 2,
+  "durations": [
+   [
+    2.5,
+    447
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.989
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.55
+   ],
+   [
+    [
+     "cast",
+     "seraphinewcastecho"
+    ],
+    0.011
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget1"
+    ],
+    0.009
+   ],
+   [
+    [
+     "end",
+     "seraphinepassiveechostage2"
+    ],
+    0.004
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget2"
+    ],
+    0.004
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.548
+   ],
+   [
+    [
+     "other"
+    ],
+    0.412
+   ],
+   [
+    [
+     "my cast",
+     "seraphinewcastecho"
+    ],
+    0.007
+   ],
+   [
+    [
+     "my cast",
+     "seraphineq"
+    ],
+    0.007
+   ],
+   [
+    [
+     "my hit",
+     "seraphinepassiveattack"
+    ],
+    0.004
+   ]
+  ],
+  "lived_med": 2.508,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    130
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    112
+   ],
+   [
+    "seraphineqsecondarymissile",
+    42
+   ],
+   [
+    "seraphinepassiveattack",
+    37
+   ],
+   [
+    "seraphineemissile",
+    29
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    7.19
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.345
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineWCast"
+    ],
+    0.989
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Ally"
+    ],
+    0.55
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.405
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.356
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphineW2HealMissile"
+    ],
+    0.051
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.018
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Ally"
+    ],
+    0.016
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.013
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQSecondaryMissile"
+    ],
+    0.013
+   ]
+  ]
+ },
+ "seraphinewhaste": {
+  "n": 443,
+  "games": 4,
+  "self": 0.549,
+  "type": 15,
+  "durations": [
+   [
+    2.5,
+    443
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.998
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.555
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget1"
+    ],
+    0.009
+   ],
+   [
+    [
+     "end",
+     "seraphinepassiveechostage2"
+    ],
+    0.005
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget2"
+    ],
+    0.005
+   ],
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    0.005
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.621
+   ],
+   [
+    [
+     "other"
+    ],
+    0.359
+   ],
+   [
+    [
+     "my hit",
+     "khazixqlong"
+    ],
+    0.005
+   ],
+   [
+    [
+     "my cast",
+     "seraphinee"
+    ],
+    0.005
+   ],
+   [
+    [
+     "my cast",
+     "seraphineq"
+    ],
+    0.005
+   ]
+  ],
+  "lived_med": 2.706,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    153
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    131
+   ],
+   [
+    "seraphineqsecondarymissile",
+    59
+   ],
+   [
+    "seraphinepassiveattack",
+    46
+   ],
+   [
+    "seraphinebasicattack",
+    32
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    7.246
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.668
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineWCast"
+    ],
+    0.998
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Ally"
+    ],
+    0.555
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.409
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "SeraphineW2HealMissile"
+    ],
+    0.393
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.203
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Ally"
+    ],
+    0.165
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.018
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.018
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.014
+   ]
+  ]
+ },
+ "recall": {
+  "n": 50,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    7.9,
+    50
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.58
+   ],
+   [
+    [
+     "other"
+    ],
+    0.38
+   ],
+   [
+    [
+     "my cast",
+     "seraphinee"
+    ],
+    0.04
+   ]
+  ],
+  "lived_med": 7.957,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.66
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Hide"
+    ],
+    0.76
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.6
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineECast"
+    ],
+    0.04
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.04
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.02
+   ]
+  ]
+ },
+ "itemcrystalflaskcharge": {
+  "n": 7,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "recall"
+    ],
+    0.286
+   ],
+   [
+    [
+     "end",
+     "superrecall"
+    ],
+    0.286
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "itemcrystalflask"
+    ],
+    0.833
+   ],
+   [
+    [
+     "other"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 178.168,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    69
+   ],
+   [
+    "seraphineemissile",
+    56
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    48
+   ],
+   [
+    "seraphinebasicattack",
+    41
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    40
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.143
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Hide"
+    ],
+    0.286
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.143
+   ]
+  ]
+ },
+ "#037122c1": {
+  "n": 143,
+  "games": 4,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    2.5,
+    143
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.608
+   ],
+   [
+    [
+     "cast",
+     "seraphinewcastecho"
+    ],
+    0.329
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.028
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.021
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.007
+   ],
+   [
+    [
+     "cast",
+     "seraphiner"
+    ],
+    0.007
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.888
+   ],
+   [
+    [
+     "other"
+    ],
+    0.112
+   ]
+  ],
+  "lived_med": 2.506,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.035
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.245
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.021
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.014
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.014
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.014
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.301
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphineW2HealMissile"
+    ],
+    0.028
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Ally"
+    ],
+    0.021
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.021
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQInitialMissile"
+    ],
+    0.007
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.007
+   ]
+  ]
+ },
+ "seraphineestun": {
+  "n": 23,
+  "games": 4,
+  "self": 0.0,
+  "type": 5,
+  "durations": [
+   [
+    1.2,
+    9
+   ],
+   [
+    1.1,
+    6
+   ],
+   [
+    0.935,
+    3
+   ],
+   [
+    1.128,
+    2
+   ],
+   [
+    0.959,
+    1
+   ],
+   [
+    0.74,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    1.0
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.174
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.174
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.174
+   ],
+   [
+    [
+     "cast",
+     "seraphineqcastecho"
+    ],
+    0.087
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.087
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.826
+   ],
+   [
+    [
+     "death"
+    ],
+    0.13
+   ],
+   [
+    [
+     "other"
+    ],
+    0.043
+   ]
+  ],
+  "lived_med": 1.103,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.217
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.957
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.174
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    0.087
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.087
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.043
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     46,
+     "SeraphinePassiveAttack"
+    ],
+    0.043
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.043
+   ]
+  ]
+ },
+ "itemcrystalflask": {
+  "n": 13,
+  "games": 4,
+  "self": 1.0,
+  "type": 14,
+  "durations": [
+   [
+    12.0,
+    13
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemcrystalflask"
+    ],
+    0.692
+   ],
+   [
+    [
+     "none"
+    ],
+    0.231
+   ],
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    0.077
+   ],
+   [
+    [
+     "end",
+     "itemcrystalflaskcharge"
+    ],
+    0.077
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.923
+   ],
+   [
+    [
+     "other"
+    ],
+    0.077
+   ]
+  ],
+  "lived_med": 12.195,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    19
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    15
+   ],
+   [
+    "seraphineqsecondarymissile",
+    13
+   ],
+   [
+    "khazixqlong",
+    11
+   ],
+   [
+    "seraphineemissile",
+    8
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "cooldown",
+     "8e"
+    ],
+    0.692
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.077
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.077
+   ]
+  ]
+ },
+ "jammerdevice": {
+  "n": 37,
+  "games": 4,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    37
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "jammerdevice"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.027
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "jammerdevice"
+    ],
+    0.515
+   ],
+   [
+    [
+     "death"
+    ],
+    0.485
+   ]
+  ],
+  "lived_med": 102.036,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.622
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.27
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.432
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.054
+   ]
+  ]
+ },
+ "sharedwardbuff": {
+  "n": 138,
+  "games": 4,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    150.0,
+    132
+   ],
+   [
+    90.0,
+    2
+   ],
+   [
+    94.588,
+    1
+   ],
+   [
+    97.588,
+    1
+   ],
+   [
+    96.176,
+    1
+   ],
+   [
+    93.706,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.957
+   ],
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    0.043
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.007
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget1"
+    ],
+    0.007
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "itemghostward"
+    ],
+    0.496
+   ],
+   [
+    [
+     "time"
+    ],
+    0.283
+   ],
+   [
+    [
+     "death"
+    ],
+    0.22
+   ]
+  ],
+  "lived_med": 97.626,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.514
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.246
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.036
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.145
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.109
+   ],
+   [
+    [
+     "slot",
+     46,
+     "SeraphinePassiveAttack"
+    ],
+    0.007
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.007
+   ]
+  ]
+ },
+ "sharedstealthwardbuff": {
+  "n": 138,
+  "games": 4,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    138
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.957
+   ],
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    0.043
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.007
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget1"
+    ],
+    0.007
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "itemghostward"
+    ],
+    0.504
+   ],
+   [
+    [
+     "death"
+    ],
+    0.488
+   ],
+   [
+    [
+     "my cast",
+     "seraphinepassiveattack"
+    ],
+    0.008
+   ]
+  ],
+  "lived_med": 97.626,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.514
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.246
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.036
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.145
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.109
+   ],
+   [
+    [
+     "slot",
+     46,
+     "SeraphinePassiveAttack"
+    ],
+    0.007
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.007
+   ]
+  ]
+ },
+ "itemghostward": {
+  "n": 132,
+  "games": 4,
+  "self": 0.0,
+  "type": 6,
+  "durations": [
+   [
+    150.0,
+    132
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.008
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget1"
+    ],
+    0.008
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my cast",
+     "itemghostward"
+    ],
+    0.521
+   ],
+   [
+    [
+     "time"
+    ],
+    0.248
+   ],
+   [
+    [
+     "death"
+    ],
+    0.231
+   ]
+  ],
+  "lived_med": 102.19,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.492
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.25
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.152
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.114
+   ],
+   [
+    [
+     "slot",
+     46,
+     "SeraphinePassiveAttack"
+    ],
+    0.008
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.008
+   ]
+  ]
+ },
+ "srt_2024_horde_dot": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    22
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    15
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    12
+   ],
+   [
+    "seraphineemissile",
+    8
+   ],
+   [
+    "seraphinepassiveattack",
+    8
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SRT_2024_Horde_DoT"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "seraphinew2warning": {
+  "n": 96,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    2.5,
+    96
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "seraphinewcastecho"
+    ],
+    0.885
+   ],
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.115
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.031
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget1"
+    ],
+    0.01
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.948
+   ],
+   [
+    [
+     "other"
+    ],
+    0.052
+   ]
+  ],
+  "lived_med": 2.639,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    60
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    56
+   ],
+   [
+    "seraphineqsecondarymissile",
+    16
+   ],
+   [
+    "seraphinepassiveattack",
+    14
+   ],
+   [
+    "#6a4229fc",
+    13
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.854
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     51,
+     "SeraphineWCastEcho"
+    ],
+    0.885
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.198
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineWCast"
+    ],
+    0.115
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    0.062
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "SeraphineW2HealMissile"
+    ],
+    0.99
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Ally"
+    ],
+    0.344
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.302
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.042
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.021
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.021
+   ]
+  ]
+ },
+ "rakanrdebuff": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 23,
+  "durations": [
+   [
+    1.0,
+    3
+   ],
+   [
+    1.175,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "seraphinewcastecho"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "flee"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.261,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    4
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    2
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    2
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ],
+   [
+    "seraphinepassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.167
+   ],
+   [
+    [
+     "slot",
+     50,
+     "SeraphineRPostCast"
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "2530HealMissile"
+    ],
+    0.167
+   ]
+  ]
+ },
+ "charmbuffbaricon": {
+  "n": 52,
+  "games": 4,
+  "self": 0.154,
+  "type": 3,
+  "durations": [
+   [
+    1.25,
+    13
+   ],
+   [
+    1.175,
+    8
+   ],
+   [
+    1.5,
+    5
+   ],
+   [
+    1.198,
+    5
+   ],
+   [
+    1.062,
+    4
+   ],
+   [
+    1.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "seraphiner"
+    ],
+    0.654
+   ],
+   [
+    [
+     "cast",
+     "seraphinerpostcast"
+    ],
+    0.25
+   ],
+   [
+    [
+     "none"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.212
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.077
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.058
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.885
+   ],
+   [
+    [
+     "other"
+    ],
+    0.058
+   ],
+   [
+    [
+     "death"
+    ],
+    0.058
+   ]
+  ],
+  "lived_med": 1.303,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    6
+   ],
+   [
+    "perks_aery_tar",
+    3
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    2
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    2
+   ],
+   [
+    "seraphinepassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.404
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.212
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    0.058
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.038
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.038
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.038
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.096
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQInitialMissile"
+    ],
+    0.058
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.038
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.038
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.038
+   ],
+   [
+    [
+     "slot",
+     52,
+     "2530HealMissile"
+    ],
+    0.038
+   ]
+  ]
+ },
+ "slow": {
+  "n": 27,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    2.0,
+    6
+   ],
+   [
+    0.3,
+    4
+   ],
+   [
+    3.0,
+    4
+   ],
+   [
+    2.82,
+    4
+   ],
+   [
+    1.0,
+    3
+   ],
+   [
+    1.5,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.63
+   ],
+   [
+    [
+     "cast",
+     "seraphinewcastecho"
+    ],
+    0.111
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.111
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.074
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.074
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.037
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.63
+   ],
+   [
+    [
+     "other"
+    ],
+    0.259
+   ],
+   [
+    [
+     "my hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.037
+   ],
+   [
+    [
+     "my cast",
+     "summonerflash"
+    ],
+    0.037
+   ],
+   [
+    [
+     "my cast",
+     "seraphineq"
+    ],
+    0.037
+   ]
+  ],
+  "lived_med": 1.674,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    16
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    10
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    9
+   ],
+   [
+    "perks_aery_tar",
+    9
+   ],
+   [
+    "seraphinebasicattack",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.815
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.37
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.111
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineEMissile"
+    ],
+    0.037
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.037
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.037
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.889
+   ],
+   [
+    [
+     "slot",
+     52,
+     "2530HealMissile"
+    ],
+    0.074
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.037
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQSecondaryMissile"
+    ],
+    0.037
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQCast"
+    ],
+    0.037
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.037
+   ]
+  ]
+ },
+ "rakanwcharm": {
+  "n": 7,
+  "games": 4,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    1.0,
+    7
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.571
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.429
+   ],
+   [
+    [
+     "cast",
+     "seraphinewcastecho"
+    ],
+    0.286
+   ],
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.143
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.103,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.571
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.143
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "SeraphineW2HealMissile"
+    ],
+    0.143
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Ally"
+    ],
+    0.143
+   ]
+  ]
+ },
+ "seraphinercharm": {
+  "n": 44,
+  "games": 4,
+  "self": 0.0,
+  "type": 23,
+  "durations": [
+   [
+    1.25,
+    13
+   ],
+   [
+    1.198,
+    5
+   ],
+   [
+    1.175,
+    5
+   ],
+   [
+    1.5,
+    4
+   ],
+   [
+    1.062,
+    4
+   ],
+   [
+    1.41,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "seraphiner"
+    ],
+    0.773
+   ],
+   [
+    [
+     "cast",
+     "seraphinerpostcast"
+    ],
+    0.273
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.227
+   ],
+   [
+    [
+     "none"
+    ],
+    0.205
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.091
+   ],
+   [
+    [
+     "end",
+     "#0eab29c1"
+    ],
+    0.045
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.864
+   ],
+   [
+    [
+     "other"
+    ],
+    0.068
+   ],
+   [
+    [
+     "death"
+    ],
+    0.068
+   ]
+  ],
+  "lived_med": 1.303,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.318
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.227
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    0.068
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.045
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.045
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQCast"
+    ],
+    0.023
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.136
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQInitialMissile"
+    ],
+    0.068
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.045
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.045
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.045
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.045
+   ]
+  ]
+ },
+ "seraphinerslow": {
+  "n": 44,
+  "games": 4,
+  "self": 0.0,
+  "type": 11,
+  "durations": [
+   [
+    1.25,
+    13
+   ],
+   [
+    1.198,
+    5
+   ],
+   [
+    1.175,
+    5
+   ],
+   [
+    1.5,
+    4
+   ],
+   [
+    1.062,
+    4
+   ],
+   [
+    1.41,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "seraphiner"
+    ],
+    0.773
+   ],
+   [
+    [
+     "cast",
+     "seraphinerpostcast"
+    ],
+    0.273
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.227
+   ],
+   [
+    [
+     "none"
+    ],
+    0.205
+   ],
+   [
+    [
+     "end",
+     "#0d398291"
+    ],
+    0.091
+   ],
+   [
+    [
+     "end",
+     "#0eab29c1"
+    ],
+    0.045
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.864
+   ],
+   [
+    [
+     "other"
+    ],
+    0.068
+   ],
+   [
+    [
+     "death"
+    ],
+    0.068
+   ]
+  ],
+  "lived_med": 1.305,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.318
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.227
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    0.068
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.045
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.045
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQCast"
+    ],
+    0.023
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.136
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQInitialMissile"
+    ],
+    0.068
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.045
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.045
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.045
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.045
+   ]
+  ]
+ },
+ "srt_2024_horde_summoner": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemcrystalflask"
+    ],
+    0.5
+   ],
+   [
+    [
+     "none"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    17
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    5
+   ],
+   [
+    "perks_aery_tar",
+    4
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    4
+   ],
+   [
+    "seraphinepassiveattack",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SRT_2024_Horde_Summoner"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "sru_crabspeedboost": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    2.0,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.625
+   ],
+   [
+    [
+     "my hit",
+     "seraphinebasicattack"
+    ],
+    0.25
+   ],
+   [
+    [
+     "my hit",
+     "seraphinepassivenotesmissiletarget2"
+    ],
+    0.125
+   ]
+  ],
+  "lived_med": 3.21,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinebasicattack",
+    2
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.125
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.125
+   ]
+  ]
+ },
+ "sr_2026_s1_rolebound_support_questcompleted": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "sr_2026_s1_rolebound_support_quest"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_gold_display"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "talentreaperpersistenteffects"
+    ],
+    0.75
+   ],
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    25
+   ],
+   [
+    "seraphinebasicattack",
+    14
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    8
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    8
+   ],
+   [
+    "seraphineemissile",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "s11support_quest_completion_buff": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "sr_2026_s1_rolebound_support_quest"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_gold_display"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "talentreaperpersistenteffects"
+    ],
+    0.75
+   ],
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    25
+   ],
+   [
+    "seraphinebasicattack",
+    14
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    8
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    8
+   ],
+   [
+    "seraphineemissile",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "3871cooldown": {
+  "n": 20,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    10.0,
+    20
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.7
+   ],
+   [
+    [
+     "hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    0.3
+   ],
+   [
+    [
+     "none"
+    ],
+    0.2
+   ],
+   [
+    [
+     "hit",
+     "seraphiner"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cast",
+     "seraphiner"
+    ],
+    0.05
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 10.098,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    31
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    30
+   ],
+   [
+    "#6a4229fc",
+    23
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    23
+   ],
+   [
+    "seraphineemissile",
+    22
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.7
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQSecondaryMissile"
+    ],
+    0.1
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.05
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.4
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.05
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.05
+   ]
+  ]
+ },
+ "3871damage": {
+  "n": 27,
+  "games": 4,
+  "self": 0.0,
+  "type": 2,
+  "durations": [
+   [
+    0.5,
+    27
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "#6a4229fc"
+    ],
+    1.704
+   ],
+   [
+    [
+     "hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.074
+   ],
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.074
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.074
+   ],
+   [
+    [
+     "none"
+    ],
+    0.037
+   ],
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.037
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.61,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.074
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.037
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.037
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.037
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.037
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.37
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.074
+   ]
+  ]
+ },
+ "plantsatchelknockback": {
+  "n": 11,
+  "games": 4,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    1.5,
+    11
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "heraldmoveaway"
+    ],
+    0.091
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.835,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.182
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "srx_dragonbuffcloud": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "jammerdevice"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    2
+   ],
+   [
+    "#6a4229fc",
+    2
+   ],
+   [
+    "seraphineemissile",
+    2
+   ],
+   [
+    "seraphiner",
+    1
+   ],
+   [
+    "planthawkshotchemtech",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "srx_dragonsoulbuffchemtech_preview": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "jammerdevice"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinebasicattack",
+    9
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    5
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    5
+   ],
+   [
+    "seraphineqsecondarymissile",
+    4
+   ],
+   [
+    "seraphineemissile",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SRX_DragonSoulBuffInfernal"
+    ],
+    0.5
+   ]
+  ],
+  "at_end": []
+ },
+ "planthawkshotbuff": {
+  "n": 75,
+  "games": 4,
+  "self": 0.227,
+  "type": 3,
+  "durations": [
+   [
+    12.0,
+    39
+   ],
+   [
+    3.0,
+    36
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.893
+   ],
+   [
+    [
+     "hit",
+     "planthawkshotchemtech"
+    ],
+    0.027
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.027
+   ],
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.027
+   ],
+   [
+    [
+     "end",
+     "seraphinepassivenotesbuff"
+    ],
+    0.013
+   ],
+   [
+    [
+     "end",
+     "seraphinepassivenotesaarange"
+    ],
+    0.013
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.733
+   ],
+   [
+    [
+     "death"
+    ],
+    0.227
+   ],
+   [
+    [
+     "time"
+    ],
+    0.027
+   ],
+   [
+    [
+     "my cast",
+     "seraphinepassiveattack"
+    ],
+    0.013
+   ]
+  ],
+  "lived_med": 4.177,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    12
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    7
+   ],
+   [
+    "seraphinepassiveattack",
+    6
+   ],
+   [
+    "seraphineqsecondarymissile",
+    6
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.653
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.6
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "SeraphineW2HealMissile"
+    ],
+    0.027
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.013
+   ],
+   [
+    [
+     "slot",
+     52,
+     "2530HealMissile"
+    ],
+    0.013
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.013
+   ]
+  ]
+ },
+ "srx_dragonchemtech_mutated_shield": {
+  "n": 10,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    20.0,
+    10
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.7
+   ],
+   [
+    [
+     "time"
+    ],
+    0.3
+   ]
+  ],
+  "lived_med": 21.661,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    29
+   ],
+   [
+    "seraphineemissile",
+    19
+   ],
+   [
+    "seraphinebasicattack",
+    11
+   ],
+   [
+    "#6a4229fc",
+    10
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    9
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "SeraphineW2HealMissile"
+    ],
+    0.1
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Ally"
+    ],
+    0.1
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.1
+   ]
+  ]
+ },
+ "yoneedeathmark": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.5
+   ],
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.174,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassiveattack",
+    1
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    1
+   ],
+   [
+    "seraphineemissile",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "4005debuff": {
+  "n": 37,
+  "games": 4,
+  "self": 0.081,
+  "type": 13,
+  "durations": [
+   [
+    4.0,
+    37
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    0.459
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.405
+   ],
+   [
+    [
+     "none"
+    ],
+    0.324
+   ],
+   [
+    [
+     "hit",
+     "seraphiner"
+    ],
+    0.189
+   ],
+   [
+    [
+     "hit",
+     "elixirofsorcery"
+    ],
+    0.081
+   ],
+   [
+    [
+     "hit",
+     "perks_aery_tar"
+    ],
+    0.054
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.568
+   ],
+   [
+    [
+     "time"
+    ],
+    0.405
+   ],
+   [
+    [
+     "my cast",
+     "seraphinee"
+    ],
+    0.027
+   ]
+  ],
+  "lived_med": 4.094,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinebasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.838
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.946
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.405
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.135
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.054
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.027
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.946
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.081
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.054
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.054
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.054
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.027
+   ]
+  ]
+ },
+ "3050_enemybuff": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    0.3,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "shacoboxslow"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "flee"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.833
+   ],
+   [
+    [
+     "my cast",
+     "summonerflash"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 2.004,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget1",
+    2
+   ],
+   [
+    "seraphineemissile",
+    2
+   ],
+   [
+    "#6a4229fc",
+    2
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    1
+   ],
+   [
+    "seraphinebasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ],
+  "at_end": []
+ },
+ "3118visualdebuff": {
+  "n": 11,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    11
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.727
+   ],
+   [
+    [
+     "cast",
+     "summonerheal"
+    ],
+    0.182
+   ],
+   [
+    [
+     "end",
+     "luxilluminatingfraulein"
+    ],
+    0.182
+   ],
+   [
+    [
+     "end",
+     "seraphinepassivenotesbuff"
+    ],
+    0.091
+   ],
+   [
+    [
+     "end",
+     "seraphinepassivenotesaarange"
+    ],
+    0.091
+   ],
+   [
+    [
+     "end",
+     "luxeslow"
+    ],
+    0.091
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.909
+   ],
+   [
+    [
+     "my cast",
+     "summonerflash"
+    ],
+    0.091
+   ]
+  ],
+  "lived_med": 0.738,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    3
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    2
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    2
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ],
+   [
+    "seraphinepassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.909
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.545
+   ]
+  ]
+ },
+ "exaltedwithminibaronnashor_recall": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 47.878,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    27
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    21
+   ],
+   [
+    "seraphineqsecondarymissile",
+    19
+   ],
+   [
+    "seraphinebasicattack",
+    10
+   ],
+   [
+    "seraphineemissile",
+    9
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.667
+   ]
+  ]
+ },
+ "superrecall": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    3.9,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.833
+   ],
+   [
+    [
+     "other"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 4.065,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Hide"
+    ],
+    0.167
+   ]
+  ]
+ },
+ "talonpassivestack": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    6.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 6.213,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    10
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    9
+   ],
+   [
+    "khazixqlong",
+    8
+   ],
+   [
+    "seraphineemissile",
+    2
+   ],
+   [
+    "#6a4229fc",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.667
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQCast"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "talonwslow": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.238,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ]
+  ],
+  "at_end": []
+ },
+ "FaelightSeenByWardBuffBar": {
+  "n": 19,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    19
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.789
+   ],
+   [
+    [
+     "cast",
+     "seraphiner"
+    ],
+    0.053
+   ],
+   [
+    [
+     "cast",
+     "jammerdevice"
+    ],
+    0.053
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.053
+   ],
+   [
+    [
+     "cast",
+     "trinketsweeperlvl3"
+    ],
+    0.053
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.073,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinebasicattack",
+    11
+   ],
+   [
+    "#6a4229fc",
+    6
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    4
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    4
+   ],
+   [
+    "seraphineqsecondarymissile",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.316
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.158
+   ]
+  ]
+ },
+ "srx_dragonbuffchemtech": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 27,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    14
+   ],
+   [
+    "seraphineemissile",
+    12
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    12
+   ],
+   [
+    "seraphineqsecondarymissile",
+    11
+   ],
+   [
+    "seraphinebasicattack",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SRX_DragonBuffChemtech"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "crestoftheancientgolem": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    120.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardeldervfx"
+    ],
+    0.167
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget1"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.667
+   ],
+   [
+    [
+     "other"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 120.046,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    75
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    63
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    47
+   ],
+   [
+    "seraphinebasicattack",
+    44
+   ],
+   [
+    "seraphineemissile",
+    41
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.667
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ]
+  ]
+ },
+ "crestoftheancientgolemvfx": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    99999.0,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.625
+   ],
+   [
+    [
+     "hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardeldervfx"
+    ],
+    0.125
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget1"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.875
+   ],
+   [
+    [
+     "my cast",
+     "seraphineq"
+    ],
+    0.125
+   ]
+  ],
+  "lived_med": 84.483,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    75
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    63
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    47
+   ],
+   [
+    "seraphinebasicattack",
+    44
+   ],
+   [
+    "seraphineemissile",
+    41
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.375
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.25
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.125
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.125
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQCast"
+    ],
+    0.125
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.125
+   ]
+  ]
+ },
+ "barondebuff": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    8.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "cast",
+     "seraphinewcastecho"
+    ],
+    0.25
+   ],
+   [
+    [
+     "end",
+     "seraphinepassiveechostage2"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 12.187,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    22
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    17
+   ],
+   [
+    "seraphinebasicattack",
+    11
+   ],
+   [
+    "seraphineqsecondarymissile",
+    7
+   ],
+   [
+    "seraphinepassiveattack",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.25
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ]
+  ]
+ },
+ "barontarget": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    8.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 9.809,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    4
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    3
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "exaltedwithbaronnashor": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    180.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "crestoftheancientgolemvfx"
+    ],
+    0.667
+   ],
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.868,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    32
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    27
+   ],
+   [
+    "seraphineqsecondarymissile",
+    6
+   ],
+   [
+    "seraphinepassiveattack",
+    6
+   ],
+   [
+    "seraphinebasicattack",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQCast"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "exaltedwithbaronnashorvfx": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    99999.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "crestoftheancientgolemvfx"
+    ],
+    0.5
+   ],
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.25
+   ],
+   [
+    [
+     "hit",
+     "elderdragonmissile"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.5
+   ],
+   [
+    [
+     "my hit",
+     "elderdragonmissile"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 135.297,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    55
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    46
+   ],
+   [
+    "seraphinebasicattack",
+    19
+   ],
+   [
+    "elderdragonbuff",
+    19
+   ],
+   [
+    "seraphineemissile",
+    14
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.25
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQCast"
+    ],
+    0.25
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.25
+   ],
+   [
+    [
+     "fx",
+     202320112
+    ],
+    0.25
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.25
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     202320112
+    ],
+    0.25
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.25
+   ]
+  ]
+ },
+ "relicyellowward": {
+  "n": 6,
+  "games": 4,
+  "self": 0.0,
+  "type": 6,
+  "durations": [
+   [
+    90.0,
+    2
+   ],
+   [
+    94.588,
+    1
+   ],
+   [
+    97.588,
+    1
+   ],
+   [
+    96.176,
+    1
+   ],
+   [
+    93.706,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "trinkettotemlvl1"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 94.738,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "8a"
+    ],
+    0.833
+   ],
+   [
+    [
+     "slot",
+     52,
+     "FaeLight_FairyMis"
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "luxeslow": {
+  "n": 15,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.35,
+    14
+   ],
+   [
+    0.94,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.133
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.067
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.067
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.067
+   ],
+   [
+    [
+     "end",
+     "barondebuff"
+    ],
+    0.067
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.6
+   ],
+   [
+    [
+     "time"
+    ],
+    0.333
+   ],
+   [
+    [
+     "my cast",
+     "summonerheal"
+    ],
+    0.067
+   ]
+  ],
+  "lived_med": 1.17,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    3
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    3
+   ],
+   [
+    "seraphinepassiveattack",
+    2
+   ],
+   [
+    "seraphineqsecondarymissile",
+    2
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.067
+   ],
+   [
+    [
+     "fx",
+     0
+    ],
+    0.067
+   ],
+   [
+    [
+     "slot",
+     52,
+     "2530HealMissile"
+    ],
+    0.067
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.067
+   ],
+   [
+    [
+     "slot",
+     52,
+     "2530HealMissile"
+    ],
+    0.067
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.067
+   ]
+  ]
+ },
+ "luxilluminatingfraulein": {
+  "n": 17,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    6.0,
+    17
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.647
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.176
+   ],
+   [
+    [
+     "end",
+     "luxeslow"
+    ],
+    0.176
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.118
+   ],
+   [
+    [
+     "end",
+     "seraphinepassivenotesaarange"
+    ],
+    0.118
+   ],
+   [
+    [
+     "end",
+     "seraphinepassivenotesbuff"
+    ],
+    0.118
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.529
+   ],
+   [
+    [
+     "time"
+    ],
+    0.471
+   ]
+  ],
+  "lived_med": 3.457,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    6
+   ],
+   [
+    "seraphineqsecondarymissile",
+    5
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    5
+   ],
+   [
+    "seraphinebasicattack",
+    4
+   ],
+   [
+    "#6a4229fc",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.706
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.176
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.824
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.059
+   ]
+  ]
+ },
+ "luxlightbindingmis": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 12,
+  "durations": [
+   [
+    2.0,
+    3
+   ],
+   [
+    1.88,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "shacoboxslow"
+    ],
+    0.167
+   ],
+   [
+    [
+     "end",
+     "luxeslow"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "seraphinerpostcast"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.038,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget1",
+    1
+   ],
+   [
+    "seraphineqsecondarymissile",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.833
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineEMissile"
+    ],
+    0.167
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.167
+   ]
+  ]
+ },
+ "shacoboxslow": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.41,
+    3
+   ],
+   [
+    1.25,
+    2
+   ],
+   [
+    1.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.167
+   ],
+   [
+    [
+     "hit",
+     "perks_aery_tar"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.471,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    4
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    4
+   ],
+   [
+    "seraphinepassiveattack",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "shacoboxsnare": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 12,
+  "durations": [
+   [
+    0.3,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.167
+   ],
+   [
+    [
+     "hit",
+     "perks_aery_tar"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.401,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ],
+  "at_end": []
+ },
+ "flee": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 29,
+  "durations": [
+   [
+    1.41,
+    3
+   ],
+   [
+    1.25,
+    2
+   ],
+   [
+    1.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.167
+   ],
+   [
+    [
+     "hit",
+     "perks_aery_tar"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.47,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    4
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    4
+   ],
+   [
+    "seraphinepassiveattack",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.167
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "2503burn": {
+  "n": 11,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    2.9,
+    11
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.636
+   ],
+   [
+    [
+     "cast",
+     "seraphinewcastecho"
+    ],
+    0.182
+   ],
+   [
+    [
+     "hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.091
+   ],
+   [
+    [
+     "cast",
+     "seraphineqcastecho"
+    ],
+    0.091
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.727
+   ],
+   [
+    [
+     "time"
+    ],
+    0.273
+   ]
+  ],
+  "lived_med": 3.073,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    10
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    9
+   ],
+   [
+    "seraphinebasicattack",
+    4
+   ],
+   [
+    "seraphineqsecondarymissile",
+    4
+   ],
+   [
+    "seraphinepassiveattack",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.273
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    0.273
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.909
+   ],
+   [
+    [
+     "slot",
+     52,
+     "2530HealMissile"
+    ],
+    0.182
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphineW2HealMissile"
+    ],
+    0.091
+   ]
+  ]
+ },
+ "3870bubbleblue": {
+  "n": 109,
+  "games": 4,
+  "self": 0.0,
+  "type": 1,
+  "durations": [
+   [
+    3.0,
+    109
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.697
+   ],
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.688
+   ],
+   [
+    [
+     "none"
+    ],
+    0.174
+   ],
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    0.055
+   ],
+   [
+    [
+     "cast",
+     "summonerheal"
+    ],
+    0.037
+   ],
+   [
+    [
+     "end",
+     "seraphinew2warning"
+    ],
+    0.037
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.679
+   ],
+   [
+    [
+     "other"
+    ],
+    0.303
+   ],
+   [
+    [
+     "my cast",
+     "seraphinepassiveattack"
+    ],
+    0.009
+   ],
+   [
+    [
+     "my cast",
+     "seraphineq"
+    ],
+    0.009
+   ]
+  ],
+  "lived_med": 3.073,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    8.633
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.55
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.688
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineWCast"
+    ],
+    0.688
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Ally"
+    ],
+    0.624
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.294
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphineW2HealMissile"
+    ],
+    0.046
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Ally"
+    ],
+    0.028
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.018
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.018
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQCast"
+    ],
+    0.018
+   ]
+  ]
+ },
+ "3870dreambubblecounterdisplay": {
+  "n": 109,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    7.273,
+    55
+   ],
+   [
+    8.0,
+    54
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.697
+   ],
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.688
+   ],
+   [
+    [
+     "none"
+    ],
+    0.174
+   ],
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    0.055
+   ],
+   [
+    [
+     "cast",
+     "summonerheal"
+    ],
+    0.037
+   ],
+   [
+    [
+     "end",
+     "seraphinew2warning"
+    ],
+    0.037
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 7.536,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    204
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    181
+   ],
+   [
+    "seraphineqsecondarymissile",
+    96
+   ],
+   [
+    "#6a4229fc",
+    58
+   ],
+   [
+    "seraphinebasicattack",
+    57
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    8.633
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.688
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineWCast"
+    ],
+    0.688
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Ally"
+    ],
+    0.624
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.193
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.037
+   ],
+   [
+    [
+     "slot",
+     52,
+     "2530HealMissile"
+    ],
+    0.037
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.018
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.018
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.009
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQInitialMissile"
+    ],
+    0.009
+   ]
+  ]
+ },
+ "srx_dragonbuffinfernal": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinebasicattack",
+    8
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    5
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    5
+   ],
+   [
+    "seraphineqsecondarymissile",
+    2
+   ],
+   [
+    "seraphineemissile",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SRX_DragonSoulBuffInfernal"
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "heraldmoveaway": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.25,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 23.853,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinebasicattack",
+    8
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    5
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    5
+   ],
+   [
+    "seraphineqsecondarymissile",
+    2
+   ],
+   [
+    "seraphineemissile",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "avatarbuffoffensiveburn": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    4.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "seraphineqcastecho"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.084,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    3
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    2
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    2
+   ],
+   [
+    "seraphinebasicattack",
+    2
+   ],
+   [
+    "seraphinepassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.333
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.333
+   ],
+   [
+    [
+     "fx",
+     16949523
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "SeraphineW2HealMissile"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "burning": {
+  "n": 10,
+  "games": 4,
+  "self": 0.7,
+  "type": 13,
+  "durations": [
+   [
+    3.0,
+    10
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "burning"
+    ],
+    0.3
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassiveattack"
+    ],
+    0.3
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "summonerhealcheck"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardelderslow"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.7
+   ],
+   [
+    [
+     "time"
+    ],
+    0.2
+   ],
+   [
+    [
+     "death"
+    ],
+    0.1
+   ]
+  ],
+  "lived_med": 2.204,
+  "ticks": 2,
+  "period_med": 1.06,
+  "on_hit": [
+   [
+    "perks_aery_tar",
+    3
+   ],
+   [
+    "seraphineemissile",
+    2
+   ],
+   [
+    "seraphineqsecondarymissile",
+    2
+   ],
+   [
+    "#f86f3d33",
+    1
+   ],
+   [
+    "seraphinebasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.7
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.6
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.1
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQSecondaryMissile"
+    ],
+    0.1
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQSecondaryMissile"
+    ],
+    0.1
+   ]
+  ]
+ },
+ "blessingofthelizardelderslow": {
+  "n": 9,
+  "games": 4,
+  "self": 0.778,
+  "type": 11,
+  "durations": [
+   [
+    3.0,
+    6
+   ],
+   [
+    2.82,
+    2
+   ],
+   [
+    1.48,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.556
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.222
+   ],
+   [
+    [
+     "end",
+     "summonerhealcheck"
+    ],
+    0.222
+   ],
+   [
+    [
+     "end",
+     "burning"
+    ],
+    0.222
+   ],
+   [
+    [
+     "hit",
+     "burning"
+    ],
+    0.222
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassiveattack"
+    ],
+    0.222
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "time"
+    ],
+    0.222
+   ],
+   [
+    [
+     "my cast",
+     "seraphinee"
+    ],
+    0.111
+   ]
+  ],
+  "lived_med": 2.204,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "perks_aery_tar",
+    3
+   ],
+   [
+    "seraphineemissile",
+    2
+   ],
+   [
+    "seraphineqsecondarymissile",
+    2
+   ],
+   [
+    "#f86f3d33",
+    1
+   ],
+   [
+    "seraphinebasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.778
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.889
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.111
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.111
+   ],
+   [
+    [
+     "cooldown",
+     "a6"
+    ],
+    0.111
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQSecondaryMissile"
+    ],
+    0.111
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.889
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQSecondaryMissile"
+    ],
+    0.111
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineECast"
+    ],
+    0.111
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.111
+   ]
+  ]
+ },
+ "kaynpmessagekaynhastransformed": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    0.25,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.267,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "kaynwslow": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    1.41,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "luxilluminatingfraulein"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "luxlightbindingmis"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "seraphinepassivenotesaarange"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "seraphinepassivenotesbuff"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "2503burn"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.5
+   ],
+   [
+    [
+     "time"
+    ],
+    0.5
+   ]
+  ],
+  "lived_med": 1.472,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineemissile",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ],
+   [
+    "seraphineqsecondarymissile",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "kaynrenemymark": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "luxilluminatingfraulein"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "luxlightbindingmis"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "seraphinepassivenotesaarange"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "seraphinepassivenotesbuff"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "2503burn"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "slow"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.0,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "lucianwbuff": {
+  "n": 1,
+  "games": 4,
+  "self": 0.0,
+  "type": 15,
+  "durations": [
+   [
+    1.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "seraphineqsecondarymissile"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.236,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "slot",
+     52,
+     "2530HealMissile"
+    ],
+    1.0
+   ]
+  ]
+ },
+ "6333bleed": {
+  "n": 2,
+  "games": 4,
+  "self": 0.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "seraphineqsecondarymissile"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 5.845,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.5
+   ]
+  ],
+  "at_end": []
+ },
+ "brandablaze": {
+  "n": 20,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    4.0,
+    20
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.8
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.15
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "brandablazedetonatemarker"
+    ],
+    0.05
+   ],
+   [
+    [
+     "cast",
+     "summonerheal"
+    ],
+    0.05
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.05
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.7
+   ],
+   [
+    [
+     "other"
+    ],
+    0.2
+   ],
+   [
+    [
+     "my cast",
+     "seraphineq"
+    ],
+    0.05
+   ],
+   [
+    [
+     "my cast",
+     "seraphinee"
+    ],
+    0.05
+   ]
+  ],
+  "lived_med": 4.177,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    26
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    14
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    12
+   ],
+   [
+    "perks_aery_tar",
+    8
+   ],
+   [
+    "seraphineemissile",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.9
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.3
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.05
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.05
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineECast"
+    ],
+    0.05
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.05
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.15
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.05
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineECast"
+    ],
+    0.05
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.05
+   ]
+  ]
+ },
+ "#0ddce281": {
+  "n": 16,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    2.0,
+    14
+   ],
+   [
+    4.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.875
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.188
+   ],
+   [
+    [
+     "cast",
+     "summonerheal"
+    ],
+    0.062
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.062
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 5.247,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    27
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    14
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    14
+   ],
+   [
+    "perks_aery_tar",
+    9
+   ],
+   [
+    "seraphineemissile",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.562
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.375
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.062
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.062
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.312
+   ]
+  ]
+ },
+ "powerfistslow": {
+  "n": 9,
+  "games": 4,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    1.25,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.889
+   ],
+   [
+    [
+     "end",
+     "stun"
+    ],
+    0.111
+   ],
+   [
+    [
+     "end",
+     "kalistacoopstrikemarkself"
+    ],
+    0.111
+   ],
+   [
+    [
+     "end",
+     "kalistacoopstrikemarkally"
+    ],
+    0.111
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.111
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.002,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineemissile",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.444
+   ]
+  ]
+ },
+ "2508burn": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    2.9,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.875
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cast",
+     "summonerheal"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 7.19,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    25
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    14
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    14
+   ],
+   [
+    "perks_aery_tar",
+    7
+   ],
+   [
+    "seraphinepassiveattack",
+    5
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.75
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.125
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.125
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.375
+   ]
+  ]
+ },
+ "stun": {
+  "n": 10,
+  "games": 4,
+  "self": 1.0,
+  "type": 5,
+  "durations": [
+   [
+    0.7,
+    5
+   ],
+   [
+    1.75,
+    3
+   ],
+   [
+    1.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.8
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.3
+   ],
+   [
+    [
+     "cast",
+     "seraphinerpostcast"
+    ],
+    0.1
+   ],
+   [
+    [
+     "hit",
+     "seraphiner"
+    ],
+    0.1
+   ],
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.1
+   ],
+   [
+    [
+     "end",
+     "powerfistslow"
+    ],
+    0.1
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.8
+   ],
+   [
+    [
+     "other"
+    ],
+    0.2
+   ]
+  ],
+  "lived_med": 0.835,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineemissile",
+    1
+   ],
+   [
+    "seraphineqsecondarymissile",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.1
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.9
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    0.5
+   ],
+   [
+    [
+     "fx_until_end",
+     126216260
+    ],
+    0.2
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Hide"
+    ],
+    0.1
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "brandablazedetonatemarker": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    2.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.038,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.333
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ]
+  ]
+ },
+ "sivirraurabuff": {
+  "n": 6,
+  "games": 4,
+  "self": 1.0,
+  "type": 15,
+  "durations": [
+   [
+    8.0,
+    2
+   ],
+   [
+    10.0,
+    2
+   ],
+   [
+    12.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.667
+   ],
+   [
+    [
+     "cast",
+     "seraphineqcastecho"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.167
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.833
+   ],
+   [
+    [
+     "other"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 10.09,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    31
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    27
+   ],
+   [
+    "seraphineqsecondarymissile",
+    15
+   ],
+   [
+    "seraphinepassiveattack",
+    9
+   ],
+   [
+    "perks_aery_tar",
+    7
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "summonerdot": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    5.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.305,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    1
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    1
+   ],
+   [
+    "seraphinepassiveattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "grievouswound": {
+  "n": 42,
+  "games": 4,
+  "self": 0.119,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    37
+   ],
+   [
+    0.5,
+    4
+   ],
+   [
+    5.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.619
+   ],
+   [
+    [
+     "none"
+    ],
+    0.429
+   ],
+   [
+    [
+     "hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.214
+   ],
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    0.19
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget2"
+    ],
+    0.119
+   ],
+   [
+    [
+     "end",
+     "varuswdebuff"
+    ],
+    0.048
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.833
+   ],
+   [
+    [
+     "time"
+    ],
+    0.167
+   ]
+  ],
+  "lived_med": 3.578,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    3
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    2
+   ],
+   [
+    "seraphinepassiveattack",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    6.381
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.048
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.619
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.143
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.071
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    0.024
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.048
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.048
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.024
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQSecondaryMissile"
+    ],
+    0.024
+   ],
+   [
+    [
+     "fx",
+     202320112
+    ],
+    0.024
+   ]
+  ]
+ },
+ "gragasestun": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    1.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.503,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "varuswdebuff": {
+  "n": 12,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    6.0,
+    12
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.833
+   ],
+   [
+    [
+     "end",
+     "summonerhealcheck"
+    ],
+    0.167
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.083
+   ],
+   [
+    [
+     "end",
+     "seraphinepassivenotesaarange"
+    ],
+    0.083
+   ],
+   [
+    [
+     "end",
+     "seraphinepassivenotesbuff"
+    ],
+    0.083
+   ],
+   [
+    [
+     "end",
+     "3118visualdebuff"
+    ],
+    0.083
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.583
+   ],
+   [
+    [
+     "time"
+    ],
+    0.417
+   ]
+  ],
+  "lived_med": 1.337,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    4
+   ],
+   [
+    "seraphineemissile",
+    4
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    3
+   ],
+   [
+    "#6a4229fc",
+    2
+   ],
+   [
+    "seraphinepassiveattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.25
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.333
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    0.083
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.167
+   ]
+  ]
+ },
+ "srx_dragonsoulbuffmountain_preview": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    8
+   ],
+   [
+    "perks_aery_tar",
+    4
+   ],
+   [
+    "seraphineemissile",
+    3
+   ],
+   [
+    "seraphiner",
+    2
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "rocketgrab2": {
+  "n": 5,
+  "games": 4,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    1.0,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.8
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.4
+   ],
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "recall"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.435,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineemissile",
+    1
+   ],
+   [
+    "seraphineqsecondarymissile",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.6
+   ],
+   [
+    [
+     "fx",
+     126216260
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     126216260
+    ],
+    0.4
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Hide"
+    ],
+    0.2
+   ]
+  ],
+  "at_end": []
+ },
+ "staticfieldlightning": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "stun"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.103,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx",
+     78637603
+    ],
+    0.333
+   ]
+  ]
+ },
+ "ahrie": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 23,
+  "durations": [
+   [
+    1.2,
+    1
+   ],
+   [
+    1.5,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.674,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    2
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQSecondaryMissile"
+    ],
+    0.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ]
+  ]
+ },
+ "sivirrauraweakerbuff": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    4.125,
+    1
+   ],
+   [
+    6.761,
+    1
+   ],
+   [
+    5.724,
+    1
+   ],
+   [
+    9.566,
+    1
+   ],
+   [
+    11.259,
+    1
+   ],
+   [
+    9.293,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "seraphineqcastecho"
+    ],
+    0.125
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget2"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cast",
+     "seraphinewcastecho"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 6.948,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    19
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    17
+   ],
+   [
+    "seraphineqsecondarymissile",
+    16
+   ],
+   [
+    "seraphinepassiveattack",
+    6
+   ],
+   [
+    "seraphineemissile",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.875
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.375
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.125
+   ]
+  ]
+ },
+ "blessingofthelizardelder": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    120.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "seraphineqsecondarymissile"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "blessingofthelizardeldervfx"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "elderdragonmissile"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "exaltedwithbaronnashorvfx"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 120.046,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinebasicattack",
+    19
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    15
+   ],
+   [
+    "elderdragonbuff",
+    14
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    13
+   ],
+   [
+    "seraphineqsecondarymissile",
+    12
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.5
+   ],
+   [
+    [
+     "fx",
+     202320112
+    ],
+    0.5
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.5
+   ]
+  ],
+  "at_end": []
+ },
+ "blessingofthelizardeldervfx": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    99999.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "seraphineqsecondarymissile"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "elderdragonmissile"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "exaltedwithbaronnashorvfx"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "seraphineqsecondarymissile"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.0,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "elderdragonbuff",
+    14
+   ],
+   [
+    "seraphinebasicattack",
+    12
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    10
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    10
+   ],
+   [
+    "seraphineemissile",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    4.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.5
+   ],
+   [
+    [
+     "fx",
+     202320112
+    ],
+    0.5
+   ],
+   [
+    [
+     "cooldown",
+     "ae"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cooldown",
+     "af"
+    ],
+    0.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "BlessingOfTheLizardElderLines"
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "CrestOfTheAncientGolemLines"
+    ],
+    0.5
+   ]
+  ]
+ },
+ "srx_dragonbuffmountain": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassive",
+    17
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    13
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    12
+   ],
+   [
+    "seraphineqsecondarymissile",
+    9
+   ],
+   [
+    "seraphineemissile",
+    6
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ],
+  "at_end": []
+ },
+ "varusrsecondary": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    2.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "time"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 1.57,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    4
+   ],
+   [
+    "seraphineemissile",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineEMissile"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "varusrtooltip": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    2.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.105,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    4
+   ],
+   [
+    "seraphineemissile",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.333
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineEMissile"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "6653burn": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    2.9,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    1.0
+   ],
+   [
+    [
+     "none"
+    ],
+    0.5
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 7.049,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    3
+   ],
+   [
+    "elderdragonbuff",
+    3
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    7.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "srt_2024_horde_dot_buff": {
+  "n": 2,
+  "games": 4,
+  "self": 0.0,
+  "type": 13,
+  "durations": [
+   [
+    4.6,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "seraphinepassive"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "seraphinebasicattack"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "vexbasicattack"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 8.577,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.5
+   ]
+  ]
+ },
+ "gragasrmoveaway": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 31,
+  "durations": [
+   [
+    0.75,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.75
+   ],
+   [
+    [
+     "other"
+    ],
+    0.25
+   ]
+  ],
+  "lived_med": 0.937,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineemissile",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.25
+   ]
+  ]
+ },
+ "3116slow": {
+  "n": 137,
+  "games": 4,
+  "self": 0.007,
+  "type": 11,
+  "durations": [
+   [
+    1.0,
+    87
+   ],
+   [
+    0.94,
+    20
+   ],
+   [
+    0.799,
+    15
+   ],
+   [
+    0.658,
+    6
+   ],
+   [
+    0.493,
+    5
+   ],
+   [
+    0.599,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.562
+   ],
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    0.365
+   ],
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.197
+   ],
+   [
+    [
+     "none"
+    ],
+    0.117
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.058
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.051
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.54
+   ],
+   [
+    [
+     "death"
+    ],
+    0.248
+   ],
+   [
+    [
+     "other"
+    ],
+    0.19
+   ],
+   [
+    [
+     "my cast",
+     "seraphineq"
+    ],
+    0.015
+   ],
+   [
+    [
+     "my cast",
+     "seraphinepassiveattack"
+    ],
+    0.007
+   ]
+  ],
+  "lived_med": 1.003,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "elderdragonbuff",
+    3
+   ],
+   [
+    "seraphineqsecondarymissile",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    5.467
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.321
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.197
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.073
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.044
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.015
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.745
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.051
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.022
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQSecondaryMissile"
+    ],
+    0.022
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.015
+   ],
+   [
+    [
+     "slot",
+     46,
+     "SeraphinePassiveAttack"
+    ],
+    0.015
+   ]
+  ]
+ },
+ "varusrspellshieldcheck2": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 12,
+  "durations": [
+   [
+    0.3,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "varusrsecondary"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "varusrtooltip"
+    ],
+    0.333
+   ],
+   [
+    [
+     "none"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.502,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.667
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineEMissile"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "varusrmissile": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    2.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.5
+   ],
+   [
+    [
+     "none"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.115,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "varusrroot": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 12,
+  "durations": [
+   [
+    2.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "itemghostward"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "varusrsecondary"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "varusrtooltip"
+    ],
+    0.333
+   ],
+   [
+    [
+     "none"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 2.115,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.667
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineEMissile"
+    ],
+    0.333
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.667
+   ]
+  ]
+ },
+ "varuseslow": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.3,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "varuswdebuff"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "#0f1b5ee1"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.451,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    2
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.25
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ]
+ },
+ "4646damagebuff": {
+  "n": 4,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    2.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.75
+   ],
+   [
+    [
+     "cast",
+     "seraphinerpostcast"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.75
+   ],
+   [
+    [
+     "other"
+    ],
+    0.25
+   ]
+  ],
+  "lived_med": 2.038,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.25
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.75
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQSecondaryMissile"
+    ],
+    0.25
+   ]
+  ]
+ },
+ "8020visualdebuff": {
+  "n": 9,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    25000.0,
+    9
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.444
+   ],
+   [
+    [
+     "cast",
+     "seraphineecastecho"
+    ],
+    0.111
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.111
+   ],
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.111
+   ],
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.111
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.111
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "my hit",
+     "seraphinepassivenotesmissiletarget2"
+    ],
+    0.222
+   ],
+   [
+    [
+     "my hit",
+     "elderdragonbuff"
+    ],
+    0.111
+   ]
+  ],
+  "lived_med": 1.393,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    10
+   ],
+   [
+    "seraphineqsecondarymissile",
+    6
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    6
+   ],
+   [
+    "seraphineemissile",
+    4
+   ],
+   [
+    "seraphinepassiveattack",
+    4
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.556
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.111
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.111
+   ]
+  ]
+ },
+ "3040lifelineshield": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    3.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "varuswdebuff"
+    ],
+    0.333
+   ],
+   [
+    [
+     "end",
+     "#0f1b5ee1"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "time"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 0.201,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.333
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "cooldown",
+     "a2"
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.667
+   ]
+  ]
+ },
+ "silence": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 7,
+  "durations": [
+   [
+    0.5,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "kalistacoopstrikemarkself"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "seraphinepassivenotesbuff"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "seraphinepassivenotesaarange"
+    ],
+    0.5
+   ],
+   [
+    [
+     "end",
+     "kalistaeslow"
+    ],
+    0.5
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 0.568,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.5
+   ]
+  ],
+  "at_end": []
+ },
+ "item3110aura": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 19,
+  "durations": [
+   [
+    25000.0,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.333
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.667
+   ],
+   [
+    [
+     "my cast",
+     "summonerflash"
+    ],
+    0.333
+   ]
+  ],
+  "lived_med": 0.201,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    6
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    4
+   ],
+   [
+    "seraphinepassiveattack",
+    2
+   ],
+   [
+    "seraphineqsecondarymissile",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.333
+   ]
+  ]
+ },
+ "elderdragonbuff": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    150.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "seraphinepassiveattack"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 5,
+  "period_med": 1.07,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    4
+   ],
+   [
+    "seraphineemissile",
+    3
+   ],
+   [
+    "seraphineqsecondarymissile",
+    3
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    3
+   ],
+   [
+    "seraphinebasicattack",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    14.0
+   ]
+  ],
+  "at_end": []
+ },
+ "elixirofsorcery": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    180.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 4,
+  "period_med": 5.52,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    10
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    9
+   ],
+   [
+    "elderdragonbuff",
+    8
+   ],
+   [
+    "seraphineemissile",
+    4
+   ],
+   [
+    "seraphinepassiveattack",
+    3
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ },
+ "elderdragonhealthbartickmanager": {
+  "n": 4,
+  "games": 4,
+  "self": 0.0,
+  "type": 3,
+  "durations": [
+   [
+    3.0,
+    4
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "end",
+     "ASSETS/Perks/Styles/Sorcery/SummonAery/SummonAery.lua"
+    ],
+    0.5
+   ],
+   [
+    [
+     "hit",
+     "elixirofsorcery"
+    ],
+    0.25
+   ],
+   [
+    [
+     "hit",
+     "seraphineemissile"
+    ],
+    0.25
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.25
+   ],
+   [
+    [
+     "hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.25
+   ],
+   [
+    [
+     "none"
+    ],
+    0.25
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.75
+   ],
+   [
+    [
+     "time"
+    ],
+    0.25
+   ]
+  ],
+  "lived_med": 4.51,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    9.75
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.5
+   ],
+   [
+    [
+     "slot",
+     52,
+     "3870DreamMakerMissile"
+    ],
+    0.25
+   ]
+  ],
+  "at_end": []
+ },
+ "8010visualdebuff": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 28,
+  "durations": [
+   [
+    6.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 9.965,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "elderdragonbuff",
+    6
+   ],
+   [
+    "seraphinebasicattack",
+    4
+   ],
+   [
+    "seraphineemissile",
+    4
+   ],
+   [
+    "seraphineqsecondarymissile",
+    1
+   ],
+   [
+    "perks_aery_tar",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    9.0
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "yasuoravailabletest": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [],
+  "lived_med": null,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "kalistavobindallyglobal": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    10.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 10.087,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [],
+  "at_end": []
+ },
+ "#0f34c131": {
+  "n": 14,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    0.3,
+    14
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.786
+   ],
+   [
+    [
+     "end",
+     "summonerheal"
+    ],
+    0.071
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget1"
+    ],
+    0.071
+   ],
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.071
+   ],
+   [
+    [
+     "cast",
+     "summonerflash"
+    ],
+    0.071
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.714
+   ],
+   [
+    [
+     "time"
+    ],
+    0.214
+   ],
+   [
+    [
+     "my hit",
+     "seraphinepassivenotesmissiletarget1"
+    ],
+    0.071
+   ]
+  ],
+  "lived_med": 1.637,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphineqsecondarymissile",
+    6
+   ],
+   [
+    "seraphinebasicattack",
+    5
+   ],
+   [
+    "perks_aery_tar",
+    5
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    4
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.357
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.286
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.071
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQSecondaryMissile"
+    ],
+    0.071
+   ]
+  ]
+ },
+ "kalistaeslow": {
+  "n": 12,
+  "games": 4,
+  "self": 1.0,
+  "type": 11,
+  "durations": [
+   [
+    2.0,
+    12
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.833
+   ],
+   [
+    [
+     "end",
+     "kalistaexpungemarker"
+    ],
+    0.833
+   ],
+   [
+    [
+     "cast",
+     "seraphineecastecho"
+    ],
+    0.083
+   ],
+   [
+    [
+     "end",
+     "kalistacoopstrikemarkally"
+    ],
+    0.083
+   ],
+   [
+    [
+     "end",
+     "talentreaperpersistenteffects"
+    ],
+    0.083
+   ],
+   [
+    [
+     "end",
+     "kalistacoopstrikemarkself"
+    ],
+    0.083
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    0.75
+   ],
+   [
+    [
+     "other"
+    ],
+    0.25
+   ]
+  ],
+  "lived_med": 2.071,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    5
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    4
+   ],
+   [
+    "seraphinebasicattack",
+    3
+   ],
+   [
+    "seraphineqsecondarymissile",
+    2
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.667
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.25
+   ]
+  ]
+ },
+ "#0d398291": {
+  "n": 19,
+  "games": 4,
+  "self": 1.0,
+  "type": 1,
+  "durations": [
+   [
+    25000.0,
+    19
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.947
+   ],
+   [
+    [
+     "end",
+     "s14_support_charge_display"
+    ],
+    0.105
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.053
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "my hit",
+     "seraphineemissile"
+    ],
+    0.444
+   ],
+   [
+    [
+     "my hit",
+     "seraphineqsecondarymissile"
+    ],
+    0.278
+   ],
+   [
+    [
+     "my hit",
+     "seraphiner"
+    ],
+    0.167
+   ],
+   [
+    [
+     "my hit",
+     "perks_aery_tar"
+    ],
+    0.056
+   ],
+   [
+    [
+     "my hit",
+     "itemknightsvow"
+    ],
+    0.056
+   ]
+  ],
+  "lived_med": 49.451,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "#6a4229fc",
+    87
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    55
+   ],
+   [
+    "seraphinebasicattack",
+    49
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    48
+   ],
+   [
+    "seraphineqsecondarymissile",
+    42
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.158
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Return"
+    ],
+    0.053
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    3.947
+   ],
+   [
+    [
+     "slot",
+     52,
+     "Perks_Aery_Tar"
+    ],
+    0.842
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileOrbitingAlly"
+    ],
+    0.105
+   ],
+   [
+    [
+     "slot",
+     48,
+     "SeraphineQInitialMissile"
+    ],
+    0.053
+   ],
+   [
+    [
+     "slot",
+     46,
+     "SeraphinePassiveAttack"
+    ],
+    0.053
+   ],
+   [
+    [
+     "slot",
+     50,
+     "SeraphineQInitialMissile"
+    ],
+    0.053
+   ]
+  ]
+ },
+ "kalistaexpungemarker": {
+  "n": 18,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    4.0,
+    18
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.833
+   ],
+   [
+    [
+     "end",
+     "kalistacoopstrikemarkally"
+    ],
+    0.111
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.056
+   ],
+   [
+    [
+     "end",
+     "kalistacoopstrikemarkself"
+    ],
+    0.056
+   ],
+   [
+    [
+     "cast",
+     "seraphineecastecho"
+    ],
+    0.056
+   ],
+   [
+    [
+     "cast",
+     "seraphinewcastecho"
+    ],
+    0.056
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.611
+   ],
+   [
+    [
+     "time"
+    ],
+    0.389
+   ]
+  ],
+  "lived_med": 3.006,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinebasicattack",
+    7
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    7
+   ],
+   [
+    "perks_aery_tar",
+    5
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    5
+   ],
+   [
+    "seraphinepassiveattack",
+    3
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.111
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.111
+   ],
+   [
+    [
+     "fx",
+     133134611
+    ],
+    0.111
+   ],
+   [
+    [
+     "fx",
+     180417155
+    ],
+    0.111
+   ],
+   [
+    [
+     "slot",
+     51,
+     "SeraphineWCastEcho"
+    ],
+    0.056
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileToAlly"
+    ],
+    0.056
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.611
+   ]
+  ]
+ },
+ "item2010": {
+  "n": 3,
+  "games": 4,
+  "self": 1.0,
+  "type": 14,
+  "durations": [
+   [
+    4.75,
+    3
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "item2010"
+    ],
+    1.0
+   ],
+   [
+    [
+     "hit",
+     "seraphinepassivenotesmissiletarget2"
+    ],
+    0.333
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.977,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget1",
+    3
+   ],
+   [
+    "seraphinebasicattack",
+    2
+   ],
+   [
+    "perks_aery_tar",
+    2
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    2
+   ],
+   [
+    "#f86f3d33",
+    1
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.333
+   ]
+  ]
+ },
+ "kalistacoopstrikemarkself": {
+  "n": 19,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    4.0,
+    13
+   ],
+   [
+    3.0,
+    6
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.895
+   ],
+   [
+    [
+     "end",
+     "kalistaexpungemarker"
+    ],
+    0.105
+   ],
+   [
+    [
+     "cast",
+     "seraphineecastecho"
+    ],
+    0.053
+   ],
+   [
+    [
+     "cast",
+     "seraphinew"
+    ],
+    0.053
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.789
+   ],
+   [
+    [
+     "time"
+    ],
+    0.211
+   ]
+  ],
+  "lived_med": 0.735,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    7
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    6
+   ],
+   [
+    "seraphinebasicattack",
+    5
+   ],
+   [
+    "seraphinepassiveattack",
+    4
+   ],
+   [
+    "perks_aery_tar",
+    4
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.737
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    1.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget1"
+    ],
+    0.053
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.421
+   ]
+  ]
+ },
+ "kalistacoopstrikemarkally": {
+  "n": 8,
+  "games": 4,
+  "self": 1.0,
+  "type": 3,
+  "durations": [
+   [
+    4.0,
+    8
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    0.625
+   ],
+   [
+    [
+     "cast",
+     "seraphineq"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    0.125
+   ],
+   [
+    [
+     "cast",
+     "seraphinewcastecho"
+    ],
+    0.125
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.875
+   ],
+   [
+    [
+     "time"
+    ],
+    0.125
+   ]
+  ],
+  "lived_med": 1.937,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    4
+   ],
+   [
+    "seraphineqsecondarymissile",
+    3
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    3
+   ],
+   [
+    "perks_aery_tar",
+    3
+   ],
+   [
+    "seraphinepassiveattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.375
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.875
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.125
+   ]
+  ]
+ },
+ "kalistacoopstrikeprotect": {
+  "n": 5,
+  "games": 4,
+  "self": 1.0,
+  "type": 13,
+  "durations": [
+   [
+    10.0,
+    5
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ],
+   [
+    [
+     "end",
+     "kalistacoopstrikemarkally"
+    ],
+    0.8
+   ],
+   [
+    [
+     "end",
+     "seraphinewshield"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "kalistacoopstrikemarkself"
+    ],
+    0.2
+   ],
+   [
+    [
+     "end",
+     "kalistaexpungemarker"
+    ],
+    0.2
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    0.6
+   ],
+   [
+    [
+     "time"
+    ],
+    0.4
+   ]
+  ],
+  "lived_med": 2.105,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "perks_aery_tar",
+    4
+   ],
+   [
+    "seraphinepassivenotesmissiletarget2",
+    4
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    4
+   ],
+   [
+    "seraphinebasicattack",
+    3
+   ],
+   [
+    "seraphinepassiveattack",
+    2
+   ]
+  ],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.4
+   ],
+   [
+    [
+     "slot",
+     52,
+     "SeraphinePassiveNotesMissileTarget2"
+    ],
+    0.2
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ]
+ },
+ "kalistarallystun": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 30,
+  "durations": [
+   [
+    1.0,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 1.169,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    1.0
+   ]
+  ],
+  "at_end": []
+ },
+ "hweiwqmovespeed": {
+  "n": 2,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    1.0,
+    2
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "none"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "other"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 4.341,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [],
+  "at_add": [
+   [
+    [
+     "fx",
+     0
+    ],
+    0.5
+   ],
+   [
+    [
+     "fx_until_end",
+     0
+    ],
+    0.5
+   ]
+  ],
+  "at_end": [
+   [
+    [
+     "fx",
+     0
+    ],
+    2.0
+   ]
+  ]
+ },
+ "yasuoe": {
+  "n": 1,
+  "games": 4,
+  "self": 1.0,
+  "type": 2,
+  "durations": [
+   [
+    6.75,
+    1
+   ]
+  ],
+  "given_by": [
+   [
+    [
+     "cast",
+     "seraphinee"
+    ],
+    1.0
+   ]
+  ],
+  "ends": [
+   [
+    [
+     "time"
+    ],
+    1.0
+   ]
+  ],
+  "lived_med": 6.903,
+  "ticks": 0,
+  "period_med": null,
+  "on_hit": [
+   [
+    "seraphinepassivenotesmissiletarget2",
+    3
+   ],
+   [
+    "seraphinepassivenotesmissiletarget1",
+    2
+   ],
+   [
+    "seraphineemissile",
+    1
+   ]
+  ],
+  "at_add": [],
+  "at_end": []
+ }
+}

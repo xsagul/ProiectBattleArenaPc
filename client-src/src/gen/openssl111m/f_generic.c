@@ -13,4 +13,6 @@
 // match: e71270 _gf_serialize
 // match: e71340 _gf_strong_reduce
 // match: e71510 _gf_sub
+#define OPENSSL_FILE "crypto\\ec\\curve448\\f_generic.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/ec/curve448/f_generic.c"

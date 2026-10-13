@@ -1,0 +1,34 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 00000219567435F0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; 1
+	8	[-]	SETGLOBAL	0 -4	; SpellDamageRatio
+	9	[-]	NEWTABLE 	0 1 0
+	10	[-]	LOADK    	1 -7	; "RekSaiSkin01"
+	11	[-]	SETLIST  	0 1 1	; 1
+	12	[-]	SETGLOBAL	0 -6	; SpellFXOverrideSkins
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -7	; "RekSaiSkin01"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -8	; SpellVOOverrideSkins
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -9	; IsDamagingSpell
+	19	[-]	RETURN   	0 1
+constants (9) for 00000219567435F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"SpellDamageRatio"
+	5	1
+	6	"SpellFXOverrideSkins"
+	7	"RekSaiSkin01"
+	8	"SpellVOOverrideSkins"
+	9	"IsDamagingSpell"
+locals (0) for 00000219567435F0:
+upvalues (0) for 00000219567435F0:

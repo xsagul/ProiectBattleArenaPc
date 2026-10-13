@@ -1,0 +1,32 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 000001D7883534C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "Cherry_GoH_Ivern_Brush"
+	6	[-]	SETGLOBAL	0 -3	; BuffName
+	7	[-]	LOADK    	0 -6	; "DATA/Shared/Particles/LOC_Stun.troy"
+	8	[-]	SETGLOBAL	0 -5	; AutoBuffActivateEffect
+	9	[-]	LOADK    	0 -8	; "C_Buffbone_Glb_Overhead_Loc"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateAttachBoneName
+	11	[-]	LOADK    	0 -10	; "game_floatingtext_Stunned"
+	12	[-]	SETGLOBAL	0 -9	; PopupMessage1
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -11	; IsDamagingSpell
+	15	[-]	RETURN   	0 1
+constants (11) for 000001D7883534C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffName"
+	4	"Cherry_GoH_Ivern_Brush"
+	5	"AutoBuffActivateEffect"
+	6	"DATA/Shared/Particles/LOC_Stun.troy"
+	7	"AutoBuffActivateAttachBoneName"
+	8	"C_Buffbone_Glb_Overhead_Loc"
+	9	"PopupMessage1"
+	10	"game_floatingtext_Stunned"
+	11	"IsDamagingSpell"
+locals (0) for 000001D7883534C0:
+upvalues (0) for 000001D7883534C0:

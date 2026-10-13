@@ -1,0 +1,46 @@
+
+main <?:0,0> (24 instructions, 96 bytes at 0000024A6D5735C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Spells/Icons2D/Chronokeeper_Chronoblast.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "Time Bomb"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; "doesnotexist.troy"
+	12	[-]	SETGLOBAL	0 -8	; AutoBuffActivateEffect
+	13	[-]	LOADK    	0 -11	; "spine"
+	14	[-]	SETGLOBAL	0 -10	; AutoBuffActivateAttachBoneName
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -12	; PersistsThroughDeath
+	17	[-]	NEWTABLE 	0 2 0
+	18	[-]	LOADK    	1 -14	; "SyndraSkin02"
+	19	[-]	LOADK    	2 -15	; "SyndraSkin04"
+	20	[-]	SETLIST  	0 2 1	; 1
+	21	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	22	[-]	LOADBOOL 	0 1 0
+	23	[-]	SETGLOBAL	0 -16	; IsDamagingSpell
+	24	[-]	RETURN   	0 1
+constants (16) for 0000024A6D5735C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Spells/Icons2D/Chronokeeper_Chronoblast.dds"
+	6	"BuffName"
+	7	"Time Bomb"
+	8	"AutoBuffActivateEffect"
+	9	"doesnotexist.troy"
+	10	"AutoBuffActivateAttachBoneName"
+	11	"spine"
+	12	"PersistsThroughDeath"
+	13	"SpellFXOverrideSkins"
+	14	"SyndraSkin02"
+	15	"SyndraSkin04"
+	16	"IsDamagingSpell"
+locals (0) for 0000024A6D5735C0:
+upvalues (0) for 0000024A6D5735C0:

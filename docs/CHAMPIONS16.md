@@ -1,0 +1,190 @@
+# Champions 16.20 - one at a time, complete (wiki read fully -> our server checked -> replays -> implemented)
+
+Order: alphabetical. State: todo / done (date, what). Kits: server/core/kits/<name>.py; probe: tools/kit_probe16.py.
+Sources: the live wiki page (wiki.leagueoflegends.com/en-us/<Champion>, current patch notes) + the 16.20 data (its numbers win) + the replays.
+Bench (replay_golden16 batch) only at the end.
+
+- [x] Aatrox - 10-12: kits/aatrox.py: P Deathbringer (ready buff, 0x2e attack-spell, 4-10 % max HP, heal, cd 22-10 cut by hits), Q three shapes + measured sweet spots + knock-up, W tether / re-damage / pull (330, 1.503 s), E heal 16 % + 1.3 %/100 bonus HP, R minions / monsters flee + ramping slow, AD / heal amp / decaying MS, takedown extend, R attacks 0x43/0x44. Not: ghosting, size, tether reveal.
+- [x] Ahri - 10-12: kits/ahri.py: P essence stacks (AhriPassiveCounter 435/282/262, 78 0x35 AhriPassive heal; takedown heal + 78 0x34, R window +10 s / +1 recast), Q true damage on the way back, W flame targets by priority (templates fly at them) + 40 % repeats + minions x2 under 20 %, E charm / 1edcb701 / slow 65 % with the charm's duration, R 3 casts in 15 s with 1 s between and cd from the first, bolts at up to 3 (champions first). Engine: cast_begin hook, kit-chosen missile targets, missile passed to hit, killed hook, 635 slot codes only 0xae - 4 x slot.
+- [x] Akali - 10-12: kits/akali.py: P ring (500, 4 s) on ability damage to champions, exit -> empowered 4 s (AkaliPWeapon / MaterialVFX + 3 PVFX 78s, double range, 0x31 AkaliBasicAttackPassive[Melee][Minion], bonus 35-182 + 60 % bAD + 55 % AP), level-based MS away / toward; W shroud stealth (growing radius, restealth 1 - 0.625), +100 max energy, 100 energy over 0.4 s; E hit 30 % + mark, Eb tracking dash 1720 + 70 %; R1 750+ dash from the cast's start (>= 150 past), R2 800 dash with x1-3 missing-health, 2.5 s between, full cd on recast / window end [a]. Engine: skip_template hook, kit_dash flag. Open: Q slow range rule.
+- [x] Akshan - 10-12: kits/akshan.py: P second shot (0.267 s after the attack, 78 0x32 AkshanPassiveAttack, hit +0.334, 50 % / 100 % minions AD, basic, next attack timer from it; cancel -> decaying flat MS), Dirty Fighting stacks (AkshanPassiveDebuff 4.5 s, 282 counts) -> 15/40/80/150 + 60 % AP and the shield (level growth 40-280 + 35 % bAD, cd 16/12/8/4); Q per pass damage, non-champions x 40-80 %, MS on champion hit; W camouflage near walls (175) / brush, 2 s after; Scoundrels (any_death hook) + revive; R bullets stored by time, fired 0.15 s apart, missing-health x up to 3, minions executed. Engine: any_death hook, far 'fixed' missile lengths -> spell range. Open: E swing, Q range growth.
+- [x] Alistar - 10-12: kits/alistar.py: P Triumph stacks (cc'd champions, nearby minion / monster deaths, champion / epic deaths x7; any_unit_death hook), roar heal 5 % self / 7 % allies + 78 0x2e / 0x2f, 3 s cd; Q hit at 0.167 s, 375, knock-up 1 s; W within 400: damage, knockback 700 over 0.5 s from the start point, stun 0.75; E charge stacks per champion tick -> empowered attack 20 + 15/level + stun 1 s ends Trample; R cleanse + 55-75 % damage reduction 7 s (engine: damage_reduction).
+- [x] Ambessa - 10-12: kits/ambessa.py: P buffered dash on move / attack orders in a lockout window (order hook, 175-350, 770-950 + MS), Medarda stacks (AmbessaPassiveAttackEmpower 430 counter, +75 range, +50 % AS, Chained1/2 attacks, bonus 5-25 + 20 % bAD, energy); Q1 cone 400 (outer 275+ full, inner half, % max HP, monsters +75 capped), hit -> Q2 slot 4 s at 0.5 s, Q2 line 650 first full others half, Q cd from Q1; W shield + smash 0.5 s x1.5 if hit; E spin + 99 % decaying slow, second spin after a buffered dash; R farthest champion in line, blink behind, suppress 0.75 then damage + stun 0.4; R passive armor pen + omnivamp. Engine: order hook (heroes.order_move / order_attack).
+- [x] Amumu - 10-12: kits/amumu.py: P curse (AmumuPDebuff 3 s) on attacks / R, W ticks refresh; +10 % pre-mitigation magic as true AmumuP (engine: game.deal curse); Q 2 charges (835 slot 0, recharge 16-12, 3 s static), damage + template stun; W toggle (AuraofDespair buff, 4 mana / tick, 5 + 0.5-1 % + 0.25 %/100 AP max HP every 0.5 s script timer, first at once); E passive flat physical reduction (<= 50 %) + cd -0.75 per basic taken (engine: incoming hook).
+- [x] Anivia - 10-12: kits/anivia.py: P Rebirth egg (fatal hook; 6 s, full HP, -40..20 resists, 240 s); Q ice chunk 1100 @ 850 pass-through damage + slow 20 % + 10 %/R rank 3 s + Iced, shatter on recast (cast_request hook) or at the end: 225, stun 1.1-1.5; W push 120 champions / 250 others (a8f98b05); E x2 vs Iced; R toggle storm (mana / s, ticks 0.5 s from the cast, grows 200->400 in 1.5 s, then x3 damage / x1.5 slow 1.5 s + Iced, leash 1000, last tick + cd on off). Engine: cast_request + fatal hooks, spells.slow renewal fix (old undo no longer removes the new slow).
+- [x] Annie - 10-12: kits/annie.py: Pyromania stacks (6b59ca00 counter via 282, 4 -> Energized b42c770c, used -> 222b5b05 type 27 1 s), stun on the energized Q / W / R cast's hits (5ea40c0f + plain stun, 1.25/1.5/1.75 by level), starts / respawns energized; Q kill refund; E shield + level MS decaying 1.5 s + reflect once per enemy (engine: reflect in game.deal); R burst 0.267 s in 250, Tibbers aura every 0.25 s in 350, attacks 30/45/60 + 10 % AP, magic pen 10/15/20 %. Note: data AnnieE MovementSpeed is per rank 15-35 %, the live wiki says 20-50 % by level - the wiki is used.
+- [x] Aphelios - 10-12: kits/aphelios.py: weapon queue (main / off / reserve), Aphelios<W>Manager / ApheliosOffHandBuff<W> buffs with Moonlight 430 counters, 78 0x2e attack + slot 0 Q on changes, attacks as 0x2e attack-spells spending 1, Q 10, empty -> queue end + 1 s assembly (ApheliosPReload) + Q 1.5 s; Phase swap 0.8 s; stat points (AD / AS / lethality ranks, ApheliosPBuff* counters; level_spell / skill_points / learnt hooks), R auto 6/11/16; weapon hit effects (Calibrum +100 range + marks, Severum heal / shield, Gravitum decaying slow, Infernum 110 % + cone splash, Crescendum chakram bonus); Q per weapon (Moonshot, Onslaught, Binding Eclipse, Duskwave, Sentry) with per-weapon level cooldowns; R Vigil with weapon riders. Open: Calibrum's 1800-range off-hand mark attack, Crescendum's return / timer.
+- [x] Ashe - 10-12: kits/ashe.py: P crits deal no more, + crit chance x attack instead, Frost slow 20-30 % 2 s (77810a0e), crit doubles decaying 1 s; Q Focus stacks (AsheQ counter, 4 s, drop 1/s), cast needs 4 (cast_request), 6 s flurries 5 (first 6, +20 %) arrows = 110-130 % AD (AsheQAttack + AsheQAttackNoOnHit), timer reset; W VolleyAttack + Frost (champions doubled); E 2 charges (835 slot 2, BaseCooldown 90-50); R flying arrow 1500 -> 2100, first champion, 400 AoE + Frost, stun 1 - 3.5 by distance (max at 1500 [a]). Engine: castRange >= 5000 Location spells are global (no walking).
+- [x] AurelionSol - 10-12: kits/aurelionsol.py: P Stardust (AurelionSolPassive 430, one per gain) scaling Q burst % HP, W range, E / R radius sqrt(275^2 + 900/pi S), E execute; Q channel (ticks 0.1 s [m], first enemy on a 140-wide 750-920 beam full, within 250 of it half [m], burst after 1 s on the same primary [m] + 2 Stardust from champions, mana per 0.25 s, ends on recast / move / attack / cast / cc / 3.25 s, cd or 1 s lockout at the end, 1215 cd 0 [m]); W flight 1500 + 7.5 S at 340 + MS (half while Q), Q free and x1.08-1.12 during it, 15 s locked at 0:00 [m: 635], takedown -90 % cd; E hole +0.5 s for 5 s, ticks every script update from +0.167, drag 150 / 300 (minions held, 61 at speed 0 [m]), centre execute, Stardust one update after the end, E cd from its end [m: 635 +5.632]; R 1.269 s stun (VacuumBlast + plain) + 5 Stardust, RManager counts 75 -> R2 (78, announcement), R2 2.011 s x1.25 knock-up + shockwave to 5000 over 3 s (champions / epics 90 %, slow 50 %, reveal). Engine: Cooldown.values over cooldownTime [m: 16 spells], manaValues[rank - 1] [m: 399 / 403 spells], cast_range + cast_cooldown kit hooks, mProjectTargetToCastRange = cast at the edge within 200 beyond. Open: the AurelionSolPassive-named extra E tick (2.4 %), Q steering by cursor.
+- [x] Aurora - 10-13: BuildingBlocks Lua 5.1 (bbengine): P Spirit Mode MS buff (aurorapspiritmode), Q Two-Way Hex marks debuff tracker + AuroraQRecast slot override + return missile ticks on hit, W Across the Veil dash + invisibility (aurorawinvis) + Spirit Mode, E The Weirding backward hop + directional magic damage + 80% decaying slow (1.0s) + Spirit Mode, R Between Worlds realm trap + 175/275/375 + 70% AP magic damage + 75% slow + AuroraRRecast slot swap.
+- [x] Azir - 10-13: BuildingBlocks Lua 5.1 (bbengine): P Disc of the Sun tower channel (azirischannelingpassive), Q Conquering Sands soldier command + 75-155 + 35% AP magic damage + 25% slow (1.0s, AzirQWrapper.lua), W Arise! Sand Soldier spawn + sound buff (AzirW.lua, azirwsandsoldier), E Shifting Sands dash + shield (azireshield) + 70-230 + 60% AP magic damage (AzirEWrapper.lua), R Emperor's Divide soldier wall + 200/400/600 + 75% AP magic damage + globalwallmarker terrain aura (AzirR.lua).
+- [x] Bard - 10-13: BuildingBlocks Lua 5.1 (bbengine): P Traveler's Call meep ammo & chimes MS buff (bardpchimepickupspeedboost), Q Cosmic Binding missile + 80-240 + 80% AP magic damage + 60% slow (1.4s) + stun (bardqshackledebuff, BardQ.lua), W Caretaker's Shrine heal + 20-30% decaying MS haste (1.5s, bardwspeedboost, BardW.lua), E Magical Journey portal door creation (bardecreatedoor, 11.0s, BardE.lua), R Tempered Fate 3400-range stasis field + 2.5s invulnerability/stun (bardrstasis, BardR.lua).
+- [x] Belveth - 10-13: BuildingBlocks Lua 5.1 (bbengine): P Death in Lavender attack speed & stacks (belvethpassive, belvethpassivestacks), Q Void Surge directional dash + 10-30 + 110% AD physical damage (BelvethQ.lua), W Above and Below knockup 0.75s + 80-320 + 100% bAD + 125% AP magic damage + 30% slow (2.0s, BelvethW.lua), E Royal Maelstrom 1.5s channel periodic slashes (every 0.16s, BelvethE.lua), R Endless Banquet void coral dash + 150/250/350 true damage explosion + True Form steroid (60s, +25 range, BelvethR.lua, belvethrinside).
+- [x] Blitzcrank - 10-13: BuildingBlocks Lua 5.1 (bbengine): P Mana Barrier shield, Q Rocket Grab 1079-range hook + 105-305 + 120% AP magic damage + 0.65s pull/stun (RocketGrab.lua, rocketgrab2), W Overdrive 5.0s 70-90% decaying MS haste + 30-50% AS (Overdrive.lua), E Power Fist empowered attack + 200% AD damage + 1.0s knockup (PowerFist.lua, powerfistslow), R Static Field active explosion + 275/400/525 + 100% AP magic damage + 0.75s silence + passive lightning ticks (StaticField.lua).
+- [x] Brand - 10-13: BuildingBlocks Lua 5.1 (bbengine): P Blaze dot stacks & detonation (brandablaze.lua, 4.0s), Q Sear missile + 70-190 + 65% AP magic damage + 1.75s stun on ablaze (BrandQ.lua), W Pillar of Flame 250-radius eruption + 75-255 + 70% AP magic damage (BrandW.lua), E Conflagration targeted blast + 55-155 + 60% AP magic damage (BrandE.lua), R Pyroclasm bouncing fireball + 100/175/250 + 30% AP magic damage per bounce + 45% slow (BrandR.lua).
+- [x] Braum - 10-13: BuildingBlocks Lua 5.1 (bbengine): P Concussive Blows stun stacks (braumpassive, braummark), Q Winter's Bite linear missile + 75-255 + 2.5% max HP magic damage + 70% decaying slow (2.0s, BraumQ.lua, braumqslow), W Stand Behind Me ally/self dash + bonus resistances (3.0s, BraumW.lua, braumwdash, braumwpassivestatsdoubler), E Unbreakable projectile intercepting shield + 10% MS (3.0-4.0s, BraumE.lua, braumeshieldbuff, braumemsboost), R Glacial Fissure fissure slam + 150/250/350 + 60% AP magic damage + 1.0-1.5s knockup + 40% slow (BraumRWrapper.lua, braumpulselineknockup, braumpulselineslow).
+- [ ] Briar
+- [ ] Caitlyn
+- [ ] Camille
+- [ ] Cassiopeia
+- [ ] Chogath
+- [ ] Corki
+- [ ] Darius
+- [ ] Diana
+- [ ] DrMundo
+- [ ] Draven
+- [ ] Ekko
+- [ ] Elise
+- [ ] Evelynn
+- [ ] Ezreal
+- [ ] FiddleSticks
+- [ ] Fiora
+- [ ] Fizz
+- [ ] Galio
+- [ ] Gangplank
+- [ ] Garen
+- [ ] Gnar
+- [ ] Gragas
+- [ ] Graves
+- [ ] Gwen
+- [ ] Hecarim
+- [ ] Heimerdinger
+- [ ] Hwei
+- [ ] Illaoi
+- [ ] Irelia
+- [ ] Ivern
+- [ ] Janna
+- [ ] JarvanIV
+- [ ] Jax
+- [ ] Jayce
+- [ ] Jhin
+- [ ] Jinx
+- [ ] KSante
+- [ ] Kaisa
+- [ ] Kalista
+- [ ] Karma
+- [ ] Karthus
+- [ ] Kassadin
+- [ ] Katarina
+- [ ] Kayle
+- [ ] Kayn
+- [ ] Kennen
+- [ ] Khazix
+- [ ] Kindred
+- [ ] Kled
+- [ ] KogMaw
+- [ ] Leblanc
+- [ ] LeeSin
+- [ ] Leona
+- [ ] Lillia
+- [ ] Lissandra
+- [ ] Locke
+- [ ] Lucian
+- [ ] Lulu
+- [ ] Lux
+- [ ] Malphite
+- [ ] Malzahar
+- [ ] Maokai
+- [ ] MasterYi
+- [ ] Mel
+- [ ] Milio
+- [ ] MissFortune
+- [ ] MonkeyKing
+- [ ] Mordekaiser
+- [ ] Morgana
+- [ ] Naafiri
+- [ ] Nami
+- [ ] Nasus
+- [ ] Nautilus
+- [ ] Neeko
+- [ ] Nidalee
+- [ ] Nilah
+- [ ] Nocturne
+- [ ] Nunu
+- [ ] Olaf
+- [ ] Orianna
+- [ ] Ornn
+- [ ] Pantheon
+- [ ] Poppy
+- [ ] Pyke
+- [ ] Qiyana
+- [ ] Quinn
+- [ ] Rakan
+- [ ] Rammus
+- [ ] RekSai
+- [ ] Rell
+- [ ] Renata
+- [ ] Renekton
+- [ ] Rengar
+- [ ] Riven
+- [ ] Rumble
+- [ ] Ryze
+- [ ] Samira
+- [ ] Sejuani
+- [ ] Senna
+- [ ] Seraphine
+- [ ] Sett
+- [ ] Shaco
+- [ ] Shen
+- [ ] Shyvana
+- [ ] Singed
+- [ ] Sion
+- [ ] Sivir
+- [ ] Skarner
+- [ ] Smolder
+- [ ] Sona
+- [ ] Soraka
+- [ ] Swain
+- [ ] Sylas
+- [ ] Syndra
+- [ ] TahmKench
+- [ ] Taliyah
+- [ ] Talon
+- [ ] Taric
+- [ ] Teemo
+- [ ] Thresh
+- [ ] Tristana
+- [ ] Trundle
+- [ ] Tryndamere
+- [ ] TwistedFate
+- [ ] Twitch
+- [ ] Udyr
+- [ ] Urgot
+- [ ] Varus
+- [ ] Vayne
+- [ ] Veigar
+- [ ] Velkoz
+- [ ] Vex
+- [ ] Vi
+- [ ] Viego
+- [ ] Viktor
+- [ ] Vladimir
+- [ ] Volibear
+- [ ] Warwick
+- [ ] Xayah
+- [ ] Xerath
+- [ ] XinZhao
+- [ ] Yasuo
+- [ ] Yone
+- [ ] Yorick
+- [ ] Yunara
+- [ ] Yuumi
+- [ ] Zaahen
+- [ ] Zac
+- [ ] Zed
+- [ ] Zeri
+- [ ] Ziggs
+- [ ] Zilean
+- [ ] Zoe
+- [ ] Zyra
+
+## Partial kits from the golden test (10-13 night, not the full wiki pass - each still to be done in its turn)
+- Aatrox: 904 animation overrides on every script update by state; 33f40d0a and AatroxInCombat buffs (renewals.py renews).
+- Graves: 998 attack speed cap per update + attack + cast; 3 x 280 at the attack start; at the shot 78 0x38 recoil, 635
+  slot 0x51 reload, 1088 GravesReloadUpper, 3 spread shells (78 0x36 + 938 + 743).
+- Jhin, Zeri: 998 per update (Jhin: his attack speed; Zeri: 1.5, 1.6875 in R).
+- Naafiri: 90 {0x3f, packmates alive} per update.
+- Nocturne: Duskbringer trail buff 2579080d from 0.27 s after Q for 5.5 s.
+- Swain: 835 slot 0x3f soul fragments (+15 per E2 pull, climbing one a frame).
+- Syndra: 835 slot 3 = 3 + spheres per update from R learnt (0 while R is on cooldown).
+- Viego: Q passive on-hit % current health (2-6 %, min 10-30, max 80 vs monsters).

@@ -1,0 +1,38 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 000002074BC835C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "JarvanIV_DragonStrike.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; 1
+	8	[-]	SETGLOBAL	0 -5	; SpellToggleSlot
+	9	[-]	NEWTABLE 	0 1 0
+	10	[-]	LOADK    	1 -8	; "LubuJarvanIV"
+	11	[-]	SETLIST  	0 1 1	; 1
+	12	[-]	SETGLOBAL	0 -7	; SpellFXOverrideSkins
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -8	; "LubuJarvanIV"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -9	; SpellVOOverrideSkins
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -10	; IsDamagingSpell
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -11	; TriggersSpellCasts
+	21	[-]	RETURN   	0 1
+constants (11) for 000002074BC835C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"JarvanIV_DragonStrike.dds"
+	5	"SpellToggleSlot"
+	6	1
+	7	"SpellFXOverrideSkins"
+	8	"LubuJarvanIV"
+	9	"SpellVOOverrideSkins"
+	10	"IsDamagingSpell"
+	11	"TriggersSpellCasts"
+locals (0) for 000002074BC835C0:
+upvalues (0) for 000002074BC835C0:

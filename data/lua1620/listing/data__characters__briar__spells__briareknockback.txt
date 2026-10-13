@@ -1,0 +1,35 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 000001B9945F35D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Briar/HUD/Icons2D/BriarE.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "BriarEKnockback"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -9	; "YoneSkin02"
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	15	[-]	NEWTABLE 	0 1 0
+	16	[-]	LOADK    	1 -9	; "YoneSkin02"
+	17	[-]	SETLIST  	0 1 1	; 1
+	18	[-]	SETGLOBAL	0 -10	; SpellVOOverrideSkins
+	19	[-]	RETURN   	0 1
+constants (10) for 000001B9945F35D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Briar/HUD/Icons2D/BriarE.dds"
+	6	"BuffName"
+	7	"BriarEKnockback"
+	8	"SpellFXOverrideSkins"
+	9	"YoneSkin02"
+	10	"SpellVOOverrideSkins"
+locals (0) for 000001B9945F35D0:
+upvalues (0) for 000001B9945F35D0:

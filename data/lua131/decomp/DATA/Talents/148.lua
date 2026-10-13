@@ -1,0 +1,21 @@
+local L0_1, L1_1, L2_1, L3_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBSetVarInTable
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.DestVar = "StifleDurationBonus"
+L2_1.DestVarTable = "AvatarVars"
+L2_1.SrcValue = 0.5
+L1_1.Params = L2_1
+L2_1 = {}
+L3_1 = BBSetVarInTable
+L2_1.Function = L3_1
+L3_1 = {}
+L3_1.DestVar = "StifleCooldownBonus"
+L3_1.DestVarTable = "AvatarVars"
+L3_1.SrcValue = 10
+L2_1.Params = L3_1
+L0_1[1] = L1_1
+L0_1[2] = L2_1
+SetVarsByLevelBuildingBlocks = L0_1

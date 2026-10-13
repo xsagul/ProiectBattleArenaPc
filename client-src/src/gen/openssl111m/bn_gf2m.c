@@ -6,8 +6,13 @@
 // match: e6f500 _BN_GF2m_mod_div
 // match: e6f570 _BN_GF2m_mod_exp_arr
 // match: e6f680 _BN_GF2m_mod_inv
+// match: e6f740 _BN_GF2m_mod_inv_vartime
+// match: e6fc40 _BN_GF2m_mod_mul
 // match: e6fce0 _BN_GF2m_mod_mul_arr
+// match: e6ff20 _BN_GF2m_mod_solve_quad_arr
 // match: e70280 _BN_GF2m_mod_sqr_arr
 // match: e70480 _BN_GF2m_mod_sqrt_arr
 // match: e704f0 _BN_GF2m_poly2arr
+#define OPENSSL_FILE "crypto\\bn\\bn_gf2m.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/bn/bn_gf2m.c"

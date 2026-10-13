@@ -1,0 +1,44 @@
+
+main <?:0,0> (22 instructions, 88 bytes at 000001FB496235D0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Draven/HUD/Icons2D/Draven_Bloodrage.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "DravenFuryBuff"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "r:Draven_W_attack_buf"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -10	; "l_hand"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName
+	13	[-]	LOADK    	0 -8	; "r:Draven_W_attack_buf"
+	14	[-]	SETGLOBAL	0 -11	; AutoBuffActivateEffect2
+	15	[-]	LOADK    	0 -13	; "r_hand"
+	16	[-]	SETGLOBAL	0 -12	; AutoBuffActivateAttachBoneName2
+	17	[-]	NEWTABLE 	0 2 0
+	18	[-]	LOADK    	1 -15	; "DravenSkin03"
+	19	[-]	LOADK    	2 -16	; "DravenSkin04"
+	20	[-]	SETLIST  	0 2 1	; 1
+	21	[-]	SETGLOBAL	0 -14	; SpellFXOverrideSkins
+	22	[-]	RETURN   	0 1
+constants (16) for 000001FB496235D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Draven/HUD/Icons2D/Draven_Bloodrage.dds"
+	5	"BuffName"
+	6	"DravenFuryBuff"
+	7	"AutoBuffActivateEffect"
+	8	"r:Draven_W_attack_buf"
+	9	"AutoBuffActivateAttachBoneName"
+	10	"l_hand"
+	11	"AutoBuffActivateEffect2"
+	12	"AutoBuffActivateAttachBoneName2"
+	13	"r_hand"
+	14	"SpellFXOverrideSkins"
+	15	"DravenSkin03"
+	16	"DravenSkin04"
+locals (0) for 000001FB496235D0:
+upvalues (0) for 000001FB496235D0:

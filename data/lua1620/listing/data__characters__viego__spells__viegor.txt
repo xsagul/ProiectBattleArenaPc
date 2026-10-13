@@ -1,0 +1,69 @@
+
+main <?:0,0> (38 instructions, 152 bytes at 000001287A8735C0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 25 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Viego/HUD/Icons2D/Viego_R.RuinedKing.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "ViegoR"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; 3
+	12	[-]	SETGLOBAL	0 -8	; SpellToggleSlot
+	13	[-]	LOADK    	0 -11	; "game_floatingtext_Slowed"
+	14	[-]	SETGLOBAL	0 -10	; PopupMessage1
+	15	[-]	LOADK    	0 -9	; 3
+	16	[-]	SETGLOBAL	0 -12	; OnPreDamagePriority
+	17	[-]	NEWTABLE 	0 1 0
+	18	[-]	LOADK    	1 -14	; "FioraSkin04"
+	19	[-]	SETLIST  	0 1 1	; 1
+	20	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	21	[-]	LOADBOOL 	0 0 0
+	22	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	23	[-]	NEWTABLE 	0 0 6
+	24	[-]	NEWTABLE 	1 5 0
+	25	[-]	LOADK    	2 -18	; 4
+	26	[-]	LOADK    	3 -18	; 4
+	27	[-]	LOADK    	4 -18	; 4
+	28	[-]	LOADK    	5 -18	; 4
+	29	[-]	LOADK    	6 -18	; 4
+	30	[-]	SETLIST  	1 5 1	; 1
+	31	[-]	SETTABLE 	0 -17 1	; "MaximumHits" -
+	32	[-]	SETTABLE 	0 -19 -20	; "CanHitCaster" 0
+	33	[-]	SETTABLE 	0 -21 -20	; "CanHitSameTarget" 0
+	34	[-]	SETTABLE 	0 -22 -20	; "CanHitSameTargetConsecutively" 0
+	35	[-]	SETTABLE 	0 -23 -24	; "CanHitEnemies" 1
+	36	[-]	SETTABLE 	0 -25 -20	; "CanHitFriends" 0
+	37	[-]	SETGLOBAL	0 -16	; ChainMissileParameters
+	38	[-]	RETURN   	0 1
+constants (25) for 000001287A8735C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Viego/HUD/Icons2D/Viego_R.RuinedKing.dds"
+	6	"BuffName"
+	7	"ViegoR"
+	8	"SpellToggleSlot"
+	9	3
+	10	"PopupMessage1"
+	11	"game_floatingtext_Slowed"
+	12	"OnPreDamagePriority"
+	13	"SpellFXOverrideSkins"
+	14	"FioraSkin04"
+	15	"IsDamagingSpell"
+	16	"ChainMissileParameters"
+	17	"MaximumHits"
+	18	4
+	19	"CanHitCaster"
+	20	0
+	21	"CanHitSameTarget"
+	22	"CanHitSameTargetConsecutively"
+	23	"CanHitEnemies"
+	24	1
+	25	"CanHitFriends"
+locals (0) for 000001287A8735C0:
+upvalues (0) for 000001287A8735C0:

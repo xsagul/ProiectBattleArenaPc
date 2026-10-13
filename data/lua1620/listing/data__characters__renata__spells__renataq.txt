@@ -1,0 +1,33 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 0000020D220335C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "RenataQ"
+	8	[-]	SETGLOBAL	0 -4	; BuffName
+	9	[-]	LOADK    	0 -7	; "game_floatingtext_Snared"
+	10	[-]	SETGLOBAL	0 -6	; PopupMessage1
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -9	; ""
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -10	; IsDamagingSpell
+	17	[-]	RETURN   	0 1
+constants (10) for 0000020D220335C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffName"
+	5	"RenataQ"
+	6	"PopupMessage1"
+	7	"game_floatingtext_Snared"
+	8	"SpellFXOverrideSkins"
+	9	""
+	10	"IsDamagingSpell"
+locals (0) for 0000020D220335C0:
+upvalues (0) for 0000020D220335C0:

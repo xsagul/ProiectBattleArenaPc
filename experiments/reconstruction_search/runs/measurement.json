@@ -1,0 +1,102 @@
+{
+  "cases": {
+    "owned-first": {
+      "case_id": "owned-string-control",
+      "rva": "0x9b78e0",
+      "origin": "claimed",
+      "role": "training-control",
+      "learning_use": "training",
+      "semantic_seed": "Algorithm, three-word layout, and ABI supplied from prior analysis; register solution withheld from seed.",
+      "exact": true,
+      "trials": 2,
+      "compilations": 2,
+      "best_quality": 1.0,
+      "production_unchanged": true,
+      "bindings_unchanged": true,
+      "published": false
+    },
+    "probability-first": {
+      "case_id": "uncovered-probability-array",
+      "rva": "0xa64c90",
+      "origin": "uncovered",
+      "role": "layout-discovery",
+      "learning_use": "training",
+      "semantic_seed": "Pointed object layout and ownership hypothesis supplied by metadata analysis; array extent is searched.",
+      "exact": true,
+      "trials": 3,
+      "compilations": 3,
+      "best_quality": 1.0,
+      "production_unchanged": true,
+      "bindings_unchanged": true,
+      "published": false
+    },
+    "clock-holdout": {
+      "case_id": "worker_clock_now",
+      "rva": "0xa2c930",
+      "origin": "uncovered",
+      "role": "holdout",
+      "learning_use": "evaluation_only",
+      "semantic_seed": "provided",
+      "exact": false,
+      "trials": 5,
+      "compilations": 5,
+      "best_quality": 0.8260869565217391,
+      "production_unchanged": true,
+      "bindings_unchanged": true,
+      "published": false
+    },
+    "owned-replay": {
+      "case_id": "owned-string-control",
+      "rva": "0x9b78e0",
+      "origin": "claimed",
+      "role": "training-control",
+      "learning_use": "training",
+      "semantic_seed": "Algorithm, three-word layout, and ABI supplied from prior analysis; register solution withheld from seed.",
+      "exact": true,
+      "trials": 2,
+      "compilations": 0,
+      "best_quality": 1.0,
+      "production_unchanged": true,
+      "bindings_unchanged": true,
+      "published": false
+    },
+    "probability-replay": {
+      "case_id": "uncovered-probability-array",
+      "rva": "0xa64c90",
+      "origin": "uncovered",
+      "role": "layout-discovery",
+      "learning_use": "training",
+      "semantic_seed": "Pointed object layout and ownership hypothesis supplied by metadata analysis; array extent is searched.",
+      "exact": true,
+      "trials": 2,
+      "compilations": 0,
+      "best_quality": 1.0,
+      "production_unchanged": true,
+      "bindings_unchanged": true,
+      "published": false
+    },
+    "clock-replay": {
+      "case_id": "worker_clock_now",
+      "rva": "0xa2c930",
+      "origin": "uncovered",
+      "role": "holdout",
+      "learning_use": "evaluation_only",
+      "semantic_seed": "provided",
+      "exact": false,
+      "trials": 5,
+      "compilations": 0,
+      "best_quality": 0.8260869565217391,
+      "production_unchanged": true,
+      "bindings_unchanged": true,
+      "published": false
+    }
+  },
+  "isolation": {
+    "full_audits_identical": true,
+    "inputs_changed": [],
+    "source_set_unchanged": true,
+    "fingerprints": 3986,
+    "score": 21105,
+    "misses": 536
+  }
+}

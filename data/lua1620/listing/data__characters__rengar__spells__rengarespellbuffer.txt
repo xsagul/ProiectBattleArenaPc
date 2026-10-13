@@ -1,0 +1,45 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 000002577D2E35F0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	NEWTABLE 	0 5 0
+	10	[-]	LOADK    	1 -6	; 12
+	11	[-]	LOADK    	2 -7	; 11
+	12	[-]	LOADK    	3 -8	; 10
+	13	[-]	LOADK    	4 -9	; 9
+	14	[-]	LOADK    	5 -10	; 8
+	15	[-]	SETLIST  	0 5 1	; 1
+	16	[-]	SETGLOBAL	0 -5	; AutoCooldownByLevel
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -11	; IsDeathRecapSource
+	19	[-]	NEWTABLE 	0 1 0
+	20	[-]	LOADK    	1 -13	; "HunterRengar"
+	21	[-]	SETLIST  	0 1 1	; 1
+	22	[-]	SETGLOBAL	0 -12	; SpellFXOverrideSkins
+	23	[-]	LOADBOOL 	0 1 0
+	24	[-]	SETGLOBAL	0 -14	; IsDamagingSpell
+	25	[-]	RETURN   	0 1
+constants (14) for 000002577D2E35F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"AutoCooldownByLevel"
+	6	12
+	7	11
+	8	10
+	9	9
+	10	8
+	11	"IsDeathRecapSource"
+	12	"SpellFXOverrideSkins"
+	13	"HunterRengar"
+	14	"IsDamagingSpell"
+locals (0) for 000002577D2E35F0:
+upvalues (0) for 000002577D2E35F0:

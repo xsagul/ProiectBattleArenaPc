@@ -1,0 +1,46 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 000002B69C7035F0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "BUFFBONE_CSTM_WEAPONA"
+	8	[-]	SETGLOBAL	0 -4	; AutoBuffActivateAttachBoneName
+	9	[-]	NEWTABLE 	0 5 0
+	10	[-]	LOADK    	1 -7	; 20
+	11	[-]	LOADK    	2 -8	; 16
+	12	[-]	LOADK    	3 -9	; 12
+	13	[-]	LOADK    	4 -10	; 8
+	14	[-]	LOADK    	5 -11	; 4
+	15	[-]	SETLIST  	0 5 1	; 1
+	16	[-]	SETGLOBAL	0 -6	; AutoCooldownByLevel
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -12	; PersistsThroughDeath
+	19	[-]	NEWTABLE 	0 1 0
+	20	[-]	LOADK    	1 -14	; "GravesSkin05"
+	21	[-]	SETLIST  	0 1 1	; 1
+	22	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	23	[-]	LOADBOOL 	0 1 0
+	24	[-]	SETGLOBAL	0 -15	; TriggersSpellCasts
+	25	[-]	RETURN   	0 1
+constants (15) for 000002B69C7035F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"AutoBuffActivateAttachBoneName"
+	5	"BUFFBONE_CSTM_WEAPONA"
+	6	"AutoCooldownByLevel"
+	7	20
+	8	16
+	9	12
+	10	8
+	11	4
+	12	"PersistsThroughDeath"
+	13	"SpellFXOverrideSkins"
+	14	"GravesSkin05"
+	15	"TriggersSpellCasts"
+locals (0) for 000002B69C7035F0:
+upvalues (0) for 000002B69C7035F0:

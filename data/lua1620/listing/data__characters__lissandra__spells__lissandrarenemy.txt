@@ -1,0 +1,43 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 00000210E08735F0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Lissandra/HUD/Icons2D/Lissandra_R.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "LissandraR"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "C_BUFFBONE_GLB_HEAD_LOC"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateAttachBoneName
+	11	[-]	LOADK    	0 -10	; 1
+	12	[-]	SETGLOBAL	0 -9	; SpellDamageRatio
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -12	; "ZombieBrand"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -11	; SpellFXOverrideSkins
+	17	[-]	NEWTABLE 	0 1 0
+	18	[-]	LOADK    	1 -12	; "ZombieBrand"
+	19	[-]	SETLIST  	0 1 1	; 1
+	20	[-]	SETGLOBAL	0 -13	; SpellVOOverrideSkins
+	21	[-]	LOADBOOL 	0 1 0
+	22	[-]	SETGLOBAL	0 -14	; IsDamagingSpell
+	23	[-]	RETURN   	0 1
+constants (14) for 00000210E08735F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Lissandra/HUD/Icons2D/Lissandra_R.dds"
+	5	"BuffName"
+	6	"LissandraR"
+	7	"AutoBuffActivateAttachBoneName"
+	8	"C_BUFFBONE_GLB_HEAD_LOC"
+	9	"SpellDamageRatio"
+	10	1
+	11	"SpellFXOverrideSkins"
+	12	"ZombieBrand"
+	13	"SpellVOOverrideSkins"
+	14	"IsDamagingSpell"
+locals (0) for 00000210E08735F0:
+upvalues (0) for 00000210E08735F0:

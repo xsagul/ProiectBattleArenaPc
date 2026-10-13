@@ -1,0 +1,27 @@
+local L0_1, L1_1, L2_1, L3_1, L4_1
+L0_1 = "Bowmaster_IceArrow.dds"
+BuffTextureName = L0_1
+L0_1 = "UrAniumRoundsHit"
+BuffName = L0_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBIncStat
+L1_1.Function = L2_1
+L2_1 = {}
+L3_1 = IncFlatSpellBlockMod
+L2_1.Stat = L3_1
+L2_1.TargetVar = "Owner"
+L2_1.Delta = -1
+L1_1.Params = L2_1
+L2_1 = {}
+L3_1 = BBIncStat
+L2_1.Function = L3_1
+L3_1 = {}
+L4_1 = IncFlatArmorMod
+L3_1.Stat = L4_1
+L3_1.TargetVar = "Owner"
+L3_1.Delta = -1
+L2_1.Params = L3_1
+L0_1[1] = L1_1
+L0_1[2] = L2_1
+BuffOnUpdateStatsBuildingBlocks = L0_1

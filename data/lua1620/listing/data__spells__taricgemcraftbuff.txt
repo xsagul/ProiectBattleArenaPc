@@ -1,0 +1,51 @@
+
+main <?:0,0> (27 instructions, 108 bytes at 000001CBA03A3530)
+0+ params, 2 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "GemKnight_Gemcraft.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "TaricGemcraftBuff"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "DATA/Particles/BlueHands_buf.troy"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect
+	15	[-]	LOADK    	0 -12	; "L_Buffbone_Glb_Hand_Loc"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateAttachBoneName
+	17	[-]	LOADK    	0 -10	; "DATA/Particles/BlueHands_buf.troy"
+	18	[-]	SETGLOBAL	0 -13	; AutoBuffActivateEffect2
+	19	[-]	LOADK    	0 -15	; "R_Buffbone_Glb_Hand_Loc"
+	20	[-]	SETGLOBAL	0 -14	; AutoBuffActivateAttachBoneName2
+	21	[-]	NEWTABLE 	0 1 0
+	22	[-]	LOADK    	1 -17	; ""
+	23	[-]	SETLIST  	0 1 1	; 1
+	24	[-]	SETGLOBAL	0 -16	; SpellFXOverrideSkins
+	25	[-]	LOADBOOL 	0 1 0
+	26	[-]	SETGLOBAL	0 -18	; IsDamagingSpell
+	27	[-]	RETURN   	0 1
+constants (18) for 000001CBA03A3530:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"GemKnight_Gemcraft.dds"
+	7	"BuffName"
+	8	"TaricGemcraftBuff"
+	9	"AutoBuffActivateEffect"
+	10	"DATA/Particles/BlueHands_buf.troy"
+	11	"AutoBuffActivateAttachBoneName"
+	12	"L_Buffbone_Glb_Hand_Loc"
+	13	"AutoBuffActivateEffect2"
+	14	"AutoBuffActivateAttachBoneName2"
+	15	"R_Buffbone_Glb_Hand_Loc"
+	16	"SpellFXOverrideSkins"
+	17	""
+	18	"IsDamagingSpell"
+locals (0) for 000001CBA03A3530:
+upvalues (0) for 000001CBA03A3530:

@@ -1,0 +1,2 @@
+import json
+p='tools/ui_ref_layouts.json';d=json.load(open(p));d.append(dict(name='RadialMenuButtonDefinitionBase',parent=None,size=24,destruct_rva='0x5b7660',members=[dict(name='DefaultIcon',owner_class='RadialMenuButtonDefinitionBase',reflected=True,offset='0x0',type='UiHashLink',size=24,reference_offset='0xc')],unresolved_tail_offset='0x18',unresolved_tail_size=0));json.dump(sorted(d,key=lambda v:v['name']),open(p,'w'),indent=2)

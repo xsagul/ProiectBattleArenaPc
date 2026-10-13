@@ -1,0 +1,44 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 0000019BB6AF35C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "Summoner_revive.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "SummonerReviveSpeedBoost"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "doesnotexist.troy"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect
+	15	[-]	LOADK    	0 -10	; "doesnotexist.troy"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateEffect2
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -12	; PersistsThroughDeath
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -13	; IsDamagingSpell
+	21	[-]	GETGLOBAL	0 -15	; EFFCREATE_UPDATE_ORIENTATION
+	22	[-]	SETGLOBAL	0 -14	; AutoBuffActivateEffectFlags
+	23	[-]	RETURN   	0 1
+constants (15) for 0000019BB6AF35C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"Summoner_revive.dds"
+	7	"BuffName"
+	8	"SummonerReviveSpeedBoost"
+	9	"AutoBuffActivateEffect"
+	10	"doesnotexist.troy"
+	11	"AutoBuffActivateEffect2"
+	12	"PersistsThroughDeath"
+	13	"IsDamagingSpell"
+	14	"AutoBuffActivateEffectFlags"
+	15	"EFFCREATE_UPDATE_ORIENTATION"
+locals (0) for 0000019BB6AF35C0:
+upvalues (0) for 0000019BB6AF35C0:

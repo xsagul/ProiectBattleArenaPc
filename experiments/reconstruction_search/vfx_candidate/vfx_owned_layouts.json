@@ -1,0 +1,628 @@
+{
+  "schema": 1,
+  "flags": [
+    "-O2",
+    "-std:c++17"
+  ],
+  "classes": [
+    {
+      "name": "VfxProbabilityTableData",
+      "description": 57785856,
+      "size": 32,
+      "align": 4,
+      "members": [
+        {
+          "offset": 0,
+          "name": "keyTimes",
+          "hash": 1086542298,
+          "serialized_type": "BinList<float>",
+          "wrapper": 1216336,
+          "wrapper_body": "push esi\npush 0xc\nmov esi, ecx\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0x128f74\nmov byte ptr [eax + 4], 0xa\nmov dword ptr [eax + 8], 4\nmov dword ptr [eax], 0x1538a74\njmp 0x128f76\nxor eax, eax\npush dword ptr [esp + 0x10]\nmov ecx, esi\npush 0x1532fb2\npush 0\npush eax\npush 0\npush 0\npush 0x80\npush dword ptr [esp + 0x28]\npush dword ptr [esp + 0x28]\ncall 0x9bd410\npop esi\nret 0xc",
+          "member_wrapper": null,
+          "container_descriptor": {
+            "code": 128,
+            "of": null,
+            "slot": 5,
+            "size": 12,
+            "stores": {
+              "4": [
+                1,
+                10
+              ],
+              "8": [
+                4,
+                4
+              ]
+            },
+            "vtable": 22252148
+          },
+          "last": 0
+        },
+        {
+          "offset": 12,
+          "name": "keyValues",
+          "hash": 3830150018,
+          "serialized_type": "BinList<float>",
+          "wrapper": 1216336,
+          "wrapper_body": "push esi\npush 0xc\nmov esi, ecx\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0x128f74\nmov byte ptr [eax + 4], 0xa\nmov dword ptr [eax + 8], 4\nmov dword ptr [eax], 0x1538a74\njmp 0x128f76\nxor eax, eax\npush dword ptr [esp + 0x10]\nmov ecx, esi\npush 0x1532fb2\npush 0\npush eax\npush 0\npush 0\npush 0x80\npush dword ptr [esp + 0x28]\npush dword ptr [esp + 0x28]\ncall 0x9bd410\npop esi\nret 0xc",
+          "member_wrapper": null,
+          "container_descriptor": {
+            "code": 128,
+            "of": null,
+            "slot": 5,
+            "size": 12,
+            "stores": {
+              "4": [
+                1,
+                10
+              ],
+              "8": [
+                4,
+                4
+              ]
+            },
+            "vtable": 22252148
+          },
+          "last": 0
+        },
+        {
+          "offset": 24,
+          "name": "singleValue",
+          "hash": 2905890262,
+          "serialized_type": "float",
+          "wrapper": 992896,
+          "wrapper_body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xa\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+          "member_wrapper": [
+            10,
+            0
+          ],
+          "container_descriptor": null,
+          "last": 0
+        }
+      ],
+      "callbacks": {
+        "destroy": 10846528,
+        "destruct": 10846592
+      },
+      "callback_bodies": {
+        "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0xa58175\ncmp dword ptr [esi + 0x14], 0\njl 0xa5815a\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 8], 0\njl 0xa5816a\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0x20\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+        "destruct": "push esi\nmov esi, dword ptr [esp + 8]\ncmp dword ptr [esi + 0x14], 0\njl 0xa58196\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 8], 0\njl 0xa581a6\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npop esi\nret"
+      },
+      "creation_evidence": {
+        "create": {
+          "rva": 10845456,
+          "body": "push 0x20\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xa57d55\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nmov dword ptr [eax + 0xc], 0\nmov dword ptr [eax + 0x10], 0\nmov dword ptr [eax + 0x14], 0\nmov dword ptr [eax + 0x18], 0x3f800000\nmov word ptr [eax + 0x1c], 1\nret\nxor eax, eax\nret"
+        },
+        "construct": {
+          "rva": 10849008,
+          "body": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nmov dword ptr [eax + 0xc], 0\nmov dword ptr [eax + 0x10], 0\nmov dword ptr [eax + 0x14], 0\nmov dword ptr [eax + 0x18], 0x3f800000\nmov word ptr [eax + 0x1c], 1\nret"
+        }
+      },
+      "native_helpers": [
+        {
+          "rva": 10898576,
+          "body": "push ebx\npush esi\npush edi\nmov edi, 3\nlea ebx, [ecx + 0xc]\nnop dword ptr [eax + eax]\nmov esi, dword ptr [ebx - 4]\nlea ebx, [ebx - 4]\ndec edi\ntest esi, esi\nje 0xa64cd7\ncmp dword ptr [esi + 0x14], 0\njl 0xa64cbc\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 8], 0\njl 0xa64ccc\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0x20\npush esi\ncall 0x9bb940\nadd esp, 8\ntest edi, edi\njne 0xa64ca0\npop edi\npop esi\npop ebx\nret"
+        },
+        {
+          "rva": 10898176,
+          "body": "push edi\nmov edi, dword ptr [ecx]\ntest edi, edi\nje 0xa64b5a\npush esi\nmov esi, dword ptr [edi + 0x10]\ntest esi, esi\nje 0xa64b4e\npush dword ptr [esi + 0x3c]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x20], 0\njl 0xa64b2b\npush dword ptr [esi + 0x18]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x14], 0\njl 0xa64b3c\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\nmov ecx, esi\ncall 0xa64c90\npush 0x40\npush esi\ncall 0x9bb940\nadd esp, 8\npush 0x14\npush edi\ncall 0x9bb940\nadd esp, 8\npop esi\npop edi\nret"
+        }
+      ],
+      "embedded_dependencies": [],
+      "fields": [
+        "    ReflectedBuffer<float> keyTimes; // +0x0",
+        "    ReflectedBuffer<float> keyValues; // +0xc",
+        "    float singleValue = 1.0f; // +0x18",
+        "    u16 unknown1c = 1;",
+        "    u8 unknown1e[2];"
+      ]
+    },
+    {
+      "name": "VfxAnimatedVector3fVariableData",
+      "description": 57789288,
+      "size": 64,
+      "align": 4,
+      "members": [
+        {
+          "offset": 0,
+          "name": "probabilityTables",
+          "hash": 2802337561,
+          "serialized_type": "BinList<MetaPointer<VfxProbabilityTableData>>",
+          "wrapper": 10855024,
+          "wrapper_body": "push esi\npush 0xc\nmov esi, ecx\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xa5a294\nmov byte ptr [eax + 4], 0x82\nmov dword ptr [eax + 8], 4\nmov dword ptr [eax], 0x1b4f1e0\njmp 0xa5a296\nxor eax, eax\npush dword ptr [esp + 0x10]\nmov ecx, esi\npush 0x1532fb2\npush 0\npush eax\npush 0x371be00\npush 0\npush 0x80\npush dword ptr [esp + 0x28]\npush dword ptr [esp + 0x28]\ncall 0x9bd410\npop esi\nret 0xc",
+          "member_wrapper": null,
+          "container_descriptor": {
+            "code": 128,
+            "of": [
+              "imm",
+              57785856
+            ],
+            "slot": 5,
+            "size": 12,
+            "stores": {
+              "4": [
+                1,
+                130
+              ],
+              "8": [
+                4,
+                4
+              ]
+            },
+            "vtable": 28635616
+          },
+          "last": 0
+        },
+        {
+          "offset": 12,
+          "name": "times",
+          "hash": 1567157941,
+          "serialized_type": "BinList<float>",
+          "wrapper": 1216336,
+          "wrapper_body": "push esi\npush 0xc\nmov esi, ecx\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0x128f74\nmov byte ptr [eax + 4], 0xa\nmov dword ptr [eax + 8], 4\nmov dword ptr [eax], 0x1538a74\njmp 0x128f76\nxor eax, eax\npush dword ptr [esp + 0x10]\nmov ecx, esi\npush 0x1532fb2\npush 0\npush eax\npush 0\npush 0\npush 0x80\npush dword ptr [esp + 0x28]\npush dword ptr [esp + 0x28]\ncall 0x9bd410\npop esi\nret 0xc",
+          "member_wrapper": null,
+          "container_descriptor": {
+            "code": 128,
+            "of": null,
+            "slot": 5,
+            "size": 12,
+            "stores": {
+              "4": [
+                1,
+                10
+              ],
+              "8": [
+                4,
+                4
+              ]
+            },
+            "vtable": 22252148
+          },
+          "last": 0
+        },
+        {
+          "offset": 24,
+          "name": "values",
+          "hash": 877087803,
+          "serialized_type": "BinList<Vector3>",
+          "wrapper": 10852640,
+          "wrapper_body": "push esi\npush 0xc\nmov esi, ecx\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xa59944\nmov byte ptr [eax + 4], 0xc\nmov dword ptr [eax + 8], 0xc\nmov dword ptr [eax], 0x1b4f1b8\njmp 0xa59946\nxor eax, eax\npush dword ptr [esp + 0x10]\nmov ecx, esi\npush 0x1532fb2\npush 0\npush eax\npush 0\npush 0\npush 0x80\npush dword ptr [esp + 0x28]\npush dword ptr [esp + 0x28]\ncall 0x9bd410\npop esi\nret 0xc",
+          "member_wrapper": null,
+          "container_descriptor": {
+            "code": 128,
+            "of": null,
+            "slot": 5,
+            "size": 12,
+            "stores": {
+              "4": [
+                1,
+                12
+              ],
+              "8": [
+                4,
+                12
+              ]
+            },
+            "vtable": 28635576
+          },
+          "last": 0
+        }
+      ],
+      "callbacks": {
+        "destroy": 10847728,
+        "destruct": 10847808
+      },
+      "callback_bodies": {
+        "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0xa58638\npush dword ptr [esi + 0x3c]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x20], 0\njl 0xa58615\npush dword ptr [esi + 0x18]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x14], 0\njl 0xa58626\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\nmov ecx, esi\ncall 0xa64c90\npush 0x40\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+        "destruct": "push esi\nmov esi, dword ptr [esp + 8]\npush dword ptr [esi + 0x3c]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x20], 0\njl 0xa58661\npush dword ptr [esi + 0x18]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x14], 0\njl 0xa58672\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\nmov ecx, esi\npop esi\njmp 0xa64c90"
+      },
+      "creation_evidence": {
+        "create": {
+          "rva": 10851136,
+          "body": "xor ecx, ecx\njmp 0xa681b0"
+        },
+        "construct": {
+          "rva": 10851440,
+          "body": "mov eax, dword ptr [esp + 4]\nxorps xmm0, xmm0\nxor ecx, ecx\nmovq qword ptr [eax], xmm0\nmov dword ptr [eax + 8], 0\nmov dword ptr [eax + 0xc], 0\nmov dword ptr [eax + 0x10], 0\nmov dword ptr [eax + 0x14], 0\nmov dword ptr [eax + 0x18], 0\nmov dword ptr [eax + 0x1c], 0\nmov dword ptr [eax + 0x20], 0\nmov byte ptr [eax + 0x24], 0\nmov word ptr [eax + 0x26], cx\nmov dword ptr [eax + 0x28], ecx\nmov dword ptr [eax + 0x2c], 0xffffffff\nmov dword ptr [eax + 0x3c], ecx\nret"
+        }
+      },
+      "native_helpers": [
+        {
+          "rva": 10898576,
+          "body": "push ebx\npush esi\npush edi\nmov edi, 3\nlea ebx, [ecx + 0xc]\nnop dword ptr [eax + eax]\nmov esi, dword ptr [ebx - 4]\nlea ebx, [ebx - 4]\ndec edi\ntest esi, esi\nje 0xa64cd7\ncmp dword ptr [esi + 0x14], 0\njl 0xa64cbc\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 8], 0\njl 0xa64ccc\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0x20\npush esi\ncall 0x9bb940\nadd esp, 8\ntest edi, edi\njne 0xa64ca0\npop edi\npop esi\npop ebx\nret"
+        },
+        {
+          "rva": 10898176,
+          "body": "push edi\nmov edi, dword ptr [ecx]\ntest edi, edi\nje 0xa64b5a\npush esi\nmov esi, dword ptr [edi + 0x10]\ntest esi, esi\nje 0xa64b4e\npush dword ptr [esi + 0x3c]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x20], 0\njl 0xa64b2b\npush dword ptr [esi + 0x18]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x14], 0\njl 0xa64b3c\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\nmov ecx, esi\ncall 0xa64c90\npush 0x40\npush esi\ncall 0x9bb940\nadd esp, 8\npush 0x14\npush edi\ncall 0x9bb940\nadd esp, 8\npop esi\npop edi\nret"
+        }
+      ],
+      "embedded_dependencies": [],
+      "fields": [
+        "    VfxProbabilityOwners probabilityTables; // +0x0",
+        "    ReflectedBuffer<float> times; // +0xc",
+        "    ReflectedBuffer<Vector3> values; // +0x18",
+        "    u8 unknown24 = 0;",
+        "    u8 unknown25;",
+        "    u16 unknown26 = 0;",
+        "    u32 unknown28 = 0;",
+        "    u32 unknown2c = 0xffffffff;",
+        "    u8 unknown30[12];",
+        "    VfxRawAllocation unknown3c; // native cleanup frees this pointer"
+      ]
+    },
+    {
+      "name": "ValueVector3",
+      "description": 57785608,
+      "size": 16,
+      "align": 4,
+      "members": [
+        {
+          "offset": 0,
+          "name": "constantValue",
+          "hash": 3031705514,
+          "serialized_type": "Vector3",
+          "wrapper": 994112,
+          "wrapper_body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xc\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+          "member_wrapper": [
+            12,
+            0
+          ],
+          "container_descriptor": null,
+          "last": 0
+        },
+        {
+          "offset": 12,
+          "name": "dynamics",
+          "hash": 3154345447,
+          "serialized_type": "MetaPointer<VfxAnimatedVector3fVariableData>",
+          "wrapper": 10853872,
+          "wrapper_body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0x371cb68\npush 0\npush 0x82\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+          "member_wrapper": [
+            130,
+            57789288
+          ],
+          "container_descriptor": null,
+          "last": 0
+        }
+      ],
+      "callbacks": {
+        "destroy": 10848560,
+        "destruct": 10845376
+      },
+      "callback_bodies": {
+        "destroy": "push edi\nmov edi, dword ptr [esp + 8]\ntest edi, edi\nje 0xa5898c\npush esi\nmov esi, dword ptr [edi + 0xc]\ntest esi, esi\nje 0xa58980\npush dword ptr [esi + 0x3c]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x20], 0\njl 0xa5895d\npush dword ptr [esi + 0x18]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x14], 0\njl 0xa5896e\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\nmov ecx, esi\ncall 0xa64c90\npush 0x40\npush esi\ncall 0x9bb940\nadd esp, 8\npush 0x10\npush edi\ncall 0x9bb940\nadd esp, 8\npop esi\npop edi\nret",
+        "destruct": "mov eax, dword ptr [esp + 4]\npush esi\nmov esi, dword ptr [eax + 0xc]\ntest esi, esi\nje 0xa57d0b\npush dword ptr [esi + 0x3c]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x20], 0\njl 0xa57ce8\npush dword ptr [esi + 0x18]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x14], 0\njl 0xa57cf9\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\nmov ecx, esi\ncall 0xa64c90\npush 0x40\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret"
+      },
+      "creation_evidence": {
+        "create": {
+          "rva": 1948128,
+          "body": "push 0x10\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0x1dba0a\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nmov dword ptr [eax + 0xc], 0\nret\nxor eax, eax\nret"
+        },
+        "construct": {
+          "rva": 1948176,
+          "body": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nmov dword ptr [eax + 0xc], 0\nret\npush 0x98\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0x1dba48\nmov ecx, eax\njmp 0x1ebbb0\nxor eax, eax\nret"
+        }
+      },
+      "native_helpers": [
+        {
+          "rva": 10898576,
+          "body": "push ebx\npush esi\npush edi\nmov edi, 3\nlea ebx, [ecx + 0xc]\nnop dword ptr [eax + eax]\nmov esi, dword ptr [ebx - 4]\nlea ebx, [ebx - 4]\ndec edi\ntest esi, esi\nje 0xa64cd7\ncmp dword ptr [esi + 0x14], 0\njl 0xa64cbc\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 8], 0\njl 0xa64ccc\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0x20\npush esi\ncall 0x9bb940\nadd esp, 8\ntest edi, edi\njne 0xa64ca0\npop edi\npop esi\npop ebx\nret"
+        },
+        {
+          "rva": 10898176,
+          "body": "push edi\nmov edi, dword ptr [ecx]\ntest edi, edi\nje 0xa64b5a\npush esi\nmov esi, dword ptr [edi + 0x10]\ntest esi, esi\nje 0xa64b4e\npush dword ptr [esi + 0x3c]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x20], 0\njl 0xa64b2b\npush dword ptr [esi + 0x18]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x14], 0\njl 0xa64b3c\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\nmov ecx, esi\ncall 0xa64c90\npush 0x40\npush esi\ncall 0x9bb940\nadd esp, 8\npush 0x14\npush edi\ncall 0x9bb940\nadd esp, 8\npop esi\npop edi\nret"
+        }
+      ],
+      "embedded_dependencies": [],
+      "fields": [
+        "    Vector3 constantValue = {}; // +0x0",
+        "    VfxOwnedPointer<VfxAnimatedVector3fVariableData> dynamics; // +0xc"
+      ]
+    },
+    {
+      "name": "FlexValueVector3",
+      "description": 57789912,
+      "size": 20,
+      "align": 4,
+      "members": [
+        {
+          "offset": 0,
+          "name": "mFlexID",
+          "hash": 1186773642,
+          "serialized_type": "u32",
+          "wrapper": 992848,
+          "wrapper_body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 7\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+          "member_wrapper": [
+            7,
+            0
+          ],
+          "container_descriptor": null,
+          "last": 0
+        },
+        {
+          "offset": 4,
+          "name": "mValue",
+          "hash": 619900041,
+          "serialized_type": "MetaEmbed<ValueVector3>",
+          "wrapper": 10855584,
+          "wrapper_body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0x371bd08\npush 0\npush 0x83\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+          "member_wrapper": [
+            131,
+            57785608
+          ],
+          "container_descriptor": null,
+          "last": 0
+        }
+      ],
+      "callbacks": {
+        "destroy": 10846016,
+        "destruct": 10846112
+      },
+      "callback_bodies": {
+        "destroy": "push edi\nmov edi, dword ptr [esp + 8]\ntest edi, edi\nje 0xa57f9c\npush esi\nmov esi, dword ptr [edi + 0x10]\ntest esi, esi\nje 0xa57f90\npush dword ptr [esi + 0x3c]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x20], 0\njl 0xa57f6d\npush dword ptr [esi + 0x18]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x14], 0\njl 0xa57f7e\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\nmov ecx, esi\ncall 0xa64c90\npush 0x40\npush esi\ncall 0x9bb940\nadd esp, 8\npush 0x14\npush edi\ncall 0x9bb940\nadd esp, 8\npop esi\npop edi\nret",
+        "destruct": "mov eax, dword ptr [esp + 4]\npush esi\nmov esi, dword ptr [eax + 0x10]\ntest esi, esi\nje 0xa57feb\npush dword ptr [esi + 0x3c]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x20], 0\njl 0xa57fc8\npush dword ptr [esi + 0x18]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x14], 0\njl 0xa57fd9\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\nmov ecx, esi\ncall 0xa64c90\npush 0x40\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret"
+      },
+      "creation_evidence": {
+        "create": {
+          "rva": 10847024,
+          "body": "push 0x14\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xa58362\nmov dword ptr [eax], 0\nmovq xmm0, qword ptr [0x3715f70]\nmovq qword ptr [eax + 4], xmm0\nmov ecx, dword ptr [0x3715f78]\nmov dword ptr [eax + 0xc], ecx\nmov dword ptr [eax + 0x10], 0\nret\nxor eax, eax\nret"
+        },
+        "construct": {
+          "rva": 10847200,
+          "body": "mov ecx, dword ptr [esp + 4]\nmov dword ptr [ecx], 0\nmovq xmm0, qword ptr [0x3715f70]\nmovq qword ptr [ecx + 4], xmm0\nmov eax, dword ptr [0x3715f78]\nmov dword ptr [ecx + 0xc], eax\nmov dword ptr [ecx + 0x10], 0\nret"
+        }
+      },
+      "native_helpers": [
+        {
+          "rva": 10898576,
+          "body": "push ebx\npush esi\npush edi\nmov edi, 3\nlea ebx, [ecx + 0xc]\nnop dword ptr [eax + eax]\nmov esi, dword ptr [ebx - 4]\nlea ebx, [ebx - 4]\ndec edi\ntest esi, esi\nje 0xa64cd7\ncmp dword ptr [esi + 0x14], 0\njl 0xa64cbc\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 8], 0\njl 0xa64ccc\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0x20\npush esi\ncall 0x9bb940\nadd esp, 8\ntest edi, edi\njne 0xa64ca0\npop edi\npop esi\npop ebx\nret"
+        },
+        {
+          "rva": 10898176,
+          "body": "push edi\nmov edi, dword ptr [ecx]\ntest edi, edi\nje 0xa64b5a\npush esi\nmov esi, dword ptr [edi + 0x10]\ntest esi, esi\nje 0xa64b4e\npush dword ptr [esi + 0x3c]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x20], 0\njl 0xa64b2b\npush dword ptr [esi + 0x18]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x14], 0\njl 0xa64b3c\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\nmov ecx, esi\ncall 0xa64c90\npush 0x40\npush esi\ncall 0x9bb940\nadd esp, 8\npush 0x14\npush edi\ncall 0x9bb940\nadd esp, 8\npop esi\npop edi\nret"
+        }
+      ],
+      "embedded_dependencies": [
+        "ValueVector3"
+      ],
+      "fields": [
+        "    u32 mFlexID = 0; // +0x0",
+        "    ::ValueVector3 mValue; // +0x4"
+      ]
+    },
+    {
+      "name": "VfxFlexShapeDefinitionData",
+      "description": 57787256,
+      "size": 36,
+      "align": 4,
+      "members": [
+        {
+          "offset": 0,
+          "name": "ScaleBirthTranslationByBoundObjectSize",
+          "hash": 2250620754,
+          "serialized_type": "float",
+          "wrapper": 992896,
+          "wrapper_body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xa\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+          "member_wrapper": [
+            10,
+            0
+          ],
+          "container_descriptor": null,
+          "last": 0
+        },
+        {
+          "offset": 4,
+          "name": "scaleBirthScaleByBoundObjectSize",
+          "hash": 2500926249,
+          "serialized_type": "float",
+          "wrapper": 992896,
+          "wrapper_body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xa\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+          "member_wrapper": [
+            10,
+            0
+          ],
+          "container_descriptor": null,
+          "last": 0
+        },
+        {
+          "offset": 8,
+          "name": "scaleBirthScaleByBoundObjectHeight",
+          "hash": 3859373059,
+          "serialized_type": "float",
+          "wrapper": 992896,
+          "wrapper_body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xa\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+          "member_wrapper": [
+            10,
+            0
+          ],
+          "container_descriptor": null,
+          "last": 0
+        },
+        {
+          "offset": 12,
+          "name": "scaleBirthScaleByBoundObjectRadius",
+          "hash": 942293422,
+          "serialized_type": "float",
+          "wrapper": 992896,
+          "wrapper_body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xa\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+          "member_wrapper": [
+            10,
+            0
+          ],
+          "container_descriptor": null,
+          "last": 0
+        },
+        {
+          "offset": 16,
+          "name": "scaleEmitOffsetByBoundObjectSize",
+          "hash": 3233764894,
+          "serialized_type": "float",
+          "wrapper": 992896,
+          "wrapper_body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xa\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+          "member_wrapper": [
+            10,
+            0
+          ],
+          "container_descriptor": null,
+          "last": 0
+        },
+        {
+          "offset": 20,
+          "name": "scaleEmitOffsetByBoundObjectHeight",
+          "hash": 464554200,
+          "serialized_type": "float",
+          "wrapper": 992896,
+          "wrapper_body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xa\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+          "member_wrapper": [
+            10,
+            0
+          ],
+          "container_descriptor": null,
+          "last": 0
+        },
+        {
+          "offset": 24,
+          "name": "scaleEmitOffsetByBoundObjectRadius",
+          "hash": 2055028341,
+          "serialized_type": "float",
+          "wrapper": 992896,
+          "wrapper_body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xa\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+          "member_wrapper": [
+            10,
+            0
+          ],
+          "container_descriptor": null,
+          "last": 0
+        },
+        {
+          "offset": 28,
+          "name": "flexScaleEmitOffset",
+          "hash": 2007401040,
+          "serialized_type": "MetaPointer<FlexTypeFloat>",
+          "wrapper": 10853488,
+          "wrapper_body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0x371bd60\npush 0\npush 0x82\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+          "member_wrapper": [
+            130,
+            57785696
+          ],
+          "container_descriptor": null,
+          "last": 0
+        },
+        {
+          "offset": 32,
+          "name": "flexBirthTranslation",
+          "hash": 2397835542,
+          "serialized_type": "MetaPointer<FlexValueVector3>",
+          "wrapper": 10853632,
+          "wrapper_body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0x371cdd8\npush 0\npush 0x82\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+          "member_wrapper": [
+            130,
+            57789912
+          ],
+          "container_descriptor": null,
+          "last": 0
+        }
+      ],
+      "callbacks": {
+        "destroy": 10845808,
+        "destruct": 10845856
+      },
+      "callback_bodies": {
+        "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0xa57e96\nlea ecx, [esi + 0x20]\ncall 0xa64b00\npush 8\npush dword ptr [esi + 0x1c]\ncall 0x9bb940\npush 0x24\npush esi\ncall 0x9bb940\nadd esp, 0x10\npop esi\nret",
+        "destruct": "push esi\nmov esi, dword ptr [esp + 8]\nlea ecx, [esi + 0x20]\ncall 0xa64b00\npush 8\npush dword ptr [esi + 0x1c]\ncall 0x9bb940\nadd esp, 8\npop esi\nret"
+      },
+      "creation_evidence": {
+        "create": {
+          "rva": 2417504,
+          "body": "push 0x24\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0x24e3ad\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nmov dword ptr [eax + 0xc], 0\nmov dword ptr [eax + 0x10], 0\nmov dword ptr [eax + 0x14], 0\nmov dword ptr [eax + 0x18], 0\nmov dword ptr [eax + 0x1c], 0\nmov dword ptr [eax + 0x20], 0\nret\nxor eax, eax\nret\nmov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nmov dword ptr [eax + 0xc], 0\nmov dword ptr [eax + 0x10], 0\nmov dword ptr [eax + 0x14], 0\nmov dword ptr [eax + 0x18], 0\nmov dword ptr [eax + 0x1c], 0\nmov dword ptr [eax + 0x20], 0\nret"
+        },
+        "construct": {
+          "rva": 2417584,
+          "body": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nmov dword ptr [eax + 0xc], 0\nmov dword ptr [eax + 0x10], 0\nmov dword ptr [eax + 0x14], 0\nmov dword ptr [eax + 0x18], 0\nmov dword ptr [eax + 0x1c], 0\nmov dword ptr [eax + 0x20], 0\nret"
+        }
+      },
+      "native_helpers": [
+        {
+          "rva": 10898576,
+          "body": "push ebx\npush esi\npush edi\nmov edi, 3\nlea ebx, [ecx + 0xc]\nnop dword ptr [eax + eax]\nmov esi, dword ptr [ebx - 4]\nlea ebx, [ebx - 4]\ndec edi\ntest esi, esi\nje 0xa64cd7\ncmp dword ptr [esi + 0x14], 0\njl 0xa64cbc\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 8], 0\njl 0xa64ccc\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0x20\npush esi\ncall 0x9bb940\nadd esp, 8\ntest edi, edi\njne 0xa64ca0\npop edi\npop esi\npop ebx\nret"
+        },
+        {
+          "rva": 10898176,
+          "body": "push edi\nmov edi, dword ptr [ecx]\ntest edi, edi\nje 0xa64b5a\npush esi\nmov esi, dword ptr [edi + 0x10]\ntest esi, esi\nje 0xa64b4e\npush dword ptr [esi + 0x3c]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x20], 0\njl 0xa64b2b\npush dword ptr [esi + 0x18]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x14], 0\njl 0xa64b3c\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\nmov ecx, esi\ncall 0xa64c90\npush 0x40\npush esi\ncall 0x9bb940\nadd esp, 8\npush 0x14\npush edi\ncall 0x9bb940\nadd esp, 8\npop esi\npop edi\nret"
+        }
+      ],
+      "embedded_dependencies": [],
+      "fields": [
+        "    float ScaleBirthTranslationByBoundObjectSize = 0.0f; // +0x0",
+        "    float scaleBirthScaleByBoundObjectSize = 0.0f; // +0x4",
+        "    float scaleBirthScaleByBoundObjectHeight = 0.0f; // +0x8",
+        "    float scaleBirthScaleByBoundObjectRadius = 0.0f; // +0xc",
+        "    float scaleEmitOffsetByBoundObjectSize = 0.0f; // +0x10",
+        "    float scaleEmitOffsetByBoundObjectHeight = 0.0f; // +0x14",
+        "    float scaleEmitOffsetByBoundObjectRadius = 0.0f; // +0x18",
+        "    VfxOwnedPointer<FlexTypeFloat> flexScaleEmitOffset; // +0x1c",
+        "    VfxOwnedPointer<FlexValueVector3> flexBirthTranslation; // +0x20"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "FlexTypeFloat",
+      "description": 57785696,
+      "size": 8,
+      "align": 4,
+      "members": [
+        {
+          "offset": 0,
+          "name": "mFlexID",
+          "hash": 1186773642,
+          "serialized_type": "u32",
+          "wrapper": 992848,
+          "wrapper_body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 7\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+          "member_wrapper": [
+            7,
+            0
+          ],
+          "container_descriptor": null,
+          "last": 0
+        },
+        {
+          "offset": 4,
+          "name": "mValue",
+          "hash": 619900041,
+          "serialized_type": "float",
+          "wrapper": 992896,
+          "wrapper_body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0xa\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+          "member_wrapper": [
+            10,
+            0
+          ],
+          "container_descriptor": null,
+          "last": 0
+        }
+      ]
+    }
+  ],
+  "helpers": [
+    {
+      "name": "VfxProbabilityOwners",
+      "rva": 10898576,
+      "symbol": "??1VfxProbabilityOwners@@QAE@XZ",
+      "source": "VfxProbabilityOwners.cpp",
+      "definition": "VfxProbabilityOwners::~VfxProbabilityOwners() = default;",
+      "body": "push ebx\npush esi\npush edi\nmov edi, 3\nlea ebx, [ecx + 0xc]\nnop dword ptr [eax + eax]\nmov esi, dword ptr [ebx - 4]\nlea ebx, [ebx - 4]\ndec edi\ntest esi, esi\nje 0xa64cd7\ncmp dword ptr [esi + 0x14], 0\njl 0xa64cbc\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 8], 0\njl 0xa64ccc\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0x20\npush esi\ncall 0x9bb940\nadd esp, 8\ntest edi, edi\njne 0xa64ca0\npop edi\npop esi\npop ebx\nret"
+    },
+    {
+      "name": "VfxOwnedPointer<FlexValueVector3>",
+      "rva": 10898176,
+      "symbol": "??1?$VfxOwnedPointer@UFlexValueVector3@@@@QAE@XZ",
+      "source": "VfxFlexPointer.cpp",
+      "definition": "VfxOwnedPointer<FlexValueVector3>::~VfxOwnedPointer() { delete value; }",
+      "body": "push edi\nmov edi, dword ptr [ecx]\ntest edi, edi\nje 0xa64b5a\npush esi\nmov esi, dword ptr [edi + 0x10]\ntest esi, esi\nje 0xa64b4e\npush dword ptr [esi + 0x3c]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x20], 0\njl 0xa64b2b\npush dword ptr [esi + 0x18]\ncall 0x9bb930\nadd esp, 4\ncmp dword ptr [esi + 0x14], 0\njl 0xa64b3c\npush dword ptr [esi + 0xc]\ncall 0x9bb930\nadd esp, 4\nmov ecx, esi\ncall 0xa64c90\npush 0x40\npush esi\ncall 0x9bb940\nadd esp, 8\npush 0x14\npush edi\ncall 0x9bb940\nadd esp, 8\npop esi\npop edi\nret"
+    }
+  ],
+  "allowed_operators": {
+    "??3@YAXPAX@Z": 10205488,
+    "??3@YAXPAXI@Z": 10205504
+  }
+}

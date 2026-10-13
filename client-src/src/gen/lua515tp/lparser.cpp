@@ -1,22 +1,34 @@
-// Lua 5.1.5 (lua.org), compiled by Riot as C++ (default standard: C++14): lparser.c, the functions of it that are in the client (tools/match_objs.py).
-// match: c27440 ?adjust_assign@@YAXPAULexState@@HHPAUexpdesc@@@Z -O2
-// match: c27510 ?assignment@@YAXPAULexState@@PAULHS_assign@@H@Z -O2
-// match: c27740 ?block@@YAXPAULexState@@@Z -O2
-// match: c27ac0 ?breakstat@@YAXPAULexState@@@Z -O2
-// match: c27b30 ?check_match@@YAXPAULexState@@HHH@Z -O2
-// match: c27ba0 ?checkname@@YAXPAULexState@@PAUexpdesc@@@Z -O2
-// match: c27cc0 ?close_func@@YAXPAULexState@@@Z -O2
-// match: c27e70 ?codestring@@YAXPAULexState@@PAUexpdesc@@PATTString@@@Z -O2
-// match: c27ea0 ?constructor@@YAXPAULexState@@PAUexpdesc@@@Z -O2
-// match: c28110 ?errorlimit@@YAXPAUFuncState@@HPBD@Z -O2
-// match: c28740 ?funcargs@@YAXPAULexState@@PAUexpdesc@@@Z -O2
-// match: c28ad0 ?new_localvar@@YAXPAULexState@@PATTString@@H@Z -O2
-// match: c28bc0 ?open_func@@YAXPAULexState@@PAUFuncState@@@Z -O2
-// match: c28f20 ?recfield@@YAXPAULexState@@PAUConsControl@@@Z -O2
-// match: c29010 ?removevars@@YAXPAULexState@@H@Z -O2
-// match: c29060 ?repeatstat@@YAXPAULexState@@H@Z -O2
-// match: c29240 ?singlevar@@YAXPAULexState@@PAUexpdesc@@@Z -O2
-// match: c29fb0 ?test_then_block@@YAHPAULexState@@@Z -O2
-// match: c2a050 ?testnext@@YAHPAULexState@@H@Z -O2
-// match: c2a070 ?yindex@@YAXPAULexState@@PAUexpdesc@@@Z -O2
+// Lua 5.1.5 (lua.org), compiled by Riot as C++ (default standard: C++14) with -arch:SSE (doubles on the x87 stack): lparser.c, the functions of it that are in the client (tools/match_objs.py).
+// match: c27440 ?adjust_assign@@YAXPAULexState@@HHPAUexpdesc@@@Z -O2 -arch:SSE
+// match: c274c0 ?adjustlocalvars@@YAXPAULexState@@H@Z -O2 -arch:SSE
+// match: c27510 ?assignment@@YAXPAULexState@@PAULHS_assign@@H@Z -O2 -arch:SSE
+// match: c27740 ?block@@YAXPAULexState@@@Z -O2 -arch:SSE
+// match: c277d0 ?body@@YAXPAULexState@@PAUexpdesc@@HH@Z -O2 -arch:SSE
+// match: c27ac0 ?breakstat@@YAXPAULexState@@@Z -O2 -arch:SSE
+// match: c27b30 ?check_match@@YAXPAULexState@@HHH@Z -O2 -arch:SSE
+// match: c27ba0 ?checkname@@YAXPAULexState@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c27c10 ?chunk@@YAXPAULexState@@@Z -O2 -arch:SSE
+// match: c27cc0 ?close_func@@YAXPAULexState@@@Z -O2 -arch:SSE
+// match: c27e70 ?codestring@@YAXPAULexState@@PAUexpdesc@@PATTString@@@Z -O2 -arch:SSE
+// match: c27ea0 ?constructor@@YAXPAULexState@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c28110 ?errorlimit@@YAXPAUFuncState@@HPBD@Z -O2 -arch:SSE
+// match: c28170 ?explist1@@YAHPAULexState@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c281c0 ?forbody@@YAXPAULexState@@HHHH@Z -O2 -arch:SSE
+// match: c28350 ?fornum@@YAXPAULexState@@PATTString@@H@Z -O2 -arch:SSE
+// match: c284e0 ?forstat@@YAXPAULexState@@H@Z -O2 -arch:SSE
+// match: c28740 ?funcargs@@YAXPAULexState@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c288a0 ?indexupvalue@@YAHPAUFuncState@@PATTString@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c28ad0 ?new_localvar@@YAXPAULexState@@PATTString@@H@Z -O2 -arch:SSE
+// match: c28bc0 ?open_func@@YAXPAULexState@@PAUFuncState@@@Z -O2 -arch:SSE
+// match: c28c90 ?primaryexp@@YAXPAULexState@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c28f20 ?recfield@@YAXPAULexState@@PAUConsControl@@@Z -O2 -arch:SSE
+// match: c29010 ?removevars@@YAXPAULexState@@H@Z -O2 -arch:SSE
+// match: c29060 ?repeatstat@@YAXPAULexState@@H@Z -O2 -arch:SSE
+// match: c29240 ?singlevar@@YAXPAULexState@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c292b0 ?singlevaraux@@YAHPAUFuncState@@PATTString@@PAUexpdesc@@H@Z -O2 -arch:SSE
+// match: c293a0 ?statement@@YAHPAULexState@@@Z -O2 -arch:SSE
+// match: c29b10 ?subexpr@@YA?AW4BinOpr@@PAULexState@@PAUexpdesc@@I@Z -O2 -arch:SSE
+// match: c29fb0 ?test_then_block@@YAHPAULexState@@@Z -O2 -arch:SSE
+// match: c2a050 ?testnext@@YAHPAULexState@@H@Z -O2 -arch:SSE
+// match: c2a070 ?yindex@@YAXPAULexState@@PAUexpdesc@@@Z -O2 -arch:SSE
 #include "../../../../tools/third_party/lua-5.1.5/src/lparser.c"

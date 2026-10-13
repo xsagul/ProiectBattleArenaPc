@@ -1,0 +1,37 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 00000202A46235D0)
+0+ params, 4 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Varus/HUD/Icons2D/VarusQ.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "EzrealEssenceFluxDebuff"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	NEWTABLE 	0 3 0
+	10	[-]	LOADK    	1 -8	; "VarusAscended"
+	11	[-]	LOADK    	2 -9	; "VarusSkin03"
+	12	[-]	LOADK    	3 -10	; "VarusSkin04"
+	13	[-]	SETLIST  	0 3 1	; 1
+	14	[-]	SETGLOBAL	0 -7	; SpellFXOverrideSkins
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -11	; IsDamagingSpell
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -12	; TriggersSpellCasts
+	19	[-]	RETURN   	0 1
+constants (12) for 00000202A46235D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Varus/HUD/Icons2D/VarusQ.dds"
+	5	"BuffName"
+	6	"EzrealEssenceFluxDebuff"
+	7	"SpellFXOverrideSkins"
+	8	"VarusAscended"
+	9	"VarusSkin03"
+	10	"VarusSkin04"
+	11	"IsDamagingSpell"
+	12	"TriggersSpellCasts"
+locals (0) for 00000202A46235D0:
+upvalues (0) for 00000202A46235D0:

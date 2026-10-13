@@ -4,4 +4,6 @@
 // match: e14020 _ASN1_parse_dump
 // match: e14050 _ASN1_tag2str
 // match: e14080 _asn1_parse2
+#define OPENSSL_FILE "crypto\\asn1\\asn1_par.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/asn1/asn1_par.c"

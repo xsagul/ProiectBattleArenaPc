@@ -1,0 +1,15 @@
+{
+  "id": "uncovered-probability-array",
+  "role": "layout-discovery",
+  "learning_use": "training",
+  "requires_uncovered": true,
+  "kind": "layout",
+  "source": "probability_seed.cpp",
+  "symbol": "??1ProbabilityOwnersSeed@@QAE@XZ",
+  "rva": "0xa64c90",
+  "expected_size": 79,
+  "expected_targets": {"??3@YAXPAX@Z": "0x9bb930", "??3@YAXPAXI@Z": "0x9bb940"},
+  "flags": ["-O2", "-std:c++17"],
+  "seed_interpretation": "Pointed object layout and ownership hypothesis supplied by metadata analysis; array extent is searched.",
+  "axes": [{"name": "owned_array_count", "token": "{{ARRAY_COUNT}}", "values": [1, 2, 3, 4]}]
+}

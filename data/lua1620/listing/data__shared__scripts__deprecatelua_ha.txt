@@ -1,0 +1,31 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 00000203137335C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "GlobalLevelScript"
+	3	[-]	CALL     	0 2 1
+	4	[-]	GETGLOBAL	0 -3	; DoLuaLevel
+	5	[-]	LOADK    	1 -4	; "BBLuaConversionLibrary"
+	6	[-]	CALL     	0 2 1
+	7	[-]	LOADK    	0 -6	; 30
+	8	[-]	SETGLOBAL	0 -5	; EVENT_STAGE_WELCOME_TIME
+	9	[-]	LOADK    	0 -6	; 30
+	10	[-]	SETGLOBAL	0 -7	; EVENT_STAGE_PREANNOUNCE_TIME
+	11	[-]	LOADK    	0 -9	; 45
+	12	[-]	SETGLOBAL	0 -8	; EVENT_STAGE_MINIONS_SPAWNED_TIME
+	13	[-]	LOADK    	0 -9	; 45
+	14	[-]	SETGLOBAL	0 -10	; INITIAL_TIME_TO_SPAWN
+	15	[-]	RETURN   	0 1
+constants (10) for 00000203137335C0:
+	1	"DoLuaShared"
+	2	"GlobalLevelScript"
+	3	"DoLuaLevel"
+	4	"BBLuaConversionLibrary"
+	5	"EVENT_STAGE_WELCOME_TIME"
+	6	30
+	7	"EVENT_STAGE_PREANNOUNCE_TIME"
+	8	"EVENT_STAGE_MINIONS_SPAWNED_TIME"
+	9	45
+	10	"INITIAL_TIME_TO_SPAWN"
+locals (0) for 00000203137335C0:
+upvalues (0) for 00000203137335C0:

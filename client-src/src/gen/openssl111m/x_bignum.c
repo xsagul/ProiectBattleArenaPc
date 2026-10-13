@@ -6,4 +6,6 @@
 // match: e1b780 _bn_c2i
 // match: e1b7f0 _bn_secure_c2i
 // match: e1b870 _bn_print
+#define OPENSSL_FILE "crypto\\asn1\\x_bignum.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/asn1/x_bignum.c"

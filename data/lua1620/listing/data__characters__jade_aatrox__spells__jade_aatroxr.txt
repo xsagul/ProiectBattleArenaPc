@@ -1,0 +1,51 @@
+
+main <?:0,0> (27 instructions, 108 bytes at 0000021EDB2C35F0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "Aatrox_R.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "Jade_AatroxR"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "r:Jade_Aatrox_R_SpeedBuff"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect
+	15	[-]	LOADK    	0 -12	; "Buffbone_Glb_Ground_Loc"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateAttachBoneName
+	17	[-]	LOADK    	0 -14	; "Spine2"
+	18	[-]	SETGLOBAL	0 -13	; AutoBuffActivateAttachBoneName2
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -15	; NonDispellable
+	21	[-]	NEWTABLE 	0 1 0
+	22	[-]	LOADK    	1 -17	; "AatroxSkin01"
+	23	[-]	SETLIST  	0 1 1	; 1
+	24	[-]	SETGLOBAL	0 -16	; SpellFXOverrideSkins
+	25	[-]	LOADBOOL 	0 1 0
+	26	[-]	SETGLOBAL	0 -18	; IsDamagingSpell
+	27	[-]	RETURN   	0 1
+constants (18) for 0000021EDB2C35F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"Aatrox_R.dds"
+	7	"BuffName"
+	8	"Jade_AatroxR"
+	9	"AutoBuffActivateEffect"
+	10	"r:Jade_Aatrox_R_SpeedBuff"
+	11	"AutoBuffActivateAttachBoneName"
+	12	"Buffbone_Glb_Ground_Loc"
+	13	"AutoBuffActivateAttachBoneName2"
+	14	"Spine2"
+	15	"NonDispellable"
+	16	"SpellFXOverrideSkins"
+	17	"AatroxSkin01"
+	18	"IsDamagingSpell"
+locals (0) for 0000021EDB2C35F0:
+upvalues (0) for 0000021EDB2C35F0:

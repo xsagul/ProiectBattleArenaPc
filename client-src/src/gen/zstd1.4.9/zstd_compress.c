@@ -1,5 +1,6 @@
 // zstd 1.4.9 (facebook/zstd), compiled by Riot as C: zstd_compress.c, the functions of it that are in the client (tools/match_objs.py).
 // match: c4c6f0 _ZSTD_adjustCParams_internal -O2
+// match: c4c860 _ZSTD_buildSeqStore -O2
 // match: c4caa0 _ZSTD_clearAllDicts -O2
 // match: c4cb90 _ZSTD_compressBlock_internal -O2
 // match: c4ccc0 _ZSTD_compressCCtx -O2

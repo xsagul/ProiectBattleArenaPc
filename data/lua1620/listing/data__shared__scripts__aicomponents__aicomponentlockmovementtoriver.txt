@@ -1,0 +1,188 @@
+
+main <?:0,0> (14 instructions, 56 bytes at 000001E39F4E34C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 6 constants, 2 functions
+	1	[-]	NEWTABLE 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; LockMovementToRiver
+	3	[-]	GETGLOBAL	0 -2	; RegisterForEvent
+	4	[-]	LOADK    	1 -3	; "ComponentInit"
+	5	[-]	GETGLOBAL	2 -1	; LockMovementToRiver
+	6	[-]	CALL     	0 3 1
+	7	[-]	LOADK    	0 -5	; 0
+	8	[-]	SETGLOBAL	0 -4	; numberOfClamps
+	9	[-]	GETGLOBAL	0 -1	; LockMovementToRiver
+	10	[-]	CLOSURE  	1 0	; 000001E39F4E35B0
+	11	[-]	SETTABLE 	0 -3 1	; "ComponentInit" -
+	12	[-]	CLOSURE  	0 1	; 000001E39F4E3880
+	13	[-]	SETGLOBAL	0 -6	; ClampToBorder
+	14	[-]	RETURN   	0 1
+constants (6) for 000001E39F4E34C0:
+	1	"LockMovementToRiver"
+	2	"RegisterForEvent"
+	3	"ComponentInit"
+	4	"numberOfClamps"
+	5	0
+	6	"ClampToBorder"
+locals (0) for 000001E39F4E34C0:
+upvalues (0) for 000001E39F4E34C0:
+
+function <?:10,36> (5 instructions, 20 bytes at 000001E39F4E35B0)
+1 param, 2 slots, 0 upvalues, 0 locals, 2 constants, 1 function
+	1	[-]	GETGLOBAL	1 -2	; SetStateAndMove
+	2	[-]	SETGLOBAL	1 -1	; OriginalSetStateAndMove
+	3	[-]	CLOSURE  	1 0	; 000001E39F4E3630
+	4	[-]	SETGLOBAL	1 -2	; SetStateAndMove
+	5	[-]	RETURN   	0 1
+constants (2) for 000001E39F4E35B0:
+	1	"OriginalSetStateAndMove"
+	2	"SetStateAndMove"
+locals (0) for 000001E39F4E35B0:
+upvalues (0) for 000001E39F4E35B0:
+
+function <?:14,35> (64 instructions, 256 bytes at 000001E39F4E3630)
+2 params, 6 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADK    	2 -2	; 0
+	2	[-]	SETGLOBAL	2 -1	; numberOfClamps
+	3	[-]	GETTABLE 	2 1 -3	; "x"
+	4	[-]	GETGLOBAL	3 -4	; River
+	5	[-]	GETTABLE 	3 3 -5	; "TopBorder"
+	6	[-]	GETTABLE 	3 3 -6	; 1
+	7	[-]	GETTABLE 	3 3 -3	; "x"
+	8	[-]	LT       	0 2 3
+	9	[-]	JMP      	9	; to 19
+	10	[-]	GETGLOBAL	2 -4	; River
+	11	[-]	GETTABLE 	2 2 -5	; "TopBorder"
+	12	[-]	GETTABLE 	2 2 -6	; 1
+	13	[-]	GETTABLE 	2 2 -3	; "x"
+	14	[-]	SETTABLE 	1 -3 2	; "x" -
+	15	[-]	GETGLOBAL	2 -1	; numberOfClamps
+	16	[-]	ADD      	2 2 -6	; - 1
+	17	[-]	SETGLOBAL	2 -1	; numberOfClamps
+	18	[-]	JMP      	21	; to 40
+	19	[-]	GETTABLE 	2 1 -3	; "x"
+	20	[-]	GETGLOBAL	3 -4	; River
+	21	[-]	GETTABLE 	3 3 -5	; "TopBorder"
+	22	[-]	GETGLOBAL	4 -4	; River
+	23	[-]	GETTABLE 	4 4 -5	; "TopBorder"
+	24	[-]	LEN      	4 4
+	25	[-]	GETTABLE 	3 3 4
+	26	[-]	GETTABLE 	3 3 -3	; "x"
+	27	[-]	LT       	0 3 2
+	28	[-]	JMP      	11	; to 40
+	29	[-]	GETGLOBAL	2 -4	; River
+	30	[-]	GETTABLE 	2 2 -5	; "TopBorder"
+	31	[-]	GETGLOBAL	3 -4	; River
+	32	[-]	GETTABLE 	3 3 -5	; "TopBorder"
+	33	[-]	LEN      	3 3
+	34	[-]	GETTABLE 	2 2 3
+	35	[-]	GETTABLE 	2 2 -3	; "x"
+	36	[-]	SETTABLE 	1 -3 2	; "x" -
+	37	[-]	GETGLOBAL	2 -1	; numberOfClamps
+	38	[-]	ADD      	2 2 -6	; - 1
+	39	[-]	SETGLOBAL	2 -1	; numberOfClamps
+	40	[-]	GETGLOBAL	2 -7	; ClampToBorder
+	41	[-]	MOVE     	3 1
+	42	[-]	GETGLOBAL	4 -4	; River
+	43	[-]	GETTABLE 	4 4 -5	; "TopBorder"
+	44	[-]	LOADBOOL 	5 1 0
+	45	[-]	CALL     	2 4 2
+	46	[-]	MOVE     	1 2
+	47	[-]	GETGLOBAL	2 -7	; ClampToBorder
+	48	[-]	MOVE     	3 1
+	49	[-]	GETGLOBAL	4 -4	; River
+	50	[-]	GETTABLE 	4 4 -8	; "BottomBorder"
+	51	[-]	LOADBOOL 	5 0 0
+	52	[-]	CALL     	2 4 2
+	53	[-]	MOVE     	1 2
+	54	[-]	GETGLOBAL	2 -1	; numberOfClamps
+	55	[-]	LT       	0 -6 2	; 1 -
+	56	[-]	JMP      	3	; to 60
+	57	[-]	GETGLOBAL	2 -9	; Event
+	58	[-]	LOADK    	3 -10	; "RiverCornered"
+	59	[-]	CALL     	2 2 1
+	60	[-]	GETGLOBAL	2 -11	; OriginalSetStateAndMove
+	61	[-]	MOVE     	3 0
+	62	[-]	MOVE     	4 1
+	63	[-]	CALL     	2 3 1
+	64	[-]	RETURN   	0 1
+constants (11) for 000001E39F4E3630:
+	1	"numberOfClamps"
+	2	0
+	3	"x"
+	4	"River"
+	5	"TopBorder"
+	6	1
+	7	"ClampToBorder"
+	8	"BottomBorder"
+	9	"Event"
+	10	"RiverCornered"
+	11	"OriginalSetStateAndMove"
+locals (0) for 000001E39F4E3630:
+upvalues (0) for 000001E39F4E3630:
+
+function <?:38,58> (58 instructions, 232 bytes at 000001E39F4E3880)
+3 params, 11 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	LOADK    	3 -1	; 1
+	2	[-]	LEN      	4 1
+	3	[-]	SUB      	4 4 -1	; - 1
+	4	[-]	LOADK    	5 -1	; 1
+	5	[-]	FORPREP  	3 50	; to 56
+	6	[-]	GETTABLE 	7 0 -2	; "x"
+	7	[-]	GETTABLE 	8 1 6
+	8	[-]	GETTABLE 	8 8 -2	; "x"
+	9	[-]	LE       	0 8 7
+	10	[-]	JMP      	45	; to 56
+	11	[-]	GETTABLE 	7 0 -2	; "x"
+	12	[-]	ADD      	8 6 -1	; - 1
+	13	[-]	GETTABLE 	8 1 8
+	14	[-]	GETTABLE 	8 8 -2	; "x"
+	15	[-]	LE       	0 7 8
+	16	[-]	JMP      	39	; to 56
+	17	[-]	GETTABLE 	7 0 -2	; "x"
+	18	[-]	GETTABLE 	8 1 6
+	19	[-]	GETTABLE 	8 8 -2	; "x"
+	20	[-]	SUB      	7 7 8
+	21	[-]	ADD      	8 6 -1	; - 1
+	22	[-]	GETTABLE 	8 1 8
+	23	[-]	GETTABLE 	8 8 -2	; "x"
+	24	[-]	GETTABLE 	9 1 6
+	25	[-]	GETTABLE 	9 9 -2	; "x"
+	26	[-]	SUB      	8 8 9
+	27	[-]	DIV      	7 7 8
+	28	[-]	GETTABLE 	8 1 6
+	29	[-]	GETTABLE 	8 8 -3	; "z"
+	30	[-]	ADD      	9 6 -1	; - 1
+	31	[-]	GETTABLE 	9 1 9
+	32	[-]	GETTABLE 	9 9 -3	; "z"
+	33	[-]	GETTABLE 	10 1 6
+	34	[-]	GETTABLE 	10 10 -3	; "z"
+	35	[-]	SUB      	9 9 10
+	36	[-]	MUL      	9 7 9
+	37	[-]	ADD      	8 8 9
+	38	[-]	TEST     	2 0 0
+	39	[-]	JMP      	8	; to 48
+	40	[-]	GETTABLE 	9 0 -3	; "z"
+	41	[-]	LT       	0 8 9
+	42	[-]	JMP      	14	; to 57
+	43	[-]	SETTABLE 	0 -3 8	; "z" -
+	44	[-]	GETGLOBAL	9 -4	; numberOfClamps
+	45	[-]	ADD      	9 9 -1	; - 1
+	46	[-]	SETGLOBAL	9 -4	; numberOfClamps
+	47	[-]	JMP      	9	; to 57
+	48	[-]	GETTABLE 	9 0 -3	; "z"
+	49	[-]	LT       	0 9 8
+	50	[-]	JMP      	6	; to 57
+	51	[-]	SETTABLE 	0 -3 8	; "z" -
+	52	[-]	GETGLOBAL	9 -4	; numberOfClamps
+	53	[-]	ADD      	9 9 -1	; - 1
+	54	[-]	SETGLOBAL	9 -4	; numberOfClamps
+	55	[-]	JMP      	1	; to 57
+	56	[-]	FORLOOP  	3 -51	; to 6
+	57	[-]	RETURN   	0 2
+	58	[-]	RETURN   	0 1
+constants (4) for 000001E39F4E3880:
+	1	1
+	2	"x"
+	3	"z"
+	4	"numberOfClamps"
+locals (0) for 000001E39F4E3880:
+upvalues (0) for 000001E39F4E3880:

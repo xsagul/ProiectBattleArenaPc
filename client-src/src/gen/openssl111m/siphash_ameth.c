@@ -4,4 +4,7 @@
 // match: e20c40 _siphash_key_free
 // match: e20c80 _siphash_pkey_public_cmp
 // match: e22b80 _siphash_set_priv_key
+// match: e22bd0 _siphash_get_priv_key
+#define OPENSSL_FILE "crypto\\siphash\\siphash_ameth.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/siphash/siphash_ameth.c"

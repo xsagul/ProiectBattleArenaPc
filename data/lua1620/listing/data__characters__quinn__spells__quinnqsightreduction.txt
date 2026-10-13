@@ -1,0 +1,36 @@
+
+main <?:0,0> (18 instructions, 72 bytes at 0000021E7EA13600)
+0+ params, 3 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Q.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "QuinnQSightReduction"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "game_floatingtext_Blinded"
+	10	[-]	SETGLOBAL	0 -7	; PopupMessage1
+	11	[-]	NEWTABLE 	0 2 0
+	12	[-]	LOADK    	1 -10	; "CyberEzreal"
+	13	[-]	LOADK    	2 -11	; "PhoenixQuinn"
+	14	[-]	SETLIST  	0 2 1	; 1
+	15	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	16	[-]	LOADBOOL 	0 1 0
+	17	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	18	[-]	RETURN   	0 1
+constants (12) for 0000021E7EA13600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Q.dds"
+	5	"BuffName"
+	6	"QuinnQSightReduction"
+	7	"PopupMessage1"
+	8	"game_floatingtext_Blinded"
+	9	"SpellFXOverrideSkins"
+	10	"CyberEzreal"
+	11	"PhoenixQuinn"
+	12	"IsDamagingSpell"
+locals (0) for 0000021E7EA13600:
+upvalues (0) for 0000021E7EA13600:

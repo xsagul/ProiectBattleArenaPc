@@ -4,7 +4,7 @@
 //                 configured size and the result is smaller, and marks the datagram as compressed;
 //   rva 0x2e2020  decompresses the payload of an incoming datagram marked as compressed.
 // The work is done by the zstd library inside the client (rva 0xc4ccc0, 0xc4fed0, 0xc4c6c0: argument lists of
-// ZSTD_compressCCtx, ZSTD_decompressDCtx, ZSTD_isError; the names are our reading, the library is not rebuilt).
+// ZSTD_compressCCtx, ZSTD_decompressDCtx, ZSTD_isError; verified library sources are in gen/zstd1.4.9).
 // match: 2e2a70 ?Compress@LnpCompression
 // match: 2e2020 ?Decompress@LnpCompression
 #include "LnpDatagram.h"

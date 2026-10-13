@@ -1,0 +1,102 @@
+
+main <?:0,0> (5 instructions, 20 bytes at 00000222B23B34C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 2 constants, 2 functions
+	1	[-]	CLOSURE  	0 0	; 00000222B23B3540
+	2	[-]	SETGLOBAL	0 -1	; OnInitClient
+	3	[-]	CLOSURE  	0 1	; 00000222B23B3790
+	4	[-]	SETGLOBAL	0 -2	; OnInitServer
+	5	[-]	RETURN   	0 1
+constants (2) for 00000222B23B34C0:
+	1	"OnInitClient"
+	2	"OnInitServer"
+locals (0) for 00000222B23B34C0:
+upvalues (0) for 00000222B23B34C0:
+
+function <?:1,18> (65 instructions, 260 bytes at 00000222B23B3540)
+0 params, 3 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	2	[-]	LOADK    	1 -2	; "SRU_ChaosMinionMelee"
+	3	[-]	LOADK    	2 -3	; 8
+	4	[-]	CALL     	0 3 1
+	5	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	6	[-]	LOADK    	1 -4	; "SRU_ChaosMinionRanged"
+	7	[-]	LOADK    	2 -3	; 8
+	8	[-]	CALL     	0 3 1
+	9	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	10	[-]	LOADK    	1 -5	; "SRU_ChaosMinionSiege"
+	11	[-]	LOADK    	2 -3	; 8
+	12	[-]	CALL     	0 3 1
+	13	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	14	[-]	LOADK    	1 -6	; "SRU_ChaosMinionSuper"
+	15	[-]	LOADK    	2 -3	; 8
+	16	[-]	CALL     	0 3 1
+	17	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	18	[-]	LOADK    	1 -7	; "SRU_OrderMinionMelee"
+	19	[-]	LOADK    	2 -3	; 8
+	20	[-]	CALL     	0 3 1
+	21	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	22	[-]	LOADK    	1 -8	; "SRU_OrderMinionRanged"
+	23	[-]	LOADK    	2 -3	; 8
+	24	[-]	CALL     	0 3 1
+	25	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	26	[-]	LOADK    	1 -9	; "SRU_OrderMinionSiege"
+	27	[-]	LOADK    	2 -3	; 8
+	28	[-]	CALL     	0 3 1
+	29	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	30	[-]	LOADK    	1 -10	; "SRU_OrderMinionSuper"
+	31	[-]	LOADK    	2 -3	; 8
+	32	[-]	CALL     	0 3 1
+	33	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	34	[-]	LOADK    	1 -2	; "SRU_ChaosMinionMelee"
+	35	[-]	LOADK    	2 -11	; 9
+	36	[-]	CALL     	0 3 1
+	37	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	38	[-]	LOADK    	1 -4	; "SRU_ChaosMinionRanged"
+	39	[-]	LOADK    	2 -11	; 9
+	40	[-]	CALL     	0 3 1
+	41	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	42	[-]	LOADK    	1 -5	; "SRU_ChaosMinionSiege"
+	43	[-]	LOADK    	2 -11	; 9
+	44	[-]	CALL     	0 3 1
+	45	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	46	[-]	LOADK    	1 -6	; "SRU_ChaosMinionSuper"
+	47	[-]	LOADK    	2 -11	; 9
+	48	[-]	CALL     	0 3 1
+	49	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	50	[-]	LOADK    	1 -7	; "SRU_OrderMinionMelee"
+	51	[-]	LOADK    	2 -11	; 9
+	52	[-]	CALL     	0 3 1
+	53	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	54	[-]	LOADK    	1 -8	; "SRU_OrderMinionRanged"
+	55	[-]	LOADK    	2 -11	; 9
+	56	[-]	CALL     	0 3 1
+	57	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	58	[-]	LOADK    	1 -9	; "SRU_OrderMinionSiege"
+	59	[-]	LOADK    	2 -11	; 9
+	60	[-]	CALL     	0 3 1
+	61	[-]	GETGLOBAL	0 -1	; PreloadCharacterWithSkinID
+	62	[-]	LOADK    	1 -10	; "SRU_OrderMinionSuper"
+	63	[-]	LOADK    	2 -11	; 9
+	64	[-]	CALL     	0 3 1
+	65	[-]	RETURN   	0 1
+constants (11) for 00000222B23B3540:
+	1	"PreloadCharacterWithSkinID"
+	2	"SRU_ChaosMinionMelee"
+	3	8
+	4	"SRU_ChaosMinionRanged"
+	5	"SRU_ChaosMinionSiege"
+	6	"SRU_ChaosMinionSuper"
+	7	"SRU_OrderMinionMelee"
+	8	"SRU_OrderMinionRanged"
+	9	"SRU_OrderMinionSiege"
+	10	"SRU_OrderMinionSuper"
+	11	9
+locals (0) for 00000222B23B3540:
+upvalues (0) for 00000222B23B3540:
+
+function <?:20,22> (1 instruction, 4 bytes at 00000222B23B3790)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 00000222B23B3790:
+locals (0) for 00000222B23B3790:
+upvalues (0) for 00000222B23B3790:

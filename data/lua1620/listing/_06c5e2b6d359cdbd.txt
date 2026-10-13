@@ -1,0 +1,108 @@
+
+main <?:0,0> (34 instructions, 136 bytes at 00000205F58C34C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 11 constants, 2 functions
+	1	[-]	GETGLOBAL	0 -1	; IsMutatorEnabled
+	2	[-]	LOADK    	1 -2	; "MapSkin_Mantis_Demacia"
+	3	[-]	CALL     	0 2 2
+	4	[-]	EQ       	0 0 -3	; - true
+	5	[-]	JMP      	1	; to 7
+	6	[-]	JMP      	21	; to 28
+	7	[-]	GETGLOBAL	0 -1	; IsMutatorEnabled
+	8	[-]	LOADK    	1 -4	; "MapSkin_Mantis_Ionia"
+	9	[-]	CALL     	0 2 2
+	10	[-]	EQ       	0 0 -3	; - true
+	11	[-]	JMP      	1	; to 13
+	12	[-]	JMP      	15	; to 28
+	13	[-]	GETGLOBAL	0 -1	; IsMutatorEnabled
+	14	[-]	LOADK    	1 -5	; "MapSkin_Mantis_Noxus"
+	15	[-]	CALL     	0 2 2
+	16	[-]	EQ       	0 0 -3	; - true
+	17	[-]	JMP      	1	; to 19
+	18	[-]	JMP      	9	; to 28
+	19	[-]	GETGLOBAL	0 -1	; IsMutatorEnabled
+	20	[-]	LOADK    	1 -6	; "MapSkin_Mantis_MapPool"
+	21	[-]	CALL     	0 2 2
+	22	[-]	EQ       	0 0 -3	; - true
+	23	[-]	JMP      	1	; to 25
+	24	[-]	JMP      	3	; to 28
+	25	[-]	GETGLOBAL	0 -7	; DoLuaShared
+	26	[-]	LOADK    	1 -8	; "SR_NeutralMinionSpawn"
+	27	[-]	CALL     	0 2 1
+	28	[-]	CLOSURE  	0 0	; 00000205F58C3690
+	29	[-]	SETGLOBAL	0 -9	; OverrideNeutralMinionSpawnDefaults
+	30	[-]	CLOSURE  	0 1	; 00000205F58C38D0
+	31	[-]	SETGLOBAL	0 -10	; NeutralMinionOverride
+	32	[-]	GETGLOBAL	0 -11	; NeutralMinionSpawnInit
+	33	[-]	CALL     	0 1 1
+	34	[-]	RETURN   	0 1
+constants (11) for 00000205F58C34C0:
+	1	"IsMutatorEnabled"
+	2	"MapSkin_Mantis_Demacia"
+	3	true
+	4	"MapSkin_Mantis_Ionia"
+	5	"MapSkin_Mantis_Noxus"
+	6	"MapSkin_Mantis_MapPool"
+	7	"DoLuaShared"
+	8	"SR_NeutralMinionSpawn"
+	9	"OverrideNeutralMinionSpawnDefaults"
+	10	"NeutralMinionOverride"
+	11	"NeutralMinionSpawnInit"
+locals (0) for 00000205F58C34C0:
+upvalues (0) for 00000205F58C34C0:
+
+function <?:16,29> (24 instructions, 96 bytes at 00000205F58C3690)
+0 params, 5 slots, 0 upvalues, 0 locals, 20 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; 20
+	2	[-]	SETGLOBAL	0 -1	; MINION_SPAWN_START_TIME
+	3	[-]	LOADK    	0 -4	; -15
+	4	[-]	SETGLOBAL	0 -3	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	5	[-]	LOADK    	0 -6	; 0
+	6	[-]	SETGLOBAL	0 -5	; CAMP_TIME_OFFSET
+	7	[-]	NEWTABLE 	0 4 0
+	8	[-]	LOADK    	1 -8	; 6
+	9	[-]	LOADK    	2 -9	; 15
+	10	[-]	LOADK    	3 -10	; 16
+	11	[-]	LOADK    	4 -11	; 17
+	12	[-]	SETLIST  	0 4 1	; 1
+	13	[-]	SETGLOBAL	0 -7	; CampsWithInitialMinimapUI
+	14	[-]	LOADK    	0 -13	; 240
+	15	[-]	SETGLOBAL	0 -12	; DRAGON_SPAWN_TIME
+	16	[-]	LOADK    	0 -15	; 600
+	17	[-]	SETGLOBAL	0 -14	; HERALD_SPAWN_TIME
+	18	[-]	LOADK    	0 -17	; 1200
+	19	[-]	SETGLOBAL	0 -16	; BARON_SPAWN_TIME
+	20	[-]	LOADK    	0 -13	; 240
+	21	[-]	SETGLOBAL	0 -18	; ELEMENTAL_DRAGON_SPAWN_RATE
+	22	[-]	LOADK    	0 -20	; 300
+	23	[-]	SETGLOBAL	0 -19	; ELDER_DRAGON_SPAWN_RATE
+	24	[-]	RETURN   	0 1
+constants (20) for 00000205F58C3690:
+	1	"MINION_SPAWN_START_TIME"
+	2	20
+	3	"START_OF_GAME_MONSTER_SPAWN_DELAY"
+	4	-15
+	5	"CAMP_TIME_OFFSET"
+	6	0
+	7	"CampsWithInitialMinimapUI"
+	8	6
+	9	15
+	10	16
+	11	17
+	12	"DRAGON_SPAWN_TIME"
+	13	240
+	14	"HERALD_SPAWN_TIME"
+	15	600
+	16	"BARON_SPAWN_TIME"
+	17	1200
+	18	"ELEMENTAL_DRAGON_SPAWN_RATE"
+	19	"ELDER_DRAGON_SPAWN_RATE"
+	20	300
+locals (0) for 00000205F58C3690:
+upvalues (0) for 00000205F58C3690:
+
+function <?:31,32> (1 instruction, 4 bytes at 00000205F58C38D0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 00000205F58C38D0:
+locals (0) for 00000205F58C38D0:
+upvalues (0) for 00000205F58C38D0:

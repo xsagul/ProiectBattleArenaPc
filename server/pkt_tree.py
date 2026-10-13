@@ -13,15 +13,13 @@ import bisect
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-import packet_emu as P  # noqa: E402
+from emu_backend import P  # noqa: E402
 import pkt_modes as PM  # noqa: E402
 from unicorn import UC_HOOK_CODE, UC_HOOK_MEM_READ, UC_HOOK_MEM_WRITE  # noqa: E402
-from unicorn.x86_const import UC_X86_REG_ESP, UC_X86_REG_ECX, UC_X86_REG_EAX, UC_X86_REG_EIP  # noqa: E402
 
-GETBITS, GETBITS_RET = 0x91cae0, 0x91cb44
-GETBITS_READS = (0x91cb10, 0x91cb30)
+GETBITS, GETBITS_RET, GETBITS_READS = P.GETBITS, P.GETBITS_RET, P.GETBITS_READS
 # readers that test their header bits only inline (no getbits call), found in the reader map of 574
-EXTRA_READERS = {0x8fe8b0}
+EXTRA_READERS = {0x8fe8b0} if P.PATCH == '13.3' else set()
 WIRE = P.BUF + 0x10000     # where a struct's own bytes go when it is run alone (room: 0xf0000 bytes)
 
 
@@ -37,47 +35,58 @@ class Tree:
         # pass 1: every function that reads wire bytes
         readfns = set()
         h = u.hook_add(UC_HOOK_MEM_READ, lambda u, acc, a, s, v, d: readfns.add(
-            PM.fn_of(u.reg_read(UC_X86_REG_EIP) - P.BASE)), begin=P.BUF, end=P.BUF + 0x10000)
+            PM.fn_of(P.ip(u))), begin=P.BUF, end=P.BUF + 0x10000)
+        # 16.20: a struct reader and a helper get their arguments in the same places, and an embedded struct may have
+        # no vtable: what tells a struct reader is that it reads header bits (calls getbits on wire bytes)
+        bitfns = set()
+        self.bitfns = bitfns
+
+        def bits_caller(u, a, s, d):
+            if P.BUF <= P.getbits_buf(u) <= P.BUF + 0x10000 or WIRE <= P.getbits_buf(u) <= WIRE + 0xf0000:
+                bitfns.add(PM.fn_of(P.getbits_call(u)[2]))
+        h2 = u.hook_add(UC_HOOK_CODE, bits_caller, begin=P.BASE + GETBITS, end=P.BASE + GETBITS)
+        self._bits_hook = bits_caller
         tr = {}
         ok, left, _ = self.emu.deserialize(self.info, pid, 0, self.body, tr)
         u.hook_del(h)
+        u.hook_del(h2)
         assert ok and left == 0
         readfns.discard(PM.fn_of(GETBITS))
+        if P.PATCH != '13.3':
+            readfns |= bitfns
         # a struct reader gets (this = object, cursor, end); a helper gets (destination, cursor, end): tell them apart
         # by where the cursor is when they start
         kind = {}
 
         def classify(u, a, s, d):
-            esp = u.reg_read(UC_X86_REG_ESP)
-            a1, a2 = struct.unpack('<II', bytes(u.mem_read(esp + 4, 8)))
-
             def is_cursor(p):
-                if not P.HEAP <= p < P.HEAP + P.HEAP_SIZE - 4:
+                if not P.HEAP <= p < P.HEAP + P.HEAP_SIZE - 8:
                     return False
-                return P.BUF <= struct.unpack('<I', bytes(u.mem_read(p, 4)))[0] <= P.BUF + 0x10000
+                return P.BUF <= P.read_ptr(u, p) <= P.BUF + 0x10000
             fn = a - P.BASE
-            if is_cursor(a1):
-                kind.setdefault(fn, set()).add('reader')
-            elif is_cursor(a2):
-                kind.setdefault(fn, set()).add('helper')
+            k = P.entry_kind(u, fn, is_cursor)
+            if k:
+                kind.setdefault(fn, set()).add(k)
         hs = [u.hook_add(UC_HOOK_CODE, classify, begin=P.BASE + f, end=P.BASE + f) for f in readfns]
         self.emu.heap = P.HEAP + 0x1000
         self.emu.deserialize(self.info, pid, 0, self.body, {})
         for x in hs:
             u.hook_del(x)
         readers = {f for f, k in kind.items() if 'reader' in k} | {self.info['des']}
+        if P.PATCH != '13.3':
+            readers |= {f for f in bitfns if f in kind}
         self.readers = readers
-        self.helpers = {f for f, k in kind.items() if k == {'helper'}}
+        self.helpers = {f for f, k in kind.items() if k == {'helper'} and f not in readers}
         # pass 2: entries (obj, cursor) and every wire read, in order
         ev = []
 
         snaps = {}
 
         def entry(u, a, s, d):
-            esp = u.reg_read(UC_X86_REG_ESP)
-            ret, cur, end = struct.unpack('<III', bytes(u.mem_read(esp, 12)))
-            c = struct.unpack('<I', bytes(u.mem_read(cur, 4)))[0]
-            ev.append(('in', a - P.BASE, u.reg_read(UC_X86_REG_ECX), c - P.BUF, esp))
+            esp = P.sp(u)
+            ret, this, cur, end = P.reader_entry(u)
+            c = P.read_ptr(u, cur)
+            ev.append(('in', a - P.BASE, this, c - P.BUF, esp))
             fn = a - P.BASE
             if fn not in snaps:   # the heap as the first instance of this reader finds it: a freshly built object
                 top = (self.emu.heap + 0xfff) & ~0xfff
@@ -91,7 +100,7 @@ class Tree:
         ok, left, _ = self.emu.deserialize(self.info, pid, 0, self.body, {})
         for x in hs:
             u.hook_del(x)
-        self.wire = struct.pack('<HI', pid, 0) + self.body    # as the reader sees it (offset 0 = the packet id)
+        self.wire = P.wire(pid, 0, self.body)    # as the reader sees it (13.3: offset 0 = the packet id)
         # nesting by stack depth: an instance is inside the previous ones whose esp is above its own
         stack, out = [], []
         for x in ev:
@@ -123,22 +132,23 @@ class Tree:
         kind = {}
 
         def classify(u, a, s, d):
-            esp = u.reg_read(UC_X86_REG_ESP)
-            a1, a2 = struct.unpack('<II', bytes(u.mem_read(esp + 4, 8)))
-
             def is_cursor(p):
-                if not P.HEAP <= p < P.HEAP + P.HEAP_SIZE - 4:
+                if not P.HEAP <= p < P.HEAP + P.HEAP_SIZE - 8:
                     return False
-                return WIRE <= struct.unpack('<I', bytes(u.mem_read(p, 4)))[0] <= WIRE + 0xf0000
+                return WIRE <= P.read_ptr(u, p) <= WIRE + 0xf0000
             fn = a - P.BASE
-            if is_cursor(a1):
-                kind.setdefault(fn, set()).add('reader')
-            elif is_cursor(a2):
-                kind.setdefault(fn, set()).add('helper')
+            k = P.entry_kind(u, fn, is_cursor)
+            if k:
+                kind.setdefault(fn, set()).add(k)
         hs = [u.hook_add(UC_HOOK_CODE, classify, begin=P.BASE + f, end=P.BASE + f) for f in fns]
+        hs.append(u.hook_add(UC_HOOK_CODE, self._bits_hook, begin=P.BASE + GETBITS, end=P.BASE + GETBITS))
         self.run(inst, wire, trace=False)
         for x in hs:
             u.hook_del(x)
+        if P.PATCH != '13.3':
+            for f in kind:
+                if f in self.bitfns:
+                    kind[f].add('reader')
         for f, k in kind.items():
             if 'reader' in k:
                 self.readers.add(f)
@@ -168,15 +178,15 @@ class Tree:
         emu.heap = top
         emu.floor = top
         u.mem_write(WIRE, bytes(wire))
-        cursor = emu.alloc(4)
-        u.mem_write(cursor, struct.pack('<I', WIRE))
+        cursor = emu.alloc(P.PTR)
+        u.mem_write(cursor, P.pack_ptr(WIRE))
         ev = []
         blocks = []
         hs = []
         missing = []
         if trace:
             def esp():
-                return u.reg_read(UC_X86_REG_ESP)
+                return P.sp(u)
 
             fs = {'n': 0, 'cur': None, 'eip': None, 'depth': 0}
 
@@ -187,9 +197,10 @@ class Tree:
 
             def on_bits(u, a, s, d):
                 e = esp()
-                ret, buf, pos, w = struct.unpack('<IIII', bytes(u.mem_read(e, 16)))
-                ev.append(['bits', buf - WIRE, pos & 0xff, w & 0xff, None, PM.fn_of(ret - P.BASE), e])
-                if stop and fs['depth'] == 0 and buf - WIRE == stop[0] and PM.fn_of(ret - P.BASE) == inst['fn']:
+                pos, w, ret = P.getbits_call(u)
+                buf = P.getbits_buf(u)
+                ev.append(['bits', buf - WIRE, pos, w, None, PM.fn_of(ret), e])
+                if stop and fs['depth'] == 0 and buf - WIRE == stop[0] and PM.fn_of(ret) == inst['fn']:
                     if fs['cur'] != ('g', pos & 0xff):
                         fs['cur'] = ('g', pos & 0xff)
                         field_start(fs['cur'])
@@ -199,11 +210,11 @@ class Tree:
                 for x in reversed(ev):
                     if x[0] == 'bits':
                         if x[4] is None:
-                            x[4] = u.reg_read(UC_X86_REG_EAX) & 0xff
+                            x[4] = P.retval(u) & 0xff
                         break
 
             def on_read(u, acc, a, s, v, d):
-                eip = u.reg_read(UC_X86_REG_EIP) - P.BASE
+                eip = P.ip(u)
                 if eip in GETBITS_READS:
                     return
                 for k in range(s):
@@ -220,9 +231,9 @@ class Tree:
 
             def on_entry(u, a, s, d):
                 e = esp()
-                ret, cur = struct.unpack('<II', bytes(u.mem_read(e, 8)))
-                c = struct.unpack('<I', bytes(u.mem_read(cur, 4)))[0] if P.HEAP <= cur < P.HEAP + P.HEAP_SIZE else 0
-                ev.append(['in', a - P.BASE, u.reg_read(UC_X86_REG_ECX), c - WIRE, e])
+                ret, this, cur, end = P.reader_entry(u)
+                c = P.read_ptr(u, cur) if P.HEAP <= cur < P.HEAP + P.HEAP_SIZE else 0
+                ev.append(['in', a - P.BASE, this, c - WIRE, e])
                 if stop and len(stop) > 3 and stop[3] and fs['depth'] == 0 and fs['n'] >= stop[2] - 1:
                     u.emu_stop()      # stop at the first child: what came before it (a count) is all that is wanted
                 fs['depth'] += 1
@@ -237,12 +248,12 @@ class Tree:
 
             def on_helper(u, a, s, d):
                 e = esp()
-                cur = struct.unpack('<I', bytes(u.mem_read(e + 8, 4)))[0]
-                c = struct.unpack('<I', bytes(u.mem_read(cur, 4)))[0] if P.HEAP <= cur < P.HEAP + P.HEAP_SIZE else 0
+                cur = P.helper_cursor(u, lambda q: P.HEAP <= q < P.HEAP + P.HEAP_SIZE - 8 and WIRE <= P.read_ptr(u, q) <= WIRE + 0xf0000)
+                c = P.read_ptr(u, cur) if P.HEAP <= cur < P.HEAP + P.HEAP_SIZE else 0
                 ev.append(['call', a - P.BASE, c - WIRE, e])
 
             def on_write(u, acc, a, s, v, d):
-                eip = u.reg_read(UC_X86_REG_EIP) - P.BASE
+                eip = P.ip(u)
                 if a == cursor:
                     ev.append(['cur', v - WIRE, eip, esp()])
                 else:
@@ -261,7 +272,7 @@ class Tree:
             u.hook_del(h)
         if missing:   # a child returns to a place not hooked yet: run again with it hooked
             return self.run(inst, wire, trace, helpers, stop)
-        used = struct.unpack('<I', bytes(u.mem_read(cursor, 4)))[0] - WIRE
+        used = P.read_ptr(u, cursor) - WIRE
         return {'ok': (ok or 0) & 0xff if err is None else None, 'err': err, 'used': used, 'ev': ev, 'blocks': blocks,
                 'obj': inst['obj']}
 

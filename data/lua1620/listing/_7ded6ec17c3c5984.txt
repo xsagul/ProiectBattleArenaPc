@@ -1,0 +1,38 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 00000248EE3434C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Varus/HUD/Icons2D/VarusR.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "UltBook_VarusRRoot"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "doesnotexist.troy"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -10	; "game_floatingtext_Snared"
+	12	[-]	SETGLOBAL	0 -9	; PopupMessage1
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -12	; "UltBook_VarusAscended"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -11	; SpellFXOverrideSkins
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -13	; IsDamagingSpell
+	19	[-]	RETURN   	0 1
+constants (13) for 00000248EE3434C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Varus/HUD/Icons2D/VarusR.dds"
+	5	"BuffName"
+	6	"UltBook_VarusRRoot"
+	7	"AutoBuffActivateEffect"
+	8	"doesnotexist.troy"
+	9	"PopupMessage1"
+	10	"game_floatingtext_Snared"
+	11	"SpellFXOverrideSkins"
+	12	"UltBook_VarusAscended"
+	13	"IsDamagingSpell"
+locals (0) for 00000248EE3434C0:
+upvalues (0) for 00000248EE3434C0:

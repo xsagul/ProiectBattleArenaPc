@@ -1,0 +1,54 @@
+
+main <?:0,0> (29 instructions, 116 bytes at 00000281A74836A0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 19 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_VeigarBalefulStrike.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Jade_VeigarBalefulStrikeDisplay"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; 1
+	10	[-]	SETGLOBAL	0 -7	; SpellDamageRatio
+	11	[-]	NEWTABLE 	0 5 0
+	12	[-]	LOADK    	1 -10	; 8
+	13	[-]	LOADK    	2 -11	; 7
+	14	[-]	LOADK    	3 -12	; 6
+	15	[-]	LOADK    	4 -13	; 5
+	16	[-]	LOADK    	5 -14	; 4
+	17	[-]	SETLIST  	0 5 1	; 1
+	18	[-]	SETGLOBAL	0 -9	; AutoCooldownByLevel
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -15	; PersistsThroughDeath
+	21	[-]	LOADBOOL 	0 1 0
+	22	[-]	SETGLOBAL	0 -16	; NonDispellable
+	23	[-]	NEWTABLE 	0 1 0
+	24	[-]	LOADK    	1 -18	; "BadSantaJade_Veigar"
+	25	[-]	SETLIST  	0 1 1	; 1
+	26	[-]	SETGLOBAL	0 -17	; SpellFXOverrideSkins
+	27	[-]	LOADBOOL 	0 1 0
+	28	[-]	SETGLOBAL	0 -19	; IsDamagingSpell
+	29	[-]	RETURN   	0 1
+constants (19) for 00000281A74836A0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_VeigarBalefulStrike.dds"
+	5	"BuffName"
+	6	"Jade_VeigarBalefulStrikeDisplay"
+	7	"SpellDamageRatio"
+	8	1
+	9	"AutoCooldownByLevel"
+	10	8
+	11	7
+	12	6
+	13	5
+	14	4
+	15	"PersistsThroughDeath"
+	16	"NonDispellable"
+	17	"SpellFXOverrideSkins"
+	18	"BadSantaJade_Veigar"
+	19	"IsDamagingSpell"
+locals (0) for 00000281A74836A0:
+upvalues (0) for 00000281A74836A0:

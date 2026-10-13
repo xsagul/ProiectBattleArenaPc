@@ -1,0 +1,35 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 0000024547A934C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; 4
+	10	[-]	SETGLOBAL	0 -5	; SpellToggleSlot
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -7	; IsDeathRecapSource
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -8	; PersistsThroughDeath
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -9	; NonDispellable
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -10	; IsDamagingSpell
+	19	[-]	RETURN   	0 1
+constants (10) for 0000024547A934C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"SpellToggleSlot"
+	6	4
+	7	"IsDeathRecapSource"
+	8	"PersistsThroughDeath"
+	9	"NonDispellable"
+	10	"IsDamagingSpell"
+locals (0) for 0000024547A934C0:
+upvalues (0) for 0000024547A934C0:

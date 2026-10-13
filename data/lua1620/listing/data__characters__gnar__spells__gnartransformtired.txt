@@ -1,0 +1,38 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 0000024E027F35F0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Gnar/HUD/Icons2D/GnarTransformTired.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "GnarTransformTired"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	NEWTABLE 	0 5 0
+	12	[-]	LOADK    	1 -9	; 20
+	13	[-]	LOADK    	2 -10	; 18
+	14	[-]	LOADK    	3 -11	; 16
+	15	[-]	LOADK    	4 -12	; 14
+	16	[-]	LOADK    	5 -13	; 12
+	17	[-]	SETLIST  	0 5 1	; 1
+	18	[-]	SETGLOBAL	0 -8	; AutoCooldownByLevel
+	19	[-]	RETURN   	0 1
+constants (13) for 0000024E027F35F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Gnar/HUD/Icons2D/GnarTransformTired.dds"
+	6	"BuffName"
+	7	"GnarTransformTired"
+	8	"AutoCooldownByLevel"
+	9	20
+	10	18
+	11	16
+	12	14
+	13	12
+locals (0) for 0000024E027F35F0:
+upvalues (0) for 0000024E027F35F0:

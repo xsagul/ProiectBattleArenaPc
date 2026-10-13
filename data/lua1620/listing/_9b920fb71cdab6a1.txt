@@ -1,0 +1,73 @@
+
+main <?:0,0> (5 instructions, 20 bytes at 00000284970334C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 2 constants, 2 functions
+	1	[-]	CLOSURE  	0 0	; 0000028497033540
+	2	[-]	SETGLOBAL	0 -1	; OnInitClient
+	3	[-]	CLOSURE  	0 1	; 00000284970335C0
+	4	[-]	SETGLOBAL	0 -2	; OnInitServer
+	5	[-]	RETURN   	0 1
+constants (2) for 00000284970334C0:
+	1	"OnInitClient"
+	2	"OnInitServer"
+locals (0) for 00000284970334C0:
+upvalues (0) for 00000284970334C0:
+
+function <?:1,3> (1 instruction, 4 bytes at 0000028497033540)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 0000028497033540:
+locals (0) for 0000028497033540:
+upvalues (0) for 0000028497033540:
+
+function <?:5,20> (36 instructions, 144 bytes at 00000284970335C0)
+0 params, 11 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADK    	0 -1	; 0
+	2	[-]	LOADK    	1 -2	; 4
+	3	[-]	LOADK    	2 -3	; 1
+	4	[-]	FORPREP  	0 26	; to 31
+	5	[-]	GETGLOBAL	4 -4	; GetPlayerByClientID
+	6	[-]	MOVE     	5 3
+	7	[-]	CALL     	4 2 2
+	8	[-]	EQ       	1 4 -5	; - nil
+	9	[-]	JMP      	21	; to 31
+	10	[-]	GETGLOBAL	5 -6	; ApplyPersistentBuff
+	11	[-]	MOVE     	6 4
+	12	[-]	LOADK    	7 -7	; "IntroBotDamageIndicatorController"
+	13	[-]	LOADBOOL 	8 0 0
+	14	[-]	LOADK    	9 -3	; 1
+	15	[-]	LOADK    	10 -3	; 1
+	16	[-]	CALL     	5 6 1
+	17	[-]	GETGLOBAL	5 -6	; ApplyPersistentBuff
+	18	[-]	MOVE     	6 4
+	19	[-]	LOADK    	7 -8	; "IntroBotPlayerDamageReduction"
+	20	[-]	LOADBOOL 	8 0 0
+	21	[-]	LOADK    	9 -3	; 1
+	22	[-]	LOADK    	10 -3	; 1
+	23	[-]	CALL     	5 6 1
+	24	[-]	GETGLOBAL	5 -6	; ApplyPersistentBuff
+	25	[-]	MOVE     	6 4
+	26	[-]	LOADK    	7 -9	; "IntroBotPlayerExp"
+	27	[-]	LOADBOOL 	8 0 0
+	28	[-]	LOADK    	9 -3	; 1
+	29	[-]	LOADK    	10 -3	; 1
+	30	[-]	CALL     	5 6 1
+	31	[-]	FORLOOP  	0 -27	; to 5
+	32	[-]	GETGLOBAL	0 -10	; ApplyPersistentBuffToAllChampions
+	33	[-]	LOADK    	1 -11	; "IntroBotReducedAttackRange"
+	34	[-]	LOADBOOL 	2 0 0
+	35	[-]	CALL     	0 3 1
+	36	[-]	RETURN   	0 1
+constants (11) for 00000284970335C0:
+	1	0
+	2	4
+	3	1
+	4	"GetPlayerByClientID"
+	5	nil
+	6	"ApplyPersistentBuff"
+	7	"IntroBotDamageIndicatorController"
+	8	"IntroBotPlayerDamageReduction"
+	9	"IntroBotPlayerExp"
+	10	"ApplyPersistentBuffToAllChampions"
+	11	"IntroBotReducedAttackRange"
+locals (0) for 00000284970335C0:
+upvalues (0) for 00000284970335C0:

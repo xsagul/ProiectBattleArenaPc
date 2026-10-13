@@ -1,0 +1,68 @@
+
+main <?:0,0> (39 instructions, 156 bytes at 000002C951623600)
+0+ params, 7 slots, 0 upvalues, 0 locals, 23 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 0 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "AkaliShadowDance.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "AkaliShadowDance"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -10	; "Ruby_WukongSkin04"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	17	[-]	NEWTABLE 	0 2 0
+	18	[-]	LOADK    	1 -10	; "Ruby_WukongSkin04"
+	19	[-]	LOADK    	2 -12	; "Ruby_WukongSkin05"
+	20	[-]	SETLIST  	0 2 1	; 1
+	21	[-]	SETGLOBAL	0 -11	; SpellVOOverrideSkins
+	22	[-]	LOADBOOL 	0 1 0
+	23	[-]	SETGLOBAL	0 -13	; IsDamagingSpell
+	24	[-]	NEWTABLE 	0 0 6
+	25	[-]	NEWTABLE 	1 5 0
+	26	[-]	LOADK    	2 -16	; 10
+	27	[-]	LOADK    	3 -16	; 10
+	28	[-]	LOADK    	4 -16	; 10
+	29	[-]	LOADK    	5 -16	; 10
+	30	[-]	LOADK    	6 -16	; 10
+	31	[-]	SETLIST  	1 5 1	; 1
+	32	[-]	SETTABLE 	0 -15 1	; "MaximumHits" -
+	33	[-]	SETTABLE 	0 -17 -18	; "CanHitCaster" 0
+	34	[-]	SETTABLE 	0 -19 -18	; "CanHitSameTarget" 0
+	35	[-]	SETTABLE 	0 -20 -18	; "CanHitSameTargetConsecutively" 0
+	36	[-]	SETTABLE 	0 -21 -22	; "CanHitEnemies" 1
+	37	[-]	SETTABLE 	0 -23 -18	; "CanHitFriends" 0
+	38	[-]	SETGLOBAL	0 -14	; ChainMissileParameters
+	39	[-]	RETURN   	0 1
+constants (23) for 000002C951623600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"AkaliShadowDance.dds"
+	7	"BuffName"
+	8	"AkaliShadowDance"
+	9	"SpellFXOverrideSkins"
+	10	"Ruby_WukongSkin04"
+	11	"SpellVOOverrideSkins"
+	12	"Ruby_WukongSkin05"
+	13	"IsDamagingSpell"
+	14	"ChainMissileParameters"
+	15	"MaximumHits"
+	16	10
+	17	"CanHitCaster"
+	18	0
+	19	"CanHitSameTarget"
+	20	"CanHitSameTargetConsecutively"
+	21	"CanHitEnemies"
+	22	1
+	23	"CanHitFriends"
+locals (0) for 000002C951623600:
+upvalues (0) for 000002C951623600:

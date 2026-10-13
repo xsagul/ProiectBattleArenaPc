@@ -1,0 +1,43 @@
+
+main <?:0,0> (24 instructions, 96 bytes at 000002591A863600)
+0+ params, 3 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirW.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "VladimirSanguinePool"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -7	; IsDeathRecapSource
+	11	[-]	NEWTABLE 	0 2 0
+	12	[-]	LOADK    	1 -9	; "BloodkingVladimir"
+	13	[-]	LOADK    	2 -10	; "VladimirSkin06"
+	14	[-]	SETLIST  	0 2 1	; 1
+	15	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	16	[-]	NEWTABLE 	0 1 0
+	17	[-]	LOADK    	1 -9	; "BloodkingVladimir"
+	18	[-]	SETLIST  	0 1 1	; 1
+	19	[-]	SETGLOBAL	0 -11	; SpellVOOverrideSkins
+	20	[-]	LOADBOOL 	0 1 0
+	21	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	22	[-]	LOADBOOL 	0 1 0
+	23	[-]	SETGLOBAL	0 -13	; TriggersSpellCasts
+	24	[-]	RETURN   	0 1
+constants (13) for 000002591A863600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirW.dds"
+	5	"BuffName"
+	6	"VladimirSanguinePool"
+	7	"IsDeathRecapSource"
+	8	"SpellFXOverrideSkins"
+	9	"BloodkingVladimir"
+	10	"VladimirSkin06"
+	11	"SpellVOOverrideSkins"
+	12	"IsDamagingSpell"
+	13	"TriggersSpellCasts"
+locals (0) for 000002591A863600:
+upvalues (0) for 000002591A863600:

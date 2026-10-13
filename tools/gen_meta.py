@@ -17,6 +17,14 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import gen_sources as G  # noqa: E402
+import gen_ui_refs
+import gen_reflected_buffers
+import gen_reflected_lifetimes
+import gen_cursor_arrays
+import gen_meta_placements
+import gen_vfx_runtime
+import gen_ui_elements
+import gen_poly_placements
 
 NL = chr(10)
 META_CTOR, META_DTOR, META_ADD, ATEXIT, EMPTY_TEXT = 0x9b9a60, 0x9bb6c0, 0x9bd410, 0xf411a5, 0x1532fb2
@@ -31,6 +39,29 @@ NATURAL = {1: 1, 2: 1, 3: 1, 4: 2, 5: 2, 6: 4, 7: 4, 8: 8, 9: 8, 0xa: 4, 0xb: 8,
            0x10: 12, 0x11: 4, 0x12: 8}
 OURS = {'MetaClass', 'MetaString', 'Vector2', 'Vector3', 'Vector4', 'Matrix44', 'Color', 'HashValue', 'FileLink',
         'RString', 'NoParent'}
+
+# Abstract bases have no reflection create/placement callback to reveal their
+# constructor. These entries are established by descendant calls and complete,
+# compiled constructor-body comparisons (agent_ctor_parent_probe_audit.json).
+BASE_CONSTRUCTORS = {'BaseLoadoutData': 0x22f580, 'TftCutsceneClip': 0x557440,
+                     'MapPlaceable': 0xa22bb0,'GenericMapPlaceable':0xa21380,'ILogicBoolDriver':0xa21cf0,
+                     'UiElementData': 0xadfd20, 'UIElement':0xadfb60, 'UiElementAsset':0xadfc40}
+
+CPP_KEYWORDS = set('alignas alignof asm auto bool break case catch char char16_t char32_t class const constexpr '
+                   'const_cast continue decltype default delete do double dynamic_cast else enum explicit export '
+                   'extern false float for friend goto if inline int long mutable namespace new noexcept nullptr '
+                   'operator private protected public register reinterpret_cast return short signed sizeof static '
+                   'static_assert static_cast struct switch template this thread_local throw true try typedef '
+                   'typeid typename union unsigned using virtual void volatile wchar_t while and and_eq bitand '
+                   'bitor compl not not_eq or or_eq xor xor_eq'.split())
+
+
+def cpp_member_name(name):
+    """Reflection spelling can be a C++ keyword, unlike a source identifier."""
+    name = re.sub(r'\W', '_', name)
+    if not name or name[0].isdigit():
+        name = 'm_' + name
+    return name + '_' if name in CPP_KEYWORDS else name
 
 
 def mangle(t):
@@ -559,7 +590,11 @@ def out_of_line(im, f):
     return None
 
 
-PRIM_SIZE = {1: 1, 2: 1, 3: 1, 4: 2, 5: 2, 6: 4, 7: 4, 8: 8, 9: 8, 0xa: 4, 0xb: 8, 0xc: 12, 0xd: 16, 0xf: 4, 0x11: 4}
+PRIM_SIZE = {1: 1, 2: 1, 3: 1, 4: 2, 5: 2, 6: 4, 7: 4, 8: 8, 9: 8, 0xa: 4, 0xb: 8, 0xc: 12, 0xd: 16, 0xf: 4,
+             0x10: 12, 0x11: 4}
+
+
+RDATA = (0xfab000, 0x1752000)       # rva range of .rdata, where the vtables are
 
 
 def create_stores(im, f):
@@ -572,13 +607,22 @@ def create_stores(im, f):
     if lines[:4] != [lines[0], 'call 0x9bb8d0', 'add esp, 4', 'test eax, eax'] or not lines[4].startswith('je ') \
             or lines[-2:] != ['xor eax, eax', 'ret'] or lines[-3] != 'ret':
         return None
-    out = {}
+    out, empty_registers = {}, set()
     for x in lines[5:-3]:
+        m = re.fullmatch(r'mov (ecx|edx), dword ptr \[0x1b467f0\]', x)
+        if m:
+            empty_registers.add(m[1])
+            continue
+        m = re.fullmatch(r'mov dword ptr \[eax(?: \+ (0x[0-9a-f]+|\d+))?\], (ecx|edx)', x)
+        if m and m[2] in empty_registers:
+            # A runtime empty-string pointer is initialized by MetaString's
+            # actual constructor, never substituted with a constant address.
+            continue
         m = re.fullmatch(r'mov (byte|word|dword) ptr \[eax(?: \+ (0x[0-9a-f]+|\d+))?\], (0x[0-9a-f]+|\d+)', x)
         if m:
             off, n, v = int(m[2] or '0', 0), {'byte': 1, 'word': 2, 'dword': 4}[m[1]], int(m[3], 0)
-            if off == 0 and n == 4 and v > G.P.BASE:
-                continue                    # the vtable pointer
+            if off == 0 and n == 4 and RDATA[0] <= v - G.P.BASE < RDATA[1]:
+                continue                    # the vtable pointer (a float such as 1.0f is far above the image)
             for j in range(n):
                 out[off + j] = (v >> (8 * j)) & 0xff
             continue
@@ -669,7 +713,7 @@ def simple_layout(im, a, facts, g, memo):
         n = PRIM_SIZE[code]
         raw = [stores.get(off + j) for j in range(n)]
         init = literal_of(code, bytes(raw)) if None not in raw else None
-        name = a.names.get(h) or f'm_{h:08x}'
+        name = cpp_member_name(a.names.get(h) or f'm_{h:08x}')
         out.append((off, PRIMITIVE[code], name, init))
         pos = off + n
     if f['size'] - pos >= 4:
@@ -678,12 +722,179 @@ def simple_layout(im, a, facts, g, memo):
     return out
 
 
+def zero_construct(im, rva, size):
+    """A placement constructor that only clears a contiguous prefix of the object.
+
+    Preserve scalar member initialization separately from block clearing: MSVC emits
+    different code for the two source forms even when their byte stores agree.
+    """
+    text = im.text(rva) if rva else None
+    if not text:
+        return None
+    lines = text.split(NL)
+    # The index can concatenate another function after an unconditional return.
+    # This form has no branches, so instructions after its first ret are unreachable.
+    if 'ret' in lines:
+        lines = lines[:lines.index('ret') + 1]
+    if lines[0] != 'mov eax, dword ptr [esp + 4]' or lines[-1] != 'ret':
+        return None
+    stores, vector = [], False
+    for line in lines[1:-1]:
+        if line == 'xorps xmm0, xmm0' and not stores and not vector:
+            vector = True
+            continue
+        m = re.fullmatch(r'mov dword ptr \[eax(?: \+ (0x[0-9a-f]+|\d+))?\], 0', line)
+        if m:
+            stores.append((int(m[1] or '0', 0), 4))
+            continue
+        m = re.fullmatch(r'mov(q|ups) (?:qword|xmmword) ptr \[eax(?: \+ (0x[0-9a-f]+|\d+))?\], xmm0', line)
+        if m and vector:
+            stores.append((int(m[2] or '0', 0), 8 if m[1] == 'q' else 16))
+            continue
+        return None
+    end = 0
+    for off, width in stores:
+        if off != end:
+            return None
+        end += width
+    if not end or end > size:
+        return None
+    return ('block' if vector else 'members'), end
+
+
+def constant_construct(im, rva, size, member=False, sse=False):
+    """Ordered scalar initialization stores, with untouched gaps kept as padding.
+
+    Absolute image addresses are not integer defaults: their source needs the
+    referenced object or function, so this deliberately leaves those forms out.
+    """
+    text = im.text(rva) if rva else None
+    if not text:
+        return None
+    lines = text.split(NL)
+    if member:
+        if 'ret' not in lines:
+            return None
+        lines = lines[:lines.index('ret') + 1]
+        if lines.count('mov eax, ecx') != 1 or 'xor ecx, ecx' in lines:
+            return None
+        lines = ['mov eax, dword ptr [esp + 4]'] + [
+            line.replace('[ecx', '[eax') for line in lines if line != 'mov eax, ecx']
+    if 'ret' not in lines or lines[0] != 'mov eax, dword ptr [esp + 4]':
+        return None
+    lines = lines[1:lines.index('ret')]
+    stores, zero_regs, end, zero_vector = [], set(), 0, False
+    for line in lines:
+        if sse and line == 'xorps xmm0, xmm0':
+            zero_vector = True
+            continue
+        m = re.fullmatch(r'xor (ecx|edx), \1', line)
+        if m:
+            zero_regs.add(m[1])
+            continue
+        m = re.fullmatch(r'mov (byte|word|dword) ptr \[eax(?: \+ (0x[0-9a-f]+|\d+))?\], '
+                         r'(0x[0-9a-f]+|\d+|ecx|cx|cl|edx|dx|dl)', line)
+        if not m:
+            vector = re.fullmatch(r'mov(q|ups) (qword|xmmword) ptr \[eax(?: \+ (0x[0-9a-f]+|\d+))?\], xmm0', line)
+            if not sse or not zero_vector or not vector or (vector[1], vector[2]) not in (
+                    ('q', 'qword'), ('ups', 'xmmword')):
+                return None
+            width, off, value, register = 8 if vector[1] == 'q' else 16, int(vector[3] or '0', 0), 0, None
+        else:
+            width = {'byte': 1, 'word': 2, 'dword': 4}[m[1]]
+            off = int(m[2] or '0', 0)
+            register = {'ecx': ('ecx', 4), 'cx': ('ecx', 2), 'cl': ('ecx', 1),
+                    'edx': ('edx', 4), 'dx': ('edx', 2), 'dl': ('edx', 1)}.get(m[3])
+        if m and register:
+            if register[0] not in zero_regs or register[1] != width:
+                return None
+            value = 0
+        elif m:
+            value = int(m[3], 0)
+        if off < end or off + width > size or value >= 1 << (width * 8):
+            return None
+        if G.P.BASE <= value < G.P.BASE + len(im.img):
+            return None
+        stores.append((off, width, value))
+        end = off + width
+    # A three-component aggregate clears 8+4 bytes, with vector zeroing
+    # scheduled before scalar-register zeroing. Preserve that aggregate source
+    # form; separate Vector2/u32 members take the other compiler path.
+    if sse and len(stores) >= 2 and stores[:2] == [(0, 8, 0), (8, 4, 0)] and \
+            'xorps xmm0, xmm0' in lines and 'xor ecx, ecx' in lines and \
+            lines.index('xorps xmm0, xmm0') < lines.index('xor ecx, ecx'):
+        stores[:2] = [(0, 12, 0)]
+    return stores or None
+
+
+def constant_members(stores, size, align):
+    """Scalar defaults at their observed offsets; no initialization of gaps."""
+    body, pos = [], 0
+    for off, width, value in stores:
+        if off > pos:
+            body.append(f'    u8 unknown{pos:02x}[{off - pos:#x}];')
+        if width > 4:
+            if align >= 4:
+                body.append(f'    ::Vector{width // 4} unknown{off:02x} = {{}};')
+            else:
+                body.append(f'    u8 unknown{off:02x}[{width:#x}] = {{}};')
+            pos = off + width
+            continue
+        # A narrower natural alignment needs narrower members, not a packed cast.
+        # The compiler is allowed to coalesce adjacent byte/word initializers.
+        unit = min(width, align, 4)
+        while off % unit:
+            unit //= 2
+        typ = {1: 'u8', 2: 'u16', 4: 'u32'}[unit]
+        for delta in range(0, width, unit):
+            v = (value >> (delta * 8)) & ((1 << (unit * 8)) - 1)
+            body.append(f'    {typ} unknown{off + delta:02x} = {v:#x};')
+        pos = off + width
+    if pos < size:
+        body.append(f'    u8 unknown{pos:02x}[{size - pos:#x}];')
+    return body
+
+
+def hash_pair_layout(im, a, f, g):
+    """Two native 12-byte hash-key subobjects with reflected hashes at 0 and 12."""
+    if f['parent'] is not None or f['poly'] or f['align'] != 4 or f['size'] != 24:
+        return None
+    expected = ('push esi\nmov esi, dword ptr [esp + 8]\nmov ecx, esi\n'
+                'call 0x9ba240\nlea ecx, [esi + 0xc]\npop esi\njmp 0x9ba240')
+    if im.text(f['construct']) != expected:
+        return None
+    # The called constructor proves the eight runtime bytes following each hash.
+    if im.text(0x9ba240) != ('mov dword ptr [ecx], 0\nmov eax, ecx\n'
+                            'mov dword ptr [ecx + 4], 0\n'
+                            'mov dword ptr [ecx + 8], 0x7fffffff\nret'):
+        return None
+    members = []
+    for event in a.followed.get(g, ()):
+        if event[0] != 'call' or event[2] != g or event[1] == META_CTOR:
+            continue
+        if member_wrapper(im, event[1]) != (0x11, 0):
+            return None
+        args = event[3]
+        if len(args) != 3 or args[0][0] != 'imm' or args[1][0] != 'imm':
+            return None
+        off, hashed = args[1][1], args[0][1]
+        name = cpp_member_name(a.names.get(hashed) or f'm_{hashed:08x}')
+        members.append((off, name))
+    members.sort()
+    if len(members) != 2 or [off for off, _ in members] != [0, 12] or len({name for _, name in members}) != 2:
+        return None
+    return [f'    UiHashKey {name};     // +{off:#x}, reflected hash and native runtime key state'
+            for off, name in members]
+
+
 def bin_classes(im, a=None):
     """Placeholder definitions of the described classes: base, size, alignment, virtual or not, and the constructor /
     destructor where the client has them as functions of their own. Members are not laid out yet."""
     a = a or analysis(im)
     facts = class_facts(im, a)
-    defs, order, seen, memo = {}, [], set(), {}
+    defs, order, seen, memo, zero_ctors, constant_ctors, native_ctors = {}, [], set(), {}, {}, {}, {}
+    implicit_dtors, string_ctors, hash_ctors, buffer_ctors, ui_inline_ctors = set(), set(), set(), set(), set()
+    poly_inline_ctors = set()
     for g, f in facts.items():
         k = a.cls[g]
         if k not in a.unique:
@@ -697,23 +908,116 @@ def bin_classes(im, a=None):
             continue
         ctor_at = {x[2] for x in (out_of_line(im, f['create']), out_of_line(im, f['construct']))
                    if x and x[0] in ('create', 'jump')}
+        if k in BASE_CONSTRUCTORS:
+            ctor_at.add(BASE_CONSTRUCTORS[k])
         dtor_at = set() if f['poly'] else {x[2] for x in (out_of_line(im, f['destruct']), out_of_line(im, f['destroy']))
                                            if x}
+        layout = simple_layout(im, a, facts, g, memo)
+        ui_layout = gen_ui_refs.layout_of(im, a, f, g)
+        hash_layout = hash_pair_layout(im, a, f, g)
+        buffer_layout = gen_reflected_buffers.layout_of(im, a, f, g)
+        lifetime_layout = gen_reflected_lifetimes.layout_of(im, a, f, g)
+        cursor_layout = gen_cursor_arrays.layout_of(im,a,f,g)
+        placement_layout=gen_meta_placements.layout_of(im,a,f,g)
+        vfx_layout=gen_vfx_runtime.layout_of(im,a,f,g)
+        element_layout=gen_ui_elements.layout_of(im,a,f,g)
+        poly_layout = None
+        if not ctor_at and all(x is None for x in (layout, ui_layout, hash_layout, buffer_layout, lifetime_layout,
+                                                   cursor_layout, placement_layout, vfx_layout, element_layout)):
+            poly_layout = gen_poly_placements.layout_of(im, a, f, g)
+            if poly_layout is not None:
+                poly_inline_ctors.add(g)
+        if element_layout is not None:
+            dtor_at=set();implicit_dtors.add(g)
+            if k=='AnchorSingle':
+                ctor_at=set();ui_inline_ctors.add(g)
+        if vfx_layout is not None:
+            ctor_at=set();dtor_at=set();implicit_dtors.add(g)
+        if placement_layout is not None and k=='Class_bafabcc8':base='LevelSingleton<Class_bafabcc8>, BinObject'
+        if lifetime_layout is not None:
+            dtor_at = set()
+            implicit_dtors.add(g)
+        if buffer_layout is not None:
+            buffer_ctors.add(g)
+        if hash_layout is not None:
+            hash_ctors.add(g)
+        if ui_layout is not None:
+            dtor_at = set()
+            implicit_dtors.add(g)
+        has_strings = layout is not None and any(typ == 'MetaString' for off, typ, name, init in layout)
+        if has_strings and not ctor_at:
+            string_ctors.add(g)
+        if has_strings and layout[0][0] == 0 and layout[0][1] == 'MetaString' and dtor_at == {0x9bab90}:
+            # Let C++ destroy the real string member. An external class dtor
+            # alias at RString's address is no longer needed or justified.
+            dtor_at = set()
+            implicit_dtors.add(g)
+        constants = constant_construct(im, f['construct'], f['size'], sse=True) if not base and layout is None else None
+        native = len(ctor_at) == 1 and constants and \
+            constant_construct(im, min(ctor_at), f['size'], member=True, sse=True) == constants
+        if native:
+            native_ctors[g] = min(ctor_at)
         body = []
-        if len(ctor_at) == 1:
+        if len(ctor_at) == 1 and not native:
             body.append(f'    {k}();          // rva {min(ctor_at):#x}')
         if len(dtor_at) == 1:
             body.append(f'    ~{k}();         // rva {min(dtor_at):#x}')
         if f['poly']:
             body.append('    const MetaClass* GetClass() const override;')
-        layout = simple_layout(im, a, facts, g, memo)
-        if layout is not None:
+        if k == 'ViewController':
+            body.append('    void PostLoad(); // rva 0xaefdb0')
+        zero = zero_construct(im, f['construct'], f['size']) if not base and not ctor_at else None
+        scalar_layout = zero and zero[0] == 'members' and layout is not None and \
+            len(layout) * 4 == zero[1] == f['size'] and all(
+                off == i * 4 and (typ == 'HashValue' or typ in ('u32', 'int', 'float')) and
+                init in ('0', '0.0f', '{0x0}') for i, (off, typ, name, init) in enumerate(layout))
+        if scalar_layout:
+            assignments = ' '.join(f'{name}' + ('.value' if typ == 'HashValue' else '') + ' = 0;'
+                                   for off, typ, name, init in layout)
+            body.append(f'    {k}() {{ {assignments} }}')
+            zero_ctors[g] = zero
+        zero_dtor = zero_construct(im, f['destruct'], f['size']) if not base and not dtor_at else None
+        if zero_dtor:
+            body.append(f'    ~{k}() {{ std::memset(this, 0, {zero_dtor[1]:#x}); }}')
+        if element_layout is not None:
+            body += element_layout
+        elif ui_layout is not None:
+            body += ui_layout
+        elif hash_layout is not None:
+            body += hash_layout
+        elif buffer_layout is not None:
+            body += buffer_layout
+        elif lifetime_layout is not None:
+            body += lifetime_layout
+        elif cursor_layout is not None:
+            body += cursor_layout
+        elif placement_layout is not None:
+            body += placement_layout
+        elif vfx_layout is not None:
+            body += vfx_layout
+        elif poly_layout is not None:
+            body += poly_layout
+        elif layout is not None:
             for off, typ, name, init in layout:
                 t = typ if typ in MANGLED else '::' + typ
-                body.append(f'    {t} {name}' + (f' = {init}' if init is not None else '') + f';     // +{off:#x}')
+                body.append(f'    {t} {name}' + (f' = {init}' if init is not None and not scalar_layout else '') + f';     // +{off:#x}')
         else:
             n = f['size'] - base_size
-            if n:
+            zero = zero_construct(im, f['construct'], n) if not base and not ctor_at else None
+            constants = constants if not ctor_at or native else None
+            if zero and (zero[0] == 'block' or f['align'] >= 4):
+                zero_ctors[g] = zero
+                if zero[0] == 'members':
+                    body += [f'    u32 unknown{off:02x} = 0;' for off in range(0, zero[1], 4)]
+                    if n > zero[1]:
+                        body.append(f'    u8 unknown{zero[1]:02x}[{n - zero[1]:#x}];')
+                else:
+                    body.append(f'    {k}() {{ std::memset(unknown00, 0, {zero[1]:#x}); }}')
+                    body.append(f'    u8 unknown00[{n:#x}];')
+            elif constants:
+                body += constant_members(constants, n, f['align'])
+                constant_ctors[g] = constants
+            elif n:
                 body.append(f'    u8 unknown{base_size:02x}[{n:#x}];')
         al = f' alignas({f["align"]})' if f['align'] > 4 else ''
         defs[g] = ([f'struct{al} {k}' + (f' : {base}' if base else ''), '{'] + body +
@@ -724,6 +1028,12 @@ def bin_classes(im, a=None):
             return
         seen.add(g)
         visit(facts[g]['parent'])
+        if gen_ui_elements.MANIFEST.exists() and a.cls[g] in ('UiElementData','UiPositionRect'):
+            dependency='UiPositionRect' if a.cls[g]=='UiElementData' else 'AnchorSingle'
+            visit(next((dg for dg in defs if a.cls[dg]==dependency),None))
+        if a.cls[g] in ('FlexValueVector3','VfxFieldAccelerationDefinitionData','VfxFieldOrbitalDefinitionData',
+                        'VfxParentInheritanceParams','VfxTrailDefinitionData') and gen_vfx_runtime.MANIFEST.exists():
+            visit(next((dg for dg in defs if a.cls[dg]=='ValueVector3'),None))
         order.append(g)
     for g in sorted(defs, key=lambda g: a.cls[g]):
         visit(g)
@@ -731,12 +1041,35 @@ def bin_classes(im, a=None):
     out = ['// The classes the reflection describes, as far as the client shows them so far (generated by',
            '// tools/gen_meta.py): base class, size, alignment, virtual or not, and the constructor / destructor where',
            '// the client has them as functions of their own. The members are not laid out yet (unknownXX).',
-           '#pragma once', '#include "MetaClasses.h"', '']
+           '#pragma once', '#include "MetaClasses.h"', '#include "UiResourceRefs.h"', '#include "ReflectedBuffers.h"',
+           '#include "ReflectedElementDefaults.h"', '#include <cstring>', '']
+    out.insert(out.index('#include <cstring>'),'#include "MetaPlacementSupport.h"')
+    if gen_vfx_runtime.HEADER.exists():out.insert(out.index('#include <cstring>'),'#include "VfxRuntimePointers.h"')
+    if gen_ui_elements.HEADER.exists():out.insert(out.index('#include <cstring>'),'#include "UiElementOwners.h"')
+    if gen_poly_placements.manifest():
+        out.insert(out.index('#include <cstring>'), '#include "PolyPlacementGlobals.h"')
     out += [x for g in order for x in defs[g]]
     a.defined = set(order)
     a.laid_out = {g for g in order if memo.get(g) is not None}
+    a.zero_ctors = {g: zero_ctors[g] for g in order if g in zero_ctors}
+    a.inline_ctors = set(a.zero_ctors) | (set(constant_ctors) & set(order)) | (string_ctors & set(order)) | ((hash_ctors | buffer_ctors | ui_inline_ctors | poly_inline_ctors) & set(order))
+    a.implicit_dtors = implicit_dtors & set(order)
+    a.native_ctors = {g: native_ctors[g] for g in order if g in native_ctors}
     print(f'bin classes: {len(order)} of {len(facts)} described classes defined')
     return out, 0
+
+
+def external_template_instances():
+    """Explicit callbacks owned by another translation unit must not be instantiated here."""
+    owned = set()
+    for src in G.M.sources():
+        if os.path.basename(src) == 'MetaFunctions.cpp':
+            continue
+        with open(src, encoding='utf-8') as source:
+            for m in re.finditer(r'^template (?:<>\s*)?(?:void\*|void) (Meta\w+)<(\w+)>\(',
+                                 source.read(), re.M):
+                owned.add((m[1], m[2]))
+    return owned
 
 
 def meta_functions(im, a=None):
@@ -765,8 +1098,10 @@ def meta_functions(im, a=None):
             o = out_of_line(im, f[key])
             if o and o[0] in ('create', 'jump') and (o[1] is None or o[1] == f['size']):
                 claims.setdefault(f[key], (fn, k))
+            if g in a.inline_ctors and f[key]:
+                claims.setdefault(f[key], (fn, k))
         # classes laid out in full: `new K` / `new (p) K` inline
-        if g in a.laid_out and f['create'] and create_stores(im, f['create']) is not None:
+        if (g in a.laid_out or g in a.zero_ctors) and f['create'] and create_stores(im, f['create']) is not None:
             claims.setdefault(f['create'], ('MetaCreate', k))
             if f['construct'] and (im.text(f['construct']) or '').startswith('mov eax, dword ptr [esp + 4]'):
                 claims.setdefault(f['construct'], ('MetaConstruct', k))
@@ -779,13 +1114,18 @@ def meta_functions(im, a=None):
                 vclaims.setdefault(slot0, ('dtor', k))
                 vclaims.setdefault(slot1, ('getclass', k))
                 vall += [(slot0, 'dtor', k), (slot1, 'getclass', k)]
-    claims = {r: c for r, c in claims.items() if r not in im.done}
-    sig = {'MetaCreate': 'PAXXZ', 'MetaConstruct': 'PAXPAX@Z', 'MetaDestroy': 'XPAX@Z', 'MetaDestruct': 'XPAX@Z',
+    owned = external_template_instances()
+    claims = {r: c for r, c in claims.items() if r not in im.done and c not in owned}
+    sig = {'MetaCreate': 'PAXXZ', 'MetaConstruct': 'XPAX@Z', 'MetaDestroy': 'XPAX@Z', 'MetaDestruct': 'XPAX@Z',
            'MetaVirtual2': 'XPAX@Z'}
     out = ['// The functions a class description points at (Meta.h), for the classes of BinClasses.h whose code the',
            '// placeholder definitions already give (generated by tools/gen_meta.py). Identical code folding gives one',
            '// function to many classes; each address is claimed for one of them.']
     out += [f'// match: {r:x} ??${fn}@U{k}@@@@YA{sig[fn]}' for r, (fn, k) in sorted(claims.items())]
+    native_claims = {}
+    for g, r in sorted(a.native_ctors.items(), key=lambda item: a.cls[item[0]]):
+        native_claims.setdefault(r, a.cls[g])
+    out += [f'// match: {r:x} ??0{k}@@QAE@XZ' for r, k in sorted(native_claims.items()) if r not in im.done]
     # the other classes whose description points at a claimed function (folded into it), and constructors /
     # destructors folded into a function rebuilt under another name (a class whose destructor is RString's)
     same = set()
@@ -797,25 +1137,43 @@ def meta_functions(im, a=None):
             continue
         for key, fn in names.items():
             r = f[key]
-            if r in claims and claims[r] != (fn, k):
+            if r in claims and claims[r] != (fn, k) and (fn, k) not in owned:
                 same.add(f'// same: {r:x} ??${fn}@U{k}@@@@YA{sig[fn]}')
         if g in a.defined and not f['poly']:
             for key, sym in (('create', f'??0{k}@@QAE@XZ'), ('construct', f'??0{k}@@QAE@XZ'),
                              ('destruct', f'??1{k}@@QAE@XZ'), ('destroy', f'??1{k}@@QAE@XZ')):
+                if key in ('destruct', 'destroy') and g in a.implicit_dtors:
+                    continue
                 o = out_of_line(im, f[key])
                 if o and o[2] in im.done:
                     same.add(f'// same: {o[2]:x} {sym}')
     out += sorted(same)
     out += ['#include "BinClasses.h"', '',
             'template <class T> void* MetaCreate() { return new T; }',
-            'template <class T> void* MetaConstruct(void* p) { return new (p) T; }',
+            'template <class T> void MetaConstruct(void* p) { new (p) T; }',
             'template <class T> void MetaDestroy(void* p) { delete static_cast<T*>(p); }',
             'template <class T> void MetaDestruct(void* p) { static_cast<T*>(p)->~T(); }',
             'template <class T> void MetaVirtual2(void* p) { static_cast<T*>(p)->Virtual2(); }', '']
-    sigs = {'MetaCreate': 'void* MetaCreate<{}>()', 'MetaConstruct': 'void* MetaConstruct<{}>(void*)',
+    sigs = {'MetaCreate': 'void* MetaCreate<{}>()', 'MetaConstruct': 'void MetaConstruct<{}>(void*)',
             'MetaDestroy': 'void MetaDestroy<{}>(void*)', 'MetaDestruct': 'void MetaDestruct<{}>(void*)',
             'MetaVirtual2': 'void MetaVirtual2<{}>(void*)'}
-    out += [f'template {sigs[fn].format(k)};' for r, (fn, k) in sorted(claims.items())]
+    instances = {(fn, k) for fn, k in claims.values()}
+    aliases = []
+    # Instantiate every folded template body as well as each representative.
+    # Equal target addresses alone do not prove that the class definition emits it.
+    for line in sorted(same):
+        m = re.fullmatch(r'// same: ([0-9a-f]+) (\?\?\$(\w+)@U(\w+)@@@@\S+)', line)
+        if m:
+            aliases.append((int(m[1], 16), m[3], m[4]))
+            instances.add((m[3], m[4]))
+    out = [line for line in out if not re.match(r'// same: [0-9a-f]+ \?\?\$', line)]
+    for g in sorted(a.inline_ctors, key=lambda g: a.cls[g]):
+        for key, fn in (('create', 'MetaCreate'), ('construct', 'MetaConstruct')):
+            r, k = facts[g][key], a.cls[g]
+            if r and r not in claims and (fn, k) not in owned:
+                aliases.append((r, fn, k))
+                instances.add((fn, k))
+    out += [f'template {sigs[fn].format(k)};' for fn, k in sorted(instances)]
     vsym = {'dtor': '??_G{}@@UAEPAXI@Z', 'getclass': '?GetClass@{}@@UBEPBUMetaClass@@XZ'}
     vmatch, vsame = [], set()
     for r, kind, k in vall:
@@ -828,6 +1186,33 @@ def meta_functions(im, a=None):
     out += [''] + [f'const MetaClass* {k}::GetClass() const {{ return MetaClassOf(({k}*)nullptr); }}' for k in getclass]
     head = out.index('#include "BinClasses.h"')
     out[head:head] = vmatch + sorted(vsame)
+    # Folded addresses need a real, compiled body for the reflected type.
+    if aliases:
+        path = os.path.join(G.M.OUT, 'meta_zero_candidates.cpp')
+        with open(path, 'w', encoding='utf-8') as candidate:
+            candidate.write(NL.join(out).replace('#include "BinClasses.h"',
+                                                '#include "../src/gen/BinClasses.h"') + NL)
+        obj = G.M.compile_obj(path, G.M.FLAGS)
+        verified = 0
+        for r, fn, k in sorted(set(aliases)):
+            sym = f'??${fn}@U{k}@@@@YA{sig[fn]}'
+            result = G.M.compare(path, sym, r, G.M.FLAGS, obj)
+            if result[3] is None:
+                out.insert(3, f'// same: {r:x} {sym}')
+                verified += 1
+        print(f'folded template aliases: {verified} of {len(set(aliases))} verified')
+        for g, r in a.native_ctors.items():
+            sym = f'??0{a.cls[g]}@@QAE@XZ'
+            if r not in im.done:
+                continue
+            # A failed candidate is also in im.done during regeneration. Its
+            # constructor must never reappear as an unchecked alias.
+            out = [line for line in out if line != f'// same: {r:x} {sym}']
+            try:
+                if G.M.compare(path, sym, r, G.M.FLAGS, obj)[3] is None:
+                    out.insert(3, f'// same: {r:x} {sym}')
+            except SystemExit:
+                pass
     print(f'meta functions: {len(claims)}')
     return out, len(claims)
 

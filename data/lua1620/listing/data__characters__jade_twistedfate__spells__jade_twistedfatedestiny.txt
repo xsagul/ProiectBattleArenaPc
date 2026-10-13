@@ -1,0 +1,45 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 000001C91CAB3630)
+0+ params, 4 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/UX/Jade/S3Icons/SameSized/Jade_TwistedFate_Destiny_temp.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Jade_TwistedFateDestiny"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "c_buffbone_glb_layout_loc"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateAttachBoneName
+	11	[-]	LOADK    	0 -10	; 0.75
+	12	[-]	SETGLOBAL	0 -9	; SpellDamageRatio
+	13	[-]	NEWTABLE 	0 3 0
+	14	[-]	LOADK    	1 -12	; 150
+	15	[-]	LOADK    	2 -13	; 135
+	16	[-]	LOADK    	3 -14	; 120
+	17	[-]	SETLIST  	0 3 1	; 1
+	18	[-]	SETGLOBAL	0 -11	; AutoCooldownByLevel
+	19	[-]	NEWTABLE 	0 1 0
+	20	[-]	LOADK    	1 -16	; "UnderworldJade_TwistedFate"
+	21	[-]	SETLIST  	0 1 1	; 1
+	22	[-]	SETGLOBAL	0 -15	; SpellFXOverrideSkins
+	23	[-]	RETURN   	0 1
+constants (16) for 000001C91CAB3630:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/UX/Jade/S3Icons/SameSized/Jade_TwistedFate_Destiny_temp.dds"
+	5	"BuffName"
+	6	"Jade_TwistedFateDestiny"
+	7	"AutoBuffActivateAttachBoneName"
+	8	"c_buffbone_glb_layout_loc"
+	9	"SpellDamageRatio"
+	10	0.75
+	11	"AutoCooldownByLevel"
+	12	150
+	13	135
+	14	120
+	15	"SpellFXOverrideSkins"
+	16	"UnderworldJade_TwistedFate"
+locals (0) for 000001C91CAB3630:
+upvalues (0) for 000001C91CAB3630:

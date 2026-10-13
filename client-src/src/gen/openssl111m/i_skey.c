@@ -4,4 +4,6 @@
 // match: e24bf0 _IDEA_set_decrypt_key
 // match: e24c80 _IDEA_set_encrypt_key
 // match: e24df0 _inverse
+#define OPENSSL_FILE "crypto\\idea\\i_skey.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/idea/i_skey.c"

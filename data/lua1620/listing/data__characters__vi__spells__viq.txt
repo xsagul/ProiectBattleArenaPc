@@ -1,0 +1,59 @@
+
+main <?:0,0> (32 instructions, 128 bytes at 0000017248543590)
+0+ params, 7 slots, 0 upvalues, 0 locals, 21 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "VarusQCharging.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "ViQ"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; 1
+	12	[-]	SETGLOBAL	0 -8	; SpellToggleSlot
+	13	[-]	LOADK    	0 -11	; 3
+	14	[-]	SETGLOBAL	0 -10	; OnPreDamagePriority
+	15	[-]	LOADBOOL 	0 0 0
+	16	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	17	[-]	NEWTABLE 	0 0 6
+	18	[-]	NEWTABLE 	1 5 0
+	19	[-]	LOADK    	2 -15	; 4
+	20	[-]	LOADK    	3 -15	; 4
+	21	[-]	LOADK    	4 -15	; 4
+	22	[-]	LOADK    	5 -15	; 4
+	23	[-]	LOADK    	6 -15	; 4
+	24	[-]	SETLIST  	1 5 1	; 1
+	25	[-]	SETTABLE 	0 -14 1	; "MaximumHits" -
+	26	[-]	SETTABLE 	0 -16 -17	; "CanHitCaster" 0
+	27	[-]	SETTABLE 	0 -18 -17	; "CanHitSameTarget" 0
+	28	[-]	SETTABLE 	0 -19 -17	; "CanHitSameTargetConsecutively" 0
+	29	[-]	SETTABLE 	0 -20 -9	; "CanHitEnemies" 1
+	30	[-]	SETTABLE 	0 -21 -17	; "CanHitFriends" 0
+	31	[-]	SETGLOBAL	0 -13	; ChainMissileParameters
+	32	[-]	RETURN   	0 1
+constants (21) for 0000017248543590:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"VarusQCharging.dds"
+	6	"BuffName"
+	7	"ViQ"
+	8	"SpellToggleSlot"
+	9	1
+	10	"OnPreDamagePriority"
+	11	3
+	12	"IsDamagingSpell"
+	13	"ChainMissileParameters"
+	14	"MaximumHits"
+	15	4
+	16	"CanHitCaster"
+	17	0
+	18	"CanHitSameTarget"
+	19	"CanHitSameTargetConsecutively"
+	20	"CanHitEnemies"
+	21	"CanHitFriends"
+locals (0) for 0000017248543590:
+upvalues (0) for 0000017248543590:

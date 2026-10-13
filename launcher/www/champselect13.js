@@ -2,7 +2,9 @@
 // Element trees: data/lcu133/templates/rcp-fe-lol-champ-select/*.hbs (each builder names its layout); state
 // classes from the components' classNameBindings; style sheet, pictures, sounds, texts and champion data are the
 // client's. Low spec mode (no large-area animations: the image backgrounds instead of the videos).
-// Not there yet: runes / summoner spells / skins (loadouts-edit, skin-select), chat, bans, the other nine players.
+// Summoner spells and the skin are chosen in a plain strip of our own under the champion's name once it is locked
+// (the client's loadouts-edit / skin-select components are not rebuilt). Not there: runes, chat, bans, the other
+// nine players.
 'use strict';
 
 const CS_SOUNDS = '/fe/lol-champ-select/sounds/';
@@ -12,15 +14,31 @@ const PHASE_SECONDS = { draft: [30, 30], blind: [90, 10] };
 
 const CSEL = {
   phase: 'BAN_PICK', phaseEnds: 0, selected: null, locked: null, search: '', filters: {}, lastTick: -1,
-  starting: false, error: '',
+  starting: false, error: '', spells: ['SummonerFlash', 'SummonerDot'], skin: 0, choosing: -1, runes: '',
 };
+// the rune pages the server knows (server/core/runes.py); '' = the page of the champion's class
+const CS_RUNES = [['', 'Runes: by class'], ['Conqueror', 'Conqueror'], ['Electrocute', 'Electrocute'],
+  ['PressTheAttack', 'Press the Attack'], ['SummonAery', 'Summon Aery'], ['GraspOfTheUndying', 'Grasp of the Undying']];
+// the game's names of the summoner spells of Summoner's Rift, their client names and icons (lol-game-data)
+const CS_SPELLS = [
+  ['SummonerFlash', 'Flash', 'Summoner_flash.png'], ['SummonerDot', 'Ignite', 'SummonerIgnite.png'],
+  ['SummonerHeal', 'Heal', 'Summoner_heal.png'], ['SummonerHaste', 'Ghost', 'Summoner_haste.png'],
+  ['SummonerBarrier', 'Barrier', 'SummonerBarrier.png'], ['SummonerExhaust', 'Exhaust', 'Summoner_exhaust.png'],
+  ['SummonerSmite', 'Smite', 'Summoner_smite.png'], ['SummonerTeleport', 'Teleport', 'Summoner_teleport.png'],
+  ['SummonerBoost', 'Cleanse', 'Summoner_boost.png'],
+];
+const csSpellIcon = (id) => '/lol-game-data/assets/DATA/Spells/Icons2D/' + (CS_SPELLS.find((s) => s[0] === id) || CS_SPELLS[0])[2];
+try {
+  const saved = JSON.parse(localStorage.getItem('ba.spells') || 'null');
+  if (Array.isArray(saved) && saved.length === 2 && saved.every((s) => CS_SPELLS.some((x) => x[0] === s))) CSEL.spells = saved;
+} catch (e) { /* no stored choice */ }
 
 function csText(k) { return S.csTra[k] ?? k; }
 
 function startChampSelect() {
   const [pick] = PHASE_SECONDS[QUEUE_PICK[S.selected.queueId]] || PHASE_SECONDS.blind;
   Object.assign(CSEL, { phase: 'BAN_PICK', phaseEnds: performance.now() + pick * 1000, selected: null, locked: null,
-    search: '', filters: {}, lastTick: -1, starting: false, error: '' });
+    search: '', filters: {}, lastTick: -1, starting: false, error: '', skin: 0, choosing: -1 });
   S.screen = 'champSelect';
   render();
 }
@@ -203,12 +221,64 @@ function csLockIn() {
   return node;
 }
 
+// the two summoner spells and the skin of the locked champion
+function csLoadout() {
+  const skins = (CSEL.locked && CSEL.locked.skins) || [];
+  const skin = skins.find((s) => s.num === CSEL.skin);
+  const node = el(`
+    <div class="cs-loadout" style="position:absolute;left:50%;bottom:86px;transform:translateX(-50%);display:flex;gap:18px;align-items:center;z-index:5;">
+      <div class="cs-skin" style="display:${skins.length > 1 ? 'flex' : 'none'};gap:8px;align-items:center;color:#f0e6d2;font-family:var(--font-display, serif);font-size:13px;letter-spacing:0.05em;">
+        <div class="cs-skin-prev" style="cursor:pointer;padding:4px 8px;border:1px solid #785a28;">&#9664;</div>
+        <div style="min-width:180px;text-align:center;">${esc(skin ? skin.name : '')}</div>
+        <div class="cs-skin-next" style="cursor:pointer;padding:4px 8px;border:1px solid #785a28;">&#9654;</div>
+      </div>
+      <div class="cs-spells" style="display:flex;gap:6px;position:relative;"></div>
+      <select class="cs-runes" style="background:#010a13;color:#f0e6d2;border:1px solid #785a28;padding:6px 8px;font-size:12px;">
+        ${CS_RUNES.map(([id, name]) => `<option value="${id}" ${CSEL.runes === id ? 'selected' : ''}>${esc(name)}</option>`).join('')}
+      </select>
+    </div>`);
+  node.querySelector('.cs-runes').onchange = (e) => { CSEL.runes = e.target.value; };
+  const step = (d) => {
+    const i = Math.max(0, skins.findIndex((s) => s.num === CSEL.skin));
+    CSEL.skin = skins[(i + d + skins.length) % skins.length].num;
+    play('/fe/lol-uikit/sfx-uikit-generic-click-small.ogg');
+    render();
+  };
+  node.querySelector('.cs-skin-prev').onclick = () => step(-1);
+  node.querySelector('.cs-skin-next').onclick = () => step(1);
+  const box = node.querySelector('.cs-spells');
+  CSEL.spells.forEach((id, slot) => {
+    const b = el(`<div title="${esc((CS_SPELLS.find((s) => s[0] === id) || [])[1] || '')}" style="width:40px;height:40px;cursor:pointer;border:1px solid ${CSEL.choosing === slot ? '#f0e6d2' : '#785a28'};background:url(${csSpellIcon(id)}) center/cover;"></div>`);
+    b.onclick = () => { CSEL.choosing = CSEL.choosing === slot ? -1 : slot; play('/fe/lol-uikit/sfx-uikit-generic-click-small.ogg'); render(); };
+    box.appendChild(b);
+  });
+  if (CSEL.choosing >= 0) {
+    const pop = el('<div style="position:absolute;bottom:50px;left:50%;transform:translateX(-50%);display:grid;grid-template-columns:repeat(5,40px);gap:4px;padding:8px;background:#010a13;border:1px solid #785a28;"></div>');
+    for (const [id, name, icon] of CS_SPELLS) {
+      const o = el(`<div title="${esc(name)}" style="width:40px;height:40px;cursor:pointer;border:1px solid #463714;background:url(/lol-game-data/assets/DATA/Spells/Icons2D/${icon}) center/cover;"></div>`);
+      o.onclick = () => {
+        const other = 1 - CSEL.choosing;
+        if (CSEL.spells[other] === id) CSEL.spells[other] = CSEL.spells[CSEL.choosing];     // the two swap places
+        CSEL.spells[CSEL.choosing] = id;
+        CSEL.choosing = -1;
+        try { localStorage.setItem('ba.spells', JSON.stringify(CSEL.spells)); } catch (e) { /* not kept */ }
+        play('/fe/lol-uikit/sfx-uikit-generic-click-small.ogg');
+        render();
+      };
+      pop.appendChild(o);
+    }
+    box.appendChild(pop);
+  }
+  return node;
+}
+
 // champ-select root layout.hbs
 function championSelect() {
   const champ = CSEL.locked || CSEL.selected;
   const screen = CSEL.locked ? 'selected-screen' : 'pick-screen';
   const picking = CSEL.phase === 'BAN_PICK' && !CSEL.locked;
-  const splash = champ ? champ.splashPath : '';
+  const lockedSkin = CSEL.locked ? (CSEL.locked.skins || []).find((s) => s.num === CSEL.skin) : null;
+  const splash = lockedSkin ? lockedSkin.splashPath : champ ? champ.splashPath : '';
   const q = S.queues[String(S.selected.queueId)] || {};
   const root = el(`
     <div class="champion-select ember-view screen ${screen} ${picking ? 'is-acting-now is-picking-now is-showing-grid' : ''} no-large-area-animations">
@@ -251,6 +321,7 @@ function championSelect() {
     phase.insertBefore(csChampionGrid(), phase.firstChild);
     phase.insertBefore(csLockIn(), phase.querySelector('.champion-name-wrapper'));
   }
+  if (CSEL.phase !== 'GAME_STARTING') root.appendChild(csLoadout());
   if (CSEL.error) root.appendChild(el(`<div class="cs-start-error">${esc(CSEL.error)}</div>`));
   return root;
 }
@@ -287,7 +358,8 @@ function csTick() {
 setInterval(csTick, 100);
 
 async function startGame() {
-  const body = new URLSearchParams({ champion: CSEL.locked.alias, skin: '0', queue: String(S.selected.queueId) });
+  const body = new URLSearchParams({ champion: CSEL.locked.alias, skin: String(CSEL.skin || 0), spells: CSEL.spells.join(','),
+    runes: CSEL.runes, queue: String(S.selected.queueId) });
   try {
     const r = await fetch('/lol/start', { method: 'POST', body });
     const res = await r.json();

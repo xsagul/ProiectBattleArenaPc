@@ -1,0 +1,42 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 00000274D43E3600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; 0.115
+	8	[-]	SETGLOBAL	0 -4	; CastTime
+	9	[-]	LOADK    	0 -7	; "ASSETS/Characters/JarvanIV/HUD/Icons2D/JarvanIVE.dds"
+	10	[-]	SETGLOBAL	0 -6	; BuffTextureName
+	11	[-]	LOADK    	0 -9	; "JarvanIVDemacianStandard"
+	12	[-]	SETGLOBAL	0 -8	; BuffName
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -11	; "LubuJarvanIV"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -10	; SpellFXOverrideSkins
+	17	[-]	NEWTABLE 	0 1 0
+	18	[-]	LOADK    	1 -11	; "LubuJarvanIV"
+	19	[-]	SETLIST  	0 1 1	; 1
+	20	[-]	SETGLOBAL	0 -12	; SpellVOOverrideSkins
+	21	[-]	LOADBOOL 	0 0 0
+	22	[-]	SETGLOBAL	0 -13	; IsDamagingSpell
+	23	[-]	RETURN   	0 1
+constants (13) for 00000274D43E3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastTime"
+	5	0.115
+	6	"BuffTextureName"
+	7	"ASSETS/Characters/JarvanIV/HUD/Icons2D/JarvanIVE.dds"
+	8	"BuffName"
+	9	"JarvanIVDemacianStandard"
+	10	"SpellFXOverrideSkins"
+	11	"LubuJarvanIV"
+	12	"SpellVOOverrideSkins"
+	13	"IsDamagingSpell"
+locals (0) for 00000274D43E3600:
+upvalues (0) for 00000274D43E3600:

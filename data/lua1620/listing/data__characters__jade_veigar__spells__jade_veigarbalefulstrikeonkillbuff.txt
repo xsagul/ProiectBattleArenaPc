@@ -1,0 +1,46 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 0000024FD10636B0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; 1
+	6	[-]	SETGLOBAL	0 -3	; SpellDamageRatio
+	7	[-]	NEWTABLE 	0 5 0
+	8	[-]	LOADK    	1 -6	; 8
+	9	[-]	LOADK    	2 -7	; 7
+	10	[-]	LOADK    	3 -8	; 6
+	11	[-]	LOADK    	4 -9	; 5
+	12	[-]	LOADK    	5 -10	; 4
+	13	[-]	SETLIST  	0 5 1	; 1
+	14	[-]	SETGLOBAL	0 -5	; AutoCooldownByLevel
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -11	; PersistsThroughDeath
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -12	; NonDispellable
+	19	[-]	NEWTABLE 	0 1 0
+	20	[-]	LOADK    	1 -14	; "BadSantaJade_Veigar"
+	21	[-]	SETLIST  	0 1 1	; 1
+	22	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	23	[-]	LOADBOOL 	0 1 0
+	24	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	25	[-]	RETURN   	0 1
+constants (15) for 0000024FD10636B0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"SpellDamageRatio"
+	4	1
+	5	"AutoCooldownByLevel"
+	6	8
+	7	7
+	8	6
+	9	5
+	10	4
+	11	"PersistsThroughDeath"
+	12	"NonDispellable"
+	13	"SpellFXOverrideSkins"
+	14	"BadSantaJade_Veigar"
+	15	"IsDamagingSpell"
+locals (0) for 0000024FD10636B0:
+upvalues (0) for 0000024FD10636B0:

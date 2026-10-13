@@ -1,0 +1,46 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 0000022C165835F0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; 2.5
+	10	[-]	SETGLOBAL	0 -5	; ChannelDuration
+	11	[-]	LOADK    	0 -8	; "ASSETS/Characters/Malzahar/HUD/Icons2D/Malzahar_R.dds"
+	12	[-]	SETGLOBAL	0 -7	; BuffTextureName
+	13	[-]	LOADK    	0 -10	; "MalzaharR"
+	14	[-]	SETGLOBAL	0 -9	; BuffName
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -11	; PersistsThroughDeath
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -12	; NonDispellable
+	19	[-]	NEWTABLE 	0 1 0
+	20	[-]	LOADK    	1 -14	; "MalzaharSkin05"
+	21	[-]	SETLIST  	0 1 1	; 1
+	22	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	23	[-]	LOADBOOL 	0 1 0
+	24	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	25	[-]	RETURN   	0 1
+constants (15) for 0000022C165835F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"ChannelDuration"
+	6	2.5
+	7	"BuffTextureName"
+	8	"ASSETS/Characters/Malzahar/HUD/Icons2D/Malzahar_R.dds"
+	9	"BuffName"
+	10	"MalzaharR"
+	11	"PersistsThroughDeath"
+	12	"NonDispellable"
+	13	"SpellFXOverrideSkins"
+	14	"MalzaharSkin05"
+	15	"IsDamagingSpell"
+locals (0) for 0000022C165835F0:
+upvalues (0) for 0000022C165835F0:

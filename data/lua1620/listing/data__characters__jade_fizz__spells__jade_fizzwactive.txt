@@ -1,0 +1,55 @@
+
+main <?:0,0> (29 instructions, 116 bytes at 0000022E9B373600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 20 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/UX/Jade/S3Icons/SameSized/FizzSeastoneActive.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "Jade_FizzWActive"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "r:Jade_Fizz_W_Weapon"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect
+	15	[-]	LOADK    	0 -12	; "BUFFBONE_CSTM_WEAPON_1"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateAttachBoneName
+	17	[-]	LOADK    	0 -14	; "r:Jade_Fizz_W_Buff_Self"
+	18	[-]	SETGLOBAL	0 -13	; AutoBuffActivateEffect2
+	19	[-]	LOADK    	0 -16	; "Chest"
+	20	[-]	SETGLOBAL	0 -15	; AutoBuffActivateAttachBoneName2
+	21	[-]	LOADBOOL 	0 1 0
+	22	[-]	SETGLOBAL	0 -17	; NonDispellable
+	23	[-]	NEWTABLE 	0 1 0
+	24	[-]	LOADK    	1 -19	; "Jade_FizzSkin04"
+	25	[-]	SETLIST  	0 1 1	; 1
+	26	[-]	SETGLOBAL	0 -18	; SpellFXOverrideSkins
+	27	[-]	LOADBOOL 	0 0 0
+	28	[-]	SETGLOBAL	0 -20	; IsDamagingSpell
+	29	[-]	RETURN   	0 1
+constants (20) for 0000022E9B373600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/UX/Jade/S3Icons/SameSized/FizzSeastoneActive.dds"
+	7	"BuffName"
+	8	"Jade_FizzWActive"
+	9	"AutoBuffActivateEffect"
+	10	"r:Jade_Fizz_W_Weapon"
+	11	"AutoBuffActivateAttachBoneName"
+	12	"BUFFBONE_CSTM_WEAPON_1"
+	13	"AutoBuffActivateEffect2"
+	14	"r:Jade_Fizz_W_Buff_Self"
+	15	"AutoBuffActivateAttachBoneName2"
+	16	"Chest"
+	17	"NonDispellable"
+	18	"SpellFXOverrideSkins"
+	19	"Jade_FizzSkin04"
+	20	"IsDamagingSpell"
+locals (0) for 0000022E9B373600:
+upvalues (0) for 0000022E9B373600:

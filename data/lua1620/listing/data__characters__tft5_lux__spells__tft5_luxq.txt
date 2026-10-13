@@ -1,0 +1,49 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 0000023C10B735C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/TFT_Ashe/HUD/Icons2D/TFT_Ashe_R.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "TFT_Ashe_EnchantedCrystalArrow"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "DATA/Shared/Particles/LOC_Stun.troy"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect2
+	11	[-]	LOADK    	0 -10	; "C_Buffbone_Glb_Overhead_Loc"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName2
+	13	[-]	LOADK    	0 -12	; 0.5
+	14	[-]	SETGLOBAL	0 -11	; SpellDamageRatio
+	15	[-]	LOADK    	0 -14	; "game_floatingtext_Stunned"
+	16	[-]	SETGLOBAL	0 -13	; PopupMessage1
+	17	[-]	NEWTABLE 	0 1 0
+	18	[-]	LOADK    	1 -16	; "TFT_AsheSkin06"
+	19	[-]	SETLIST  	0 1 1	; 1
+	20	[-]	SETGLOBAL	0 -15	; SpellFXOverrideSkins
+	21	[-]	LOADBOOL 	0 1 0
+	22	[-]	SETGLOBAL	0 -17	; IsDamagingSpell
+	23	[-]	LOADBOOL 	0 1 0
+	24	[-]	SETGLOBAL	0 -18	; TriggersSpellCasts
+	25	[-]	RETURN   	0 1
+constants (18) for 0000023C10B735C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/TFT_Ashe/HUD/Icons2D/TFT_Ashe_R.dds"
+	5	"BuffName"
+	6	"TFT_Ashe_EnchantedCrystalArrow"
+	7	"AutoBuffActivateEffect2"
+	8	"DATA/Shared/Particles/LOC_Stun.troy"
+	9	"AutoBuffActivateAttachBoneName2"
+	10	"C_Buffbone_Glb_Overhead_Loc"
+	11	"SpellDamageRatio"
+	12	0.5
+	13	"PopupMessage1"
+	14	"game_floatingtext_Stunned"
+	15	"SpellFXOverrideSkins"
+	16	"TFT_AsheSkin06"
+	17	"IsDamagingSpell"
+	18	"TriggersSpellCasts"
+locals (0) for 0000023C10B735C0:
+upvalues (0) for 0000023C10B735C0:

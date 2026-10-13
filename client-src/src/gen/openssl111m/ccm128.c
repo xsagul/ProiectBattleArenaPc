@@ -10,4 +10,6 @@
 // match: dfcd90 _CRYPTO_ccm128_setiv
 // match: dfce00 _CRYPTO_ccm128_tag
 // match: dfce40 _ctr64_add
+#define OPENSSL_FILE "crypto\\modes\\ccm128.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/modes/ccm128.c"

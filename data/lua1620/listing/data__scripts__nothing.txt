@@ -1,0 +1,75 @@
+
+main <?:0,0> (5 instructions, 20 bytes at 00000170CB2734D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 2 constants, 2 functions
+	1	[-]	CLOSURE  	0 0	; 00000170CB273550
+	2	[-]	SETGLOBAL	0 -1	; OnInit
+	3	[-]	CLOSURE  	0 1	; 00000170CB2735D0
+	4	[-]	SETGLOBAL	0 -2	; OnOrder
+	5	[-]	RETURN   	0 1
+constants (2) for 00000170CB2734D0:
+	1	"OnInit"
+	2	"OnOrder"
+locals (0) for 00000170CB2734D0:
+upvalues (0) for 00000170CB2734D0:
+
+function <?:1,4> (6 instructions, 24 bytes at 00000170CB273550)
+0 params, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; DebugPrintToChat
+	2	[-]	LOADK    	1 -2	; "hello friends cats"
+	3	[-]	CALL     	0 2 1
+	4	[-]	LOADBOOL 	0 0 0
+	5	[-]	RETURN   	0 2
+	6	[-]	RETURN   	0 1
+constants (2) for 00000170CB273550:
+	1	"DebugPrintToChat"
+	2	"hello friends cats"
+locals (0) for 00000170CB273550:
+upvalues (0) for 00000170CB273550:
+
+function <?:6,23> (30 instructions, 120 bytes at 00000170CB2735D0)
+2 params, 6 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; DebugPrintToChat
+	2	[-]	LOADK    	3 -2	; "order"
+	3	[-]	CALL     	2 2 1
+	4	[-]	GETGLOBAL	2 -3	; GetState
+	5	[-]	CALL     	2 1 2
+	6	[-]	GETGLOBAL	3 -4	; AI_HALTED
+	7	[-]	EQ       	0 2 3
+	8	[-]	JMP      	1	; to 10
+	9	[-]	RETURN   	0 1
+	10	[-]	GETGLOBAL	3 -5	; ORDER_ATTACKTO
+	11	[-]	EQ       	0 0 3
+	12	[-]	JMP      	12	; to 25
+	13	[-]	GETGLOBAL	3 -1	; DebugPrintToChat
+	14	[-]	LOADK    	4 -6	; "attack order received"
+	15	[-]	CALL     	3 2 1
+	16	[-]	GETGLOBAL	3 -7	; SetStateAndCloseToTarget
+	17	[-]	GETGLOBAL	4 -8	; AI_ATTACK
+	18	[-]	MOVE     	5 1
+	19	[-]	CALL     	3 3 1
+	20	[-]	GETGLOBAL	3 -9	; SetRoamState
+	21	[-]	LOADK    	4 -10	; 1
+	22	[-]	CALL     	3 2 1
+	23	[-]	LOADBOOL 	3 1 0
+	24	[-]	RETURN   	3 2
+	25	[-]	GETGLOBAL	3 -11	; Error
+	26	[-]	LOADK    	4 -12	; "Unsupported Order"
+	27	[-]	CALL     	3 2 1
+	28	[-]	LOADBOOL 	3 0 0
+	29	[-]	RETURN   	3 2
+	30	[-]	RETURN   	0 1
+constants (12) for 00000170CB2735D0:
+	1	"DebugPrintToChat"
+	2	"order"
+	3	"GetState"
+	4	"AI_HALTED"
+	5	"ORDER_ATTACKTO"
+	6	"attack order received"
+	7	"SetStateAndCloseToTarget"
+	8	"AI_ATTACK"
+	9	"SetRoamState"
+	10	1
+	11	"Error"
+	12	"Unsupported Order"
+locals (0) for 00000170CB2735D0:
+upvalues (0) for 00000170CB2735D0:

@@ -1,0 +1,21 @@
+local L0_1, L1_1, L2_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBSetVarInTable
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.DestVar = "MasterySeigeCommander"
+L2_1.DestVarTable = "AvatarVars"
+L2_1.SrcValue = true
+L1_1.Params = L2_1
+L0_1[1] = L1_1
+UpdateSelfBuffActionsBuildingBlocks = L0_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBPreloadSpell
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.Name = "masterysiegecommanderbuff"
+L1_1.Params = L2_1
+L0_1[1] = L1_1
+PreLoadBuildingBlocks = L0_1

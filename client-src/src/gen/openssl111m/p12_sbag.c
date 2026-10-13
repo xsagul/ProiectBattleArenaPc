@@ -6,4 +6,6 @@
 // match: e17d90 _PKCS12_SAFEBAG_get0_safes
 // match: e17db0 _PKCS12_SAFEBAG_get1_cert
 // match: e17e00 _PKCS12_SAFEBAG_get_bag_nid
+#define OPENSSL_FILE "crypto\\pkcs12\\p12_sbag.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/pkcs12/p12_sbag.c"

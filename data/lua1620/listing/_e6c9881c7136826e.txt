@@ -1,0 +1,24 @@
+
+main <?:0,0> (11 instructions, 44 bytes at 0000012138FE3500)
+0+ params, 2 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Spells/Icons2D/DrMundo_BurningAgony.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "BurningAgony"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -7	; IsDamagingSpell
+	11	[-]	RETURN   	0 1
+constants (7) for 0000012138FE3500:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Spells/Icons2D/DrMundo_BurningAgony.dds"
+	5	"BuffName"
+	6	"BurningAgony"
+	7	"IsDamagingSpell"
+locals (0) for 0000012138FE3500:
+upvalues (0) for 0000012138FE3500:

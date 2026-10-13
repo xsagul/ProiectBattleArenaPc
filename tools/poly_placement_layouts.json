@@ -1,0 +1,1633 @@
+[
+ {
+  "name": "AndInputSourceBool",
+  "construct": "0xa1c3e0",
+  "create": "0xa1c1b0",
+  "size": 16,
+  "parent": "IInputSourceBool",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "AndScriptCondition",
+  "construct": "0xa1c550",
+  "create": "0xa1c520",
+  "size": 16,
+  "parent": "IScriptCondition",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "BehaviorScript",
+  "construct": "0x188b50",
+  "create": "0x188b20",
+  "size": 16,
+  "parent": "RScript",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ByCharLevelBreakpointsCalculationPart",
+  "construct": "0x29cb50",
+  "create": "0x29cb10",
+  "size": 24,
+  "parent": "IGameCalculationPartByCharLevel",
+  "bytes": 46,
+  "lines": [
+   "    float mLevel1Value = 0.0f;",
+   "    float mInitialBonusPerLevel = 0.0f;",
+   "    u32 unknown0c = 0;",
+   "    u32 unknown10 = 0;",
+   "    u32 unknown14 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "CatalogEntry",
+  "construct": "0x222e60",
+  "create": "0x222df0",
+  "size": 32,
+  "parent": null,
+  "bytes": 62,
+  "lines": [
+   "    MetaString contentId;",
+   "    u32 itemID = 0;",
+   "    MetaString offerId;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ChangeHeightSolver",
+  "construct": "0x50b1c0",
+  "create": "0x50b1a0",
+  "size": 8,
+  "parent": "MissileTriggeredActionSpec",
+  "bytes": 18,
+  "lines": [
+   "    u32 unknown04 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ChangeTurnRadius",
+  "construct": "0x50b180",
+  "create": "0x50b150",
+  "size": 32,
+  "parent": "MissileTriggeredActionSpec",
+  "bytes": 30,
+  "lines": [
+   "    u32 unknown04[4] = {};",
+   "    u32 unknown14[2] = {};",
+   "    u32 unknown1c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "CharacterPassiveData",
+  "construct": "0x224390",
+  "create": "0x224380",
+  "size": 44,
+  "parent": null,
+  "bytes": 75,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;",
+   "    u32 unknown10 = 0;",
+   "    u32 unknown14 = 0;",
+   "    u32 unknown18 = 0;",
+   "    u32 unknown1c = 0;",
+   "    u8 mDisplayFlags = 0;",
+   "    u32 unknown24 = 0;",
+   "    bool mAllowOnClones = true;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ClampSubPartsCalculationPart",
+  "construct": "0x29c600",
+  "create": "0x29c5c0",
+  "size": 24,
+  "parent": "IGameCalculationPart",
+  "bytes": 46,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;",
+   "    u32 unknown10 = 0;",
+   "    u32 unknown14 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "Class_096b3514",
+  "construct": "0x575bd0",
+  "create": "0x575bb0",
+  "size": 8,
+  "parent": "MapComponent",
+  "bytes": 18,
+  "lines": [
+   "    u32 unknown04 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "Class_b662e8c6",
+  "construct": "0x2f41a0",
+  "create": "0x2f4170",
+  "size": 16,
+  "parent": null,
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "Class_d1fc1863",
+  "construct": "0x1281e0",
+  "create": "0x1281a0",
+  "size": 20,
+  "parent": null,
+  "bytes": 40,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    MetaString name;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "Class_f083449f",
+  "construct": "0x2f3f70",
+  "create": "0x2f3f30",
+  "size": 24,
+  "parent": null,
+  "bytes": 46,
+  "lines": [
+   "    float multiplier = 0.0f;",
+   "    int Count = 0;",
+   "    u32 unknown0c = 0;",
+   "    u32 unknown10 = 0;",
+   "    u32 unknown14 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ClearTargetAndKeepMoving",
+  "construct": "0x50b090",
+  "create": "0x50b060",
+  "size": 16,
+  "parent": "MissileTriggeredActionSpec",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0x7f7fffff;",
+   "    u32 unknown08 = 0x7f7fffff;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ColorChooserMaterialDriver",
+  "construct": "0xa9e990",
+  "create": "0xa9e6d0",
+  "size": 40,
+  "parent": "ILogicDriver",
+  "bytes": 74,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    Vector4 mColorOn{1.0f, 0.0f, 0.0f, 1.0f};",
+   "    Vector4 mColorOff{0.0f, 0.0f, 1.0f, 1.0f};"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ComparisonScriptCondition",
+  "construct": "0xa1c670",
+  "create": "0xa1c640",
+  "size": 16,
+  "parent": "IScriptCondition",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 Operation = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ContextualConditionAnyOtherHero",
+  "construct": "0xf2040",
+  "create": "0xf2010",
+  "size": 16,
+  "parent": "IContextualCondition",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ContextualConditionCharacter",
+  "construct": "0xf1fe0",
+  "create": "0xf1f70",
+  "size": 20,
+  "parent": "IContextualCondition",
+  "bytes": 36,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;",
+   "    u8 mCharacterType = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ContextualConditionCharacterHasCAC",
+  "construct": "0xf0d00",
+  "create": "0xf0cd0",
+  "size": 16,
+  "parent": "ICharacterSubcondition",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ContextualConditionCharacterHasTimeRemainingForAnimation",
+  "construct": "0xf0c30",
+  "create": "0xf0c00",
+  "size": 12,
+  "parent": "ICharacterSubcondition",
+  "bytes": 26,
+  "lines": [
+   "    HashValue mAnimationName{(u32)g_3715cc8};",
+   "    float mMinRemainingTime = 0.5f;"
+  ],
+  "externs": [
+   57760968
+  ]
+ },
+ {
+  "name": "ContextualConditionCharacterMetadata",
+  "construct": "0xf0960",
+  "create": "0xf2160",
+  "size": 28,
+  "parent": "ICharacterSubcondition",
+  "bytes": 55,
+  "lines": [
+   "    MetaString mCategory;",
+   "    MetaString mData;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ContextualConditionCharacterName",
+  "construct": "0xf2090",
+  "create": "0xf2060",
+  "size": 16,
+  "parent": "ICharacterSubcondition",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ContextualConditionCharacterPlayingAnimation",
+  "construct": "0xf0b60",
+  "create": "0xf0b30",
+  "size": 8,
+  "parent": "ICharacterSubcondition",
+  "bytes": 19,
+  "lines": [
+   "    HashValue mAnimationNameHash{(u32)g_3715cc8};"
+  ],
+  "externs": [
+   57760968
+  ]
+ },
+ {
+  "name": "ContextualConditionCharacterSkinID",
+  "construct": "0xf2140",
+  "create": "0xf2110",
+  "size": 16,
+  "parent": "ICharacterSubcondition",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ContextualConditionItemID",
+  "construct": "0xf1310",
+  "create": "0xf12e0",
+  "size": 16,
+  "parent": "IContextualCondition",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ContextualConditionMarkerName",
+  "construct": "0xf1f00",
+  "create": "0xf1ed0",
+  "size": 16,
+  "parent": "IContextualCondition",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ContextualConditionNegation",
+  "construct": "0xf12c0",
+  "create": "0xf1280",
+  "size": 8,
+  "parent": "IContextualCondition",
+  "bytes": 18,
+  "lines": [
+   "    u32 unknown04 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ContextualConditionSituationHasRecentlyRun",
+  "construct": "0xf18b0",
+  "create": "0xf1880",
+  "size": 12,
+  "parent": "IContextualCondition",
+  "bytes": 26,
+  "lines": [
+   "    HashValue mSituationNameHash{(u32)g_3715cc8};",
+   "    float mTime = 0.0f;"
+  ],
+  "externs": [
+   57760968
+  ]
+ },
+ {
+  "name": "ContextualConditionSpell",
+  "construct": "0xf0e00",
+  "create": "0xf0dc0",
+  "size": 20,
+  "parent": "IContextualCondition",
+  "bytes": 39,
+  "lines": [
+   "    u32 mSpellSlot = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;",
+   "    u32 unknown10 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "CrowdControlFilter",
+  "construct": "0x24ddd0",
+  "create": "0x24dd90",
+  "size": 20,
+  "parent": "IStatStoneLogicDriver",
+  "bytes": 36,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;",
+   "    bool TrackDuration = true;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "CustomReductionMultiplierCalculationPart",
+  "construct": "0x29cea0",
+  "create": "0x29ce70",
+  "size": 12,
+  "parent": "IGameCalculationPart",
+  "bytes": 25,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    float mMaximumReductionPercent = 0.0f;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "DelayInputSourceBool",
+  "construct": "0xa1c7a0",
+  "create": "0xa1c5e0",
+  "size": 24,
+  "parent": "IInputSourceBool",
+  "bytes": 43,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    float DelayTurningOn = 0.5f;",
+   "    float DelayTurningOff = 0.5f;",
+   "    u8 unknown10 = 0;",
+   "    u32 unknown14 = 0xbf800000;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "DrawAreaList",
+  "construct": "0x70abf0",
+  "create": "0x70aa70",
+  "size": 16,
+  "parent": null,
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ExponentSubPartsCalculationPart",
+  "construct": "0x29c5a0",
+  "create": "0x29c570",
+  "size": 12,
+  "parent": "IGameCalculationPart",
+  "bytes": 25,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "FixedDistanceIgnoringTerrain",
+  "construct": "0x50aa70",
+  "create": "0x50aa30",
+  "size": 24,
+  "parent": "MissileBehaviorSpec",
+  "bytes": 46,
+  "lines": [
+   "    float mMaximumDistance = 0.0f;",
+   "    float mMinimumGapBetweenTerrainWalls = 0.0f;",
+   "    u32 unknown0c = 0xffffffff;",
+   "    u32 unknown10 = 0x7f7fffff;",
+   "    u32 unknown14 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "FloorFloatMaterialDriver",
+  "construct": "0xa9ed30",
+  "create": "0xa9ed00",
+  "size": 8,
+  "parent": "ILogicFloatDriver",
+  "bytes": 18,
+  "lines": [
+   "    u32 unknown04 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "GameModeConstantFloatPerLevel",
+  "construct": "0x26f550",
+  "create": "0x26f520",
+  "size": 16,
+  "parent": "GameModeConstant",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "GameModeConstantStringVector",
+  "construct": "0x26f440",
+  "create": "0x26f410",
+  "size": 16,
+  "parent": "GameModeConstant",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "GearSkinUpgrade",
+  "construct": "0x223370",
+  "create": "0x2231b0",
+  "size": 20,
+  "parent": null,
+  "bytes": 40,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    MetaString mBoneToAttachTo;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "GetSequenceObjectDynamicMaterialFloatDriver",
+  "construct": "0x26c3a0",
+  "create": "0x26c360",
+  "size": 20,
+  "parent": "ILogicFloatDriver",
+  "bytes": 40,
+  "lines": [
+   "    MetaString mKeyName;",
+   "    u32 unknown10 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "IconElementCircleMaskeExtension",
+  "construct": "0xadbdd0",
+  "create": "0xadbdb0",
+  "size": 8,
+  "parent": "IconElementDataExtension",
+  "bytes": 18,
+  "lines": [
+   "    u32 unknown04 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "InhibitorWaveBehavior",
+  "construct": "0x26f6c0",
+  "create": "0x26f680",
+  "size": 20,
+  "parent": "IMinionWaveBehavior",
+  "bytes": 39,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;",
+   "    int DefaultSpawnCount = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "InputSourceBoolAsFloat",
+  "construct": "0xa1cfb0",
+  "create": "0xa1cf80",
+  "size": 16,
+  "parent": "IInputSourceFloat",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    float OnValue = 1.0f;",
+   "    float OffValue = 0.0f;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "InputSourceFloatAsBool",
+  "construct": "0xa1d000",
+  "create": "0xa1cfd0",
+  "size": 12,
+  "parent": "IInputSourceBool",
+  "bytes": 25,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    float Threshold = 0.5f;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "InputSourceFloatRemap",
+  "construct": "0xa1d050",
+  "create": "0xa1d020",
+  "size": 16,
+  "parent": "IInputSourceFloat",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    float scale = 1.0f;",
+   "    float Bias = -1.0f;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ItemDataValue",
+  "construct": "0x2a8a30",
+  "create": "0x2a89f0",
+  "size": 24,
+  "parent": null,
+  "bytes": 47,
+  "lines": [
+   "    MetaString mName;",
+   "    float mValue = 0.0f;",
+   "    u32 unknown14 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "JunglePath",
+  "construct": "0x64b870",
+  "create": "0x64b7e0",
+  "size": 16,
+  "parent": null,
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "KeyInputSourceBool",
+  "construct": "0xa1bb70",
+  "create": "0xa1e0e0",
+  "size": 36,
+  "parent": "IInputSourceBool",
+  "bytes": 66,
+  "lines": [
+   "    MetaString KeySequence;",
+   "    MetaString IniKeyValue;",
+   "    u32 unknown1c = 0;",
+   "    u8 unknown20 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "LaunchAreaData",
+  "construct": "0x127a30",
+  "create": "0x127a20",
+  "size": 40,
+  "parent": null,
+  "bytes": 75,
+  "lines": [
+   "    float radius = 325.0f;",
+   "    float InnerRadius = 0.0f;",
+   "    float TargetDistance = 9e+02f;",
+   "    float InnerAreaTargetDistance = 0.0f;",
+   "    float DivergenceTolerance = 2e+02f;",
+   "    MetaString IndicatorTextureName;",
+   "    float IndicatorRadius = 135.0f;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "LevelControlScript",
+  "construct": "0x26ef70",
+  "create": "0x26ef40",
+  "size": 16,
+  "parent": "RScript",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "LogicDriverBoolParametricUpdater",
+  "construct": "0x9e7920",
+  "create": "0x9e78d0",
+  "size": 8,
+  "parent": "IBooleanParametricUpdater",
+  "bytes": 18,
+  "lines": [
+   "    u32 unknown04 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "LogicDriverFloatParametricUpdater",
+  "construct": "0x9e7960",
+  "create": "0x9e7940",
+  "size": 8,
+  "parent": "IFloatParametricUpdater",
+  "bytes": 18,
+  "lines": [
+   "    u32 unknown04 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "LuaPropertyDataFloatArray",
+  "construct": "0x188890",
+  "create": "0x188860",
+  "size": 16,
+  "parent": "LuaPropertyData",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "LuaPropertyDataGlobalRef",
+  "construct": "0x188930",
+  "create": "0x188900",
+  "size": 16,
+  "parent": "LuaPropertyData",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    HashValue LookupKey{0x0};",
+   "    float Coefficient = 1.0f;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "LuaPropertyDataIntArray",
+  "construct": "0x188840",
+  "create": "0x188810",
+  "size": 16,
+  "parent": "LuaPropertyData",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "LuaPropertyDataStringArray",
+  "construct": "0x1888e0",
+  "create": "0x1888b0",
+  "size": 16,
+  "parent": "LuaPropertyData",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "LuaTableData",
+  "construct": "0x1889e0",
+  "create": "0x1889b0",
+  "size": 16,
+  "parent": null,
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "MapContainsOtherMaps",
+  "construct": "0xa1d6c0",
+  "create": "0xa1d6a0",
+  "size": 8,
+  "parent": "MapComponent",
+  "bytes": 18,
+  "lines": [
+   "    u32 unknown04 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "MapContextualClick",
+  "construct": "0xa57ab0",
+  "create": "0xa57a80",
+  "size": 16,
+  "parent": "MapComponent",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "MapLaneComponent",
+  "construct": "0xa1d790",
+  "create": "0xa1d740",
+  "size": 16,
+  "parent": "MapComponent",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "MapNavigationGridOverlay",
+  "construct": "0x342320",
+  "create": "0x3422d0",
+  "size": 28,
+  "parent": null,
+  "bytes": 55,
+  "lines": [
+   "    MetaString navGridFileName;",
+   "    MetaString regionsFilename;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "MapTerrainPaint",
+  "construct": "0xac2090",
+  "create": "0xac2050",
+  "size": 24,
+  "parent": "MapGraphicsFeature",
+  "bytes": 47,
+  "lines": [
+   "    MetaString TerrainPaintTexturePath;",
+   "    u32 unknown10 = 0;",
+   "    u32 unknown14 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "MaxMaterialDriver",
+  "construct": "0xa9ef10",
+  "create": "0xa9eee0",
+  "size": 16,
+  "parent": "ILogicDriver",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "MinMaterialDriver",
+  "construct": "0xa9ef60",
+  "create": "0xa9ef30",
+  "size": 16,
+  "parent": "ILogicDriver",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "MissileAttachedTargetingDefinition",
+  "construct": "0x509d30",
+  "create": "0x509bc0",
+  "size": 44,
+  "parent": null,
+  "bytes": 80,
+  "lines": [
+   "    u8 mEndPositionType = 0;",
+   "    MetaString mLineTextureName;",
+   "    float mLineTextureWidth = 1e+01f;",
+   "    MetaString mLineEndTextureName;",
+   "    float mLineEndTextureWidth = 1e+01f;",
+   "    float mLineEndTextureHeight = 1e+01f;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "MissileGroupSpawnerSpec",
+  "construct": "0x509620",
+  "create": "0x509600",
+  "size": 8,
+  "parent": null,
+  "bytes": 18,
+  "lines": [
+   "    u32 unknown04 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "NotInputSourceBool",
+  "construct": "0xa1d090",
+  "create": "0xa1d070",
+  "size": 8,
+  "parent": "IInputSourceBool",
+  "bytes": 18,
+  "lines": [
+   "    u32 unknown04 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "NotScriptCondition",
+  "construct": "0xa1c620",
+  "create": "0xa1c5c0",
+  "size": 8,
+  "parent": "IScriptCondition",
+  "bytes": 18,
+  "lines": [
+   "    u32 unknown04 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "OptionItemFilter_And",
+  "construct": "0x64b1c0",
+  "create": "0x64b190",
+  "size": 16,
+  "parent": "IOptionItemFilter",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "OptionItemFilter_Not",
+  "construct": "0x64b4f0",
+  "create": "0x64b4d0",
+  "size": 8,
+  "parent": "IOptionItemFilter",
+  "bytes": 18,
+  "lines": [
+   "    u32 unknown04 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "OrInputSourceBool",
+  "construct": "0xa1d0e0",
+  "create": "0xa1d0b0",
+  "size": 16,
+  "parent": "IInputSourceBool",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "OrScriptCondition",
+  "construct": "0xa1c5a0",
+  "create": "0xa1c570",
+  "size": 16,
+  "parent": "IScriptCondition",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "PackFormationData",
+  "construct": "0x1892a0",
+  "create": "0x1891f0",
+  "size": 16,
+  "parent": null,
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ParametricMovementEntry",
+  "construct": "0x50a6c0",
+  "create": "0x50a5b0",
+  "size": 12,
+  "parent": null,
+  "bytes": 25,
+  "lines": [
+   "    float value = 0.0f;",
+   "    u32 unknown08 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "PercentageOfBuffNameElapsed",
+  "construct": "0x29c930",
+  "create": "0x29c920",
+  "size": 36,
+  "parent": "IGameCalculationPart",
+  "bytes": 69,
+  "lines": [
+   "    HashValue buffName{0x0};",
+   "    MetaString IconKey;",
+   "    MetaString ScalingTagKey;",
+   "    float Coefficient = 1.0f;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "PerkScriptData",
+  "construct": "0x37a680",
+  "create": "0x37a570",
+  "size": 40,
+  "parent": null,
+  "bytes": 74,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;",
+   "    u32 unknown10 = 0;",
+   "    u32 unknown14 = 0;",
+   "    u32 unknown18 = 0;",
+   "    u32 unknown1c = 0;",
+   "    u32 unknown20 = 0;",
+   "    u32 unknown24 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ProductOfSubPartsCalculationPart",
+  "construct": "0x29c500",
+  "create": "0x29c4d0",
+  "size": 12,
+  "parent": "IGameCalculationPart",
+  "bytes": 25,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "RandomChanceScriptCondition",
+  "construct": "0xa1c500",
+  "create": "0xa1c4e0",
+  "size": 8,
+  "parent": "IScriptCondition",
+  "bytes": 18,
+  "lines": [
+   "    u32 unknown04 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "RemapFloatMaterialDriver",
+  "construct": "0xa9eff0",
+  "create": "0xa9efb0",
+  "size": 24,
+  "parent": "ILogicFloatDriver",
+  "bytes": 46,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    float mMinValue = 0.0f;",
+   "    float mMaxValue = 1.0f;",
+   "    float mOutputMinValue = 0.0f;",
+   "    float mOutputMaxValue = 1.0f;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ReturnToCaster",
+  "construct": "0x50afa0",
+  "create": "0x50af70",
+  "size": 12,
+  "parent": "MissileTriggeredActionSpec",
+  "bytes": 22,
+  "lines": [
+   "    bool mPreserveSpeed = false;",
+   "    u32 unknown08 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ReturnToCasterOnMovementComplete",
+  "construct": "0x5095e0",
+  "create": "0x5095b0",
+  "size": 12,
+  "parent": "MissileBehaviorSpec",
+  "bytes": 22,
+  "lines": [
+   "    bool mPreserveSpeed = false;",
+   "    u32 unknown08 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "RotatingWaveBehavior",
+  "construct": "0x26f660",
+  "create": "0x26f630",
+  "size": 16,
+  "parent": "IMinionWaveBehavior",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "RunSpeedRatioFloatDriver",
+  "construct": "0x1dbec0",
+  "create": "0x1dbea0",
+  "size": 8,
+  "parent": "ILogicFloatDriver",
+  "bytes": 18,
+  "lines": [
+   "    u32 unknown04 = 0x3f800000;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ScriptBtInverter",
+  "construct": "0xa1c6c0",
+  "create": "0xa1c690",
+  "size": 16,
+  "parent": "IScriptSequence",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ScriptBtSelector",
+  "construct": "0xa1c710",
+  "create": "0xa1c6e0",
+  "size": 16,
+  "parent": "IScriptSequence",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ScriptBtSequence",
+  "construct": "0xa1c760",
+  "create": "0xa1c730",
+  "size": 16,
+  "parent": "IScriptSequence",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "SelectorMovementEntry",
+  "construct": "0x50a7d0",
+  "create": "0x50a7a0",
+  "size": 12,
+  "parent": null,
+  "bytes": 25,
+  "lines": [
+   "    float WEIGHT = 1.0f;",
+   "    u32 unknown08 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "Sequence",
+  "construct": "0xa1cbb0",
+  "create": "0xa1cb60",
+  "size": 32,
+  "parent": null,
+  "bytes": 60,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;",
+   "    u32 unknown10 = 0;",
+   "    u32 unknown14 = 0;",
+   "    u32 unknown18 = 0;",
+   "    u32 unknown1c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "SequenceCategory",
+  "construct": "0xa1cac0",
+  "create": "0xa1ca70",
+  "size": 32,
+  "parent": null,
+  "bytes": 61,
+  "lines": [
+   "    MetaString name;",
+   "    HashValue Hash{0x0};",
+   "    u32 unknown14 = 0;",
+   "    u32 unknown18 = 0;",
+   "    u32 unknown1c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "SequenceTable",
+  "construct": "0xa1cd80",
+  "create": "0xa1cd70",
+  "size": 44,
+  "parent": null,
+  "bytes": 78,
+  "lines": [
+   "    u8 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;",
+   "    u32 unknown10 = 0;",
+   "    u32 unknown14 = 0;",
+   "    u32 unknown18 = 0;",
+   "    u32 unknown1c = 0;",
+   "    u32 unknown20 = 0;",
+   "    u32 unknown24 = 0;",
+   "    u32 unknown28 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "SequenceTableEntry",
+  "construct": "0xa1cd50",
+  "create": "0xa1cd20",
+  "size": 12,
+  "parent": null,
+  "bytes": 25,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "SineMaterialDriver",
+  "construct": "0xa9f060",
+  "create": "0xa9f020",
+  "size": 20,
+  "parent": "ILogicFloatDriver",
+  "bytes": 39,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    float mFrequency = 1.0f;",
+   "    float mScale = 1.0f;",
+   "    float mBias = 0.0f;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "SkinFilterData",
+  "construct": "0x224350",
+  "create": "0x224310",
+  "size": 24,
+  "parent": null,
+  "bytes": 43,
+  "lines": [
+   "    u32 FilterType = 0;",
+   "    bool UseValidParentForChroma = true;",
+   "    u32 unknown0c = 0;",
+   "    u32 unknown10 = 0;",
+   "    u32 unknown14 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "SpellDataValue",
+  "construct": "0x509b80",
+  "create": "0x509b30",
+  "size": 48,
+  "parent": null,
+  "bytes": 59,
+  "lines": [
+   "    MetaString mName;",
+   "    u32 unknown10[4] = {};",
+   "    u32 unknown20[2] = {};",
+   "    u32 unknown28 = 0;",
+   "    u32 unknown2c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "StoreCategoryInventoryFilter",
+  "construct": "0x2f3c40",
+  "create": "0x2f3b60",
+  "size": 44,
+  "parent": null,
+  "bytes": 79,
+  "lines": [
+   "    MetaString mInventoryType;",
+   "    u8 mOrder = 0;",
+   "    u32 unknown14 = 0;",
+   "    u32 unknown18 = 0;",
+   "    u32 unknown1c = 0;",
+   "    u32 unknown20 = 0;",
+   "    u32 unknown24 = 0;",
+   "    u32 unknown28 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "SumOfSubPartsCalculationPart",
+  "construct": "0x29c550",
+  "create": "0x29c520",
+  "size": 16,
+  "parent": "IGameCalculationPart",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "SyncedAnimationRigPoseModifierData",
+  "construct": "0x9e77b0",
+  "create": "0x9e7790",
+  "size": 8,
+  "parent": "BaseRigPoseModifierData",
+  "bytes": 18,
+  "lines": [
+   "    u32 unknown04 = 0xffffffff;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "TFTPhaseData",
+  "construct": "0x576e60",
+  "create": "0x576e00",
+  "size": 36,
+  "parent": null,
+  "bytes": 65,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    bool mEnabled = false;",
+   "    float mDuration = 0.0f;",
+   "    u32 mDisplay = 0;",
+   "    MetaString mLabel;",
+   "    u32 unknown20 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "TFTStageData",
+  "construct": "0x576f10",
+  "create": "0x576ee0",
+  "size": 16,
+  "parent": null,
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "TFTStreakData",
+  "construct": "0x577520",
+  "create": "0x5774d0",
+  "size": 28,
+  "parent": null,
+  "bytes": 53,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;",
+   "    u32 unknown10 = 0;",
+   "    u32 unknown14 = 0;",
+   "    u32 unknown18 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "TargetHasBuffFilter",
+  "construct": "0x24de50",
+  "create": "0x24de20",
+  "size": 16,
+  "parent": "IStatStoneLogicDriver",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "TargetingForgivenessDefinitions",
+  "construct": "0x509d90",
+  "create": "0x509d80",
+  "size": 44,
+  "parent": null,
+  "bytes": 78,
+  "lines": [
+   "    float ForgivenessRange = 0.0f;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;",
+   "    u32 unknown10 = 0;",
+   "    u32 unknown14 = 0;",
+   "    u32 unknown18 = 0;",
+   "    u32 unknown1c = 0;",
+   "    bool OverrideAffectsFlags = false;",
+   "    u32 mAffectsTypeOverride = 0;",
+   "    u32 mAffectsStatusOverride = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "TextInfoNubData",
+  "construct": "0x5b82b0",
+  "create": "0x5b8260",
+  "size": 28,
+  "parent": "InfoNubData",
+  "bytes": 55,
+  "lines": [
+   "    MetaString TitleKey;",
+   "    MetaString BodyKey;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "TftDropRateTable",
+  "construct": "0x577370",
+  "create": "0x577340",
+  "size": 16,
+  "parent": null,
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "TftDropRates",
+  "construct": "0x577310",
+  "create": "0x5772d0",
+  "size": 24,
+  "parent": null,
+  "bytes": 46,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;",
+   "    u32 unknown10 = 0;",
+   "    u32 unknown14 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "TftItemComposition",
+  "construct": "0x577090",
+  "create": "0x577060",
+  "size": 16,
+  "parent": null,
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "TftStageRoundData",
+  "construct": "0x577400",
+  "create": "0x5773d0",
+  "size": 16,
+  "parent": null,
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "TftUnitPropertyOverride",
+  "construct": "0x576b00",
+  "create": "0x576ad0",
+  "size": 12,
+  "parent": null,
+  "bytes": 25,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "TimedVariableWaveBehavior",
+  "construct": "0x26f730",
+  "create": "0x26f6f0",
+  "size": 20,
+  "parent": "IMinionWaveBehavior",
+  "bytes": 39,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;",
+   "    int DefaultSpawnCount = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "TransitionClipBlendData",
+  "construct": "0x9e75a0",
+  "create": "0x9e7560",
+  "size": 12,
+  "parent": "BaseBlendData",
+  "bytes": 25,
+  "lines": [
+   "    HashValue mClipName{0x0};",
+   "    u32 unknown08 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ViewControllerFilter_And",
+  "construct": "0xadbfa0",
+  "create": "0xadbf70",
+  "size": 16,
+  "parent": "ViewControllerFilterI",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ViewControllerFilter_Not",
+  "construct": "0xadc030",
+  "create": "0xadc010",
+  "size": 8,
+  "parent": "ViewControllerFilterI",
+  "bytes": 18,
+  "lines": [
+   "    u32 unknown04 = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ViewControllerFilter_Or",
+  "construct": "0xadbff0",
+  "create": "0xadbfc0",
+  "size": 16,
+  "parent": "ViewControllerFilterI",
+  "bytes": 32,
+  "lines": [
+   "    u32 unknown04 = 0;",
+   "    u32 unknown08 = 0;",
+   "    u32 unknown0c = 0;"
+  ],
+  "externs": []
+ },
+ {
+  "name": "ViewControllerSet",
+  "construct": "0x70b500",
+  "create": "0x70b4f0",
+  "size": 44,
+  "parent": null,
+  "bytes": 79,
+  "lines": [
+   "    MetaString ClientState;",
+   "    u32 unknown10 = 0;",
+   "    u32 unknown14 = 0;",
+   "    u32 unknown18 = 0;",
+   "    u32 unknown1c = 0;",
+   "    u32 unknown20 = 0;",
+   "    u32 unknown24 = 0;",
+   "    u8 unknown28 = 0;"
+  ],
+  "externs": []
+ }
+]

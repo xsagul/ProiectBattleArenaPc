@@ -9,4 +9,6 @@
 // match: df8a90 _X509_LOOKUP_meth_set_get_by_issuer_serial
 // match: dfe8c0 _X509_LOOKUP_meth_set_get_by_fingerprint
 // match: e374d0 _X509_LOOKUP_meth_set_new_item
+#define OPENSSL_FILE "crypto\\x509\\x509_meth.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/x509/x509_meth.c"

@@ -1,0 +1,27 @@
+local L0_1, L1_1, L2_1, L3_1, L4_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBRequireVar
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.RequiredVar = "CooldownToRestore"
+L2_1.RequiredVarTable = "InstanceVars"
+L1_1.Params = L2_1
+L2_1 = {}
+L3_1 = BBSetSlotSpellCooldownTimeVer2
+L2_1.Function = L3_1
+L3_1 = {}
+L3_1.Src = 0
+L3_1.SrcVar = "CooldownToRestore"
+L3_1.SrcVarTable = "InstanceVars"
+L3_1.SlotNumber = 1
+L4_1 = SpellSlots
+L3_1.SlotType = L4_1
+L4_1 = SPELLBOOK_CHAMPION
+L3_1.SpellbookType = L4_1
+L3_1.OwnerVar = "Owner"
+L3_1.BroadcastEvent = false
+L2_1.Params = L3_1
+L0_1[1] = L1_1
+L0_1[2] = L2_1
+OnBuffActivateBuildingBlocks = L0_1

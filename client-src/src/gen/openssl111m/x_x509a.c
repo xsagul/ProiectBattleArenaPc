@@ -8,4 +8,6 @@
 // match: df04a0 _X509_keyid_get0
 // match: df04e0 _X509_keyid_set1
 // match: df0570 _X509_trusted
+#define OPENSSL_FILE "crypto\\x509\\x_x509a.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/x509/x_x509a.c"

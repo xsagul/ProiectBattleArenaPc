@@ -1,0 +1,60 @@
+
+main <?:0,0> (33 instructions, 132 bytes at 0000025CD5A934D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 21 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 0 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "GreenTerror_ChitinousExoplates.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "Vorpal_Spikes"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "doesnotexist.troy"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect
+	15	[-]	LOADK    	0 -12	; "R_HAND"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateAttachBoneName
+	17	[-]	LOADK    	0 -10	; "doesnotexist.troy"
+	18	[-]	SETGLOBAL	0 -13	; AutoBuffActivateEffect2
+	19	[-]	LOADK    	0 -15	; "L_HAND"
+	20	[-]	SETGLOBAL	0 -14	; AutoBuffActivateAttachBoneName2
+	21	[-]	LOADK    	0 -17	; 3
+	22	[-]	SETGLOBAL	0 -16	; SpellToggleSlot
+	23	[-]	NEWTABLE 	0 1 0
+	24	[-]	LOADK    	1 -19	; "BattlecastChogath"
+	25	[-]	SETLIST  	0 1 1	; 1
+	26	[-]	SETGLOBAL	0 -18	; SpellFXOverrideSkins
+	27	[-]	NEWTABLE 	0 1 0
+	28	[-]	LOADK    	1 -19	; "BattlecastChogath"
+	29	[-]	SETLIST  	0 1 1	; 1
+	30	[-]	SETGLOBAL	0 -20	; SpellVOOverrideSkins
+	31	[-]	LOADBOOL 	0 0 0
+	32	[-]	SETGLOBAL	0 -21	; IsDamagingSpell
+	33	[-]	RETURN   	0 1
+constants (21) for 0000025CD5A934D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"GreenTerror_ChitinousExoplates.dds"
+	7	"BuffName"
+	8	"Vorpal_Spikes"
+	9	"AutoBuffActivateEffect"
+	10	"doesnotexist.troy"
+	11	"AutoBuffActivateAttachBoneName"
+	12	"R_HAND"
+	13	"AutoBuffActivateEffect2"
+	14	"AutoBuffActivateAttachBoneName2"
+	15	"L_HAND"
+	16	"SpellToggleSlot"
+	17	3
+	18	"SpellFXOverrideSkins"
+	19	"BattlecastChogath"
+	20	"SpellVOOverrideSkins"
+	21	"IsDamagingSpell"
+locals (0) for 0000025CD5A934D0:
+upvalues (0) for 0000025CD5A934D0:

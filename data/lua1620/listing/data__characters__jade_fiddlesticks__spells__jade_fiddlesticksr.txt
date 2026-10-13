@@ -1,0 +1,46 @@
+
+main <?:0,0> (24 instructions, 96 bytes at 0000024028D53610)
+0+ params, 4 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; 1.5
+	6	[-]	SETGLOBAL	0 -3	; ChannelDuration
+	7	[-]	LOADK    	0 -6	; "ASSETS/UX/Jade/S3Icons/SameSized/Jade_Fiddlesticks_Crowstorm.dds"
+	8	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	9	[-]	LOADK    	0 -8	; "Jade_FiddlesticksR"
+	10	[-]	SETGLOBAL	0 -7	; BuffName
+	11	[-]	NEWTABLE 	0 3 0
+	12	[-]	LOADK    	1 -10	; 150
+	13	[-]	LOADK    	2 -11	; 120
+	14	[-]	LOADK    	3 -12	; 100
+	15	[-]	SETLIST  	0 3 1	; 1
+	16	[-]	SETGLOBAL	0 -9	; AutoCooldownByLevel
+	17	[-]	NEWTABLE 	0 2 0
+	18	[-]	LOADK    	1 -14	; "SurprisePartyJade_Fiddlesticks"
+	19	[-]	LOADK    	2 -15	; "CandyCaneJade_Fiddlesticks"
+	20	[-]	SETLIST  	0 2 1	; 1
+	21	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	22	[-]	LOADBOOL 	0 1 0
+	23	[-]	SETGLOBAL	0 -16	; IsDamagingSpell
+	24	[-]	RETURN   	0 1
+constants (16) for 0000024028D53610:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"ChannelDuration"
+	4	1.5
+	5	"BuffTextureName"
+	6	"ASSETS/UX/Jade/S3Icons/SameSized/Jade_Fiddlesticks_Crowstorm.dds"
+	7	"BuffName"
+	8	"Jade_FiddlesticksR"
+	9	"AutoCooldownByLevel"
+	10	150
+	11	120
+	12	100
+	13	"SpellFXOverrideSkins"
+	14	"SurprisePartyJade_Fiddlesticks"
+	15	"CandyCaneJade_Fiddlesticks"
+	16	"IsDamagingSpell"
+locals (0) for 0000024028D53610:
+upvalues (0) for 0000024028D53610:

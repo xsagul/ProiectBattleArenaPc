@@ -1,0 +1,34 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 00000276F53B34C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Kindred/HUD/Icons2D/Kindred_R.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "UltBook_KindredRNoDeathBuff"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -8	; PersistsThroughDeath
+	13	[-]	LOADK    	0 -10	; 10
+	14	[-]	SETGLOBAL	0 -9	; OnPreDamagePriority
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -11	; IsDamagingSpell
+	17	[-]	RETURN   	0 1
+constants (11) for 00000276F53B34C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Kindred/HUD/Icons2D/Kindred_R.dds"
+	6	"BuffName"
+	7	"UltBook_KindredRNoDeathBuff"
+	8	"PersistsThroughDeath"
+	9	"OnPreDamagePriority"
+	10	10
+	11	"IsDamagingSpell"
+locals (0) for 00000276F53B34C0:
+upvalues (0) for 00000276F53B34C0:

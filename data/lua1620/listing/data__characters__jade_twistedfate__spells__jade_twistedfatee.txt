@@ -1,0 +1,45 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 000001B8DC673600)
+0+ params, 6 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; 3
+	6	[-]	SETGLOBAL	0 -3	; ChannelDuration
+	7	[-]	LOADK    	0 -6	; "ASSETS/UX/Jade/S3Icons/SameSized/Jade_TwistedFate_Premonition.dds"
+	8	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	9	[-]	LOADK    	0 -8	; "Jade_TwistedFateGate"
+	10	[-]	SETGLOBAL	0 -7	; BuffName
+	11	[-]	NEWTABLE 	0 5 0
+	12	[-]	LOADK    	1 -10	; 100
+	13	[-]	LOADK    	2 -11	; 85
+	14	[-]	LOADK    	3 -12	; 70
+	15	[-]	LOADK    	4 -13	; 55
+	16	[-]	LOADK    	5 -14	; 40
+	17	[-]	SETLIST  	0 5 1	; 1
+	18	[-]	SETGLOBAL	0 -9	; AutoCooldownByLevel
+	19	[-]	NEWTABLE 	0 1 0
+	20	[-]	LOADK    	1 -16	; "UnderworldJade_TwistedFate"
+	21	[-]	SETLIST  	0 1 1	; 1
+	22	[-]	SETGLOBAL	0 -15	; SpellFXOverrideSkins
+	23	[-]	RETURN   	0 1
+constants (16) for 000001B8DC673600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"ChannelDuration"
+	4	3
+	5	"BuffTextureName"
+	6	"ASSETS/UX/Jade/S3Icons/SameSized/Jade_TwistedFate_Premonition.dds"
+	7	"BuffName"
+	8	"Jade_TwistedFateGate"
+	9	"AutoCooldownByLevel"
+	10	100
+	11	85
+	12	70
+	13	55
+	14	40
+	15	"SpellFXOverrideSkins"
+	16	"UnderworldJade_TwistedFate"
+locals (0) for 000001B8DC673600:
+upvalues (0) for 000001B8DC673600:

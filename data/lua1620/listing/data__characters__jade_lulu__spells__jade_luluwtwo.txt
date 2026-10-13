@@ -1,0 +1,43 @@
+
+main <?:0,0> (22 instructions, 88 bytes at 00000274986E35F0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "Jade_Lulu_Whimsy.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "Jade_LuluWDebuff"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; "C_BUFFBONE_GLB_HEAD_LOC"
+	12	[-]	SETGLOBAL	0 -8	; AutoBuffActivateAttachBoneName
+	13	[-]	LOADK    	0 -11	; "game_floatingtext_Polymorphed"
+	14	[-]	SETGLOBAL	0 -10	; PopupMessage1
+	15	[-]	NEWTABLE 	0 2 0
+	16	[-]	LOADK    	1 -13	; "Jade_LuluDarkCandy"
+	17	[-]	LOADK    	2 -14	; "Jade_LuluClassic"
+	18	[-]	SETLIST  	0 2 1	; 1
+	19	[-]	SETGLOBAL	0 -12	; SpellFXOverrideSkins
+	20	[-]	LOADBOOL 	0 1 0
+	21	[-]	SETGLOBAL	0 -15	; TriggersSpellCasts
+	22	[-]	RETURN   	0 1
+constants (15) for 00000274986E35F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"Jade_Lulu_Whimsy.dds"
+	6	"BuffName"
+	7	"Jade_LuluWDebuff"
+	8	"AutoBuffActivateAttachBoneName"
+	9	"C_BUFFBONE_GLB_HEAD_LOC"
+	10	"PopupMessage1"
+	11	"game_floatingtext_Polymorphed"
+	12	"SpellFXOverrideSkins"
+	13	"Jade_LuluDarkCandy"
+	14	"Jade_LuluClassic"
+	15	"TriggersSpellCasts"
+locals (0) for 00000274986E35F0:
+upvalues (0) for 00000274986E35F0:

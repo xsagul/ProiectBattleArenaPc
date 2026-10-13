@@ -1,0 +1,49 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 0000019D19323600)
+0+ params, 6 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "BlindMonkSafeguard"
+	8	[-]	SETGLOBAL	0 -4	; BuffName
+	9	[-]	LOADK    	0 -7	; "DATA/Particles/enrage_buf.troy"
+	10	[-]	SETGLOBAL	0 -6	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -9	; "l_hand"
+	12	[-]	SETGLOBAL	0 -8	; AutoBuffActivateAttachBoneName
+	13	[-]	LOADK    	0 -7	; "DATA/Particles/enrage_buf.troy"
+	14	[-]	SETGLOBAL	0 -10	; AutoBuffActivateEffect2
+	15	[-]	LOADK    	0 -12	; "r_hand"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateAttachBoneName2
+	17	[-]	NEWTABLE 	0 5 0
+	18	[-]	LOADK    	1 -14	; 22
+	19	[-]	LOADK    	2 -15	; 18
+	20	[-]	LOADK    	3 -16	; 14
+	21	[-]	LOADK    	4 -17	; 10
+	22	[-]	LOADK    	5 -18	; 6
+	23	[-]	SETLIST  	0 5 1	; 1
+	24	[-]	SETGLOBAL	0 -13	; AutoCooldownByLevel
+	25	[-]	RETURN   	0 1
+constants (18) for 0000019D19323600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffName"
+	5	"BlindMonkSafeguard"
+	6	"AutoBuffActivateEffect"
+	7	"DATA/Particles/enrage_buf.troy"
+	8	"AutoBuffActivateAttachBoneName"
+	9	"l_hand"
+	10	"AutoBuffActivateEffect2"
+	11	"AutoBuffActivateAttachBoneName2"
+	12	"r_hand"
+	13	"AutoCooldownByLevel"
+	14	22
+	15	18
+	16	14
+	17	10
+	18	6
+locals (0) for 0000019D19323600:
+upvalues (0) for 0000019D19323600:

@@ -1,0 +1,30 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 0000025EB71035F0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; DoesntBreakShields
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; CastingBreaksStealth
+	5	[-]	LOADK    	0 -4	; "doesnotexist.troy"
+	6	[-]	SETGLOBAL	0 -3	; AutoBuffActivateEffect
+	7	[-]	LOADK    	0 -6	; "root"
+	8	[-]	SETGLOBAL	0 -5	; AutoBuffActivateAttachBoneName
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -7	; PersistsThroughDeath
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -9	; "SylasSkin04"
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	15	[-]	RETURN   	0 1
+constants (9) for 0000025EB71035F0:
+	1	"DoesntBreakShields"
+	2	"CastingBreaksStealth"
+	3	"AutoBuffActivateEffect"
+	4	"doesnotexist.troy"
+	5	"AutoBuffActivateAttachBoneName"
+	6	"root"
+	7	"PersistsThroughDeath"
+	8	"SpellFXOverrideSkins"
+	9	"SylasSkin04"
+locals (0) for 0000025EB71035F0:
+upvalues (0) for 0000025EB71035F0:

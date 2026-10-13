@@ -1,0 +1,43 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 000002C776FC35A0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; 1
+	10	[-]	SETGLOBAL	0 -5	; SpellToggleSlot
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -7	; PersistsThroughDeath
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -8	; NonDispellable
+	15	[-]	NEWTABLE 	0 1 0
+	16	[-]	LOADK    	1 -10	; "SpiritUdyr"
+	17	[-]	SETLIST  	0 1 1	; 1
+	18	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	19	[-]	NEWTABLE 	0 1 0
+	20	[-]	LOADK    	1 -10	; "SpiritUdyr"
+	21	[-]	SETLIST  	0 1 1	; 1
+	22	[-]	SETGLOBAL	0 -11	; SpellVOOverrideSkins
+	23	[-]	LOADBOOL 	0 0 0
+	24	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	25	[-]	RETURN   	0 1
+constants (12) for 000002C776FC35A0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"SpellToggleSlot"
+	6	1
+	7	"PersistsThroughDeath"
+	8	"NonDispellable"
+	9	"SpellFXOverrideSkins"
+	10	"SpiritUdyr"
+	11	"SpellVOOverrideSkins"
+	12	"IsDamagingSpell"
+locals (0) for 000002C776FC35A0:
+upvalues (0) for 000002C776FC35A0:

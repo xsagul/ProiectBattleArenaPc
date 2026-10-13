@@ -1,0 +1,62 @@
+
+main <?:0,0> (36 instructions, 144 bytes at 0000029C8D1535D0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 20 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Yasuo/HUD/Icons2D/Yasuo_Q3.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; 1
+	10	[-]	SETGLOBAL	0 -6	; SpellToggleSlot
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -9	; "YasuoSkin02"
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	15	[-]	NEWTABLE 	0 1 0
+	16	[-]	LOADK    	1 -9	; "YasuoSkin02"
+	17	[-]	SETLIST  	0 1 1	; 1
+	18	[-]	SETGLOBAL	0 -10	; SpellVOOverrideSkins
+	19	[-]	LOADBOOL 	0 0 0
+	20	[-]	SETGLOBAL	0 -11	; IsDamagingSpell
+	21	[-]	NEWTABLE 	0 0 6
+	22	[-]	NEWTABLE 	1 5 0
+	23	[-]	LOADK    	2 -14	; 4
+	24	[-]	LOADK    	3 -14	; 4
+	25	[-]	LOADK    	4 -14	; 4
+	26	[-]	LOADK    	5 -14	; 4
+	27	[-]	LOADK    	6 -14	; 4
+	28	[-]	SETLIST  	1 5 1	; 1
+	29	[-]	SETTABLE 	0 -13 1	; "MaximumHits" -
+	30	[-]	SETTABLE 	0 -15 -16	; "CanHitCaster" 0
+	31	[-]	SETTABLE 	0 -17 -16	; "CanHitSameTarget" 0
+	32	[-]	SETTABLE 	0 -18 -16	; "CanHitSameTargetConsecutively" 0
+	33	[-]	SETTABLE 	0 -19 -7	; "CanHitEnemies" 1
+	34	[-]	SETTABLE 	0 -20 -16	; "CanHitFriends" 0
+	35	[-]	SETGLOBAL	0 -12	; ChainMissileParameters
+	36	[-]	RETURN   	0 1
+constants (20) for 0000029C8D1535D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Yasuo/HUD/Icons2D/Yasuo_Q3.dds"
+	6	"SpellToggleSlot"
+	7	1
+	8	"SpellFXOverrideSkins"
+	9	"YasuoSkin02"
+	10	"SpellVOOverrideSkins"
+	11	"IsDamagingSpell"
+	12	"ChainMissileParameters"
+	13	"MaximumHits"
+	14	4
+	15	"CanHitCaster"
+	16	0
+	17	"CanHitSameTarget"
+	18	"CanHitSameTargetConsecutively"
+	19	"CanHitEnemies"
+	20	"CanHitFriends"
+locals (0) for 0000029C8D1535D0:
+upvalues (0) for 0000029C8D1535D0:

@@ -1,0 +1,48 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 000001555D203600)
+0+ params, 6 slots, 0 upvalues, 0 locals, 17 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/UX/Jade/S3Icons/SameSized/Jade_Tryndamere_Bloodlust.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Bloodlust"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; 1
+	10	[-]	SETGLOBAL	0 -7	; SpellToggleSlot
+	11	[-]	NEWTABLE 	0 5 0
+	12	[-]	LOADK    	1 -10	; 30
+	13	[-]	LOADK    	2 -11	; 26
+	14	[-]	LOADK    	3 -12	; 22
+	15	[-]	LOADK    	4 -13	; 18
+	16	[-]	LOADK    	5 -14	; 14
+	17	[-]	SETLIST  	0 5 1	; 1
+	18	[-]	SETGLOBAL	0 -9	; AutoCooldownByLevel
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -15	; PersistsThroughDeath
+	21	[-]	NEWTABLE 	0 1 0
+	22	[-]	LOADK    	1 -17	; "Jade_TryndamereDemonsword"
+	23	[-]	SETLIST  	0 1 1	; 1
+	24	[-]	SETGLOBAL	0 -16	; SpellFXOverrideSkins
+	25	[-]	RETURN   	0 1
+constants (17) for 000001555D203600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/UX/Jade/S3Icons/SameSized/Jade_Tryndamere_Bloodlust.dds"
+	5	"BuffName"
+	6	"Bloodlust"
+	7	"SpellToggleSlot"
+	8	1
+	9	"AutoCooldownByLevel"
+	10	30
+	11	26
+	12	22
+	13	18
+	14	14
+	15	"PersistsThroughDeath"
+	16	"SpellFXOverrideSkins"
+	17	"Jade_TryndamereDemonsword"
+locals (0) for 000001555D203600:
+upvalues (0) for 000001555D203600:

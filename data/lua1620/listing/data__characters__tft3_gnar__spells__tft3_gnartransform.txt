@@ -1,0 +1,40 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 000002F0B6343600)
+0+ params, 6 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/TFT_Gnar/HUD/Icons2D/TFT_GnarTransform.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	NEWTABLE 	0 5 0
+	10	[-]	LOADK    	1 -7	; 20
+	11	[-]	LOADK    	2 -8	; 18
+	12	[-]	LOADK    	3 -9	; 16
+	13	[-]	LOADK    	4 -10	; 14
+	14	[-]	LOADK    	5 -11	; 12
+	15	[-]	SETLIST  	0 5 1	; 1
+	16	[-]	SETGLOBAL	0 -6	; AutoCooldownByLevel
+	17	[-]	NEWTABLE 	0 1 0
+	18	[-]	LOADK    	1 -13	; "RocketTristana"
+	19	[-]	SETLIST  	0 1 1	; 1
+	20	[-]	SETGLOBAL	0 -12	; SpellFXOverrideSkins
+	21	[-]	RETURN   	0 1
+constants (13) for 000002F0B6343600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/TFT_Gnar/HUD/Icons2D/TFT_GnarTransform.dds"
+	6	"AutoCooldownByLevel"
+	7	20
+	8	18
+	9	16
+	10	14
+	11	12
+	12	"SpellFXOverrideSkins"
+	13	"RocketTristana"
+locals (0) for 000002F0B6343600:
+upvalues (0) for 000002F0B6343600:

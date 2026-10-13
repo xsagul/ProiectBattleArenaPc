@@ -4,4 +4,6 @@
 // match: ddfec0 _rsa_cb
 // match: ddff30 _rsa_pss_cb
 // match: ddff50 _rsa_oaep_cb
+#define OPENSSL_FILE "crypto\\rsa\\rsa_asn1.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/rsa/rsa_asn1.c"

@@ -8,4 +8,6 @@
 // match: ddb120 _sock_ctrl
 // match: ddb250 _sock_free
 // match: ddb2a0 _BIO_sock_should_retry
+#define OPENSSL_FILE "crypto\\bio\\bss_sock.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/bio/bss_sock.c"

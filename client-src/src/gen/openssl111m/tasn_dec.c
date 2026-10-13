@@ -5,4 +5,12 @@
 // match: debc10 _ASN1_item_ex_d2i
 // match: debc60 _ASN1_tag2bit
 // match: debc80 _asn1_check_eoc
+// match: debcb0 _asn1_collect
+// match: debf30 _asn1_d2i_ex_primitive
+// match: dec570 _asn1_ex_c2i
+// match: dec860 _asn1_item_embed_d2i
+// match: ded1d0 _asn1_template_ex_d2i
+// match: ded480 _asn1_template_noexp_d2i
+#define OPENSSL_FILE "crypto\\asn1\\tasn_dec.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/asn1/tasn_dec.c"

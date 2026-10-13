@@ -1,0 +1,30 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 000002218A3935D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/TFT_Lulu/HUD/Icons2D/TFT_Lulu_GiantGrowth.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "TFT_LuluR"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -7	; PersistsThroughDeath
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -9	; "TFT_LuluSkin05"
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	15	[-]	RETURN   	0 1
+constants (9) for 000002218A3935D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/TFT_Lulu/HUD/Icons2D/TFT_Lulu_GiantGrowth.dds"
+	5	"BuffName"
+	6	"TFT_LuluR"
+	7	"PersistsThroughDeath"
+	8	"SpellFXOverrideSkins"
+	9	"TFT_LuluSkin05"
+locals (0) for 000002218A3935D0:
+upvalues (0) for 000002218A3935D0:

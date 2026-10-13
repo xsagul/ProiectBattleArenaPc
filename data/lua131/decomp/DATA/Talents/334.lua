@@ -1,0 +1,21 @@
+local L0_1, L1_1, L2_1, L3_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBSetVarInTable
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.DestVar = "MasteryBladedArmor"
+L2_1.DestVarTable = "AvatarVars"
+L2_1.SrcValue = true
+L1_1.Params = L2_1
+L2_1 = {}
+L3_1 = BBSetVarInTable
+L2_1.Function = L3_1
+L3_1 = {}
+L3_1.DestVar = "MasteryBladedArmorAmt"
+L3_1.DestVarTable = "AvatarVars"
+L3_1.SrcValue = 6
+L2_1.Params = L3_1
+L0_1[1] = L1_1
+L0_1[2] = L2_1
+UpdateSelfBuffActionsBuildingBlocks = L0_1

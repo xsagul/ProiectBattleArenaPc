@@ -4,4 +4,6 @@
 // match: e28200 _Poly1305_Final
 // match: e28280 _Poly1305_Init
 // match: e28350 _Poly1305_Update
+#define OPENSSL_FILE "crypto\\poly1305\\poly1305.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/poly1305/poly1305.c"

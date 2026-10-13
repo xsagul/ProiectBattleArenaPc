@@ -4,9 +4,13 @@
 // match: e5a6c0 _ec_GF2m_simple_group_init
 // match: e5a720 _ec_GF2m_simple_group_clear_finish
 // match: e5a770 _ec_GF2m_simple_group_copy
+// match: e5a840 _ec_GF2m_simple_group_set_curve
 // match: e5a920 _ec_GF2m_simple_group_get_curve
 // match: e5a980 _ec_GF2m_simple_group_get_degree
+// match: e5a9a0 _ec_GF2m_simple_group_check_discriminant
 // match: e5aa30 _ec_GF2m_simple_point_init
+// match: e5aa90 _ec_GF2m_simple_point_set_affine_coordinates
+// match: e5ab30 _ec_GF2m_simple_point_get_affine_coordinates
 // match: e5abf0 _ec_GF2m_simple_add
 // match: e5af80 _ec_GF2m_simple_dbl
 // match: e5afa0 _ec_GF2m_simple_invert
@@ -16,5 +20,11 @@
 // match: e5b3c0 _ec_GF2m_simple_points_make_affine
 // match: e5b410 _ec_GF2m_simple_field_mul
 // match: e5b440 _ec_GF2m_simple_field_sqr
+// match: e5b480 _ec_GF2m_simple_ladder_pre
 // match: e5b640 _ec_GF2m_simple_ladder_step
+// match: e5b7f0 _ec_GF2m_simple_ladder_post
+// match: e5bb50 _ec_GF2m_simple_points_mul
+// match: e5bc90 _ec_GF2m_simple_field_inv
+#define OPENSSL_FILE "crypto\\ec\\ec2_smpl.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/ec/ec2_smpl.c"

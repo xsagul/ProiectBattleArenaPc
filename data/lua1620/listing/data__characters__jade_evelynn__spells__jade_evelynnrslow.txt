@@ -1,0 +1,48 @@
+
+main <?:0,0> (27 instructions, 108 bytes at 0000013664053600)
+0+ params, 6 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "Jade_Evelynn_AgonysEmbrace.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Jade_EvelynnRSlow"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "DATA/Shared/Particles/Global_Slow.troy"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	NEWTABLE 	0 5 0
+	12	[-]	LOADK    	1 -10	; 0
+	13	[-]	LOADK    	2 -10	; 0
+	14	[-]	LOADK    	3 -10	; 0
+	15	[-]	LOADK    	4 -10	; 0
+	16	[-]	LOADK    	5 -10	; 0
+	17	[-]	SETLIST  	0 5 1	; 1
+	18	[-]	SETGLOBAL	0 -9	; AutoCooldownByLevel
+	19	[-]	LOADK    	0 -12	; "game_floatingtext_Slowed"
+	20	[-]	SETGLOBAL	0 -11	; PopupMessage1
+	21	[-]	NEWTABLE 	0 1 0
+	22	[-]	LOADK    	1 -14	; "BloodkingVladimir"
+	23	[-]	SETLIST  	0 1 1	; 1
+	24	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	25	[-]	LOADBOOL 	0 1 0
+	26	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	27	[-]	RETURN   	0 1
+constants (15) for 0000013664053600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"Jade_Evelynn_AgonysEmbrace.dds"
+	5	"BuffName"
+	6	"Jade_EvelynnRSlow"
+	7	"AutoBuffActivateEffect"
+	8	"DATA/Shared/Particles/Global_Slow.troy"
+	9	"AutoCooldownByLevel"
+	10	0
+	11	"PopupMessage1"
+	12	"game_floatingtext_Slowed"
+	13	"SpellFXOverrideSkins"
+	14	"BloodkingVladimir"
+	15	"IsDamagingSpell"
+locals (0) for 0000013664053600:
+upvalues (0) for 0000013664053600:

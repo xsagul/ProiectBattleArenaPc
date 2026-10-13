@@ -1,0 +1,39 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 0000024FD1D435F0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 0 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Ziggs/HUD/Icons2D/ZiggsPassiveReady.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "ZiggsPassiveBuff"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -9	; PersistsThroughDeath
+	15	[-]	NEWTABLE 	0 1 0
+	16	[-]	LOADK    	1 -11	; "ZiggsSnowday"
+	17	[-]	SETLIST  	0 1 1	; 1
+	18	[-]	SETGLOBAL	0 -10	; SpellFXOverrideSkins
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	21	[-]	RETURN   	0 1
+constants (12) for 0000024FD1D435F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Ziggs/HUD/Icons2D/ZiggsPassiveReady.dds"
+	7	"BuffName"
+	8	"ZiggsPassiveBuff"
+	9	"PersistsThroughDeath"
+	10	"SpellFXOverrideSkins"
+	11	"ZiggsSnowday"
+	12	"IsDamagingSpell"
+locals (0) for 0000024FD1D435F0:
+upvalues (0) for 0000024FD1D435F0:

@@ -1,0 +1,51 @@
+struct 0xf9a920
+  0xf9a920 field 0: bits 0..0 +0x10 28 B 0:struct(0xf9a550) 1:const
+struct 0xf9a550
+  0xf9a550 field 0: bits 3..3 +0x8 16 B 0:const 1:seq(struct)
+  0xf9a550 field 1: bits 0..2 +0x18 4 B 0:varint 1:varint 2:const 3:const 4:varint 5:const 6:const 7:varint
+struct 0xfbbce0
+  0xfbbce0 field 0: bits 0..2 +0x8 4 B 0:fixed 1:const 2:fixed 3:const 4:fixed 5:const 6:const 7:fixed
+  0xfbbce0 field 1: bits 24..24 +0x10 114 B 0:struct(0xfb9610) 1:const
+  0xfbbce0 field 2: bits 6..8 +0x88 4 B 0:const 1:fixed 2:fixed 3:const 4:const 5:fixed 6:const 7:fixed
+  0xfbbce0 field 3: bits 12..14 +0x8c 2 B 0:const 1:varint 2:varint 3:const 4:const 5:varint 6:const 7:varint
+  0xfbbce0 field 4: bits 15..17 +0x90 4 B 0:const 1:const 2:fixed 3:const 4:fixed 5:fixed 6:const 7:fixed
+  0xfbbce0 field 5: bits 3..5 +0x94 4 B 0:fixed 1:fixed 2:const 3:const 4:const 5:fixed 6:fixed 7:const
+  0xfbbce0 field 6: bits 9..11 +0x98 4 B 0:fixed 1:fixed 2:const 3:fixed 4:fixed 5:const 6:const 7:const
+  0xfbbce0 field 7: bits 21..23 +0x9c 2 B 0:varint 1:const 2:const 3:const 4:varint 5:varint 6:const 7:varint
+  0xfbbce0 field 8: bits 18..20 +0xa0 4 B 0:const 1:const 2:fixed 3:fixed 4:fixed 5:const 6:fixed 7:const
+struct 0xfb9610
+    0xfb9610 field 0 mode 0: not a text (0xfb9610 field 0 mode 0: length 2 byte 0 -> []); trying a seq of numbers
+  0xfb9610 field 0: bits 9..9 +0x8 16 B 0:seq(varint) 1:const
+  0xfb9610 field 1: bits 19..21 +0x18 4 B 0:varint 1:varint 2:const 3:const 4:varint 5:const 6:const 7:varint
+    0xfb9610 field 2 mode 0: not a text (0xfb9610 field 2 mode 0: length table [2, 9, 12, 21, 26, 28, 37, 38, 40, 41, 42, 46, 48, 51, 58, 60, 63, 66, 68, 69, 73, 74, 75, 76, 85, 86, 91, 97, 100, 104, 113, 116, 119, 120, 121, 123, 129, 130, 133, 135, 136, 137, 139, 145, 150, 151, 152, 156, 157, 159, 162, 163, 169, 174, 176, 179, 182, 183, 184, 188, 192, 196, 200, 201, 216, 227, 233, 243, 244, 246, 251, 252, 253] [183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]); trying a seq of numbers
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 482, in learn_mode
+    ptr0 = P.ptr_of(plain_bytes(r, obj + res['off'], P.PTR)) if res['size'] >= P.PTR else 0
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 665, in learn_text
+    L[v] = len(s)
+^^^^^^^^^^^^^^^^^^
+AssertionError: 0xfb9610 field 2 mode 0: length table [2, 9, 12, 21, 26, 28, 37, 38, 40, 41, 42, 46, 48, 51, 58, 60, 63, 66, 68, 69, 73, 74, 75, 76, 85, 86, 91, 97, 100, 104, 113, 116, 119, 120, 121, 123, 129, 130, 133, 135, 136, 137, 139, 145, 150, 151, 152, 156, 157, 159, 162, 163, 169, 174, 176, 179, 182, 183, 184, 188, 192, 196, 200, 201, 216, 227, 233, 243, 244, 246, 251, 252, 253] [183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1507, in <module>
+    off = f'+{fl["off"]:#x}' if fl['off'] is not None else '-'
+^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1178, in learn
+    path = os.path.join(OUT, f'{pid}.tree.json')
+                                 ^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 366, in learn
+    fl = self.learn_field(k)
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 409, in learn_field
+    try:
+         
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 485, in learn_mode
+    if kids:
+             
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 506, in learn_numbers
+    for c in range(256):
+       ^^^^^^^^^^^^^^^^^
+AssertionError: 0xfb9610 field 2 mode 0: no one-byte element found

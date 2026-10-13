@@ -1,0 +1,42 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 0000027DAF133600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/UX/Jade/S3Icons/SameSized/Jade_DrMundo_Masochism.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Jade_DrMundoE"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "r:Jade_DrMundo_E_Buf"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -10	; "R_Buffbone_Glb_Hand_Loc"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName
+	13	[-]	LOADK    	0 -8	; "r:Jade_DrMundo_E_Buf"
+	14	[-]	SETGLOBAL	0 -11	; AutoBuffActivateEffect2
+	15	[-]	LOADK    	0 -13	; "L_Buffbone_Glb_Hand_Loc"
+	16	[-]	SETGLOBAL	0 -12	; AutoBuffActivateAttachBoneName2
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -14	; IsDeathRecapSource
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	21	[-]	RETURN   	0 1
+constants (15) for 0000027DAF133600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/UX/Jade/S3Icons/SameSized/Jade_DrMundo_Masochism.dds"
+	5	"BuffName"
+	6	"Jade_DrMundoE"
+	7	"AutoBuffActivateEffect"
+	8	"r:Jade_DrMundo_E_Buf"
+	9	"AutoBuffActivateAttachBoneName"
+	10	"R_Buffbone_Glb_Hand_Loc"
+	11	"AutoBuffActivateEffect2"
+	12	"AutoBuffActivateAttachBoneName2"
+	13	"L_Buffbone_Glb_Hand_Loc"
+	14	"IsDeathRecapSource"
+	15	"IsDamagingSpell"
+locals (0) for 0000027DAF133600:
+upvalues (0) for 0000027DAF133600:

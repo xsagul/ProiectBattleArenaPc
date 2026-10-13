@@ -1,6 +1,7 @@
 """Public sources of the third-party libraries inside the 13.3 client, from their official release archives, unpacked
 into tools/third_party/<name>-<version>. Versions are the ones the client's own strings name (OpenSSL 1.1.1m, libcurl
-7.78.0 build path, zlib 1.2.11, libVorbis 20180316 = 1.3.6, VP9 v1.8.0, libyaml 0.2.3); zstd and libogg leave no version
+7.78.0 build path, zlib 1.2.11, libVorbis 20180316 = 1.3.6, VP9 v1.8.0, libyaml 0.2.3) or its code holds (FreeType 2.10.1: the version
+numbers FT_New_Library stores, rva 0xbb7993); zstd and libogg leave no version
 behind, so several are fetched and compared (tools/match_objs.py).
 
   get_libsrc.py [name ...]      default: all
@@ -32,6 +33,12 @@ SOURCES = {
     'zstd-1.4.9': f'{GH}/facebook/zstd/archive/refs/tags/v1.4.9.tar.gz',
     'zstd-1.5.0': f'{GH}/facebook/zstd/archive/refs/tags/v1.5.0.tar.gz',
     'zstd-1.5.2': f'{GH}/facebook/zstd/archive/refs/tags/v1.5.2.tar.gz',
+    'freetype-2.10.1': f'{GH}/freetype/freetype/archive/refs/tags/VER-2-10-1.tar.gz',
+    # LodePNG has no release tags: the one commit whose LODEPNG_VERSION_STRING is the client's "20180611"
+    # the release archive carries the submodules too (external/crashpad with mini_chromium); the client's own
+    # user-agent string names the version: "sentry.native/0.4.17"
+    'sentry-native-0.4.17': f'{GH}/getsentry/sentry-native/releases/download/0.4.17/sentry-native.zip',
+    'lodepng-20180611': f'{GH}/lvandeve/lodepng/archive/9426bf43031a3b0c37bc0c19b97448f316f5cf7e.tar.gz',
 }
 
 

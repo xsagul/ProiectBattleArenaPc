@@ -6,5 +6,8 @@
 // match: dd2e20 _RSA_private_encrypt
 // match: dd2e30 _RSA_public_decrypt
 // match: dd2e40 _RSA_public_encrypt
+// match: dd2e50 _RSA_setup_blinding
 // match: dd3060 _RSA_size
+#define OPENSSL_FILE "crypto\\rsa\\rsa_crpt.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/rsa/rsa_crpt.c"

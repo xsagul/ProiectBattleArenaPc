@@ -1,0 +1,55 @@
+
+main <?:0,0> (29 instructions, 116 bytes at 0000020B7CD83600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 20 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Jayce/HUD/Icons2D/JayceP_Ranged.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "JaycePassiveRangedAttack"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "r:Jayce_PassiveReadyRange"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -10	; "BUFFBONE_CSTM_WEAPON_1"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName
+	13	[-]	LOADK    	0 -8	; "r:Jayce_PassiveReadyRange"
+	14	[-]	SETGLOBAL	0 -11	; AutoBuffActivateEffect2
+	15	[-]	LOADK    	0 -13	; "BUFFBONE_CSTM_WEAPON_GAP_1"
+	16	[-]	SETGLOBAL	0 -12	; AutoBuffActivateAttachBoneName2
+	17	[-]	LOADK    	0 -8	; "r:Jayce_PassiveReadyRange"
+	18	[-]	SETGLOBAL	0 -14	; AutoBuffActivateEffect3
+	19	[-]	LOADK    	0 -16	; "BUFFBONE_CSTM_WEAPON_GAP_2"
+	20	[-]	SETGLOBAL	0 -15	; AutoBuffActivateAttachBoneName3
+	21	[-]	NEWTABLE 	0 1 0
+	22	[-]	LOADK    	1 -18	; "JayceSkin03"
+	23	[-]	SETLIST  	0 1 1	; 1
+	24	[-]	SETGLOBAL	0 -17	; SpellFXOverrideSkins
+	25	[-]	LOADBOOL 	0 1 0
+	26	[-]	SETGLOBAL	0 -19	; IsDamagingSpell
+	27	[-]	LOADBOOL 	0 1 0
+	28	[-]	SETGLOBAL	0 -20	; TriggersSpellCasts
+	29	[-]	RETURN   	0 1
+constants (20) for 0000020B7CD83600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Jayce/HUD/Icons2D/JayceP_Ranged.dds"
+	5	"BuffName"
+	6	"JaycePassiveRangedAttack"
+	7	"AutoBuffActivateEffect"
+	8	"r:Jayce_PassiveReadyRange"
+	9	"AutoBuffActivateAttachBoneName"
+	10	"BUFFBONE_CSTM_WEAPON_1"
+	11	"AutoBuffActivateEffect2"
+	12	"AutoBuffActivateAttachBoneName2"
+	13	"BUFFBONE_CSTM_WEAPON_GAP_1"
+	14	"AutoBuffActivateEffect3"
+	15	"AutoBuffActivateAttachBoneName3"
+	16	"BUFFBONE_CSTM_WEAPON_GAP_2"
+	17	"SpellFXOverrideSkins"
+	18	"JayceSkin03"
+	19	"IsDamagingSpell"
+	20	"TriggersSpellCasts"
+locals (0) for 0000020B7CD83600:
+upvalues (0) for 0000020B7CD83600:

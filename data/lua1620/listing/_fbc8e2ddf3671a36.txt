@@ -1,0 +1,37 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 0000025E9E1134C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; CastingBreaksStealth
+	7	[-]	LOADK    	0 -5	; "UltBook_RengarUlt.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "UltBook_RengarRBuff"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; 1
+	12	[-]	SETGLOBAL	0 -8	; SpellToggleSlot
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -11	; "HunterUltBook_Rengar"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -10	; SpellFXOverrideSkins
+	17	[-]	LOADBOOL 	0 0 0
+	18	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	19	[-]	RETURN   	0 1
+constants (12) for 0000025E9E1134C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"CastingBreaksStealth"
+	4	"BuffTextureName"
+	5	"UltBook_RengarUlt.dds"
+	6	"BuffName"
+	7	"UltBook_RengarRBuff"
+	8	"SpellToggleSlot"
+	9	1
+	10	"SpellFXOverrideSkins"
+	11	"HunterUltBook_Rengar"
+	12	"IsDamagingSpell"
+locals (0) for 0000025E9E1134C0:
+upvalues (0) for 0000025E9E1134C0:

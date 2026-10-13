@@ -1,0 +1,94 @@
+
+main <?:0,0> (22 instructions, 88 bytes at 000001F800EB34C0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 14 constants, 1 function
+	1	[-]	NEWTABLE 	0 2 0
+	2	[-]	NEWTABLE 	1 0 2
+	3	[-]	SETTABLE 	1 -2 -3	; "Name" "Top"
+	4	[-]	GETGLOBAL	2 -5	; Make3DPoint
+	5	[-]	LOADK    	3 -6	; 2721
+	6	[-]	LOADK    	4 -7	; 22.09
+	7	[-]	LOADK    	5 -8	; 11893.56
+	8	[-]	CALL     	2 4 2
+	9	[-]	SETTABLE 	1 -4 2	; "Pos" -
+	10	[-]	NEWTABLE 	2 0 2
+	11	[-]	SETTABLE 	2 -2 -9	; "Name" "Bot"
+	12	[-]	GETGLOBAL	3 -5	; Make3DPoint
+	13	[-]	LOADK    	4 -11	; 11861.1
+	14	[-]	LOADK    	5 -12	; -44.44
+	15	[-]	LOADK    	6 -13	; 3208.69
+	16	[-]	CALL     	3 4 2
+	17	[-]	SETTABLE 	2 -10 3	; "Start" -
+	18	[-]	SETLIST  	0 2 1	; 1
+	19	[-]	SETGLOBAL	0 -1	; LaneSigilDefinitions
+	20	[-]	CLOSURE  	0 0	; 000001F800EB3690
+	21	[-]	SETGLOBAL	0 -14	; SpawnLaneSigilEffects
+	22	[-]	RETURN   	0 1
+constants (14) for 000001F800EB34C0:
+	1	"LaneSigilDefinitions"
+	2	"Name"
+	3	"Top"
+	4	"Pos"
+	5	"Make3DPoint"
+	6	2721
+	7	22.09
+	8	11893.56
+	9	"Bot"
+	10	"Start"
+	11	11861.1
+	12	-44.44
+	13	3208.69
+	14	"SpawnLaneSigilEffects"
+locals (0) for 000001F800EB34C0:
+upvalues (0) for 000001F800EB34C0:
+
+function <?:13,33> (25 instructions, 100 bytes at 000001F800EB3690)
+0 params, 8 slots, 0 upvalues, 0 locals, 21 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; ipairs
+	2	[-]	GETGLOBAL	1 -2	; LaneSigilDefinitions
+	3	[-]	CALL     	0 2 4
+	4	[-]	JMP      	18	; to 23
+	5	[-]	NEWTABLE 	5 0 12
+	6	[-]	GETTABLE 	6 4 -3	; "Pos"
+	7	[-]	SETTABLE 	5 -3 6	; "Pos" -
+	8	[-]	SETTABLE 	5 -4 -5	; "EffectName" "ItemMuramanaToggle.troy"
+	9	[-]	GETTABLE 	6 4 -3	; "Pos"
+	10	[-]	SETTABLE 	5 -6 6	; "TargetPos" -
+	11	[-]	SETTABLE 	5 -7 -8	; "FOWVisibilityRadius" 10
+	12	[-]	SETTABLE 	5 -9 -10	; "SendIfOnScreenOrDiscard" false
+	13	[-]	SETTABLE 	5 -11 -12	; "PersistsThroughReconnect" true
+	14	[-]	SETTABLE 	5 -13 -10	; "BindFlexToOwnerPAR" false
+	15	[-]	SETTABLE 	5 -14 -12	; "FollowsGroundTilt" true
+	16	[-]	SETTABLE 	5 -15 -12	; "FacesTarget" true
+	17	[-]	SETTABLE 	5 -16 -10	; "HideFromSpectator" false
+	18	[-]	SETTABLE 	5 -17 -18	; "TimeoutInFOW" 99999
+	19	[-]	SETTABLE 	5 -19 -20	; "Scale" 0.5
+	20	[-]	GETGLOBAL	6 -21	; SpellEffectCreateFromTable
+	21	[-]	MOVE     	7 5
+	22	[-]	CALL     	6 2 1
+	23	[-]	TFORLOOP 	0 2
+	24	[-]	JMP      	-20	; to 5
+	25	[-]	RETURN   	0 1
+constants (21) for 000001F800EB3690:
+	1	"ipairs"
+	2	"LaneSigilDefinitions"
+	3	"Pos"
+	4	"EffectName"
+	5	"ItemMuramanaToggle.troy"
+	6	"TargetPos"
+	7	"FOWVisibilityRadius"
+	8	10
+	9	"SendIfOnScreenOrDiscard"
+	10	false
+	11	"PersistsThroughReconnect"
+	12	true
+	13	"BindFlexToOwnerPAR"
+	14	"FollowsGroundTilt"
+	15	"FacesTarget"
+	16	"HideFromSpectator"
+	17	"TimeoutInFOW"
+	18	99999
+	19	"Scale"
+	20	0.5
+	21	"SpellEffectCreateFromTable"
+locals (0) for 000001F800EB3690:
+upvalues (0) for 000001F800EB3690:

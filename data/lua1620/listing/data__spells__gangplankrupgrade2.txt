@@ -1,0 +1,33 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 000002CAED693570)
+0+ params, 4 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "GangplankRUpgrade2"
+	6	[-]	SETGLOBAL	0 -3	; BuffName
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -5	; PersistsThroughDeath
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -6	; NonDispellable
+	11	[-]	NEWTABLE 	0 3 0
+	12	[-]	LOADK    	1 -8	; "GangplankSkin05"
+	13	[-]	LOADK    	2 -9	; "GangplankSkin06"
+	14	[-]	LOADK    	3 -10	; "GangplankSkin07"
+	15	[-]	SETLIST  	0 3 1	; 1
+	16	[-]	SETGLOBAL	0 -7	; SpellVOOverrideSkins
+	17	[-]	RETURN   	0 1
+constants (10) for 000002CAED693570:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffName"
+	4	"GangplankRUpgrade2"
+	5	"PersistsThroughDeath"
+	6	"NonDispellable"
+	7	"SpellVOOverrideSkins"
+	8	"GangplankSkin05"
+	9	"GangplankSkin06"
+	10	"GangplankSkin07"
+locals (0) for 000002CAED693570:
+upvalues (0) for 000002CAED693570:

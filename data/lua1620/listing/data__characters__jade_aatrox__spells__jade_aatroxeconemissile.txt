@@ -1,0 +1,44 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 000001FB0E053610)
+0+ params, 2 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_E.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "Jade_AatroxEConeMissile"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; "r:Global_Slow"
+	12	[-]	SETGLOBAL	0 -8	; AutoBuffActivateEffect
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -10	; IsDeathRecapSource
+	15	[-]	LOADK    	0 -12	; "game_floatingtext_Slowed"
+	16	[-]	SETGLOBAL	0 -11	; PopupMessage1
+	17	[-]	NEWTABLE 	0 1 0
+	18	[-]	LOADK    	1 -14	; "FrostShyvana"
+	19	[-]	SETLIST  	0 1 1	; 1
+	20	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	21	[-]	LOADBOOL 	0 1 0
+	22	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	23	[-]	RETURN   	0 1
+constants (15) for 000001FB0E053610:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/UX/Jade/S3Icons/SameSized/Aatrox_E.dds"
+	6	"BuffName"
+	7	"Jade_AatroxEConeMissile"
+	8	"AutoBuffActivateEffect"
+	9	"r:Global_Slow"
+	10	"IsDeathRecapSource"
+	11	"PopupMessage1"
+	12	"game_floatingtext_Slowed"
+	13	"SpellFXOverrideSkins"
+	14	"FrostShyvana"
+	15	"IsDamagingSpell"
+locals (0) for 000001FB0E053610:
+upvalues (0) for 000001FB0E053610:

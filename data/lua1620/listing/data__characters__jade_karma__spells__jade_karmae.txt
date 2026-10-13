@@ -1,0 +1,32 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 0000029C9ACC35F0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/UX/Jade/S3Icons/SameSized/Jade_KarmaSoulShield_Jade34.project_jade.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Jade_KarmaE"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; 3
+	10	[-]	SETGLOBAL	0 -7	; OnPreDamagePriority
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -9	; IsDamagingSpell
+	13	[-]	LOADK    	0 -11	; "DATA/Shared/Particles/deathscaress_buf.troy"
+	14	[-]	SETGLOBAL	0 -10	; AutoBuffActivateEvent
+	15	[-]	RETURN   	0 1
+constants (11) for 0000029C9ACC35F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/UX/Jade/S3Icons/SameSized/Jade_KarmaSoulShield_Jade34.project_jade.dds"
+	5	"BuffName"
+	6	"Jade_KarmaE"
+	7	"OnPreDamagePriority"
+	8	3
+	9	"IsDamagingSpell"
+	10	"AutoBuffActivateEvent"
+	11	"DATA/Shared/Particles/deathscaress_buf.troy"
+locals (0) for 0000029C9ACC35F0:
+upvalues (0) for 0000029C9ACC35F0:

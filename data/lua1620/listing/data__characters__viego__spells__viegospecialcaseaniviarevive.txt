@@ -1,0 +1,56 @@
+
+main <?:0,0> (30 instructions, 120 bytes at 000002128B3D3600)
+0+ params, 5 slots, 0 upvalues, 0 locals, 20 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Anivia/HUD/Icons2D/Anivia_P_CD.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "ViegoSpecialCaseAniviaRevive"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -8	; PersistsThroughDeath
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -9	; NonDispellable
+	15	[-]	LOADK    	0 -11	; 3
+	16	[-]	SETGLOBAL	0 -10	; OnPreDamagePriority
+	17	[-]	NEWTABLE 	0 4 0
+	18	[-]	LOADK    	1 -13	; "PhoenixQuinn"
+	19	[-]	LOADK    	2 -14	; "QuinnValor_Phoenix"
+	20	[-]	LOADK    	3 -15	; "QuinnSkin02"
+	21	[-]	LOADK    	4 -16	; "QuinnValorSkin02"
+	22	[-]	SETLIST  	0 4 1	; 1
+	23	[-]	SETGLOBAL	0 -12	; SpellFXOverrideSkins
+	24	[-]	LOADBOOL 	0 1 0
+	25	[-]	SETGLOBAL	0 -17	; IsDamagingSpell
+	26	[-]	LOADBOOL 	0 1 0
+	27	[-]	SETGLOBAL	0 -18	; DoOnPreDamageInExpirationOrder
+	28	[-]	LOADK    	0 -20	; "DATA/Shared/Particles/deathscaress_buf.troy"
+	29	[-]	SETGLOBAL	0 -19	; AutoBuffActivateEvent
+	30	[-]	RETURN   	0 1
+constants (20) for 000002128B3D3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Anivia/HUD/Icons2D/Anivia_P_CD.dds"
+	6	"BuffName"
+	7	"ViegoSpecialCaseAniviaRevive"
+	8	"PersistsThroughDeath"
+	9	"NonDispellable"
+	10	"OnPreDamagePriority"
+	11	3
+	12	"SpellFXOverrideSkins"
+	13	"PhoenixQuinn"
+	14	"QuinnValor_Phoenix"
+	15	"QuinnSkin02"
+	16	"QuinnValorSkin02"
+	17	"IsDamagingSpell"
+	18	"DoOnPreDamageInExpirationOrder"
+	19	"AutoBuffActivateEvent"
+	20	"DATA/Shared/Particles/deathscaress_buf.troy"
+locals (0) for 000002128B3D3600:
+upvalues (0) for 000002128B3D3600:

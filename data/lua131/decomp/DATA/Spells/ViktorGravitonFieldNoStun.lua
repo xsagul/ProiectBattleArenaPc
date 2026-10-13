@@ -1,0 +1,17 @@
+local L0_1, L1_1
+L0_1 = "3022_Frozen_Heart.dds"
+BuffTextureName = L0_1
+L0_1 = "Chilled"
+BuffName = L0_1
+L0_1 = "Global_Slow.troy"
+AutoBuffActivateEffect = L0_1
+L0_1 = "Viktor_Catalyst_buf.troy"
+AutoBuffActivateEffect2 = L0_1
+L0_1 = ""
+AutoBuffActivateAttachBoneName2 = L0_1
+L0_1 = ""
+AutoBuffActivateEffect3 = L0_1
+L0_1 = ""
+AutoBuffActivateAttachBoneName3 = L0_1
+L0_1 = "game_floatingtext_Slowed"
+PopupMessage1 = L0_1

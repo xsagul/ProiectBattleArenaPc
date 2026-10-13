@@ -1,0 +1,31 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 0000022BE1E93610)
+0+ params, 2 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Nocturne/HUD/Icons2D/Nocturne_Paranoia.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "NocturneParanoiaTarget"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	NEWTABLE 	0 1 0
+	10	[-]	LOADK    	1 -8	; "CyberNocturne"
+	11	[-]	SETLIST  	0 1 1	; 1
+	12	[-]	SETGLOBAL	0 -7	; SpellFXOverrideSkins
+	13	[-]	LOADK    	0 -10	; "DATA/Shared/Particles/deathscaress_buf.troy"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEvent
+	15	[-]	RETURN   	0 1
+constants (10) for 0000022BE1E93610:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Nocturne/HUD/Icons2D/Nocturne_Paranoia.dds"
+	5	"BuffName"
+	6	"NocturneParanoiaTarget"
+	7	"SpellFXOverrideSkins"
+	8	"CyberNocturne"
+	9	"AutoBuffActivateEvent"
+	10	"DATA/Shared/Particles/deathscaress_buf.troy"
+locals (0) for 0000022BE1E93610:
+upvalues (0) for 0000022BE1E93610:

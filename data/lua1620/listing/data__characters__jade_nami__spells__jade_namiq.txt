@@ -1,0 +1,30 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 00000249EEF635D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; "DATA/Particles/maokai_sapling_activated_indicator.troy"
+	2	[-]	SETGLOBAL	0 -1	; AutoBuffActivateEffect
+	3	[-]	LOADK    	0 -4	; "C_BUFFBONE_GLB_CHEST_LOC"
+	4	[-]	SETGLOBAL	0 -3	; AutoBuffActivateAttachBoneName
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -5	; IsDeathRecapSource
+	7	[-]	NEWTABLE 	0 1 0
+	8	[-]	LOADK    	1 -7	; "Jade_NamiKoi"
+	9	[-]	SETLIST  	0 1 1	; 1
+	10	[-]	SETGLOBAL	0 -6	; SpellFXOverrideSkins
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -9	; "Jade_NamiSkin02"
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -8	; SpellVOOverrideSkins
+	15	[-]	RETURN   	0 1
+constants (9) for 00000249EEF635D0:
+	1	"AutoBuffActivateEffect"
+	2	"DATA/Particles/maokai_sapling_activated_indicator.troy"
+	3	"AutoBuffActivateAttachBoneName"
+	4	"C_BUFFBONE_GLB_CHEST_LOC"
+	5	"IsDeathRecapSource"
+	6	"SpellFXOverrideSkins"
+	7	"Jade_NamiKoi"
+	8	"SpellVOOverrideSkins"
+	9	"Jade_NamiSkin02"
+locals (0) for 00000249EEF635D0:
+upvalues (0) for 00000249EEF635D0:

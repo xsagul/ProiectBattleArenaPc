@@ -1,0 +1,35 @@
+struct 0x1049480
+  0x1049480 field 0: bits 0..0 +0x10 20 B 0:const 1:struct(0x101d7b0)
+struct 0x101d7b0
+    0x101d7b0 field 0 mode 1: not a text (0x101d7b0 field 0 mode 1: length table [1, 2, 9, 10, 17, 18, 25, 26, 30, 33, 34, 38, 41, 42, 46, 49, 50, 54, 57, 58, 65, 66, 70, 73, 74, 78, 81, 82, 86, 89, 90, 94, 97, 98, 102, 106, 107, 111, 114, 115, 119, 122, 123, 126, 127, 130, 131, 134, 135, 138, 139, 142, 143, 146, 147, 150, 151, 154, 155, 158, 159, 162, 163, 166, 167, 170, 171, 174, 175, 178, 179, 182, 183, 186, 187, 190, 191, 194, 195, 198, 199, 202, 203, 206, 207, 210, 211, 214, 215, 218, 219, 222, 223, 226, 230, 231, 234, 235, 238, 239, 242, 246, 247, 249, 250] [151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]); trying a seq of numbers
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 482, in learn_mode
+    ptr0 = P.ptr_of(plain_bytes(r, obj + res['off'], P.PTR)) if res['size'] >= P.PTR else 0
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 657, in learn_text
+    fill = bytes([good]) * 300
+           ~~~~~~~~~~~~~~^~~~~~
+AssertionError: 0x101d7b0 field 0 mode 1: length table [1, 2, 9, 10, 17, 18, 25, 26, 30, 33, 34, 38, 41, 42, 46, 49, 50, 54, 57, 58, 65, 66, 70, 73, 74, 78, 81, 82, 86, 89, 90, 94, 97, 98, 102, 106, 107, 111, 114, 115, 119, 122, 123, 126, 127, 130, 131, 134, 135, 138, 139, 142, 143, 146, 147, 150, 151, 154, 155, 158, 159, 162, 163, 166, 167, 170, 171, 174, 175, 178, 179, 182, 183, 186, 187, 190, 191, 194, 195, 198, 199, 202, 203, 206, 207, 210, 211, 214, 215, 218, 219, 222, 223, 226, 230, 231, 234, 235, 238, 239, 242, 246, 247, 249, 250] [151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1493, in <module>
+    for key, st in sc.structs.items():
+        ^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1164, in learn
+    s.root = d['root']
+                       
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 366, in learn
+    fl = self.learn_field(k)
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 409, in learn_field
+    try:
+         
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 485, in learn_mode
+    if kids:
+             
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 506, in learn_numbers
+    for c in range(256):
+       ^^^^^^^^^^^^^^^^^
+AssertionError: 0x101d7b0 field 0 mode 1: no one-byte element found

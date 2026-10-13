@@ -1,0 +1,76 @@
+
+main <?:0,0> (39 instructions, 156 bytes at 00000241624434C0)
+0+ params, 4 slots, 0 upvalues, 0 locals, 31 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; CastingBreaksStealth
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/UltBook_Twitch/HUD/Icons2D/UltBook_Twitch_R.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "UltBook_TwitchUlt"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; "r:UltBook_Twitch_R_Weapon_Glow"
+	12	[-]	SETGLOBAL	0 -8	; AutoBuffActivateEffect
+	13	[-]	LOADK    	0 -11	; "arrow"
+	14	[-]	SETGLOBAL	0 -10	; AutoBuffActivateAttachBoneName
+	15	[-]	LOADK    	0 -13	; "r:UltBook_Twitch_R_Weapon_Glow_R"
+	16	[-]	SETGLOBAL	0 -12	; AutoBuffActivateEffect2
+	17	[-]	LOADK    	0 -15	; "r_bow"
+	18	[-]	SETGLOBAL	0 -14	; AutoBuffActivateAttachBoneName2
+	19	[-]	LOADK    	0 -17	; "r:UltBook_Twitch_R_Weapon_Glow_L"
+	20	[-]	SETGLOBAL	0 -16	; AutoBuffActivateEffect3
+	21	[-]	LOADK    	0 -19	; "L_bow"
+	22	[-]	SETGLOBAL	0 -18	; AutoBuffActivateAttachBoneName3
+	23	[-]	LOADK    	0 -21	; "r:UltBook_Twitch_R_Buff"
+	24	[-]	SETGLOBAL	0 -20	; AutoBuffActivateEffect4
+	25	[-]	LOADK    	0 -23	; "Buffbone_Glb_Ground_Loc"
+	26	[-]	SETGLOBAL	0 -22	; AutoBuffActivateAttachBoneName4
+	27	[-]	NEWTABLE 	0 3 0
+	28	[-]	LOADK    	1 -25	; 90
+	29	[-]	LOADK    	2 -26	; 75
+	30	[-]	LOADK    	3 -27	; 60
+	31	[-]	SETLIST  	0 3 1	; 1
+	32	[-]	SETGLOBAL	0 -24	; AutoCooldownByLevel
+	33	[-]	NEWTABLE 	0 3 0
+	34	[-]	LOADK    	1 -29	; "GangsterUltBook_Twitch"
+	35	[-]	LOADK    	2 -30	; "PunkUltBook_Twitch"
+	36	[-]	LOADK    	3 -31	; "UltBook_TwitchSkin06"
+	37	[-]	SETLIST  	0 3 1	; 1
+	38	[-]	SETGLOBAL	0 -28	; SpellFXOverrideSkins
+	39	[-]	RETURN   	0 1
+constants (31) for 00000241624434C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"CastingBreaksStealth"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/UltBook_Twitch/HUD/Icons2D/UltBook_Twitch_R.dds"
+	6	"BuffName"
+	7	"UltBook_TwitchUlt"
+	8	"AutoBuffActivateEffect"
+	9	"r:UltBook_Twitch_R_Weapon_Glow"
+	10	"AutoBuffActivateAttachBoneName"
+	11	"arrow"
+	12	"AutoBuffActivateEffect2"
+	13	"r:UltBook_Twitch_R_Weapon_Glow_R"
+	14	"AutoBuffActivateAttachBoneName2"
+	15	"r_bow"
+	16	"AutoBuffActivateEffect3"
+	17	"r:UltBook_Twitch_R_Weapon_Glow_L"
+	18	"AutoBuffActivateAttachBoneName3"
+	19	"L_bow"
+	20	"AutoBuffActivateEffect4"
+	21	"r:UltBook_Twitch_R_Buff"
+	22	"AutoBuffActivateAttachBoneName4"
+	23	"Buffbone_Glb_Ground_Loc"
+	24	"AutoCooldownByLevel"
+	25	90
+	26	75
+	27	60
+	28	"SpellFXOverrideSkins"
+	29	"GangsterUltBook_Twitch"
+	30	"PunkUltBook_Twitch"
+	31	"UltBook_TwitchSkin06"
+locals (0) for 00000241624434C0:
+upvalues (0) for 00000241624434C0:

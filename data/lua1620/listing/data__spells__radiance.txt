@@ -1,0 +1,60 @@
+
+main <?:0,0> (31 instructions, 124 bytes at 000001E4502834D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 23 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "GemKnight_Radiance.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "Radiance"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "DATA/Particles/Taric_HammerFlare.troy"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect
+	15	[-]	LOADK    	0 -12	; "BUFFBONE_CSTM_WEAPON_1"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateAttachBoneName
+	17	[-]	LOADK    	0 -10	; "DATA/Particles/Taric_HammerFlare.troy"
+	18	[-]	SETGLOBAL	0 -13	; AutoBuffActivateEffect2
+	19	[-]	LOADK    	0 -15	; "BUFFBONE_CSTM_WEAPON_2"
+	20	[-]	SETGLOBAL	0 -14	; AutoBuffActivateAttachBoneName2
+	21	[-]	LOADK    	0 -17	; "DATA/Particles/Taric_ShoulderFlare.troy"
+	22	[-]	SETGLOBAL	0 -16	; AutoBuffActivateEffect3
+	23	[-]	LOADK    	0 -19	; "spine"
+	24	[-]	SETGLOBAL	0 -18	; AutoBuffActivateAttachBoneName3
+	25	[-]	LOADK    	0 -21	; 4
+	26	[-]	SETGLOBAL	0 -20	; SpellToggleSlot
+	27	[-]	LOADBOOL 	0 1 0
+	28	[-]	SETGLOBAL	0 -22	; NonDispellable
+	29	[-]	LOADBOOL 	0 0 0
+	30	[-]	SETGLOBAL	0 -23	; IsDamagingSpell
+	31	[-]	RETURN   	0 1
+constants (23) for 000001E4502834D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"GemKnight_Radiance.dds"
+	7	"BuffName"
+	8	"Radiance"
+	9	"AutoBuffActivateEffect"
+	10	"DATA/Particles/Taric_HammerFlare.troy"
+	11	"AutoBuffActivateAttachBoneName"
+	12	"BUFFBONE_CSTM_WEAPON_1"
+	13	"AutoBuffActivateEffect2"
+	14	"AutoBuffActivateAttachBoneName2"
+	15	"BUFFBONE_CSTM_WEAPON_2"
+	16	"AutoBuffActivateEffect3"
+	17	"DATA/Particles/Taric_ShoulderFlare.troy"
+	18	"AutoBuffActivateAttachBoneName3"
+	19	"spine"
+	20	"SpellToggleSlot"
+	21	4
+	22	"NonDispellable"
+	23	"IsDamagingSpell"
+locals (0) for 000001E4502834D0:
+upvalues (0) for 000001E4502834D0:

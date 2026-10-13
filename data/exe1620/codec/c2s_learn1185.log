@@ -1,0 +1,7 @@
++0x10 1 B bits 5..15: 4:const, 5:const, 12:const, 13:const, 20:const, 21:const, 253:const, 453:const, 461:const, 501:const, 765:const, 781:const, 885:const, 980:const, 997:const, 1012:const, 1148:const, 1309:const, 1356:const, 1445:const, 1477:const, 1484:const, 1557:const, 1636:const, 1669:const, 1685:const, 1885:const, 2044:const, 2045:const
++0x11 1 B bits 0..4 (always sent): 0:const, 2:const, 3:const, 4:const, 5:fixed, 8:const, 10:const, 11:const, 12:const, 14:fixed, 16:const, 18:const, 19:const, 20:const, 23:fixed, 24:const, 25:fixed, 26:const, 27:const, 28:const
+header 2 B; wire order: ['0x11', '0x10']
+differs: 97203c {'0x10': ('20', None), '0x11': ('3c', None)}
+differs: bef16b {'0x10': ('f1', None), '0x11': ('6b', None)}
+differs: 960edd {'0x10': ('0e', None), '0x11': ('dd', None)}
+18 of 300 packets written by the client from random values read back identical

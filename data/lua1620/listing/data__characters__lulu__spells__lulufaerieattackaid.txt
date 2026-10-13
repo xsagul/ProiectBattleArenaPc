@@ -1,0 +1,37 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 000002424F4B35F0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "OriannaCommandRedact.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "LuluShield"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; 3
+	14	[-]	SETGLOBAL	0 -9	; OnPreDamagePriority
+	15	[-]	LOADBOOL 	0 0 0
+	16	[-]	SETGLOBAL	0 -11	; IsDamagingSpell
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -12	; DoOnPreDamageInExpirationOrder
+	19	[-]	RETURN   	0 1
+constants (12) for 000002424F4B35F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"OriannaCommandRedact.dds"
+	7	"BuffName"
+	8	"LuluShield"
+	9	"OnPreDamagePriority"
+	10	3
+	11	"IsDamagingSpell"
+	12	"DoOnPreDamageInExpirationOrder"
+locals (0) for 000002424F4B35F0:
+upvalues (0) for 000002424F4B35F0:

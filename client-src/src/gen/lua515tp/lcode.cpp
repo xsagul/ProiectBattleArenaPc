@@ -1,36 +1,44 @@
-// Lua 5.1.5 (lua.org), compiled by Riot as C++ (default standard: C++14): lcode.c, the functions of it that are in the client (tools/match_objs.py).
-// match: c2dd00 ?codecomp@@YAXPAUFuncState@@W4OpCode@@HPAUexpdesc@@2@Z -O2
-// match: c2dda0 ?condjump@@YAHPAUFuncState@@W4OpCode@@HHH@Z -O2
-// match: c2de10 ?discharge2anyreg@@YAXPAUFuncState@@PAUexpdesc@@@Z -O2
-// match: c2e050 ?exp2reg@@YAXPAUFuncState@@PAUexpdesc@@H@Z -O2
-// match: c2e190 ?invertjump@@YAXPAUFuncState@@PAUexpdesc@@@Z -O2
-// match: c2e1e0 ?jumponcond@@YAHPAUFuncState@@PAUexpdesc@@H@Z -O2
-// match: c2e270 ?luaK_checkstack@@YAXPAUFuncState@@H@Z -O2
-// match: c2e2b0 ?luaK_code@@YAHPAUFuncState@@IH@Z -O2
-// match: c2e360 ?luaK_codeABC@@YAHPAUFuncState@@W4OpCode@@HHH@Z -O2
-// match: c2e390 ?luaK_codeABx@@YAHPAUFuncState@@W4OpCode@@HI@Z -O2
-// match: c2e3c0 ?luaK_concat@@YAXPAUFuncState@@PAHH@Z -O2
-// match: c2e440 ?luaK_dischargevars@@YAXPAUFuncState@@PAUexpdesc@@@Z -O2
-// match: c2e6f0 ?luaK_exp2anyreg@@YAHPAUFuncState@@PAUexpdesc@@@Z -O2
-// match: c2e740 ?luaK_exp2nextreg@@YAXPAUFuncState@@PAUexpdesc@@@Z -O2
-// match: c2e7c0 ?luaK_exp2val@@YAXPAUFuncState@@PAUexpdesc@@@Z -O2
-// match: c2e820 ?luaK_fixline@@YAXPAUFuncState@@H@Z -O2
-// match: c2e840 ?luaK_getlabel@@YAHPAUFuncState@@@Z -O2
-// match: c2e850 ?luaK_goiftrue@@YAXPAUFuncState@@PAUexpdesc@@@Z -O2
-// match: c2e8e0 ?luaK_indexed@@YAXPAUFuncState@@PAUexpdesc@@1@Z -O2
-// match: c2eaf0 ?luaK_jump@@YAHPAUFuncState@@@Z -O2
-// match: c2eb30 ?luaK_nil@@YAXPAUFuncState@@HH@Z -O2
-// match: c2ebf0 ?luaK_patchlist@@YAXPAUFuncState@@HH@Z -O2
-// match: c2ec30 ?luaK_patchtohere@@YAXPAUFuncState@@H@Z -O2
-// match: c30d30 ?luaK_reserveregs@@YAXPAUFuncState@@H@Z -O2
-// match: c30d70 ?luaK_ret@@YAXPAUFuncState@@HH@Z -O2
-// match: c30da0 ?luaK_self@@YAXPAUFuncState@@PAUexpdesc@@1@Z -O2
-// match: c30e90 ?luaK_setlist@@YAXPAUFuncState@@HHH@Z -O2
-// match: c30f20 ?luaK_setoneret@@YAXPAUFuncState@@PAUexpdesc@@@Z -O2
-// match: c30f80 ?luaK_setreturns@@YAXPAUFuncState@@PAUexpdesc@@H@Z -O2
-// match: c31030 ?luaK_storevar@@YAXPAUFuncState@@PAUexpdesc@@1@Z -O2
-// match: c31120 ?luaK_stringK@@YAHPAUFuncState@@PATTString@@@Z -O2
-// match: c31150 ?need_value@@YAHPAUFuncState@@H@Z -O2
-// match: c31270 ?patchtestreg@@YAHPAUFuncState@@HH@Z -O2
-// match: c31300 ?removevalues@@YAXPAUFuncState@@H@Z -O2
+// Lua 5.1.5 (lua.org), compiled by Riot as C++ (default standard: C++14) with -arch:SSE (doubles on the x87 stack): lcode.c, the functions of it that are in the client (tools/match_objs.py).
+// match: c2db40 ?codearith@@YAXPAUFuncState@@W4OpCode@@PAUexpdesc@@2@Z -O2 -arch:SSE
+// match: c2dd00 ?codecomp@@YAXPAUFuncState@@W4OpCode@@HPAUexpdesc@@2@Z -O2 -arch:SSE
+// match: c2dda0 ?condjump@@YAHPAUFuncState@@W4OpCode@@HHH@Z -O2 -arch:SSE
+// match: c2de10 ?discharge2anyreg@@YAXPAUFuncState@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c2de70 ?discharge2reg@@YAXPAUFuncState@@PAUexpdesc@@H@Z -O2 -arch:SSE
+// match: c2e050 ?exp2reg@@YAXPAUFuncState@@PAUexpdesc@@H@Z -O2 -arch:SSE
+// match: c2e190 ?invertjump@@YAXPAUFuncState@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c2e1e0 ?jumponcond@@YAHPAUFuncState@@PAUexpdesc@@H@Z -O2 -arch:SSE
+// match: c2e270 ?luaK_checkstack@@YAXPAUFuncState@@H@Z -O2 -arch:SSE
+// match: c2e2b0 ?luaK_code@@YAHPAUFuncState@@IH@Z -O2 -arch:SSE
+// match: c2e360 ?luaK_codeABC@@YAHPAUFuncState@@W4OpCode@@HHH@Z -O2 -arch:SSE
+// match: c2e390 ?luaK_codeABx@@YAHPAUFuncState@@W4OpCode@@HI@Z -O2 -arch:SSE
+// match: c2e3c0 ?luaK_concat@@YAXPAUFuncState@@PAHH@Z -O2 -arch:SSE
+// match: c2e440 ?luaK_dischargevars@@YAXPAUFuncState@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c2e580 ?luaK_exp2RK@@YAHPAUFuncState@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c2e6f0 ?luaK_exp2anyreg@@YAHPAUFuncState@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c2e740 ?luaK_exp2nextreg@@YAXPAUFuncState@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c2e7c0 ?luaK_exp2val@@YAXPAUFuncState@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c2e820 ?luaK_fixline@@YAXPAUFuncState@@H@Z -O2 -arch:SSE
+// match: c2e840 ?luaK_getlabel@@YAHPAUFuncState@@@Z -O2 -arch:SSE
+// match: c2e850 ?luaK_goiftrue@@YAXPAUFuncState@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c2e8e0 ?luaK_indexed@@YAXPAUFuncState@@PAUexpdesc@@1@Z -O2 -arch:SSE
+// match: c2e900 ?luaK_infix@@YAXPAUFuncState@@W4BinOpr@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c2eaf0 ?luaK_jump@@YAHPAUFuncState@@@Z -O2 -arch:SSE
+// match: c2eb30 ?luaK_nil@@YAXPAUFuncState@@HH@Z -O2 -arch:SSE
+// match: c2ebc0 ?luaK_numberK@@YAHPAUFuncState@@N@Z -O2 -arch:SSE
+// match: c2ebf0 ?luaK_patchlist@@YAXPAUFuncState@@HH@Z -O2 -arch:SSE
+// match: c2ec30 ?luaK_patchtohere@@YAXPAUFuncState@@H@Z -O2 -arch:SSE
+// match: c2ec60 ?luaK_posfix@@YAXPAUFuncState@@W4BinOpr@@PAUexpdesc@@2@Z -O2 -arch:SSE
+// match: c2ffe0 ?luaK_prefix@@YAXPAUFuncState@@W4UnOpr@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c30d30 ?luaK_reserveregs@@YAXPAUFuncState@@H@Z -O2 -arch:SSE
+// match: c30d70 ?luaK_ret@@YAXPAUFuncState@@HH@Z -O2 -arch:SSE
+// match: c30da0 ?luaK_self@@YAXPAUFuncState@@PAUexpdesc@@1@Z -O2 -arch:SSE
+// match: c30e90 ?luaK_setlist@@YAXPAUFuncState@@HHH@Z -O2 -arch:SSE
+// match: c30f20 ?luaK_setoneret@@YAXPAUFuncState@@PAUexpdesc@@@Z -O2 -arch:SSE
+// match: c30f80 ?luaK_setreturns@@YAXPAUFuncState@@PAUexpdesc@@H@Z -O2 -arch:SSE
+// match: c31030 ?luaK_storevar@@YAXPAUFuncState@@PAUexpdesc@@1@Z -O2 -arch:SSE
+// match: c31120 ?luaK_stringK@@YAHPAUFuncState@@PATTString@@@Z -O2 -arch:SSE
+// match: c31150 ?need_value@@YAHPAUFuncState@@H@Z -O2 -arch:SSE
+// match: c311b0 ?patchlistaux@@YAXPAUFuncState@@HHHH@Z -O2 -arch:SSE
+// match: c31270 ?patchtestreg@@YAHPAUFuncState@@HH@Z -O2 -arch:SSE
+// match: c31300 ?removevalues@@YAXPAUFuncState@@H@Z -O2 -arch:SSE
 #include "../../../../tools/third_party/lua-5.1.5/src/lcode.c"

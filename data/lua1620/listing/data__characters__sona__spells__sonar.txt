@@ -1,0 +1,50 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 00000121468A35A0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 19 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Sona/HUD/Icons2D/Sona_R.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "SonaR"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; "DATA/Shared/Particles/LOC_Stun.troy"
+	12	[-]	SETGLOBAL	0 -8	; AutoBuffActivateEffect2
+	13	[-]	LOADK    	0 -11	; "C_BUFFBONE_GLB_CENTER_LOC"
+	14	[-]	SETGLOBAL	0 -10	; AutoBuffActivateAttachBoneName2
+	15	[-]	LOADK    	0 -13	; "game_floatingtext_Stunned"
+	16	[-]	SETGLOBAL	0 -12	; PopupMessage1
+	17	[-]	NEWTABLE 	0 5 0
+	18	[-]	LOADK    	1 -15	; "GuqinSona"
+	19	[-]	LOADK    	2 -16	; "PaxSona"
+	20	[-]	LOADK    	3 -17	; "SonaDJGenre03Skin06"
+	21	[-]	LOADK    	4 -18	; "SonaDJGenre01Skin06"
+	22	[-]	LOADK    	5 -19	; "SonaDJGenre02Skin06"
+	23	[-]	SETLIST  	0 5 1	; 1
+	24	[-]	SETGLOBAL	0 -14	; SpellFXOverrideSkins
+	25	[-]	RETURN   	0 1
+constants (19) for 00000121468A35A0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Sona/HUD/Icons2D/Sona_R.dds"
+	6	"BuffName"
+	7	"SonaR"
+	8	"AutoBuffActivateEffect2"
+	9	"DATA/Shared/Particles/LOC_Stun.troy"
+	10	"AutoBuffActivateAttachBoneName2"
+	11	"C_BUFFBONE_GLB_CENTER_LOC"
+	12	"PopupMessage1"
+	13	"game_floatingtext_Stunned"
+	14	"SpellFXOverrideSkins"
+	15	"GuqinSona"
+	16	"PaxSona"
+	17	"SonaDJGenre03Skin06"
+	18	"SonaDJGenre01Skin06"
+	19	"SonaDJGenre02Skin06"
+locals (0) for 00000121468A35A0:
+upvalues (0) for 00000121468A35A0:

@@ -1,0 +1,35 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 0000022FA45435D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Ekko/HUD/Icons2D/Ekko_P2.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "EkkoPassiveSlow"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "DATA/Shared/Particles/Global_Slow.troy"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -10	; "game_floatingtext_Slowed"
+	12	[-]	SETGLOBAL	0 -9	; PopupMessage1
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -11	; IsDamagingSpell
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -12	; TriggersSpellCasts
+	17	[-]	RETURN   	0 1
+constants (12) for 0000022FA45435D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Ekko/HUD/Icons2D/Ekko_P2.dds"
+	5	"BuffName"
+	6	"EkkoPassiveSlow"
+	7	"AutoBuffActivateEffect"
+	8	"DATA/Shared/Particles/Global_Slow.troy"
+	9	"PopupMessage1"
+	10	"game_floatingtext_Slowed"
+	11	"IsDamagingSpell"
+	12	"TriggersSpellCasts"
+locals (0) for 0000022FA45435D0:
+upvalues (0) for 0000022FA45435D0:

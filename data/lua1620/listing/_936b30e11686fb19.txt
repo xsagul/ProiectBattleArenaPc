@@ -1,0 +1,32 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 00000201DE5B34C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; CastingBreaksStealth
+	7	[-]	LOADK    	0 -5	; "UltBook_LucianRMissileOffhand"
+	8	[-]	SETGLOBAL	0 -4	; BuffName
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -6	; IsDeathRecapSource
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -8	; "CyberEzreal"
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -7	; SpellFXOverrideSkins
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -9	; IsDamagingSpell
+	17	[-]	RETURN   	0 1
+constants (9) for 00000201DE5B34C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"CastingBreaksStealth"
+	4	"BuffName"
+	5	"UltBook_LucianRMissileOffhand"
+	6	"IsDeathRecapSource"
+	7	"SpellFXOverrideSkins"
+	8	"CyberEzreal"
+	9	"IsDamagingSpell"
+locals (0) for 00000201DE5B34C0:
+upvalues (0) for 00000201DE5B34C0:

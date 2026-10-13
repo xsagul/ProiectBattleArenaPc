@@ -4,4 +4,7 @@
 // match: e0c020 _BN_add
 // match: e0c0b0 _BN_sub
 // match: e0c140 _BN_uadd
+// match: e0c1f0 _BN_usub
+#define OPENSSL_FILE "crypto\\bn\\bn_add.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/bn/bn_add.c"

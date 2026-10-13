@@ -11,4 +11,6 @@
 // match: e00dd0 _test_rc4_cipher
 // match: e00e00 _test_rc4_init_key
 // match: e00e70 _test_sha_md
+#define OPENSSL_FILE "crypto\\engine\\eng_openssl.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/engine/eng_openssl.c"

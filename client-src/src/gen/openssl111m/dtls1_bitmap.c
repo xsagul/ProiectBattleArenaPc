@@ -4,4 +4,6 @@
 // match: dadb60 _dtls1_record_bitmap_update
 // match: dadbd0 _dtls1_record_replay_check
 // match: dadc30 _satsub64be
+#define OPENSSL_FILE "ssl\\record\\dtls1_bitmap.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/ssl/record/dtls1_bitmap.c"

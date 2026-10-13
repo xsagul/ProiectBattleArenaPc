@@ -1,0 +1,50 @@
+
+main <?:0,0> (26 instructions, 104 bytes at 0000021370C835C0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; CastingBreaksStealth
+	3	[-]	LOADK    	0 -3	; "ASSETS/Characters/Kaisa/HUD/Icons2D/Kaisa_E.dds"
+	4	[-]	SETGLOBAL	0 -2	; BuffTextureName
+	5	[-]	LOADK    	0 -5	; "KaisaE"
+	6	[-]	SETGLOBAL	0 -4	; BuffName
+	7	[-]	LOADK    	0 -7	; 1
+	8	[-]	SETGLOBAL	0 -6	; SpellToggleSlot
+	9	[-]	LOADK    	0 -9	; 3
+	10	[-]	SETGLOBAL	0 -8	; OnPreDamagePriority
+	11	[-]	NEWTABLE 	0 0 6
+	12	[-]	NEWTABLE 	1 5 0
+	13	[-]	LOADK    	2 -12	; 4
+	14	[-]	LOADK    	3 -12	; 4
+	15	[-]	LOADK    	4 -12	; 4
+	16	[-]	LOADK    	5 -12	; 4
+	17	[-]	LOADK    	6 -12	; 4
+	18	[-]	SETLIST  	1 5 1	; 1
+	19	[-]	SETTABLE 	0 -11 1	; "MaximumHits" -
+	20	[-]	SETTABLE 	0 -13 -14	; "CanHitCaster" 0
+	21	[-]	SETTABLE 	0 -15 -14	; "CanHitSameTarget" 0
+	22	[-]	SETTABLE 	0 -16 -14	; "CanHitSameTargetConsecutively" 0
+	23	[-]	SETTABLE 	0 -17 -7	; "CanHitEnemies" 1
+	24	[-]	SETTABLE 	0 -18 -14	; "CanHitFriends" 0
+	25	[-]	SETGLOBAL	0 -10	; ChainMissileParameters
+	26	[-]	RETURN   	0 1
+constants (18) for 0000021370C835C0:
+	1	"CastingBreaksStealth"
+	2	"BuffTextureName"
+	3	"ASSETS/Characters/Kaisa/HUD/Icons2D/Kaisa_E.dds"
+	4	"BuffName"
+	5	"KaisaE"
+	6	"SpellToggleSlot"
+	7	1
+	8	"OnPreDamagePriority"
+	9	3
+	10	"ChainMissileParameters"
+	11	"MaximumHits"
+	12	4
+	13	"CanHitCaster"
+	14	0
+	15	"CanHitSameTarget"
+	16	"CanHitSameTargetConsecutively"
+	17	"CanHitEnemies"
+	18	"CanHitFriends"
+locals (0) for 0000021370C835C0:
+upvalues (0) for 0000021370C835C0:

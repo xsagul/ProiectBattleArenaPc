@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\c2s16.py", line 580, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\c2s16.py", line 434, in learn
+    f['modes'][m] = CC._learn_read(W, off, n, v0, k, header, f['bit'], f['width'], m, 0)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\c2s_codec.py", line 245, in _learn_read
+    d = run(((5 << 7) | x).to_bytes(n, 'little'))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: int too big to convert

@@ -30,15 +30,20 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-import packet_emu as P  # noqa: E402
+from emu_backend import P  # noqa: E402
 import pkt_modes as PM  # noqa: E402
 import pkt_tree as PT  # noqa: E402
 
 OUT = os.path.join(P.RES, 'codec')
 PAD = 64
 MAXOBJ = 0x800      # a struct's own fields lie within this many bytes of its object
-SEQ_SIZE = 12       # Riot's text / vector field: data pointer, count, capacity
-EMPTY_TEXT = 0x01532fb2   # where an empty text's data pointer points (a constant in the image)
+SEQ_SIZE = P.PTR + 8   # Riot's text / vector field: data pointer, u32 count, u32 capacity (12 B on 13.3, 16 B on 16.20)
+EMPTY_TEXT = P.EMPTY_TEXT
+
+
+def seq_head(b):
+    """(data pointer, count) of a text / vector field's first bytes"""
+    return P.ptr_of(b), struct.unpack_from('<I', b, P.PTR)[0]
 
 
 def in_heap(v):
@@ -136,12 +141,12 @@ def plain_bytes(run, addr, n):
 # ------------------------------------------------------------------------------------------------- struct analysis
 
 class StructLearner:
-    def __init__(self, T, fn, schema, known=None):
+    def __init__(self, T, fn, schema, known=None, k=0):
         self.T = T
         self.fn = fn
         self.schema = schema
-        self.inst = T.of(fn)[0]
-        self.prefix = 6 if fn == T.info['des'] else 0
+        self.inst = T.of(fn)[k]
+        self.prefix = P.WIRE_SKIP if fn == T.info['des'] else 0
         wire = T.wire[self.inst['start']:self.inst['end']]
         r = Run(T, self.inst, wire)
         assert r.ok, f'{fn:#x}: its own bytes do not read alone ({r.r["err"]})'
@@ -329,7 +334,7 @@ class StructLearner:
         seg = r.ev[i:]
         if not any(e[0] == 'in' and e[-1] == 0 for e in seg) and len(st) < k + 2 and r.ok != 1:
             return None
-        return struct.unpack('<I', plain_bytes(r, r.obj + res['off'] + 4, 4))[0]
+        return struct.unpack('<I', plain_bytes(r, r.obj + res['off'] + P.PTR, 4))[0]
 
     def original(self, k):
         p, q = self.fields[k]['span']
@@ -401,7 +406,17 @@ class StructLearner:
             if sig in learnt and self.same(k, m, learnt[sig], res):
                 res['modes'][m] = dict(learnt[sig], same_as=learnt[sig]['mode'], mode=m)
                 continue
-            mode = self.learn_mode(k, m, r, seg, res, d)
+            try:
+                mode = self.learn_mode(k, m, r, seg, res, d)
+            except (AssertionError, ValueError, IndexError, KeyError, StopIteration) as e:
+                # a way of sending the field that the replay's packet does not use and that cannot be worked out
+                # from the reader alone: kept as unlearnt (the field can still be sent in its other modes)
+                hdr = int.from_bytes(bytes(self.base[self.hstart:self.hstart + self.header]), 'little')
+                if (hdr >> f['bit']) & ((1 << f['width']) - 1) == m:
+                    raise
+                print(f'    {self.fn:#x} field {k} mode {m}: left unlearnt ({type(e).__name__}: {str(e)[:90]})', flush=True)
+                res['modes'][m] = {'kind': 'unknown', 'unlearnt': True, 'mode': m}
+                continue
             mode['mode'] = m
             learnt[sig] = mode
             res['modes'][m] = mode
@@ -464,13 +479,13 @@ class StructLearner:
             child = kids[0][1]
             self.schema.need(child, self.T)
             return {'kind': 'struct', 'type': f'{child:#x}', 'at': kids[0][2] - obj - res['off']}
-        ptr0 = struct.unpack('<I', plain_bytes(r, obj + res['off'], 4))[0] if res['size'] >= 4 else 0
+        ptr0 = P.ptr_of(plain_bytes(r, obj + res['off'], P.PTR)) if res['size'] >= P.PTR else 0
         if res['size'] == SEQ_SIZE and (in_heap(ptr0) or ptr0 == EMPTY_TEXT or kids):
-            ptr, n = struct.unpack('<II', plain_bytes(r, obj + res['off'], 8))
+            ptr, n = seq_head(plain_bytes(r, obj + res['off'], P.PTR + 4))
             if kids:
                 return self.learn_seq(k, m, res, ('struct', kids))
             if n and in_heap(ptr):
-                e0 = struct.unpack('<III', plain_bytes(r, ptr, 12))
+                e0 = seq_head(plain_bytes(r, ptr, SEQ_SIZE)) + (struct.unpack('<I', plain_bytes(r, ptr + P.PTR + 4, 4))[0],)
                 if in_heap(e0[0]) and e0[1] <= e0[2] < 0x10000:
                     return self.learn_seq(k, m, res, ('text',))
             try:
@@ -480,25 +495,82 @@ class StructLearner:
                 return self.learn_numbers(k, m, res)
         return self.learn_bytes(k, m, res)
 
+    def learn_fixed_seq(self, k, m, res):
+        """a varint count, then that many FIXED-width elements, each wire byte through a table into its own byte of the
+        element [16.20's 294: 4-byte elements; 10's nested struct]. Read only: the mode is kept for reading"""
+        def head(r):
+            ptr, n = seq_head(plain_bytes(r, r.obj + res['off'], P.PTR + 4))
+            return ptr, n
+        fill = bytes([0x05]) * 300
+        C, width = [None] * 256, None
+        for c in range(256):
+            r, seg, ok = self.probe(k, m, bytes([c]) + fill)
+            if not ok:
+                continue
+            ptr, n = head(r)
+            nread = len({e[1] for e in seg if e[0] == 'read' and e[1] >= self.dstart})
+            if 0 < n < 128 and (nread - 1) % n == 0:
+                w = (nread - 1) // n
+                if width is None:
+                    width = w
+                if w == width:
+                    C[c] = n
+            elif n == 0 and nread == 1:
+                C[c] = 0
+        assert width, f'{self.fn:#x} field {k} mode {m}: no fixed element width'
+        one = C.index(1)
+        # element: which element byte each wire byte sets, through which table (the elements' size from the stride of
+        # two elements in the vector)
+        r2, seg2, ok2 = self.probe(k, m, bytes([C.index(2)]) + fill) if 2 in C else (None, None, False)
+        esize = 4
+        out = []
+        for j in range(width):
+            base = bytearray(fill[:width + 40])
+            vals = []
+            for v in range(256):
+                w = bytearray(base)
+                w[j] = v
+                r, seg, ok = self.probe(k, m, bytes([one]) + bytes(w))
+                if not ok:
+                    vals.append(None)
+                    continue
+                ptr, n = head(r)
+                vals.append(plain_bytes(r, ptr, esize) if n == 1 else None)
+            good = [x for x in vals if x is not None]
+            changed = [i for i in range(esize) if len({x[i] for x in good}) > 1]
+            assert len(changed) == 1, f'{self.fn:#x} field {k} mode {m}: element wire byte {j} moves bytes {changed}'
+            out.append([changed[0], [x[changed[0]] if x is not None else None for x in vals]])
+        return {'kind': 'seq', 'C': C, 'order': 'fwd', 'read_only': True,
+                'elem': {'kind': 'fixed', 'n': width, 'size': esize, 'map': out}}
+
     def learn_numbers(self, k, m, res):
-        """a varint count, then that many varint numbers (u32 each in the vector)"""
+        """a varint count, then that many varint numbers (u32 or u16 each in the vector: the stride is the one under
+        which a run of equal one-byte elements reads back as that many equal numbers)"""
+        stride = [4]
+
         def vec(r):
-            ptr, n = struct.unpack('<II', plain_bytes(r, r.obj + res['off'], 8))
-            return [struct.unpack('<I', plain_bytes(r, ptr + 4 * i, 4))[0] for i in range(min(n, 400))]
+            ptr, n = seq_head(plain_bytes(r, r.obj + res['off'], P.PTR + 4))
+            w = stride[0]
+            return [int.from_bytes(plain_bytes(r, ptr + w * i, w), 'little') for i in range(min(n, 400))]
         # a count byte and an element byte that make several one-byte elements
         found = None
         for e0 in range(256):
             for c in range(256):
                 r, seg, ok = self.probe(k, m, bytes([c]) + bytes([e0]) * 300)
                 if ok:
-                    v = vec(r)
                     nread = len([e for e in seg if e[0] == 'read' and e[1] >= self.dstart])
-                    if len(v) >= 2 and nread == 1 + len(v) and len(set(v)) == 1:
-                        found = e0
+                    for w in (4, 2, 1):
+                        stride[0] = w
+                        v = vec(r)
+                        if len(v) >= 2 and nread == 1 + len(v) and len(set(v)) == 1:
+                            found = e0
+                            break
+                    if found is not None:
                         break
             if found is not None:
                 break
-        assert found is not None, f'{self.fn:#x} field {k} mode {m}: no one-byte element found'
+        if found is None:
+            return self.learn_fixed_seq(k, m, res)
         many = bytes([found]) * 300
         C = [None] * 256
         for v in range(256):
@@ -535,7 +607,7 @@ class StructLearner:
         r, seg, ok = self.probe(k, m, bytes([Cinv[3], Sinv[1], Sinv[2], Sinv[3]]))
         got = vec(r)
         order = next(o for o in ('fwd', 'rev', 'ends') if [got.index(i + 1) for i in range(3)] == text_order(o, 3))
-        return {'kind': 'seq', 'C': C, 'elem': {'kind': 'varint', 'S': S}, 'order': order, 'stride': 4}
+        return {'kind': 'seq', 'C': C, 'elem': {'kind': 'varint', 'S': S}, 'order': order, 'stride': stride[0]}
 
     # -- fixed / varint (as pkt_codec, on this struct's own bytes)
     def field_bytes(self, r, res):
@@ -551,7 +623,61 @@ class StructLearner:
             return self.learn_fixed(k, m, res, counts.pop())
         if counts == {1, -1}:
             return self.learn_fixed(k, m, res, 1, partial=True)
+        if res['size'] >= 8 and res['size'] % 4 == 0:
+            try:
+                return self.learn_varints(k, m, res)
+            except AssertionError as e:
+                print(f'    not an array of varints: {e}', flush=True)
         return self.learn_varint(k, m, res)
+
+    def learn_varints(self, k, m, res):
+        """a fixed array of u32, each travelling as a varint through one byte table (16.20's 905: the perk ids, the
+        cosmetic ids). A wire byte ends an element when the element's value does not depend on what follows it."""
+        count = res['size'] // 4
+        last = None
+        # the element each wire varint goes to: text_order (905: the cosmetics 'rev', the perk ids 'ends')
+        for order in ('rev', 'ends', 'fwd'):
+            try:
+                return self._learn_varints(k, m, res, count, order)
+            except AssertionError as e:
+                last = e
+        raise last
+
+    def _learn_varints(self, k, m, res, count, order):
+        at = 4 * text_order(order, count)[0]
+
+        def first(data):
+            r, seg, ok = self.probe(k, m, data)
+            return int.from_bytes(self.field_bytes(r, res)[at:at + 4], 'little') if ok else None
+        S = [None] * 256
+        more = []
+        for v in range(256):
+            got = set()
+            for _ in range(6):
+                x = first(bytes([v]) + bytes(self.rng.randrange(256) for _ in range(PAD - 1)))
+                if x is not None:
+                    got.add(x)
+                if len(got) > 1:
+                    break
+            if len(got) == 1 and next(iter(got)) < 0x80:
+                S[v] = got.pop()
+            else:
+                more.append(v)
+        assert 0 in S, f'{self.fn:#x} field {k} mode {m}: no byte for an element of 0'
+        z = S.index(0)
+        for v in more:
+            x = first(bytes([v]) + bytes([z]) * (PAD - 1))
+            assert x is not None and x < 0x80, f'{self.fn:#x} field {k} mode {m}: varint byte {v:#x}'
+            S[v] = 0x80 | x
+        assert sorted(S) == list(range(256)), f'{self.fn:#x} field {k} mode {m}: the elements\' byte table'
+        # every element through the same table: a known array read back
+        want = [(i * 2654435761 + 12345) & 0xffffffff for i in range(count)]
+        inv = _inv(S)
+        wire = [want[i] for i in text_order(order, count)]
+        r, seg, ok = self.probe(k, m, b''.join(_varint(x, inv) for x in wire) + bytes(PAD))
+        assert ok and self.field_bytes(r, res) == b''.join(x.to_bytes(4, 'little') for x in want), \
+            f'{self.fn:#x} field {k} mode {m}: the array does not read back ({order})'
+        return {'kind': 'varints', 'count': count, 'S': S, 'order': order}
 
     def learn_fixed(self, k, m, res, n, partial=False):
         out = []
@@ -573,7 +699,12 @@ class StructLearner:
             assert len(changed) == 1, f'{self.fn:#x} field {k} mode {m}: wire byte {j} moves field bytes {changed}'
             o = changed[0]
             tab = [x[o] if x is not None else None for x in vals]
-            assert len({t for t in tab if t is not None}) == len(good)
+            if len({t for t in tab if t is not None}) != len(good):
+                # several wire bytes give the same field byte (16.20's 10, instance +0x2c mode 1): enough to READ the
+                # field, not to write it - the mode is kept for reading only
+                self.read_only = True
+                out.append([o, tab])
+                continue
             # same table with other bytes around
             base2 = bytes(self.rng.randrange(256) for _ in range(n + PAD))
             for v in self.rng.sample(range(256), 8):
@@ -585,29 +716,43 @@ class StructLearner:
                 else:
                     assert ok and self.field_bytes(r, res)[o] == tab[v]
             out.append([o, tab])
-        return {'kind': 'fixed', 'n': n, 'map': out, 'covers': sorted(o for o, t in out)}
+        mode = {'kind': 'fixed', 'n': n, 'map': out, 'covers': sorted(o for o, t in out)}
+        if getattr(self, 'read_only', False):
+            self.read_only = False
+            mode['read_only'] = True
+        return mode
 
     def learn_varint(self, k, m, res):
         fill = bytes(self.rng.randrange(256) for _ in range(PAD))
         S = [None] * 256
+        two = [False] * 256      # this wire byte says another byte follows
         size = res['size']
         for v in range(256):
             r, seg, ok = self.probe(k, m, bytes([v]) + fill[1:])
-            n = len([e for e in seg if e[0] == 'read' and e[1] >= self.dstart and e[-1] == 0])
+            # wire positions read (a reader may look at the same byte twice: 16.20's 905)
+            n = len({e[1] for e in seg if e[0] == 'read' and e[1] >= self.dstart and e[-1] == 0})
             if ok and n == 1:
                 S[v] = int.from_bytes(self.field_bytes(r, res), 'little')
-        z = S.index(0)
+        # the byte that adds nothing as a second byte: plain 0 (a net id field reads it as 0x40000000)
+        z = S.index(0) if 0 in S else S.index(min(x for x in S if x is not None))
         for v in range(256):
             if S[v] is None:
                 r, seg, ok = self.probe(k, m, bytes([v, z]) + fill[2:])
                 assert ok, f'{self.fn:#x} field {k} mode {m}: varint byte {v:#x}'
+                two[v] = True
                 S[v] = 0x80 | int.from_bytes(self.field_bytes(r, res), 'little')
+        if sorted(S) != list(range(256)) and size == 4:
+            # 16.20: a net id inside a packet travels like the packet's own (netid16.py): the number on the wire is
+            # the id with bit 30 flipped, unless its low 24 bits are zero
+            N = [(nid_number(x & ~0x80) & 0x7f) | (0x80 if i_two else 0) for x, i_two in zip(S, two)]
+            if sorted(N) == list(range(256)):
+                return {'kind': 'varint', 'S': N, 'nid': True}
         assert sorted(S) == list(range(256)), f'{self.fn:#x} field {k} mode {m}: varint table'
         return {'kind': 'varint', 'S': S}
 
     # -- a text field (a seq of bytes)
     def text_of(self, r, res):
-        ptr, n = struct.unpack('<II', plain_bytes(r, r.obj + res['off'], 8))
+        ptr, n = seq_head(plain_bytes(r, r.obj + res['off'], P.PTR + 4))
         if n == 0:
             return b''
         if n > 0x10000:
@@ -640,6 +785,7 @@ class StructLearner:
                 nread = len([e for e in seg if e[0] == 'read' and e[1] >= self.dstart])
                 if nread == len(pre) + 1 + len(s):
                     L[v] = len(s)
+        assert 1 in L, f'{self.fn:#x} field {k} mode {m}: no length-1 byte; lengths read {sorted({x for x in L if x is not None})[:12]}'
         one = L.index(1)
         for v in range(256):
             if L[v] is None:
@@ -712,12 +858,12 @@ class StructLearner:
         for v in range(256):
             self.T.emu.u.mem_write(PT.WIRE, bytes([v, 0]))
             dst = emu.alloc(8)
-            cur = emu.alloc(4)
-            emu.u.mem_write(cur, struct.pack('<I', PT.WIRE))
-            ret, err = emu.call(h, 0, [dst, cur, PT.WIRE + 1])
+            cur = emu.alloc(P.PTR)
+            emu.u.mem_write(cur, P.pack_ptr(PT.WIRE))
+            ret, err = P.call_helper(emu, h, dst, cur, PT.WIRE + 1)
             if err:
                 return None
-            used = struct.unpack('<I', bytes(emu.u.mem_read(cur, 4)))[0] - PT.WIRE
+            used = P.read_ptr(emu.u, cur) - PT.WIRE
             val = struct.unpack('<I', bytes(emu.u.mem_read(dst, 4)))[0]
             if ret & 0xff == 1 and used == 1 and val < 128:
                 S[v] = val
@@ -747,7 +893,7 @@ class StructLearner:
             r, seg, ok = self.probe(k, m, bytes([Cinv[3]]) + b''.join(three))
             assert ok
             kids = [e for e in seg if e[0] == 'in' and e[-1] == 0]
-            ptr = struct.unpack('<I', plain_bytes(r, r.obj + res['off'], 4))[0]
+            ptr = P.ptr_of(plain_bytes(r, r.obj + res['off'], P.PTR))
             slots = [(e[2] - ptr) // stride for e in kids]
             order = next(o for o in ('fwd', 'rev', 'ends') if slots == text_order(o, 3))
         else:
@@ -777,7 +923,7 @@ class StructLearner:
             # the elements' order on the wire may differ from their place in the vector: sort by wire offset
             count_len = starts[0] - p
             objs = [e[2] for e in kids]
-            ptr = struct.unpack('<I', plain_bytes(r0, obj + res['off'], 4))[0]
+            ptr = P.ptr_of(plain_bytes(r0, obj + res['off'], P.PTR))
             stride = min(abs(a - b) for a in objs for b in objs if a != b) if len(objs) > 1 else None
             filler_one = enc[0]
         else:
@@ -800,7 +946,7 @@ class StructLearner:
         # starts at the vector's end - 1 element, which underflows for a never-filled vector): the server sends an
         # empty seq with a constant mode instead; its table entry is the one byte left over.
         def count_of(r):
-            return struct.unpack('<I', plain_bytes(r, r.obj + res['off'] + 4, 4))[0]
+            return struct.unpack('<I', plain_bytes(r, r.obj + res['off'] + P.PTR, 4))[0]
         C = self.helper_count_table(k, m, seg0) if elem[0] == 'struct' else None
         if C is not None:
             Cinv = {x: w for w, x in enumerate(C)}
@@ -835,8 +981,12 @@ class StructLearner:
                     C[v] = 0x80 | (c - 128)
         left = [v for v in range(256) if C[v] is None]
         missing = sorted(set(range(256)) - {c for c in C if c is not None})
-        assert len(left) == 1 and missing == [0], f'{self.fn:#x} field {k} mode {m}: count table, {len(left)} unknown {missing[:4]}'
-        C[left[0]] = 0
+        assert 1 <= len(left) <= 3 and len(left) == len(missing) and 0 in missing, \
+            f'{self.fn:#x} field {k} mode {m}: count table, {len(left)} unknown {missing[:4]}'
+        if len(left) == 1:
+            C[left[0]] = 0
+        else:      # a count the reader would not take in the probe: those bytes stay unknown (never written by us)
+            print(f'    {self.fn:#x} field {k} mode {m}: count bytes {left} for counts {missing} left unknown', flush=True)
         Cinv = {x: w for w, x in enumerate(C)}
         mode = {'kind': 'seq', 'C': C}
         if elem[0] == 'struct':
@@ -852,7 +1002,7 @@ class StructLearner:
                 r, seg, ok = self.probe(k, m, bytes([Cinv[3]]) + b''.join(three))
                 assert ok
                 kids = [e for e in seg if e[0] == 'in' and e[-1] == 0]
-                ptr = struct.unpack('<I', plain_bytes(r, r.obj + res['off'], 4))[0]
+                ptr = P.ptr_of(plain_bytes(r, r.obj + res['off'], P.PTR))
                 slots = [(e[2] - ptr) // stride for e in kids]
                 order = next(o for o in ('fwd', 'rev', 'ends') if slots == text_order(o, 3))
             else:
@@ -875,10 +1025,10 @@ class StructLearner:
         return mode
 
     def elem_text(self, r, res, i):
-        ptr, n = struct.unpack('<II', plain_bytes(r, r.obj + res['off'], 8))
+        ptr, n = seq_head(plain_bytes(r, r.obj + res['off'], P.PTR + 4))
         if i >= n:
             return None
-        p, cnt = struct.unpack('<II', plain_bytes(r, ptr + SEQ_SIZE * i, 8))
+        p, cnt = seq_head(plain_bytes(r, ptr + SEQ_SIZE * i, P.PTR + 4))
         return plain_bytes(r, p, cnt) if cnt else b''
 
     def random_value(self, mode, res):
@@ -927,7 +1077,7 @@ def read_field(schema, r, obj, res, mode):
     if k in ('fixed', 'varint', 'const') and 'seq' not in mode:
         return plain_bytes(r, a, res['size']).hex()
     if k == 'text':
-        ptr, n = struct.unpack('<II', plain_bytes(r, a, 8))
+        ptr, n = seq_head(plain_bytes(r, a, P.PTR + 4))
         return {'text': (plain_bytes(r, ptr, n) if n else b'').hex()}
     if k == 'struct':
         if mode['type'] not in schema.structs:
@@ -939,12 +1089,13 @@ def read_field(schema, r, obj, res, mode):
             return {'default': True}
         return read_struct(schema, r, a + mode.get('at', 0), schema.structs[mode['type']])
     if k == 'seq' or 'seq' in mode:
-        ptr, n = struct.unpack('<II', plain_bytes(r, a, 8))
+        ptr, n = seq_head(plain_bytes(r, a, P.PTR + 4))
         el = mode.get('elem') or {}
         out = []
         for i in range(n):
             if el.get('kind') == 'varint':
-                out.append(plain_bytes(r, ptr + 4 * i, 4).hex())
+                w = mode.get('stride') or 4
+                out.append(plain_bytes(r, ptr + w * i, w).hex())
                 continue
             if el.get('kind') == 'struct':
                 if el['type'] not in schema.structs:
@@ -952,7 +1103,7 @@ def read_field(schema, r, obj, res, mode):
                     continue
                 out.append(read_struct(schema, r, ptr + mode['stride'] * i, schema.structs[el['type']]))
             else:
-                p, c = struct.unpack('<II', plain_bytes(r, ptr + SEQ_SIZE * i, 8))
+                p, c = seq_head(plain_bytes(r, ptr + SEQ_SIZE * i, P.PTR + 4))
                 out.append({'text': (plain_bytes(r, p, c) if c else b'').hex()})
         return out
     return None
@@ -980,12 +1131,27 @@ def read_struct(schema, r, obj, st):
 
 # ------------------------------------------------------------------------------------------------- writing
 
+KEEP_INVERSES = False     # a server sets it: a schema's byte tables do not change there, their inverses are kept
+_inverses = {}
+
+
 def _inv(tab):
+    if KEEP_INVERSES:
+        hit = _inverses.get(id(tab))
+        if hit is not None and hit[0] is tab:
+            return hit[1]
     inv = [None] * 256
     for w, x in enumerate(tab):
         if x is not None:
             inv[x] = w
+    if KEEP_INVERSES:
+        _inverses[id(tab)] = (tab, inv)      # the table itself is held: its id cannot pass to another list
     return inv
+
+
+def nid_number(v):
+    """net id <-> the number that travels for it (the same operation both ways)"""
+    return v if v & 0xffffff == 0 else v ^ 0x40000000
 
 
 def _varint(n, inv):
@@ -1028,9 +1194,15 @@ def encode_mode(schema, mode, v, fl):
             out[j] = _inv(tab)[b[o]]
         return bytes(out)
     if k == 'varint':
-        return _varint(int.from_bytes(bytes.fromhex(v), 'little'), _inv(mode['S']))
+        n = int.from_bytes(bytes.fromhex(v), 'little')
+        return _varint(nid_number(n) if mode.get('nid') else n, _inv(mode['S']))
     if k == 'text':
         return encode_text(mode, bytes.fromhex(v['text']))
+    if k == 'varints':
+        b = bytes.fromhex(v)
+        inv = _inv(mode['S'])
+        el = [int.from_bytes(b[i:i + 4], 'little') for i in range(0, 4 * mode['count'], 4)]
+        return b''.join(_varint(el[i], inv) for i in text_order(mode.get('order', 'fwd'), mode['count']))
     if k == 'struct':
         return schema.encode_struct(mode['type'], v, schema.forced)
     if k == 'seq':
@@ -1041,14 +1213,139 @@ def encode_mode(schema, mode, v, fl):
                 out += schema.encode_struct(el['type'], v[i], schema.forced)
             elif el['kind'] == 'varint':
                 out += _varint(int.from_bytes(bytes.fromhex(v[i]), 'little'), _inv(el['S']))
+            elif el['kind'] == 'fixed':
+                # the reader's tables backwards: each wire byte sets one byte of the element
+                b = bytes.fromhex(v[i])
+                w = bytearray(el['n'])
+                for j, (o, tab) in enumerate(el['map']):
+                    x = _inv(tab)[b[o]]
+                    if x is None:
+                        raise ValueError('fixed element byte outside the table')
+                    w[j] = x
+                out += w
             else:
                 out += encode_text(el, bytes.fromhex(v[i]['text']))
         return bytes(out)
     raise ValueError(k)
 
 
+# ------------------------------------------------------------------------------------------------- reading without the client
+
+def _unvarint(body, at, tab):
+    n = shift = 0
+    while True:
+        g = tab[body[at]]
+        at += 1
+        if g is None:
+            raise ValueError('byte outside the table')
+        n |= (g & 0x7f) << shift
+        shift += 7
+        if not g & 0x80:
+            return n, at
+
+
+def _untext(mode, body, at):
+    n, at = _unvarint(body, at, mode['L'])
+    data = bytearray(n)
+    S = mode['S']
+    mid = mode.get('mid')
+    for i in text_order(mode['order'], n):
+        t = mid if mid and n % 2 and i == n // 2 else S
+        x = t[body[at]]
+        if x is None:
+            raise ValueError('text byte outside the table')
+        data[i] = x
+        at += 1
+    return bytes(data), at
+
+
+def parse_mode(schema, mode, fl, body, at):
+    k = mode['kind']
+    if k == 'const':
+        if mode.get('struct'):
+            return {'default': True}, at
+        return (mode['seq'] if 'seq' in mode else mode['value']), at
+    if k == 'fixed':
+        b = bytearray(fl['size'])
+        for j, (o, tab) in enumerate(mode['map']):
+            x = tab[body[at + j]]
+            if x is None:
+                raise ValueError('fixed byte outside the table')
+            b[o] = x
+        return bytes(b).hex(), at + mode['n']
+    if k == 'varint':
+        n, at = _unvarint(body, at, mode['S'])
+        n &= (1 << (8 * fl['size'])) - 1
+        return (nid_number(n) if mode.get('nid') else n).to_bytes(fl['size'], 'little').hex(), at
+    if k == 'text':
+        data, at = _untext(mode, body, at)
+        return {'text': data.hex()}, at
+    if k == 'varints':
+        el = [b''] * mode['count']
+        for i in text_order(mode.get('order', 'fwd'), mode['count']):
+            x, at = _unvarint(body, at, mode['S'])
+            el[i] = (x & 0xffffffff).to_bytes(4, 'little')
+        return b''.join(el).ljust(fl['size'], b'\0').hex(), at
+    if k == 'struct':
+        return parse_struct(schema, mode['type'], body, at)
+    if k == 'seq':
+        n, at = _unvarint(body, at, mode['C'])
+        el = mode['elem']
+        out = [None] * n
+        for i in text_order(mode['order'], n):
+            if el['kind'] == 'struct':
+                out[i], at = parse_struct(schema, el['type'], body, at)
+            elif el['kind'] == 'varint':
+                x, at = _unvarint(body, at, el['S'])
+                w = mode.get('stride') or 4
+                out[i] = (x & ((1 << (8 * w)) - 1)).to_bytes(w, 'little').hex()
+            elif el['kind'] == 'fixed':
+                b = bytearray(el['size'])
+                for j, (o, tab) in enumerate(el['map']):
+                    x = tab[body[at + j]]
+                    if x is None:
+                        raise ValueError('fixed element byte outside the table')
+                    b[o] = x
+                at += el['n']
+                out[i] = bytes(b).hex()
+            else:
+                data, at = _untext(el, body, at)
+                out[i] = {'text': data.hex()}
+        return out, at
+    raise ValueError(f'mode {k} cannot be read')
+
+
+def parse_struct(schema, key, body, at=0):
+    st = schema.structs[key]
+    bits = int.from_bytes(body[at:at + st['header']], 'little')
+    at += st['header']
+    out = {}
+    for fl in st['fields']:
+        m = (bits >> fl['bit']) & ((1 << fl['width']) - 1)
+        mode = fl['modes'].get(m)
+        if mode is None:
+            raise ValueError(f'{key} +{fl["off"]:#x}: mode {m} not learnt')
+        v, at = parse_mode(schema, mode, fl, body, at)
+        if fl['off'] is not None:
+            out[f'+{fl["off"]:#x}'] = v
+    return out, at
+
+
+def parse(schema, body):
+    """a packet body (after the id and the net id) -> values, in plain Python (the inverse of Schema.encode);
+    raises ValueError when the body does not fit the learnt format"""
+    v, at = parse_struct(schema, schema.root, body, 0)
+    if at != len(body):
+        raise ValueError(f'{len(body) - at} bytes left')
+    return v
+
+
 def fits(mode, v, fl):
     k = mode['kind']
+    if mode.get('read_only') and not (k == 'seq' and mode['elem']['kind'] == 'fixed'):
+        return False                     # a mode learnt for reading only (a byte table that is not one-to-one); a seq of
+                                         # fixed elements is written backwards through its tables (a byte with no wire
+                                         # byte raises)
     if k == 'const':
         if mode.get('struct'):
             return v == {'default': True}
@@ -1061,7 +1358,7 @@ def fits(mode, v, fl):
         return set(bytes.fromhex(v['text'])) <= set(mode['accepts'])
     if mode.get('unlearnt'):
         return False
-    return k in ('varint', 'text', 'struct', 'seq')
+    return k in ('varint', 'varints', 'text', 'struct', 'seq')
 
 
 class Schema:
@@ -1083,7 +1380,7 @@ class Schema:
             self.todo.append(fn)
 
     def choose(self, fl, v):
-        for kinds in (('const',), ('fixed', 'varint', 'text', 'struct', 'seq')):
+        for kinds in (('const',), ('fixed', 'varint', 'varints', 'text', 'struct', 'seq')):
             for m in sorted(fl['modes'], key=int):
                 d = fl['modes'][m]
                 if d['kind'] in kinds and fits(d, v, fl):
@@ -1119,20 +1416,77 @@ class Schema:
             json.dump({'id': self.pid, 'root': self.root, 'structs': self.structs, 'unlearnt': sorted(self.unlearnt)}, f)
 
     @staticmethod
-    def load(pid):
+    def load(pid, borrow=True):
         d = json.load(open(os.path.join(OUT, f'{pid}.tree.json')))
         s = Schema(pid, d['structs'])
         s.root = d['root']
         s.unlearnt = set(d.get('unlearnt', []))
+        if borrow:
+            # a struct reader is shared by several packet ids (16.20: 51 and 134 carry 1215's cast struct): one not learnt
+            # in this id's format is taken from another id's format that learnt it
+            todo = [s.root]
+            seen = set()
+            while todo:
+                key = todo.pop()
+                if key in seen:
+                    continue
+                seen.add(key)
+                st = _library().get(key)
+                if key not in s.structs:
+                    if st is None:
+                        continue
+                    s.structs[key] = json.loads(json.dumps(st))
+                elif st is not None and _unknowns(st) < _unknowns(s.structs[key]):
+                    # the same reader learnt better from another id's samples (223's cast struct never held a target
+                    # list in its own samples; 1215's did)
+                    s.structs[key] = json.loads(json.dumps(st))
+                for fl in s.structs[key]['fields']:
+                    for x in fl['modes'].values():
+                        t = x.get('type') or (x.get('elem') or {}).get('type')
+                        if t:
+                            todo.append(t)
         for st in s.structs.values():
             for fl in st['fields']:
                 fl['modes'] = {int(m): x for m, x in fl['modes'].items()}
         return s
 
 
+_lib = None
+
+
+def _library():
+    """every struct learnt in any format: {struct key: struct}"""
+    global _lib
+    if _lib is None:
+        _lib = {}
+        for f in sorted(os.listdir(OUT)) if os.path.isdir(OUT) else []:
+            if f.endswith('.tree.json') and not f.startswith('c2s'):
+                try:
+                    d = json.load(open(os.path.join(OUT, f)))
+                except Exception:
+                    continue
+                for key, st in d.get('structs', {}).items():
+                    if key not in _lib or _unknowns(st) < _unknowns(_lib[key]):
+                        _lib[key] = st            # of several formats that hold a struct, the one that learnt it best
+    return _lib
+
+
+def _unknowns(st):
+    """how many modes of a struct's fields were not learnt (the samples of that packet id never used them)"""
+    return sum(1 for fl in st['fields'] for x in fl['modes'].values() if x.get('kind') == 'unknown' or x.get('unlearnt'))
+
+
 def learn(pid, again=False):
     T = PT.Tree(pid)
     path = os.path.join(OUT, f'{pid}.tree.json')
+    if len(T.wire) == P.WIRE_SKIP and all(len(b) == 0 for b in PM.packets(pid)):
+        # a packet with no body at all (16.20: 384, 548, 658, ...): nothing to learn, its format is empty
+        key = f'{T.info["des"]:#x}'
+        os.makedirs(OUT, exist_ok=True)
+        json.dump({'id': pid, 'root': key, 'structs': {key: {'header': 0, 'fields': [], 'spare_bits': 0}}, 'unlearnt': []},
+                  open(path, 'w'))
+        print('empty packet ->', path)
+        return
     sc = Schema.load(pid) if os.path.exists(path) and not again else Schema(pid)
     sc.root = f'{T.info["des"]:#x}'
     # structs learnt in an earlier run are kept; the ones they need and nobody learnt yet are queued again
@@ -1146,7 +1500,17 @@ def learn(pid, again=False):
     while sc.todo:
         fn = sc.todo.pop(0)
         print(f'struct {fn:#x}', flush=True)
-        sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc).learn()
+        # a struct is learnt on its first instance in the sample; when that one cannot be split into fields (a live
+        # 618: the human player's entry), on the next instances (the bots' entries)
+        insts = len(T.of(fn)) or 1
+        for k in range(insts):
+            try:
+                sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc, k=k).learn()
+                break
+            except AssertionError as e:
+                print(f'  instance {k} of {insts}: {e}', flush=True)
+                if k == insts - 1:
+                    raise
         sc.save()
     print('->', os.path.join(OUT, f'{pid}.tree.json'))
     fix_strides(pid)
@@ -1285,7 +1649,7 @@ def verify_orders(pid):
                         if dd is d or (dd.get('same_as') is not None and dd.get('elem') == d.get('elem') and dd.get('C') == d.get('C')):
                             dd['order'] = order
             try:
-                back = decode(T, sc, T.wire[:6] + sc.encode(v))
+                back = decode(T, sc, T.wire[:P.WIRE_SKIP] + sc.encode(v))
             except Exception as e:
                 back = None
             if back == v:
@@ -1311,6 +1675,13 @@ def decode_replay(pid, sc=None):
 def decode(T, sc, wire):
     """a whole packet (id + net id + body) through Riot's reader -> values, or None"""
     root = T.of(T.info['des'])[0]
+    # the tree knows the struct readers its own sample packet ran; the format knows them all (a struct the sample
+    # sent as its default is read in other packets): without this a filled struct came back as "default"
+    for name in sc.structs:
+        fn = int(name, 16)
+        if fn not in T.readers:
+            T.readers.add(fn)
+            T.snaps.setdefault(fn, None)
     r = Run(T, root, wire)
     if r.ok != 1 or r.used != len(wire):
         return None
@@ -1322,8 +1693,8 @@ def check(pid, n):
     T = PT.Tree(pid)
     v = decode(T, sc, T.wire)
     body = sc.encode(v)
-    back = decode(T, sc, T.wire[:6] + body)
-    print(f'replay packet: {len(T.wire) - 6} B; ours {len(body)} B; read back {"identical" if back == v else "DIFFERENT"}')
+    back = decode(T, sc, T.wire[:P.WIRE_SKIP] + body)
+    print(f'replay packet: {len(T.wire) - P.WIRE_SKIP} B; ours {len(body)} B; read back {"identical" if back == v else "DIFFERENT"}')
     if back != v and back is not None:
         diff(v, back, '')
     rng = random.Random(5)
@@ -1335,7 +1706,7 @@ def check(pid, n):
         except ValueError as e:
             print(f'variation {t}: cannot encode: {e}')
             continue
-        back = decode(T, sc, T.wire[:6] + body)
+        back = decode(T, sc, T.wire[:P.WIRE_SKIP] + body)
         if back == w:
             good += 1
         else:
@@ -1415,7 +1786,7 @@ def check_many(pid, n):
     sample = allp[::step][:n]
     same = undecodable = unencodable = 0
     for i, (obj, body) in enumerate(sample):
-        wire = struct.pack('<HI', pid, obj) + body
+        wire = P.wire(pid, obj, body)
         v = decode(T, sc, wire)
         if v is None:
             undecodable += 1
@@ -1426,7 +1797,7 @@ def check_many(pid, n):
             unencodable += 1
             print(f'packet {i}: cannot encode: {e}')
             continue
-        back = decode(T, sc, wire[:6] + ours)
+        back = decode(T, sc, wire[:len(wire) - len(body)] + ours)
         if back == v:
             same += 1
         else:

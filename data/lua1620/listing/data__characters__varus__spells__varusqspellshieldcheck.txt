@@ -1,0 +1,31 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 00000246094A3600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Varus/HUD/Icons2D/VarusQ.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "VarusQ"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; 1
+	10	[-]	SETGLOBAL	0 -7	; SpellToggleSlot
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -9	; NonDispellable
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -10	; IsDamagingSpell
+	15	[-]	RETURN   	0 1
+constants (10) for 00000246094A3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Varus/HUD/Icons2D/VarusQ.dds"
+	5	"BuffName"
+	6	"VarusQ"
+	7	"SpellToggleSlot"
+	8	1
+	9	"NonDispellable"
+	10	"IsDamagingSpell"
+locals (0) for 00000246094A3600:
+upvalues (0) for 00000246094A3600:

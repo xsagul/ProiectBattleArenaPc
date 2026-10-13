@@ -10,4 +10,6 @@
 // match: e72180 _sc_montmul
 // match: e722f0 _sc_subx
 // match: e72400 _scalar_decode_short
+#define OPENSSL_FILE "crypto\\ec\\curve448\\scalar.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/ec/curve448/scalar.c"

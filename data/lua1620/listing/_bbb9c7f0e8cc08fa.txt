@@ -1,0 +1,70 @@
+
+main <?:0,0> (16 instructions, 64 bytes at 000001FC5CDF34C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 8 constants, 5 functions
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "SR_LevelScript"
+	3	[-]	CALL     	0 2 1
+	4	[-]	CLOSURE  	0 0	; 000001FC5CDF35D0
+	5	[-]	SETGLOBAL	0 -3	; OverrideDefaultDefines
+	6	[-]	CLOSURE  	0 1	; 000001FC5CDF3650
+	7	[-]	SETGLOBAL	0 -4	; OverrideDefaultMinionInfo
+	8	[-]	CLOSURE  	0 2	; 000001FC5CDF36D0
+	9	[-]	SETGLOBAL	0 -5	; OverrideDefaultTables
+	10	[-]	CLOSURE  	0 3	; 000001FC5CDF3770
+	11	[-]	SETGLOBAL	0 -6	; OverrideMinionSpawnInfo
+	12	[-]	CLOSURE  	0 4	; 000001FC5CDF3810
+	13	[-]	SETGLOBAL	0 -7	; DoAdditionalPreloads
+	14	[-]	GETGLOBAL	0 -8	; Init
+	15	[-]	CALL     	0 1 1
+	16	[-]	RETURN   	0 1
+constants (8) for 000001FC5CDF34C0:
+	1	"DoLuaShared"
+	2	"SR_LevelScript"
+	3	"OverrideDefaultDefines"
+	4	"OverrideDefaultMinionInfo"
+	5	"OverrideDefaultTables"
+	6	"OverrideMinionSpawnInfo"
+	7	"DoAdditionalPreloads"
+	8	"Init"
+locals (0) for 000001FC5CDF34C0:
+upvalues (0) for 000001FC5CDF34C0:
+
+function <?:6,7> (1 instruction, 4 bytes at 000001FC5CDF35D0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000001FC5CDF35D0:
+locals (0) for 000001FC5CDF35D0:
+upvalues (0) for 000001FC5CDF35D0:
+
+function <?:9,11> (3 instructions, 12 bytes at 000001FC5CDF3650)
+0 params, 2 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; MeleeDefaultMinionInfo
+	2	[-]	SETTABLE 	0 -2 -3	; "ExpGiven" 65
+	3	[-]	RETURN   	0 1
+constants (3) for 000001FC5CDF3650:
+	1	"MeleeDefaultMinionInfo"
+	2	"ExpGiven"
+	3	65
+locals (0) for 000001FC5CDF3650:
+upvalues (0) for 000001FC5CDF3650:
+
+function <?:13,14> (1 instruction, 4 bytes at 000001FC5CDF36D0)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000001FC5CDF36D0:
+locals (0) for 000001FC5CDF36D0:
+upvalues (0) for 000001FC5CDF36D0:
+
+function <?:16,17> (1 instruction, 4 bytes at 000001FC5CDF3770)
+3 params, 3 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000001FC5CDF3770:
+locals (0) for 000001FC5CDF3770:
+upvalues (0) for 000001FC5CDF3770:
+
+function <?:19,20> (1 instruction, 4 bytes at 000001FC5CDF3810)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000001FC5CDF3810:
+locals (0) for 000001FC5CDF3810:
+upvalues (0) for 000001FC5CDF3810:

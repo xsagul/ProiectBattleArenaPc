@@ -1,0 +1,125 @@
+000000.000| ALWAYS| Logging started at 2026-10-11T20:37:01.601
+000000.003| ALWAYS|   CFG| Command Line:  "127.0.0.1 5119 17BLOhi6KZsTtldTsizvHg== 1" "-Product=LoL" "-PlayerID=1" "-GameID=1" "-GameBaseDir=C:\Users\Sorin\Desktop\ProiectBattleArenaPc\game16" "-Region=EUW" "-PlatformID=EUW1" "-Locale=en_US" "-SkipBuild" "-UseNewX3D=1" "-UseNewX3DFramebuffers=1" 
+000000.033| ALWAYS| Live Profiling enabled. Will overwrite old RPD.
+000000.034| ALWAYS|   CFG| Build Version: Version 16.20.824.8524 (Oct 02 2026/13:49:05) [PUBLIC] <Releases/16.20> ChangeList: 8248524
+000000.034| ALWAYS|   CFG| Content Version: 16.20.8248524+branch.releases-16-20.content.release
+000000.040| ALWAYS|  FLOW| Initializing Renderer
+000000.040| ALWAYS| r3dRenderLayer::Init enter
+000000.040| ALWAYS| r3dRenderLayer::Init() exit successfully
+000000.040| ALWAYS| rr3dRenderLayer::InitDevice(XRes = 1920, YRes = 1080, BPP = 32) PresentMode: FullscreenExclusive enter
+000000.040| ALWAYS| rr3dRenderLayer::InitDevice: Creating X3D device
+000000.043| ALWAYS| DXGI version: 1.6
+000000.043| ALWAYS| Detected Adapter 'Intel(R) UHD Graphics 620'
+000000.050| ALWAYS| DXGI: Tearing support enabled.
+000000.208| ALWAYS| DX11 feature level: 11.1
+000000.316| ALWAYS| Using X3D Platform: DX11
+000000.318| ALWAYS| X3D: Focus Gained
+000000.331| ALWAYS| r3dRenderLayer::RecreateOwnedResources
+000000.331| ALWAYS| r3dRenderLayer::InitResources exit successfully
+000000.466| ALWAYS|  STRT| GameClientApplicationSessionID: STRT
+000000.526| ALWAYS| AudioManagerWwise: Wwise Version v2022.1.13 initialized.
+000000.539| ALWAYS|  FLOW| Requesting State Transition: Pushing LoLCommon State Stack Empty
+000000.539| ALWAYS|  FLOW| Completed  State Transition: Pushing Bootstrap Current Topmost State: Bootstrap
+000000.539| ALWAYS|  FLOW| Starting   State Transition: Pushing LoLCommon Current Topmost State: Bootstrap
+000000.598| ALWAYS| LCURemotingClient: Initializing on port 0
+000000.599|   WARN| RemotingClientTransport: Couldn't connect to host, connect() returned: -1 with errno: 10049: The requested address is not valid in its context.
+000000.599|  ERROR| LCURemotingClient: Unable to connect to app process.
+000000.599|  ERROR| LCUVoiceChatClient: Unable to connect to LCU.
+000000.608| ALWAYS|  FLOW| Completed  State Transition: Pushing LoLCommon Current Topmost State: LoLCommon
+000000.608| ALWAYS|  FLOW| Requesting State Transition: Pushing GameSession Current Topmost State: LoLCommon
+000000.608| ALWAYS|  FLOW| Starting   State Transition: Pushing GameSession Current Topmost State: LoLCommon
+000000.608| ALWAYS| GameStartData::GameID=1
+000000.612| ALWAYS| Client Clock Synchronization Started
+000000.612| ALWAYS|  CONN| Starting Multiplayer Session: PlayerClient GameID(1) ServerAddress(127.0.0.1:5119) SummonerID(1)
+000000.612| ALWAYS|  CONN| Connecting to address (127.0.0.1) port (5119)
+000000.613| ALWAYS| LCURemotingClient: Initializing on port 0
+000000.613|   WARN| RemotingClientTransport: Couldn't connect to host, connect() returned: -1 with errno: 10049: The requested address is not valid in its context.
+000000.613|  ERROR| LCURemotingClient: Unable to connect to app process.
+000000.616| ALWAYS|  FLOW| Completed  State Transition: Pushing GameSession Current Topmost State: GameSession
+000000.628| ALWAYS|  CONN| Hard Connect at LocalSimTime(0.000)
+000000.638| ALWAYS|   CLK| Replica[0] Scale negative delay correction: 0.000016
+000000.638| ALWAYS|   CLK| Replica[0]: Scale(1.00) LocalTime(0.000) SegmentStartTime(0.000) LocalOffset(8.678) Snap
+000000.638| ALWAYS|   CLK| Replica[0] Pause negative delay correction: 0.000044
+000000.638| ALWAYS|   CLK| Replica[0]: Command(Pause) LocalTime(0.000) SegmentStartTime(0.000) LocalOffset(8.678) Snap
+000000.638| ALWAYS|   CLK| Replica[1] Scale negative delay correction: 0.000053
+000000.638| ALWAYS|   CLK| Replica[1]: Scale(1.00) LocalTime(0.000) SegmentStartTime(9.316) LocalOffset(8.678) Snap
+000000.638| ALWAYS|   CLK| Replica[1] Pause negative delay correction: 0.000062
+000000.638| ALWAYS|   CLK| Replica[1]: Command(Unpause) LocalTime(9.316) SegmentStartTime(9.316) LocalOffset(8.678) Snap
+000000.638| ALWAYS|  CONN| Game Info Received: Initial Connection
+000000.638| ALWAYS|  FLOW| GameSession Connecting to Segment GameSessionGameplay
+000000.638| ALWAYS| GameStartInfo GPP match Id = 6d273889-aceb-3abb-b883-91e769368e77, mapskin = Default
+000000.638| ALWAYS|   CFG| MultiplayerSettings Encryption=true Compression=true MinimumSizeToCompressPayloadThreshold=0 CompressionLevel=3 Logging=true Wireless=false Redundancy=false Threshold=0 Resends=20 Timeout=8 TimeoutDisplay=3 MinLatency=0.000 
+000000.641| ALWAYS|  CONN| Session Info: Received ServerSimTime(0.000) MyPreviousDisconnectCount(0)
+000000.641| ALWAYS|  ROST| CONNECTION READY | TeamOrder 0) 'xanmis#EUNE' **LOCAL** - Champion(Ezreal) SkinID(0) TeamBuilderRole(TOP) PUUID(de8ff1a3-8d6c-5029-b115-42d42d5c779c) ConnectionState(Connected)
+000000.641| ALWAYS|  CONN| Game Server Connection Established after 0.028 seconds, 0 retries
+000000.641| ALWAYS|  FLOW| Requesting State Transition: Pushing Gameplay Current Topmost State: GameSession
+000000.648| ALWAYS|  FLOW| Starting   State Transition: Pushing Gameplay Current Topmost State: GameSession
+000000.710| ALWAYS|   CFG| MultiplayerSettings Encryption=true Compression=true MinimumSizeToCompressPayloadThreshold=0 CompressionLevel=3 Logging=true Wireless=false Redundancy=false Threshold=0 Resends=20 Timeout=8 TimeoutDisplay=3 MinLatency=0.000 
+000000.862| ALWAYS| Set focus to app
+000000.862| ALWAYS|   CFG| OS Version: 10  , 19044, CPU: Intel(R) Core(TM) i5-8365U CPU @ 1.60GHz (Family: 0x06 Model: 0x8e Stepping: 0x0c) : 8 Logical Cores, Instruction Set Level 7, Physical memory: 17179869184, Display info: Intel(R) UHD Graphics 620 1073741824 31.0.101.2135, Driver: 31.0.101.2135
+000000.862| ALWAYS|  FLOW| Completed  State Transition: Pushing Gameplay Current Topmost State: Gameplay
+000000.862| ALWAYS|  FLOW| Requesting State Transition: Pushing LoadingScreen Current Topmost State: Gameplay
+000000.862| ALWAYS|  FLOW| Starting   State Transition: Pushing LoadingScreen Current Topmost State: Gameplay
+000001.204| ALWAYS|  FLOW| Completed  State Transition: Pushing LoadingScreen Current Topmost State: LoadingScreen
+000001.204| ALWAYS|  FLOW| Loading Started
+000002.321| ALWAYS|  LOAD| LOADING: Begin Game Object Update
+000002.322| ALWAYS|  LOAD| LOADING: End Game Object Update
+000002.621| ALWAYS| LoadGlobalEffects
+000002.637| ALWAYS| LoadGlobalEffects Finished
+000002.637| ALWAYS|  LOAD| SEJ-1A4F7C20
+000002.638| ALWAYS|  LOAD| SEJ-3B8E0D91
+000002.639| ALWAYS|  LOAD| SEJ-5C2A6F38
+000002.639| ALWAYS|  LOAD| SEJ-7D9B14EE
+000002.640| ALWAYS|  LOAD| SEJ-2E60A8C7
+000002.640| ALWAYS|  LOAD| SEJ-9F31B5D0
+000003.115| ALWAYS|  LOAD| SEJ-4A7C2E89
+000003.116| ALWAYS|  LOAD| SEJ-6B0D93F1
+000003.116| ALWAYS|  LOAD| SEJ-8C5E1A4B
+000003.209| ALWAYS|  LOAD| SEJ-7A6C39E2
+000003.299| ALWAYS|  LOAD| SEJ-1D2F86A3
+000003.421| ALWAYS| Client Clock: InitialSync->Converging after 2.809 seconds. Offset(9.692525) Outliers(1) Delay(0.001794) DelayVariance(0.000002)
+000004.572| ALWAYS|  LOAD| SEJ-3E9A0C57
+000004.590| ALWAYS|  LOAD| SEJ-5F4B27D8
+000004.590| ALWAYS|  FLOW| Loading Ended
+000004.604| ALWAYS|  FLOW| Data Load Complete
+000004.604| ALWAYS|  FLOW| Start Main Loop
+000004.624| ALWAYS|   CLK| Replica[0] Scale negative delay correction: 3.857653
+000004.624| ALWAYS|   CLK| Replica[0]: Scale(1.00) LocalTime(0.000) SegmentStartTime(0.000) LocalOffset(9.693) Snap
+000004.624| ALWAYS|   CLK| Replica[0] Pause negative delay correction: 3.857653
+000004.624| ALWAYS|   CLK| Replica[0]: Command(Pause) LocalTime(0.000) SegmentStartTime(0.000) LocalOffset(9.693) Snap
+000004.624| ALWAYS|   CLK| Replica[1] Scale negative delay correction: 3.857653
+000004.624| ALWAYS|   CLK| Replica[1]: Scale(1.00) LocalTime(13.674) SegmentStartTime(18.175) LocalOffset(9.693) Snap
+000004.624| ALWAYS|   CLK| Replica[1] Pause negative delay correction: 3.857653
+000004.624| ALWAYS|   CLK| Replica[1]: Command(Unpause) LocalTime(18.175) SegmentStartTime(18.175) LocalOffset(9.693) Snap
+000004.624| ALWAYS|   CLK| Replica[0] Scale negative delay correction: 3.857653
+000004.624| ALWAYS|   CLK| Replica[0]: Scale(1.00) LocalTime(0.000) SegmentStartTime(0.000) LocalOffset(9.693) Snap
+000004.624| ALWAYS|   CLK| Replica[0] Pause negative delay correction: 3.857653
+000004.624| ALWAYS|   CLK| Replica[0]: Command(Pause) LocalTime(0.000) SegmentStartTime(0.000) LocalOffset(9.693) Snap
+000004.624| ALWAYS|   CLK| Replica[1] Scale negative delay correction: 3.857653
+000004.624| ALWAYS|   CLK| Replica[1]: Scale(1.00) LocalTime(18.175) SegmentStartTime(18.175) LocalOffset(9.693) Snap
+000004.624| ALWAYS|   CLK| Replica[1] Pause negative delay correction: 3.857653
+000004.624| ALWAYS|   CLK| Replica[1]: Command(Unpause) LocalTime(18.175) SegmentStartTime(18.175) LocalOffset(9.693) Snap
+000004.624| ALWAYS|  FLOW| GameSession Connecting to Segment GameSessionGameplay
+000004.624| ALWAYS|  FLOW| Switching Game State from GAMESTATE_PREGAME to GAMESTATE_SPAWN for reason Received StartSpawn packet.
+000004.690| ALWAYS|  FLOW| SEJ-BC89AC41
+000004.690| ALWAYS|  FLOW| SEJ-6671BCAD
+000004.811|  ERROR| >>> BuffHashMap::HashToName - Match not found for hash 0b026545
+000004.857| ALWAYS|  FLOW| Spawning completed
+000004.935| ALWAYS|   CLK| Replica[0] Pause negative delay correction: 3.985233
+000004.935| ALWAYS|   CLK| Replica[0]: Command(Unpause) LocalTime(0.000) SegmentStartTime(0.000) LocalOffset(9.693) Snap
+000004.936| ALWAYS|  FLOW| Switching Game State from GAMESTATE_SPAWN to GAMESTATE_GAMELOOP for reason Received Game Start Packet.
+000004.938| ALWAYS|  FLOW| Requesting State Transition: Popping LoadingScreen Current Topmost State: LoadingScreen
+000004.947| ALWAYS|  FLOW| SEJ-8711AB1A 0
+000005.046| ALWAYS|  FLOW| SEJ-9651ACAB
+000005.047| ALWAYS|  FLOW| SEJ-B2890C00
+000005.291| ALWAYS| GAMESTATE_GAMELOOP UpdateVis
+000005.329| ALWAYS| GAMESTATE_GAMELOOP AudioUpdate
+000005.329| ALWAYS| GAMESTATE_GAMELOOP EndRender & EndFrame
+000005.330| ALWAYS|  FLOW| SEJ-891ACC45
+000005.330| ALWAYS|  FLOW| Starting   State Transition: Popping LoadingScreen Current Topmost State: LoadingScreen
+000005.437| ALWAYS|  FLOW| Completed  State Transition: Popping LoadingScreen Current Topmost State: Gameplay
+000060.613|   WARN| RemotingClientTransport: Couldn't connect to host, connect() returned: -1 with errno: 10049: The requested address is not valid in its context.
+000060.613|  ERROR| LCURemotingClient: Unable to connect to app process.
+000120.613|   WARN| RemotingClientTransport: Couldn't connect to host, connect() returned: -1 with errno: 10049: The requested address is not valid in its context.
+000120.613|  ERROR| LCURemotingClient: Unable to connect to app process.
+000124.418| ALWAYS| Client Clock: Converging->Synchronized after 120.997 seconds. Offset(13.608822) Outliers(2) Delay(0.004653) DelayVariance(0.000011)

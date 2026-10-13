@@ -1,0 +1,46 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 000001D3E5C335D0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 17 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Alistar/HUD/Icons2D/Alistar_R.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Ferocious_Howl"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "r:Alistar_R_cas"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -10	; "r:Alistar_R_Glow"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect2
+	13	[-]	LOADK    	0 -12	; "pelvis"
+	14	[-]	SETGLOBAL	0 -11	; AutoBuffActivateAttachBoneName2
+	15	[-]	NEWTABLE 	0 5 0
+	16	[-]	LOADK    	1 -14	; 120
+	17	[-]	LOADK    	2 -15	; 100
+	18	[-]	LOADK    	3 -16	; 80
+	19	[-]	LOADK    	4 -17	; 10
+	20	[-]	LOADK    	5 -17	; 10
+	21	[-]	SETLIST  	0 5 1	; 1
+	22	[-]	SETGLOBAL	0 -13	; AutoCooldownByLevel
+	23	[-]	RETURN   	0 1
+constants (17) for 000001D3E5C335D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Alistar/HUD/Icons2D/Alistar_R.dds"
+	5	"BuffName"
+	6	"Ferocious_Howl"
+	7	"AutoBuffActivateEffect"
+	8	"r:Alistar_R_cas"
+	9	"AutoBuffActivateEffect2"
+	10	"r:Alistar_R_Glow"
+	11	"AutoBuffActivateAttachBoneName2"
+	12	"pelvis"
+	13	"AutoCooldownByLevel"
+	14	120
+	15	100
+	16	80
+	17	10
+locals (0) for 000001D3E5C335D0:
+upvalues (0) for 000001D3E5C335D0:

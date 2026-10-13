@@ -5,4 +5,6 @@
 // match: e390a0 _bn_sqr_fixed_top
 // match: e39250 _bn_sqr_normal
 // match: e39310 _bn_sqr_recursive
+#define OPENSSL_FILE "crypto\\bn\\bn_sqr.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/bn/bn_sqr.c"

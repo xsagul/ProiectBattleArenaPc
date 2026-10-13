@@ -7,8 +7,17 @@
 // match: dbec70 _X509_STORE_set_check_crl
 // match: dbec90 _X509_STORE_set_verify_cb
 // match: dc0cc0 _X509_LOOKUP_ctrl
+// match: dc0cf0 _X509_OBJECT_free
+// match: dc0d30 _X509_OBJECT_new
 // match: dc15f0 _X509_STORE_CTX_get_by_subject
-// match: dc1ac0 _X509_STORE_set_trust
+// match: dc1720 _X509_STORE_add_cert
+// match: dc1760 _X509_STORE_add_crl
+// match: dc17a0 _X509_STORE_add_lookup
+// match: dc18c0 _X509_STORE_free
+// match: dc19b0 _X509_STORE_new
 // match: dc1b10 _x509_object_cmp
 // match: dc1b60 _x509_object_idx_cnt
+// match: dc1c90 _x509_store_add
+#define OPENSSL_FILE "crypto\\x509\\x509_lu.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/x509/x509_lu.c"

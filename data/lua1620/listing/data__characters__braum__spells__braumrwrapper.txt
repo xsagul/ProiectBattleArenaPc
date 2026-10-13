@@ -1,0 +1,33 @@
+
+main <?:0,0> (18 instructions, 72 bytes at 00000205CBCA35D0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "game_floatingtext_Snared"
+	6	[-]	SETGLOBAL	0 -3	; PopupMessage1
+	7	[-]	NEWTABLE 	0 2 0
+	8	[-]	LOADK    	1 -6	; "BraumSkin01"
+	9	[-]	LOADK    	2 -7	; "BraumSkin02"
+	10	[-]	SETLIST  	0 2 1	; 1
+	11	[-]	SETGLOBAL	0 -5	; SpellFXOverrideSkins
+	12	[-]	NEWTABLE 	0 1 0
+	13	[-]	LOADK    	1 -7	; "BraumSkin02"
+	14	[-]	SETLIST  	0 1 1	; 1
+	15	[-]	SETGLOBAL	0 -8	; SpellVOOverrideSkins
+	16	[-]	LOADBOOL 	0 1 0
+	17	[-]	SETGLOBAL	0 -9	; IsDamagingSpell
+	18	[-]	RETURN   	0 1
+constants (9) for 00000205CBCA35D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"PopupMessage1"
+	4	"game_floatingtext_Snared"
+	5	"SpellFXOverrideSkins"
+	6	"BraumSkin01"
+	7	"BraumSkin02"
+	8	"SpellVOOverrideSkins"
+	9	"IsDamagingSpell"
+locals (0) for 00000205CBCA35D0:
+upvalues (0) for 00000205CBCA35D0:

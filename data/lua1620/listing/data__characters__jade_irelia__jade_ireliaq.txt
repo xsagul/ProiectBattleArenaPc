@@ -1,0 +1,55 @@
+
+main <?:0,0> (30 instructions, 120 bytes at 000001B099EE35C0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 19 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "Jade_Irelia_Bladesurge.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "Jade_IreliaGatotsu"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -9	; IsDamagingSpell
+	15	[-]	NEWTABLE 	0 0 6
+	16	[-]	NEWTABLE 	1 5 0
+	17	[-]	LOADK    	2 -12	; 10
+	18	[-]	LOADK    	3 -12	; 10
+	19	[-]	LOADK    	4 -12	; 10
+	20	[-]	LOADK    	5 -12	; 10
+	21	[-]	LOADK    	6 -12	; 10
+	22	[-]	SETLIST  	1 5 1	; 1
+	23	[-]	SETTABLE 	0 -11 1	; "MaximumHits" -
+	24	[-]	SETTABLE 	0 -13 -14	; "CanHitCaster" 0
+	25	[-]	SETTABLE 	0 -15 -14	; "CanHitSameTarget" 0
+	26	[-]	SETTABLE 	0 -16 -14	; "CanHitSameTargetConsecutively" 0
+	27	[-]	SETTABLE 	0 -17 -18	; "CanHitEnemies" 1
+	28	[-]	SETTABLE 	0 -19 -14	; "CanHitFriends" 0
+	29	[-]	SETGLOBAL	0 -10	; ChainMissileParameters
+	30	[-]	RETURN   	0 1
+constants (19) for 000001B099EE35C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"Jade_Irelia_Bladesurge.dds"
+	7	"BuffName"
+	8	"Jade_IreliaGatotsu"
+	9	"IsDamagingSpell"
+	10	"ChainMissileParameters"
+	11	"MaximumHits"
+	12	10
+	13	"CanHitCaster"
+	14	0
+	15	"CanHitSameTarget"
+	16	"CanHitSameTargetConsecutively"
+	17	"CanHitEnemies"
+	18	1
+	19	"CanHitFriends"
+locals (0) for 000001B099EE35C0:
+upvalues (0) for 000001B099EE35C0:

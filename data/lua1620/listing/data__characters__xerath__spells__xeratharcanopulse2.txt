@@ -1,0 +1,24 @@
+
+main <?:0,0> (12 instructions, 48 bytes at 000001E569EA35F0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 6 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	NEWTABLE 	0 2 0
+	6	[-]	LOADK    	1 -4	; "IronForgeXerath"
+	7	[-]	LOADK    	2 -5	; "XerathSkin04"
+	8	[-]	SETLIST  	0 2 1	; 1
+	9	[-]	SETGLOBAL	0 -3	; SpellFXOverrideSkins
+	10	[-]	LOADBOOL 	0 1 0
+	11	[-]	SETGLOBAL	0 -6	; IsDamagingSpell
+	12	[-]	RETURN   	0 1
+constants (6) for 000001E569EA35F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"SpellFXOverrideSkins"
+	4	"IronForgeXerath"
+	5	"XerathSkin04"
+	6	"IsDamagingSpell"
+locals (0) for 000001E569EA35F0:
+upvalues (0) for 000001E569EA35F0:

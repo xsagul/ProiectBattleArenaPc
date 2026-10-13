@@ -1,0 +1,41 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 00000174915B34C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Chogath/HUD/Icons2D/GreenTerror_Feast.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "UltBook_ChogathR"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -7	; PersistsThroughDeath
+	11	[-]	NEWTABLE 	0 2 0
+	12	[-]	LOADK    	1 -9	; "DandyChogath"
+	13	[-]	LOADK    	2 -10	; "BattlecastChogath"
+	14	[-]	SETLIST  	0 2 1	; 1
+	15	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	16	[-]	NEWTABLE 	0 2 0
+	17	[-]	LOADK    	1 -9	; "DandyChogath"
+	18	[-]	LOADK    	2 -10	; "BattlecastChogath"
+	19	[-]	SETLIST  	0 2 1	; 1
+	20	[-]	SETGLOBAL	0 -11	; SpellVOOverrideSkins
+	21	[-]	LOADBOOL 	0 1 0
+	22	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	23	[-]	RETURN   	0 1
+constants (12) for 00000174915B34C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Chogath/HUD/Icons2D/GreenTerror_Feast.dds"
+	5	"BuffName"
+	6	"UltBook_ChogathR"
+	7	"PersistsThroughDeath"
+	8	"SpellFXOverrideSkins"
+	9	"DandyChogath"
+	10	"BattlecastChogath"
+	11	"SpellVOOverrideSkins"
+	12	"IsDamagingSpell"
+locals (0) for 00000174915B34C0:
+upvalues (0) for 00000174915B34C0:

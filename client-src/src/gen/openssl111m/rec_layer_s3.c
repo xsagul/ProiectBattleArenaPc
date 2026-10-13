@@ -12,6 +12,13 @@
 // match: d8ae10 _RECORD_LAYER_reset_write_sequence
 // match: d8ae20 _RECORD_LAYER_write_pending
 // match: d8ae40 _SSL_set_default_read_buffer_len
+// match: d8ae50 _do_ssl3_write
 // match: d8b9f0 _ssl3_pending
+// match: d8ba30 _ssl3_read_bytes
+// match: d8c380 _ssl3_read_n
 // match: d8c640 _ssl3_record_sequence_update
+// match: d8c660 _ssl3_write_bytes
+// match: d8c9a0 _ssl3_write_pending
+#define OPENSSL_FILE "ssl\\record\\rec_layer_s3.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/ssl/record/rec_layer_s3.c"

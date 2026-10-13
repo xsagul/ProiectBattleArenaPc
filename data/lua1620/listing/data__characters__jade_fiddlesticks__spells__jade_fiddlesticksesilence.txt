@@ -1,0 +1,61 @@
+
+main <?:0,0> (30 instructions, 120 bytes at 00000208254A36A0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 25 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/UX/Jade/S3Icons/SameSized/Jade_Fiddlesticks_DarkWind.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Jade_FiddlesticksESilence"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "head"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateAttachBoneName
+	11	[-]	LOADK    	0 -10	; "game_floatingtext_Silenced"
+	12	[-]	SETGLOBAL	0 -9	; PopupMessage1
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -11	; IsDamagingSpell
+	15	[-]	NEWTABLE 	0 0 6
+	16	[-]	NEWTABLE 	1 5 0
+	17	[-]	LOADK    	2 -14	; 2
+	18	[-]	LOADK    	3 -15	; 4
+	19	[-]	LOADK    	4 -16	; 6
+	20	[-]	LOADK    	5 -17	; 8
+	21	[-]	LOADK    	6 -18	; 10
+	22	[-]	SETLIST  	1 5 1	; 1
+	23	[-]	SETTABLE 	0 -13 1	; "MaximumHits" -
+	24	[-]	SETTABLE 	0 -19 -20	; "CanHitCaster" 0
+	25	[-]	SETTABLE 	0 -21 -22	; "CanHitSameTarget" 1
+	26	[-]	SETTABLE 	0 -23 -20	; "CanHitSameTargetConsecutively" 0
+	27	[-]	SETTABLE 	0 -24 -22	; "CanHitEnemies" 1
+	28	[-]	SETTABLE 	0 -25 -20	; "CanHitFriends" 0
+	29	[-]	SETGLOBAL	0 -12	; ChainMissileParameters
+	30	[-]	RETURN   	0 1
+constants (25) for 00000208254A36A0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/UX/Jade/S3Icons/SameSized/Jade_Fiddlesticks_DarkWind.dds"
+	5	"BuffName"
+	6	"Jade_FiddlesticksESilence"
+	7	"AutoBuffActivateAttachBoneName"
+	8	"head"
+	9	"PopupMessage1"
+	10	"game_floatingtext_Silenced"
+	11	"IsDamagingSpell"
+	12	"ChainMissileParameters"
+	13	"MaximumHits"
+	14	2
+	15	4
+	16	6
+	17	8
+	18	10
+	19	"CanHitCaster"
+	20	0
+	21	"CanHitSameTarget"
+	22	1
+	23	"CanHitSameTargetConsecutively"
+	24	"CanHitEnemies"
+	25	"CanHitFriends"
+locals (0) for 00000208254A36A0:
+upvalues (0) for 00000208254A36A0:

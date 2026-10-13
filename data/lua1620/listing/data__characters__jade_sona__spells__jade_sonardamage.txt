@@ -1,0 +1,33 @@
+
+main <?:0,0> (16 instructions, 64 bytes at 000002C91C1A3600)
+0+ params, 3 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/UX/Jade/S3Icons/SameSized/Sona_Crescendo.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "head"
+	8	[-]	SETGLOBAL	0 -5	; AutoBuffActivateAttachBoneName2
+	9	[-]	LOADK    	0 -8	; "game_floatingtext_Stunned"
+	10	[-]	SETGLOBAL	0 -7	; PopupMessage1
+	11	[-]	NEWTABLE 	0 2 0
+	12	[-]	LOADK    	1 -10	; "GuqinJade_Sona"
+	13	[-]	LOADK    	2 -11	; "PaxJade_Sona"
+	14	[-]	SETLIST  	0 2 1	; 1
+	15	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	16	[-]	RETURN   	0 1
+constants (11) for 000002C91C1A3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/UX/Jade/S3Icons/SameSized/Sona_Crescendo.dds"
+	5	"AutoBuffActivateAttachBoneName2"
+	6	"head"
+	7	"PopupMessage1"
+	8	"game_floatingtext_Stunned"
+	9	"SpellFXOverrideSkins"
+	10	"GuqinJade_Sona"
+	11	"PaxJade_Sona"
+locals (0) for 000002C91C1A3600:
+upvalues (0) for 000002C91C1A3600:

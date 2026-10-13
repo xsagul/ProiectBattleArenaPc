@@ -4,4 +4,9 @@
 // match: ddb370 _buffer_write
 // match: ddb4d0 _buffer_read
 // match: ddb620 _buffer_gets
+// match: ddb720 _buffer_ctrl
+// match: ddbc70 _buffer_new
+// match: ddbd20 _buffer_free
+#define OPENSSL_FILE "crypto\\bio\\bf_buff.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/bio/bf_buff.c"

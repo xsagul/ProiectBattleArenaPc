@@ -1,0 +1,7 @@
++0x14 4 B bits 3..5: 0:varint, 1:varint, 2:const, 3:const, 4:varint, 5:const, 6:const, 7:varint
++0x10 1 B bits 0..2 (always sent): 0:const, 1:const, 2:fixed, 3:fixed, 4:const, 5:fixed, 6:const, 7:fixed
+header 1 B; wire order: ['0x10', '0x14']
+differs: a7209c {'0x10': ('20', None), '0x14': ('3c000000', None)}
+differs: 889a1c256810 {'0x10': ('f1', None), '0x14': ('cd560746', None)}
+differs: 8d0e25eefabd37 {'0x10': ('0e', None), '0x14': ('9d1ffcc4', None)}
+73 of 300 packets written by the client from random values read back identical

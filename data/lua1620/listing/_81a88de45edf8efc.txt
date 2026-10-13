@@ -1,0 +1,3645 @@
+
+main <?:0,0> (984 instructions, 3936 bytes at 000002C5AF6D34C0)
+0+ params, 22 slots, 0 upvalues, 0 locals, 316 constants, 11 functions
+	1	[-]	GETGLOBAL	0 -1	; DoLuaShared
+	2	[-]	LOADK    	1 -2	; "ObjectTags"
+	3	[-]	CALL     	0 2 1
+	4	[-]	LOADK    	0 -4	; 0
+	5	[-]	SETGLOBAL	0 -3	; TEAM_UNKNOWN
+	6	[-]	LOADK    	0 -6	; 100
+	7	[-]	SETGLOBAL	0 -5	; TEAM_ORDER
+	8	[-]	LOADK    	0 -8	; 200
+	9	[-]	SETGLOBAL	0 -7	; TEAM_CHAOS
+	10	[-]	LOADK    	0 -10	; 300
+	11	[-]	SETGLOBAL	0 -9	; TEAM_NEUTRAL
+	12	[-]	LOADK    	0 -12	; 25
+	13	[-]	SETGLOBAL	0 -11	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	14	[-]	LOADK    	0 -14	; 50
+	15	[-]	SETGLOBAL	0 -13	; START_OF_GAME_ADDITIONAL_DELAY_CRAB
+	16	[-]	LOADK    	0 -14	; 50
+	17	[-]	SETGLOBAL	0 -15	; START_OF_GAME_ADDITIONAL_DELAY_DRAGON
+	18	[-]	LOADK    	0 -17	; 260
+	19	[-]	SETGLOBAL	0 -16	; START_OF_GAME_ADDITIONAL_DELAY_HERALD
+	20	[-]	LOADK    	0 -19	; 1100
+	21	[-]	SETGLOBAL	0 -18	; START_OF_GAME_ADDITIONAL_DELAY_BARON
+	22	[-]	LOADK    	0 -21	; 2100
+	23	[-]	SETGLOBAL	0 -20	; ELDER_DRAGON_SPAWN_TIME
+	24	[-]	LOADK    	0 -23	; 600
+	25	[-]	SETGLOBAL	0 -22	; ELDER_DRAGON_SPAWN_RATE
+	26	[-]	LOADK    	0 -25	; 1
+	27	[-]	SETGLOBAL	0 -24	; HOSTILE
+	28	[-]	LOADK    	0 -4	; 0
+	29	[-]	SETGLOBAL	0 -26	; INACTIVE
+	30	[-]	NEWTABLE 	0 18 0
+	31	[-]	LOADK    	1 -28	; "SRU_Red"
+	32	[-]	LOADK    	2 -29	; "SRU_Blue"
+	33	[-]	LOADK    	3 -30	; "SRU_MurkwolfMini"
+	34	[-]	LOADK    	4 -31	; "SRU_Murkwolf"
+	35	[-]	LOADK    	5 -32	; "SRU_RazorbeakMini"
+	36	[-]	LOADK    	6 -33	; "SRU_Krug"
+	37	[-]	LOADK    	7 -34	; "SRU_KrugMini"
+	38	[-]	LOADK    	8 -35	; "SRU_Razorbeak"
+	39	[-]	LOADK    	9 -36	; "SRU_Baron"
+	40	[-]	LOADK    	10 -37	; "SRU_BaronSpawn"
+	41	[-]	LOADK    	11 -38	; "SRU_RedMini"
+	42	[-]	LOADK    	12 -39	; "SRU_Gromp"
+	43	[-]	LOADK    	13 -40	; "SRU_BlueMini"
+	44	[-]	LOADK    	14 -41	; "Sru_Crab"
+	45	[-]	LOADK    	15 -42	; "SRU_RiftHerald"
+	46	[-]	LOADK    	16 -43	; "SRU_Dragon_Air"
+	47	[-]	LOADK    	17 -44	; "SRU_Dragon_Fire"
+	48	[-]	LOADK    	18 -45	; "SRU_Dragon_Water"
+	49	[-]	LOADK    	19 -46	; "SRU_Dragon_Earth"
+	50	[-]	LOADK    	20 -47	; "SRU_Dragon_Elder"
+	51	[-]	SETLIST  	0 20 1	; 1
+	52	[-]	SETGLOBAL	0 -27	; NeutralMinionNamesForDX5
+	53	[-]	LOADK    	0 -49	; 800
+	54	[-]	SETGLOBAL	0 -48	; HERO_EXP_RADIUS
+	55	[-]	LOADK    	0 -25	; 1
+	56	[-]	SETGLOBAL	0 -50	; DragonFlavorIndex
+	57	[-]	NEWTABLE 	0 0 0
+	58	[-]	SETGLOBAL	0 -51	; DragonFlavorTable
+	59	[-]	NEWTABLE 	0 0 14
+	60	[-]	NEWTABLE 	1 0 3
+	61	[-]	SETTABLE 	1 -54 -4	; "GoldGiven" 0
+	62	[-]	SETTABLE 	1 -55 -4	; "ExpGiven" 0
+	63	[-]	SETTABLE 	1 -56 -4	; "SoulGiven" 0
+	64	[-]	SETTABLE 	0 -53 1	; "SmallGolem" -
+	65	[-]	NEWTABLE 	1 0 3
+	66	[-]	SETTABLE 	1 -54 -4	; "GoldGiven" 0
+	67	[-]	SETTABLE 	1 -55 -4	; "ExpGiven" 0
+	68	[-]	SETTABLE 	1 -56 -4	; "SoulGiven" 0
+	69	[-]	SETTABLE 	0 -57 1	; "Dragon" -
+	70	[-]	NEWTABLE 	1 0 3
+	71	[-]	SETTABLE 	1 -54 -4	; "GoldGiven" 0
+	72	[-]	SETTABLE 	1 -55 -4	; "ExpGiven" 0
+	73	[-]	SETTABLE 	1 -56 -4	; "SoulGiven" 0
+	74	[-]	SETTABLE 	0 -33 1	; "SRU_Krug" -
+	75	[-]	NEWTABLE 	1 0 3
+	76	[-]	SETTABLE 	1 -54 -4	; "GoldGiven" 0
+	77	[-]	SETTABLE 	1 -55 -4	; "ExpGiven" 0
+	78	[-]	SETTABLE 	1 -56 -4	; "SoulGiven" 0
+	79	[-]	SETTABLE 	0 -29 1	; "SRU_Blue" -
+	80	[-]	NEWTABLE 	1 0 3
+	81	[-]	SETTABLE 	1 -54 -4	; "GoldGiven" 0
+	82	[-]	SETTABLE 	1 -55 -4	; "ExpGiven" 0
+	83	[-]	SETTABLE 	1 -56 -4	; "SoulGiven" 0
+	84	[-]	SETTABLE 	0 -40 1	; "SRU_BlueMini" -
+	85	[-]	NEWTABLE 	1 0 3
+	86	[-]	SETTABLE 	1 -54 -4	; "GoldGiven" 0
+	87	[-]	SETTABLE 	1 -55 -4	; "ExpGiven" 0
+	88	[-]	SETTABLE 	1 -56 -4	; "SoulGiven" 0
+	89	[-]	SETTABLE 	0 -32 1	; "SRU_RazorbeakMini" -
+	90	[-]	NEWTABLE 	1 0 3
+	91	[-]	SETTABLE 	1 -54 -4	; "GoldGiven" 0
+	92	[-]	SETTABLE 	1 -55 -4	; "ExpGiven" 0
+	93	[-]	SETTABLE 	1 -56 -4	; "SoulGiven" 0
+	94	[-]	SETTABLE 	0 -28 1	; "SRU_Red" -
+	95	[-]	NEWTABLE 	1 0 3
+	96	[-]	SETTABLE 	1 -54 -4	; "GoldGiven" 0
+	97	[-]	SETTABLE 	1 -55 -4	; "ExpGiven" 0
+	98	[-]	SETTABLE 	1 -56 -4	; "SoulGiven" 0
+	99	[-]	SETTABLE 	0 -58 1	; "GiantWolf" -
+	100	[-]	NEWTABLE 	1 0 3
+	101	[-]	SETTABLE 	1 -54 -4	; "GoldGiven" 0
+	102	[-]	SETTABLE 	1 -55 -4	; "ExpGiven" 0
+	103	[-]	SETTABLE 	1 -56 -4	; "SoulGiven" 0
+	104	[-]	SETTABLE 	0 -38 1	; "SRU_RedMini" -
+	105	[-]	NEWTABLE 	1 0 3
+	106	[-]	SETTABLE 	1 -54 -4	; "GoldGiven" 0
+	107	[-]	SETTABLE 	1 -55 -4	; "ExpGiven" 0
+	108	[-]	SETTABLE 	1 -56 -4	; "SoulGiven" 0
+	109	[-]	SETTABLE 	0 -36 1	; "SRU_Baron" -
+	110	[-]	NEWTABLE 	1 0 3
+	111	[-]	SETTABLE 	1 -54 -4	; "GoldGiven" 0
+	112	[-]	SETTABLE 	1 -55 -4	; "ExpGiven" 0
+	113	[-]	SETTABLE 	1 -56 -4	; "SoulGiven" 0
+	114	[-]	SETTABLE 	0 -59 1	; "wolf" -
+	115	[-]	NEWTABLE 	1 0 3
+	116	[-]	SETTABLE 	1 -54 -4	; "GoldGiven" 0
+	117	[-]	SETTABLE 	1 -55 -4	; "ExpGiven" 0
+	118	[-]	SETTABLE 	1 -56 -4	; "SoulGiven" 0
+	119	[-]	SETTABLE 	0 -60 1	; "Wraith" -
+	120	[-]	NEWTABLE 	1 0 3
+	121	[-]	SETTABLE 	1 -54 -4	; "GoldGiven" 0
+	122	[-]	SETTABLE 	1 -55 -4	; "ExpGiven" 0
+	123	[-]	SETTABLE 	1 -56 -4	; "SoulGiven" 0
+	124	[-]	SETTABLE 	0 -61 1	; "Urf" -
+	125	[-]	NEWTABLE 	1 0 3
+	126	[-]	SETTABLE 	1 -54 -4	; "GoldGiven" 0
+	127	[-]	SETTABLE 	1 -55 -4	; "ExpGiven" 0
+	128	[-]	SETTABLE 	1 -56 -4	; "SoulGiven" 0
+	129	[-]	SETTABLE 	0 -42 1	; "SRU_RiftHerald" -
+	130	[-]	SETGLOBAL	0 -52	; DefaultNeutralMinionValues
+	131	[-]	NEWTABLE 	0 0 0
+	132	[-]	SETGLOBAL	0 -62	; NeutralTimers
+	133	[-]	NEWTABLE 	0 17 0
+	134	[-]	NEWTABLE 	1 2 0
+	135	[-]	GETGLOBAL	2 -64	; Make3DPoint
+	136	[-]	LOADK    	3 -65	; 3856.48846
+	137	[-]	LOADK    	4 -66	; 51.8755
+	138	[-]	LOADK    	5 -67	; 7886.05403
+	139	[-]	CALL     	2 4 2
+	140	[-]	GETGLOBAL	3 -64	; Make3DPoint
+	141	[-]	LOADK    	4 -68	; 3762.69846
+	142	[-]	LOADK    	5 -69	; 54.561
+	143	[-]	LOADK    	6 -70	; 8088.47403
+	144	[-]	CALL     	3 4 2
+	145	[-]	GETGLOBAL	4 -64	; Make3DPoint
+	146	[-]	LOADK    	5 -71	; 3622.91846
+	147	[-]	LOADK    	6 -72	; 55.0609
+	148	[-]	LOADK    	7 -73	; 7823.85403
+	149	[-]	CALL     	4 4 0
+	150	[-]	SETLIST  	1 0 1	; 1
+	151	[-]	NEWTABLE 	2 3 0
+	152	[-]	GETGLOBAL	3 -64	; Make3DPoint
+	153	[-]	LOADK    	4 -74	; 3780.62846
+	154	[-]	LOADK    	5 -75	; 45
+	155	[-]	LOADK    	6 -76	; 6443.98403
+	156	[-]	CALL     	3 4 2
+	157	[-]	GETGLOBAL	4 -64	; Make3DPoint
+	158	[-]	LOADK    	5 -77	; 3980.62846
+	159	[-]	LOADK    	6 -75	; 45
+	160	[-]	LOADK    	7 -76	; 6443.98403
+	161	[-]	CALL     	4 4 2
+	162	[-]	GETGLOBAL	5 -64	; Make3DPoint
+	163	[-]	LOADK    	6 -78	; 3730.62846
+	164	[-]	LOADK    	7 -75	; 45
+	165	[-]	LOADK    	8 -79	; 6593.98403
+	166	[-]	CALL     	5 4 2
+	167	[-]	GETGLOBAL	6 -64	; Make3DPoint
+	168	[-]	LOADK    	7 -74	; 3780.62846
+	169	[-]	LOADK    	8 -75	; 45
+	170	[-]	LOADK    	9 -76	; 6443.98403
+	171	[-]	CALL     	6 4 0
+	172	[-]	SETLIST  	2 0 1	; 1
+	173	[-]	NEWTABLE 	3 3 0
+	174	[-]	GETGLOBAL	4 -64	; Make3DPoint
+	175	[-]	LOADK    	5 -80	; 6706.67846
+	176	[-]	LOADK    	6 -81	; 50.27832
+	177	[-]	LOADK    	7 -82	; 5521.04403
+	178	[-]	CALL     	4 4 2
+	179	[-]	GETGLOBAL	5 -64	; Make3DPoint
+	180	[-]	LOADK    	6 -83	; 6929.62846
+	181	[-]	LOADK    	7 -81	; 50.27832
+	182	[-]	LOADK    	8 -84	; 5647.93403
+	183	[-]	CALL     	5 4 2
+	184	[-]	GETGLOBAL	6 -64	; Make3DPoint
+	185	[-]	LOADK    	7 -85	; 7060.45846
+	186	[-]	LOADK    	8 -81	; 50.27832
+	187	[-]	LOADK    	9 -86	; 5499.27403
+	188	[-]	CALL     	6 4 2
+	189	[-]	GETGLOBAL	7 -64	; Make3DPoint
+	190	[-]	LOADK    	8 -87	; 6914.71846
+	191	[-]	LOADK    	9 -88	; 51.141
+	192	[-]	LOADK    	10 -89	; 5325.35403
+	193	[-]	CALL     	7 4 0
+	194	[-]	SETLIST  	3 0 1	; 1
+	195	[-]	NEWTABLE 	4 2 0
+	196	[-]	GETGLOBAL	5 -64	; Make3DPoint
+	197	[-]	LOADK    	6 -90	; 7862.243694
+	198	[-]	LOADK    	7 -91	; 50.383179
+	199	[-]	LOADK    	8 -92	; 4111.186667
+	200	[-]	CALL     	5 4 2
+	201	[-]	GETGLOBAL	6 -64	; Make3DPoint
+	202	[-]	LOADK    	7 -93	; 7624.12846
+	203	[-]	LOADK    	8 -94	; 57.3499
+	204	[-]	LOADK    	9 -95	; 4181.37403
+	205	[-]	CALL     	6 4 2
+	206	[-]	GETGLOBAL	7 -64	; Make3DPoint
+	207	[-]	LOADK    	8 -96	; 7918.50846
+	208	[-]	LOADK    	9 -97	; 56.8674
+	209	[-]	LOADK    	10 -98	; 3880.83403
+	210	[-]	CALL     	7 4 0
+	211	[-]	SETLIST  	4 0 1	; 1
+	212	[-]	NEWTABLE 	5 1 0
+	213	[-]	GETGLOBAL	6 -64	; Make3DPoint
+	214	[-]	LOADK    	7 -99	; 8532.470745
+	215	[-]	LOADK    	8 -100	; 50.652954
+	216	[-]	LOADK    	9 -101	; 2737.947409
+	217	[-]	CALL     	6 4 2
+	218	[-]	GETGLOBAL	7 -64	; Make3DPoint
+	219	[-]	LOADK    	8 -102	; 8323.470745
+	220	[-]	LOADK    	9 -100	; 50.652954
+	221	[-]	LOADK    	10 -103	; 2754.947409
+	222	[-]	CALL     	7 4 0
+	223	[-]	SETLIST  	5 0 1	; 1
+	224	[-]	NEWTABLE 	6 0 0
+	225	[-]	GETGLOBAL	7 -64	; Make3DPoint
+	226	[-]	LOADK    	8 -104	; 9866.14846
+	227	[-]	LOADK    	9 -105	; -69.7511
+	228	[-]	LOADK    	10 -106	; 4414.01403
+	229	[-]	CALL     	7 4 0
+	230	[-]	SETLIST  	6 0 1	; 1
+	231	[-]	NEWTABLE 	7 2 0
+	232	[-]	GETGLOBAL	8 -64	; Make3DPoint
+	233	[-]	LOADK    	9 -107	; 10931.72846
+	234	[-]	LOADK    	10 -108	; 51.7229
+	235	[-]	LOADK    	11 -109	; 6990.84403
+	236	[-]	CALL     	8 4 2
+	237	[-]	GETGLOBAL	9 -64	; Make3DPoint
+	238	[-]	LOADK    	10 -110	; 11140.32846
+	239	[-]	LOADK    	11 -111	; 54.8702
+	240	[-]	LOADK    	12 -112	; 7064.44403
+	241	[-]	CALL     	9 4 2
+	242	[-]	GETGLOBAL	10 -64	; Make3DPoint
+	243	[-]	LOADK    	11 -113	; 11067.62846
+	244	[-]	LOADK    	12 -114	; 54.8491
+	245	[-]	LOADK    	13 -115	; 6789.68403
+	246	[-]	CALL     	10 4 0
+	247	[-]	SETLIST  	7 0 1	; 1
+	248	[-]	NEWTABLE 	8 2 0
+	249	[-]	GETGLOBAL	9 -64	; Make3DPoint
+	250	[-]	LOADK    	10 -116	; 11008.151898
+	251	[-]	LOADK    	11 -117	; 51.239746
+	252	[-]	LOADK    	12 -118	; 8387.408346
+	253	[-]	CALL     	9 4 2
+	254	[-]	GETGLOBAL	10 -64	; Make3DPoint
+	255	[-]	LOADK    	11 -119	; 11058.151898
+	256	[-]	LOADK    	12 -117	; 51.239746
+	257	[-]	LOADK    	13 -120	; 8217.408346
+	258	[-]	CALL     	10 4 2
+	259	[-]	GETGLOBAL	11 -64	; Make3DPoint
+	260	[-]	LOADK    	12 -121	; 10808.151898
+	261	[-]	LOADK    	13 -117	; 51.239746
+	262	[-]	LOADK    	14 -118	; 8387.408346
+	263	[-]	CALL     	11 4 0
+	264	[-]	SETLIST  	8 0 1	; 1
+	265	[-]	NEWTABLE 	9 3 0
+	266	[-]	GETGLOBAL	10 -64	; Make3DPoint
+	267	[-]	LOADK    	11 -122	; 7986.996624
+	268	[-]	LOADK    	12 -123	; 48.800049
+	269	[-]	LOADK    	13 -124	; 9471.389059
+	270	[-]	CALL     	10 4 2
+	271	[-]	GETGLOBAL	11 -64	; Make3DPoint
+	272	[-]	LOADK    	12 -125	; 7886.996624
+	273	[-]	LOADK    	13 -123	; 48.800049
+	274	[-]	LOADK    	14 -126	; 9312.390059
+	275	[-]	CALL     	11 4 2
+	276	[-]	GETGLOBAL	12 -64	; Make3DPoint
+	277	[-]	LOADK    	13 -127	; 7756.996624
+	278	[-]	LOADK    	14 -123	; 48.800049
+	279	[-]	LOADK    	15 -128	; 9451.389059
+	280	[-]	CALL     	12 4 2
+	281	[-]	GETGLOBAL	13 -64	; Make3DPoint
+	282	[-]	LOADK    	14 -129	; 7854.38846
+	283	[-]	LOADK    	15 -130	; 52.2263
+	284	[-]	LOADK    	16 -131	; 9610.47403
+	285	[-]	CALL     	13 4 0
+	286	[-]	SETLIST  	9 0 1	; 1
+	287	[-]	NEWTABLE 	10 2 0
+	288	[-]	GETGLOBAL	11 -64	; Make3DPoint
+	289	[-]	LOADK    	12 -132	; 7016.869183
+	290	[-]	LOADK    	13 -133	; 51.270142
+	291	[-]	LOADK    	14 -134	; 10775.54653
+	292	[-]	CALL     	11 4 2
+	293	[-]	GETGLOBAL	12 -64	; Make3DPoint
+	294	[-]	LOADK    	13 -135	; 7264.63846
+	295	[-]	LOADK    	14 -136	; 54.635
+	296	[-]	LOADK    	15 -137	; 10795.78403
+	297	[-]	CALL     	12 4 2
+	298	[-]	GETGLOBAL	13 -64	; Make3DPoint
+	299	[-]	LOADK    	14 -138	; 6917.08846
+	300	[-]	LOADK    	15 -139	; 54.6353
+	301	[-]	LOADK    	16 -140	; 11003.68403
+	302	[-]	CALL     	13 4 0
+	303	[-]	SETLIST  	10 0 1	; 1
+	304	[-]	NEWTABLE 	11 1 0
+	305	[-]	GETGLOBAL	12 -64	; Make3DPoint
+	306	[-]	LOADK    	13 -141	; 6317.092327
+	307	[-]	LOADK    	14 -142	; 47.607788
+	308	[-]	LOADK    	15 -143	; 12146.457663
+	309	[-]	CALL     	12 4 2
+	310	[-]	GETGLOBAL	13 -64	; Make3DPoint
+	311	[-]	LOADK    	14 -144	; 6547.092327
+	312	[-]	LOADK    	15 -142	; 47.607788
+	313	[-]	LOADK    	16 -145	; 12156.457663
+	314	[-]	CALL     	13 4 0
+	315	[-]	SETLIST  	11 0 1	; 1
+	316	[-]	NEWTABLE 	12 3 0
+	317	[-]	GETGLOBAL	13 -64	; Make3DPoint
+	318	[-]	LOADK    	14 -146	; 5007.123577
+	319	[-]	LOADK    	15 -147	; 24.390137
+	320	[-]	LOADK    	16 -148	; 10471.445944
+	321	[-]	CALL     	13 4 2
+	322	[-]	GETGLOBAL	14 -64	; Make3DPoint
+	323	[-]	LOADK    	15 -146	; 5007.123577
+	324	[-]	LOADK    	16 -147	; 24.390137
+	325	[-]	LOADK    	17 -148	; 10471.445944
+	326	[-]	CALL     	14 4 2
+	327	[-]	GETGLOBAL	15 -64	; Make3DPoint
+	328	[-]	LOADK    	16 -146	; 5007.123577
+	329	[-]	LOADK    	17 -147	; 24.390137
+	330	[-]	LOADK    	18 -148	; 10471.445944
+	331	[-]	CALL     	15 4 2
+	332	[-]	GETGLOBAL	16 -64	; Make3DPoint
+	333	[-]	LOADK    	17 -146	; 5007.123577
+	334	[-]	LOADK    	18 -147	; 24.390137
+	335	[-]	LOADK    	19 -148	; 10471.445944
+	336	[-]	CALL     	16 4 0
+	337	[-]	SETLIST  	12 0 1	; 1
+	338	[-]	NEWTABLE 	13 0 0
+	339	[-]	GETGLOBAL	14 -64	; Make3DPoint
+	340	[-]	LOADK    	15 -149	; 2110.62846
+	341	[-]	LOADK    	16 -150	; 54
+	342	[-]	LOADK    	17 -151	; 8450.98403
+	343	[-]	CALL     	14 4 0
+	344	[-]	SETLIST  	13 0 1	; 1
+	345	[-]	NEWTABLE 	14 0 0
+	346	[-]	GETGLOBAL	15 -64	; Make3DPoint
+	347	[-]	LOADK    	16 -152	; 12703.62846
+	348	[-]	LOADK    	17 -150	; 54
+	349	[-]	LOADK    	18 -76	; 6443.98403
+	350	[-]	CALL     	15 4 0
+	351	[-]	SETLIST  	14 0 1	; 1
+	352	[-]	NEWTABLE 	15 0 0
+	353	[-]	GETGLOBAL	16 -64	; Make3DPoint
+	354	[-]	LOADK    	17 -153	; 10500
+	355	[-]	LOADK    	18 -154	; -62
+	356	[-]	LOADK    	19 -155	; 5170
+	357	[-]	CALL     	16 4 0
+	358	[-]	SETLIST  	15 0 1	; 1
+	359	[-]	NEWTABLE 	16 0 0
+	360	[-]	GETGLOBAL	17 -64	; Make3DPoint
+	361	[-]	LOADK    	18 -156	; 4400
+	362	[-]	LOADK    	19 -154	; -62
+	363	[-]	LOADK    	20 -157	; 9600
+	364	[-]	CALL     	17 4 0
+	365	[-]	SETLIST  	16 0 1	; 1
+	366	[-]	NEWTABLE 	17 0 0
+	367	[-]	GETGLOBAL	18 -64	; Make3DPoint
+	368	[-]	LOADK    	19 -158	; 4930.123577
+	369	[-]	LOADK    	20 -147	; 24.390137
+	370	[-]	LOADK    	21 -159	; 10371.445944
+	371	[-]	CALL     	18 4 0
+	372	[-]	SETLIST  	17 0 1	; 1
+	373	[-]	SETLIST  	0 17 1	; 1
+	374	[-]	SETGLOBAL	0 -63	; CampSpawnPoints
+	375	[-]	NEWTABLE 	0 17 0
+	376	[-]	NEWTABLE 	1 2 0
+	377	[-]	GETGLOBAL	2 -64	; Make3DPoint
+	378	[-]	LOADK    	3 -161	; 3420.60846
+	379	[-]	LOADK    	4 -162	; 55.0703
+	380	[-]	LOADK    	5 -163	; 8190.70403
+	381	[-]	CALL     	2 4 2
+	382	[-]	GETGLOBAL	3 -64	; Make3DPoint
+	383	[-]	LOADK    	4 -161	; 3420.60846
+	384	[-]	LOADK    	5 -162	; 55.0703
+	385	[-]	LOADK    	6 -163	; 8190.70403
+	386	[-]	CALL     	3 4 2
+	387	[-]	GETGLOBAL	4 -64	; Make3DPoint
+	388	[-]	LOADK    	5 -161	; 3420.60846
+	389	[-]	LOADK    	6 -162	; 55.0703
+	390	[-]	LOADK    	7 -163	; 8190.70403
+	391	[-]	CALL     	4 4 0
+	392	[-]	SETLIST  	1 0 1	; 1
+	393	[-]	NEWTABLE 	2 3 0
+	394	[-]	GETGLOBAL	3 -64	; Make3DPoint
+	395	[-]	LOADK    	4 -164	; 3700.62846
+	396	[-]	LOADK    	5 -165	; 46
+	397	[-]	LOADK    	6 -166	; 6385.98403
+	398	[-]	CALL     	3 4 2
+	399	[-]	GETGLOBAL	4 -64	; Make3DPoint
+	400	[-]	LOADK    	5 -167	; 3758.91846
+	401	[-]	LOADK    	6 -168	; 55.6167
+	402	[-]	LOADK    	7 -169	; 6225.84403
+	403	[-]	CALL     	4 4 2
+	404	[-]	GETGLOBAL	5 -64	; Make3DPoint
+	405	[-]	LOADK    	6 -170	; 3540.36846
+	406	[-]	LOADK    	7 -171	; 55.6125
+	407	[-]	LOADK    	8 -172	; 6472.31403
+	408	[-]	CALL     	5 4 2
+	409	[-]	GETGLOBAL	6 -64	; Make3DPoint
+	410	[-]	LOADK    	7 -164	; 3700.62846
+	411	[-]	LOADK    	8 -165	; 46
+	412	[-]	LOADK    	9 -166	; 6385.98403
+	413	[-]	CALL     	6 4 0
+	414	[-]	SETLIST  	2 0 1	; 1
+	415	[-]	NEWTABLE 	3 3 0
+	416	[-]	GETGLOBAL	4 -64	; Make3DPoint
+	417	[-]	LOADK    	5 -173	; 6958.62846
+	418	[-]	LOADK    	6 -174	; 48
+	419	[-]	LOADK    	7 -175	; 5460.98403
+	420	[-]	CALL     	4 4 2
+	421	[-]	GETGLOBAL	5 -64	; Make3DPoint
+	422	[-]	LOADK    	6 -176	; 6949.25846
+	423	[-]	LOADK    	7 -177	; 56.8276
+	424	[-]	LOADK    	8 -178	; 5549.06403
+	425	[-]	CALL     	5 4 2
+	426	[-]	GETGLOBAL	6 -64	; Make3DPoint
+	427	[-]	LOADK    	7 -173	; 6958.62846
+	428	[-]	LOADK    	8 -174	; 48
+	429	[-]	LOADK    	9 -175	; 5460.98403
+	430	[-]	CALL     	6 4 2
+	431	[-]	GETGLOBAL	7 -64	; Make3DPoint
+	432	[-]	LOADK    	8 -179	; 6989.543255
+	433	[-]	LOADK    	9 -81	; 50.27832
+	434	[-]	LOADK    	10 -180	; 5328.869772
+	435	[-]	CALL     	7 4 0
+	436	[-]	SETLIST  	3 0 1	; 1
+	437	[-]	NEWTABLE 	4 2 0
+	438	[-]	GETGLOBAL	5 -64	; Make3DPoint
+	439	[-]	LOADK    	6 -181	; 7622.38846
+	440	[-]	LOADK    	7 -182	; 54.426
+	441	[-]	LOADK    	8 -183	; 3947.19403
+	442	[-]	CALL     	5 4 2
+	443	[-]	GETGLOBAL	6 -64	; Make3DPoint
+	444	[-]	LOADK    	7 -184	; 7636.56846
+	445	[-]	LOADK    	8 -185	; 57.4629
+	446	[-]	LOADK    	9 -186	; 3896.93403
+	447	[-]	CALL     	6 4 2
+	448	[-]	GETGLOBAL	7 -64	; Make3DPoint
+	449	[-]	LOADK    	8 -184	; 7636.56846
+	450	[-]	LOADK    	9 -185	; 57.4629
+	451	[-]	LOADK    	10 -186	; 3896.93403
+	452	[-]	CALL     	7 4 0
+	453	[-]	SETLIST  	4 0 1	; 1
+	454	[-]	NEWTABLE 	5 1 0
+	455	[-]	GETGLOBAL	6 -64	; Make3DPoint
+	456	[-]	LOADK    	7 -187	; 8569.62846
+	457	[-]	LOADK    	8 -75	; 45
+	458	[-]	LOADK    	9 -188	; 2633.98403
+	459	[-]	CALL     	6 4 2
+	460	[-]	GETGLOBAL	7 -64	; Make3DPoint
+	461	[-]	LOADK    	8 -189	; 8319.62846
+	462	[-]	LOADK    	9 -75	; 45
+	463	[-]	LOADK    	10 -190	; 2641.98403
+	464	[-]	CALL     	7 4 0
+	465	[-]	SETLIST  	5 0 1	; 1
+	466	[-]	NEWTABLE 	6 0 0
+	467	[-]	GETGLOBAL	7 -64	; Make3DPoint
+	468	[-]	LOADK    	8 -191	; 10517.62846
+	469	[-]	LOADK    	9 -192	; -67
+	470	[-]	LOADK    	10 -193	; 5171.98403
+	471	[-]	CALL     	7 4 0
+	472	[-]	SETLIST  	6 0 1	; 1
+	473	[-]	NEWTABLE 	7 2 0
+	474	[-]	GETGLOBAL	8 -64	; Make3DPoint
+	475	[-]	LOADK    	9 -194	; 11428.62846
+	476	[-]	LOADK    	10 -195	; 54.8568
+	477	[-]	LOADK    	11 -196	; 6740.70403
+	478	[-]	CALL     	8 4 2
+	479	[-]	GETGLOBAL	9 -64	; Make3DPoint
+	480	[-]	LOADK    	10 -194	; 11428.62846
+	481	[-]	LOADK    	11 -195	; 54.8568
+	482	[-]	LOADK    	12 -196	; 6740.70403
+	483	[-]	CALL     	9 4 2
+	484	[-]	GETGLOBAL	10 -64	; Make3DPoint
+	485	[-]	LOADK    	11 -194	; 11428.62846
+	486	[-]	LOADK    	12 -195	; 54.8568
+	487	[-]	LOADK    	13 -196	; 6740.70403
+	488	[-]	CALL     	10 4 0
+	489	[-]	SETLIST  	7 0 1	; 1
+	490	[-]	NEWTABLE 	8 3 0
+	491	[-]	GETGLOBAL	9 -64	; Make3DPoint
+	492	[-]	LOADK    	10 -197	; 11127.62846
+	493	[-]	LOADK    	11 -198	; 53
+	494	[-]	LOADK    	12 -199	; 8502.98403
+	495	[-]	CALL     	9 4 2
+	496	[-]	GETGLOBAL	10 -64	; Make3DPoint
+	497	[-]	LOADK    	11 -200	; 11285.82846
+	498	[-]	LOADK    	12 -201	; 60.8542
+	499	[-]	LOADK    	13 -202	; 8381.71403
+	500	[-]	CALL     	10 4 2
+	501	[-]	GETGLOBAL	11 -64	; Make3DPoint
+	502	[-]	LOADK    	12 -203	; 11024.72846
+	503	[-]	LOADK    	13 -204	; 64.4202
+	504	[-]	LOADK    	14 -205	; 8585.54403
+	505	[-]	CALL     	11 4 2
+	506	[-]	GETGLOBAL	12 -64	; Make3DPoint
+	507	[-]	LOADK    	13 -197	; 11127.62846
+	508	[-]	LOADK    	14 -198	; 53
+	509	[-]	LOADK    	15 -199	; 8502.98403
+	510	[-]	CALL     	12 4 0
+	511	[-]	SETLIST  	8 0 1	; 1
+	512	[-]	NEWTABLE 	9 3 0
+	513	[-]	GETGLOBAL	10 -64	; Make3DPoint
+	514	[-]	LOADK    	11 -206	; 7901.62846
+	515	[-]	LOADK    	12 -165	; 46
+	516	[-]	LOADK    	13 -207	; 9479.98403
+	517	[-]	CALL     	10 4 2
+	518	[-]	GETGLOBAL	11 -64	; Make3DPoint
+	519	[-]	LOADK    	12 -206	; 7901.62846
+	520	[-]	LOADK    	13 -165	; 46
+	521	[-]	LOADK    	14 -207	; 9479.98403
+	522	[-]	CALL     	11 4 2
+	523	[-]	GETGLOBAL	12 -64	; Make3DPoint
+	524	[-]	LOADK    	13 -208	; 7795.69846
+	525	[-]	LOADK    	14 -209	; 52.3425
+	526	[-]	LOADK    	15 -210	; 9491.01403
+	527	[-]	CALL     	12 4 2
+	528	[-]	GETGLOBAL	13 -64	; Make3DPoint
+	529	[-]	LOADK    	14 -211	; 7849.22846
+	530	[-]	LOADK    	15 -212	; 52.1437
+	531	[-]	LOADK    	16 -213	; 9644.08403
+	532	[-]	CALL     	13 4 0
+	533	[-]	SETLIST  	9 0 1	; 1
+	534	[-]	NEWTABLE 	10 2 0
+	535	[-]	GETGLOBAL	11 -64	; Make3DPoint
+	536	[-]	LOADK    	12 -214	; 7257.22846
+	537	[-]	LOADK    	13 -215	; 56.4084
+	538	[-]	LOADK    	14 -216	; 11071.28403
+	539	[-]	CALL     	11 4 2
+	540	[-]	GETGLOBAL	12 -64	; Make3DPoint
+	541	[-]	LOADK    	13 -217	; 7113.10846
+	542	[-]	LOADK    	14 -218	; 54.4883
+	543	[-]	LOADK    	15 -219	; 11017.48403
+	544	[-]	CALL     	12 4 2
+	545	[-]	GETGLOBAL	13 -64	; Make3DPoint
+	546	[-]	LOADK    	14 -217	; 7113.10846
+	547	[-]	LOADK    	15 -218	; 54.4883
+	548	[-]	LOADK    	16 -219	; 11017.48403
+	549	[-]	CALL     	13 4 0
+	550	[-]	SETLIST  	10 0 1	; 1
+	551	[-]	NEWTABLE 	11 1 0
+	552	[-]	GETGLOBAL	12 -64	; Make3DPoint
+	553	[-]	LOADK    	13 -220	; 6365.62846
+	554	[-]	LOADK    	14 -221	; 30
+	555	[-]	LOADK    	15 -222	; 12226.98403
+	556	[-]	CALL     	12 4 2
+	557	[-]	GETGLOBAL	13 -64	; Make3DPoint
+	558	[-]	LOADK    	14 -223	; 6517.62846
+	559	[-]	LOADK    	15 -221	; 30
+	560	[-]	LOADK    	16 -224	; 12232.98403
+	561	[-]	CALL     	13 4 0
+	562	[-]	SETLIST  	11 0 1	; 1
+	563	[-]	NEWTABLE 	12 3 0
+	564	[-]	GETGLOBAL	13 -64	; Make3DPoint
+	565	[-]	LOADK    	14 -225	; 4736.05846
+	566	[-]	LOADK    	15 -226	; -71
+	567	[-]	LOADK    	16 -227	; 10107.98403
+	568	[-]	CALL     	13 4 2
+	569	[-]	GETGLOBAL	14 -64	; Make3DPoint
+	570	[-]	LOADK    	15 -225	; 4736.05846
+	571	[-]	LOADK    	16 -226	; -71
+	572	[-]	LOADK    	17 -227	; 10107.98403
+	573	[-]	CALL     	14 4 2
+	574	[-]	GETGLOBAL	15 -64	; Make3DPoint
+	575	[-]	LOADK    	16 -228	; 4114.76846
+	576	[-]	LOADK    	17 -229	; -62.9363
+	577	[-]	LOADK    	18 -230	; 10223.38403
+	578	[-]	CALL     	15 4 2
+	579	[-]	GETGLOBAL	16 -64	; Make3DPoint
+	580	[-]	LOADK    	17 -231	; 4903.51846
+	581	[-]	LOADK    	18 -232	; -62.356
+	582	[-]	LOADK    	19 -233	; 9663.67403
+	583	[-]	CALL     	16 4 0
+	584	[-]	SETLIST  	12 0 1	; 1
+	585	[-]	NEWTABLE 	13 0 0
+	586	[-]	GETGLOBAL	14 -64	; Make3DPoint
+	587	[-]	LOADK    	15 -234	; 2338.01846
+	588	[-]	LOADK    	16 -235	; 51.7773
+	589	[-]	LOADK    	17 -236	; 8448.13403
+	590	[-]	CALL     	14 4 0
+	591	[-]	SETLIST  	13 0 1	; 1
+	592	[-]	NEWTABLE 	14 0 0
+	593	[-]	GETGLOBAL	15 -64	; Make3DPoint
+	594	[-]	LOADK    	16 -237	; 12323.82846
+	595	[-]	LOADK    	17 -238	; 55.5656
+	596	[-]	LOADK    	18 -239	; 6272.77403
+	597	[-]	CALL     	15 4 0
+	598	[-]	SETLIST  	14 0 1	; 1
+	599	[-]	NEWTABLE 	15 0 0
+	600	[-]	GETGLOBAL	16 -64	; Make3DPoint
+	601	[-]	LOADK    	17 -240	; 9830
+	602	[-]	LOADK    	18 -4	; 0
+	603	[-]	LOADK    	19 -241	; 5780
+	604	[-]	CALL     	16 4 0
+	605	[-]	SETLIST  	15 0 1	; 1
+	606	[-]	NEWTABLE 	16 0 0
+	607	[-]	GETGLOBAL	17 -64	; Make3DPoint
+	608	[-]	LOADK    	18 -242	; 5240
+	609	[-]	LOADK    	19 -4	; 0
+	610	[-]	LOADK    	20 -243	; 8950
+	611	[-]	CALL     	17 4 0
+	612	[-]	SETLIST  	16 0 1	; 1
+	613	[-]	NEWTABLE 	17 0 0
+	614	[-]	GETGLOBAL	18 -64	; Make3DPoint
+	615	[-]	LOADK    	19 -225	; 4736.05846
+	616	[-]	LOADK    	20 -226	; -71
+	617	[-]	LOADK    	21 -227	; 10107.98403
+	618	[-]	CALL     	18 4 0
+	619	[-]	SETLIST  	17 0 1	; 1
+	620	[-]	SETLIST  	0 17 1	; 1
+	621	[-]	SETGLOBAL	0 -160	; CampFacePoints
+	622	[-]	LOADK    	0 -25	; 1
+	623	[-]	SETGLOBAL	0 -244	; CAMPTYPE_DRAGON
+	624	[-]	LOADK    	0 -246	; 2
+	625	[-]	SETGLOBAL	0 -245	; CAMPTYPE_SMALLGOLEMS
+	626	[-]	LOADK    	0 -248	; 3
+	627	[-]	SETGLOBAL	0 -247	; CAMPTYPE_SMALLGOLEMS2
+	628	[-]	LOADK    	0 -250	; 4
+	629	[-]	SETGLOBAL	0 -249	; CAMPTYPE_WRAITHS
+	630	[-]	LOADK    	0 -252	; 5
+	631	[-]	SETGLOBAL	0 -251	; CAMPTYPE_WRAITHS2
+	632	[-]	LOADK    	0 -254	; 6
+	633	[-]	SETGLOBAL	0 -253	; CAMPTYPE_REDBUFF
+	634	[-]	LOADK    	0 -256	; 7
+	635	[-]	SETGLOBAL	0 -255	; CAMPTYPE_WOLVES
+	636	[-]	LOADK    	0 -258	; 8
+	637	[-]	SETGLOBAL	0 -257	; CAMPTYPE_WOLVES2
+	638	[-]	LOADK    	0 -260	; 9
+	639	[-]	SETGLOBAL	0 -259	; CAMPTYPE_BLUEBUFF
+	640	[-]	LOADK    	0 -262	; 10
+	641	[-]	SETGLOBAL	0 -261	; CAMPTYPE_OWLBEAR
+	642	[-]	LOADK    	0 -264	; 11
+	643	[-]	SETGLOBAL	0 -263	; CAMPTYPE_NASHOR
+	644	[-]	LOADK    	0 -266	; 12
+	645	[-]	SETGLOBAL	0 -265	; CAMPTYPE_CRAB
+	646	[-]	LOADK    	0 -268	; 13
+	647	[-]	SETGLOBAL	0 -267	; CAMPTYPE_SRU_RIFTHERALD
+	648	[-]	LOADK    	0 -270	; 14
+	649	[-]	SETGLOBAL	0 -269	; CAMPTYPE_SRU_DRAGON_AIR
+	650	[-]	LOADK    	0 -272	; 15
+	651	[-]	SETGLOBAL	0 -271	; CAMPTYPE_SRU_DRAGON_FIRE
+	652	[-]	LOADK    	0 -274	; 16
+	653	[-]	SETGLOBAL	0 -273	; CAMPTYPE_SRU_DRAGON_WATER
+	654	[-]	LOADK    	0 -276	; 17
+	655	[-]	SETGLOBAL	0 -275	; CAMPTYPE_SRU_DRAGON_EARTH
+	656	[-]	LOADK    	0 -278	; 18
+	657	[-]	SETGLOBAL	0 -277	; CAMPTYPE_SRU_DRAGON_ELDER
+	658	[-]	NEWTABLE 	0 0 17
+	659	[-]	GETGLOBAL	1 -244	; CAMPTYPE_DRAGON
+	660	[-]	NEWTABLE 	2 1 0
+	661	[-]	NEWTABLE 	3 2 0
+	662	[-]	LOADK    	4 -280	; "SRU_Dragon"
+	663	[-]	LOADK    	5 -281	; "spawn"
+	664	[-]	SETLIST  	3 2 1	; 1
+	665	[-]	SETLIST  	2 1 1	; 1
+	666	[-]	SETTABLE 	0 1 2
+	667	[-]	GETGLOBAL	1 -245	; CAMPTYPE_SMALLGOLEMS
+	668	[-]	NEWTABLE 	2 2 0
+	669	[-]	NEWTABLE 	3 2 0
+	670	[-]	LOADK    	4 -33	; "SRU_Krug"
+	671	[-]	LOADK    	5 -281	; "spawn"
+	672	[-]	SETLIST  	3 2 1	; 1
+	673	[-]	NEWTABLE 	4 2 0
+	674	[-]	LOADK    	5 -34	; "SRU_KrugMini"
+	675	[-]	LOADK    	6 -281	; "spawn"
+	676	[-]	SETLIST  	4 2 1	; 1
+	677	[-]	SETLIST  	2 2 1	; 1
+	678	[-]	SETTABLE 	0 1 2
+	679	[-]	GETGLOBAL	1 -247	; CAMPTYPE_SMALLGOLEMS2
+	680	[-]	NEWTABLE 	2 2 0
+	681	[-]	NEWTABLE 	3 2 0
+	682	[-]	LOADK    	4 -33	; "SRU_Krug"
+	683	[-]	LOADK    	5 -282	; "spawn_NJ"
+	684	[-]	SETLIST  	3 2 1	; 1
+	685	[-]	NEWTABLE 	4 2 0
+	686	[-]	LOADK    	5 -34	; "SRU_KrugMini"
+	687	[-]	LOADK    	6 -283	; "Spawn_North_jung"
+	688	[-]	SETLIST  	4 2 1	; 1
+	689	[-]	SETLIST  	2 2 1	; 1
+	690	[-]	SETTABLE 	0 1 2
+	691	[-]	GETGLOBAL	1 -249	; CAMPTYPE_WRAITHS
+	692	[-]	NEWTABLE 	2 4 0
+	693	[-]	NEWTABLE 	3 2 0
+	694	[-]	LOADK    	4 -35	; "SRU_Razorbeak"
+	695	[-]	LOADK    	5 -284	; "Spawn"
+	696	[-]	SETLIST  	3 2 1	; 1
+	697	[-]	NEWTABLE 	4 2 0
+	698	[-]	LOADK    	5 -32	; "SRU_RazorbeakMini"
+	699	[-]	LOADK    	6 -285	; "Spawn4"
+	700	[-]	SETLIST  	4 2 1	; 1
+	701	[-]	NEWTABLE 	5 2 0
+	702	[-]	LOADK    	6 -32	; "SRU_RazorbeakMini"
+	703	[-]	LOADK    	7 -286	; "Spawn2"
+	704	[-]	SETLIST  	5 2 1	; 1
+	705	[-]	NEWTABLE 	6 2 0
+	706	[-]	LOADK    	7 -32	; "SRU_RazorbeakMini"
+	707	[-]	LOADK    	8 -287	; "Spawn3"
+	708	[-]	SETLIST  	6 2 1	; 1
+	709	[-]	SETLIST  	2 4 1	; 1
+	710	[-]	SETTABLE 	0 1 2
+	711	[-]	GETGLOBAL	1 -251	; CAMPTYPE_WRAITHS2
+	712	[-]	NEWTABLE 	2 4 0
+	713	[-]	NEWTABLE 	3 2 0
+	714	[-]	LOADK    	4 -35	; "SRU_Razorbeak"
+	715	[-]	LOADK    	5 -288	; "North_Spawn"
+	716	[-]	SETLIST  	3 2 1	; 1
+	717	[-]	NEWTABLE 	4 2 0
+	718	[-]	LOADK    	5 -32	; "SRU_RazorbeakMini"
+	719	[-]	LOADK    	6 -289	; "North_Spawn4"
+	720	[-]	SETLIST  	4 2 1	; 1
+	721	[-]	NEWTABLE 	5 2 0
+	722	[-]	LOADK    	6 -32	; "SRU_RazorbeakMini"
+	723	[-]	LOADK    	7 -290	; "North_Spawn2"
+	724	[-]	SETLIST  	5 2 1	; 1
+	725	[-]	NEWTABLE 	6 2 0
+	726	[-]	LOADK    	7 -32	; "SRU_RazorbeakMini"
+	727	[-]	LOADK    	8 -291	; "North_Spawn3"
+	728	[-]	SETLIST  	6 2 1	; 1
+	729	[-]	SETLIST  	2 4 1	; 1
+	730	[-]	SETTABLE 	0 1 2
+	731	[-]	GETGLOBAL	1 -253	; CAMPTYPE_REDBUFF
+	732	[-]	NEWTABLE 	2 3 0
+	733	[-]	NEWTABLE 	3 2 0
+	734	[-]	LOADK    	4 -28	; "SRU_Red"
+	735	[-]	LOADK    	5 -281	; "spawn"
+	736	[-]	SETLIST  	3 2 1	; 1
+	737	[-]	NEWTABLE 	4 2 0
+	738	[-]	LOADK    	5 -38	; "SRU_RedMini"
+	739	[-]	LOADK    	6 -281	; "spawn"
+	740	[-]	SETLIST  	4 2 1	; 1
+	741	[-]	NEWTABLE 	5 2 0
+	742	[-]	LOADK    	6 -38	; "SRU_RedMini"
+	743	[-]	LOADK    	7 -281	; "spawn"
+	744	[-]	SETLIST  	5 2 1	; 1
+	745	[-]	SETLIST  	2 3 1	; 1
+	746	[-]	SETTABLE 	0 1 2
+	747	[-]	GETGLOBAL	1 -255	; CAMPTYPE_WOLVES
+	748	[-]	NEWTABLE 	2 3 0
+	749	[-]	NEWTABLE 	3 2 0
+	750	[-]	LOADK    	4 -31	; "SRU_Murkwolf"
+	751	[-]	LOADK    	5 -284	; "Spawn"
+	752	[-]	SETLIST  	3 2 1	; 1
+	753	[-]	NEWTABLE 	4 2 0
+	754	[-]	LOADK    	5 -30	; "SRU_MurkwolfMini"
+	755	[-]	LOADK    	6 -292	; "spawn_mini1"
+	756	[-]	SETLIST  	4 2 1	; 1
+	757	[-]	NEWTABLE 	5 2 0
+	758	[-]	LOADK    	6 -30	; "SRU_MurkwolfMini"
+	759	[-]	LOADK    	7 -293	; "spawn_mini2"
+	760	[-]	SETLIST  	5 2 1	; 1
+	761	[-]	SETLIST  	2 3 1	; 1
+	762	[-]	SETTABLE 	0 1 2
+	763	[-]	GETGLOBAL	1 -257	; CAMPTYPE_WOLVES2
+	764	[-]	NEWTABLE 	2 3 0
+	765	[-]	NEWTABLE 	3 2 0
+	766	[-]	LOADK    	4 -31	; "SRU_Murkwolf"
+	767	[-]	LOADK    	5 -284	; "Spawn"
+	768	[-]	SETLIST  	3 2 1	; 1
+	769	[-]	NEWTABLE 	4 2 0
+	770	[-]	LOADK    	5 -30	; "SRU_MurkwolfMini"
+	771	[-]	LOADK    	6 -293	; "spawn_mini2"
+	772	[-]	SETLIST  	4 2 1	; 1
+	773	[-]	NEWTABLE 	5 2 0
+	774	[-]	LOADK    	6 -30	; "SRU_MurkwolfMini"
+	775	[-]	LOADK    	7 -292	; "spawn_mini1"
+	776	[-]	SETLIST  	5 2 1	; 1
+	777	[-]	SETLIST  	2 3 1	; 1
+	778	[-]	SETTABLE 	0 1 2
+	779	[-]	GETGLOBAL	1 -259	; CAMPTYPE_BLUEBUFF
+	780	[-]	NEWTABLE 	2 3 0
+	781	[-]	NEWTABLE 	3 2 0
+	782	[-]	LOADK    	4 -29	; "SRU_Blue"
+	783	[-]	LOADK    	5 -281	; "spawn"
+	784	[-]	SETLIST  	3 2 1	; 1
+	785	[-]	NEWTABLE 	4 2 0
+	786	[-]	LOADK    	5 -40	; "SRU_BlueMini"
+	787	[-]	LOADK    	6 -284	; "Spawn"
+	788	[-]	SETLIST  	4 2 1	; 1
+	789	[-]	NEWTABLE 	5 2 0
+	790	[-]	LOADK    	6 -294	; "SRU_BlueMini2"
+	791	[-]	LOADK    	7 -284	; "Spawn"
+	792	[-]	SETLIST  	5 2 1	; 1
+	793	[-]	SETLIST  	2 3 1	; 1
+	794	[-]	SETTABLE 	0 1 2
+	795	[-]	GETGLOBAL	1 -261	; CAMPTYPE_OWLBEAR
+	796	[-]	NEWTABLE 	2 1 0
+	797	[-]	NEWTABLE 	3 2 0
+	798	[-]	LOADK    	4 -39	; "SRU_Gromp"
+	799	[-]	LOADK    	5 -281	; "spawn"
+	800	[-]	SETLIST  	3 2 1	; 1
+	801	[-]	SETLIST  	2 1 1	; 1
+	802	[-]	SETTABLE 	0 1 2
+	803	[-]	GETGLOBAL	1 -263	; CAMPTYPE_NASHOR
+	804	[-]	NEWTABLE 	2 2 0
+	805	[-]	NEWTABLE 	3 2 0
+	806	[-]	LOADK    	4 -36	; "SRU_Baron"
+	807	[-]	LOADK    	5 -281	; "spawn"
+	808	[-]	SETLIST  	3 2 1	; 1
+	809	[-]	NEWTABLE 	4 2 0
+	810	[-]	LOADK    	5 -37	; "SRU_BaronSpawn"
+	811	[-]	LOADK    	6 -281	; "spawn"
+	812	[-]	SETLIST  	4 2 1	; 1
+	813	[-]	SETLIST  	2 2 1	; 1
+	814	[-]	SETTABLE 	0 1 2
+	815	[-]	GETGLOBAL	1 -265	; CAMPTYPE_CRAB
+	816	[-]	NEWTABLE 	2 1 0
+	817	[-]	NEWTABLE 	3 2 0
+	818	[-]	LOADK    	4 -41	; "Sru_Crab"
+	819	[-]	LOADK    	5 -295	; "crab_hide"
+	820	[-]	SETLIST  	3 2 1	; 1
+	821	[-]	SETLIST  	2 1 1	; 1
+	822	[-]	SETTABLE 	0 1 2
+	823	[-]	GETGLOBAL	1 -267	; CAMPTYPE_SRU_RIFTHERALD
+	824	[-]	NEWTABLE 	2 1 0
+	825	[-]	NEWTABLE 	3 2 0
+	826	[-]	LOADK    	4 -42	; "SRU_RiftHerald"
+	827	[-]	LOADK    	5 -281	; "spawn"
+	828	[-]	SETLIST  	3 2 1	; 1
+	829	[-]	SETLIST  	2 1 1	; 1
+	830	[-]	SETTABLE 	0 1 2
+	831	[-]	GETGLOBAL	1 -269	; CAMPTYPE_SRU_DRAGON_AIR
+	832	[-]	NEWTABLE 	2 1 0
+	833	[-]	NEWTABLE 	3 2 0
+	834	[-]	LOADK    	4 -43	; "SRU_Dragon_Air"
+	835	[-]	LOADK    	5 -281	; "spawn"
+	836	[-]	SETLIST  	3 2 1	; 1
+	837	[-]	SETLIST  	2 1 1	; 1
+	838	[-]	SETTABLE 	0 1 2
+	839	[-]	GETGLOBAL	1 -271	; CAMPTYPE_SRU_DRAGON_FIRE
+	840	[-]	NEWTABLE 	2 1 0
+	841	[-]	NEWTABLE 	3 2 0
+	842	[-]	LOADK    	4 -44	; "SRU_Dragon_Fire"
+	843	[-]	LOADK    	5 -281	; "spawn"
+	844	[-]	SETLIST  	3 2 1	; 1
+	845	[-]	SETLIST  	2 1 1	; 1
+	846	[-]	SETTABLE 	0 1 2
+	847	[-]	GETGLOBAL	1 -273	; CAMPTYPE_SRU_DRAGON_WATER
+	848	[-]	NEWTABLE 	2 1 0
+	849	[-]	NEWTABLE 	3 2 0
+	850	[-]	LOADK    	4 -45	; "SRU_Dragon_Water"
+	851	[-]	LOADK    	5 -281	; "spawn"
+	852	[-]	SETLIST  	3 2 1	; 1
+	853	[-]	SETLIST  	2 1 1	; 1
+	854	[-]	SETTABLE 	0 1 2
+	855	[-]	GETGLOBAL	1 -275	; CAMPTYPE_SRU_DRAGON_EARTH
+	856	[-]	NEWTABLE 	2 1 0
+	857	[-]	NEWTABLE 	3 2 0
+	858	[-]	LOADK    	4 -46	; "SRU_Dragon_Earth"
+	859	[-]	LOADK    	5 -281	; "spawn"
+	860	[-]	SETLIST  	3 2 1	; 1
+	861	[-]	SETLIST  	2 1 1	; 1
+	862	[-]	SETTABLE 	0 1 2
+	863	[-]	GETGLOBAL	1 -277	; CAMPTYPE_SRU_DRAGON_ELDER
+	864	[-]	NEWTABLE 	2 1 0
+	865	[-]	NEWTABLE 	3 2 0
+	866	[-]	LOADK    	4 -47	; "SRU_Dragon_Elder"
+	867	[-]	LOADK    	5 -281	; "spawn"
+	868	[-]	SETLIST  	3 2 1	; 1
+	869	[-]	SETLIST  	2 1 1	; 1
+	870	[-]	SETTABLE 	0 1 2
+	871	[-]	SETGLOBAL	0 -279	; PredefinedCamps
+	872	[-]	NEWTABLE 	0 0 3
+	873	[-]	GETGLOBAL	1 -244	; CAMPTYPE_DRAGON
+	874	[-]	NEWTABLE 	2 1 0
+	875	[-]	LOADK    	3 -297	; "EVENT_ON_KILL_DRAGON"
+	876	[-]	SETLIST  	2 1 1	; 1
+	877	[-]	SETTABLE 	0 1 2
+	878	[-]	GETGLOBAL	1 -263	; CAMPTYPE_NASHOR
+	879	[-]	NEWTABLE 	2 1 0
+	880	[-]	LOADK    	3 -298	; "EVENT_ON_KILL_WORM"
+	881	[-]	SETLIST  	2 1 1	; 1
+	882	[-]	SETTABLE 	0 1 2
+	883	[-]	GETGLOBAL	1 -267	; CAMPTYPE_SRU_RIFTHERALD
+	884	[-]	NEWTABLE 	2 1 0
+	885	[-]	LOADK    	3 -299	; "EVENT_ON_KILL_RIFTHERALD"
+	886	[-]	SETLIST  	2 1 1	; 1
+	887	[-]	SETTABLE 	0 1 2
+	888	[-]	SETGLOBAL	0 -296	; PredefinedCampKillEvents
+	889	[-]	NEWTABLE 	0 0 3
+	890	[-]	GETGLOBAL	1 -244	; CAMPTYPE_DRAGON
+	891	[-]	NEWTABLE 	2 1 0
+	892	[-]	LOADK    	3 -301	; "EVENT_ON_KILL_DRAGON_SPECTATOR"
+	893	[-]	SETLIST  	2 1 1	; 1
+	894	[-]	SETTABLE 	0 1 2
+	895	[-]	GETGLOBAL	1 -263	; CAMPTYPE_NASHOR
+	896	[-]	NEWTABLE 	2 1 0
+	897	[-]	LOADK    	3 -302	; "EVENT_ON_KILL_WORM_SPECTATOR"
+	898	[-]	SETLIST  	2 1 1	; 1
+	899	[-]	SETTABLE 	0 1 2
+	900	[-]	GETGLOBAL	1 -267	; CAMPTYPE_SRU_RIFTHERALD
+	901	[-]	NEWTABLE 	2 1 0
+	902	[-]	LOADK    	3 -303	; "EVENT_ON_KILL_RIFTHERALD_SPECTATOR"
+	903	[-]	SETLIST  	2 1 1	; 1
+	904	[-]	SETTABLE 	0 1 2
+	905	[-]	SETGLOBAL	0 -300	; PredefinedCampKillEventsForSpectator
+	906	[-]	NEWTABLE 	0 0 17
+	907	[-]	LOADK    	1 -25	; 1
+	908	[-]	NEWTABLE 	2 0 0
+	909	[-]	SETTABLE 	0 1 2
+	910	[-]	LOADK    	1 -246	; 2
+	911	[-]	NEWTABLE 	2 0 0
+	912	[-]	SETTABLE 	0 1 2
+	913	[-]	LOADK    	1 -248	; 3
+	914	[-]	NEWTABLE 	2 0 0
+	915	[-]	SETTABLE 	0 1 2
+	916	[-]	LOADK    	1 -250	; 4
+	917	[-]	NEWTABLE 	2 0 0
+	918	[-]	SETTABLE 	0 1 2
+	919	[-]	LOADK    	1 -252	; 5
+	920	[-]	NEWTABLE 	2 0 0
+	921	[-]	SETTABLE 	0 1 2
+	922	[-]	LOADK    	1 -254	; 6
+	923	[-]	NEWTABLE 	2 0 0
+	924	[-]	SETTABLE 	0 1 2
+	925	[-]	LOADK    	1 -256	; 7
+	926	[-]	NEWTABLE 	2 0 0
+	927	[-]	SETTABLE 	0 1 2
+	928	[-]	LOADK    	1 -258	; 8
+	929	[-]	NEWTABLE 	2 0 0
+	930	[-]	SETTABLE 	0 1 2
+	931	[-]	LOADK    	1 -260	; 9
+	932	[-]	NEWTABLE 	2 0 0
+	933	[-]	SETTABLE 	0 1 2
+	934	[-]	LOADK    	1 -262	; 10
+	935	[-]	NEWTABLE 	2 0 0
+	936	[-]	SETTABLE 	0 1 2
+	937	[-]	LOADK    	1 -264	; 11
+	938	[-]	NEWTABLE 	2 0 0
+	939	[-]	SETTABLE 	0 1 2
+	940	[-]	LOADK    	1 -266	; 12
+	941	[-]	NEWTABLE 	2 0 0
+	942	[-]	SETTABLE 	0 1 2
+	943	[-]	LOADK    	1 -268	; 13
+	944	[-]	NEWTABLE 	2 0 0
+	945	[-]	SETTABLE 	0 1 2
+	946	[-]	LOADK    	1 -270	; 14
+	947	[-]	NEWTABLE 	2 0 0
+	948	[-]	SETTABLE 	0 1 2
+	949	[-]	LOADK    	1 -272	; 15
+	950	[-]	NEWTABLE 	2 0 0
+	951	[-]	SETTABLE 	0 1 2
+	952	[-]	LOADK    	1 -274	; 16
+	953	[-]	NEWTABLE 	2 0 0
+	954	[-]	SETTABLE 	0 1 2
+	955	[-]	LOADK    	1 -276	; 17
+	956	[-]	NEWTABLE 	2 0 0
+	957	[-]	SETTABLE 	0 1 2
+	958	[-]	SETGLOBAL	0 -304	; NeutralMinionCamps
+	959	[-]	GETGLOBAL	0 -304	; NeutralMinionCamps
+	960	[-]	LEN      	0 0
+	961	[-]	SETGLOBAL	0 -305	; NUMBER_OF_CAMPS
+	962	[-]	CLOSURE  	0 0	; 000002C5AF6D19F0
+	963	[-]	SETGLOBAL	0 -306	; NeutralMinionInit
+	964	[-]	CLOSURE  	0 1	; 000002C5AF6D1A70
+	965	[-]	SETGLOBAL	0 -307	; InitDragonSigilMarkers
+	966	[-]	CLOSURE  	0 2	; 000002C5AF6D5990
+	967	[-]	SETGLOBAL	0 -308	; CreateRespawnNeutralTimer
+	968	[-]	CLOSURE  	0 3	; 000002C5AF6D5BA0
+	969	[-]	SETGLOBAL	0 -309	; InitializeNeutralMinionInfo
+	970	[-]	CLOSURE  	0 4	; 000002C5AF6DAB30
+	971	[-]	SETGLOBAL	0 -310	; SpawnInitialNeutralMinions
+	972	[-]	CLOSURE  	0 5	; 000002C5AF6DADB0
+	973	[-]	SETGLOBAL	0 -311	; NeutralMinionDeath
+	974	[-]	CLOSURE  	0 6	; 000002C5AF6DBC60
+	975	[-]	SETGLOBAL	0 -312	; HelperDragonProbTableGenerate
+	976	[-]	CLOSURE  	0 7	; 000002C5AF6DBCE0
+	977	[-]	SETGLOBAL	0 -313	; shuffleTable
+	978	[-]	CLOSURE  	0 8	; 000002C5AF6DC570
+	979	[-]	SETGLOBAL	0 -314	; DragonTypeToDragonBaseName
+	980	[-]	CLOSURE  	0 9	; 000002C5AF6D64A0
+	981	[-]	SETGLOBAL	0 -315	; DragonTypeToDragonIconName
+	982	[-]	CLOSURE  	0 10	; 000002C5AF6D6520
+	983	[-]	SETGLOBAL	0 -316	; SetNextDragonType
+	984	[-]	RETURN   	0 1
+constants (316) for 000002C5AF6D34C0:
+	1	"DoLuaShared"
+	2	"ObjectTags"
+	3	"TEAM_UNKNOWN"
+	4	0
+	5	"TEAM_ORDER"
+	6	100
+	7	"TEAM_CHAOS"
+	8	200
+	9	"TEAM_NEUTRAL"
+	10	300
+	11	"START_OF_GAME_MONSTER_SPAWN_DELAY"
+	12	25
+	13	"START_OF_GAME_ADDITIONAL_DELAY_CRAB"
+	14	50
+	15	"START_OF_GAME_ADDITIONAL_DELAY_DRAGON"
+	16	"START_OF_GAME_ADDITIONAL_DELAY_HERALD"
+	17	260
+	18	"START_OF_GAME_ADDITIONAL_DELAY_BARON"
+	19	1100
+	20	"ELDER_DRAGON_SPAWN_TIME"
+	21	2100
+	22	"ELDER_DRAGON_SPAWN_RATE"
+	23	600
+	24	"HOSTILE"
+	25	1
+	26	"INACTIVE"
+	27	"NeutralMinionNamesForDX5"
+	28	"SRU_Red"
+	29	"SRU_Blue"
+	30	"SRU_MurkwolfMini"
+	31	"SRU_Murkwolf"
+	32	"SRU_RazorbeakMini"
+	33	"SRU_Krug"
+	34	"SRU_KrugMini"
+	35	"SRU_Razorbeak"
+	36	"SRU_Baron"
+	37	"SRU_BaronSpawn"
+	38	"SRU_RedMini"
+	39	"SRU_Gromp"
+	40	"SRU_BlueMini"
+	41	"Sru_Crab"
+	42	"SRU_RiftHerald"
+	43	"SRU_Dragon_Air"
+	44	"SRU_Dragon_Fire"
+	45	"SRU_Dragon_Water"
+	46	"SRU_Dragon_Earth"
+	47	"SRU_Dragon_Elder"
+	48	"HERO_EXP_RADIUS"
+	49	800
+	50	"DragonFlavorIndex"
+	51	"DragonFlavorTable"
+	52	"DefaultNeutralMinionValues"
+	53	"SmallGolem"
+	54	"GoldGiven"
+	55	"ExpGiven"
+	56	"SoulGiven"
+	57	"Dragon"
+	58	"GiantWolf"
+	59	"wolf"
+	60	"Wraith"
+	61	"Urf"
+	62	"NeutralTimers"
+	63	"CampSpawnPoints"
+	64	"Make3DPoint"
+	65	3856.48846
+	66	51.8755
+	67	7886.05403
+	68	3762.69846
+	69	54.561
+	70	8088.47403
+	71	3622.91846
+	72	55.0609
+	73	7823.85403
+	74	3780.62846
+	75	45
+	76	6443.98403
+	77	3980.62846
+	78	3730.62846
+	79	6593.98403
+	80	6706.67846
+	81	50.27832
+	82	5521.04403
+	83	6929.62846
+	84	5647.93403
+	85	7060.45846
+	86	5499.27403
+	87	6914.71846
+	88	51.141
+	89	5325.35403
+	90	7862.243694
+	91	50.383179
+	92	4111.186667
+	93	7624.12846
+	94	57.3499
+	95	4181.37403
+	96	7918.50846
+	97	56.8674
+	98	3880.83403
+	99	8532.470745
+	100	50.652954
+	101	2737.947409
+	102	8323.470745
+	103	2754.947409
+	104	9866.14846
+	105	-69.7511
+	106	4414.01403
+	107	10931.72846
+	108	51.7229
+	109	6990.84403
+	110	11140.32846
+	111	54.8702
+	112	7064.44403
+	113	11067.62846
+	114	54.8491
+	115	6789.68403
+	116	11008.151898
+	117	51.239746
+	118	8387.408346
+	119	11058.151898
+	120	8217.408346
+	121	10808.151898
+	122	7986.996624
+	123	48.800049
+	124	9471.389059
+	125	7886.996624
+	126	9312.390059
+	127	7756.996624
+	128	9451.389059
+	129	7854.38846
+	130	52.2263
+	131	9610.47403
+	132	7016.869183
+	133	51.270142
+	134	10775.54653
+	135	7264.63846
+	136	54.635
+	137	10795.78403
+	138	6917.08846
+	139	54.6353
+	140	11003.68403
+	141	6317.092327
+	142	47.607788
+	143	12146.457663
+	144	6547.092327
+	145	12156.457663
+	146	5007.123577
+	147	24.390137
+	148	10471.445944
+	149	2110.62846
+	150	54
+	151	8450.98403
+	152	12703.62846
+	153	10500
+	154	-62
+	155	5170
+	156	4400
+	157	9600
+	158	4930.123577
+	159	10371.445944
+	160	"CampFacePoints"
+	161	3420.60846
+	162	55.0703
+	163	8190.70403
+	164	3700.62846
+	165	46
+	166	6385.98403
+	167	3758.91846
+	168	55.6167
+	169	6225.84403
+	170	3540.36846
+	171	55.6125
+	172	6472.31403
+	173	6958.62846
+	174	48
+	175	5460.98403
+	176	6949.25846
+	177	56.8276
+	178	5549.06403
+	179	6989.543255
+	180	5328.869772
+	181	7622.38846
+	182	54.426
+	183	3947.19403
+	184	7636.56846
+	185	57.4629
+	186	3896.93403
+	187	8569.62846
+	188	2633.98403
+	189	8319.62846
+	190	2641.98403
+	191	10517.62846
+	192	-67
+	193	5171.98403
+	194	11428.62846
+	195	54.8568
+	196	6740.70403
+	197	11127.62846
+	198	53
+	199	8502.98403
+	200	11285.82846
+	201	60.8542
+	202	8381.71403
+	203	11024.72846
+	204	64.4202
+	205	8585.54403
+	206	7901.62846
+	207	9479.98403
+	208	7795.69846
+	209	52.3425
+	210	9491.01403
+	211	7849.22846
+	212	52.1437
+	213	9644.08403
+	214	7257.22846
+	215	56.4084
+	216	11071.28403
+	217	7113.10846
+	218	54.4883
+	219	11017.48403
+	220	6365.62846
+	221	30
+	222	12226.98403
+	223	6517.62846
+	224	12232.98403
+	225	4736.05846
+	226	-71
+	227	10107.98403
+	228	4114.76846
+	229	-62.9363
+	230	10223.38403
+	231	4903.51846
+	232	-62.356
+	233	9663.67403
+	234	2338.01846
+	235	51.7773
+	236	8448.13403
+	237	12323.82846
+	238	55.5656
+	239	6272.77403
+	240	9830
+	241	5780
+	242	5240
+	243	8950
+	244	"CAMPTYPE_DRAGON"
+	245	"CAMPTYPE_SMALLGOLEMS"
+	246	2
+	247	"CAMPTYPE_SMALLGOLEMS2"
+	248	3
+	249	"CAMPTYPE_WRAITHS"
+	250	4
+	251	"CAMPTYPE_WRAITHS2"
+	252	5
+	253	"CAMPTYPE_REDBUFF"
+	254	6
+	255	"CAMPTYPE_WOLVES"
+	256	7
+	257	"CAMPTYPE_WOLVES2"
+	258	8
+	259	"CAMPTYPE_BLUEBUFF"
+	260	9
+	261	"CAMPTYPE_OWLBEAR"
+	262	10
+	263	"CAMPTYPE_NASHOR"
+	264	11
+	265	"CAMPTYPE_CRAB"
+	266	12
+	267	"CAMPTYPE_SRU_RIFTHERALD"
+	268	13
+	269	"CAMPTYPE_SRU_DRAGON_AIR"
+	270	14
+	271	"CAMPTYPE_SRU_DRAGON_FIRE"
+	272	15
+	273	"CAMPTYPE_SRU_DRAGON_WATER"
+	274	16
+	275	"CAMPTYPE_SRU_DRAGON_EARTH"
+	276	17
+	277	"CAMPTYPE_SRU_DRAGON_ELDER"
+	278	18
+	279	"PredefinedCamps"
+	280	"SRU_Dragon"
+	281	"spawn"
+	282	"spawn_NJ"
+	283	"Spawn_North_jung"
+	284	"Spawn"
+	285	"Spawn4"
+	286	"Spawn2"
+	287	"Spawn3"
+	288	"North_Spawn"
+	289	"North_Spawn4"
+	290	"North_Spawn2"
+	291	"North_Spawn3"
+	292	"spawn_mini1"
+	293	"spawn_mini2"
+	294	"SRU_BlueMini2"
+	295	"crab_hide"
+	296	"PredefinedCampKillEvents"
+	297	"EVENT_ON_KILL_DRAGON"
+	298	"EVENT_ON_KILL_WORM"
+	299	"EVENT_ON_KILL_RIFTHERALD"
+	300	"PredefinedCampKillEventsForSpectator"
+	301	"EVENT_ON_KILL_DRAGON_SPECTATOR"
+	302	"EVENT_ON_KILL_WORM_SPECTATOR"
+	303	"EVENT_ON_KILL_RIFTHERALD_SPECTATOR"
+	304	"NeutralMinionCamps"
+	305	"NUMBER_OF_CAMPS"
+	306	"NeutralMinionInit"
+	307	"InitDragonSigilMarkers"
+	308	"CreateRespawnNeutralTimer"
+	309	"InitializeNeutralMinionInfo"
+	310	"SpawnInitialNeutralMinions"
+	311	"NeutralMinionDeath"
+	312	"HelperDragonProbTableGenerate"
+	313	"shuffleTable"
+	314	"DragonTypeToDragonBaseName"
+	315	"DragonTypeToDragonIconName"
+	316	"SetNextDragonType"
+locals (0) for 000002C5AF6D34C0:
+upvalues (0) for 000002C5AF6D34C0:
+
+function <?:200,507> (1214 instructions, 4856 bytes at 000002C5AF6D19F0)
+0 params, 9 slots, 0 upvalues, 0 locals, 234 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; pairs
+	2	[-]	GETGLOBAL	1 -2	; NeutralMinionNamesForDX5
+	3	[-]	CALL     	0 2 4
+	4	[-]	JMP      	3	; to 8
+	5	[-]	GETGLOBAL	5 -3	; PreloadCharacter
+	6	[-]	MOVE     	6 4
+	7	[-]	CALL     	5 2 1
+	8	[-]	TFORLOOP 	0 2
+	9	[-]	JMP      	-5	; to 5
+	10	[-]	LOADK    	0 -4	; 1
+	11	[-]	GETGLOBAL	1 -5	; NUMBER_OF_CAMPS
+	12	[-]	LOADK    	2 -4	; 1
+	13	[-]	FORPREP  	0 89	; to 103
+	14	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	15	[-]	GETTABLE 	4 4 3
+	16	[-]	GETGLOBAL	5 -8	; CampSpawnPoints
+	17	[-]	GETTABLE 	5 5 3
+	18	[-]	SETTABLE 	4 -7 5	; "Positions" -
+	19	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	20	[-]	GETTABLE 	4 4 3
+	21	[-]	GETGLOBAL	5 -10	; CampFacePoints
+	22	[-]	GETTABLE 	5 5 3
+	23	[-]	SETTABLE 	4 -9 5	; "FacePositions" -
+	24	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	25	[-]	GETTABLE 	4 4 3
+	26	[-]	NEWTABLE 	5 0 0
+	27	[-]	SETTABLE 	4 -11 5	; "UniqueNames" -
+	28	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	29	[-]	GETTABLE 	4 4 3
+	30	[-]	NEWTABLE 	5 0 0
+	31	[-]	SETTABLE 	4 -12 5	; "AliveTracker" -
+	32	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	33	[-]	GETTABLE 	4 4 3
+	34	[-]	GETGLOBAL	5 -14	; TEAM_NEUTRAL
+	35	[-]	SETTABLE 	4 -13 5	; "Team" -
+	36	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	37	[-]	GETTABLE 	4 4 3
+	38	[-]	SETTABLE 	4 -15 -16	; "DamageBonus" 0
+	39	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	40	[-]	GETTABLE 	4 4 3
+	41	[-]	SETTABLE 	4 -17 -16	; "HealthBonus" 0
+	42	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	43	[-]	GETTABLE 	4 4 3
+	44	[-]	GETGLOBAL	5 -19	; INACTIVE
+	45	[-]	SETTABLE 	4 -18 5	; "AIState" -
+	46	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	47	[-]	GETTABLE 	4 4 3
+	48	[-]	SETTABLE 	4 -20 -21	; "GroupsRespawnTime" 50
+	49	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	50	[-]	GETTABLE 	4 4 3
+	51	[-]	SETTABLE 	4 -22 -4	; "CampLevel" 1
+	52	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	53	[-]	GETTABLE 	4 4 3
+	54	[-]	SETTABLE 	4 -23 -24	; "TimerType" ""
+	55	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	56	[-]	GETTABLE 	4 4 3
+	57	[-]	SETTABLE 	4 -25 -26	; "MaxRespawn" -1
+	58	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	59	[-]	GETTABLE 	4 4 3
+	60	[-]	SETTABLE 	4 -27 -16	; "SpawnCount" 0
+	61	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	62	[-]	GETTABLE 	4 4 3
+	63	[-]	SETTABLE 	4 -28 -29	; "UseSummonerScript" false
+	64	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	65	[-]	GETTABLE 	4 4 3
+	66	[-]	SETTABLE 	4 -30 -16	; "SpawnDuration" 0
+	67	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	68	[-]	GETTABLE 	4 4 3
+	69	[-]	SETTABLE 	4 -31 -32	; "MinimapIcon" "LesserCamp"
+	70	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	71	[-]	GETTABLE 	4 4 3
+	72	[-]	SETTABLE 	4 -33 -34	; "LeashRadius" 800
+	73	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	74	[-]	GETTABLE 	4 4 3
+	75	[-]	SETTABLE 	4 -35 -36	; "StopSpawnTime" 25000
+	76	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	77	[-]	GETTABLE 	4 4 3
+	78	[-]	GETGLOBAL	5 -8	; CampSpawnPoints
+	79	[-]	GETTABLE 	5 5 3
+	80	[-]	GETTABLE 	5 5 -4	; 1
+	81	[-]	SETTABLE 	4 -37 5	; "LeashCenter" -
+	82	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	83	[-]	GETTABLE 	4 4 3
+	84	[-]	GETGLOBAL	5 -8	; CampSpawnPoints
+	85	[-]	GETTABLE 	5 5 3
+	86	[-]	GETTABLE 	5 5 -4	; 1
+	87	[-]	SETTABLE 	4 -38 5	; "VisualCenter" -
+	88	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	89	[-]	GETTABLE 	4 4 3
+	90	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	91	[-]	GETTABLE 	5 5 3
+	92	[-]	GETTABLE 	5 5 -38	; "VisualCenter"
+	93	[-]	SETTABLE 	4 -39 5	; "MinimapPosition" -
+	94	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	95	[-]	GETTABLE 	4 4 3
+	96	[-]	GETGLOBAL	5 -10	; CampFacePoints
+	97	[-]	GETTABLE 	5 5 3
+	98	[-]	GETTABLE 	5 5 -4	; 1
+	99	[-]	SETTABLE 	4 -40 5	; "VisualFacing" -
+	100	[-]	GETGLOBAL	4 -6	; NeutralMinionCamps
+	101	[-]	GETTABLE 	4 4 3
+	102	[-]	SETTABLE 	4 -41 -29	; "UpdateCampIconOnSpawn" false
+	103	[-]	FORLOOP  	0 -90	; to 14
+	104	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	105	[-]	GETTABLE 	0 0 -4	; 1
+	106	[-]	SETTABLE 	0 -42 -43	; "Name" "Order Blue"
+	107	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	108	[-]	GETTABLE 	0 0 -4	; 1
+	109	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	110	[-]	GETTABLE 	1 1 -4	; 1
+	111	[-]	GETTABLE 	1 1 -42	; "Name"
+	112	[-]	SETTABLE 	0 -23 1	; "TimerType" -
+	113	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	114	[-]	GETTABLE 	0 0 -4	; 1
+	115	[-]	NEWTABLE 	1 1 0
+	116	[-]	GETGLOBAL	2 -45	; PredefinedCamps
+	117	[-]	GETGLOBAL	3 -46	; CAMPTYPE_BLUEBUFF
+	118	[-]	GETTABLE 	2 2 3
+	119	[-]	SETLIST  	1 1 1	; 1
+	120	[-]	SETTABLE 	0 -44 1	; "Groups" -
+	121	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	122	[-]	GETTABLE 	0 0 -4	; 1
+	123	[-]	NEWTABLE 	1 1 0
+	124	[-]	LOADK    	2 -48	; 100
+	125	[-]	SETLIST  	1 1 1	; 1
+	126	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	127	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	128	[-]	GETTABLE 	0 0 -4	; 1
+	129	[-]	SETTABLE 	0 -20 -49	; "GroupsRespawnTime" 150
+	130	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	131	[-]	GETTABLE 	0 0 -4	; 1
+	132	[-]	GETGLOBAL	1 -51	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	133	[-]	SETTABLE 	0 -50 1	; "GroupDelaySpawnTime" -
+	134	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	135	[-]	GETTABLE 	0 0 -4	; 1
+	136	[-]	GETGLOBAL	1 -53	; TEAM_ORDER
+	137	[-]	SETTABLE 	0 -52 1	; "GroupBuffSide" -
+	138	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	139	[-]	GETTABLE 	0 0 -4	; 1
+	140	[-]	SETTABLE 	0 -30 -54	; "SpawnDuration" 1.1
+	141	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	142	[-]	GETTABLE 	0 0 -4	; 1
+	143	[-]	SETTABLE 	0 -31 -55	; "MinimapIcon" "Camp"
+	144	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	145	[-]	GETTABLE 	0 0 -4	; 1
+	146	[-]	SETTABLE 	0 -33 -56	; "LeashRadius" 1000
+	147	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	148	[-]	GETTABLE 	0 0 -4	; 1
+	149	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	150	[-]	LOADK    	2 -58	; 3530.51
+	151	[-]	LOADK    	3 -59	; 51.26
+	152	[-]	LOADK    	4 -60	; 8148.19
+	153	[-]	CALL     	1 4 2
+	154	[-]	SETTABLE 	0 -40 1	; "VisualFacing" -
+	155	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	156	[-]	GETTABLE 	0 0 -61	; 2
+	157	[-]	SETTABLE 	0 -42 -62	; "Name" "Order Wolves"
+	158	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	159	[-]	GETTABLE 	0 0 -61	; 2
+	160	[-]	NEWTABLE 	1 1 0
+	161	[-]	GETGLOBAL	2 -45	; PredefinedCamps
+	162	[-]	GETGLOBAL	3 -63	; CAMPTYPE_WOLVES
+	163	[-]	GETTABLE 	2 2 3
+	164	[-]	SETLIST  	1 1 1	; 1
+	165	[-]	SETTABLE 	0 -44 1	; "Groups" -
+	166	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	167	[-]	GETTABLE 	0 0 -61	; 2
+	168	[-]	NEWTABLE 	1 1 0
+	169	[-]	LOADK    	2 -48	; 100
+	170	[-]	SETLIST  	1 1 1	; 1
+	171	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	172	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	173	[-]	GETTABLE 	0 0 -61	; 2
+	174	[-]	GETGLOBAL	1 -51	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	175	[-]	SETTABLE 	0 -50 1	; "GroupDelaySpawnTime" -
+	176	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	177	[-]	GETTABLE 	0 0 -61	; 2
+	178	[-]	GETGLOBAL	1 -53	; TEAM_ORDER
+	179	[-]	SETTABLE 	0 -52 1	; "GroupBuffSide" -
+	180	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	181	[-]	GETTABLE 	0 0 -61	; 2
+	182	[-]	SETTABLE 	0 -30 -64	; "SpawnDuration" 0.66
+	183	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	184	[-]	GETTABLE 	0 0 -61	; 2
+	185	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	186	[-]	LOADK    	2 -65	; 3547.62
+	187	[-]	LOADK    	3 -66	; 52.48
+	188	[-]	LOADK    	4 -67	; 6230.66
+	189	[-]	CALL     	1 4 2
+	190	[-]	SETTABLE 	0 -40 1	; "VisualFacing" -
+	191	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	192	[-]	GETTABLE 	0 0 -68	; 3
+	193	[-]	SETTABLE 	0 -42 -69	; "Name" "Order Wraiths"
+	194	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	195	[-]	GETTABLE 	0 0 -68	; 3
+	196	[-]	NEWTABLE 	1 1 0
+	197	[-]	GETGLOBAL	2 -45	; PredefinedCamps
+	198	[-]	GETGLOBAL	3 -70	; CAMPTYPE_WRAITHS
+	199	[-]	GETTABLE 	2 2 3
+	200	[-]	SETLIST  	1 1 1	; 1
+	201	[-]	SETTABLE 	0 -44 1	; "Groups" -
+	202	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	203	[-]	GETTABLE 	0 0 -68	; 3
+	204	[-]	NEWTABLE 	1 1 0
+	205	[-]	LOADK    	2 -48	; 100
+	206	[-]	SETLIST  	1 1 1	; 1
+	207	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	208	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	209	[-]	GETTABLE 	0 0 -68	; 3
+	210	[-]	GETGLOBAL	1 -51	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	211	[-]	SETTABLE 	0 -50 1	; "GroupDelaySpawnTime" -
+	212	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	213	[-]	GETTABLE 	0 0 -68	; 3
+	214	[-]	GETGLOBAL	1 -53	; TEAM_ORDER
+	215	[-]	SETTABLE 	0 -52 1	; "GroupBuffSide" -
+	216	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	217	[-]	GETTABLE 	0 0 -68	; 3
+	218	[-]	SETTABLE 	0 -30 -4	; "SpawnDuration" 1
+	219	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	220	[-]	GETTABLE 	0 0 -68	; 3
+	221	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	222	[-]	LOADK    	2 -71	; 6850
+	223	[-]	LOADK    	3 -72	; 50.27832
+	224	[-]	LOADK    	4 -73	; 5500
+	225	[-]	CALL     	1 4 2
+	226	[-]	SETTABLE 	0 -37 1	; "LeashCenter" -
+	227	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	228	[-]	GETTABLE 	0 0 -68	; 3
+	229	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	230	[-]	LOADK    	2 -74	; 6969
+	231	[-]	LOADK    	3 -75	; 52
+	232	[-]	LOADK    	4 -76	; 5422
+	233	[-]	CALL     	1 4 2
+	234	[-]	SETTABLE 	0 -38 1	; "VisualCenter" -
+	235	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	236	[-]	GETTABLE 	0 0 -68	; 3
+	237	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	238	[-]	LOADK    	2 -77	; 7087.67
+	239	[-]	LOADK    	3 -78	; 48.53
+	240	[-]	LOADK    	4 -79	; 5010.43
+	241	[-]	CALL     	1 4 2
+	242	[-]	SETTABLE 	0 -40 1	; "VisualFacing" -
+	243	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	244	[-]	GETTABLE 	0 0 -80	; 4
+	245	[-]	SETTABLE 	0 -42 -81	; "Name" "Order Red"
+	246	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	247	[-]	GETTABLE 	0 0 -80	; 4
+	248	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	249	[-]	GETTABLE 	1 1 -80	; 4
+	250	[-]	GETTABLE 	1 1 -42	; "Name"
+	251	[-]	SETTABLE 	0 -23 1	; "TimerType" -
+	252	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	253	[-]	GETTABLE 	0 0 -80	; 4
+	254	[-]	NEWTABLE 	1 1 0
+	255	[-]	GETGLOBAL	2 -45	; PredefinedCamps
+	256	[-]	GETGLOBAL	3 -82	; CAMPTYPE_REDBUFF
+	257	[-]	GETTABLE 	2 2 3
+	258	[-]	SETLIST  	1 1 1	; 1
+	259	[-]	SETTABLE 	0 -44 1	; "Groups" -
+	260	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	261	[-]	GETTABLE 	0 0 -80	; 4
+	262	[-]	NEWTABLE 	1 1 0
+	263	[-]	LOADK    	2 -48	; 100
+	264	[-]	SETLIST  	1 1 1	; 1
+	265	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	266	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	267	[-]	GETTABLE 	0 0 -80	; 4
+	268	[-]	SETTABLE 	0 -20 -49	; "GroupsRespawnTime" 150
+	269	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	270	[-]	GETTABLE 	0 0 -80	; 4
+	271	[-]	GETGLOBAL	1 -51	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	272	[-]	SETTABLE 	0 -50 1	; "GroupDelaySpawnTime" -
+	273	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	274	[-]	GETTABLE 	0 0 -80	; 4
+	275	[-]	GETGLOBAL	1 -53	; TEAM_ORDER
+	276	[-]	SETTABLE 	0 -52 1	; "GroupBuffSide" -
+	277	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	278	[-]	GETTABLE 	0 0 -80	; 4
+	279	[-]	SETTABLE 	0 -30 -83	; "SpawnDuration" 1.66
+	280	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	281	[-]	GETTABLE 	0 0 -80	; 4
+	282	[-]	SETTABLE 	0 -31 -55	; "MinimapIcon" "Camp"
+	283	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	284	[-]	GETTABLE 	0 0 -80	; 4
+	285	[-]	SETTABLE 	0 -33 -56	; "LeashRadius" 1000
+	286	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	287	[-]	GETTABLE 	0 0 -80	; 4
+	288	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	289	[-]	LOADK    	2 -84	; 7787
+	290	[-]	LOADK    	3 -85	; 54
+	291	[-]	LOADK    	4 -86	; 4033
+	292	[-]	CALL     	1 4 2
+	293	[-]	SETTABLE 	0 -38 1	; "VisualCenter" -
+	294	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	295	[-]	GETTABLE 	0 0 -80	; 4
+	296	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	297	[-]	LOADK    	2 -87	; 7423.74
+	298	[-]	LOADK    	3 -88	; 52.43
+	299	[-]	LOADK    	4 -89	; 3620.57
+	300	[-]	CALL     	1 4 2
+	301	[-]	SETTABLE 	0 -40 1	; "VisualFacing" -
+	302	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	303	[-]	GETTABLE 	0 0 -90	; 5
+	304	[-]	SETTABLE 	0 -42 -91	; "Name" "Order Small Golems"
+	305	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	306	[-]	GETTABLE 	0 0 -90	; 5
+	307	[-]	NEWTABLE 	1 1 0
+	308	[-]	GETGLOBAL	2 -45	; PredefinedCamps
+	309	[-]	GETGLOBAL	3 -92	; CAMPTYPE_SMALLGOLEMS
+	310	[-]	GETTABLE 	2 2 3
+	311	[-]	SETLIST  	1 1 1	; 1
+	312	[-]	SETTABLE 	0 -44 1	; "Groups" -
+	313	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	314	[-]	GETTABLE 	0 0 -90	; 5
+	315	[-]	NEWTABLE 	1 1 0
+	316	[-]	LOADK    	2 -48	; 100
+	317	[-]	SETLIST  	1 1 1	; 1
+	318	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	319	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	320	[-]	GETTABLE 	0 0 -90	; 5
+	321	[-]	GETGLOBAL	1 -51	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	322	[-]	SETTABLE 	0 -50 1	; "GroupDelaySpawnTime" -
+	323	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	324	[-]	GETTABLE 	0 0 -90	; 5
+	325	[-]	GETGLOBAL	1 -53	; TEAM_ORDER
+	326	[-]	SETTABLE 	0 -52 1	; "GroupBuffSide" -
+	327	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	328	[-]	GETTABLE 	0 0 -90	; 5
+	329	[-]	SETTABLE 	0 -30 -93	; "SpawnDuration" 0.86
+	330	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	331	[-]	GETTABLE 	0 0 -90	; 5
+	332	[-]	SETTABLE 	0 -33 -94	; "LeashRadius" 900
+	333	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	334	[-]	GETTABLE 	0 0 -90	; 5
+	335	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	336	[-]	LOADK    	2 -95	; 8390
+	337	[-]	LOADK    	3 -96	; 51
+	338	[-]	LOADK    	4 -97	; 2675
+	339	[-]	CALL     	1 4 2
+	340	[-]	SETTABLE 	0 -38 1	; "VisualCenter" -
+	341	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	342	[-]	GETTABLE 	0 0 -90	; 5
+	343	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	344	[-]	LOADK    	2 -98	; 8419.75
+	345	[-]	LOADK    	3 -99	; 51.13
+	346	[-]	LOADK    	4 -100	; 2330.28
+	347	[-]	CALL     	1 4 2
+	348	[-]	SETTABLE 	0 -40 1	; "VisualFacing" -
+	349	[-]	LOADK    	0 -102	; 6
+	350	[-]	SETGLOBAL	0 -101	; DRAGON_CAMP_INDEX
+	351	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	352	[-]	GETGLOBAL	1 -101	; DRAGON_CAMP_INDEX
+	353	[-]	GETTABLE 	0 0 1
+	354	[-]	SETTABLE 	0 -42 -103	; "Name" "Dragon"
+	355	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	356	[-]	GETGLOBAL	1 -101	; DRAGON_CAMP_INDEX
+	357	[-]	GETTABLE 	0 0 1
+	358	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	359	[-]	GETGLOBAL	2 -101	; DRAGON_CAMP_INDEX
+	360	[-]	GETTABLE 	1 1 2
+	361	[-]	GETTABLE 	1 1 -42	; "Name"
+	362	[-]	SETTABLE 	0 -23 1	; "TimerType" -
+	363	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	364	[-]	GETGLOBAL	1 -101	; DRAGON_CAMP_INDEX
+	365	[-]	GETTABLE 	0 0 1
+	366	[-]	NEWTABLE 	1 5 0
+	367	[-]	GETGLOBAL	2 -45	; PredefinedCamps
+	368	[-]	GETGLOBAL	3 -104	; CAMPTYPE_SRU_DRAGON_AIR
+	369	[-]	GETTABLE 	2 2 3
+	370	[-]	GETGLOBAL	3 -45	; PredefinedCamps
+	371	[-]	GETGLOBAL	4 -105	; CAMPTYPE_SRU_DRAGON_FIRE
+	372	[-]	GETTABLE 	3 3 4
+	373	[-]	GETGLOBAL	4 -45	; PredefinedCamps
+	374	[-]	GETGLOBAL	5 -106	; CAMPTYPE_SRU_DRAGON_WATER
+	375	[-]	GETTABLE 	4 4 5
+	376	[-]	GETGLOBAL	5 -45	; PredefinedCamps
+	377	[-]	GETGLOBAL	6 -107	; CAMPTYPE_SRU_DRAGON_EARTH
+	378	[-]	GETTABLE 	5 5 6
+	379	[-]	GETGLOBAL	6 -45	; PredefinedCamps
+	380	[-]	GETGLOBAL	7 -108	; CAMPTYPE_SRU_DRAGON_ELDER
+	381	[-]	GETTABLE 	6 6 7
+	382	[-]	SETLIST  	1 5 1	; 1
+	383	[-]	SETTABLE 	0 -44 1	; "Groups" -
+	384	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	385	[-]	GETGLOBAL	1 -101	; DRAGON_CAMP_INDEX
+	386	[-]	GETTABLE 	0 0 1
+	387	[-]	NEWTABLE 	1 5 0
+	388	[-]	LOADK    	2 -109	; 25
+	389	[-]	LOADK    	3 -109	; 25
+	390	[-]	LOADK    	4 -109	; 25
+	391	[-]	LOADK    	5 -109	; 25
+	392	[-]	LOADK    	6 -16	; 0
+	393	[-]	SETLIST  	1 5 1	; 1
+	394	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	395	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	396	[-]	GETGLOBAL	1 -101	; DRAGON_CAMP_INDEX
+	397	[-]	GETTABLE 	0 0 1
+	398	[-]	SETTABLE 	0 -20 -110	; "GroupsRespawnTime" 180
+	399	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	400	[-]	GETGLOBAL	1 -101	; DRAGON_CAMP_INDEX
+	401	[-]	GETTABLE 	0 0 1
+	402	[-]	GETGLOBAL	1 -51	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	403	[-]	GETGLOBAL	2 -111	; START_OF_GAME_ADDITIONAL_DELAY_DRAGON
+	404	[-]	ADD      	1 1 2
+	405	[-]	SETTABLE 	0 -50 1	; "GroupDelaySpawnTime" -
+	406	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	407	[-]	GETGLOBAL	1 -101	; DRAGON_CAMP_INDEX
+	408	[-]	GETTABLE 	0 0 1
+	409	[-]	SETTABLE 	0 -112 -113	; "RevealEvent" "VO_INTERACTIVE_REVEAL_ENEMY_DRAGON_KILL"
+	410	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	411	[-]	GETGLOBAL	1 -101	; DRAGON_CAMP_INDEX
+	412	[-]	GETTABLE 	0 0 1
+	413	[-]	GETGLOBAL	1 -115	; PredefinedCampKillEvents
+	414	[-]	GETGLOBAL	2 -116	; CAMPTYPE_DRAGON
+	415	[-]	GETTABLE 	1 1 2
+	416	[-]	SETTABLE 	0 -114 1	; "KillEvents" -
+	417	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	418	[-]	GETGLOBAL	1 -101	; DRAGON_CAMP_INDEX
+	419	[-]	GETTABLE 	0 0 1
+	420	[-]	GETGLOBAL	1 -118	; PredefinedCampKillEventsForSpectator
+	421	[-]	GETGLOBAL	2 -116	; CAMPTYPE_DRAGON
+	422	[-]	GETTABLE 	1 1 2
+	423	[-]	SETTABLE 	0 -117 1	; "SpectatorKillEvents" -
+	424	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	425	[-]	GETGLOBAL	1 -101	; DRAGON_CAMP_INDEX
+	426	[-]	GETTABLE 	0 0 1
+	427	[-]	SETTABLE 	0 -30 -119	; "SpawnDuration" 6.5
+	428	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	429	[-]	GETGLOBAL	1 -101	; DRAGON_CAMP_INDEX
+	430	[-]	GETTABLE 	0 0 1
+	431	[-]	SETTABLE 	0 -28 -120	; "UseSummonerScript" true
+	432	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	433	[-]	GETGLOBAL	1 -101	; DRAGON_CAMP_INDEX
+	434	[-]	GETTABLE 	0 0 1
+	435	[-]	SETTABLE 	0 -31 -103	; "MinimapIcon" "Dragon"
+	436	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	437	[-]	GETGLOBAL	1 -101	; DRAGON_CAMP_INDEX
+	438	[-]	GETTABLE 	0 0 1
+	439	[-]	SETTABLE 	0 -121 -120	; "EmptyVisibilityToAll" true
+	440	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	441	[-]	GETGLOBAL	1 -101	; DRAGON_CAMP_INDEX
+	442	[-]	GETTABLE 	0 0 1
+	443	[-]	SETTABLE 	0 -41 -120	; "UpdateCampIconOnSpawn" true
+	444	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	445	[-]	GETTABLE 	0 0 -122	; 7
+	446	[-]	SETTABLE 	0 -42 -123	; "Name" "Chaos Blue"
+	447	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	448	[-]	GETTABLE 	0 0 -122	; 7
+	449	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	450	[-]	GETTABLE 	1 1 -122	; 7
+	451	[-]	GETTABLE 	1 1 -42	; "Name"
+	452	[-]	SETTABLE 	0 -23 1	; "TimerType" -
+	453	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	454	[-]	GETTABLE 	0 0 -122	; 7
+	455	[-]	NEWTABLE 	1 1 0
+	456	[-]	GETGLOBAL	2 -45	; PredefinedCamps
+	457	[-]	GETGLOBAL	3 -46	; CAMPTYPE_BLUEBUFF
+	458	[-]	GETTABLE 	2 2 3
+	459	[-]	SETLIST  	1 1 1	; 1
+	460	[-]	SETTABLE 	0 -44 1	; "Groups" -
+	461	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	462	[-]	GETTABLE 	0 0 -122	; 7
+	463	[-]	NEWTABLE 	1 1 0
+	464	[-]	LOADK    	2 -16	; 0
+	465	[-]	SETLIST  	1 1 1	; 1
+	466	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	467	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	468	[-]	GETTABLE 	0 0 -122	; 7
+	469	[-]	SETTABLE 	0 -20 -124	; "GroupsRespawnTime" 300
+	470	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	471	[-]	GETTABLE 	0 0 -122	; 7
+	472	[-]	GETGLOBAL	1 -51	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	473	[-]	SETTABLE 	0 -50 1	; "GroupDelaySpawnTime" -
+	474	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	475	[-]	GETTABLE 	0 0 -122	; 7
+	476	[-]	GETGLOBAL	1 -125	; TEAM_CHAOS
+	477	[-]	SETTABLE 	0 -52 1	; "GroupBuffSide" -
+	478	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	479	[-]	GETTABLE 	0 0 -122	; 7
+	480	[-]	SETTABLE 	0 -30 -54	; "SpawnDuration" 1.1
+	481	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	482	[-]	GETTABLE 	0 0 -122	; 7
+	483	[-]	SETTABLE 	0 -31 -55	; "MinimapIcon" "Camp"
+	484	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	485	[-]	GETTABLE 	0 0 -122	; 7
+	486	[-]	SETTABLE 	0 -33 -56	; "LeashRadius" 1000
+	487	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	488	[-]	GETTABLE 	0 0 -122	; 7
+	489	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	490	[-]	LOADK    	2 -126	; 11286.25
+	491	[-]	LOADK    	3 -127	; 51.71
+	492	[-]	LOADK    	4 -128	; 6837.92
+	493	[-]	CALL     	1 4 2
+	494	[-]	SETTABLE 	0 -40 1	; "VisualFacing" -
+	495	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	496	[-]	GETTABLE 	0 0 -129	; 8
+	497	[-]	SETTABLE 	0 -42 -130	; "Name" "Chaos Wolves"
+	498	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	499	[-]	GETTABLE 	0 0 -129	; 8
+	500	[-]	NEWTABLE 	1 1 0
+	501	[-]	GETGLOBAL	2 -45	; PredefinedCamps
+	502	[-]	GETGLOBAL	3 -131	; CAMPTYPE_WOLVES2
+	503	[-]	GETTABLE 	2 2 3
+	504	[-]	SETLIST  	1 1 1	; 1
+	505	[-]	SETTABLE 	0 -44 1	; "Groups" -
+	506	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	507	[-]	GETTABLE 	0 0 -129	; 8
+	508	[-]	NEWTABLE 	1 1 0
+	509	[-]	LOADK    	2 -16	; 0
+	510	[-]	SETLIST  	1 1 1	; 1
+	511	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	512	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	513	[-]	GETTABLE 	0 0 -129	; 8
+	514	[-]	SETTABLE 	0 -50 -48	; "GroupDelaySpawnTime" 100
+	515	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	516	[-]	GETTABLE 	0 0 -129	; 8
+	517	[-]	GETGLOBAL	1 -51	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	518	[-]	SETTABLE 	0 -50 1	; "GroupDelaySpawnTime" -
+	519	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	520	[-]	GETTABLE 	0 0 -129	; 8
+	521	[-]	GETGLOBAL	1 -125	; TEAM_CHAOS
+	522	[-]	SETTABLE 	0 -52 1	; "GroupBuffSide" -
+	523	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	524	[-]	GETTABLE 	0 0 -129	; 8
+	525	[-]	SETTABLE 	0 -30 -64	; "SpawnDuration" 0.66
+	526	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	527	[-]	GETTABLE 	0 0 -129	; 8
+	528	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	529	[-]	LOADK    	2 -132	; 11216.68
+	530	[-]	LOADK    	3 -133	; 62.15
+	531	[-]	LOADK    	4 -134	; 8629.35
+	532	[-]	CALL     	1 4 2
+	533	[-]	SETTABLE 	0 -40 1	; "VisualFacing" -
+	534	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	535	[-]	GETTABLE 	0 0 -135	; 9
+	536	[-]	SETTABLE 	0 -42 -136	; "Name" "Chaos Wraiths"
+	537	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	538	[-]	GETTABLE 	0 0 -135	; 9
+	539	[-]	NEWTABLE 	1 1 0
+	540	[-]	GETGLOBAL	2 -45	; PredefinedCamps
+	541	[-]	GETGLOBAL	3 -137	; CAMPTYPE_WRAITHS2
+	542	[-]	GETTABLE 	2 2 3
+	543	[-]	SETLIST  	1 1 1	; 1
+	544	[-]	SETTABLE 	0 -44 1	; "Groups" -
+	545	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	546	[-]	GETTABLE 	0 0 -135	; 9
+	547	[-]	NEWTABLE 	1 1 0
+	548	[-]	LOADK    	2 -16	; 0
+	549	[-]	SETLIST  	1 1 1	; 1
+	550	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	551	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	552	[-]	GETTABLE 	0 0 -135	; 9
+	553	[-]	SETTABLE 	0 -50 -48	; "GroupDelaySpawnTime" 100
+	554	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	555	[-]	GETTABLE 	0 0 -135	; 9
+	556	[-]	GETGLOBAL	1 -51	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	557	[-]	SETTABLE 	0 -50 1	; "GroupDelaySpawnTime" -
+	558	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	559	[-]	GETTABLE 	0 0 -135	; 9
+	560	[-]	GETGLOBAL	1 -125	; TEAM_CHAOS
+	561	[-]	SETTABLE 	0 -52 1	; "GroupBuffSide" -
+	562	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	563	[-]	GETTABLE 	0 0 -135	; 9
+	564	[-]	SETTABLE 	0 -30 -138	; "SpawnDuration" 0.67
+	565	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	566	[-]	GETTABLE 	0 0 -135	; 9
+	567	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	568	[-]	LOADK    	2 -139	; 7861
+	569	[-]	LOADK    	3 -75	; 52
+	570	[-]	LOADK    	4 -140	; 9475
+	571	[-]	CALL     	1 4 2
+	572	[-]	SETTABLE 	0 -38 1	; "VisualCenter" -
+	573	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	574	[-]	GETTABLE 	0 0 -135	; 9
+	575	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	576	[-]	LOADK    	2 -141	; 7777.46
+	577	[-]	LOADK    	3 -142	; 51.28
+	578	[-]	LOADK    	4 -143	; 10007.6
+	579	[-]	CALL     	1 4 2
+	580	[-]	SETTABLE 	0 -40 1	; "VisualFacing" -
+	581	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	582	[-]	GETTABLE 	0 0 -144	; 10
+	583	[-]	SETTABLE 	0 -42 -145	; "Name" "Chaos Red"
+	584	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	585	[-]	GETTABLE 	0 0 -144	; 10
+	586	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	587	[-]	GETTABLE 	1 1 -144	; 10
+	588	[-]	GETTABLE 	1 1 -42	; "Name"
+	589	[-]	SETTABLE 	0 -23 1	; "TimerType" -
+	590	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	591	[-]	GETTABLE 	0 0 -144	; 10
+	592	[-]	NEWTABLE 	1 1 0
+	593	[-]	GETGLOBAL	2 -45	; PredefinedCamps
+	594	[-]	GETGLOBAL	3 -82	; CAMPTYPE_REDBUFF
+	595	[-]	GETTABLE 	2 2 3
+	596	[-]	SETLIST  	1 1 1	; 1
+	597	[-]	SETTABLE 	0 -44 1	; "Groups" -
+	598	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	599	[-]	GETTABLE 	0 0 -144	; 10
+	600	[-]	NEWTABLE 	1 1 0
+	601	[-]	LOADK    	2 -16	; 0
+	602	[-]	SETLIST  	1 1 1	; 1
+	603	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	604	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	605	[-]	GETTABLE 	0 0 -144	; 10
+	606	[-]	SETTABLE 	0 -20 -124	; "GroupsRespawnTime" 300
+	607	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	608	[-]	GETTABLE 	0 0 -144	; 10
+	609	[-]	GETGLOBAL	1 -51	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	610	[-]	SETTABLE 	0 -50 1	; "GroupDelaySpawnTime" -
+	611	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	612	[-]	GETTABLE 	0 0 -144	; 10
+	613	[-]	GETGLOBAL	1 -125	; TEAM_CHAOS
+	614	[-]	SETTABLE 	0 -52 1	; "GroupBuffSide" -
+	615	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	616	[-]	GETTABLE 	0 0 -144	; 10
+	617	[-]	SETTABLE 	0 -30 -83	; "SpawnDuration" 1.66
+	618	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	619	[-]	GETTABLE 	0 0 -144	; 10
+	620	[-]	SETTABLE 	0 -31 -55	; "MinimapIcon" "Camp"
+	621	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	622	[-]	GETTABLE 	0 0 -144	; 10
+	623	[-]	SETTABLE 	0 -33 -56	; "LeashRadius" 1000
+	624	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	625	[-]	GETTABLE 	0 0 -144	; 10
+	626	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	627	[-]	LOADK    	2 -146	; 7118
+	628	[-]	LOADK    	3 -147	; 56
+	629	[-]	LOADK    	4 -148	; 10887
+	630	[-]	CALL     	1 4 2
+	631	[-]	SETTABLE 	0 -38 1	; "VisualCenter" -
+	632	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	633	[-]	GETTABLE 	0 0 -144	; 10
+	634	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	635	[-]	LOADK    	2 -149	; 7326.75
+	636	[-]	LOADK    	3 -150	; 54.44
+	637	[-]	LOADK    	4 -151	; 11174.21
+	638	[-]	CALL     	1 4 2
+	639	[-]	SETTABLE 	0 -40 1	; "VisualFacing" -
+	640	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	641	[-]	GETTABLE 	0 0 -152	; 11
+	642	[-]	SETTABLE 	0 -42 -153	; "Name" "Chaos Small Golems"
+	643	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	644	[-]	GETTABLE 	0 0 -152	; 11
+	645	[-]	NEWTABLE 	1 1 0
+	646	[-]	GETGLOBAL	2 -45	; PredefinedCamps
+	647	[-]	GETGLOBAL	3 -154	; CAMPTYPE_SMALLGOLEMS2
+	648	[-]	GETTABLE 	2 2 3
+	649	[-]	SETLIST  	1 1 1	; 1
+	650	[-]	SETTABLE 	0 -44 1	; "Groups" -
+	651	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	652	[-]	GETTABLE 	0 0 -152	; 11
+	653	[-]	NEWTABLE 	1 1 0
+	654	[-]	LOADK    	2 -16	; 0
+	655	[-]	SETLIST  	1 1 1	; 1
+	656	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	657	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	658	[-]	GETTABLE 	0 0 -152	; 11
+	659	[-]	SETTABLE 	0 -20 -48	; "GroupsRespawnTime" 100
+	660	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	661	[-]	GETTABLE 	0 0 -152	; 11
+	662	[-]	GETGLOBAL	1 -51	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	663	[-]	SETTABLE 	0 -50 1	; "GroupDelaySpawnTime" -
+	664	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	665	[-]	GETTABLE 	0 0 -152	; 11
+	666	[-]	GETGLOBAL	1 -125	; TEAM_CHAOS
+	667	[-]	SETTABLE 	0 -52 1	; "GroupBuffSide" -
+	668	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	669	[-]	GETTABLE 	0 0 -152	; 11
+	670	[-]	SETTABLE 	0 -30 -93	; "SpawnDuration" 0.86
+	671	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	672	[-]	GETTABLE 	0 0 -152	; 11
+	673	[-]	SETTABLE 	0 -33 -94	; "LeashRadius" 900
+	674	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	675	[-]	GETTABLE 	0 0 -152	; 11
+	676	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	677	[-]	LOADK    	2 -155	; 6449
+	678	[-]	LOADK    	3 -147	; 56
+	679	[-]	LOADK    	4 -156	; 12199
+	680	[-]	CALL     	1 4 2
+	681	[-]	SETTABLE 	0 -38 1	; "VisualCenter" -
+	682	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	683	[-]	GETTABLE 	0 0 -152	; 11
+	684	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	685	[-]	LOADK    	2 -157	; 6415.14
+	686	[-]	LOADK    	3 -158	; 55.56
+	687	[-]	LOADK    	4 -159	; 12520.02
+	688	[-]	CALL     	1 4 2
+	689	[-]	SETTABLE 	0 -40 1	; "VisualFacing" -
+	690	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	691	[-]	GETTABLE 	0 0 -160	; 12
+	692	[-]	SETTABLE 	0 -42 -161	; "Name" "Baron"
+	693	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	694	[-]	GETTABLE 	0 0 -160	; 12
+	695	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	696	[-]	GETTABLE 	1 1 -160	; 12
+	697	[-]	GETTABLE 	1 1 -42	; "Name"
+	698	[-]	SETTABLE 	0 -23 1	; "TimerType" -
+	699	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	700	[-]	GETTABLE 	0 0 -160	; 12
+	701	[-]	NEWTABLE 	1 1 0
+	702	[-]	GETGLOBAL	2 -45	; PredefinedCamps
+	703	[-]	GETGLOBAL	3 -162	; CAMPTYPE_NASHOR
+	704	[-]	GETTABLE 	2 2 3
+	705	[-]	SETLIST  	1 1 1	; 1
+	706	[-]	SETTABLE 	0 -44 1	; "Groups" -
+	707	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	708	[-]	GETTABLE 	0 0 -160	; 12
+	709	[-]	NEWTABLE 	1 1 0
+	710	[-]	LOADK    	2 -48	; 100
+	711	[-]	SETLIST  	1 1 1	; 1
+	712	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	713	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	714	[-]	GETTABLE 	0 0 -160	; 12
+	715	[-]	SETTABLE 	0 -20 -163	; "GroupsRespawnTime" 420
+	716	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	717	[-]	GETTABLE 	0 0 -160	; 12
+	718	[-]	GETGLOBAL	1 -51	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	719	[-]	GETGLOBAL	2 -164	; START_OF_GAME_ADDITIONAL_DELAY_BARON
+	720	[-]	ADD      	1 1 2
+	721	[-]	SETTABLE 	0 -50 1	; "GroupDelaySpawnTime" -
+	722	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	723	[-]	GETTABLE 	0 0 -160	; 12
+	724	[-]	SETTABLE 	0 -22 -61	; "CampLevel" 2
+	725	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	726	[-]	GETTABLE 	0 0 -160	; 12
+	727	[-]	SETTABLE 	0 -112 -165	; "RevealEvent" "VO_INTERACTIVE_REVEAL_ENEMY_NASHOR_KILL"
+	728	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	729	[-]	GETTABLE 	0 0 -160	; 12
+	730	[-]	GETGLOBAL	1 -115	; PredefinedCampKillEvents
+	731	[-]	GETGLOBAL	2 -162	; CAMPTYPE_NASHOR
+	732	[-]	GETTABLE 	1 1 2
+	733	[-]	SETTABLE 	0 -114 1	; "KillEvents" -
+	734	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	735	[-]	GETTABLE 	0 0 -160	; 12
+	736	[-]	GETGLOBAL	1 -118	; PredefinedCampKillEventsForSpectator
+	737	[-]	GETGLOBAL	2 -162	; CAMPTYPE_NASHOR
+	738	[-]	GETTABLE 	1 1 2
+	739	[-]	SETTABLE 	0 -117 1	; "SpectatorKillEvents" -
+	740	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	741	[-]	GETTABLE 	0 0 -160	; 12
+	742	[-]	SETTABLE 	0 -30 -166	; "SpawnDuration" 8.5
+	743	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	744	[-]	GETTABLE 	0 0 -160	; 12
+	745	[-]	SETTABLE 	0 -28 -120	; "UseSummonerScript" true
+	746	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	747	[-]	GETTABLE 	0 0 -160	; 12
+	748	[-]	SETTABLE 	0 -121 -120	; "EmptyVisibilityToAll" true
+	749	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	750	[-]	GETTABLE 	0 0 -160	; 12
+	751	[-]	SETTABLE 	0 -31 -161	; "MinimapIcon" "Baron"
+	752	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	753	[-]	GETTABLE 	0 0 -167	; 13
+	754	[-]	SETTABLE 	0 -42 -168	; "Name" "Order OwlBear"
+	755	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	756	[-]	GETTABLE 	0 0 -167	; 13
+	757	[-]	NEWTABLE 	1 1 0
+	758	[-]	GETGLOBAL	2 -45	; PredefinedCamps
+	759	[-]	GETGLOBAL	3 -169	; CAMPTYPE_OWLBEAR
+	760	[-]	GETTABLE 	2 2 3
+	761	[-]	SETLIST  	1 1 1	; 1
+	762	[-]	SETTABLE 	0 -44 1	; "Groups" -
+	763	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	764	[-]	GETTABLE 	0 0 -167	; 13
+	765	[-]	NEWTABLE 	1 1 0
+	766	[-]	LOADK    	2 -48	; 100
+	767	[-]	SETLIST  	1 1 1	; 1
+	768	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	769	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	770	[-]	GETTABLE 	0 0 -167	; 13
+	771	[-]	SETTABLE 	0 -50 -48	; "GroupDelaySpawnTime" 100
+	772	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	773	[-]	GETTABLE 	0 0 -167	; 13
+	774	[-]	GETGLOBAL	1 -51	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	775	[-]	SETTABLE 	0 -50 1	; "GroupDelaySpawnTime" -
+	776	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	777	[-]	GETTABLE 	0 0 -167	; 13
+	778	[-]	GETGLOBAL	1 -53	; TEAM_ORDER
+	779	[-]	SETTABLE 	0 -52 1	; "GroupBuffSide" -
+	780	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	781	[-]	GETTABLE 	0 0 -167	; 13
+	782	[-]	SETTABLE 	0 -30 -170	; "SpawnDuration" 3.2
+	783	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	784	[-]	GETTABLE 	0 0 -167	; 13
+	785	[-]	SETTABLE 	0 -33 -171	; "LeashRadius" 700
+	786	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	787	[-]	GETTABLE 	0 0 -167	; 13
+	788	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	789	[-]	LOADK    	2 -172	; 2223
+	790	[-]	LOADK    	3 -173	; 51.78
+	791	[-]	LOADK    	4 -174	; 8504.61
+	792	[-]	CALL     	1 4 2
+	793	[-]	SETTABLE 	0 -38 1	; "VisualCenter" -
+	794	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	795	[-]	GETTABLE 	0 0 -167	; 13
+	796	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	797	[-]	LOADK    	2 -175	; 2457.61
+	798	[-]	LOADK    	3 -173	; 51.78
+	799	[-]	LOADK    	4 -176	; 8494.14
+	800	[-]	CALL     	1 4 2
+	801	[-]	SETTABLE 	0 -40 1	; "VisualFacing" -
+	802	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	803	[-]	GETTABLE 	0 0 -177	; 14
+	804	[-]	SETTABLE 	0 -42 -178	; "Name" "Chaos OwlBear"
+	805	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	806	[-]	GETTABLE 	0 0 -177	; 14
+	807	[-]	NEWTABLE 	1 1 0
+	808	[-]	GETGLOBAL	2 -45	; PredefinedCamps
+	809	[-]	GETGLOBAL	3 -169	; CAMPTYPE_OWLBEAR
+	810	[-]	GETTABLE 	2 2 3
+	811	[-]	SETLIST  	1 1 1	; 1
+	812	[-]	SETTABLE 	0 -44 1	; "Groups" -
+	813	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	814	[-]	GETTABLE 	0 0 -177	; 14
+	815	[-]	NEWTABLE 	1 1 0
+	816	[-]	LOADK    	2 -16	; 0
+	817	[-]	SETLIST  	1 1 1	; 1
+	818	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	819	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	820	[-]	GETTABLE 	0 0 -177	; 14
+	821	[-]	SETTABLE 	0 -50 -48	; "GroupDelaySpawnTime" 100
+	822	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	823	[-]	GETTABLE 	0 0 -177	; 14
+	824	[-]	GETGLOBAL	1 -51	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	825	[-]	SETTABLE 	0 -50 1	; "GroupDelaySpawnTime" -
+	826	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	827	[-]	GETTABLE 	0 0 -177	; 14
+	828	[-]	GETGLOBAL	1 -125	; TEAM_CHAOS
+	829	[-]	SETTABLE 	0 -52 1	; "GroupBuffSide" -
+	830	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	831	[-]	GETTABLE 	0 0 -177	; 14
+	832	[-]	SETTABLE 	0 -30 -170	; "SpawnDuration" 3.2
+	833	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	834	[-]	GETTABLE 	0 0 -177	; 14
+	835	[-]	SETTABLE 	0 -33 -171	; "LeashRadius" 700
+	836	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	837	[-]	GETTABLE 	0 0 -177	; 14
+	838	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	839	[-]	LOADK    	2 -179	; 12630
+	840	[-]	LOADK    	3 -75	; 52
+	841	[-]	LOADK    	4 -180	; 6393
+	842	[-]	CALL     	1 4 2
+	843	[-]	SETTABLE 	0 -38 1	; "VisualCenter" -
+	844	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	845	[-]	GETTABLE 	0 0 -177	; 14
+	846	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	847	[-]	LOADK    	2 -181	; 12375.05
+	848	[-]	LOADK    	3 -182	; 53.57
+	849	[-]	LOADK    	4 -183	; 6312.43
+	850	[-]	CALL     	1 4 2
+	851	[-]	SETTABLE 	0 -40 1	; "VisualFacing" -
+	852	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	853	[-]	GETTABLE 	0 0 -184	; 15
+	854	[-]	SETTABLE 	0 -42 -185	; "Name" "Dragon Crab"
+	855	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	856	[-]	GETTABLE 	0 0 -184	; 15
+	857	[-]	NEWTABLE 	1 1 0
+	858	[-]	GETGLOBAL	2 -45	; PredefinedCamps
+	859	[-]	GETGLOBAL	3 -186	; CAMPTYPE_CRAB
+	860	[-]	GETTABLE 	2 2 3
+	861	[-]	SETLIST  	1 1 1	; 1
+	862	[-]	SETTABLE 	0 -44 1	; "Groups" -
+	863	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	864	[-]	GETTABLE 	0 0 -184	; 15
+	865	[-]	NEWTABLE 	1 1 0
+	866	[-]	LOADK    	2 -48	; 100
+	867	[-]	SETLIST  	1 1 1	; 1
+	868	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	869	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	870	[-]	GETTABLE 	0 0 -184	; 15
+	871	[-]	SETTABLE 	0 -20 -110	; "GroupsRespawnTime" 180
+	872	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	873	[-]	GETTABLE 	0 0 -184	; 15
+	874	[-]	GETGLOBAL	1 -51	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	875	[-]	GETGLOBAL	2 -187	; START_OF_GAME_ADDITIONAL_DELAY_CRAB
+	876	[-]	ADD      	1 1 2
+	877	[-]	SETTABLE 	0 -50 1	; "GroupDelaySpawnTime" -
+	878	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	879	[-]	GETTABLE 	0 0 -184	; 15
+	880	[-]	SETTABLE 	0 -30 -188	; "SpawnDuration" 2.2
+	881	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	882	[-]	GETTABLE 	0 0 -184	; 15
+	883	[-]	SETTABLE 	0 -189 -190	; "AIScript" "RiverCrab.lua"
+	884	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	885	[-]	GETTABLE 	0 0 -184	; 15
+	886	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	887	[-]	LOADK    	2 -191	; 10648.24
+	888	[-]	LOADK    	3 -192	; -62.81
+	889	[-]	LOADK    	4 -193	; 5329.59
+	890	[-]	CALL     	1 4 2
+	891	[-]	SETTABLE 	0 -40 1	; "VisualFacing" -
+	892	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	893	[-]	GETTABLE 	0 0 -194	; 16
+	894	[-]	SETTABLE 	0 -42 -195	; "Name" "Baron Crab"
+	895	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	896	[-]	GETTABLE 	0 0 -194	; 16
+	897	[-]	NEWTABLE 	1 1 0
+	898	[-]	GETGLOBAL	2 -45	; PredefinedCamps
+	899	[-]	GETGLOBAL	3 -186	; CAMPTYPE_CRAB
+	900	[-]	GETTABLE 	2 2 3
+	901	[-]	SETLIST  	1 1 1	; 1
+	902	[-]	SETTABLE 	0 -44 1	; "Groups" -
+	903	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	904	[-]	GETTABLE 	0 0 -194	; 16
+	905	[-]	NEWTABLE 	1 1 0
+	906	[-]	LOADK    	2 -48	; 100
+	907	[-]	SETLIST  	1 1 1	; 1
+	908	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	909	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	910	[-]	GETTABLE 	0 0 -194	; 16
+	911	[-]	SETTABLE 	0 -20 -110	; "GroupsRespawnTime" 180
+	912	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	913	[-]	GETTABLE 	0 0 -194	; 16
+	914	[-]	GETGLOBAL	1 -51	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	915	[-]	GETGLOBAL	2 -187	; START_OF_GAME_ADDITIONAL_DELAY_CRAB
+	916	[-]	ADD      	1 1 2
+	917	[-]	SETTABLE 	0 -50 1	; "GroupDelaySpawnTime" -
+	918	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	919	[-]	GETTABLE 	0 0 -194	; 16
+	920	[-]	SETTABLE 	0 -30 -188	; "SpawnDuration" 2.2
+	921	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	922	[-]	GETTABLE 	0 0 -194	; 16
+	923	[-]	SETTABLE 	0 -189 -190	; "AIScript" "RiverCrab.lua"
+	924	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	925	[-]	GETTABLE 	0 0 -194	; 16
+	926	[-]	GETGLOBAL	1 -57	; Make3DPoint
+	927	[-]	LOADK    	2 -196	; 4221.31
+	928	[-]	LOADK    	3 -197	; -66.75
+	929	[-]	LOADK    	4 -198	; 9448.4
+	930	[-]	CALL     	1 4 2
+	931	[-]	SETTABLE 	0 -40 1	; "VisualFacing" -
+	932	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	933	[-]	GETTABLE 	0 0 -199	; 17
+	934	[-]	SETTABLE 	0 -42 -200	; "Name" "SRU_RiftHerald"
+	935	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	936	[-]	GETTABLE 	0 0 -199	; 17
+	937	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	938	[-]	GETTABLE 	1 1 -199	; 17
+	939	[-]	GETTABLE 	1 1 -42	; "Name"
+	940	[-]	SETTABLE 	0 -23 1	; "TimerType" -
+	941	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	942	[-]	GETTABLE 	0 0 -199	; 17
+	943	[-]	NEWTABLE 	1 1 0
+	944	[-]	GETGLOBAL	2 -45	; PredefinedCamps
+	945	[-]	GETGLOBAL	3 -201	; CAMPTYPE_SRU_RIFTHERALD
+	946	[-]	GETTABLE 	2 2 3
+	947	[-]	SETLIST  	1 1 1	; 1
+	948	[-]	SETTABLE 	0 -44 1	; "Groups" -
+	949	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	950	[-]	GETTABLE 	0 0 -199	; 17
+	951	[-]	NEWTABLE 	1 1 0
+	952	[-]	LOADK    	2 -48	; 100
+	953	[-]	SETLIST  	1 1 1	; 1
+	954	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	955	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	956	[-]	GETTABLE 	0 0 -199	; 17
+	957	[-]	SETTABLE 	0 -35 -202	; "StopSpawnTime" 1200
+	958	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	959	[-]	GETTABLE 	0 0 -199	; 17
+	960	[-]	SETTABLE 	0 -20 -203	; "GroupsRespawnTime" 9999
+	961	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	962	[-]	GETTABLE 	0 0 -199	; 17
+	963	[-]	GETGLOBAL	1 -51	; START_OF_GAME_MONSTER_SPAWN_DELAY
+	964	[-]	GETGLOBAL	2 -204	; START_OF_GAME_ADDITIONAL_DELAY_HERALD
+	965	[-]	ADD      	1 1 2
+	966	[-]	SETTABLE 	0 -50 1	; "GroupDelaySpawnTime" -
+	967	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	968	[-]	GETTABLE 	0 0 -199	; 17
+	969	[-]	SETTABLE 	0 -112 -205	; "RevealEvent" "VO_INTERACTIVE_REVEAL_ENEMY_RIFTHERALD_KILL"
+	970	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	971	[-]	GETTABLE 	0 0 -199	; 17
+	972	[-]	GETGLOBAL	1 -115	; PredefinedCampKillEvents
+	973	[-]	GETGLOBAL	2 -201	; CAMPTYPE_SRU_RIFTHERALD
+	974	[-]	GETTABLE 	1 1 2
+	975	[-]	SETTABLE 	0 -114 1	; "KillEvents" -
+	976	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	977	[-]	GETTABLE 	0 0 -199	; 17
+	978	[-]	GETGLOBAL	1 -118	; PredefinedCampKillEventsForSpectator
+	979	[-]	GETGLOBAL	2 -201	; CAMPTYPE_SRU_RIFTHERALD
+	980	[-]	GETTABLE 	1 1 2
+	981	[-]	SETTABLE 	0 -117 1	; "SpectatorKillEvents" -
+	982	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	983	[-]	GETTABLE 	0 0 -199	; 17
+	984	[-]	SETTABLE 	0 -30 -170	; "SpawnDuration" 3.2
+	985	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	986	[-]	GETTABLE 	0 0 -199	; 17
+	987	[-]	SETTABLE 	0 -33 -206	; "LeashRadius" 600
+	988	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	989	[-]	GETTABLE 	0 0 -199	; 17
+	990	[-]	SETTABLE 	0 -31 -200	; "MinimapIcon" "SRU_RiftHerald"
+	991	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	992	[-]	GETTABLE 	0 0 -199	; 17
+	993	[-]	SETTABLE 	0 -121 -120	; "EmptyVisibilityToAll" true
+	994	[-]	LOADK    	0 -208	; 75
+	995	[-]	SETGLOBAL	0 -207	; MinionSpawnStartTime
+	996	[-]	NEWTABLE 	0 0 0
+	997	[-]	SETGLOBAL	0 -209	; NeutralCampSpawnPosDict
+	998	[-]	NEWTABLE 	0 0 0
+	999	[-]	SETGLOBAL	0 -210	; NeutralCampSpawnTimeDict
+	1000	[-]	NEWTABLE 	0 0 0
+	1001	[-]	SETGLOBAL	0 -211	; NeutralCampRespawnTimeDict
+	1002	[-]	NEWTABLE 	0 0 0
+	1003	[-]	SETGLOBAL	0 -212	; NeutralCampSpawnDurationDict
+	1004	[-]	NEWTABLE 	0 0 0
+	1005	[-]	SETGLOBAL	0 -213	; NeutralCampUnitIDDict
+	1006	[-]	NEWTABLE 	0 0 0
+	1007	[-]	SETGLOBAL	0 -214	; NeutralCampMarkerIDDict
+	1008	[-]	GETGLOBAL	0 -216	; ELDER_DRAGON_SPAWN_RATE
+	1009	[-]	SETGLOBAL	0 -215	; ElderDragonRespawnTime
+	1010	[-]	LOADK    	0 -4	; 1
+	1011	[-]	GETGLOBAL	1 -5	; NUMBER_OF_CAMPS
+	1012	[-]	LOADK    	2 -4	; 1
+	1013	[-]	FORPREP  	0 40	; to 1054
+	1014	[-]	GETGLOBAL	4 -209	; NeutralCampSpawnPosDict
+	1015	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	1016	[-]	GETTABLE 	5 5 3
+	1017	[-]	GETTABLE 	5 5 -42	; "Name"
+	1018	[-]	GETGLOBAL	6 -8	; CampSpawnPoints
+	1019	[-]	GETTABLE 	6 6 3
+	1020	[-]	GETTABLE 	6 6 -4	; 1
+	1021	[-]	SETTABLE 	4 5 6
+	1022	[-]	GETGLOBAL	4 -210	; NeutralCampSpawnTimeDict
+	1023	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	1024	[-]	GETTABLE 	5 5 3
+	1025	[-]	GETTABLE 	5 5 -42	; "Name"
+	1026	[-]	GETGLOBAL	6 -6	; NeutralMinionCamps
+	1027	[-]	GETTABLE 	6 6 3
+	1028	[-]	GETTABLE 	6 6 -50	; "GroupDelaySpawnTime"
+	1029	[-]	GETGLOBAL	7 -207	; MinionSpawnStartTime
+	1030	[-]	ADD      	6 6 7
+	1031	[-]	SETTABLE 	4 5 6
+	1032	[-]	GETGLOBAL	4 -211	; NeutralCampRespawnTimeDict
+	1033	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	1034	[-]	GETTABLE 	5 5 3
+	1035	[-]	GETTABLE 	5 5 -42	; "Name"
+	1036	[-]	GETGLOBAL	6 -6	; NeutralMinionCamps
+	1037	[-]	GETTABLE 	6 6 3
+	1038	[-]	GETTABLE 	6 6 -20	; "GroupsRespawnTime"
+	1039	[-]	SETTABLE 	4 5 6
+	1040	[-]	GETGLOBAL	4 -212	; NeutralCampSpawnDurationDict
+	1041	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	1042	[-]	GETTABLE 	5 5 3
+	1043	[-]	GETTABLE 	5 5 -42	; "Name"
+	1044	[-]	GETGLOBAL	6 -6	; NeutralMinionCamps
+	1045	[-]	GETTABLE 	6 6 3
+	1046	[-]	GETTABLE 	6 6 -30	; "SpawnDuration"
+	1047	[-]	SETTABLE 	4 5 6
+	1048	[-]	GETGLOBAL	4 -213	; NeutralCampUnitIDDict
+	1049	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	1050	[-]	GETTABLE 	5 5 3
+	1051	[-]	GETTABLE 	5 5 -42	; "Name"
+	1052	[-]	NEWTABLE 	6 0 0
+	1053	[-]	SETTABLE 	4 5 6
+	1054	[-]	FORLOOP  	0 -41	; to 1014
+	1055	[-]	NEWTABLE 	0 0 0
+	1056	[-]	SETGLOBAL	0 -217	; CampMarkersToSpawnDict
+	1057	[-]	NEWTABLE 	0 6 0
+	1058	[-]	LOADK    	1 -4	; 1
+	1059	[-]	LOADK    	2 -80	; 4
+	1060	[-]	LOADK    	3 -102	; 6
+	1061	[-]	LOADK    	4 -122	; 7
+	1062	[-]	LOADK    	5 -144	; 10
+	1063	[-]	LOADK    	6 -199	; 17
+	1064	[-]	SETLIST  	0 6 1	; 1
+	1065	[-]	SETGLOBAL	0 -218	; CampsWithInitialMinimapUI
+	1066	[-]	GETGLOBAL	0 -219	; ipairs
+	1067	[-]	GETGLOBAL	1 -218	; CampsWithInitialMinimapUI
+	1068	[-]	CALL     	0 2 4
+	1069	[-]	JMP      	5	; to 1075
+	1070	[-]	GETGLOBAL	5 -217	; CampMarkersToSpawnDict
+	1071	[-]	GETGLOBAL	6 -6	; NeutralMinionCamps
+	1072	[-]	GETTABLE 	6 6 4
+	1073	[-]	GETTABLE 	6 6 -42	; "Name"
+	1074	[-]	SETTABLE 	5 6 -120	; - true
+	1075	[-]	TFORLOOP 	0 2
+	1076	[-]	JMP      	-7	; to 1070
+	1077	[-]	GETGLOBAL	0 -220	; SetWorldVar
+	1078	[-]	LOADK    	1 -209	; "NeutralCampSpawnPosDict"
+	1079	[-]	GETGLOBAL	2 -209	; NeutralCampSpawnPosDict
+	1080	[-]	CALL     	0 3 1
+	1081	[-]	GETGLOBAL	0 -220	; SetWorldVar
+	1082	[-]	LOADK    	1 -210	; "NeutralCampSpawnTimeDict"
+	1083	[-]	GETGLOBAL	2 -210	; NeutralCampSpawnTimeDict
+	1084	[-]	CALL     	0 3 1
+	1085	[-]	GETGLOBAL	0 -220	; SetWorldVar
+	1086	[-]	LOADK    	1 -211	; "NeutralCampRespawnTimeDict"
+	1087	[-]	GETGLOBAL	2 -211	; NeutralCampRespawnTimeDict
+	1088	[-]	CALL     	0 3 1
+	1089	[-]	GETGLOBAL	0 -220	; SetWorldVar
+	1090	[-]	LOADK    	1 -212	; "NeutralCampSpawnDurationDict"
+	1091	[-]	GETGLOBAL	2 -212	; NeutralCampSpawnDurationDict
+	1092	[-]	CALL     	0 3 1
+	1093	[-]	GETGLOBAL	0 -220	; SetWorldVar
+	1094	[-]	LOADK    	1 -213	; "NeutralCampUnitIDDict"
+	1095	[-]	GETGLOBAL	2 -213	; NeutralCampUnitIDDict
+	1096	[-]	CALL     	0 3 1
+	1097	[-]	GETGLOBAL	0 -220	; SetWorldVar
+	1098	[-]	LOADK    	1 -214	; "NeutralCampMarkerIDDict"
+	1099	[-]	GETGLOBAL	2 -214	; NeutralCampMarkerIDDict
+	1100	[-]	CALL     	0 3 1
+	1101	[-]	GETGLOBAL	0 -220	; SetWorldVar
+	1102	[-]	LOADK    	1 -217	; "CampMarkersToSpawnDict"
+	1103	[-]	GETGLOBAL	2 -217	; CampMarkersToSpawnDict
+	1104	[-]	CALL     	0 3 1
+	1105	[-]	GETGLOBAL	0 -220	; SetWorldVar
+	1106	[-]	LOADK    	1 -215	; "ElderDragonRespawnTime"
+	1107	[-]	GETGLOBAL	2 -215	; ElderDragonRespawnTime
+	1108	[-]	CALL     	0 3 1
+	1109	[-]	GETGLOBAL	0 -220	; SetWorldVar
+	1110	[-]	LOADK    	1 -221	; "CampSpawnLeadupSoft"
+	1111	[-]	LOADK    	2 -222	; 60
+	1112	[-]	CALL     	0 3 1
+	1113	[-]	GETGLOBAL	0 -220	; SetWorldVar
+	1114	[-]	LOADK    	1 -223	; "CampSpawnLeadupBright"
+	1115	[-]	LOADK    	2 -224	; 20
+	1116	[-]	CALL     	0 3 1
+	1117	[-]	NEWTABLE 	0 4 0
+	1118	[-]	LOADK    	1 -4	; 1
+	1119	[-]	LOADK    	2 -61	; 2
+	1120	[-]	LOADK    	3 -68	; 3
+	1121	[-]	LOADK    	4 -80	; 4
+	1122	[-]	SETLIST  	0 4 1	; 1
+	1123	[-]	SETGLOBAL	0 -225	; elementalDragonTable
+	1124	[-]	GETGLOBAL	0 -226	; shuffleTable
+	1125	[-]	GETGLOBAL	1 -225	; elementalDragonTable
+	1126	[-]	LOADK    	2 -90	; 5
+	1127	[-]	CALL     	0 3 2
+	1128	[-]	SETGLOBAL	0 -225	; elementalDragonTable
+	1129	[-]	NEWTABLE 	0 4 0
+	1130	[-]	LOADK    	1 -16	; 0
+	1131	[-]	LOADK    	2 -16	; 0
+	1132	[-]	LOADK    	3 -16	; 0
+	1133	[-]	LOADK    	4 -16	; 0
+	1134	[-]	SETLIST  	0 4 1	; 1
+	1135	[-]	SETGLOBAL	0 -227	; dragonOccurenceTable
+	1136	[-]	LOADK    	0 -4	; 1
+	1137	[-]	LOADK    	1 -122	; 7
+	1138	[-]	LOADK    	2 -4	; 1
+	1139	[-]	FORPREP  	0 30	; to 1170
+	1140	[-]	GETGLOBAL	4 -225	; elementalDragonTable
+	1141	[-]	GETGLOBAL	5 -229	; GetRandomIntInRangeLua
+	1142	[-]	LOADK    	6 -4	; 1
+	1143	[-]	LOADK    	7 -68	; 3
+	1144	[-]	CALL     	5 3 2
+	1145	[-]	GETTABLE 	4 4 5
+	1146	[-]	SETGLOBAL	4 -228	; randomlyChosenDragon
+	1147	[-]	GETGLOBAL	4 -227	; dragonOccurenceTable
+	1148	[-]	GETGLOBAL	5 -228	; randomlyChosenDragon
+	1149	[-]	GETTABLE 	4 4 5
+	1150	[-]	LT       	0 -61 4	; 2 -
+	1151	[-]	JMP      	8	; to 1160
+	1152	[-]	GETGLOBAL	4 -225	; elementalDragonTable
+	1153	[-]	GETGLOBAL	5 -229	; GetRandomIntInRangeLua
+	1154	[-]	LOADK    	6 -4	; 1
+	1155	[-]	LOADK    	7 -68	; 3
+	1156	[-]	CALL     	5 3 2
+	1157	[-]	GETTABLE 	4 4 5
+	1158	[-]	SETGLOBAL	4 -228	; randomlyChosenDragon
+	1159	[-]	JMP      	-13	; to 1147
+	1160	[-]	GETGLOBAL	4 -230	; DragonFlavorTable
+	1161	[-]	GETGLOBAL	5 -228	; randomlyChosenDragon
+	1162	[-]	SETTABLE 	4 3 5
+	1163	[-]	GETGLOBAL	4 -227	; dragonOccurenceTable
+	1164	[-]	GETGLOBAL	5 -228	; randomlyChosenDragon
+	1165	[-]	GETGLOBAL	6 -227	; dragonOccurenceTable
+	1166	[-]	GETGLOBAL	7 -228	; randomlyChosenDragon
+	1167	[-]	GETTABLE 	6 6 7
+	1168	[-]	ADD      	6 6 -4	; - 1
+	1169	[-]	SETTABLE 	4 5 6
+	1170	[-]	FORLOOP  	0 -31	; to 1140
+	1171	[-]	LOADK    	0 -129	; 8
+	1172	[-]	LOADK    	1 -48	; 100
+	1173	[-]	LOADK    	2 -4	; 1
+	1174	[-]	FORPREP  	0 8	; to 1183
+	1175	[-]	GETGLOBAL	4 -230	; DragonFlavorTable
+	1176	[-]	GETGLOBAL	5 -225	; elementalDragonTable
+	1177	[-]	GETGLOBAL	6 -229	; GetRandomIntInRangeLua
+	1178	[-]	LOADK    	7 -4	; 1
+	1179	[-]	LOADK    	8 -68	; 3
+	1180	[-]	CALL     	6 3 2
+	1181	[-]	GETTABLE 	5 5 6
+	1182	[-]	SETTABLE 	4 3 5
+	1183	[-]	FORLOOP  	0 -9	; to 1175
+	1184	[-]	LOADK    	0 -4	; 1
+	1185	[-]	SETGLOBAL	0 -231	; DragonFlavorIndex
+	1186	[-]	GETGLOBAL	0 -220	; SetWorldVar
+	1187	[-]	LOADK    	1 -230	; "DragonFlavorTable"
+	1188	[-]	GETGLOBAL	2 -230	; DragonFlavorTable
+	1189	[-]	CALL     	0 3 1
+	1190	[-]	GETGLOBAL	0 -220	; SetWorldVar
+	1191	[-]	LOADK    	1 -231	; "DragonFlavorIndex"
+	1192	[-]	GETGLOBAL	2 -231	; DragonFlavorIndex
+	1193	[-]	CALL     	0 3 1
+	1194	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	1195	[-]	GETGLOBAL	1 -101	; DRAGON_CAMP_INDEX
+	1196	[-]	GETTABLE 	0 0 1
+	1197	[-]	GETGLOBAL	1 -232	; HelperDragonProbTableGenerate
+	1198	[-]	GETGLOBAL	2 -230	; DragonFlavorTable
+	1199	[-]	GETGLOBAL	3 -231	; DragonFlavorIndex
+	1200	[-]	GETTABLE 	2 2 3
+	1201	[-]	CALL     	1 2 2
+	1202	[-]	SETTABLE 	0 -47 1	; "GroupsChance" -
+	1203	[-]	GETGLOBAL	0 -6	; NeutralMinionCamps
+	1204	[-]	GETGLOBAL	1 -101	; DRAGON_CAMP_INDEX
+	1205	[-]	GETTABLE 	0 0 1
+	1206	[-]	GETGLOBAL	1 -233	; DragonTypeToDragonIconName
+	1207	[-]	GETGLOBAL	2 -230	; DragonFlavorTable
+	1208	[-]	GETGLOBAL	3 -231	; DragonFlavorIndex
+	1209	[-]	GETTABLE 	2 2 3
+	1210	[-]	CALL     	1 2 2
+	1211	[-]	SETTABLE 	0 -31 1	; "MinimapIcon" -
+	1212	[-]	GETGLOBAL	0 -234	; InitDragonSigilMarkers
+	1213	[-]	CALL     	0 1 1
+	1214	[-]	RETURN   	0 1
+constants (234) for 000002C5AF6D19F0:
+	1	"pairs"
+	2	"NeutralMinionNamesForDX5"
+	3	"PreloadCharacter"
+	4	1
+	5	"NUMBER_OF_CAMPS"
+	6	"NeutralMinionCamps"
+	7	"Positions"
+	8	"CampSpawnPoints"
+	9	"FacePositions"
+	10	"CampFacePoints"
+	11	"UniqueNames"
+	12	"AliveTracker"
+	13	"Team"
+	14	"TEAM_NEUTRAL"
+	15	"DamageBonus"
+	16	0
+	17	"HealthBonus"
+	18	"AIState"
+	19	"INACTIVE"
+	20	"GroupsRespawnTime"
+	21	50
+	22	"CampLevel"
+	23	"TimerType"
+	24	""
+	25	"MaxRespawn"
+	26	-1
+	27	"SpawnCount"
+	28	"UseSummonerScript"
+	29	false
+	30	"SpawnDuration"
+	31	"MinimapIcon"
+	32	"LesserCamp"
+	33	"LeashRadius"
+	34	800
+	35	"StopSpawnTime"
+	36	25000
+	37	"LeashCenter"
+	38	"VisualCenter"
+	39	"MinimapPosition"
+	40	"VisualFacing"
+	41	"UpdateCampIconOnSpawn"
+	42	"Name"
+	43	"Order Blue"
+	44	"Groups"
+	45	"PredefinedCamps"
+	46	"CAMPTYPE_BLUEBUFF"
+	47	"GroupsChance"
+	48	100
+	49	150
+	50	"GroupDelaySpawnTime"
+	51	"START_OF_GAME_MONSTER_SPAWN_DELAY"
+	52	"GroupBuffSide"
+	53	"TEAM_ORDER"
+	54	1.1
+	55	"Camp"
+	56	1000
+	57	"Make3DPoint"
+	58	3530.51
+	59	51.26
+	60	8148.19
+	61	2
+	62	"Order Wolves"
+	63	"CAMPTYPE_WOLVES"
+	64	0.66
+	65	3547.62
+	66	52.48
+	67	6230.66
+	68	3
+	69	"Order Wraiths"
+	70	"CAMPTYPE_WRAITHS"
+	71	6850
+	72	50.27832
+	73	5500
+	74	6969
+	75	52
+	76	5422
+	77	7087.67
+	78	48.53
+	79	5010.43
+	80	4
+	81	"Order Red"
+	82	"CAMPTYPE_REDBUFF"
+	83	1.66
+	84	7787
+	85	54
+	86	4033
+	87	7423.74
+	88	52.43
+	89	3620.57
+	90	5
+	91	"Order Small Golems"
+	92	"CAMPTYPE_SMALLGOLEMS"
+	93	0.86
+	94	900
+	95	8390
+	96	51
+	97	2675
+	98	8419.75
+	99	51.13
+	100	2330.28
+	101	"DRAGON_CAMP_INDEX"
+	102	6
+	103	"Dragon"
+	104	"CAMPTYPE_SRU_DRAGON_AIR"
+	105	"CAMPTYPE_SRU_DRAGON_FIRE"
+	106	"CAMPTYPE_SRU_DRAGON_WATER"
+	107	"CAMPTYPE_SRU_DRAGON_EARTH"
+	108	"CAMPTYPE_SRU_DRAGON_ELDER"
+	109	25
+	110	180
+	111	"START_OF_GAME_ADDITIONAL_DELAY_DRAGON"
+	112	"RevealEvent"
+	113	"VO_INTERACTIVE_REVEAL_ENEMY_DRAGON_KILL"
+	114	"KillEvents"
+	115	"PredefinedCampKillEvents"
+	116	"CAMPTYPE_DRAGON"
+	117	"SpectatorKillEvents"
+	118	"PredefinedCampKillEventsForSpectator"
+	119	6.5
+	120	true
+	121	"EmptyVisibilityToAll"
+	122	7
+	123	"Chaos Blue"
+	124	300
+	125	"TEAM_CHAOS"
+	126	11286.25
+	127	51.71
+	128	6837.92
+	129	8
+	130	"Chaos Wolves"
+	131	"CAMPTYPE_WOLVES2"
+	132	11216.68
+	133	62.15
+	134	8629.35
+	135	9
+	136	"Chaos Wraiths"
+	137	"CAMPTYPE_WRAITHS2"
+	138	0.67
+	139	7861
+	140	9475
+	141	7777.46
+	142	51.28
+	143	10007.6
+	144	10
+	145	"Chaos Red"
+	146	7118
+	147	56
+	148	10887
+	149	7326.75
+	150	54.44
+	151	11174.21
+	152	11
+	153	"Chaos Small Golems"
+	154	"CAMPTYPE_SMALLGOLEMS2"
+	155	6449
+	156	12199
+	157	6415.14
+	158	55.56
+	159	12520.02
+	160	12
+	161	"Baron"
+	162	"CAMPTYPE_NASHOR"
+	163	420
+	164	"START_OF_GAME_ADDITIONAL_DELAY_BARON"
+	165	"VO_INTERACTIVE_REVEAL_ENEMY_NASHOR_KILL"
+	166	8.5
+	167	13
+	168	"Order OwlBear"
+	169	"CAMPTYPE_OWLBEAR"
+	170	3.2
+	171	700
+	172	2223
+	173	51.78
+	174	8504.61
+	175	2457.61
+	176	8494.14
+	177	14
+	178	"Chaos OwlBear"
+	179	12630
+	180	6393
+	181	12375.05
+	182	53.57
+	183	6312.43
+	184	15
+	185	"Dragon Crab"
+	186	"CAMPTYPE_CRAB"
+	187	"START_OF_GAME_ADDITIONAL_DELAY_CRAB"
+	188	2.2
+	189	"AIScript"
+	190	"RiverCrab.lua"
+	191	10648.24
+	192	-62.81
+	193	5329.59
+	194	16
+	195	"Baron Crab"
+	196	4221.31
+	197	-66.75
+	198	9448.4
+	199	17
+	200	"SRU_RiftHerald"
+	201	"CAMPTYPE_SRU_RIFTHERALD"
+	202	1200
+	203	9999
+	204	"START_OF_GAME_ADDITIONAL_DELAY_HERALD"
+	205	"VO_INTERACTIVE_REVEAL_ENEMY_RIFTHERALD_KILL"
+	206	600
+	207	"MinionSpawnStartTime"
+	208	75
+	209	"NeutralCampSpawnPosDict"
+	210	"NeutralCampSpawnTimeDict"
+	211	"NeutralCampRespawnTimeDict"
+	212	"NeutralCampSpawnDurationDict"
+	213	"NeutralCampUnitIDDict"
+	214	"NeutralCampMarkerIDDict"
+	215	"ElderDragonRespawnTime"
+	216	"ELDER_DRAGON_SPAWN_RATE"
+	217	"CampMarkersToSpawnDict"
+	218	"CampsWithInitialMinimapUI"
+	219	"ipairs"
+	220	"SetWorldVar"
+	221	"CampSpawnLeadupSoft"
+	222	60
+	223	"CampSpawnLeadupBright"
+	224	20
+	225	"elementalDragonTable"
+	226	"shuffleTable"
+	227	"dragonOccurenceTable"
+	228	"randomlyChosenDragon"
+	229	"GetRandomIntInRangeLua"
+	230	"DragonFlavorTable"
+	231	"DragonFlavorIndex"
+	232	"HelperDragonProbTableGenerate"
+	233	"DragonTypeToDragonIconName"
+	234	"InitDragonSigilMarkers"
+locals (0) for 000002C5AF6D19F0:
+upvalues (0) for 000002C5AF6D19F0:
+
+function <?:509,516> (32 instructions, 128 bytes at 000002C5AF6D1A70)
+0 params, 12 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -2	; Make3DPoint
+	2	[-]	LOADK    	1 -3	; 9453.70996
+	3	[-]	LOADK    	2 -4	; -71.2406
+	4	[-]	LOADK    	3 -5	; 4777.350586
+	5	[-]	CALL     	0 4 2
+	6	[-]	SETGLOBAL	0 -1	; MarkerPos
+	7	[-]	GETGLOBAL	0 -6	; SetWorldVar
+	8	[-]	LOADK    	1 -7	; "DragonSigilPos"
+	9	[-]	GETGLOBAL	2 -1	; MarkerPos
+	10	[-]	CALL     	0 3 1
+	11	[-]	GETGLOBAL	0 -9	; SpawnMinion
+	12	[-]	LOADK    	1 -10	; "DragonSigil"
+	13	[-]	LOADK    	2 -11	; "TestCube"
+	14	[-]	LOADK    	3 -12	; "Idle.lua"
+	15	[-]	GETGLOBAL	4 -1	; MarkerPos
+	16	[-]	GETGLOBAL	5 -13	; TEAM_NEUTRAL
+	17	[-]	LOADBOOL 	6 0 0
+	18	[-]	LOADBOOL 	7 1 0
+	19	[-]	LOADBOOL 	8 1 0
+	20	[-]	LOADBOOL 	9 1 0
+	21	[-]	LOADBOOL 	10 1 0
+	22	[-]	LOADBOOL 	11 1 0
+	23	[-]	CALL     	0 12 2
+	24	[-]	SETGLOBAL	0 -8	; Marker
+	25	[-]	GETGLOBAL	0 -14	; ApplyPersistentBuff
+	26	[-]	GETGLOBAL	1 -8	; Marker
+	27	[-]	LOADK    	2 -15	; "DragonSigilManager"
+	28	[-]	LOADBOOL 	3 0 0
+	29	[-]	LOADK    	4 -16	; 1
+	30	[-]	LOADK    	5 -16	; 1
+	31	[-]	CALL     	0 6 1
+	32	[-]	RETURN   	0 1
+constants (16) for 000002C5AF6D1A70:
+	1	"MarkerPos"
+	2	"Make3DPoint"
+	3	9453.70996
+	4	-71.2406
+	5	4777.350586
+	6	"SetWorldVar"
+	7	"DragonSigilPos"
+	8	"Marker"
+	9	"SpawnMinion"
+	10	"DragonSigil"
+	11	"TestCube"
+	12	"Idle.lua"
+	13	"TEAM_NEUTRAL"
+	14	"ApplyPersistentBuff"
+	15	"DragonSigilManager"
+	16	1
+locals (0) for 000002C5AF6D1A70:
+upvalues (0) for 000002C5AF6D1A70:
+
+function <?:518,556> (4 instructions, 16 bytes at 000002C5AF6D5990)
+1 param, 2 slots, 0 upvalues, 0 locals, 0 constants, 1 function
+	1	[-]	CLOSURE  	1 0	; 000002C5AF6D5A10
+	2	[-]	MOVE     	0 0
+	3	[-]	RETURN   	1 2
+	4	[-]	RETURN   	0 1
+constants (0) for 000002C5AF6D5990:
+locals (0) for 000002C5AF6D5990:
+upvalues (0) for 000002C5AF6D5990:
+
+function <?:519,555> (158 instructions, 632 bytes at 000002C5AF6D5A10)
+0 params, 16 slots, 1 upvalue, 0 locals, 16 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetRandomIntLua
+	2	[-]	LOADK    	1 -2	; 100
+	3	[-]	CALL     	0 2 2
+	4	[-]	LOADK    	1 -3	; 0
+	5	[-]	LOADBOOL 	2 0 0
+	6	[-]	GETGLOBAL	3 -4	; NeutralMinionCamps
+	7	[-]	GETUPVAL 	4 0	; -
+	8	[-]	GETTABLE 	3 3 4
+	9	[-]	GETGLOBAL	4 -4	; NeutralMinionCamps
+	10	[-]	GETUPVAL 	5 0	; -
+	11	[-]	GETTABLE 	4 4 5
+	12	[-]	GETTABLE 	4 4 -5	; "DamageBonus"
+	13	[-]	ADD      	4 4 -3	; - 0
+	14	[-]	SETTABLE 	3 -5 4	; "DamageBonus" -
+	15	[-]	GETGLOBAL	3 -4	; NeutralMinionCamps
+	16	[-]	GETUPVAL 	4 0	; -
+	17	[-]	GETTABLE 	3 3 4
+	18	[-]	GETGLOBAL	4 -4	; NeutralMinionCamps
+	19	[-]	GETUPVAL 	5 0	; -
+	20	[-]	GETTABLE 	4 4 5
+	21	[-]	GETTABLE 	4 4 -6	; "HealthBonus"
+	22	[-]	ADD      	4 4 -3	; - 0
+	23	[-]	SETTABLE 	3 -6 4	; "HealthBonus" -
+	24	[-]	GETGLOBAL	3 -4	; NeutralMinionCamps
+	25	[-]	GETUPVAL 	4 0	; -
+	26	[-]	GETTABLE 	3 3 4
+	27	[-]	GETTABLE 	3 3 -7	; "MaxRespawn"
+	28	[-]	EQ       	0 3 -8	; - -1
+	29	[-]	JMP      	55	; to 85
+	30	[-]	LOADK    	3 -9	; 1
+	31	[-]	GETGLOBAL	4 -4	; NeutralMinionCamps
+	32	[-]	GETUPVAL 	5 0	; -
+	33	[-]	GETTABLE 	4 4 5
+	34	[-]	GETTABLE 	4 4 -10	; "Groups"
+	35	[-]	LEN      	4 4
+	36	[-]	LOADK    	5 -9	; 1
+	37	[-]	FORPREP  	3 45	; to 83
+	38	[-]	GETGLOBAL	7 -4	; NeutralMinionCamps
+	39	[-]	GETUPVAL 	8 0	; -
+	40	[-]	GETTABLE 	7 7 8
+	41	[-]	GETTABLE 	7 7 -11	; "GroupsChance"
+	42	[-]	GETTABLE 	7 7 6
+	43	[-]	ADD      	7 7 1
+	44	[-]	LE       	0 0 7
+	45	[-]	JMP      	31	; to 77
+	46	[-]	EQ       	0 2 -12	; - false
+	47	[-]	JMP      	29	; to 77
+	48	[-]	LOADBOOL 	2 1 0
+	49	[-]	GETGLOBAL	7 -4	; NeutralMinionCamps
+	50	[-]	GETUPVAL 	8 0	; -
+	51	[-]	GETTABLE 	7 7 8
+	52	[-]	NEWTABLE 	8 0 0
+	53	[-]	SETTABLE 	7 -13 8	; "AliveTracker" -
+	54	[-]	LOADK    	7 -9	; 1
+	55	[-]	GETGLOBAL	8 -4	; NeutralMinionCamps
+	56	[-]	GETUPVAL 	9 0	; -
+	57	[-]	GETTABLE 	8 8 9
+	58	[-]	GETTABLE 	8 8 -10	; "Groups"
+	59	[-]	GETTABLE 	8 8 6
+	60	[-]	LEN      	8 8
+	61	[-]	LOADK    	9 -9	; 1
+	62	[-]	FORPREP  	7 13	; to 76
+	63	[-]	GETGLOBAL	11 -14	; SpawnNeutralMinion
+	64	[-]	GETGLOBAL	12 -4	; NeutralMinionCamps
+	65	[-]	GETUPVAL 	13 0	; -
+	66	[-]	GETTABLE 	12 12 13
+	67	[-]	GETUPVAL 	13 0	; -
+	68	[-]	MOVE     	14 6
+	69	[-]	MOVE     	15 10
+	70	[-]	CALL     	11 5 1
+	71	[-]	GETGLOBAL	11 -4	; NeutralMinionCamps
+	72	[-]	GETUPVAL 	12 0	; -
+	73	[-]	GETTABLE 	11 11 12
+	74	[-]	GETTABLE 	11 11 -13	; "AliveTracker"
+	75	[-]	SETTABLE 	11 10 -15	; - true
+	76	[-]	FORLOOP  	7 -14	; to 63
+	77	[-]	GETGLOBAL	7 -4	; NeutralMinionCamps
+	78	[-]	GETUPVAL 	8 0	; -
+	79	[-]	GETTABLE 	7 7 8
+	80	[-]	GETTABLE 	7 7 -11	; "GroupsChance"
+	81	[-]	GETTABLE 	7 7 6
+	82	[-]	ADD      	1 1 7
+	83	[-]	FORLOOP  	3 -46	; to 38
+	84	[-]	JMP      	73	; to 158
+	85	[-]	GETGLOBAL	3 -4	; NeutralMinionCamps
+	86	[-]	GETUPVAL 	4 0	; -
+	87	[-]	GETTABLE 	3 3 4
+	88	[-]	GETTABLE 	3 3 -7	; "MaxRespawn"
+	89	[-]	GETGLOBAL	4 -4	; NeutralMinionCamps
+	90	[-]	GETUPVAL 	5 0	; -
+	91	[-]	GETTABLE 	4 4 5
+	92	[-]	GETTABLE 	4 4 -16	; "SpawnCount"
+	93	[-]	LT       	0 4 3
+	94	[-]	JMP      	63	; to 158
+	95	[-]	LOADK    	3 -9	; 1
+	96	[-]	GETGLOBAL	4 -4	; NeutralMinionCamps
+	97	[-]	GETUPVAL 	5 0	; -
+	98	[-]	GETTABLE 	4 4 5
+	99	[-]	GETTABLE 	4 4 -10	; "Groups"
+	100	[-]	LEN      	4 4
+	101	[-]	LOADK    	5 -9	; 1
+	102	[-]	FORPREP  	3 45	; to 148
+	103	[-]	GETGLOBAL	7 -4	; NeutralMinionCamps
+	104	[-]	GETUPVAL 	8 0	; -
+	105	[-]	GETTABLE 	7 7 8
+	106	[-]	GETTABLE 	7 7 -11	; "GroupsChance"
+	107	[-]	GETTABLE 	7 7 6
+	108	[-]	ADD      	7 7 1
+	109	[-]	LE       	0 0 7
+	110	[-]	JMP      	31	; to 142
+	111	[-]	EQ       	0 2 -12	; - false
+	112	[-]	JMP      	29	; to 142
+	113	[-]	LOADBOOL 	2 1 0
+	114	[-]	GETGLOBAL	7 -4	; NeutralMinionCamps
+	115	[-]	GETUPVAL 	8 0	; -
+	116	[-]	GETTABLE 	7 7 8
+	117	[-]	NEWTABLE 	8 0 0
+	118	[-]	SETTABLE 	7 -13 8	; "AliveTracker" -
+	119	[-]	LOADK    	7 -9	; 1
+	120	[-]	GETGLOBAL	8 -4	; NeutralMinionCamps
+	121	[-]	GETUPVAL 	9 0	; -
+	122	[-]	GETTABLE 	8 8 9
+	123	[-]	GETTABLE 	8 8 -10	; "Groups"
+	124	[-]	GETTABLE 	8 8 6
+	125	[-]	LEN      	8 8
+	126	[-]	LOADK    	9 -9	; 1
+	127	[-]	FORPREP  	7 13	; to 141
+	128	[-]	GETGLOBAL	11 -14	; SpawnNeutralMinion
+	129	[-]	GETGLOBAL	12 -4	; NeutralMinionCamps
+	130	[-]	GETUPVAL 	13 0	; -
+	131	[-]	GETTABLE 	12 12 13
+	132	[-]	GETUPVAL 	13 0	; -
+	133	[-]	MOVE     	14 6
+	134	[-]	MOVE     	15 10
+	135	[-]	CALL     	11 5 1
+	136	[-]	GETGLOBAL	11 -4	; NeutralMinionCamps
+	137	[-]	GETUPVAL 	12 0	; -
+	138	[-]	GETTABLE 	11 11 12
+	139	[-]	GETTABLE 	11 11 -13	; "AliveTracker"
+	140	[-]	SETTABLE 	11 10 -15	; - true
+	141	[-]	FORLOOP  	7 -14	; to 128
+	142	[-]	GETGLOBAL	7 -4	; NeutralMinionCamps
+	143	[-]	GETUPVAL 	8 0	; -
+	144	[-]	GETTABLE 	7 7 8
+	145	[-]	GETTABLE 	7 7 -11	; "GroupsChance"
+	146	[-]	GETTABLE 	7 7 6
+	147	[-]	ADD      	1 1 7
+	148	[-]	FORLOOP  	3 -46	; to 103
+	149	[-]	GETGLOBAL	3 -4	; NeutralMinionCamps
+	150	[-]	GETUPVAL 	4 0	; -
+	151	[-]	GETTABLE 	3 3 4
+	152	[-]	GETGLOBAL	4 -4	; NeutralMinionCamps
+	153	[-]	GETUPVAL 	5 0	; -
+	154	[-]	GETTABLE 	4 4 5
+	155	[-]	GETTABLE 	4 4 -16	; "SpawnCount"
+	156	[-]	ADD      	4 4 -9	; - 1
+	157	[-]	SETTABLE 	3 -16 4	; "SpawnCount" -
+	158	[-]	RETURN   	0 1
+constants (16) for 000002C5AF6D5A10:
+	1	"GetRandomIntLua"
+	2	100
+	3	0
+	4	"NeutralMinionCamps"
+	5	"DamageBonus"
+	6	"HealthBonus"
+	7	"MaxRespawn"
+	8	-1
+	9	1
+	10	"Groups"
+	11	"GroupsChance"
+	12	false
+	13	"AliveTracker"
+	14	"SpawnNeutralMinion"
+	15	true
+	16	"SpawnCount"
+locals (0) for 000002C5AF6D5A10:
+upvalues (0) for 000002C5AF6D5A10:
+
+function <?:559,576> (73 instructions, 292 bytes at 000002C5AF6D5BA0)
+0 params, 19 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADK    	0 -1	; 1
+	2	[-]	GETGLOBAL	1 -2	; NeutralMinionCamps
+	3	[-]	LEN      	1 1
+	4	[-]	LOADK    	2 -1	; 1
+	5	[-]	FORPREP  	0 58	; to 64
+	6	[-]	LOADK    	4 -1	; 1
+	7	[-]	GETGLOBAL	5 -2	; NeutralMinionCamps
+	8	[-]	GETTABLE 	5 5 3
+	9	[-]	GETTABLE 	5 5 -3	; "Groups"
+	10	[-]	LEN      	5 5
+	11	[-]	LOADK    	6 -1	; 1
+	12	[-]	FORPREP  	4 31	; to 44
+	13	[-]	GETGLOBAL	8 -2	; NeutralMinionCamps
+	14	[-]	GETTABLE 	8 8 3
+	15	[-]	GETTABLE 	8 8 -4	; "UniqueNames"
+	16	[-]	NEWTABLE 	9 0 0
+	17	[-]	SETTABLE 	8 7 9
+	18	[-]	LOADK    	8 -1	; 1
+	19	[-]	GETGLOBAL	9 -2	; NeutralMinionCamps
+	20	[-]	GETTABLE 	9 9 3
+	21	[-]	GETTABLE 	9 9 -3	; "Groups"
+	22	[-]	GETTABLE 	9 9 7
+	23	[-]	LEN      	9 9
+	24	[-]	LOADK    	10 -1	; 1
+	25	[-]	FORPREP  	8 17	; to 43
+	26	[-]	GETGLOBAL	12 -2	; NeutralMinionCamps
+	27	[-]	GETTABLE 	12 12 3
+	28	[-]	GETTABLE 	12 12 -4	; "UniqueNames"
+	29	[-]	GETTABLE 	12 12 7
+	30	[-]	GETGLOBAL	13 -2	; NeutralMinionCamps
+	31	[-]	GETTABLE 	13 13 3
+	32	[-]	GETTABLE 	13 13 -3	; "Groups"
+	33	[-]	GETTABLE 	13 13 7
+	34	[-]	GETTABLE 	13 13 11
+	35	[-]	GETTABLE 	13 13 -1	; 1
+	36	[-]	MOVE     	14 3
+	37	[-]	LOADK    	15 -5	; "."
+	38	[-]	MOVE     	16 7
+	39	[-]	LOADK    	17 -5	; "."
+	40	[-]	MOVE     	18 11
+	41	[-]	CONCAT   	13 13 18
+	42	[-]	SETTABLE 	12 11 13
+	43	[-]	FORLOOP  	8 -18	; to 26
+	44	[-]	FORLOOP  	4 -32	; to 13
+	45	[-]	GETGLOBAL	4 -6	; NeutralTimers
+	46	[-]	LEN      	4 4
+	47	[-]	GETGLOBAL	5 -6	; NeutralTimers
+	48	[-]	ADD      	6 4 -1	; - 1
+	49	[-]	GETGLOBAL	7 -7	; CreateRespawnNeutralTimer
+	50	[-]	MOVE     	8 3
+	51	[-]	CALL     	7 2 2
+	52	[-]	SETTABLE 	5 6 7
+	53	[-]	GETGLOBAL	5 -2	; NeutralMinionCamps
+	54	[-]	GETTABLE 	5 5 3
+	55	[-]	GETGLOBAL	6 -6	; NeutralTimers
+	56	[-]	ADD      	7 4 -1	; - 1
+	57	[-]	GETTABLE 	6 6 7
+	58	[-]	SETTABLE 	5 -8 6	; "Timer" -
+	59	[-]	GETGLOBAL	5 -9	; CreateNeutralCamp
+	60	[-]	GETGLOBAL	6 -2	; NeutralMinionCamps
+	61	[-]	GETTABLE 	6 6 3
+	62	[-]	MOVE     	7 3
+	63	[-]	CALL     	5 3 1
+	64	[-]	FORLOOP  	0 -59	; to 6
+	65	[-]	GETGLOBAL	0 -10	; UpdateNeutralCampNextSpawnType
+	66	[-]	GETGLOBAL	1 -11	; DragonTypeToDragonBaseName
+	67	[-]	GETGLOBAL	2 -12	; DragonFlavorTable
+	68	[-]	GETGLOBAL	3 -13	; DragonFlavorIndex
+	69	[-]	GETTABLE 	2 2 3
+	70	[-]	CALL     	1 2 2
+	71	[-]	GETGLOBAL	2 -14	; DRAGON_CAMP_INDEX
+	72	[-]	CALL     	0 3 1
+	73	[-]	RETURN   	0 1
+constants (14) for 000002C5AF6D5BA0:
+	1	1
+	2	"NeutralMinionCamps"
+	3	"Groups"
+	4	"UniqueNames"
+	5	"."
+	6	"NeutralTimers"
+	7	"CreateRespawnNeutralTimer"
+	8	"Timer"
+	9	"CreateNeutralCamp"
+	10	"UpdateNeutralCampNextSpawnType"
+	11	"DragonTypeToDragonBaseName"
+	12	"DragonFlavorTable"
+	13	"DragonFlavorIndex"
+	14	"DRAGON_CAMP_INDEX"
+locals (0) for 000002C5AF6D5BA0:
+upvalues (0) for 000002C5AF6D5BA0:
+
+function <?:578,607> (76 instructions, 304 bytes at 000002C5AF6DAB30)
+1 param, 13 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; NeutralMinionCamps
+	2	[-]	LEN      	1 1
+	3	[-]	LE       	0 0 1
+	4	[-]	JMP      	71	; to 76
+	5	[-]	GETGLOBAL	1 -2	; GetRandomIntLua
+	6	[-]	LOADK    	2 -3	; 100
+	7	[-]	CALL     	1 2 2
+	8	[-]	LOADK    	2 -4	; 0
+	9	[-]	LOADBOOL 	3 0 0
+	10	[-]	LOADK    	4 -5	; 1
+	11	[-]	GETGLOBAL	5 -1	; NeutralMinionCamps
+	12	[-]	GETTABLE 	5 5 0
+	13	[-]	GETTABLE 	5 5 -6	; "Groups"
+	14	[-]	LEN      	5 5
+	15	[-]	LOADK    	6 -5	; 1
+	16	[-]	FORPREP  	4 58	; to 75
+	17	[-]	GETGLOBAL	8 -1	; NeutralMinionCamps
+	18	[-]	GETTABLE 	8 8 0
+	19	[-]	GETTABLE 	8 8 -7	; "GroupDelaySpawnTime"
+	20	[-]	LT       	0 -4 8	; 0 -
+	21	[-]	JMP      	21	; to 43
+	22	[-]	EQ       	0 3 -8	; - false
+	23	[-]	JMP      	19	; to 43
+	24	[-]	LOADBOOL 	3 1 0
+	25	[-]	GETGLOBAL	8 -1	; NeutralMinionCamps
+	26	[-]	GETTABLE 	8 8 0
+	27	[-]	NEWTABLE 	9 0 0
+	28	[-]	SETTABLE 	8 -9 9	; "AliveTracker" -
+	29	[-]	LOADK    	8 -5	; 1
+	30	[-]	GETGLOBAL	9 -1	; NeutralMinionCamps
+	31	[-]	GETTABLE 	9 9 0
+	32	[-]	GETTABLE 	9 9 -6	; "Groups"
+	33	[-]	GETTABLE 	9 9 7
+	34	[-]	LEN      	9 9
+	35	[-]	LOADK    	10 -5	; 1
+	36	[-]	FORPREP  	8 4	; to 41
+	37	[-]	GETGLOBAL	12 -1	; NeutralMinionCamps
+	38	[-]	GETTABLE 	12 12 0
+	39	[-]	GETTABLE 	12 12 -9	; "AliveTracker"
+	40	[-]	SETTABLE 	12 11 -10	; - true
+	41	[-]	FORLOOP  	8 -5	; to 37
+	42	[-]	JMP      	32	; to 75
+	43	[-]	GETGLOBAL	8 -1	; NeutralMinionCamps
+	44	[-]	GETTABLE 	8 8 0
+	45	[-]	GETTABLE 	8 8 -11	; "GroupsChance"
+	46	[-]	GETTABLE 	8 8 7
+	47	[-]	ADD      	8 8 2
+	48	[-]	LE       	0 1 8
+	49	[-]	JMP      	20	; to 70
+	50	[-]	EQ       	0 3 -8	; - false
+	51	[-]	JMP      	18	; to 70
+	52	[-]	LOADBOOL 	3 1 0
+	53	[-]	GETGLOBAL	8 -1	; NeutralMinionCamps
+	54	[-]	GETTABLE 	8 8 0
+	55	[-]	NEWTABLE 	9 0 0
+	56	[-]	SETTABLE 	8 -9 9	; "AliveTracker" -
+	57	[-]	LOADK    	8 -5	; 1
+	58	[-]	GETGLOBAL	9 -1	; NeutralMinionCamps
+	59	[-]	GETTABLE 	9 9 0
+	60	[-]	GETTABLE 	9 9 -6	; "Groups"
+	61	[-]	GETTABLE 	9 9 7
+	62	[-]	LEN      	9 9
+	63	[-]	LOADK    	10 -5	; 1
+	64	[-]	FORPREP  	8 4	; to 69
+	65	[-]	GETGLOBAL	12 -1	; NeutralMinionCamps
+	66	[-]	GETTABLE 	12 12 0
+	67	[-]	GETTABLE 	12 12 -9	; "AliveTracker"
+	68	[-]	SETTABLE 	12 11 -10	; - true
+	69	[-]	FORLOOP  	8 -5	; to 65
+	70	[-]	GETGLOBAL	8 -1	; NeutralMinionCamps
+	71	[-]	GETTABLE 	8 8 0
+	72	[-]	GETTABLE 	8 8 -11	; "GroupsChance"
+	73	[-]	GETTABLE 	8 8 7
+	74	[-]	ADD      	2 2 8
+	75	[-]	FORLOOP  	4 -59	; to 17
+	76	[-]	RETURN   	0 1
+constants (11) for 000002C5AF6DAB30:
+	1	"NeutralMinionCamps"
+	2	"GetRandomIntLua"
+	3	100
+	4	0
+	5	1
+	6	"Groups"
+	7	"GroupDelaySpawnTime"
+	8	false
+	9	"AliveTracker"
+	10	true
+	11	"GroupsChance"
+locals (0) for 000002C5AF6DAB30:
+upvalues (0) for 000002C5AF6DAB30:
+
+function <?:609,674> (220 instructions, 880 bytes at 000002C5AF6DADB0)
+4 params, 19 slots, 0 upvalues, 0 locals, 41 constants, 0 functions
+	1	[-]	LOADBOOL 	4 1 0
+	2	[-]	LOADK    	5 -1	; 0
+	3	[-]	GETGLOBAL	6 -2	; HasUnitTag
+	4	[-]	MOVE     	7 1
+	5	[-]	NEWTABLE 	8 1 0
+	6	[-]	GETGLOBAL	9 -3	; UnitTagIndicies
+	7	[-]	GETTABLE 	9 9 -4	; "Monster_Epic"
+	8	[-]	SETLIST  	8 1 1	; 1
+	9	[-]	CALL     	6 3 2
+	10	[-]	TEST     	6 0 0
+	11	[-]	JMP      	132	; to 144
+	12	[-]	GETGLOBAL	6 -5	; GetUnitSkinName
+	13	[-]	MOVE     	7 1
+	14	[-]	CALL     	6 2 2
+	15	[-]	EQ       	1 6 -6	; - "SRU_Dragon_Air"
+	16	[-]	JMP      	6	; to 23
+	17	[-]	EQ       	1 6 -7	; - "SRU_Dragon_Fire"
+	18	[-]	JMP      	4	; to 23
+	19	[-]	EQ       	1 6 -8	; - "SRU_Dragon_Water"
+	20	[-]	JMP      	2	; to 23
+	21	[-]	EQ       	0 6 -9	; - "SRU_Dragon_Earth"
+	22	[-]	JMP      	114	; to 137
+	23	[-]	GETGLOBAL	7 -11	; GetGameTime
+	24	[-]	CALL     	7 1 2
+	25	[-]	GETGLOBAL	8 -12	; NeutralMinionCamps
+	26	[-]	GETGLOBAL	9 -13	; DRAGON_CAMP_INDEX
+	27	[-]	GETTABLE 	8 8 9
+	28	[-]	GETTABLE 	8 8 -14	; "GroupsRespawnTime"
+	29	[-]	ADD      	7 7 8
+	30	[-]	SETGLOBAL	7 -10	; nextSpawnTime
+	31	[-]	GETGLOBAL	7 -10	; nextSpawnTime
+	32	[-]	GETGLOBAL	8 -15	; ELDER_DRAGON_SPAWN_TIME
+	33	[-]	LT       	0 8 7
+	34	[-]	JMP      	42	; to 77
+	35	[-]	GETGLOBAL	7 -12	; NeutralMinionCamps
+	36	[-]	GETGLOBAL	8 -13	; DRAGON_CAMP_INDEX
+	37	[-]	GETTABLE 	7 7 8
+	38	[-]	GETGLOBAL	8 -17	; HelperDragonProbTableGenerate
+	39	[-]	LOADK    	9 -18	; 5
+	40	[-]	CALL     	8 2 2
+	41	[-]	SETTABLE 	7 -16 8	; "GroupsChance" -
+	42	[-]	GETGLOBAL	7 -19	; SetWorldVar
+	43	[-]	LOADK    	8 -20	; "DragonFlavorIndex"
+	44	[-]	LOADK    	9 -21	; -1
+	45	[-]	CALL     	7 3 1
+	46	[-]	GETGLOBAL	7 -12	; NeutralMinionCamps
+	47	[-]	GETGLOBAL	8 -13	; DRAGON_CAMP_INDEX
+	48	[-]	GETTABLE 	7 7 8
+	49	[-]	GETGLOBAL	8 -23	; DragonTypeToDragonIconName
+	50	[-]	LOADK    	9 -18	; 5
+	51	[-]	CALL     	8 2 2
+	52	[-]	SETTABLE 	7 -22 8	; "MinimapIcon" -
+	53	[-]	GETGLOBAL	7 -24	; UpdateNeutralCampNextSpawnType
+	54	[-]	GETGLOBAL	8 -25	; DragonTypeToDragonBaseName
+	55	[-]	LOADK    	9 -18	; 5
+	56	[-]	CALL     	8 2 2
+	57	[-]	GETGLOBAL	9 -13	; DRAGON_CAMP_INDEX
+	58	[-]	CALL     	7 3 1
+	59	[-]	GETGLOBAL	7 -12	; NeutralMinionCamps
+	60	[-]	GETGLOBAL	8 -13	; DRAGON_CAMP_INDEX
+	61	[-]	GETTABLE 	7 7 8
+	62	[-]	GETTABLE 	7 7 -26	; "UpdateCampIconOnSpawn"
+	63	[-]	EQ       	0 7 -27	; - true
+	64	[-]	JMP      	79	; to 144
+	65	[-]	GETGLOBAL	7 -28	; UpdateNeutralCampMinimapIcon
+	66	[-]	GETGLOBAL	8 -12	; NeutralMinionCamps
+	67	[-]	GETGLOBAL	9 -13	; DRAGON_CAMP_INDEX
+	68	[-]	GETTABLE 	8 8 9
+	69	[-]	GETTABLE 	8 8 -22	; "MinimapIcon"
+	70	[-]	GETGLOBAL	9 -13	; DRAGON_CAMP_INDEX
+	71	[-]	GETGLOBAL	10 -12	; NeutralMinionCamps
+	72	[-]	GETGLOBAL	11 -13	; DRAGON_CAMP_INDEX
+	73	[-]	GETTABLE 	10 10 11
+	74	[-]	GETTABLE 	10 10 -29	; "CampLevel"
+	75	[-]	CALL     	7 4 1
+	76	[-]	JMP      	67	; to 144
+	77	[-]	GETGLOBAL	7 -20	; DragonFlavorIndex
+	78	[-]	ADD      	7 7 -30	; - 1
+	79	[-]	SETGLOBAL	7 -20	; DragonFlavorIndex
+	80	[-]	GETGLOBAL	7 -19	; SetWorldVar
+	81	[-]	LOADK    	8 -20	; "DragonFlavorIndex"
+	82	[-]	GETGLOBAL	9 -20	; DragonFlavorIndex
+	83	[-]	CALL     	7 3 1
+	84	[-]	GETGLOBAL	7 -12	; NeutralMinionCamps
+	85	[-]	GETGLOBAL	8 -13	; DRAGON_CAMP_INDEX
+	86	[-]	GETTABLE 	7 7 8
+	87	[-]	GETGLOBAL	8 -17	; HelperDragonProbTableGenerate
+	88	[-]	GETGLOBAL	9 -31	; DragonFlavorTable
+	89	[-]	GETGLOBAL	10 -20	; DragonFlavorIndex
+	90	[-]	GETTABLE 	9 9 10
+	91	[-]	CALL     	8 2 2
+	92	[-]	SETTABLE 	7 -16 8	; "GroupsChance" -
+	93	[-]	GETGLOBAL	7 -12	; NeutralMinionCamps
+	94	[-]	GETGLOBAL	8 -13	; DRAGON_CAMP_INDEX
+	95	[-]	GETTABLE 	7 7 8
+	96	[-]	GETGLOBAL	8 -23	; DragonTypeToDragonIconName
+	97	[-]	GETGLOBAL	9 -31	; DragonFlavorTable
+	98	[-]	GETGLOBAL	10 -20	; DragonFlavorIndex
+	99	[-]	GETTABLE 	9 9 10
+	100	[-]	CALL     	8 2 2
+	101	[-]	SETTABLE 	7 -22 8	; "MinimapIcon" -
+	102	[-]	GETGLOBAL	7 -31	; DragonFlavorTable
+	103	[-]	GETGLOBAL	8 -20	; DragonFlavorIndex
+	104	[-]	GETTABLE 	7 7 8
+	105	[-]	GETGLOBAL	8 -31	; DragonFlavorTable
+	106	[-]	GETGLOBAL	9 -20	; DragonFlavorIndex
+	107	[-]	SUB      	9 9 -30	; - 1
+	108	[-]	GETTABLE 	8 8 9
+	109	[-]	EQ       	1 7 8
+	110	[-]	JMP      	33	; to 144
+	111	[-]	GETGLOBAL	7 -24	; UpdateNeutralCampNextSpawnType
+	112	[-]	GETGLOBAL	8 -25	; DragonTypeToDragonBaseName
+	113	[-]	GETGLOBAL	9 -31	; DragonFlavorTable
+	114	[-]	GETGLOBAL	10 -20	; DragonFlavorIndex
+	115	[-]	GETTABLE 	9 9 10
+	116	[-]	CALL     	8 2 2
+	117	[-]	GETGLOBAL	9 -13	; DRAGON_CAMP_INDEX
+	118	[-]	CALL     	7 3 1
+	119	[-]	GETGLOBAL	7 -12	; NeutralMinionCamps
+	120	[-]	GETGLOBAL	8 -13	; DRAGON_CAMP_INDEX
+	121	[-]	GETTABLE 	7 7 8
+	122	[-]	GETTABLE 	7 7 -26	; "UpdateCampIconOnSpawn"
+	123	[-]	EQ       	0 7 -27	; - true
+	124	[-]	JMP      	19	; to 144
+	125	[-]	GETGLOBAL	7 -28	; UpdateNeutralCampMinimapIcon
+	126	[-]	GETGLOBAL	8 -12	; NeutralMinionCamps
+	127	[-]	GETGLOBAL	9 -13	; DRAGON_CAMP_INDEX
+	128	[-]	GETTABLE 	8 8 9
+	129	[-]	GETTABLE 	8 8 -22	; "MinimapIcon"
+	130	[-]	GETGLOBAL	9 -13	; DRAGON_CAMP_INDEX
+	131	[-]	GETGLOBAL	10 -12	; NeutralMinionCamps
+	132	[-]	GETGLOBAL	11 -13	; DRAGON_CAMP_INDEX
+	133	[-]	GETTABLE 	10 10 11
+	134	[-]	GETTABLE 	10 10 -29	; "CampLevel"
+	135	[-]	CALL     	7 4 1
+	136	[-]	JMP      	7	; to 144
+	137	[-]	EQ       	0 6 -32	; - "SRU_Dragon_Elder"
+	138	[-]	JMP      	5	; to 144
+	139	[-]	GETGLOBAL	7 -12	; NeutralMinionCamps
+	140	[-]	GETGLOBAL	8 -13	; DRAGON_CAMP_INDEX
+	141	[-]	GETTABLE 	7 7 8
+	142	[-]	GETGLOBAL	8 -33	; ELDER_DRAGON_SPAWN_RATE
+	143	[-]	SETTABLE 	7 -14 8	; "GroupsRespawnTime" -
+	144	[-]	LOADK    	6 -30	; 1
+	145	[-]	GETGLOBAL	7 -12	; NeutralMinionCamps
+	146	[-]	LEN      	7 7
+	147	[-]	LOADK    	8 -30	; 1
+	148	[-]	FORPREP  	6 29	; to 178
+	149	[-]	LOADK    	10 -30	; 1
+	150	[-]	GETGLOBAL	11 -12	; NeutralMinionCamps
+	151	[-]	GETTABLE 	11 11 9
+	152	[-]	GETTABLE 	11 11 -34	; "UniqueNames"
+	153	[-]	LEN      	11 11
+	154	[-]	LOADK    	12 -30	; 1
+	155	[-]	FORPREP  	10 21	; to 177
+	156	[-]	LOADK    	14 -30	; 1
+	157	[-]	GETGLOBAL	15 -12	; NeutralMinionCamps
+	158	[-]	GETTABLE 	15 15 9
+	159	[-]	GETTABLE 	15 15 -34	; "UniqueNames"
+	160	[-]	GETTABLE 	15 15 13
+	161	[-]	LEN      	15 15
+	162	[-]	LOADK    	16 -30	; 1
+	163	[-]	FORPREP  	14 12	; to 176
+	164	[-]	GETGLOBAL	18 -12	; NeutralMinionCamps
+	165	[-]	GETTABLE 	18 18 9
+	166	[-]	GETTABLE 	18 18 -34	; "UniqueNames"
+	167	[-]	GETTABLE 	18 18 13
+	168	[-]	GETTABLE 	18 18 17
+	169	[-]	EQ       	0 18 0
+	170	[-]	JMP      	5	; to 176
+	171	[-]	MOVE     	5 9
+	172	[-]	GETGLOBAL	18 -12	; NeutralMinionCamps
+	173	[-]	GETTABLE 	18 18 9
+	174	[-]	GETTABLE 	18 18 -35	; "AliveTracker"
+	175	[-]	SETTABLE 	18 17 -36	; - false
+	176	[-]	FORLOOP  	14 -13	; to 164
+	177	[-]	FORLOOP  	10 -22	; to 156
+	178	[-]	FORLOOP  	6 -30	; to 149
+	179	[-]	LT       	0 -1 5	; 0 -
+	180	[-]	JMP      	39	; to 220
+	181	[-]	LOADK    	6 -30	; 1
+	182	[-]	GETGLOBAL	7 -12	; NeutralMinionCamps
+	183	[-]	GETTABLE 	7 7 5
+	184	[-]	GETTABLE 	7 7 -35	; "AliveTracker"
+	185	[-]	LEN      	7 7
+	186	[-]	LOADK    	8 -30	; 1
+	187	[-]	FORPREP  	6 7	; to 195
+	188	[-]	GETGLOBAL	10 -12	; NeutralMinionCamps
+	189	[-]	GETTABLE 	10 10 5
+	190	[-]	GETTABLE 	10 10 -35	; "AliveTracker"
+	191	[-]	GETTABLE 	10 10 9
+	192	[-]	EQ       	0 10 -27	; - true
+	193	[-]	JMP      	1	; to 195
+	194	[-]	LOADBOOL 	4 0 0
+	195	[-]	FORLOOP  	6 -8	; to 188
+	196	[-]	EQ       	0 4 -27	; - true
+	197	[-]	JMP      	22	; to 220
+	198	[-]	GETGLOBAL	6 -37	; InitNeutralMinionTimer
+	199	[-]	GETGLOBAL	7 -12	; NeutralMinionCamps
+	200	[-]	GETTABLE 	7 7 5
+	201	[-]	GETTABLE 	7 7 -38	; "Timer"
+	202	[-]	GETGLOBAL	8 -12	; NeutralMinionCamps
+	203	[-]	GETTABLE 	8 8 5
+	204	[-]	GETTABLE 	8 8 -39	; "TimerType"
+	205	[-]	GETGLOBAL	9 -12	; NeutralMinionCamps
+	206	[-]	GETTABLE 	9 9 5
+	207	[-]	GETTABLE 	9 9 -14	; "GroupsRespawnTime"
+	208	[-]	GETGLOBAL	10 -12	; NeutralMinionCamps
+	209	[-]	GETTABLE 	10 10 5
+	210	[-]	GETTABLE 	10 10 -40	; "SpawnDuration"
+	211	[-]	SUB      	9 9 10
+	212	[-]	GETGLOBAL	10 -12	; NeutralMinionCamps
+	213	[-]	GETTABLE 	10 10 5
+	214	[-]	GETTABLE 	10 10 -40	; "SpawnDuration"
+	215	[-]	LOADBOOL 	11 0 0
+	216	[-]	GETGLOBAL	12 -12	; NeutralMinionCamps
+	217	[-]	GETTABLE 	12 12 5
+	218	[-]	GETTABLE 	12 12 -41	; "StopSpawnTime"
+	219	[-]	CALL     	6 7 1
+	220	[-]	RETURN   	0 1
+constants (41) for 000002C5AF6DADB0:
+	1	0
+	2	"HasUnitTag"
+	3	"UnitTagIndicies"
+	4	"Monster_Epic"
+	5	"GetUnitSkinName"
+	6	"SRU_Dragon_Air"
+	7	"SRU_Dragon_Fire"
+	8	"SRU_Dragon_Water"
+	9	"SRU_Dragon_Earth"
+	10	"nextSpawnTime"
+	11	"GetGameTime"
+	12	"NeutralMinionCamps"
+	13	"DRAGON_CAMP_INDEX"
+	14	"GroupsRespawnTime"
+	15	"ELDER_DRAGON_SPAWN_TIME"
+	16	"GroupsChance"
+	17	"HelperDragonProbTableGenerate"
+	18	5
+	19	"SetWorldVar"
+	20	"DragonFlavorIndex"
+	21	-1
+	22	"MinimapIcon"
+	23	"DragonTypeToDragonIconName"
+	24	"UpdateNeutralCampNextSpawnType"
+	25	"DragonTypeToDragonBaseName"
+	26	"UpdateCampIconOnSpawn"
+	27	true
+	28	"UpdateNeutralCampMinimapIcon"
+	29	"CampLevel"
+	30	1
+	31	"DragonFlavorTable"
+	32	"SRU_Dragon_Elder"
+	33	"ELDER_DRAGON_SPAWN_RATE"
+	34	"UniqueNames"
+	35	"AliveTracker"
+	36	false
+	37	"InitNeutralMinionTimer"
+	38	"Timer"
+	39	"TimerType"
+	40	"SpawnDuration"
+	41	"StopSpawnTime"
+locals (0) for 000002C5AF6DADB0:
+upvalues (0) for 000002C5AF6DADB0:
+
+function <?:677,686> (16 instructions, 64 bytes at 000002C5AF6DBC60)
+1 param, 6 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	NEWTABLE 	1 0 0
+	2	[-]	SETGLOBAL	1 -1	; returnTable
+	3	[-]	LOADK    	1 -2	; 1
+	4	[-]	LOADK    	2 -3	; 5
+	5	[-]	LOADK    	3 -2	; 1
+	6	[-]	FORPREP  	1 6	; to 13
+	7	[-]	GETGLOBAL	5 -1	; returnTable
+	8	[-]	SETTABLE 	5 4 -4	; - 0
+	9	[-]	EQ       	0 4 0
+	10	[-]	JMP      	2	; to 13
+	11	[-]	GETGLOBAL	5 -1	; returnTable
+	12	[-]	SETTABLE 	5 4 -5	; - 100
+	13	[-]	FORLOOP  	1 -7	; to 7
+	14	[-]	GETGLOBAL	1 -1	; returnTable
+	15	[-]	RETURN   	1 2
+	16	[-]	RETURN   	0 1
+constants (5) for 000002C5AF6DBC60:
+	1	"returnTable"
+	2	1
+	3	5
+	4	0
+	5	100
+locals (0) for 000002C5AF6DBC60:
+upvalues (0) for 000002C5AF6DBC60:
+
+function <?:689,700> (22 instructions, 88 bytes at 000002C5AF6DBCE0)
+2 params, 14 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	LEN      	2 0
+	2	[-]	LOADNIL  	3 3
+	3	[-]	LOADK    	4 -1	; 1
+	4	[-]	MOVE     	5 1
+	5	[-]	LOADK    	6 -1	; 1
+	6	[-]	FORPREP  	4 13	; to 20
+	7	[-]	MOVE     	8 2
+	8	[-]	LOADK    	9 -2	; 2
+	9	[-]	LOADK    	10 -3	; -1
+	10	[-]	FORPREP  	8 8	; to 19
+	11	[-]	GETGLOBAL	12 -4	; GetRandomIntLua
+	12	[-]	MOVE     	13 11
+	13	[-]	CALL     	12 2 2
+	14	[-]	MOVE     	3 12
+	15	[-]	GETTABLE 	12 0 3
+	16	[-]	GETTABLE 	13 0 11
+	17	[-]	SETTABLE 	0 3 13
+	18	[-]	SETTABLE 	0 11 12
+	19	[-]	FORLOOP  	8 -9	; to 11
+	20	[-]	FORLOOP  	4 -14	; to 7
+	21	[-]	RETURN   	0 2
+	22	[-]	RETURN   	0 1
+constants (4) for 000002C5AF6DBCE0:
+	1	1
+	2	2
+	3	-1
+	4	"GetRandomIntLua"
+locals (0) for 000002C5AF6DBCE0:
+upvalues (0) for 000002C5AF6DBCE0:
+
+function <?:702,721> (25 instructions, 100 bytes at 000002C5AF6DC570)
+1 param, 5 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADK    	1 -1	; ""
+	2	[-]	EQ       	0 0 -2	; - 1
+	3	[-]	JMP      	2	; to 6
+	4	[-]	LOADK    	1 -3	; "Air"
+	5	[-]	JMP      	15	; to 21
+	6	[-]	EQ       	0 0 -4	; - 2
+	7	[-]	JMP      	2	; to 10
+	8	[-]	LOADK    	1 -5	; "Fire"
+	9	[-]	JMP      	11	; to 21
+	10	[-]	EQ       	0 0 -6	; - 3
+	11	[-]	JMP      	2	; to 14
+	12	[-]	LOADK    	1 -7	; "Water"
+	13	[-]	JMP      	7	; to 21
+	14	[-]	EQ       	0 0 -8	; - 4
+	15	[-]	JMP      	2	; to 18
+	16	[-]	LOADK    	1 -9	; "Earth"
+	17	[-]	JMP      	3	; to 21
+	18	[-]	EQ       	0 0 -10	; - 5
+	19	[-]	JMP      	1	; to 21
+	20	[-]	LOADK    	1 -11	; "Elder"
+	21	[-]	LOADK    	3 -12	; "Dragon"
+	22	[-]	MOVE     	4 1
+	23	[-]	CONCAT   	2 3 4
+	24	[-]	RETURN   	2 2
+	25	[-]	RETURN   	0 1
+constants (12) for 000002C5AF6DC570:
+	1	""
+	2	1
+	3	"Air"
+	4	2
+	5	"Fire"
+	6	3
+	7	"Water"
+	8	4
+	9	"Earth"
+	10	5
+	11	"Elder"
+	12	"Dragon"
+locals (0) for 000002C5AF6DC570:
+upvalues (0) for 000002C5AF6DC570:
+
+function <?:723,732> (11 instructions, 44 bytes at 000002C5AF6D64A0)
+1 param, 4 slots, 0 upvalues, 0 locals, 3 constants, 0 functions
+	1	[-]	GETGLOBAL	2 -1	; DragonTypeToDragonBaseName
+	2	[-]	MOVE     	3 0
+	3	[-]	CALL     	2 2 2
+	4	[-]	MOVE     	1 2
+	5	[-]	EQ       	1 1 -2	; - "Dragon"
+	6	[-]	JMP      	3	; to 10
+	7	[-]	MOVE     	2 1
+	8	[-]	LOADK    	3 -3	; "Minimap"
+	9	[-]	CONCAT   	1 2 3
+	10	[-]	RETURN   	1 2
+	11	[-]	RETURN   	0 1
+constants (3) for 000002C5AF6D64A0:
+	1	"DragonTypeToDragonBaseName"
+	2	"Dragon"
+	3	"Minimap"
+locals (0) for 000002C5AF6D64A0:
+upvalues (0) for 000002C5AF6D64A0:
+
+function <?:735,751> (50 instructions, 200 bytes at 000002C5AF6D6520)
+1 param, 5 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; DragonFlavorIndex
+	2	[-]	LT       	0 1 -2	; - 1
+	3	[-]	JMP      	1	; to 5
+	4	[-]	RETURN   	0 1
+	5	[-]	GETGLOBAL	1 -3	; NeutralMinionCamps
+	6	[-]	GETGLOBAL	2 -4	; DRAGON_CAMP_INDEX
+	7	[-]	GETTABLE 	1 1 2
+	8	[-]	GETTABLE 	1 1 -5	; "AliveTracker"
+	9	[-]	GETTABLE 	1 1 -2	; 1
+	10	[-]	EQ       	0 1 -6	; - true
+	11	[-]	JMP      	22	; to 34
+	12	[-]	GETGLOBAL	1 -7	; DragonFlavorTable
+	13	[-]	GETGLOBAL	2 -1	; DragonFlavorIndex
+	14	[-]	ADD      	2 2 -2	; - 1
+	15	[-]	SETTABLE 	1 2 0
+	16	[-]	GETGLOBAL	1 -8	; SetWorldVar
+	17	[-]	LOADK    	2 -1	; "DragonFlavorIndex"
+	18	[-]	GETGLOBAL	3 -1	; DragonFlavorIndex
+	19	[-]	CALL     	1 3 1
+	20	[-]	GETGLOBAL	1 -8	; SetWorldVar
+	21	[-]	LOADK    	2 -7	; "DragonFlavorTable"
+	22	[-]	GETGLOBAL	3 -7	; DragonFlavorTable
+	23	[-]	CALL     	1 3 1
+	24	[-]	GETGLOBAL	1 -3	; NeutralMinionCamps
+	25	[-]	GETGLOBAL	2 -4	; DRAGON_CAMP_INDEX
+	26	[-]	GETTABLE 	1 1 2
+	27	[-]	GETGLOBAL	2 -10	; HelperDragonProbTableGenerate
+	28	[-]	GETGLOBAL	3 -7	; DragonFlavorTable
+	29	[-]	GETGLOBAL	4 -1	; DragonFlavorIndex
+	30	[-]	GETTABLE 	3 3 4
+	31	[-]	CALL     	2 2 2
+	32	[-]	SETTABLE 	1 -9 2	; "GroupsChance" -
+	33	[-]	JMP      	16	; to 50
+	34	[-]	GETGLOBAL	1 -7	; DragonFlavorTable
+	35	[-]	GETGLOBAL	2 -1	; DragonFlavorIndex
+	36	[-]	SETTABLE 	1 2 0
+	37	[-]	GETGLOBAL	1 -8	; SetWorldVar
+	38	[-]	LOADK    	2 -7	; "DragonFlavorTable"
+	39	[-]	GETGLOBAL	3 -7	; DragonFlavorTable
+	40	[-]	CALL     	1 3 1
+	41	[-]	GETGLOBAL	1 -3	; NeutralMinionCamps
+	42	[-]	GETGLOBAL	2 -4	; DRAGON_CAMP_INDEX
+	43	[-]	GETTABLE 	1 1 2
+	44	[-]	GETGLOBAL	2 -10	; HelperDragonProbTableGenerate
+	45	[-]	GETGLOBAL	3 -7	; DragonFlavorTable
+	46	[-]	GETGLOBAL	4 -1	; DragonFlavorIndex
+	47	[-]	GETTABLE 	3 3 4
+	48	[-]	CALL     	2 2 2
+	49	[-]	SETTABLE 	1 -9 2	; "GroupsChance" -
+	50	[-]	RETURN   	0 1
+constants (10) for 000002C5AF6D6520:
+	1	"DragonFlavorIndex"
+	2	1
+	3	"NeutralMinionCamps"
+	4	"DRAGON_CAMP_INDEX"
+	5	"AliveTracker"
+	6	true
+	7	"DragonFlavorTable"
+	8	"SetWorldVar"
+	9	"GroupsChance"
+	10	"HelperDragonProbTableGenerate"
+locals (0) for 000002C5AF6D6520:
+upvalues (0) for 000002C5AF6D6520:

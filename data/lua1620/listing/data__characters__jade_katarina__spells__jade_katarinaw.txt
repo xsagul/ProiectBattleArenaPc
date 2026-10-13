@@ -1,0 +1,55 @@
+
+main <?:0,0> (29 instructions, 116 bytes at 000001E44C0A3600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 20 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/UX/Jade/S3Icons/SameSized/Jade_Katarina_KillerInstincts.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "Jade_KatarinaW"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; "r:Jade_Katarina_W_Buf_Hands"
+	12	[-]	SETGLOBAL	0 -8	; AutoBuffActivateEffect
+	13	[-]	LOADK    	0 -11	; "L_Buffbone_Glb_Hand_Loc"
+	14	[-]	SETGLOBAL	0 -10	; AutoBuffActivateAttachBoneName
+	15	[-]	LOADK    	0 -9	; "r:Jade_Katarina_W_Buf_Hands"
+	16	[-]	SETGLOBAL	0 -12	; AutoBuffActivateEffect2
+	17	[-]	LOADK    	0 -14	; "R_Buffbone_Glb_Hand_Loc"
+	18	[-]	SETGLOBAL	0 -13	; AutoBuffActivateAttachBoneName2
+	19	[-]	LOADK    	0 -16	; 1
+	20	[-]	SETGLOBAL	0 -15	; SpellToggleSlot
+	21	[-]	LOADK    	0 -16	; 1
+	22	[-]	SETGLOBAL	0 -17	; SpellDamageRatio
+	23	[-]	NEWTABLE 	0 1 0
+	24	[-]	LOADK    	1 -19	; "XmasJade_Katarina"
+	25	[-]	SETLIST  	0 1 1	; 1
+	26	[-]	SETGLOBAL	0 -18	; SpellFXOverrideSkins
+	27	[-]	LOADBOOL 	0 1 0
+	28	[-]	SETGLOBAL	0 -20	; IsDamagingSpell
+	29	[-]	RETURN   	0 1
+constants (20) for 000001E44C0A3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/UX/Jade/S3Icons/SameSized/Jade_Katarina_KillerInstincts.dds"
+	6	"BuffName"
+	7	"Jade_KatarinaW"
+	8	"AutoBuffActivateEffect"
+	9	"r:Jade_Katarina_W_Buf_Hands"
+	10	"AutoBuffActivateAttachBoneName"
+	11	"L_Buffbone_Glb_Hand_Loc"
+	12	"AutoBuffActivateEffect2"
+	13	"AutoBuffActivateAttachBoneName2"
+	14	"R_Buffbone_Glb_Hand_Loc"
+	15	"SpellToggleSlot"
+	16	1
+	17	"SpellDamageRatio"
+	18	"SpellFXOverrideSkins"
+	19	"XmasJade_Katarina"
+	20	"IsDamagingSpell"
+locals (0) for 000001E44C0A3600:
+upvalues (0) for 000001E44C0A3600:

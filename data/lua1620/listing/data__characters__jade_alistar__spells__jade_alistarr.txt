@@ -1,0 +1,34 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 00000176906D3600)
+0+ params, 6 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "Minotaur_Jade_Alistar_FerociousHowl.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Jade_AlistarR"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	NEWTABLE 	0 5 0
+	10	[-]	LOADK    	1 -8	; 120
+	11	[-]	LOADK    	2 -9	; 100
+	12	[-]	LOADK    	3 -10	; 80
+	13	[-]	LOADK    	4 -11	; 10
+	14	[-]	LOADK    	5 -11	; 10
+	15	[-]	SETLIST  	0 5 1	; 1
+	16	[-]	SETGLOBAL	0 -7	; AutoCooldownByLevel
+	17	[-]	RETURN   	0 1
+constants (11) for 00000176906D3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"Minotaur_Jade_Alistar_FerociousHowl.dds"
+	5	"BuffName"
+	6	"Jade_AlistarR"
+	7	"AutoCooldownByLevel"
+	8	120
+	9	100
+	10	80
+	11	10
+locals (0) for 00000176906D3600:
+upvalues (0) for 00000176906D3600:

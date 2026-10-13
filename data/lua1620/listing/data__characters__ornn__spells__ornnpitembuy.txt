@@ -1,0 +1,20 @@
+
+main <?:0,0> (9 instructions, 36 bytes at 000002383AE635C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; 0.5
+	6	[-]	SETGLOBAL	0 -3	; SpellDamageRatio
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -5	; IsDamagingSpell
+	9	[-]	RETURN   	0 1
+constants (5) for 000002383AE635C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"SpellDamageRatio"
+	4	0.5
+	5	"IsDamagingSpell"
+locals (0) for 000002383AE635C0:
+upvalues (0) for 000002383AE635C0:

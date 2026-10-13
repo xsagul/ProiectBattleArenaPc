@@ -37,6 +37,71 @@ TEB = 0x40000000
 STOP = 0x0BAD0000  # return address: emulation ends when it is reached
 
 
+PATCH = '13.3'
+PTR = 4
+WIRE_SKIP = 6                     # bytes of the reader's input before the body: u16 id + u32 net id
+GETBITS, GETBITS_RET = 0x91cae0, 0x91cb44      # header bits: (buffer, bit position, width) on the stack -> al
+GETBITS_READS = (0x91cb10, 0x91cb30)           # its own loads of header bytes
+_fs = []
+
+
+def fn_of(r):
+    """start of the function that holds rva r (client-src/functions.txt)"""
+    import bisect
+    if not _fs:
+        for line in open(os.path.join(RES, '..', '..', 'client-src', 'functions.txt')):
+            try:
+                _fs.append(int(line.split()[0], 16))
+            except ValueError:
+                pass
+        _fs.sort()
+    return _fs[bisect.bisect_right(_fs, r) - 1]
+
+
+def ip(u): return u.reg_read(UC_X86_REG_EIP) - BASE
+def retval(u): return u.reg_read(UC_X86_REG_EAX)
+
+
+def getbits_call(u):
+    """at the helper's first instruction -> (bit position, width, caller rva)"""
+    ret, buf, pos, width = struct.unpack('<IIII', bytes(u.mem_read(u.reg_read(UC_X86_REG_ESP), 16)))
+    return pos & 0xff, width & 0xff, ret - BASE
+
+
+
+def sp(u): return u.reg_read(UC_X86_REG_ESP)
+def read_ptr(u, a): return struct.unpack('<I', bytes(u.mem_read(a, 4)))[0]
+def pack_ptr(v): return struct.pack('<I', v & 0xffffffff)
+def ptr_of(b, off=0): return struct.unpack_from('<I', b, off)[0]
+def getbits_buf(u): return read_ptr(u, sp(u) + 4)
+def wire(pid, netid, body): return struct.pack('<HI', pid, netid) + body
+
+
+def reader_entry(u):
+    """at a struct reader's first instruction -> (return address, object, cursor pointer, end)"""
+    ret, cur, end = struct.unpack('<III', bytes(u.mem_read(sp(u), 12)))
+    return ret, u.reg_read(UC_X86_REG_ECX), cur, end
+
+
+def entry_kind(u, fn, is_cursor):
+    """a struct reader gets (this = object, cursor, end); a helper gets (destination, cursor, end)"""
+    a1, a2 = struct.unpack('<II', bytes(u.mem_read(sp(u) + 4, 8)))
+    return 'reader' if is_cursor(a1) else 'helper' if is_cursor(a2) else None
+
+
+def helper_cursor(u, is_cursor=None): return read_ptr(u, sp(u) + 8)
+
+
+
+EMPTY_TEXT = 0x01532fb2           # where an empty text's data pointer points (a constant in the image)
+
+
+def call_helper(emu, h, dst, cur, end):
+    """a field helper: (destination, cursor, end) on the stack"""
+    return emu.call(h, 0, [dst, cur, end])
+
+
+
 def table():
     t = {}
     for line in open(os.path.join(RES, 'packet_table.txt')):

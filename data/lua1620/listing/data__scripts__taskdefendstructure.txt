@@ -1,0 +1,210 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 000001C533A73590)
+0+ params, 2 slots, 0 upvalues, 0 locals, 12 constants, 4 functions
+	1	[-]	LOADK    	0 -2	; 22500
+	2	[-]	SETGLOBAL	0 -1	; MIN_FIGHT_DIST_SQ
+	3	[-]	LOADK    	0 -4	; 562500
+	4	[-]	SETGLOBAL	0 -3	; MAX_FIGHT_DIST_SQ
+	5	[-]	LOADK    	0 -6	; 0
+	6	[-]	SETGLOBAL	0 -5	; AI_MOVE
+	7	[-]	LOADK    	0 -8	; 1
+	8	[-]	SETGLOBAL	0 -7	; AI_ATTACK
+	9	[-]	CLOSURE  	0 0	; 000001C533A736E0
+	10	[-]	SETGLOBAL	0 -9	; UpdatePriority
+	11	[-]	CLOSURE  	0 1	; 000001C533A739B0
+	12	[-]	SETGLOBAL	0 -10	; BeginTask
+	13	[-]	CLOSURE  	0 2	; 000001C533A71A70
+	14	[-]	SETGLOBAL	0 -11	; Tick
+	15	[-]	CLOSURE  	0 3	; 000001C533A73F50
+	16	[-]	SETGLOBAL	0 -12	; OnTargetLost
+	17	[-]	RETURN   	0 1
+constants (12) for 000001C533A73590:
+	1	"MIN_FIGHT_DIST_SQ"
+	2	22500
+	3	"MAX_FIGHT_DIST_SQ"
+	4	562500
+	5	"AI_MOVE"
+	6	0
+	7	"AI_ATTACK"
+	8	1
+	9	"UpdatePriority"
+	10	"BeginTask"
+	11	"Tick"
+	12	"OnTargetLost"
+locals (0) for 000001C533A73590:
+upvalues (0) for 000001C533A73590:
+
+function <?:10,51> (55 instructions, 220 bytes at 000001C533A736E0)
+1 param, 13 slots, 0 upvalues, 0 locals, 21 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetObject
+	2	[-]	GETTABLE 	2 0 -2	; "StructureID"
+	3	[-]	CALL     	1 2 2
+	4	[-]	EQ       	0 1 -3	; - nil
+	5	[-]	JMP      	3	; to 9
+	6	[-]	SETTABLE 	0 -4 -5	; "Done" true
+	7	[-]	SETTABLE 	0 -6 -7	; "Priority" 0
+	8	[-]	RETURN   	0 1
+	9	[-]	LOADK    	2 -8	; 0.3
+	10	[-]	LOADK    	3 -9	; 0.25
+	11	[-]	LOADK    	4 -10	; 0.5
+	12	[-]	LOADK    	5 -11	; 20
+	13	[-]	GETGLOBAL	6 -12	; GetTime
+	14	[-]	CALL     	6 1 2
+	15	[-]	GETGLOBAL	7 -13	; GetLastTookDamageTime
+	16	[-]	MOVE     	8 1
+	17	[-]	CALL     	7 2 2
+	18	[-]	SUB      	6 6 7
+	19	[-]	LE       	0 -7 6	; 0 -
+	20	[-]	JMP      	33	; to 54
+	21	[-]	LE       	0 6 5
+	22	[-]	JMP      	31	; to 54
+	23	[-]	GETGLOBAL	7 -14	; GetDist
+	24	[-]	GETGLOBAL	8 -15	; GetPos
+	25	[-]	CALL     	8 1 2
+	26	[-]	GETGLOBAL	9 -15	; GetPos
+	27	[-]	MOVE     	10 1
+	28	[-]	CALL     	9 2 0
+	29	[-]	CALL     	7 0 2
+	30	[-]	GETGLOBAL	8 -16	; math
+	31	[-]	GETTABLE 	8 8 -17	; "sqrt"
+	32	[-]	GETGLOBAL	9 -18	; GetMaxTravelDistSquared
+	33	[-]	CALL     	9 1 0
+	34	[-]	CALL     	8 0 2
+	35	[-]	SUB      	9 8 7
+	36	[-]	DIV      	9 9 8
+	37	[-]	DIV      	10 6 5
+	38	[-]	SUB      	10 -19 10	; 1 -
+	39	[-]	MUL      	11 7 7
+	40	[-]	GETGLOBAL	12 -20	; MAX_FIGHT_DIST_SQ
+	41	[-]	LT       	0 11 12
+	42	[-]	JMP      	2	; to 45
+	43	[-]	MUL      	2 2 -10	; - 0.5
+	44	[-]	JMP      	5	; to 50
+	45	[-]	MUL      	11 7 7
+	46	[-]	GETGLOBAL	12 -21	; MIN_FIGHT_DIST_SQ
+	47	[-]	LT       	0 11 12
+	48	[-]	JMP      	1	; to 50
+	49	[-]	LOADK    	2 -7	; 0
+	50	[-]	MUL      	11 2 9
+	51	[-]	MUL      	11 11 10
+	52	[-]	SETTABLE 	0 -6 11	; "Priority" -
+	53	[-]	JMP      	1	; to 55
+	54	[-]	SETTABLE 	0 -6 -7	; "Priority" 0
+	55	[-]	RETURN   	0 1
+constants (21) for 000001C533A736E0:
+	1	"GetObject"
+	2	"StructureID"
+	3	nil
+	4	"Done"
+	5	true
+	6	"Priority"
+	7	0
+	8	0.3
+	9	0.25
+	10	0.5
+	11	20
+	12	"GetTime"
+	13	"GetLastTookDamageTime"
+	14	"GetDist"
+	15	"GetPos"
+	16	"math"
+	17	"sqrt"
+	18	"GetMaxTravelDistSquared"
+	19	1
+	20	"MAX_FIGHT_DIST_SQ"
+	21	"MIN_FIGHT_DIST_SQ"
+locals (0) for 000001C533A736E0:
+upvalues (0) for 000001C533A736E0:
+
+function <?:53,59> (20 instructions, 80 bytes at 000001C533A739B0)
+1 param, 6 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetObject
+	2	[-]	GETTABLE 	2 0 -2	; "StructureID"
+	3	[-]	CALL     	1 2 2
+	4	[-]	GETGLOBAL	2 -3	; Say
+	5	[-]	LOADK    	3 -4	; "BeginTask: Defend "
+	6	[-]	GETGLOBAL	4 -5	; objGetName
+	7	[-]	MOVE     	5 1
+	8	[-]	CALL     	4 2 2
+	9	[-]	CONCAT   	3 3 4
+	10	[-]	CALL     	2 2 1
+	11	[-]	GETGLOBAL	2 -6	; TurnOffAutoAttack
+	12	[-]	GETGLOBAL	3 -7	; STOPREASON_TARGET_LOST
+	13	[-]	CALL     	2 2 1
+	14	[-]	GETGLOBAL	2 -8	; SetStateAndMove
+	15	[-]	GETGLOBAL	3 -9	; AI_MOVE
+	16	[-]	GETGLOBAL	4 -10	; GetPos
+	17	[-]	MOVE     	5 1
+	18	[-]	CALL     	4 2 0
+	19	[-]	CALL     	2 0 1
+	20	[-]	RETURN   	0 1
+constants (10) for 000001C533A739B0:
+	1	"GetObject"
+	2	"StructureID"
+	3	"Say"
+	4	"BeginTask: Defend "
+	5	"objGetName"
+	6	"TurnOffAutoAttack"
+	7	"STOPREASON_TARGET_LOST"
+	8	"SetStateAndMove"
+	9	"AI_MOVE"
+	10	"GetPos"
+locals (0) for 000001C533A739B0:
+upvalues (0) for 000001C533A739B0:
+
+function <?:61,74> (34 instructions, 136 bytes at 000001C533A71A70)
+1 param, 7 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetObject
+	2	[-]	GETTABLE 	2 0 -2	; "StructureID"
+	3	[-]	CALL     	1 2 2
+	4	[-]	GETGLOBAL	2 -3	; GetDistSquared
+	5	[-]	GETGLOBAL	3 -4	; GetPos
+	6	[-]	MOVE     	4 1
+	7	[-]	CALL     	3 2 2
+	8	[-]	GETGLOBAL	4 -4	; GetPos
+	9	[-]	CALL     	4 1 0
+	10	[-]	CALL     	2 0 2
+	11	[-]	GETGLOBAL	3 -5	; IsMoving
+	12	[-]	CALL     	3 1 2
+	13	[-]	TEST     	3 0 1
+	14	[-]	JMP      	10	; to 25
+	15	[-]	GETGLOBAL	3 -6	; MAX_FIGHT_DIST_SQ
+	16	[-]	LT       	0 3 2
+	17	[-]	JMP      	7	; to 25
+	18	[-]	GETGLOBAL	3 -7	; SetStateAndMove
+	19	[-]	GETGLOBAL	4 -8	; AI_MOVE
+	20	[-]	GETGLOBAL	5 -4	; GetPos
+	21	[-]	MOVE     	6 1
+	22	[-]	CALL     	5 2 0
+	23	[-]	CALL     	3 0 1
+	24	[-]	JMP      	9	; to 34
+	25	[-]	GETGLOBAL	3 -5	; IsMoving
+	26	[-]	CALL     	3 1 2
+	27	[-]	TEST     	3 0 0
+	28	[-]	JMP      	5	; to 34
+	29	[-]	GETGLOBAL	3 -9	; MIN_FIGHT_DIST_SQ
+	30	[-]	LT       	0 2 3
+	31	[-]	JMP      	2	; to 34
+	32	[-]	GETGLOBAL	3 -10	; StopMove
+	33	[-]	CALL     	3 1 1
+	34	[-]	RETURN   	0 1
+constants (10) for 000001C533A71A70:
+	1	"GetObject"
+	2	"StructureID"
+	3	"GetDistSquared"
+	4	"GetPos"
+	5	"IsMoving"
+	6	"MAX_FIGHT_DIST_SQ"
+	7	"SetStateAndMove"
+	8	"AI_MOVE"
+	9	"MIN_FIGHT_DIST_SQ"
+	10	"StopMove"
+locals (0) for 000001C533A71A70:
+upvalues (0) for 000001C533A71A70:
+
+function <?:76,78> (1 instruction, 4 bytes at 000001C533A73F50)
+1 param, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 000001C533A73F50:
+locals (0) for 000001C533A73F50:
+upvalues (0) for 000001C533A73F50:

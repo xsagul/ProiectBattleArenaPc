@@ -1,0 +1,49 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 000001E7609E3600)
+0+ params, 4 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "r:Twitch_R_Weapon_Glow"
+	6	[-]	SETGLOBAL	0 -3	; AutoBuffActivateEffect
+	7	[-]	LOADK    	0 -4	; "r:Twitch_R_Weapon_Glow"
+	8	[-]	SETGLOBAL	0 -5	; AutoBuffActivateEffect2
+	9	[-]	LOADK    	0 -7	; "r_bow"
+	10	[-]	SETGLOBAL	0 -6	; AutoBuffActivateAttachBoneName2
+	11	[-]	LOADK    	0 -4	; "r:Twitch_R_Weapon_Glow"
+	12	[-]	SETGLOBAL	0 -8	; AutoBuffActivateEffect3
+	13	[-]	LOADK    	0 -10	; "L_bow"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName3
+	15	[-]	LOADK    	0 -12	; "r:Twitch_R_Buff"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateEffect4
+	17	[-]	LOADK    	0 -14	; "c_buffbone_glb_layout_loc"
+	18	[-]	SETGLOBAL	0 -13	; AutoBuffActivateAttachBoneName4
+	19	[-]	NEWTABLE 	0 3 0
+	20	[-]	LOADK    	1 -16	; "GangsterTwitch"
+	21	[-]	LOADK    	2 -17	; "PunkTwitch"
+	22	[-]	LOADK    	3 -18	; "TwitchSkin06"
+	23	[-]	SETLIST  	0 3 1	; 1
+	24	[-]	SETGLOBAL	0 -15	; SpellFXOverrideSkins
+	25	[-]	RETURN   	0 1
+constants (18) for 000001E7609E3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"AutoBuffActivateEffect"
+	4	"r:Twitch_R_Weapon_Glow"
+	5	"AutoBuffActivateEffect2"
+	6	"AutoBuffActivateAttachBoneName2"
+	7	"r_bow"
+	8	"AutoBuffActivateEffect3"
+	9	"AutoBuffActivateAttachBoneName3"
+	10	"L_bow"
+	11	"AutoBuffActivateEffect4"
+	12	"r:Twitch_R_Buff"
+	13	"AutoBuffActivateAttachBoneName4"
+	14	"c_buffbone_glb_layout_loc"
+	15	"SpellFXOverrideSkins"
+	16	"GangsterTwitch"
+	17	"PunkTwitch"
+	18	"TwitchSkin06"
+locals (0) for 000001E7609E3600:
+upvalues (0) for 000001E7609E3600:

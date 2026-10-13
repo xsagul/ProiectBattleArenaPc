@@ -1,0 +1,44 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 0000020F02B835F0)
+0+ params, 4 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; CastingBreaksStealth
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Twitch/HUD/Icons2D/Twitch_R.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "TwitchUlt"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	NEWTABLE 	0 3 0
+	12	[-]	LOADK    	1 -9	; 90
+	13	[-]	LOADK    	2 -10	; 75
+	14	[-]	LOADK    	3 -11	; 60
+	15	[-]	SETLIST  	0 3 1	; 1
+	16	[-]	SETGLOBAL	0 -8	; AutoCooldownByLevel
+	17	[-]	NEWTABLE 	0 3 0
+	18	[-]	LOADK    	1 -13	; "GangsterTwitch"
+	19	[-]	LOADK    	2 -14	; "PunkTwitch"
+	20	[-]	LOADK    	3 -15	; "TwitchSkin06"
+	21	[-]	SETLIST  	0 3 1	; 1
+	22	[-]	SETGLOBAL	0 -12	; SpellFXOverrideSkins
+	23	[-]	RETURN   	0 1
+constants (15) for 0000020F02B835F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"CastingBreaksStealth"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Twitch/HUD/Icons2D/Twitch_R.dds"
+	6	"BuffName"
+	7	"TwitchUlt"
+	8	"AutoCooldownByLevel"
+	9	90
+	10	75
+	11	60
+	12	"SpellFXOverrideSkins"
+	13	"GangsterTwitch"
+	14	"PunkTwitch"
+	15	"TwitchSkin06"
+locals (0) for 0000020F02B835F0:
+upvalues (0) for 0000020F02B835F0:

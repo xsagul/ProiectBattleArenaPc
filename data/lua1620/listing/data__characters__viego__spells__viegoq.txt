@@ -1,0 +1,41 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 0000015EC2EA35C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; CastingBreaksStealth
+	7	[-]	LOADK    	0 -5	; 0.4
+	8	[-]	SETGLOBAL	0 -4	; CastTime
+	9	[-]	LOADK    	0 -7	; "ASSETS/Characters/Viego/HUD/Icons2D/Viego_DragonStrike.dds"
+	10	[-]	SETGLOBAL	0 -6	; BuffTextureName
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -9	; "LubuViego"
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	15	[-]	NEWTABLE 	0 1 0
+	16	[-]	LOADK    	1 -9	; "LubuViego"
+	17	[-]	SETLIST  	0 1 1	; 1
+	18	[-]	SETGLOBAL	0 -10	; SpellVOOverrideSkins
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -11	; IsDamagingSpell
+	21	[-]	LOADBOOL 	0 1 0
+	22	[-]	SETGLOBAL	0 -12	; TriggersSpellCasts
+	23	[-]	RETURN   	0 1
+constants (12) for 0000015EC2EA35C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"CastingBreaksStealth"
+	4	"CastTime"
+	5	0.4
+	6	"BuffTextureName"
+	7	"ASSETS/Characters/Viego/HUD/Icons2D/Viego_DragonStrike.dds"
+	8	"SpellFXOverrideSkins"
+	9	"LubuViego"
+	10	"SpellVOOverrideSkins"
+	11	"IsDamagingSpell"
+	12	"TriggersSpellCasts"
+locals (0) for 0000015EC2EA35C0:
+upvalues (0) for 0000015EC2EA35C0:

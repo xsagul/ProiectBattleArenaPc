@@ -1,0 +1,35 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 000001AD6BB035C0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; 4
+	6	[-]	SETGLOBAL	0 -3	; ChannelDuration
+	7	[-]	LOADK    	0 -6	; "ASSETS/Characters/MasterYi/HUD/Icons2D/MasterYi_W.dds"
+	8	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	9	[-]	LOADK    	0 -8	; "Meditate"
+	10	[-]	SETGLOBAL	0 -7	; BuffName
+	11	[-]	NEWTABLE 	0 5 0
+	12	[-]	LOADK    	1 -10	; 50
+	13	[-]	LOADK    	2 -10	; 50
+	14	[-]	LOADK    	3 -10	; 50
+	15	[-]	LOADK    	4 -10	; 50
+	16	[-]	LOADK    	5 -10	; 50
+	17	[-]	SETLIST  	0 5 1	; 1
+	18	[-]	SETGLOBAL	0 -9	; AutoCooldownByLevel
+	19	[-]	RETURN   	0 1
+constants (10) for 000001AD6BB035C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"ChannelDuration"
+	4	4
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/MasterYi/HUD/Icons2D/MasterYi_W.dds"
+	7	"BuffName"
+	8	"Meditate"
+	9	"AutoCooldownByLevel"
+	10	50
+locals (0) for 000001AD6BB035C0:
+upvalues (0) for 000001AD6BB035C0:

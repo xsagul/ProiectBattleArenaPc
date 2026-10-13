@@ -1,0 +1,21 @@
+
+main <?:0,0> (10 instructions, 40 bytes at 0000023FCBFA3610)
+0+ params, 3 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	NEWTABLE 	0 2 0
+	6	[-]	LOADK    	1 -4	; "SurprisePartyFiddlesticks"
+	7	[-]	LOADK    	2 -5	; "FiddlesticksSkin08"
+	8	[-]	SETLIST  	0 2 1	; 1
+	9	[-]	SETGLOBAL	0 -3	; SpellFXOverrideSkins
+	10	[-]	RETURN   	0 1
+constants (5) for 0000023FCBFA3610:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"SpellFXOverrideSkins"
+	4	"SurprisePartyFiddlesticks"
+	5	"FiddlesticksSkin08"
+locals (0) for 0000023FCBFA3610:
+upvalues (0) for 0000023FCBFA3610:

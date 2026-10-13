@@ -1,0 +1,43 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 000001D18B593570)
+0+ params, 2 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ExaltedWithBaronNashor.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "WrathoftheAncients"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "DATA/Particles/MouthFoam.troy"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -10	; "R_jaw"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName
+	13	[-]	LOADK    	0 -8	; "DATA/Particles/MouthFoam.troy"
+	14	[-]	SETGLOBAL	0 -11	; AutoBuffActivateEffect2
+	15	[-]	LOADK    	0 -13	; "L_jaw"
+	16	[-]	SETGLOBAL	0 -12	; AutoBuffActivateAttachBoneName2
+	17	[-]	LOADK    	0 -15	; 0.35
+	18	[-]	SETGLOBAL	0 -14	; SpellDamageRatio
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -16	; IsDamagingSpell
+	21	[-]	RETURN   	0 1
+constants (16) for 000001D18B593570:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ExaltedWithBaronNashor.dds"
+	5	"BuffName"
+	6	"WrathoftheAncients"
+	7	"AutoBuffActivateEffect"
+	8	"DATA/Particles/MouthFoam.troy"
+	9	"AutoBuffActivateAttachBoneName"
+	10	"R_jaw"
+	11	"AutoBuffActivateEffect2"
+	12	"AutoBuffActivateAttachBoneName2"
+	13	"L_jaw"
+	14	"SpellDamageRatio"
+	15	0.35
+	16	"IsDamagingSpell"
+locals (0) for 000001D18B593570:
+upvalues (0) for 000001D18B593570:

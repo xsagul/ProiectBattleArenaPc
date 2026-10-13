@@ -1,0 +1,46 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 000001E5B90835C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; 3
+	10	[-]	SETGLOBAL	0 -5	; ChannelDuration
+	11	[-]	LOADK    	0 -8	; "ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.dds"
+	12	[-]	SETGLOBAL	0 -7	; BuffTextureName
+	13	[-]	LOADK    	0 -10	; "Jade_NunuR"
+	14	[-]	SETGLOBAL	0 -9	; BuffName
+	15	[-]	NEWTABLE 	0 1 0
+	16	[-]	LOADK    	1 -12	; "Jade_NunuBot"
+	17	[-]	SETLIST  	0 1 1	; 1
+	18	[-]	SETGLOBAL	0 -11	; SpellFXOverrideSkins
+	19	[-]	NEWTABLE 	0 1 0
+	20	[-]	LOADK    	1 -14	; ""
+	21	[-]	SETLIST  	0 1 1	; 1
+	22	[-]	SETGLOBAL	0 -13	; SpellVOOverrideSkins
+	23	[-]	LOADBOOL 	0 1 0
+	24	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	25	[-]	RETURN   	0 1
+constants (15) for 000001E5B90835C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"ChannelDuration"
+	6	3
+	7	"BuffTextureName"
+	8	"ASSETS/UX/Jade/S3Icons/SameSized/Yeti_Shatter.dds"
+	9	"BuffName"
+	10	"Jade_NunuR"
+	11	"SpellFXOverrideSkins"
+	12	"Jade_NunuBot"
+	13	"SpellVOOverrideSkins"
+	14	""
+	15	"IsDamagingSpell"
+locals (0) for 000001E5B90835C0:
+upvalues (0) for 000001E5B90835C0:

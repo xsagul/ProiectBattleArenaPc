@@ -4,4 +4,6 @@
 // match: e0a920 _pk7_cb
 // match: e0a9a0 _si_cb
 // match: e0a9c0 _ri_cb
+#define OPENSSL_FILE "crypto\\pkcs7\\pk7_asn1.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/pkcs7/pk7_asn1.c"

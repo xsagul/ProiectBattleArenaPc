@@ -5,4 +5,6 @@
 // match: df0130 _X509_ALGOR_get0
 // match: df0180 _X509_ALGOR_set0
 // match: df0210 _X509_ALGOR_set_md
+#define OPENSSL_FILE "crypto\\asn1\\x_algor.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/asn1/x_algor.c"

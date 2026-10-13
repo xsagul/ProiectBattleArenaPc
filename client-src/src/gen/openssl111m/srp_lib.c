@@ -5,7 +5,11 @@
 // match: de8820 _SRP_Calc_B
 // match: de8930 _SRP_Calc_client_key
 // match: de8b00 _SRP_Calc_server_key
+// match: de8be0 _SRP_Calc_x
 // match: de8dd0 _SRP_Verify_A_mod_N
 // match: de8e40 _SRP_Verify_B_mod_N
 // match: de8eb0 _SRP_check_known_gN_param
+// match: de8f20 _srp_Calc_xy
+#define OPENSSL_FILE "crypto\\srp\\srp_lib.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/srp/srp_lib.c"

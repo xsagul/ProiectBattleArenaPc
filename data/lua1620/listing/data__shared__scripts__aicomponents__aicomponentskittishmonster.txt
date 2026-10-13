@@ -1,0 +1,430 @@
+
+main <?:0,0> (56 instructions, 224 bytes at 000001B1E94334C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 16 constants, 11 functions
+	1	[-]	NEWTABLE 	0 0 2
+	2	[-]	SETTABLE 	0 -2 -3	; "TimerCallbackName" "TimerSkittishMonster"
+	3	[-]	SETTABLE 	0 -4 -5	; "MeleeRange" 350
+	4	[-]	SETGLOBAL	0 -1	; SkittishMonster
+	5	[-]	GETGLOBAL	0 -6	; RegisterForEvent
+	6	[-]	LOADK    	1 -7	; "ComponentInit"
+	7	[-]	GETGLOBAL	2 -1	; SkittishMonster
+	8	[-]	CALL     	0 3 1
+	9	[-]	GETGLOBAL	0 -6	; RegisterForEvent
+	10	[-]	LOADK    	1 -8	; "LeashedCallForHelp"
+	11	[-]	GETGLOBAL	2 -1	; SkittishMonster
+	12	[-]	CALL     	0 3 1
+	13	[-]	GETGLOBAL	0 -6	; RegisterForEvent
+	14	[-]	LOADK    	1 -9	; "ComponentHalt"
+	15	[-]	GETGLOBAL	2 -1	; SkittishMonster
+	16	[-]	CALL     	0 3 1
+	17	[-]	GETGLOBAL	0 -6	; RegisterForEvent
+	18	[-]	LOADK    	1 -10	; "SkittishResume"
+	19	[-]	GETGLOBAL	2 -1	; SkittishMonster
+	20	[-]	CALL     	0 3 1
+	21	[-]	GETGLOBAL	0 -6	; RegisterForEvent
+	22	[-]	LOADK    	1 -11	; "SkittishPause"
+	23	[-]	GETGLOBAL	2 -1	; SkittishMonster
+	24	[-]	CALL     	0 3 1
+	25	[-]	GETGLOBAL	0 -1	; SkittishMonster
+	26	[-]	CLOSURE  	1 0	; 000001B1E94337A0
+	27	[-]	SETTABLE 	0 -7 1	; "ComponentInit" -
+	28	[-]	GETGLOBAL	0 -1	; SkittishMonster
+	29	[-]	CLOSURE  	1 1	; 000001B1E9431990
+	30	[-]	SETTABLE 	0 -12 1	; "Start" -
+	31	[-]	GETGLOBAL	0 -1	; SkittishMonster
+	32	[-]	CLOSURE  	1 2	; 000001B1E9431A10
+	33	[-]	SETTABLE 	0 -10 1	; "SkittishResume" -
+	34	[-]	GETGLOBAL	0 -1	; SkittishMonster
+	35	[-]	CLOSURE  	1 3	; 000001B1E9431AB0
+	36	[-]	SETTABLE 	0 -11 1	; "SkittishPause" -
+	37	[-]	GETGLOBAL	0 -1	; SkittishMonster
+	38	[-]	CLOSURE  	1 4	; 000001B1E9433D80
+	39	[-]	SETTABLE 	0 -13 1	; "Stop" -
+	40	[-]	GETGLOBAL	0 -1	; SkittishMonster
+	41	[-]	CLOSURE  	1 5	; 000001B1E9433E00
+	42	[-]	SETTABLE 	0 -14 1	; "SendMeleeState" -
+	43	[-]	GETGLOBAL	0 -1	; SkittishMonster
+	44	[-]	CLOSURE  	1 6	; 000001B1E9434690
+	45	[-]	SETTABLE 	0 -8 1	; "LeashedCallForHelp" -
+	46	[-]	GETGLOBAL	0 -1	; SkittishMonster
+	47	[-]	CLOSURE  	1 7	; 000001B1E9434970
+	48	[-]	SETTABLE 	0 -9 1	; "ComponentHalt" -
+	49	[-]	CLOSURE  	0 8	; 000001B1E9435200
+	50	[-]	SETGLOBAL	0 -3	; TimerSkittishMonster
+	51	[-]	GETGLOBAL	0 -1	; SkittishMonster
+	52	[-]	CLOSURE  	1 9	; 000001B1E9435280
+	53	[-]	SETTABLE 	0 -15 1	; "Timer" -
+	54	[-]	CLOSURE  	0 10	; 000001B1E94355A0
+	55	[-]	SETGLOBAL	0 -16	; RemoveElement
+	56	[-]	RETURN   	0 1
+constants (16) for 000001B1E94334C0:
+	1	"SkittishMonster"
+	2	"TimerCallbackName"
+	3	"TimerSkittishMonster"
+	4	"MeleeRange"
+	5	350
+	6	"RegisterForEvent"
+	7	"ComponentInit"
+	8	"LeashedCallForHelp"
+	9	"ComponentHalt"
+	10	"SkittishResume"
+	11	"SkittishPause"
+	12	"Start"
+	13	"Stop"
+	14	"SendMeleeState"
+	15	"Timer"
+	16	"RemoveElement"
+locals (0) for 000001B1E94334C0:
+upvalues (0) for 000001B1E94334C0:
+
+function <?:13,22> (19 instructions, 76 bytes at 000001B1E94337A0)
+1 param, 5 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	SETTABLE 	0 -1 -2	; "timerDuration" 0.5
+	2	[-]	GETGLOBAL	1 -3	; InitTimer
+	3	[-]	GETTABLE 	2 0 -4	; "TimerCallbackName"
+	4	[-]	GETTABLE 	3 0 -1	; "timerDuration"
+	5	[-]	LOADBOOL 	4 1 0
+	6	[-]	CALL     	1 4 1
+	7	[-]	GETGLOBAL	1 -5	; StopTimer
+	8	[-]	GETTABLE 	2 0 -4	; "TimerCallbackName"
+	9	[-]	CALL     	1 2 1
+	10	[-]	NEWTABLE 	1 0 0
+	11	[-]	SETTABLE 	0 -6 1	; "Attackers" -
+	12	[-]	SETTABLE 	0 -7 -8	; "attackDuration" 5
+	13	[-]	SETTABLE 	0 -9 -10	; "MeleeAttackers" 0
+	14	[-]	GETTABLE 	1 0 -12	; "MeleeRange"
+	15	[-]	GETTABLE 	2 0 -12	; "MeleeRange"
+	16	[-]	MUL      	1 1 2
+	17	[-]	SETTABLE 	0 -11 1	; "MeleeRangeSq" -
+	18	[-]	SETTABLE 	0 -13 -14	; "Enabled" true
+	19	[-]	RETURN   	0 1
+constants (14) for 000001B1E94337A0:
+	1	"timerDuration"
+	2	0.5
+	3	"InitTimer"
+	4	"TimerCallbackName"
+	5	"StopTimer"
+	6	"Attackers"
+	7	"attackDuration"
+	8	5
+	9	"MeleeAttackers"
+	10	0
+	11	"MeleeRangeSq"
+	12	"MeleeRange"
+	13	"Enabled"
+	14	true
+locals (0) for 000001B1E94337A0:
+upvalues (0) for 000001B1E94337A0:
+
+function <?:24,27> (7 instructions, 28 bytes at 000001B1E9431990)
+1 param, 3 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; Event
+	2	[-]	LOADK    	2 -2	; "WanderPause"
+	3	[-]	CALL     	1 2 1
+	4	[-]	GETGLOBAL	1 -3	; ResetAndStartTimer
+	5	[-]	GETTABLE 	2 0 -4	; "TimerCallbackName"
+	6	[-]	CALL     	1 2 1
+	7	[-]	RETURN   	0 1
+constants (4) for 000001B1E9431990:
+	1	"Event"
+	2	"WanderPause"
+	3	"ResetAndStartTimer"
+	4	"TimerCallbackName"
+locals (0) for 000001B1E9431990:
+upvalues (0) for 000001B1E9431990:
+
+function <?:29,31> (2 instructions, 8 bytes at 000001B1E9431A10)
+1 param, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	SETTABLE 	0 -1 -2	; "Enabled" true
+	2	[-]	RETURN   	0 1
+constants (2) for 000001B1E9431A10:
+	1	"Enabled"
+	2	true
+locals (0) for 000001B1E9431A10:
+upvalues (0) for 000001B1E9431A10:
+
+function <?:33,35> (2 instructions, 8 bytes at 000001B1E9431AB0)
+1 param, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	SETTABLE 	0 -1 -2	; "Enabled" false
+	2	[-]	RETURN   	0 1
+constants (2) for 000001B1E9431AB0:
+	1	"Enabled"
+	2	false
+locals (0) for 000001B1E9431AB0:
+upvalues (0) for 000001B1E9431AB0:
+
+function <?:37,40> (7 instructions, 28 bytes at 000001B1E9433D80)
+1 param, 3 slots, 0 upvalues, 0 locals, 4 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; Event
+	2	[-]	LOADK    	2 -2	; "WanderResume"
+	3	[-]	CALL     	1 2 1
+	4	[-]	GETGLOBAL	1 -3	; StopTimer
+	5	[-]	GETTABLE 	2 0 -4	; "TimerCallbackName"
+	6	[-]	CALL     	1 2 1
+	7	[-]	RETURN   	0 1
+constants (4) for 000001B1E9433D80:
+	1	"Event"
+	2	"WanderResume"
+	3	"StopTimer"
+	4	"TimerCallbackName"
+locals (0) for 000001B1E9433D80:
+upvalues (0) for 000001B1E9433D80:
+
+function <?:42,48> (11 instructions, 44 bytes at 000001B1E9433E00)
+1 param, 3 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	GETTABLE 	1 0 -1	; "MeleeAttackers"
+	2	[-]	LT       	0 -2 1	; 0 -
+	3	[-]	JMP      	4	; to 8
+	4	[-]	GETGLOBAL	1 -3	; Event
+	5	[-]	LOADK    	2 -4	; "MeleeAttacked"
+	6	[-]	CALL     	1 2 1
+	7	[-]	JMP      	3	; to 11
+	8	[-]	GETGLOBAL	1 -3	; Event
+	9	[-]	LOADK    	2 -5	; "RangeAttacked"
+	10	[-]	CALL     	1 2 1
+	11	[-]	RETURN   	0 1
+constants (5) for 000001B1E9433E00:
+	1	"MeleeAttackers"
+	2	0
+	3	"Event"
+	4	"MeleeAttacked"
+	5	"RangeAttacked"
+locals (0) for 000001B1E9433E00:
+upvalues (0) for 000001B1E9433E00:
+
+function <?:50,92> (70 instructions, 280 bytes at 000001B1E9434690)
+3 params, 11 slots, 0 upvalues, 0 locals, 19 constants, 0 functions
+	1	[-]	GETTABLE 	3 0 -1	; "Enabled"
+	2	[-]	EQ       	0 3 -2	; - false
+	3	[-]	JMP      	1	; to 5
+	4	[-]	RETURN   	0 1
+	5	[-]	LOADBOOL 	3 1 0
+	6	[-]	GETGLOBAL	4 -3	; GetDistSquared
+	7	[-]	GETGLOBAL	5 -4	; GetMyPos
+	8	[-]	CALL     	5 1 2
+	9	[-]	GETGLOBAL	6 -5	; GetPos
+	10	[-]	MOVE     	7 2
+	11	[-]	CALL     	6 2 0
+	12	[-]	CALL     	4 0 2
+	13	[-]	GETTABLE 	5 0 -6	; "MeleeRangeSq"
+	14	[-]	LT       	0 5 4
+	15	[-]	JMP      	1	; to 17
+	16	[-]	LOADBOOL 	3 0 0
+	17	[-]	GETGLOBAL	4 -7	; ipairs
+	18	[-]	GETTABLE 	5 0 -8	; "Attackers"
+	19	[-]	CALL     	4 2 4
+	20	[-]	JMP      	21	; to 42
+	21	[-]	GETTABLE 	9 8 -9	; "attacker"
+	22	[-]	EQ       	0 9 2
+	23	[-]	JMP      	18	; to 42
+	24	[-]	GETTABLE 	9 0 -11	; "attackDuration"
+	25	[-]	SETTABLE 	8 -10 9	; "remainingTime" -
+	26	[-]	GETTABLE 	9 8 -12	; "isMelee"
+	27	[-]	EQ       	1 3 9
+	28	[-]	JMP      	9	; to 38
+	29	[-]	EQ       	0 3 -13	; - true
+	30	[-]	JMP      	4	; to 35
+	31	[-]	GETTABLE 	9 0 -14	; "MeleeAttackers"
+	32	[-]	ADD      	9 9 -15	; - 1
+	33	[-]	SETTABLE 	0 -14 9	; "MeleeAttackers" -
+	34	[-]	JMP      	3	; to 38
+	35	[-]	GETTABLE 	9 0 -14	; "MeleeAttackers"
+	36	[-]	SUB      	9 9 -15	; - 1
+	37	[-]	SETTABLE 	0 -14 9	; "MeleeAttackers" -
+	38	[-]	SETTABLE 	8 -12 3	; "isMelee" -
+	39	[-]	SELF     	9 0 -16	; "SendMeleeState"
+	40	[-]	CALL     	9 2 1
+	41	[-]	RETURN   	0 1
+	42	[-]	TFORLOOP 	4 2
+	43	[-]	JMP      	-23	; to 21
+	44	[-]	GETTABLE 	4 0 -8	; "Attackers"
+	45	[-]	LEN      	4 4
+	46	[-]	EQ       	0 4 -17	; - 0
+	47	[-]	JMP      	2	; to 50
+	48	[-]	SELF     	4 0 -18	; "Start"
+	49	[-]	CALL     	4 2 1
+	50	[-]	GETTABLE 	4 0 -8	; "Attackers"
+	51	[-]	GETTABLE 	5 0 -8	; "Attackers"
+	52	[-]	LEN      	5 5
+	53	[-]	ADD      	5 5 -15	; - 1
+	54	[-]	NEWTABLE 	6 0 3
+	55	[-]	GETGLOBAL	7 -19	; GetUnitRef
+	56	[-]	MOVE     	8 2
+	57	[-]	CALL     	7 2 2
+	58	[-]	SETTABLE 	6 -9 7	; "attacker" -
+	59	[-]	GETTABLE 	7 0 -11	; "attackDuration"
+	60	[-]	SETTABLE 	6 -10 7	; "remainingTime" -
+	61	[-]	SETTABLE 	6 -12 3	; "isMelee" -
+	62	[-]	SETTABLE 	4 5 6
+	63	[-]	EQ       	0 3 -13	; - true
+	64	[-]	JMP      	3	; to 68
+	65	[-]	GETTABLE 	4 0 -14	; "MeleeAttackers"
+	66	[-]	ADD      	4 4 -15	; - 1
+	67	[-]	SETTABLE 	0 -14 4	; "MeleeAttackers" -
+	68	[-]	SELF     	4 0 -16	; "SendMeleeState"
+	69	[-]	CALL     	4 2 1
+	70	[-]	RETURN   	0 1
+constants (19) for 000001B1E9434690:
+	1	"Enabled"
+	2	false
+	3	"GetDistSquared"
+	4	"GetMyPos"
+	5	"GetPos"
+	6	"MeleeRangeSq"
+	7	"ipairs"
+	8	"Attackers"
+	9	"attacker"
+	10	"remainingTime"
+	11	"attackDuration"
+	12	"isMelee"
+	13	true
+	14	"MeleeAttackers"
+	15	1
+	16	"SendMeleeState"
+	17	0
+	18	"Start"
+	19	"GetUnitRef"
+locals (0) for 000001B1E9434690:
+upvalues (0) for 000001B1E9434690:
+
+function <?:94,96> (4 instructions, 16 bytes at 000001B1E9434970)
+1 param, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; StopTimer
+	2	[-]	GETTABLE 	2 0 -2	; "TimerCallbackName"
+	3	[-]	CALL     	1 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 000001B1E9434970:
+	1	"StopTimer"
+	2	"TimerCallbackName"
+locals (0) for 000001B1E9434970:
+upvalues (0) for 000001B1E9434970:
+
+function <?:99,101> (4 instructions, 16 bytes at 000001B1E9435200)
+0 params, 2 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SkittishMonster
+	2	[-]	SELF     	0 0 -2	; "Timer"
+	3	[-]	CALL     	0 2 1
+	4	[-]	RETURN   	0 1
+constants (2) for 000001B1E9435200:
+	1	"SkittishMonster"
+	2	"Timer"
+locals (0) for 000001B1E9435200:
+upvalues (0) for 000001B1E9435200:
+
+function <?:103,135> (70 instructions, 280 bytes at 000001B1E9435280)
+1 param, 10 slots, 0 upvalues, 0 locals, 23 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetState
+	2	[-]	CALL     	1 1 2
+	3	[-]	GETGLOBAL	2 -2	; AI_HALTED
+	4	[-]	EQ       	1 1 2
+	5	[-]	JMP      	3	; to 9
+	6	[-]	GETTABLE 	2 0 -3	; "Enabled"
+	7	[-]	EQ       	0 2 -4	; - false
+	8	[-]	JMP      	1	; to 10
+	9	[-]	RETURN   	0 1
+	10	[-]	LOADK    	2 -5	; 1
+	11	[-]	GETTABLE 	3 0 -6	; "Attackers"
+	12	[-]	LEN      	3 3
+	13	[-]	LE       	0 2 3
+	14	[-]	JMP      	28	; to 43
+	15	[-]	GETTABLE 	3 0 -6	; "Attackers"
+	16	[-]	GETTABLE 	3 3 2
+	17	[-]	GETTABLE 	4 3 -7	; "remainingTime"
+	18	[-]	GETTABLE 	5 0 -8	; "timerDuration"
+	19	[-]	SUB      	4 4 5
+	20	[-]	SETTABLE 	3 -7 4	; "remainingTime" -
+	21	[-]	GETTABLE 	4 3 -7	; "remainingTime"
+	22	[-]	LE       	1 4 -9	; - 0
+	23	[-]	JMP      	5	; to 29
+	24	[-]	GETGLOBAL	4 -10	; TryGetUnitFromRef
+	25	[-]	GETTABLE 	5 3 -11	; "attacker"
+	26	[-]	CALL     	4 2 2
+	27	[-]	TEST     	4 0 1
+	28	[-]	JMP      	12	; to 41
+	29	[-]	GETGLOBAL	4 -12	; RemoveElement
+	30	[-]	GETTABLE 	5 0 -6	; "Attackers"
+	31	[-]	MOVE     	6 2
+	32	[-]	CALL     	4 3 1
+	33	[-]	GETTABLE 	4 0 -6	; "Attackers"
+	34	[-]	LEN      	4 4
+	35	[-]	EQ       	0 4 -9	; - 0
+	36	[-]	JMP      	-26	; to 11
+	37	[-]	SELF     	4 0 -13	; "Stop"
+	38	[-]	CALL     	4 2 1
+	39	[-]	RETURN   	0 1
+	40	[-]	JMP      	-30	; to 11
+	41	[-]	ADD      	2 2 -5	; - 1
+	42	[-]	JMP      	-32	; to 11
+	43	[-]	GETGLOBAL	3 -14	; GetPos
+	44	[-]	GETGLOBAL	4 -10	; TryGetUnitFromRef
+	45	[-]	GETTABLE 	5 0 -6	; "Attackers"
+	46	[-]	GETTABLE 	5 5 -5	; 1
+	47	[-]	GETTABLE 	5 5 -11	; "attacker"
+	48	[-]	CALL     	4 2 0
+	49	[-]	CALL     	3 0 2
+	50	[-]	GETGLOBAL	4 -15	; GetMyPos
+	51	[-]	CALL     	4 1 2
+	52	[-]	SUB      	5 4 3
+	53	[-]	SELF     	6 5 -16	; "length"
+	54	[-]	CALL     	6 2 2
+	55	[-]	LT       	0 6 -17	; - 0.01
+	56	[-]	JMP      	3	; to 60
+	57	[-]	GETGLOBAL	6 -18	; GetFacingDirection
+	58	[-]	CALL     	6 1 2
+	59	[-]	MOVE     	5 6
+	60	[-]	SELF     	6 5 -20	; "normalize"
+	61	[-]	CALL     	6 2 2
+	62	[-]	SETGLOBAL	6 -19	; offset
+	63	[-]	GETGLOBAL	6 -19	; offset
+	64	[-]	MUL      	6 -21 6	; 600 -
+	65	[-]	ADD      	6 4 6
+	66	[-]	GETGLOBAL	7 -22	; SetStateAndMove
+	67	[-]	GETGLOBAL	8 -23	; AI_MOVE
+	68	[-]	MOVE     	9 6
+	69	[-]	CALL     	7 3 1
+	70	[-]	RETURN   	0 1
+constants (23) for 000001B1E9435280:
+	1	"GetState"
+	2	"AI_HALTED"
+	3	"Enabled"
+	4	false
+	5	1
+	6	"Attackers"
+	7	"remainingTime"
+	8	"timerDuration"
+	9	0
+	10	"TryGetUnitFromRef"
+	11	"attacker"
+	12	"RemoveElement"
+	13	"Stop"
+	14	"GetPos"
+	15	"GetMyPos"
+	16	"length"
+	17	0.01
+	18	"GetFacingDirection"
+	19	"offset"
+	20	"normalize"
+	21	600
+	22	"SetStateAndMove"
+	23	"AI_MOVE"
+locals (0) for 000001B1E9435280:
+upvalues (0) for 000001B1E9435280:
+
+function <?:138,143> (11 instructions, 44 bytes at 000001B1E94355A0)
+2 params, 8 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	ADD      	2 1 -1	; - 1
+	2	[-]	LEN      	3 0
+	3	[-]	LOADK    	4 -1	; 1
+	4	[-]	FORPREP  	2 3	; to 8
+	5	[-]	SUB      	6 5 -1	; - 1
+	6	[-]	GETTABLE 	7 0 5
+	7	[-]	SETTABLE 	0 6 7
+	8	[-]	FORLOOP  	2 -4	; to 5
+	9	[-]	LEN      	2 0
+	10	[-]	SETTABLE 	0 2 -2	; - nil
+	11	[-]	RETURN   	0 1
+constants (2) for 000001B1E94355A0:
+	1	1
+	2	nil
+locals (0) for 000001B1E94355A0:
+upvalues (0) for 000001B1E94355A0:

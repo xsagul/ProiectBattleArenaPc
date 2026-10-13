@@ -1,0 +1,68 @@
+
+main <?:0,0> (39 instructions, 156 bytes at 0000027BFCAB31D0)
+0+ params, 4 slots, 0 upvalues, 0 locals, 23 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "OlafRagnarok.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "OlafRagnarok"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "doesnotexist.troy"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect
+	15	[-]	LOADK    	0 -10	; "doesnotexist.troy"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateEffect2
+	17	[-]	LOADK    	0 -10	; "doesnotexist.troy"
+	18	[-]	SETGLOBAL	0 -12	; AutoBuffActivateEffect3
+	19	[-]	LOADK    	0 -14	; "L_BUFFBONE_GLB_HAND_LOC"
+	20	[-]	SETGLOBAL	0 -13	; AutoBuffActivateAttachBoneName3
+	21	[-]	LOADK    	0 -10	; "doesnotexist.troy"
+	22	[-]	SETGLOBAL	0 -15	; AutoBuffActivateEffect4
+	23	[-]	LOADK    	0 -17	; "R_BUFFBONE_GLB_HAND_LOC"
+	24	[-]	SETGLOBAL	0 -16	; AutoBuffActivateAttachBoneName4
+	25	[-]	NEWTABLE 	0 3 0
+	26	[-]	LOADK    	1 -19	; 120
+	27	[-]	LOADK    	2 -19	; 120
+	28	[-]	LOADK    	3 -19	; 120
+	29	[-]	SETLIST  	0 3 1	; 1
+	30	[-]	SETGLOBAL	0 -18	; AutoCooldownByLevel
+	31	[-]	LOADBOOL 	0 1 0
+	32	[-]	SETGLOBAL	0 -20	; NonDispellable
+	33	[-]	NEWTABLE 	0 1 0
+	34	[-]	LOADK    	1 -22	; "RumbleSkin03"
+	35	[-]	SETLIST  	0 1 1	; 1
+	36	[-]	SETGLOBAL	0 -21	; SpellVOOverrideSkins
+	37	[-]	LOADBOOL 	0 0 0
+	38	[-]	SETGLOBAL	0 -23	; IsDamagingSpell
+	39	[-]	RETURN   	0 1
+constants (23) for 0000027BFCAB31D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"OlafRagnarok.dds"
+	7	"BuffName"
+	8	"OlafRagnarok"
+	9	"AutoBuffActivateEffect"
+	10	"doesnotexist.troy"
+	11	"AutoBuffActivateEffect2"
+	12	"AutoBuffActivateEffect3"
+	13	"AutoBuffActivateAttachBoneName3"
+	14	"L_BUFFBONE_GLB_HAND_LOC"
+	15	"AutoBuffActivateEffect4"
+	16	"AutoBuffActivateAttachBoneName4"
+	17	"R_BUFFBONE_GLB_HAND_LOC"
+	18	"AutoCooldownByLevel"
+	19	120
+	20	"NonDispellable"
+	21	"SpellVOOverrideSkins"
+	22	"RumbleSkin03"
+	23	"IsDamagingSpell"
+locals (0) for 0000027BFCAB31D0:
+upvalues (0) for 0000027BFCAB31D0:

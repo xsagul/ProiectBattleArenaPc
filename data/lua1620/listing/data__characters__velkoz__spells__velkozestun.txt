@@ -1,0 +1,44 @@
+
+main <?:0,0> (22 instructions, 88 bytes at 000001DE899B35C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Velkoz/HUD/Icons2D/Velkoz_E.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "VelkozEStun"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "DATA/Shared/Particles/LOC_Stun.troy"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -10	; "C_Buffbone_Glb_Center_Loc"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName
+	13	[-]	LOADK    	0 -12	; "game_floatingtext_Knockup"
+	14	[-]	SETGLOBAL	0 -11	; PopupMessage1
+	15	[-]	NEWTABLE 	0 2 0
+	16	[-]	LOADK    	1 -14	; "VelkozSkin01"
+	17	[-]	LOADK    	2 -15	; "VelkozSkin02"
+	18	[-]	SETLIST  	0 2 1	; 1
+	19	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	20	[-]	LOADBOOL 	0 1 0
+	21	[-]	SETGLOBAL	0 -16	; IsDamagingSpell
+	22	[-]	RETURN   	0 1
+constants (16) for 000001DE899B35C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Velkoz/HUD/Icons2D/Velkoz_E.dds"
+	5	"BuffName"
+	6	"VelkozEStun"
+	7	"AutoBuffActivateEffect"
+	8	"DATA/Shared/Particles/LOC_Stun.troy"
+	9	"AutoBuffActivateAttachBoneName"
+	10	"C_Buffbone_Glb_Center_Loc"
+	11	"PopupMessage1"
+	12	"game_floatingtext_Knockup"
+	13	"SpellFXOverrideSkins"
+	14	"VelkozSkin01"
+	15	"VelkozSkin02"
+	16	"IsDamagingSpell"
+locals (0) for 000001DE899B35C0:
+upvalues (0) for 000001DE899B35C0:

@@ -1,0 +1,69 @@
+
+main <?:0,0> (3 instructions, 12 bytes at 000002AC0F8634C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 1 constant, 1 function
+	1	[-]	CLOSURE  	0 0	; 000002AC0F863540
+	2	[-]	SETGLOBAL	0 -1	; SpawnCampSpawnMarkers
+	3	[-]	RETURN   	0 1
+constants (1) for 000002AC0F8634C0:
+	1	"SpawnCampSpawnMarkers"
+locals (0) for 000002AC0F8634C0:
+upvalues (0) for 000002AC0F8634C0:
+
+function <?:2,10> (37 instructions, 148 bytes at 000002AC0F863540)
+1 param, 18 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; GetIsGameFeatureEnabled
+	2	[-]	LOADK    	2 -2	; "RawLSDeprecationNeutralMinions"
+	3	[-]	CALL     	1 2 2
+	4	[-]	EQ       	1 1 -3	; - true
+	5	[-]	JMP      	31	; to 37
+	6	[-]	GETGLOBAL	1 -4	; ipairs
+	7	[-]	MOVE     	2 0
+	8	[-]	CALL     	1 2 4
+	9	[-]	JMP      	25	; to 35
+	10	[-]	GETGLOBAL	6 -6	; SpawnMinion
+	11	[-]	LOADK    	7 -7	; "CampRespawn"
+	12	[-]	LOADK    	8 -8	; "SRU_CampRespawnMarker"
+	13	[-]	LOADK    	9 -9	; "Idle.lua"
+	14	[-]	GETGLOBAL	10 -10	; Make3DPoint
+	15	[-]	LOADK    	11 -11	; 2000
+	16	[-]	LOADK    	12 -12	; 70
+	17	[-]	LOADK    	13 -11	; 2000
+	18	[-]	CALL     	10 4 2
+	19	[-]	GETGLOBAL	11 -13	; TEAM_NEUTRAL
+	20	[-]	LOADBOOL 	12 0 0
+	21	[-]	LOADBOOL 	13 1 0
+	22	[-]	LOADBOOL 	14 1 0
+	23	[-]	LOADBOOL 	15 1 0
+	24	[-]	LOADBOOL 	16 1 0
+	25	[-]	LOADBOOL 	17 1 0
+	26	[-]	CALL     	6 12 2
+	27	[-]	SETGLOBAL	6 -5	; Marker
+	28	[-]	GETGLOBAL	6 -14	; ApplyPersistentBuff
+	29	[-]	GETGLOBAL	7 -5	; Marker
+	30	[-]	LOADK    	8 -15	; "CampRespawnInitial"
+	31	[-]	LOADBOOL 	9 0 0
+	32	[-]	LOADK    	10 -16	; 1
+	33	[-]	LOADK    	11 -16	; 1
+	34	[-]	CALL     	6 6 1
+	35	[-]	TFORLOOP 	1 2
+	36	[-]	JMP      	-27	; to 10
+	37	[-]	RETURN   	0 1
+constants (16) for 000002AC0F863540:
+	1	"GetIsGameFeatureEnabled"
+	2	"RawLSDeprecationNeutralMinions"
+	3	true
+	4	"ipairs"
+	5	"Marker"
+	6	"SpawnMinion"
+	7	"CampRespawn"
+	8	"SRU_CampRespawnMarker"
+	9	"Idle.lua"
+	10	"Make3DPoint"
+	11	2000
+	12	70
+	13	"TEAM_NEUTRAL"
+	14	"ApplyPersistentBuff"
+	15	"CampRespawnInitial"
+	16	1
+locals (0) for 000002AC0F863540:
+upvalues (0) for 000002AC0F863540:

@@ -1,0 +1,32 @@
+
+main <?:0,0> (18 instructions, 72 bytes at 000002BD82493600)
+0+ params, 3 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	NEWTABLE 	0 1 0
+	8	[-]	LOADK    	1 -5	; "BattlecastTFT_Chogath"
+	9	[-]	SETLIST  	0 1 1	; 1
+	10	[-]	SETGLOBAL	0 -4	; SpellFXOverrideSkins
+	11	[-]	NEWTABLE 	0 2 0
+	12	[-]	LOADK    	1 -7	; "DandyTFT_Chogath"
+	13	[-]	LOADK    	2 -5	; "BattlecastTFT_Chogath"
+	14	[-]	SETLIST  	0 2 1	; 1
+	15	[-]	SETGLOBAL	0 -6	; SpellVOOverrideSkins
+	16	[-]	LOADBOOL 	0 1 0
+	17	[-]	SETGLOBAL	0 -8	; IsDamagingSpell
+	18	[-]	RETURN   	0 1
+constants (8) for 000002BD82493600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"SpellFXOverrideSkins"
+	5	"BattlecastTFT_Chogath"
+	6	"SpellVOOverrideSkins"
+	7	"DandyTFT_Chogath"
+	8	"IsDamagingSpell"
+locals (0) for 000002BD82493600:
+upvalues (0) for 000002BD82493600:

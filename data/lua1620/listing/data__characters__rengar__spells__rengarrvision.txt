@@ -1,0 +1,33 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 0000028C604935D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; CastingBreaksStealth
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Rengar/HUD/Icons2D/Rengar_R.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "RengarR"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -9	; ""
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	15	[-]	LOADBOOL 	0 0 0
+	16	[-]	SETGLOBAL	0 -10	; IsDamagingSpell
+	17	[-]	RETURN   	0 1
+constants (10) for 0000028C604935D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"CastingBreaksStealth"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Rengar/HUD/Icons2D/Rengar_R.dds"
+	6	"BuffName"
+	7	"RengarR"
+	8	"SpellFXOverrideSkins"
+	9	""
+	10	"IsDamagingSpell"
+locals (0) for 0000028C604935D0:
+upvalues (0) for 0000028C604935D0:

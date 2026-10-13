@@ -1,0 +1,32 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 00000217A8783630)
+0+ params, 2 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; 1
+	8	[-]	SETGLOBAL	0 -4	; SpellDamageRatio
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -6	; PersistsThroughDeath
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -8	; "XmasJade_Katarina"
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -7	; SpellFXOverrideSkins
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -9	; IsDamagingSpell
+	17	[-]	RETURN   	0 1
+constants (9) for 00000217A8783630:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"SpellDamageRatio"
+	5	1
+	6	"PersistsThroughDeath"
+	7	"SpellFXOverrideSkins"
+	8	"XmasJade_Katarina"
+	9	"IsDamagingSpell"
+locals (0) for 00000217A8783630:
+upvalues (0) for 00000217A8783630:

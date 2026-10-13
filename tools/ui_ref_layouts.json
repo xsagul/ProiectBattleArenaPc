@@ -1,0 +1,1981 @@
+[
+  {
+    "name": "AbilityPrompt",
+    "parent": null,
+    "size": 60,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "AnimLink",
+        "owner_class": "AbilityPrompt",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "TextLink",
+        "owner_class": "AbilityPrompt",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 12
+  },
+  {
+    "name": "ChampionPerkKeystoneUiData",
+    "parent": null,
+    "size": 48,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "KeystoneIcon",
+        "owner_class": "ChampionPerkKeystoneUiData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "KeystoneSubstyleIcon",
+        "owner_class": "ChampionPerkKeystoneUiData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "CooldownEffectUiData",
+    "parent": null,
+    "size": 96,
+    "destruct_rva": "0x5766e0",
+    "members": [
+      {
+        "name": "CooldownText",
+        "owner_class": "CooldownEffectUiData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "RadialEffect",
+        "owner_class": "CooldownEffectUiData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "CooldownCompleteEffect",
+        "owner_class": "CooldownEffectUiData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "CooldownJumpEffect",
+        "owner_class": "CooldownEffectUiData",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      }
+    ],
+    "unresolved_tail_offset": "0x60",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "HealthMeter",
+    "parent": null,
+    "size": 88,
+    "destruct_rva": "0x576390",
+    "members": [
+      {
+        "name": "Meter",
+        "owner_class": "HealthMeter",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "ValueText",
+        "owner_class": "HealthMeter",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "FadeBar",
+        "owner_class": "HealthMeter",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      }
+    ],
+    "unresolved_tail_offset": "0x48",
+    "unresolved_tail_size": 16
+  },
+  {
+    "name": "HeroFloatingInfoIconData",
+    "parent": null,
+    "size": 72,
+    "destruct_rva": "0x576390",
+    "members": [
+      {
+        "name": "Icon",
+        "owner_class": "HeroFloatingInfoIconData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "HighlightAnim",
+        "owner_class": "HeroFloatingInfoIconData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "border",
+        "owner_class": "HeroFloatingInfoIconData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      }
+    ],
+    "unresolved_tail_offset": "0x48",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "HudCalloutIdentifier",
+    "parent": null,
+    "size": 48,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "Frame",
+        "owner_class": "HudCalloutIdentifier",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "Portrait",
+        "owner_class": "HudCalloutIdentifier",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "HudItemShopItemDetailsClickDataDefinition",
+    "parent": null,
+    "size": 72,
+    "destruct_rva": "0x576390",
+    "members": [
+      {
+        "name": "ItemBriefTextDefinition",
+        "owner_class": "HudItemShopItemDetailsClickDataDefinition",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "ClickRegionDefinition",
+        "owner_class": "HudItemShopItemDetailsClickDataDefinition",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "HoverIconDefinition",
+        "owner_class": "HudItemShopItemDetailsClickDataDefinition",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      }
+    ],
+    "unresolved_tail_offset": "0x48",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "HudItemShopItemDetailsDefinition",
+    "parent": null,
+    "size": 132,
+    "destruct_rva": "0x576510",
+    "members": [
+      {
+        "name": "TitleTextDefinition",
+        "owner_class": "HudItemShopItemDetailsDefinition",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "CostTextDefinition",
+        "owner_class": "HudItemShopItemDetailsDefinition",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "BodyDefinition",
+        "owner_class": "HudItemShopItemDetailsDefinition",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "ItemIconDefinition",
+        "owner_class": "HudItemShopItemDetailsDefinition",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      },
+      {
+        "name": "GoldIconDefinition",
+        "owner_class": "HudItemShopItemDetailsDefinition",
+        "reflected": true,
+        "offset": "0x60",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x6c"
+      }
+    ],
+    "unresolved_tail_offset": "0x78",
+    "unresolved_tail_size": 12,
+    "key_members": [
+      {
+        "name": "ClickData",
+        "owner_class": "HudItemShopItemDetailsDefinition",
+        "type": "UiHashKey",
+        "size": 12,
+        "offset": "0x78",
+        "native_ctor_rva": 7418096
+      }
+    ]
+  },
+  {
+    "name": "IconLink",
+    "parent": null,
+    "size": 48,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "ActiveIcon",
+        "owner_class": "IconLink",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "DisabledIcon",
+        "owner_class": "IconLink",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "LoadingScreenChallengeTokenData",
+    "parent": null,
+    "size": 96,
+    "destruct_rva": "0x5766e0",
+    "members": [
+      {
+        "name": "ChallengeTokenGroup",
+        "owner_class": "LoadingScreenChallengeTokenData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "ChallengeTokenIcon",
+        "owner_class": "LoadingScreenChallengeTokenData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "ChallengeTokenCapstoneIcon",
+        "owner_class": "LoadingScreenChallengeTokenData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "ChallengeTokenHitRegion",
+        "owner_class": "LoadingScreenChallengeTokenData",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      }
+    ],
+    "unresolved_tail_offset": "0x60",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "LoadingScreenClashTeam",
+    "parent": null,
+    "size": 72,
+    "destruct_rva": "0x576390",
+    "members": [
+      {
+        "name": "TeamNameText",
+        "owner_class": "LoadingScreenClashTeam",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "TeamtagText",
+        "owner_class": "LoadingScreenClashTeam",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "TeamLogoIcon",
+        "owner_class": "LoadingScreenClashTeam",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      }
+    ],
+    "unresolved_tail_offset": "0x48",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "LoadingScreenPlayerCardClassicSpellData",
+    "parent": null,
+    "size": 48,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "Icon",
+        "owner_class": "LoadingScreenPlayerCardClassicSpellData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "Frame",
+        "owner_class": "LoadingScreenPlayerCardClassicSpellData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "LoadingScreenProgressMeter",
+    "parent": null,
+    "size": 68,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "Meter",
+        "owner_class": "LoadingScreenProgressMeter",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "Text",
+        "owner_class": "LoadingScreenProgressMeter",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 20
+  },
+  {
+    "name": "LootItemLineElements",
+    "parent": null,
+    "size": 120,
+    "destruct_rva": "0x576510",
+    "members": [
+      {
+        "name": "LootLineItemNameText",
+        "owner_class": "LootItemLineElements",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "LootLineItemDropRateText",
+        "owner_class": "LootItemLineElements",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "LootLineItemSpacing",
+        "owner_class": "LootItemLineElements",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "LootLineItemButton",
+        "owner_class": "LootItemLineElements",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      },
+      {
+        "name": "LootLineItemGroup",
+        "owner_class": "LootItemLineElements",
+        "reflected": true,
+        "offset": "0x60",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x6c"
+      }
+    ],
+    "unresolved_tail_offset": "0x78",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "MultiDragonSoulSlotUiData",
+    "parent": null,
+    "size": 48,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "SoulIconSlot",
+        "owner_class": "MultiDragonSoulSlotUiData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "SoulSourceEmptyIcon",
+        "owner_class": "MultiDragonSoulSlotUiData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "NeutralTimerElements",
+    "parent": null,
+    "size": 124,
+    "destruct_rva": "0x576510",
+    "members": [
+      {
+        "name": "TimerText",
+        "owner_class": "NeutralTimerElements",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "AliveIcon",
+        "owner_class": "NeutralTimerElements",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "DeadIcon",
+        "owner_class": "NeutralTimerElements",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "Backdrop",
+        "owner_class": "NeutralTimerElements",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      },
+      {
+        "name": "VoteForButton",
+        "owner_class": "NeutralTimerElements",
+        "reflected": true,
+        "offset": "0x60",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x6c"
+      }
+    ],
+    "unresolved_tail_offset": "0x78",
+    "unresolved_tail_size": 4
+  },
+  {
+    "name": "OffScreenPoiItemData",
+    "parent": null,
+    "size": 96,
+    "destruct_rva": "0x5766e0",
+    "members": [
+      {
+        "name": "Frame",
+        "owner_class": "OffScreenPoiItemData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "Portrait",
+        "owner_class": "OffScreenPoiItemData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "Text",
+        "owner_class": "OffScreenPoiItemData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "Region",
+        "owner_class": "OffScreenPoiItemData",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      }
+    ],
+    "unresolved_tail_offset": "0x60",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "OptionTemplateSecondaryHotkeys_Label",
+    "parent": null,
+    "size": 48,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "backgroundElement",
+        "owner_class": "OptionTemplateSecondaryHotkeys_Label",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "TextElement",
+        "owner_class": "OptionTemplateSecondaryHotkeys_Label",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "PlayerPortraitUiData",
+    "parent": null,
+    "size": 120,
+    "destruct_rva": "0x576510",
+    "members": [
+      {
+        "name": "Icon",
+        "owner_class": "PlayerPortraitUiData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "LevelText",
+        "owner_class": "PlayerPortraitUiData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "RespawnTimer",
+        "owner_class": "PlayerPortraitUiData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "VoiceChatHalo",
+        "owner_class": "PlayerPortraitUiData",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      },
+      {
+        "name": "TooltipRegion",
+        "owner_class": "PlayerPortraitUiData",
+        "reflected": true,
+        "offset": "0x60",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x6c"
+      }
+    ],
+    "unresolved_tail_offset": "0x78",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "PracticeToolButtonDefinition",
+    "parent": null,
+    "size": 96,
+    "destruct_rva": "0x5766e0",
+    "members": [
+      {
+        "name": "TitleText",
+        "owner_class": "PracticeToolButtonDefinition",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "ToggleVfx",
+        "owner_class": "PracticeToolButtonDefinition",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "Portrait",
+        "owner_class": "PracticeToolButtonDefinition",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "Button",
+        "owner_class": "PracticeToolButtonDefinition",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      }
+    ],
+    "unresolved_tail_offset": "0x60",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "ProgressBarDisplayData",
+    "parent": null,
+    "size": 72,
+    "destruct_rva": "0x576390",
+    "members": [
+      {
+        "name": "Meter",
+        "owner_class": "ProgressBarDisplayData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "TitleText",
+        "owner_class": "ProgressBarDisplayData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "TimerText",
+        "owner_class": "ProgressBarDisplayData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      }
+    ],
+    "unresolved_tail_offset": "0x48",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "PurchaseDialogSubPurchaseElements",
+    "parent": null,
+    "size": 120,
+    "destruct_rva": "0x576510",
+    "members": [
+      {
+        "name": "SubPurchaseIcon",
+        "owner_class": "PurchaseDialogSubPurchaseElements",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "SubPurchaseIconFrame",
+        "owner_class": "PurchaseDialogSubPurchaseElements",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "SubPurchaseDivider",
+        "owner_class": "PurchaseDialogSubPurchaseElements",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "SubPurchaseTitle",
+        "owner_class": "PurchaseDialogSubPurchaseElements",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      },
+      {
+        "name": "SubPurchaseGroup",
+        "owner_class": "PurchaseDialogSubPurchaseElements",
+        "reflected": true,
+        "offset": "0x60",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x6c"
+      }
+    ],
+    "unresolved_tail_offset": "0x78",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "PurchaseDialogSubPurchaseHeaderElements",
+    "parent": null,
+    "size": 72,
+    "destruct_rva": "0x576390",
+    "members": [
+      {
+        "name": "HeaderText",
+        "owner_class": "PurchaseDialogSubPurchaseHeaderElements",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "HeaderSpace",
+        "owner_class": "PurchaseDialogSubPurchaseHeaderElements",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "HeaderGroup",
+        "owner_class": "PurchaseDialogSubPurchaseHeaderElements",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      }
+    ],
+    "unresolved_tail_offset": "0x48",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "RadialMenuButtonDefinitionBase",
+    "parent": null,
+    "size": 24,
+    "destruct_rva": "0x5b7660",
+    "members": [
+      {
+        "name": "DefaultIcon",
+        "owner_class": "RadialMenuButtonDefinitionBase",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      }
+    ],
+    "unresolved_tail_offset": "0x18",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "RadialMenuHoverButtonDefinition",
+    "parent": "RadialMenuButtonDefinitionBase",
+    "size": 48,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "DefaultIcon",
+        "owner_class": "RadialMenuButtonDefinitionBase",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "HoverIcon",
+        "owner_class": "RadialMenuHoverButtonDefinition",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "SpellEvolutionUiData",
+    "parent": null,
+    "size": 48,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "Icon",
+        "owner_class": "SpellEvolutionUiData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "Button",
+        "owner_class": "SpellEvolutionUiData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "SpellSlotBasicUiDefinition",
+    "parent": null,
+    "size": 48,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "ContentElement",
+        "owner_class": "SpellSlotBasicUiDefinition",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "MouseoverRegion",
+        "owner_class": "SpellSlotBasicUiDefinition",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "SpellSlotBuffTimerData",
+    "parent": null,
+    "size": 96,
+    "destruct_rva": "0x5766e0",
+    "members": [
+      {
+        "name": "TimerBorderBg",
+        "owner_class": "SpellSlotBuffTimerData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "TimerBorderFx",
+        "owner_class": "SpellSlotBuffTimerData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "TimerBarBg",
+        "owner_class": "SpellSlotBuffTimerData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "TimerBarFill",
+        "owner_class": "SpellSlotBuffTimerData",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      }
+    ],
+    "unresolved_tail_offset": "0x60",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "SpellSlotSimpleUiDefinition",
+    "parent": "SpellSlotBasicUiDefinition",
+    "size": 120,
+    "destruct_rva": "0x576510",
+    "members": [
+      {
+        "name": "ContentElement",
+        "owner_class": "SpellSlotBasicUiDefinition",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "MouseoverRegion",
+        "owner_class": "SpellSlotBasicUiDefinition",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "CooldownFx",
+        "owner_class": "SpellSlotSimpleUiDefinition",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "OverlayHandle",
+        "owner_class": "SpellSlotSimpleUiDefinition",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      },
+      {
+        "name": "unknownLink60",
+        "owner_class": "SpellSlotSimpleUiDefinition",
+        "reflected": false,
+        "offset": "0x60",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x6c"
+      }
+    ],
+    "unresolved_tail_offset": "0x78",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "TftArmoryButtonStyleData",
+    "parent": null,
+    "size": 52,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "ItemButton",
+        "owner_class": "TftArmoryButtonStyleData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "description",
+        "owner_class": "TftArmoryButtonStyleData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 4
+  },
+  {
+    "name": "TftBannerIconData",
+    "parent": null,
+    "size": 72,
+    "destruct_rva": "0x576390",
+    "members": [
+      {
+        "name": "Group",
+        "owner_class": "TftBannerIconData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "Icon",
+        "owner_class": "TftBannerIconData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "Button",
+        "owner_class": "TftBannerIconData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      }
+    ],
+    "unresolved_tail_offset": "0x48",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "TftBattlepassSelectedRewardBannerUiData",
+    "parent": null,
+    "size": 96,
+    "destruct_rva": "0x5766e0",
+    "members": [
+      {
+        "name": "ClaimText",
+        "owner_class": "TftBattlepassSelectedRewardBannerUiData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "LockText",
+        "owner_class": "TftBattlepassSelectedRewardBannerUiData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "ClaimReadyGroup",
+        "owner_class": "TftBattlepassSelectedRewardBannerUiData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "LockGroup",
+        "owner_class": "TftBattlepassSelectedRewardBannerUiData",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      }
+    ],
+    "unresolved_tail_offset": "0x60",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "TftCharacterRoleCardHeaderData",
+    "parent": null,
+    "size": 96,
+    "destruct_rva": "0x5766e0",
+    "members": [
+      {
+        "name": "Group",
+        "owner_class": "TftCharacterRoleCardHeaderData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "Icon",
+        "owner_class": "TftCharacterRoleCardHeaderData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "title",
+        "owner_class": "TftCharacterRoleCardHeaderData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "description",
+        "owner_class": "TftCharacterRoleCardHeaderData",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      }
+    ],
+    "unresolved_tail_offset": "0x60",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "TftDropRateSlot",
+    "parent": null,
+    "size": 48,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "TierIcon",
+        "owner_class": "TftDropRateSlot",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "Text",
+        "owner_class": "TftDropRateSlot",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "TftItemCodexHeaderData",
+    "parent": null,
+    "size": 120,
+    "destruct_rva": "0x576510",
+    "members": [
+      {
+        "name": "Group",
+        "owner_class": "TftItemCodexHeaderData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "MainItemIcon",
+        "owner_class": "TftItemCodexHeaderData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "MainItemName",
+        "owner_class": "TftItemCodexHeaderData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "MainItemBrief",
+        "owner_class": "TftItemCodexHeaderData",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      },
+      {
+        "name": "MainItemMainText",
+        "owner_class": "TftItemCodexHeaderData",
+        "reflected": true,
+        "offset": "0x60",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x6c"
+      }
+    ],
+    "unresolved_tail_offset": "0x78",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "TftStageRoundDataTemplate",
+    "parent": null,
+    "size": 96,
+    "destruct_rva": "0x5766e0",
+    "members": [
+      {
+        "name": "Group",
+        "owner_class": "TftStageRoundDataTemplate",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "RoundStateIcon",
+        "owner_class": "TftStageRoundDataTemplate",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "ActiveIcon",
+        "owner_class": "TftStageRoundDataTemplate",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "HitRegion",
+        "owner_class": "TftStageRoundDataTemplate",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      }
+    ],
+    "unresolved_tail_offset": "0x60",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "TftTeamPlannerMemberTraitData",
+    "parent": null,
+    "size": 72,
+    "destruct_rva": "0x576390",
+    "members": [
+      {
+        "name": "Group",
+        "owner_class": "TftTeamPlannerMemberTraitData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "Icon",
+        "owner_class": "TftTeamPlannerMemberTraitData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "Background",
+        "owner_class": "TftTeamPlannerMemberTraitData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      }
+    ],
+    "unresolved_tail_offset": "0x48",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "TftTeamPlannerTierData",
+    "parent": null,
+    "size": 120,
+    "destruct_rva": "0x576510",
+    "members": [
+      {
+        "name": "Group",
+        "owner_class": "TftTeamPlannerTierData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "TierTitle",
+        "owner_class": "TftTeamPlannerTierData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "TierCostText",
+        "owner_class": "TftTeamPlannerTierData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "TierCostIcon",
+        "owner_class": "TftTeamPlannerTierData",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      },
+      {
+        "name": "TierChampionListLayout",
+        "owner_class": "TftTeamPlannerTierData",
+        "reflected": true,
+        "offset": "0x60",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x6c"
+      }
+    ],
+    "unresolved_tail_offset": "0x78",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "TftTraitTrackerTraitIconData",
+    "parent": null,
+    "size": 48,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "DefaultIcon",
+        "owner_class": "TftTraitTrackerTraitIconData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "HoverIcon",
+        "owner_class": "TftTraitTrackerTraitIconData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "TftUnitAttachmentLargeSlotData",
+    "parent": null,
+    "size": 72,
+    "destruct_rva": "0x576390",
+    "members": [
+      {
+        "name": "Frame",
+        "owner_class": "TftUnitAttachmentLargeSlotData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "Icon",
+        "owner_class": "TftUnitAttachmentLargeSlotData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "Text",
+        "owner_class": "TftUnitAttachmentLargeSlotData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      }
+    ],
+    "unresolved_tail_offset": "0x48",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "TftUnitAttachmentStandardSlotData",
+    "parent": null,
+    "size": 96,
+    "destruct_rva": "0x5766e0",
+    "members": [
+      {
+        "name": "Frame",
+        "owner_class": "TftUnitAttachmentStandardSlotData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "Icon",
+        "owner_class": "TftUnitAttachmentStandardSlotData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "Overlay",
+        "owner_class": "TftUnitAttachmentStandardSlotData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "Text",
+        "owner_class": "TftUnitAttachmentStandardSlotData",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      }
+    ],
+    "unresolved_tail_offset": "0x60",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "TftUnitInfoCharacterRoleData",
+    "parent": null,
+    "size": 72,
+    "destruct_rva": "0x576390",
+    "members": [
+      {
+        "name": "Button",
+        "owner_class": "TftUnitInfoCharacterRoleData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "Icon",
+        "owner_class": "TftUnitInfoCharacterRoleData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "Text",
+        "owner_class": "TftUnitInfoCharacterRoleData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      }
+    ],
+    "unresolved_tail_offset": "0x48",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "UiClashTeam",
+    "parent": null,
+    "size": 48,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "TagText",
+        "owner_class": "UiClashTeam",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "LogoIcon",
+        "owner_class": "UiClashTeam",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "UiMultiKillIconData",
+    "parent": null,
+    "size": 48,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "Icon",
+        "owner_class": "UiMultiKillIconData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "Region",
+        "owner_class": "UiMultiKillIconData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "UiPerkSummonerSpecialistSelectorButtonData",
+    "parent": null,
+    "size": 48,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "Button",
+        "owner_class": "UiPerkSummonerSpecialistSelectorButtonData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "SpellIcon",
+        "owner_class": "UiPerkSummonerSpecialistSelectorButtonData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "UiTeamFightTeamHealthMeterData",
+    "parent": null,
+    "size": 72,
+    "destruct_rva": "0x576390",
+    "members": [
+      {
+        "name": "Backdrop",
+        "owner_class": "UiTeamFightTeamHealthMeterData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "TotalHealthFill",
+        "owner_class": "UiTeamFightTeamHealthMeterData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "OnscreenHealthFill",
+        "owner_class": "UiTeamFightTeamHealthMeterData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      }
+    ],
+    "unresolved_tail_offset": "0x48",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "UiTeamFightTeamScoreData",
+    "parent": null,
+    "size": 48,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "ScoreText",
+        "owner_class": "UiTeamFightTeamScoreData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "ScoreUnderlay",
+        "owner_class": "UiTeamFightTeamScoreData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "UiTeamIdentityData",
+    "parent": null,
+    "size": 72,
+    "destruct_rva": "0x576390",
+    "members": [
+      {
+        "name": "NameLink",
+        "owner_class": "UiTeamIdentityData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "TagLink",
+        "owner_class": "UiTeamIdentityData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "LogoLink",
+        "owner_class": "UiTeamIdentityData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      }
+    ],
+    "unresolved_tail_offset": "0x48",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "UiUnitStatusDurationBarData",
+    "parent": null,
+    "size": 48,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "StatusDurationBar",
+        "owner_class": "UiUnitStatusDurationBarData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "TenacityBar",
+        "owner_class": "UiUnitStatusDurationBarData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "UnitShopItemFrameData",
+    "parent": null,
+    "size": 72,
+    "destruct_rva": "0x576390",
+    "members": [
+      {
+        "name": "Default",
+        "owner_class": "UnitShopItemFrameData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "hover",
+        "owner_class": "UnitShopItemFrameData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "clicked",
+        "owner_class": "UnitShopItemFrameData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      }
+    ],
+    "unresolved_tail_offset": "0x48",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "UnitShopItemTraitData",
+    "parent": null,
+    "size": 120,
+    "destruct_rva": "0x576510",
+    "members": [
+      {
+        "name": "TraitNub",
+        "owner_class": "UnitShopItemTraitData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "Highlight",
+        "owner_class": "UnitShopItemTraitData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      },
+      {
+        "name": "NameText",
+        "owner_class": "UnitShopItemTraitData",
+        "reflected": true,
+        "offset": "0x30",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x3c"
+      },
+      {
+        "name": "Icon",
+        "owner_class": "UnitShopItemTraitData",
+        "reflected": true,
+        "offset": "0x48",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x54"
+      },
+      {
+        "name": "Background",
+        "owner_class": "UnitShopItemTraitData",
+        "reflected": true,
+        "offset": "0x60",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x6c"
+      }
+    ],
+    "unresolved_tail_offset": "0x78",
+    "unresolved_tail_size": 0
+  },
+  {
+    "name": "UnitStatUiData",
+    "parent": null,
+    "size": 48,
+    "destruct_rva": "0x576830",
+    "members": [
+      {
+        "name": "Text",
+        "owner_class": "UnitStatUiData",
+        "reflected": true,
+        "offset": "0x0",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0xc"
+      },
+      {
+        "name": "HoverTarget",
+        "owner_class": "UnitStatUiData",
+        "reflected": true,
+        "offset": "0x18",
+        "type": "UiHashLink",
+        "size": 24,
+        "reference_offset": "0x24"
+      }
+    ],
+    "unresolved_tail_offset": "0x30",
+    "unresolved_tail_size": 0
+  }
+]

@@ -8,4 +8,6 @@
 // match: dc0a80 _SHA512_Update
 // match: dc0b60 _sha512_224_init
 // match: dc0c10 _sha512_256_init
+#define OPENSSL_FILE "crypto\\sha\\sha512.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/sha/sha512.c"

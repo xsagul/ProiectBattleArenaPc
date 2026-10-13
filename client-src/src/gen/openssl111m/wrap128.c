@@ -6,4 +6,6 @@
 // match: dfd3a0 _CRYPTO_128_wrap
 // match: dfd4f0 _CRYPTO_128_wrap_pad
 // match: dfd6f0 _crypto_128_unwrap_raw
+#define OPENSSL_FILE "crypto\\modes\\wrap128.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/modes/wrap128.c"

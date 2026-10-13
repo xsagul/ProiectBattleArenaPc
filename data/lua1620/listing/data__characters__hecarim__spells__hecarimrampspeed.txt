@@ -1,0 +1,46 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 00000281713F35F0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 19 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; "ASSETS/Characters/Hecarim/HUD/Icons2D/Hecarim_DevastingCharge.dds"
+	2	[-]	SETGLOBAL	0 -1	; BuffTextureName
+	3	[-]	LOADK    	0 -4	; "HecarimRamp"
+	4	[-]	SETGLOBAL	0 -3	; BuffName
+	5	[-]	LOADK    	0 -6	; "r:Hecarim_E_buf"
+	6	[-]	SETGLOBAL	0 -5	; AutoBuffActivateEffect
+	7	[-]	LOADK    	0 -8	; "C_BUFFBONE_GLB_CENTER_LOC"
+	8	[-]	SETGLOBAL	0 -7	; AutoBuffActivateAttachBoneName
+	9	[-]	LOADK    	0 -10	; "r:Hecarim_E_weapon_buf"
+	10	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect2
+	11	[-]	LOADK    	0 -12	; "Weapon"
+	12	[-]	SETGLOBAL	0 -11	; AutoBuffActivateAttachBoneName2
+	13	[-]	LOADK    	0 -14	; "r:Hecarim_E_weapon_buf2"
+	14	[-]	SETGLOBAL	0 -13	; AutoBuffActivateEffect3
+	15	[-]	LOADK    	0 -16	; "BUFFBONE_GLB_WEAPON_1"
+	16	[-]	SETGLOBAL	0 -15	; AutoBuffActivateAttachBoneName3
+	17	[-]	LOADK    	0 -18	; 1
+	18	[-]	SETGLOBAL	0 -17	; SpellToggleSlot
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -19	; IsDamagingSpell
+	21	[-]	RETURN   	0 1
+constants (19) for 00000281713F35F0:
+	1	"BuffTextureName"
+	2	"ASSETS/Characters/Hecarim/HUD/Icons2D/Hecarim_DevastingCharge.dds"
+	3	"BuffName"
+	4	"HecarimRamp"
+	5	"AutoBuffActivateEffect"
+	6	"r:Hecarim_E_buf"
+	7	"AutoBuffActivateAttachBoneName"
+	8	"C_BUFFBONE_GLB_CENTER_LOC"
+	9	"AutoBuffActivateEffect2"
+	10	"r:Hecarim_E_weapon_buf"
+	11	"AutoBuffActivateAttachBoneName2"
+	12	"Weapon"
+	13	"AutoBuffActivateEffect3"
+	14	"r:Hecarim_E_weapon_buf2"
+	15	"AutoBuffActivateAttachBoneName3"
+	16	"BUFFBONE_GLB_WEAPON_1"
+	17	"SpellToggleSlot"
+	18	1
+	19	"IsDamagingSpell"
+locals (0) for 00000281713F35F0:
+upvalues (0) for 00000281713F35F0:

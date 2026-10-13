@@ -1,0 +1,69 @@
+
+main <?:0,0> (39 instructions, 156 bytes at 000002C010B53600)
+0+ params, 7 slots, 0 upvalues, 0 locals, 24 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Xerath/HUD/Icons2D/Xerath_Q1.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; 1
+	10	[-]	SETGLOBAL	0 -6	; SpellToggleSlot
+	11	[-]	LOADK    	0 -9	; 3
+	12	[-]	SETGLOBAL	0 -8	; OnPreDamagePriority
+	13	[-]	NEWTABLE 	0 2 0
+	14	[-]	LOADK    	1 -11	; "IronForgeXerath"
+	15	[-]	LOADK    	2 -12	; "XerathSkin04"
+	16	[-]	SETLIST  	0 2 1	; 1
+	17	[-]	SETGLOBAL	0 -10	; SpellFXOverrideSkins
+	18	[-]	NEWTABLE 	0 1 0
+	19	[-]	LOADK    	1 -14	; "XerathDarkIron"
+	20	[-]	SETLIST  	0 1 1	; 1
+	21	[-]	SETGLOBAL	0 -13	; SpellVOOverrideSkins
+	22	[-]	LOADBOOL 	0 0 0
+	23	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	24	[-]	NEWTABLE 	0 0 6
+	25	[-]	NEWTABLE 	1 5 0
+	26	[-]	LOADK    	2 -18	; 4
+	27	[-]	LOADK    	3 -18	; 4
+	28	[-]	LOADK    	4 -18	; 4
+	29	[-]	LOADK    	5 -18	; 4
+	30	[-]	LOADK    	6 -18	; 4
+	31	[-]	SETLIST  	1 5 1	; 1
+	32	[-]	SETTABLE 	0 -17 1	; "MaximumHits" -
+	33	[-]	SETTABLE 	0 -19 -20	; "CanHitCaster" 0
+	34	[-]	SETTABLE 	0 -21 -20	; "CanHitSameTarget" 0
+	35	[-]	SETTABLE 	0 -22 -20	; "CanHitSameTargetConsecutively" 0
+	36	[-]	SETTABLE 	0 -23 -7	; "CanHitEnemies" 1
+	37	[-]	SETTABLE 	0 -24 -20	; "CanHitFriends" 0
+	38	[-]	SETGLOBAL	0 -16	; ChainMissileParameters
+	39	[-]	RETURN   	0 1
+constants (24) for 000002C010B53600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Xerath/HUD/Icons2D/Xerath_Q1.dds"
+	6	"SpellToggleSlot"
+	7	1
+	8	"OnPreDamagePriority"
+	9	3
+	10	"SpellFXOverrideSkins"
+	11	"IronForgeXerath"
+	12	"XerathSkin04"
+	13	"SpellVOOverrideSkins"
+	14	"XerathDarkIron"
+	15	"IsDamagingSpell"
+	16	"ChainMissileParameters"
+	17	"MaximumHits"
+	18	4
+	19	"CanHitCaster"
+	20	0
+	21	"CanHitSameTarget"
+	22	"CanHitSameTargetConsecutively"
+	23	"CanHitEnemies"
+	24	"CanHitFriends"
+locals (0) for 000002C010B53600:
+upvalues (0) for 000002C010B53600:

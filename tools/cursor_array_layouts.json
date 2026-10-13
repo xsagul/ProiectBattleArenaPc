@@ -1,0 +1,110 @@
+[
+  {
+    "evidence": {
+      "name": "CursorDataCaptureCooldownContext",
+      "size": 392,
+      "align": 4,
+      "member": {
+        "name": "mData",
+        "hash": 2114832992,
+        "wrapper": 6373376,
+        "element": "CursorData",
+        "stride": 56,
+        "descriptor": {
+          "code": 128,
+          "of": [
+            "imm",
+            57706016
+          ],
+          "slot": 5,
+          "size": 12,
+          "stores": {
+            "4": [
+              1,
+              131
+            ],
+            "8": [
+              4,
+              56
+            ]
+          },
+          "vtable": 28483532
+        }
+      },
+      "tail": [
+        "    u8 unknown0c[0x17c];"
+      ],
+      "native_ctor": 6404608,
+      "native_dtor": 6431808,
+      "native_dtor_body": "push esi\npush edi\nmov edi, 7\nlea esi, [ecx + 0x1a8]\nnop dword ptr [eax]\nsub esi, 0x38\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\ncall 0x9bab90\nlea ecx, [esi - 0xc]\ncall 0x9bab90\nlea ecx, [esi - 0x18]\ncall 0x9bab90\nsub edi, 1\njne 0x622450\npop edi\npop esi\nret",
+      "callbacks": {
+        "create": 6372096,
+        "construct": 6372176,
+        "destroy": 6370720,
+        "destruct": 6370752
+      },
+      "bodies": {
+        "create": "push 0x188\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0x613b18\nmov ecx, eax\njmp 0x61ba00\nxor eax, eax\nret",
+        "construct": "mov ecx, dword ptr [esp + 4]\njmp 0x61ba00",
+        "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x6135be\nmov ecx, esi\ncall 0x622440\npush 0x188\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+        "destruct": "mov ecx, dword ptr [esp + 4]\njmp 0x622440"
+      }
+    },
+    "count": 7,
+    "native_ctor_body": "push esi\nmov esi, 7\nlea edx, [ecx + 0x10]\nnop dword ptr [eax]\nmov dword ptr [edx - 0x10], 0\nlea edx, [edx + 0x38]\nmov dword ptr [edx - 0x44], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [edx - 0x40], eax\nmov dword ptr [edx - 0x3c], 0\nmov dword ptr [edx - 0x38], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [edx - 0x34], eax\nmov dword ptr [edx - 0x30], 0\nmov dword ptr [edx - 0x2c], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [edx - 0x28], eax\nmov dword ptr [edx - 0x24], 0\nmov dword ptr [edx - 0x20], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [edx - 0x1c], eax\nmov dword ptr [edx - 0x18], 0\nmov dword ptr [edx - 0x14], 0\nsub esi, 1\njne 0x61ba10\nmov eax, ecx\npop esi\nret"
+  },
+  {
+    "evidence": {
+      "name": "CursorDataTeamContext",
+      "size": 168,
+      "align": 4,
+      "member": {
+        "name": "mData",
+        "hash": 2114832992,
+        "wrapper": 6372928,
+        "element": "CursorData",
+        "stride": 56,
+        "descriptor": {
+          "code": 128,
+          "of": [
+            "imm",
+            57706016
+          ],
+          "slot": 5,
+          "size": 12,
+          "stores": {
+            "4": [
+              1,
+              131
+            ],
+            "8": [
+              4,
+              56
+            ]
+          },
+          "vtable": 28483572
+        }
+      },
+      "tail": [
+        "    u8 unknown0c[0x9c];"
+      ],
+      "native_ctor": 6404752,
+      "native_dtor": 6431872,
+      "native_dtor_body": "push esi\npush edi\nmov edi, 3\nlea esi, [ecx + 0xc8]\nnop dword ptr [eax]\nsub esi, 0x38\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\ncall 0x9bab90\nlea ecx, [esi - 0xc]\ncall 0x9bab90\nlea ecx, [esi - 0x18]\ncall 0x9bab90\nsub edi, 1\njne 0x622490\npop edi\npop esi\nret",
+      "callbacks": {
+        "create": 6371424,
+        "construct": 6371936,
+        "destroy": 6370768,
+        "destruct": 6370800
+      },
+      "bodies": {
+        "create": "push 0xa8\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0x613878\nmov ecx, eax\njmp 0x61ba90\nxor eax, eax\nret",
+        "construct": "mov ecx, dword ptr [esp + 4]\njmp 0x61ba90",
+        "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x6135ee\nmov ecx, esi\ncall 0x622480\npush 0xa8\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+        "destruct": "mov ecx, dword ptr [esp + 4]\njmp 0x622480"
+      }
+    },
+    "count": 3,
+    "native_ctor_body": "push esi\nmov esi, 3\nlea edx, [ecx + 0x10]\nnop dword ptr [eax]\nmov dword ptr [edx - 0x10], 0\nlea edx, [edx + 0x38]\nmov dword ptr [edx - 0x44], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [edx - 0x40], eax\nmov dword ptr [edx - 0x3c], 0\nmov dword ptr [edx - 0x38], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [edx - 0x34], eax\nmov dword ptr [edx - 0x30], 0\nmov dword ptr [edx - 0x2c], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [edx - 0x28], eax\nmov dword ptr [edx - 0x24], 0\nmov dword ptr [edx - 0x20], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [edx - 0x1c], eax\nmov dword ptr [edx - 0x18], 0\nmov dword ptr [edx - 0x14], 0\nsub esi, 1\njne 0x61baa0\nmov eax, ecx\npop esi\nret"
+  }
+]

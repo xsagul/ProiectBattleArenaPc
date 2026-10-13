@@ -1,0 +1,43 @@
+
+main <?:0,0> (24 instructions, 96 bytes at 000001577AE43600)
+0+ params, 3 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Milio/HUD/Icons2D/Milio_W.Milio.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "Stoke the Flame"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -7	; "Stoke the Flame"
+	12	[-]	SETGLOBAL	0 -8	; DisplayName
+	13	[-]	NEWTABLE 	0 2 0
+	14	[-]	LOADK    	1 -10	; "AstronautTeemo"
+	15	[-]	LOADK    	2 -11	; "TeemoSkin08"
+	16	[-]	SETLIST  	0 2 1	; 1
+	17	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	18	[-]	NEWTABLE 	0 1 0
+	19	[-]	LOADK    	1 -11	; "TeemoSkin08"
+	20	[-]	SETLIST  	0 1 1	; 1
+	21	[-]	SETGLOBAL	0 -12	; SpellVOOverrideSkins
+	22	[-]	LOADBOOL 	0 0 0
+	23	[-]	SETGLOBAL	0 -13	; IsDamagingSpell
+	24	[-]	RETURN   	0 1
+constants (13) for 000001577AE43600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Milio/HUD/Icons2D/Milio_W.Milio.dds"
+	6	"BuffName"
+	7	"Stoke the Flame"
+	8	"DisplayName"
+	9	"SpellFXOverrideSkins"
+	10	"AstronautTeemo"
+	11	"TeemoSkin08"
+	12	"SpellVOOverrideSkins"
+	13	"IsDamagingSpell"
+locals (0) for 000001577AE43600:
+upvalues (0) for 000001577AE43600:

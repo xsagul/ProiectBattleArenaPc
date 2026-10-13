@@ -1,0 +1,35 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 00000157F9E235C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Galio/HUD/Icons2D/Galio_W.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "GalioWBuff"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	NEWTABLE 	0 1 0
+	10	[-]	LOADK    	1 -8	; "GatekeeperGalio"
+	11	[-]	SETLIST  	0 1 1	; 1
+	12	[-]	SETGLOBAL	0 -7	; SpellFXOverrideSkins
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -8	; "GatekeeperGalio"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -9	; SpellVOOverrideSkins
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -10	; IsDamagingSpell
+	19	[-]	RETURN   	0 1
+constants (10) for 00000157F9E235C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Galio/HUD/Icons2D/Galio_W.dds"
+	5	"BuffName"
+	6	"GalioWBuff"
+	7	"SpellFXOverrideSkins"
+	8	"GatekeeperGalio"
+	9	"SpellVOOverrideSkins"
+	10	"IsDamagingSpell"
+locals (0) for 00000157F9E235C0:
+upvalues (0) for 00000157F9E235C0:

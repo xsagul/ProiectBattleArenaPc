@@ -1,0 +1,33 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 000001E699C43600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Kassadin/HUD/Icons2D/Kassadin_E.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "ForcePulse"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -9	; "KassadinSkin05"
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -10	; IsDamagingSpell
+	17	[-]	RETURN   	0 1
+constants (10) for 000001E699C43600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Kassadin/HUD/Icons2D/Kassadin_E.dds"
+	6	"BuffName"
+	7	"ForcePulse"
+	8	"SpellFXOverrideSkins"
+	9	"KassadinSkin05"
+	10	"IsDamagingSpell"
+locals (0) for 000001E699C43600:
+upvalues (0) for 000001E699C43600:

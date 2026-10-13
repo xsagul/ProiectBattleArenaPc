@@ -1,0 +1,40 @@
+
+main <?:0,0> (22 instructions, 88 bytes at 0000020ED4963600)
+0+ params, 3 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/UX/Jade/S3Icons/SameSized/Jade_Chogath_SpikeSlam.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "Jade_ChogathQ"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	NEWTABLE 	0 1 0
+	12	[-]	LOADK    	1 -9	; "BattlecastJade_Chogath"
+	13	[-]	SETLIST  	0 1 1	; 1
+	14	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	15	[-]	NEWTABLE 	0 2 0
+	16	[-]	LOADK    	1 -11	; "DandyJade_Chogath"
+	17	[-]	LOADK    	2 -9	; "BattlecastJade_Chogath"
+	18	[-]	SETLIST  	0 2 1	; 1
+	19	[-]	SETGLOBAL	0 -10	; SpellVOOverrideSkins
+	20	[-]	LOADBOOL 	0 1 0
+	21	[-]	SETGLOBAL	0 -12	; IsDamagingSpell
+	22	[-]	RETURN   	0 1
+constants (12) for 0000020ED4963600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/UX/Jade/S3Icons/SameSized/Jade_Chogath_SpikeSlam.dds"
+	6	"BuffName"
+	7	"Jade_ChogathQ"
+	8	"SpellFXOverrideSkins"
+	9	"BattlecastJade_Chogath"
+	10	"SpellVOOverrideSkins"
+	11	"DandyJade_Chogath"
+	12	"IsDamagingSpell"
+locals (0) for 0000020ED4963600:
+upvalues (0) for 0000020ED4963600:

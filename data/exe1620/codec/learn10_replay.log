@@ -1,0 +1,98 @@
+struct 0xef36c0
+  0xef36c0 field 0: bits 0..0 +0x10 16 B 0:seq(struct) 1:const
+struct 0xeebe50
+  0xeebe50 field 0: bits 0..2 +0x8 4 B 0:const 1:const 2:varint 3:const 4:varint 5:const 6:varint 7:varint
+  0xeebe50 field 1: bits 11..13 +0xc 4 B 0:const 1:varint 2:const 3:varint 4:const 5:varint 6:varint 7:const
+    0xeebe50 field 2: fewer than three different elements in the replay, order taken as fwd (unverified)
+  0xeebe50 field 2: bits 10..10 +0x10 16 B 0:const 1:seq(struct)
+  0xeebe50 field 3: bits 15..17 +0x20 4 B 0:varint 1:varint 2:const 3:const 4:varint 5:varint 6:const 7:const
+    0xeebe50 field 4 mode 0: not a text (0xeebe50 field 4 mode 0: length 2 byte 0 -> []); trying a seq of numbers
+  0xeebe50 field 4: bits 14..14 +0x28 16 B 0:seq(varint) 1:const
+  0xeebe50 field 5: bits 3..5 +0x38 4 B 0:varint 1:varint 2:varint 3:const 4:varint 5:const 6:const 7:const
+    0xeebe50 field 6 mode 1: not a text (0xeebe50 field 6 mode 1: length table [0, 1, 3, 7, 16, 17, 19, 22, 23, 29, 30, 31, 39, 41, 43, 44, 48, 49, 50, 51, 53, 54, 55, 58, 59, 60, 61, 62, 63, 67, 68, 69, 70, 71, 72, 73, 75, 77, 80, 81, 82, 84, 86, 88, 90, 91, 92, 93, 94, 95, 96, 98, 100, 103, 105, 106, 113, 114, 115, 116, 117, 118, 120, 122, 123, 125, 126, 127, 128, 129, 130, 131, 132, 139, 141, 143, 144, 146, 147, 148, 150, 151, 152, 154, 155, 156, 158, 160, 162, 163, 164, 165, 166, 170, 171, 172, 174, 176, 184, 189, 193, 195, 199, 202, 203, 204, 207, 208, 209, 210, 213, 214, 215, 216, 219, 221, 222, 223, 224, 229, 230, 232, 233, 234, 235, 237, 242, 243, 244, 245, 246, 247, 252, 253] [122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]); trying a seq of numbers
+    0xeebe50 field 6 mode 1: left unlearnt (AssertionError: 0xeebe50 field 6 mode 1: no one-byte element found)
+  0xeebe50 field 6: bits 9..9 +0x40 16 B 0:const 1:unknown
+  0xeebe50 field 7: bits 6..8 +0x50 2 B 0:const 1:const 2:varint 3:varint 4:varint 5:varint 6:const 7:const
+struct 0xeece50
+  0xeece50 field 0: bits 0..0 +0x8 4 B 0:varint 1:const
+    0xeece50 field 1 mode 2: left unlearnt (AssertionError: 0xeece50 field 1 mode 2: varint table)
+    0xeece50 field 1 mode 4: left unlearnt (AssertionError: 0xeece50 field 1 mode 4: varint table)
+    0xeece50 field 1 mode 5: left unlearnt (AssertionError: 0xeece50 field 1 mode 5: varint table)
+    0xeece50 field 1 mode 7: left unlearnt (AssertionError: 0xeece50 field 1 mode 7: varint table)
+  0xeece50 field 1: bits 38..40 +0xc 2 B 0:const 1:const 2:unknown 3:const 4:unknown 5:unknown 6:const 7:unknown
+  0xeece50 field 2: bits 56..58 +0xe 2 B 0:varint 1:const 2:varint 3:const 4:varint 5:const 6:const 7:varint
+  0xeece50 field 3: bits 59..61 +0x10 2 B 0:const 1:varint 2:varint 3:const 4:const 5:varint 6:const 7:varint
+  0xeece50 field 4: bits 17..19 +0x14 4 B 0:const 1:fixed 2:const 3:fixed 4:const 5:const 6:fixed 7:fixed
+  0xeece50 field 5: bits 44..46 +0x18 4 B 0:const 1:varint 2:varint 3:varint 4:varint 5:const 6:varint 7:varint
+  0xeece50 field 6: bits 71..71 +0x1c 4 B 0:const 1:varint
+  0xeece50 field 7: bits 62..64 +0x20 2 B 0:varint 1:varint 2:const 3:varint 4:const 5:const 6:const 7:varint
+  0xeece50 field 8: bits 20..22 +0x24 4 B 0:varint 1:const 2:const 3:varint 4:varint 5:varint 6:varint 7:varint
+  0xeece50 field 9: bits 29..31 +0x28 4 B 0:varint 1:varint 2:varint 3:const 4:const 5:varint 6:varint 7:varint
+  instance 0 of 4: 
+  0xeece50 field 0: bits 0..0 +0x8 4 B 0:varint 1:const
+    0xeece50 field 1 mode 2: left unlearnt (AssertionError: 0xeece50 field 1 mode 2: varint table)
+    0xeece50 field 1 mode 4: left unlearnt (AssertionError: 0xeece50 field 1 mode 4: varint table)
+    0xeece50 field 1 mode 5: left unlearnt (AssertionError: 0xeece50 field 1 mode 5: varint table)
+    0xeece50 field 1 mode 7: left unlearnt (AssertionError: 0xeece50 field 1 mode 7: varint table)
+  0xeece50 field 1: bits 38..40 +0xc 2 B 0:const 1:const 2:unknown 3:const 4:unknown 5:unknown 6:const 7:unknown
+  0xeece50 field 2: bits 56..58 +0xe 2 B 0:varint 1:const 2:varint 3:const 4:varint 5:const 6:const 7:varint
+  0xeece50 field 3: bits 59..61 +0x10 2 B 0:const 1:varint 2:varint 3:const 4:const 5:varint 6:const 7:varint
+  0xeece50 field 4: bits 17..19 +0x14 4 B 0:const 1:fixed 2:const 3:fixed 4:const 5:const 6:fixed 7:fixed
+  0xeece50 field 5: bits 44..46 +0x18 4 B 0:const 1:varint 2:varint 3:varint 4:varint 5:const 6:varint 7:varint
+  0xeece50 field 6: bits 71..71 +0x1c 4 B 0:const 1:varint
+  0xeece50 field 7: bits 62..64 +0x20 2 B 0:varint 1:varint 2:const 3:varint 4:const 5:const 6:const 7:varint
+  0xeece50 field 8: bits 20..22 +0x24 4 B 0:varint 1:const 2:const 3:varint 4:varint 5:varint 6:varint 7:varint
+  0xeece50 field 9: bits 29..31 +0x28 4 B 0:varint 1:varint 2:varint 3:const 4:const 5:varint 6:varint 7:varint
+  instance 1 of 4: 
+  0xeece50 field 0: bits 0..0 +0x8 4 B 0:varint 1:const
+    0xeece50 field 1 mode 2: left unlearnt (AssertionError: 0xeece50 field 1 mode 2: varint table)
+    0xeece50 field 1 mode 4: left unlearnt (AssertionError: 0xeece50 field 1 mode 4: varint table)
+    0xeece50 field 1 mode 5: left unlearnt (AssertionError: 0xeece50 field 1 mode 5: varint table)
+    0xeece50 field 1 mode 7: left unlearnt (AssertionError: 0xeece50 field 1 mode 7: varint table)
+  0xeece50 field 1: bits 38..40 +0xc 2 B 0:const 1:const 2:unknown 3:const 4:unknown 5:unknown 6:const 7:unknown
+  0xeece50 field 2: bits 56..58 +0xe 2 B 0:varint 1:const 2:varint 3:const 4:varint 5:const 6:const 7:varint
+  0xeece50 field 3: bits 59..61 +0x10 2 B 0:const 1:varint 2:varint 3:const 4:const 5:varint 6:const 7:varint
+  0xeece50 field 4: bits 17..19 +0x14 4 B 0:const 1:fixed 2:const 3:fixed 4:const 5:const 6:fixed 7:fixed
+  0xeece50 field 5: bits 44..46 +0x18 4 B 0:const 1:varint 2:varint 3:varint 4:varint 5:const 6:varint 7:varint
+  0xeece50 field 6: bits 71..71 +0x1c 4 B 0:const 1:varint
+  0xeece50 field 7: bits 62..64 +0x20 2 B 0:varint 1:varint 2:const 3:varint 4:const 5:const 6:const 7:varint
+  0xeece50 field 8: bits 20..22 +0x24 4 B 0:varint 1:const 2:const 3:varint 4:varint 5:varint 6:varint 7:varint
+  0xeece50 field 9: bits 29..31 +0x28 4 B 0:varint 1:varint 2:varint 3:const 4:const 5:varint 6:varint 7:varint
+  instance 2 of 4: 
+  0xeece50 field 0: bits 0..0 +0x8 4 B 0:varint 1:const
+    0xeece50 field 1 mode 2: left unlearnt (AssertionError: 0xeece50 field 1 mode 2: varint table)
+    0xeece50 field 1 mode 4: left unlearnt (AssertionError: 0xeece50 field 1 mode 4: varint table)
+    0xeece50 field 1 mode 5: left unlearnt (AssertionError: 0xeece50 field 1 mode 5: varint table)
+    0xeece50 field 1 mode 7: left unlearnt (AssertionError: 0xeece50 field 1 mode 7: varint table)
+  0xeece50 field 1: bits 38..40 +0xc 2 B 0:const 1:const 2:unknown 3:const 4:unknown 5:unknown 6:const 7:unknown
+  0xeece50 field 2: bits 56..58 +0xe 2 B 0:varint 1:const 2:varint 3:const 4:varint 5:const 6:const 7:varint
+  0xeece50 field 3: bits 59..61 +0x10 2 B 0:const 1:varint 2:varint 3:const 4:const 5:varint 6:const 7:varint
+  0xeece50 field 4: bits 17..19 +0x14 4 B 0:const 1:fixed 2:const 3:fixed 4:const 5:const 6:fixed 7:fixed
+  0xeece50 field 5: bits 44..46 +0x18 4 B 0:const 1:varint 2:varint 3:varint 4:varint 5:const 6:varint 7:varint
+  0xeece50 field 6: bits 71..71 +0x1c 4 B 0:const 1:varint
+  0xeece50 field 7: bits 62..64 +0x20 2 B 0:varint 1:varint 2:const 3:varint 4:const 5:const 6:const 7:varint
+  0xeece50 field 8: bits 20..22 +0x24 4 B 0:varint 1:const 2:const 3:varint 4:varint 5:varint 6:varint 7:varint
+  0xeece50 field 9: bits 29..31 +0x28 4 B 0:varint 1:varint 2:varint 3:const 4:const 5:varint 6:varint 7:varint
+  instance 3 of 4: 
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1767, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1426, in learn
+    sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc, k=k).learn()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 366, in learn
+    fl = self.learn_field(k)
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 410, in learn_field
+    mode = self.learn_mode(k, m, r, seg, res, d)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 496, in learn_mode
+    return self.learn_bytes(k, m, res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 574, in learn_bytes
+    return self.learn_fixed(k, m, res, counts.pop())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 653, in learn_fixed
+    assert len({t for t in tab if t is not None}) == len(good)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

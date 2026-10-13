@@ -1,0 +1,52 @@
+
+main <?:0,0> (28 instructions, 112 bytes at 000001444D4435F0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Yorick/HUD/Icons2D/Yorick_R.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "YorickRBigGhoul"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -7	; IsDeathRecapSource
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -8	; IsDamagingSpell
+	13	[-]	NEWTABLE 	0 0 6
+	14	[-]	NEWTABLE 	1 5 0
+	15	[-]	LOADK    	2 -11	; 4
+	16	[-]	LOADK    	3 -11	; 4
+	17	[-]	LOADK    	4 -11	; 4
+	18	[-]	LOADK    	5 -11	; 4
+	19	[-]	LOADK    	6 -11	; 4
+	20	[-]	SETLIST  	1 5 1	; 1
+	21	[-]	SETTABLE 	0 -10 1	; "MaximumHits" -
+	22	[-]	SETTABLE 	0 -12 -13	; "CanHitCaster" 0
+	23	[-]	SETTABLE 	0 -14 -13	; "CanHitSameTarget" 0
+	24	[-]	SETTABLE 	0 -15 -13	; "CanHitSameTargetConsecutively" 0
+	25	[-]	SETTABLE 	0 -16 -17	; "CanHitEnemies" 1
+	26	[-]	SETTABLE 	0 -18 -13	; "CanHitFriends" 0
+	27	[-]	SETGLOBAL	0 -9	; ChainMissileParameters
+	28	[-]	RETURN   	0 1
+constants (18) for 000001444D4435F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Yorick/HUD/Icons2D/Yorick_R.dds"
+	5	"BuffName"
+	6	"YorickRBigGhoul"
+	7	"IsDeathRecapSource"
+	8	"IsDamagingSpell"
+	9	"ChainMissileParameters"
+	10	"MaximumHits"
+	11	4
+	12	"CanHitCaster"
+	13	0
+	14	"CanHitSameTarget"
+	15	"CanHitSameTargetConsecutively"
+	16	"CanHitEnemies"
+	17	1
+	18	"CanHitFriends"
+locals (0) for 000001444D4435F0:
+upvalues (0) for 000001444D4435F0:

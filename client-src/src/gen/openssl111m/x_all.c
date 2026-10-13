@@ -6,4 +6,6 @@
 // match: dd38a0 _X509_digest
 // match: dd3910 _X509_pubkey_digest
 // match: dd3940 _X509_verify
+#define OPENSSL_FILE "crypto\\x509\\x_all.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/x509/x_all.c"

@@ -4,5 +4,8 @@
 // match: e0bad0 _OBJ_find_sigid_algs
 // match: e0bb80 _OBJ_find_sigid_by_algs
 // match: e0bc40 _OBJ_sigid_free
+// match: e0bc80 _sid_free
 // match: e0bca0 _sigx_cmp_BSEARCH_CMP_FN
+#define OPENSSL_FILE "crypto\\objects\\obj_xref.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/objects/obj_xref.c"

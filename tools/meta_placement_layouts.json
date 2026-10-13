@@ -1,0 +1,390 @@
+[
+  {
+    "name": "Class_bafabcc8",
+    "facts": {
+      "create": 2551872,
+      "destroy": 987760,
+      "construct": 2552000,
+      "destruct": 987808,
+      "v2": 0,
+      "size": 24,
+      "align": 4,
+      "parent": null,
+      "poly": true
+    },
+    "members": [
+      {
+        "wrapper": 2557840,
+        "args": [
+          [
+            "imm",
+            3980771574
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push esi\npush 0xc\nmov esi, ecx\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0x2707b4\nmov byte ptr [eax + 4], 0x84\nmov dword ptr [eax + 8], 4\nmov dword ptr [eax], 0x1535324\njmp 0x2707b6\nxor eax, eax\npush dword ptr [esp + 0x10]\nmov ecx, esi\npush 0x1532fb2\npush 0\npush eax\npush 0x36f3c70\npush 0\npush 0x80\npush dword ptr [esp + 0x28]\npush dword ptr [esp + 0x28]\ncall 0x9bd410\npop esi\nret 0xc",
+        "descriptor": {
+          "code": 128,
+          "of": [
+            "imm",
+            57621616
+          ],
+          "slot": 5,
+          "size": 12,
+          "stores": {
+            "4": [
+              1,
+              132
+            ],
+            "8": [
+              4,
+              4
+            ]
+          },
+          "vtable": 22237988
+        },
+        "type": null
+      }
+    ],
+    "native_helpers": {
+      "0xa21cf0": "mov dword ptr [ecx], 0x1b4b058\nmov eax, ecx\nret",
+      "0xf95b0": "mov ecx, dword ptr [ecx]\nmov edx, dword ptr [esp + 4]\nmov eax, dword ptr [ecx + 4]\nmov dword ptr [edx], eax\nmov dword ptr [edx + 4], 0\nmov dword ptr [edx + 8], ecx\ncmp byte ptr [eax + 0xd], 0\njne 0xf95f4\nmov ecx, dword ptr [esp + 8]\npush esi\nmov esi, dword ptr [ecx]\nmov dword ptr [edx], eax\ncmp dword ptr [eax + 0x10], esi\njae 0xf95e0\nmov eax, dword ptr [eax + 8]\nxor ecx, ecx\njmp 0xf95ea\nmov dword ptr [edx + 8], eax\nmov ecx, 1\nmov eax, dword ptr [eax]\nmov dword ptr [edx + 4], ecx\ncmp byte ptr [eax + 0xd], 0\nje 0xf95d2\npop esi\nmov eax, edx\nret 8",
+      "0x124b60": "mov edx, dword ptr [esp + 4]\npush ebx\npush ebp\nmov ebx, ecx\npush edi\nmov edi, dword ptr [esp + 0x18]\ninc dword ptr [ebx + 4]\nmov ebp, dword ptr [ebx]\nmov dword ptr [edi + 4], edx\ncmp edx, ebp\njne 0x124b8e\nmov dword ptr [ebp], edi\nmov eax, edi\nmov dword ptr [ebp + 4], edi\nmov dword ptr [ebp + 8], edi\nmov byte ptr [edi + 0xc], 1\npop edi\npop ebp\npop ebx\nret 0xc\ncmp dword ptr [esp + 0x14], 0\njne 0x124ba2\nmov dword ptr [edx + 8], edi\ncmp edx, dword ptr [ebp + 8]\njne 0x124bac\nmov dword ptr [ebp + 8], edi\njmp 0x124bac\nmov dword ptr [edx], edi\ncmp edx, dword ptr [ebp]\njne 0x124bac\nmov dword ptr [ebp], edi\nmov ecx, dword ptr [edi + 4]\nmov eax, edi\ncmp byte ptr [ecx + 0xc], 0\njne 0x124d3a\npush esi\nnop dword ptr [eax]\nmov edx, dword ptr [eax + 4]\nmov esi, dword ptr [edx + 4]\nmov ecx, dword ptr [esi]\ncmp edx, ecx\njne 0x124c7a\nmov ecx, dword ptr [esi + 8]\ncmp byte ptr [ecx + 0xc], 0\nje 0x124c80\nmov esi, dword ptr [edx + 8]\ncmp eax, esi\njne 0x124c1b\nmov ecx, dword ptr [esi]\nmov eax, edx\nmov dword ptr [edx + 8], ecx\nmov ecx, dword ptr [esi]\ncmp byte ptr [ecx + 0xd], 0\njne 0x124bf6\nmov dword ptr [ecx + 4], eax\nmov ecx, dword ptr [edx + 4]\nmov dword ptr [esi + 4], ecx\nmov ecx, dword ptr [ebx]\ncmp eax, dword ptr [ecx + 4]\njne 0x124c08\nmov dword ptr [ecx + 4], esi\njmp 0x124c16\nmov ecx, dword ptr [edx + 4]\ncmp eax, dword ptr [ecx]\njne 0x124c13\nmov dword ptr [ecx], esi\njmp 0x124c16\nmov dword ptr [ecx + 8], esi\nmov dword ptr [esi], eax\nmov dword ptr [edx + 4], esi\nmov ecx, dword ptr [eax + 4]\nmov byte ptr [ecx + 0xc], 1\nmov ecx, dword ptr [eax + 4]\nmov ecx, dword ptr [ecx + 4]\nmov byte ptr [ecx + 0xc], 0\nmov ecx, dword ptr [eax + 4]\nmov edx, dword ptr [ecx + 4]\nmov esi, dword ptr [edx]\nmov ecx, dword ptr [esi + 8]\nmov dword ptr [edx], ecx\nmov ecx, dword ptr [esi + 8]\ncmp byte ptr [ecx + 0xd], 0\njne 0x124c45\nmov dword ptr [ecx + 4], edx\nmov ecx, dword ptr [edx + 4]\nmov dword ptr [esi + 4], ecx\nmov ecx, dword ptr [ebx]\ncmp edx, dword ptr [ecx + 4]\njne 0x124c5d\nmov dword ptr [ecx + 4], esi\nmov dword ptr [esi + 8], edx\njmp 0x124d29\nmov ecx, dword ptr [edx + 4]\ncmp edx, dword ptr [ecx + 8]\njne 0x124c70\nmov dword ptr [ecx + 8], esi\nmov dword ptr [esi + 8], edx\njmp 0x124d29\nmov dword ptr [ecx], esi\nmov dword ptr [esi + 8], edx\njmp 0x124d29\ncmp byte ptr [ecx + 0xc], 0\njne 0x124c9d\nmov byte ptr [edx + 0xc], 1\nmov byte ptr [ecx + 0xc], 1\nmov ecx, dword ptr [eax + 4]\nmov ecx, dword ptr [ecx + 4]\nmov byte ptr [ecx + 0xc], 0\nmov ecx, dword ptr [eax + 4]\nmov eax, dword ptr [ecx + 4]\njmp 0x124d2c\nmov esi, dword ptr [edx]\ncmp eax, esi\njne 0x124cdd\nmov ecx, dword ptr [esi + 8]\nmov eax, edx\nmov dword ptr [eax], ecx\nmov ecx, dword ptr [esi + 8]\ncmp byte ptr [ecx + 0xd], 0\njne 0x124cb6\nmov dword ptr [ecx + 4], eax\nmov ecx, dword ptr [edx + 4]\nmov dword ptr [esi + 4], ecx\nmov ecx, dword ptr [ebx]\ncmp eax, dword ptr [ecx + 4]\njne 0x124cc8\nmov dword ptr [ecx + 4], esi\njmp 0x124cd7\nmov ecx, dword ptr [edx + 4]\ncmp eax, dword ptr [ecx + 8]\njne 0x124cd5\nmov dword ptr [ecx + 8], esi\njmp 0x124cd7\nmov dword ptr [ecx], esi\nmov dword ptr [esi + 8], eax\nmov dword ptr [edx + 4], esi\nmov ecx, dword ptr [eax + 4]\nmov byte ptr [ecx + 0xc], 1\nmov ecx, dword ptr [eax + 4]\nmov ecx, dword ptr [ecx + 4]\nmov byte ptr [ecx + 0xc], 0\nmov ecx, dword ptr [eax + 4]\nmov edx, dword ptr [ecx + 4]\nmov esi, dword ptr [edx + 8]\nmov ecx, dword ptr [esi]\nmov dword ptr [edx + 8], ecx\nmov ecx, dword ptr [esi]\ncmp byte ptr [ecx + 0xd], 0\njne 0x124d07\nmov dword ptr [ecx + 4], edx\nmov ecx, dword ptr [edx + 4]\nmov dword ptr [esi + 4], ecx\nmov ecx, dword ptr [ebx]\ncmp edx, dword ptr [ecx + 4]\njne 0x124d19\nmov dword ptr [ecx + 4], esi\njmp 0x124d27\nmov ecx, dword ptr [edx + 4]\ncmp edx, dword ptr [ecx]\njne 0x124d24\nmov dword ptr [ecx], esi\njmp 0x124d27\nmov dword ptr [ecx + 8], esi\nmov dword ptr [esi], edx\nmov dword ptr [edx + 4], esi\nmov ecx, dword ptr [eax + 4]\ncmp byte ptr [ecx + 0xc], 0\nje 0x124bc0\npop esi\nmov eax, dword ptr [ebp + 4]\nmov byte ptr [eax + 0xc], 1\nmov eax, edi\npop edi\npop ebp\npop ebx\nret 0xc",
+      "0x125680": "push 0x1533488\ncall 0xf4375f",
+      "0x63c7c0": "sub esp, 0xc\npush esi\npush edi\nlea eax, [esp + 0x18]\npush eax\nlea edi, [ecx + 0x1c]\nlea eax, [esp + 0xc]\nmov ecx, edi\npush eax\ncall 0xf95b0\nmov edx, dword ptr [esp + 0x10]\ncmp byte ptr [edx + 0xd], 0\njne 0x63c7ec\nmov eax, dword ptr [esp + 0x18]\ncmp eax, dword ptr [edx + 0x10]\njae 0x63c831\ncmp dword ptr [edi + 4], 0xaaaaaaa\nje 0x63c840\nmov esi, dword ptr [edi]\npush 0x18\ncall 0x9bb8d0\nmov edx, eax\nadd esp, 4\nmov eax, dword ptr [esp + 0x18]\nmov ecx, edi\npush edx\npush dword ptr [esp + 0x10]\nmov dword ptr [edx + 0x10], eax\npush dword ptr [esp + 0x10]\nmov dword ptr [edx + 0x14], 0\nmov dword ptr [edx], esi\nmov dword ptr [edx + 4], esi\nmov dword ptr [edx + 8], esi\nmov word ptr [edx + 0xc], 0\ncall 0x124b60\nmov edx, eax\nmov ecx, dword ptr [esp + 0x1c]\npop edi\nmov dword ptr [edx + 0x14], ecx\npop esi\nadd esp, 0xc\nret 8\ncall 0x125680"
+    },
+    "bodies": {
+      "create": "xor ecx, ecx\njmp 0x27ace0",
+      "construct": "push esi\nmov esi, dword ptr [esp + 8]\nmov dword ptr [0x36ed6c0], esi\npush 0xc\nmov dword ptr [esi], 0x1aed774\nmov dword ptr [esi + 4], 0\nmov dword ptr [esi + 8], 0\nmov dword ptr [esi + 0xc], 0\nmov dword ptr [esi + 0x10], 0\nmov dword ptr [esi + 0x14], 0\ncall 0x9bb8d0\nadd esp, 4\nmov dword ptr [eax], eax\nmov dword ptr [eax + 4], eax\nmov dword ptr [esi + 0x10], eax\npop esi\nret",
+      "destroy": "mov ecx, dword ptr [esp + 4]\ntest ecx, ecx\nje 0xf127e\nmov eax, dword ptr [ecx]\npush 1\ncall dword ptr [eax]\nret",
+      "destruct": "mov ecx, dword ptr [esp + 4]\npush 0\nmov eax, dword ptr [ecx]\ncall dword ptr [eax]\nret"
+    }
+  },
+  {
+    "name": "CollectiblesEsportsTeamData",
+    "facts": {
+      "create": 2952016,
+      "destroy": 2952480,
+      "construct": 2952080,
+      "destruct": 2952496,
+      "v2": 2952512,
+      "size": 40,
+      "align": 4,
+      "parent": null,
+      "poly": false
+    },
+    "members": [
+      {
+        "wrapper": 992848,
+        "args": [
+          [
+            "imm",
+            1015280385
+          ],
+          [
+            "imm",
+            0
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 7\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+        "descriptor": null,
+        "type": [
+          7,
+          0
+        ]
+      },
+      {
+        "wrapper": 994016,
+        "args": [
+          [
+            "imm",
+            2106911478
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0x10\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+        "descriptor": null,
+        "type": [
+          16,
+          0
+        ]
+      },
+      {
+        "wrapper": 994016,
+        "args": [
+          [
+            "imm",
+            141582903
+          ],
+          [
+            "imm",
+            16
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0x10\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+        "descriptor": null,
+        "type": [
+          16,
+          0
+        ]
+      },
+      {
+        "wrapper": 994016,
+        "args": [
+          [
+            "imm",
+            390952403
+          ],
+          [
+            "imm",
+            28
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0x10\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+        "descriptor": null,
+        "type": [
+          16,
+          0
+        ]
+      }
+    ],
+    "native_helpers": {
+      "0xa21cf0": "mov dword ptr [ecx], 0x1b4b058\nmov eax, ecx\nret",
+      "0xf95b0": "mov ecx, dword ptr [ecx]\nmov edx, dword ptr [esp + 4]\nmov eax, dword ptr [ecx + 4]\nmov dword ptr [edx], eax\nmov dword ptr [edx + 4], 0\nmov dword ptr [edx + 8], ecx\ncmp byte ptr [eax + 0xd], 0\njne 0xf95f4\nmov ecx, dword ptr [esp + 8]\npush esi\nmov esi, dword ptr [ecx]\nmov dword ptr [edx], eax\ncmp dword ptr [eax + 0x10], esi\njae 0xf95e0\nmov eax, dword ptr [eax + 8]\nxor ecx, ecx\njmp 0xf95ea\nmov dword ptr [edx + 8], eax\nmov ecx, 1\nmov eax, dword ptr [eax]\nmov dword ptr [edx + 4], ecx\ncmp byte ptr [eax + 0xd], 0\nje 0xf95d2\npop esi\nmov eax, edx\nret 8",
+      "0x124b60": "mov edx, dword ptr [esp + 4]\npush ebx\npush ebp\nmov ebx, ecx\npush edi\nmov edi, dword ptr [esp + 0x18]\ninc dword ptr [ebx + 4]\nmov ebp, dword ptr [ebx]\nmov dword ptr [edi + 4], edx\ncmp edx, ebp\njne 0x124b8e\nmov dword ptr [ebp], edi\nmov eax, edi\nmov dword ptr [ebp + 4], edi\nmov dword ptr [ebp + 8], edi\nmov byte ptr [edi + 0xc], 1\npop edi\npop ebp\npop ebx\nret 0xc\ncmp dword ptr [esp + 0x14], 0\njne 0x124ba2\nmov dword ptr [edx + 8], edi\ncmp edx, dword ptr [ebp + 8]\njne 0x124bac\nmov dword ptr [ebp + 8], edi\njmp 0x124bac\nmov dword ptr [edx], edi\ncmp edx, dword ptr [ebp]\njne 0x124bac\nmov dword ptr [ebp], edi\nmov ecx, dword ptr [edi + 4]\nmov eax, edi\ncmp byte ptr [ecx + 0xc], 0\njne 0x124d3a\npush esi\nnop dword ptr [eax]\nmov edx, dword ptr [eax + 4]\nmov esi, dword ptr [edx + 4]\nmov ecx, dword ptr [esi]\ncmp edx, ecx\njne 0x124c7a\nmov ecx, dword ptr [esi + 8]\ncmp byte ptr [ecx + 0xc], 0\nje 0x124c80\nmov esi, dword ptr [edx + 8]\ncmp eax, esi\njne 0x124c1b\nmov ecx, dword ptr [esi]\nmov eax, edx\nmov dword ptr [edx + 8], ecx\nmov ecx, dword ptr [esi]\ncmp byte ptr [ecx + 0xd], 0\njne 0x124bf6\nmov dword ptr [ecx + 4], eax\nmov ecx, dword ptr [edx + 4]\nmov dword ptr [esi + 4], ecx\nmov ecx, dword ptr [ebx]\ncmp eax, dword ptr [ecx + 4]\njne 0x124c08\nmov dword ptr [ecx + 4], esi\njmp 0x124c16\nmov ecx, dword ptr [edx + 4]\ncmp eax, dword ptr [ecx]\njne 0x124c13\nmov dword ptr [ecx], esi\njmp 0x124c16\nmov dword ptr [ecx + 8], esi\nmov dword ptr [esi], eax\nmov dword ptr [edx + 4], esi\nmov ecx, dword ptr [eax + 4]\nmov byte ptr [ecx + 0xc], 1\nmov ecx, dword ptr [eax + 4]\nmov ecx, dword ptr [ecx + 4]\nmov byte ptr [ecx + 0xc], 0\nmov ecx, dword ptr [eax + 4]\nmov edx, dword ptr [ecx + 4]\nmov esi, dword ptr [edx]\nmov ecx, dword ptr [esi + 8]\nmov dword ptr [edx], ecx\nmov ecx, dword ptr [esi + 8]\ncmp byte ptr [ecx + 0xd], 0\njne 0x124c45\nmov dword ptr [ecx + 4], edx\nmov ecx, dword ptr [edx + 4]\nmov dword ptr [esi + 4], ecx\nmov ecx, dword ptr [ebx]\ncmp edx, dword ptr [ecx + 4]\njne 0x124c5d\nmov dword ptr [ecx + 4], esi\nmov dword ptr [esi + 8], edx\njmp 0x124d29\nmov ecx, dword ptr [edx + 4]\ncmp edx, dword ptr [ecx + 8]\njne 0x124c70\nmov dword ptr [ecx + 8], esi\nmov dword ptr [esi + 8], edx\njmp 0x124d29\nmov dword ptr [ecx], esi\nmov dword ptr [esi + 8], edx\njmp 0x124d29\ncmp byte ptr [ecx + 0xc], 0\njne 0x124c9d\nmov byte ptr [edx + 0xc], 1\nmov byte ptr [ecx + 0xc], 1\nmov ecx, dword ptr [eax + 4]\nmov ecx, dword ptr [ecx + 4]\nmov byte ptr [ecx + 0xc], 0\nmov ecx, dword ptr [eax + 4]\nmov eax, dword ptr [ecx + 4]\njmp 0x124d2c\nmov esi, dword ptr [edx]\ncmp eax, esi\njne 0x124cdd\nmov ecx, dword ptr [esi + 8]\nmov eax, edx\nmov dword ptr [eax], ecx\nmov ecx, dword ptr [esi + 8]\ncmp byte ptr [ecx + 0xd], 0\njne 0x124cb6\nmov dword ptr [ecx + 4], eax\nmov ecx, dword ptr [edx + 4]\nmov dword ptr [esi + 4], ecx\nmov ecx, dword ptr [ebx]\ncmp eax, dword ptr [ecx + 4]\njne 0x124cc8\nmov dword ptr [ecx + 4], esi\njmp 0x124cd7\nmov ecx, dword ptr [edx + 4]\ncmp eax, dword ptr [ecx + 8]\njne 0x124cd5\nmov dword ptr [ecx + 8], esi\njmp 0x124cd7\nmov dword ptr [ecx], esi\nmov dword ptr [esi + 8], eax\nmov dword ptr [edx + 4], esi\nmov ecx, dword ptr [eax + 4]\nmov byte ptr [ecx + 0xc], 1\nmov ecx, dword ptr [eax + 4]\nmov ecx, dword ptr [ecx + 4]\nmov byte ptr [ecx + 0xc], 0\nmov ecx, dword ptr [eax + 4]\nmov edx, dword ptr [ecx + 4]\nmov esi, dword ptr [edx + 8]\nmov ecx, dword ptr [esi]\nmov dword ptr [edx + 8], ecx\nmov ecx, dword ptr [esi]\ncmp byte ptr [ecx + 0xd], 0\njne 0x124d07\nmov dword ptr [ecx + 4], edx\nmov ecx, dword ptr [edx + 4]\nmov dword ptr [esi + 4], ecx\nmov ecx, dword ptr [ebx]\ncmp edx, dword ptr [ecx + 4]\njne 0x124d19\nmov dword ptr [ecx + 4], esi\njmp 0x124d27\nmov ecx, dword ptr [edx + 4]\ncmp edx, dword ptr [ecx]\njne 0x124d24\nmov dword ptr [ecx], esi\njmp 0x124d27\nmov dword ptr [ecx + 8], esi\nmov dword ptr [esi], edx\nmov dword ptr [edx + 4], esi\nmov ecx, dword ptr [eax + 4]\ncmp byte ptr [ecx + 0xc], 0\nje 0x124bc0\npop esi\nmov eax, dword ptr [ebp + 4]\nmov byte ptr [eax + 0xc], 1\nmov eax, edi\npop edi\npop ebp\npop ebx\nret 0xc",
+      "0x125680": "push 0x1533488\ncall 0xf4375f",
+      "0x63c7c0": "sub esp, 0xc\npush esi\npush edi\nlea eax, [esp + 0x18]\npush eax\nlea edi, [ecx + 0x1c]\nlea eax, [esp + 0xc]\nmov ecx, edi\npush eax\ncall 0xf95b0\nmov edx, dword ptr [esp + 0x10]\ncmp byte ptr [edx + 0xd], 0\njne 0x63c7ec\nmov eax, dword ptr [esp + 0x18]\ncmp eax, dword ptr [edx + 0x10]\njae 0x63c831\ncmp dword ptr [edi + 4], 0xaaaaaaa\nje 0x63c840\nmov esi, dword ptr [edi]\npush 0x18\ncall 0x9bb8d0\nmov edx, eax\nadd esp, 4\nmov eax, dword ptr [esp + 0x18]\nmov ecx, edi\npush edx\npush dword ptr [esp + 0x10]\nmov dword ptr [edx + 0x10], eax\npush dword ptr [esp + 0x10]\nmov dword ptr [edx + 0x14], 0\nmov dword ptr [edx], esi\nmov dword ptr [edx + 4], esi\nmov dword ptr [edx + 8], esi\nmov word ptr [edx + 0xc], 0\ncall 0x124b60\nmov edx, eax\nmov ecx, dword ptr [esp + 0x1c]\npop edi\nmov dword ptr [edx + 0x14], ecx\npop esi\nadd esp, 0xc\nret 8\ncall 0x125680"
+    },
+    "bodies": {
+      "create": "xor ecx, ecx\njmp 0x2da5d0",
+      "construct": "mov ecx, dword ptr [esp + 4]\nmov dword ptr [ecx], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [ecx + 4], eax\nmov dword ptr [ecx + 8], 0\nmov dword ptr [ecx + 0xc], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [ecx + 0x10], eax\nmov dword ptr [ecx + 0x14], 0\nmov dword ptr [ecx + 0x18], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [ecx + 0x1c], eax\nmov dword ptr [ecx + 0x20], 0\nmov dword ptr [ecx + 0x24], 0\nret",
+      "destroy": "mov ecx, dword ptr [esp + 4]\ntest ecx, ecx\nje 0x2d0d2f\npush 1\ncall 0x2dac90\nret\nmov ecx, dword ptr [esp + 4]\npush 0\ncall 0x2dac90\nret",
+      "destruct": "mov ecx, dword ptr [esp + 4]\npush 0\ncall 0x2dac90\nret",
+      "v2": "push dword ptr [esp + 4]\nxor ecx, ecx\ncall 0x2da630\nret"
+    }
+  },
+  {
+    "name": "GDSMapObjectBannerInfo",
+    "facts": {
+      "create": 2951616,
+      "destroy": 987760,
+      "construct": 2951648,
+      "destruct": 987808,
+      "v2": 987824,
+      "size": 8,
+      "align": 4,
+      "parent": 57631656,
+      "poly": true
+    },
+    "members": [
+      {
+        "wrapper": 2249728,
+        "args": [
+          [
+            "imm",
+            621604631
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0x36f1270\npush 0\npush 0x84\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+        "descriptor": null,
+        "type": [
+          132,
+          57610864
+        ]
+      }
+    ],
+    "native_helpers": {
+      "0xa21cf0": "mov dword ptr [ecx], 0x1b4b058\nmov eax, ecx\nret",
+      "0xf95b0": "mov ecx, dword ptr [ecx]\nmov edx, dword ptr [esp + 4]\nmov eax, dword ptr [ecx + 4]\nmov dword ptr [edx], eax\nmov dword ptr [edx + 4], 0\nmov dword ptr [edx + 8], ecx\ncmp byte ptr [eax + 0xd], 0\njne 0xf95f4\nmov ecx, dword ptr [esp + 8]\npush esi\nmov esi, dword ptr [ecx]\nmov dword ptr [edx], eax\ncmp dword ptr [eax + 0x10], esi\njae 0xf95e0\nmov eax, dword ptr [eax + 8]\nxor ecx, ecx\njmp 0xf95ea\nmov dword ptr [edx + 8], eax\nmov ecx, 1\nmov eax, dword ptr [eax]\nmov dword ptr [edx + 4], ecx\ncmp byte ptr [eax + 0xd], 0\nje 0xf95d2\npop esi\nmov eax, edx\nret 8",
+      "0x124b60": "mov edx, dword ptr [esp + 4]\npush ebx\npush ebp\nmov ebx, ecx\npush edi\nmov edi, dword ptr [esp + 0x18]\ninc dword ptr [ebx + 4]\nmov ebp, dword ptr [ebx]\nmov dword ptr [edi + 4], edx\ncmp edx, ebp\njne 0x124b8e\nmov dword ptr [ebp], edi\nmov eax, edi\nmov dword ptr [ebp + 4], edi\nmov dword ptr [ebp + 8], edi\nmov byte ptr [edi + 0xc], 1\npop edi\npop ebp\npop ebx\nret 0xc\ncmp dword ptr [esp + 0x14], 0\njne 0x124ba2\nmov dword ptr [edx + 8], edi\ncmp edx, dword ptr [ebp + 8]\njne 0x124bac\nmov dword ptr [ebp + 8], edi\njmp 0x124bac\nmov dword ptr [edx], edi\ncmp edx, dword ptr [ebp]\njne 0x124bac\nmov dword ptr [ebp], edi\nmov ecx, dword ptr [edi + 4]\nmov eax, edi\ncmp byte ptr [ecx + 0xc], 0\njne 0x124d3a\npush esi\nnop dword ptr [eax]\nmov edx, dword ptr [eax + 4]\nmov esi, dword ptr [edx + 4]\nmov ecx, dword ptr [esi]\ncmp edx, ecx\njne 0x124c7a\nmov ecx, dword ptr [esi + 8]\ncmp byte ptr [ecx + 0xc], 0\nje 0x124c80\nmov esi, dword ptr [edx + 8]\ncmp eax, esi\njne 0x124c1b\nmov ecx, dword ptr [esi]\nmov eax, edx\nmov dword ptr [edx + 8], ecx\nmov ecx, dword ptr [esi]\ncmp byte ptr [ecx + 0xd], 0\njne 0x124bf6\nmov dword ptr [ecx + 4], eax\nmov ecx, dword ptr [edx + 4]\nmov dword ptr [esi + 4], ecx\nmov ecx, dword ptr [ebx]\ncmp eax, dword ptr [ecx + 4]\njne 0x124c08\nmov dword ptr [ecx + 4], esi\njmp 0x124c16\nmov ecx, dword ptr [edx + 4]\ncmp eax, dword ptr [ecx]\njne 0x124c13\nmov dword ptr [ecx], esi\njmp 0x124c16\nmov dword ptr [ecx + 8], esi\nmov dword ptr [esi], eax\nmov dword ptr [edx + 4], esi\nmov ecx, dword ptr [eax + 4]\nmov byte ptr [ecx + 0xc], 1\nmov ecx, dword ptr [eax + 4]\nmov ecx, dword ptr [ecx + 4]\nmov byte ptr [ecx + 0xc], 0\nmov ecx, dword ptr [eax + 4]\nmov edx, dword ptr [ecx + 4]\nmov esi, dword ptr [edx]\nmov ecx, dword ptr [esi + 8]\nmov dword ptr [edx], ecx\nmov ecx, dword ptr [esi + 8]\ncmp byte ptr [ecx + 0xd], 0\njne 0x124c45\nmov dword ptr [ecx + 4], edx\nmov ecx, dword ptr [edx + 4]\nmov dword ptr [esi + 4], ecx\nmov ecx, dword ptr [ebx]\ncmp edx, dword ptr [ecx + 4]\njne 0x124c5d\nmov dword ptr [ecx + 4], esi\nmov dword ptr [esi + 8], edx\njmp 0x124d29\nmov ecx, dword ptr [edx + 4]\ncmp edx, dword ptr [ecx + 8]\njne 0x124c70\nmov dword ptr [ecx + 8], esi\nmov dword ptr [esi + 8], edx\njmp 0x124d29\nmov dword ptr [ecx], esi\nmov dword ptr [esi + 8], edx\njmp 0x124d29\ncmp byte ptr [ecx + 0xc], 0\njne 0x124c9d\nmov byte ptr [edx + 0xc], 1\nmov byte ptr [ecx + 0xc], 1\nmov ecx, dword ptr [eax + 4]\nmov ecx, dword ptr [ecx + 4]\nmov byte ptr [ecx + 0xc], 0\nmov ecx, dword ptr [eax + 4]\nmov eax, dword ptr [ecx + 4]\njmp 0x124d2c\nmov esi, dword ptr [edx]\ncmp eax, esi\njne 0x124cdd\nmov ecx, dword ptr [esi + 8]\nmov eax, edx\nmov dword ptr [eax], ecx\nmov ecx, dword ptr [esi + 8]\ncmp byte ptr [ecx + 0xd], 0\njne 0x124cb6\nmov dword ptr [ecx + 4], eax\nmov ecx, dword ptr [edx + 4]\nmov dword ptr [esi + 4], ecx\nmov ecx, dword ptr [ebx]\ncmp eax, dword ptr [ecx + 4]\njne 0x124cc8\nmov dword ptr [ecx + 4], esi\njmp 0x124cd7\nmov ecx, dword ptr [edx + 4]\ncmp eax, dword ptr [ecx + 8]\njne 0x124cd5\nmov dword ptr [ecx + 8], esi\njmp 0x124cd7\nmov dword ptr [ecx], esi\nmov dword ptr [esi + 8], eax\nmov dword ptr [edx + 4], esi\nmov ecx, dword ptr [eax + 4]\nmov byte ptr [ecx + 0xc], 1\nmov ecx, dword ptr [eax + 4]\nmov ecx, dword ptr [ecx + 4]\nmov byte ptr [ecx + 0xc], 0\nmov ecx, dword ptr [eax + 4]\nmov edx, dword ptr [ecx + 4]\nmov esi, dword ptr [edx + 8]\nmov ecx, dword ptr [esi]\nmov dword ptr [edx + 8], ecx\nmov ecx, dword ptr [esi]\ncmp byte ptr [ecx + 0xd], 0\njne 0x124d07\nmov dword ptr [ecx + 4], edx\nmov ecx, dword ptr [edx + 4]\nmov dword ptr [esi + 4], ecx\nmov ecx, dword ptr [ebx]\ncmp edx, dword ptr [ecx + 4]\njne 0x124d19\nmov dword ptr [ecx + 4], esi\njmp 0x124d27\nmov ecx, dword ptr [edx + 4]\ncmp edx, dword ptr [ecx]\njne 0x124d24\nmov dword ptr [ecx], esi\njmp 0x124d27\nmov dword ptr [ecx + 8], esi\nmov dword ptr [esi], edx\nmov dword ptr [edx + 4], esi\nmov ecx, dword ptr [eax + 4]\ncmp byte ptr [ecx + 0xc], 0\nje 0x124bc0\npop esi\nmov eax, dword ptr [ebp + 4]\nmov byte ptr [eax + 0xc], 1\nmov eax, edi\npop edi\npop ebp\npop ebx\nret 0xc",
+      "0x125680": "push 0x1533488\ncall 0xf4375f",
+      "0x63c7c0": "sub esp, 0xc\npush esi\npush edi\nlea eax, [esp + 0x18]\npush eax\nlea edi, [ecx + 0x1c]\nlea eax, [esp + 0xc]\nmov ecx, edi\npush eax\ncall 0xf95b0\nmov edx, dword ptr [esp + 0x10]\ncmp byte ptr [edx + 0xd], 0\njne 0x63c7ec\nmov eax, dword ptr [esp + 0x18]\ncmp eax, dword ptr [edx + 0x10]\njae 0x63c831\ncmp dword ptr [edi + 4], 0xaaaaaaa\nje 0x63c840\nmov esi, dword ptr [edi]\npush 0x18\ncall 0x9bb8d0\nmov edx, eax\nadd esp, 4\nmov eax, dword ptr [esp + 0x18]\nmov ecx, edi\npush edx\npush dword ptr [esp + 0x10]\nmov dword ptr [edx + 0x10], eax\npush dword ptr [esp + 0x10]\nmov dword ptr [edx + 0x14], 0\nmov dword ptr [edx], esi\nmov dword ptr [edx + 4], esi\nmov dword ptr [edx + 8], esi\nmov word ptr [edx + 0xc], 0\ncall 0x124b60\nmov edx, eax\nmov ecx, dword ptr [esp + 0x1c]\npop edi\nmov dword ptr [edx + 0x14], ecx\npop esi\nadd esp, 0xc\nret 8\ncall 0x125680"
+    },
+    "bodies": {
+      "create": "push 8\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0x2d09dc\nmov dword ptr [eax], 0x1af96e0\nmov dword ptr [eax + 4], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0x1af96e0\nmov dword ptr [eax + 4], 0\nret",
+      "destroy": "mov ecx, dword ptr [esp + 4]\ntest ecx, ecx\nje 0xf127e\nmov eax, dword ptr [ecx]\npush 1\ncall dword ptr [eax]\nret",
+      "destruct": "mov ecx, dword ptr [esp + 4]\npush 0\nmov eax, dword ptr [ecx]\ncall dword ptr [eax]\nret",
+      "v2": "mov ecx, dword ptr [esp + 4]\nmov eax, dword ptr [ecx]\njmp dword ptr [eax + 8]"
+    }
+  },
+  {
+    "name": "SummonerIconData",
+    "facts": {
+      "create": 2952160,
+      "destroy": 2952336,
+      "construct": 2952256,
+      "destruct": 2952384,
+      "v2": 2952448,
+      "size": 36,
+      "align": 4,
+      "parent": null,
+      "poly": false
+    },
+    "members": [
+      {
+        "wrapper": 992848,
+        "args": [
+          [
+            "imm",
+            3217398189
+          ],
+          [
+            "imm",
+            0
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 7\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+        "descriptor": null,
+        "type": [
+          7,
+          0
+        ]
+      },
+      {
+        "wrapper": 2952784,
+        "args": [
+          [
+            "imm",
+            3114625026
+          ],
+          [
+            "imm",
+            4
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0x36f6160\npush 0\npush 0x84\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+        "descriptor": null,
+        "type": [
+          132,
+          57631072
+        ]
+      },
+      {
+        "wrapper": 994016,
+        "args": [
+          [
+            "imm",
+            487149542
+          ],
+          [
+            "imm",
+            8
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0x10\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+        "descriptor": null,
+        "type": [
+          16,
+          0
+        ]
+      },
+      {
+        "wrapper": 994160,
+        "args": [
+          [
+            "imm",
+            1357231841
+          ],
+          [
+            "imm",
+            20
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 1\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+        "descriptor": null,
+        "type": [
+          1,
+          0
+        ]
+      },
+      {
+        "wrapper": 994016,
+        "args": [
+          [
+            "imm",
+            1096330989
+          ],
+          [
+            "imm",
+            24
+          ],
+          [
+            "imm",
+            0
+          ]
+        ],
+        "body": "push dword ptr [esp + 0xc]\npush 0x1532fb2\npush 0\npush 0\npush 0\npush 0\npush 0x10\npush dword ptr [esp + 0x24]\npush dword ptr [esp + 0x24]\ncall 0x9bd410\nret 0xc",
+        "descriptor": null,
+        "type": [
+          16,
+          0
+        ]
+      }
+    ],
+    "native_helpers": {
+      "0xa21cf0": "mov dword ptr [ecx], 0x1b4b058\nmov eax, ecx\nret",
+      "0xf95b0": "mov ecx, dword ptr [ecx]\nmov edx, dword ptr [esp + 4]\nmov eax, dword ptr [ecx + 4]\nmov dword ptr [edx], eax\nmov dword ptr [edx + 4], 0\nmov dword ptr [edx + 8], ecx\ncmp byte ptr [eax + 0xd], 0\njne 0xf95f4\nmov ecx, dword ptr [esp + 8]\npush esi\nmov esi, dword ptr [ecx]\nmov dword ptr [edx], eax\ncmp dword ptr [eax + 0x10], esi\njae 0xf95e0\nmov eax, dword ptr [eax + 8]\nxor ecx, ecx\njmp 0xf95ea\nmov dword ptr [edx + 8], eax\nmov ecx, 1\nmov eax, dword ptr [eax]\nmov dword ptr [edx + 4], ecx\ncmp byte ptr [eax + 0xd], 0\nje 0xf95d2\npop esi\nmov eax, edx\nret 8",
+      "0x124b60": "mov edx, dword ptr [esp + 4]\npush ebx\npush ebp\nmov ebx, ecx\npush edi\nmov edi, dword ptr [esp + 0x18]\ninc dword ptr [ebx + 4]\nmov ebp, dword ptr [ebx]\nmov dword ptr [edi + 4], edx\ncmp edx, ebp\njne 0x124b8e\nmov dword ptr [ebp], edi\nmov eax, edi\nmov dword ptr [ebp + 4], edi\nmov dword ptr [ebp + 8], edi\nmov byte ptr [edi + 0xc], 1\npop edi\npop ebp\npop ebx\nret 0xc\ncmp dword ptr [esp + 0x14], 0\njne 0x124ba2\nmov dword ptr [edx + 8], edi\ncmp edx, dword ptr [ebp + 8]\njne 0x124bac\nmov dword ptr [ebp + 8], edi\njmp 0x124bac\nmov dword ptr [edx], edi\ncmp edx, dword ptr [ebp]\njne 0x124bac\nmov dword ptr [ebp], edi\nmov ecx, dword ptr [edi + 4]\nmov eax, edi\ncmp byte ptr [ecx + 0xc], 0\njne 0x124d3a\npush esi\nnop dword ptr [eax]\nmov edx, dword ptr [eax + 4]\nmov esi, dword ptr [edx + 4]\nmov ecx, dword ptr [esi]\ncmp edx, ecx\njne 0x124c7a\nmov ecx, dword ptr [esi + 8]\ncmp byte ptr [ecx + 0xc], 0\nje 0x124c80\nmov esi, dword ptr [edx + 8]\ncmp eax, esi\njne 0x124c1b\nmov ecx, dword ptr [esi]\nmov eax, edx\nmov dword ptr [edx + 8], ecx\nmov ecx, dword ptr [esi]\ncmp byte ptr [ecx + 0xd], 0\njne 0x124bf6\nmov dword ptr [ecx + 4], eax\nmov ecx, dword ptr [edx + 4]\nmov dword ptr [esi + 4], ecx\nmov ecx, dword ptr [ebx]\ncmp eax, dword ptr [ecx + 4]\njne 0x124c08\nmov dword ptr [ecx + 4], esi\njmp 0x124c16\nmov ecx, dword ptr [edx + 4]\ncmp eax, dword ptr [ecx]\njne 0x124c13\nmov dword ptr [ecx], esi\njmp 0x124c16\nmov dword ptr [ecx + 8], esi\nmov dword ptr [esi], eax\nmov dword ptr [edx + 4], esi\nmov ecx, dword ptr [eax + 4]\nmov byte ptr [ecx + 0xc], 1\nmov ecx, dword ptr [eax + 4]\nmov ecx, dword ptr [ecx + 4]\nmov byte ptr [ecx + 0xc], 0\nmov ecx, dword ptr [eax + 4]\nmov edx, dword ptr [ecx + 4]\nmov esi, dword ptr [edx]\nmov ecx, dword ptr [esi + 8]\nmov dword ptr [edx], ecx\nmov ecx, dword ptr [esi + 8]\ncmp byte ptr [ecx + 0xd], 0\njne 0x124c45\nmov dword ptr [ecx + 4], edx\nmov ecx, dword ptr [edx + 4]\nmov dword ptr [esi + 4], ecx\nmov ecx, dword ptr [ebx]\ncmp edx, dword ptr [ecx + 4]\njne 0x124c5d\nmov dword ptr [ecx + 4], esi\nmov dword ptr [esi + 8], edx\njmp 0x124d29\nmov ecx, dword ptr [edx + 4]\ncmp edx, dword ptr [ecx + 8]\njne 0x124c70\nmov dword ptr [ecx + 8], esi\nmov dword ptr [esi + 8], edx\njmp 0x124d29\nmov dword ptr [ecx], esi\nmov dword ptr [esi + 8], edx\njmp 0x124d29\ncmp byte ptr [ecx + 0xc], 0\njne 0x124c9d\nmov byte ptr [edx + 0xc], 1\nmov byte ptr [ecx + 0xc], 1\nmov ecx, dword ptr [eax + 4]\nmov ecx, dword ptr [ecx + 4]\nmov byte ptr [ecx + 0xc], 0\nmov ecx, dword ptr [eax + 4]\nmov eax, dword ptr [ecx + 4]\njmp 0x124d2c\nmov esi, dword ptr [edx]\ncmp eax, esi\njne 0x124cdd\nmov ecx, dword ptr [esi + 8]\nmov eax, edx\nmov dword ptr [eax], ecx\nmov ecx, dword ptr [esi + 8]\ncmp byte ptr [ecx + 0xd], 0\njne 0x124cb6\nmov dword ptr [ecx + 4], eax\nmov ecx, dword ptr [edx + 4]\nmov dword ptr [esi + 4], ecx\nmov ecx, dword ptr [ebx]\ncmp eax, dword ptr [ecx + 4]\njne 0x124cc8\nmov dword ptr [ecx + 4], esi\njmp 0x124cd7\nmov ecx, dword ptr [edx + 4]\ncmp eax, dword ptr [ecx + 8]\njne 0x124cd5\nmov dword ptr [ecx + 8], esi\njmp 0x124cd7\nmov dword ptr [ecx], esi\nmov dword ptr [esi + 8], eax\nmov dword ptr [edx + 4], esi\nmov ecx, dword ptr [eax + 4]\nmov byte ptr [ecx + 0xc], 1\nmov ecx, dword ptr [eax + 4]\nmov ecx, dword ptr [ecx + 4]\nmov byte ptr [ecx + 0xc], 0\nmov ecx, dword ptr [eax + 4]\nmov edx, dword ptr [ecx + 4]\nmov esi, dword ptr [edx + 8]\nmov ecx, dword ptr [esi]\nmov dword ptr [edx + 8], ecx\nmov ecx, dword ptr [esi]\ncmp byte ptr [ecx + 0xd], 0\njne 0x124d07\nmov dword ptr [ecx + 4], edx\nmov ecx, dword ptr [edx + 4]\nmov dword ptr [esi + 4], ecx\nmov ecx, dword ptr [ebx]\ncmp edx, dword ptr [ecx + 4]\njne 0x124d19\nmov dword ptr [ecx + 4], esi\njmp 0x124d27\nmov ecx, dword ptr [edx + 4]\ncmp edx, dword ptr [ecx]\njne 0x124d24\nmov dword ptr [ecx], esi\njmp 0x124d27\nmov dword ptr [ecx + 8], esi\nmov dword ptr [esi], edx\nmov dword ptr [edx + 4], esi\nmov ecx, dword ptr [eax + 4]\ncmp byte ptr [ecx + 0xc], 0\nje 0x124bc0\npop esi\nmov eax, dword ptr [ebp + 4]\nmov byte ptr [eax + 0xc], 1\nmov eax, edi\npop edi\npop ebp\npop ebx\nret 0xc",
+      "0x125680": "push 0x1533488\ncall 0xf4375f",
+      "0x63c7c0": "sub esp, 0xc\npush esi\npush edi\nlea eax, [esp + 0x18]\npush eax\nlea edi, [ecx + 0x1c]\nlea eax, [esp + 0xc]\nmov ecx, edi\npush eax\ncall 0xf95b0\nmov edx, dword ptr [esp + 0x10]\ncmp byte ptr [edx + 0xd], 0\njne 0x63c7ec\nmov eax, dword ptr [esp + 0x18]\ncmp eax, dword ptr [edx + 0x10]\njae 0x63c831\ncmp dword ptr [edi + 4], 0xaaaaaaa\nje 0x63c840\nmov esi, dword ptr [edi]\npush 0x18\ncall 0x9bb8d0\nmov edx, eax\nadd esp, 4\nmov eax, dword ptr [esp + 0x18]\nmov ecx, edi\npush edx\npush dword ptr [esp + 0x10]\nmov dword ptr [edx + 0x10], eax\npush dword ptr [esp + 0x10]\nmov dword ptr [edx + 0x14], 0\nmov dword ptr [edx], esi\nmov dword ptr [edx + 4], esi\nmov dword ptr [edx + 8], esi\nmov word ptr [edx + 0xc], 0\ncall 0x124b60\nmov edx, eax\nmov ecx, dword ptr [esp + 0x1c]\npop edi\nmov dword ptr [edx + 0x14], ecx\npop esi\nadd esp, 0xc\nret 8\ncall 0x125680"
+    },
+    "bodies": {
+      "create": "push 0x24\ncall 0x9bb8d0\nmov edx, eax\nadd esp, 4\ntest edx, edx\nje 0x2d0c31\nmov dword ptr [edx], 0\nmov dword ptr [edx + 4], 0\nmov ecx, dword ptr [0x1b467f0]\nmov dword ptr [edx + 8], ecx\nmov dword ptr [edx + 0xc], 0\nmov dword ptr [edx + 0x10], 0\nmov byte ptr [edx + 0x14], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [edx + 0x18], eax\nmov eax, edx\nmov dword ptr [edx + 0x1c], 0\nmov dword ptr [edx + 0x20], 0\nret\nxor eax, eax\nret",
+      "construct": "mov ecx, dword ptr [esp + 4]\nmov dword ptr [ecx], 0\nmov dword ptr [ecx + 4], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [ecx + 8], eax\nmov dword ptr [ecx + 0xc], 0\nmov dword ptr [ecx + 0x10], 0\nmov byte ptr [ecx + 0x14], 0\nmov eax, dword ptr [0x1b467f0]\nmov dword ptr [ecx + 0x18], eax\nmov dword ptr [ecx + 0x1c], 0\nmov dword ptr [ecx + 0x20], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x2d0cbb\nlea ecx, [esi + 0x18]\ncall 0x9bab90\nlea ecx, [esi + 8]\ncall 0x9bab90\npush 0x24\npush esi\nmov dword ptr [esi + 4], 0\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "push esi\nmov esi, dword ptr [esp + 8]\nlea ecx, [esi + 0x18]\ncall 0x9bab90\nlea ecx, [esi + 8]\ncall 0x9bab90\nmov dword ptr [esi + 4], 0\npop esi\nret",
+      "v2": "mov eax, dword ptr [esp + 4]\nmov ecx, dword ptr [0x2aa7460]\npush eax\npush dword ptr [eax]\ncall 0x63c7c0\nret"
+    }
+  }
+]

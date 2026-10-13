@@ -1,0 +1,39 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 0000022C1CEF35C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -5	; PersistsThroughDeath
+	11	[-]	NEWTABLE 	0 2 0
+	12	[-]	LOADK    	1 -7	; "NewYearDragonSmolder"
+	13	[-]	LOADK    	2 -8	; "SmolderSkin08"
+	14	[-]	SETLIST  	0 2 1	; 1
+	15	[-]	SETGLOBAL	0 -6	; SpellFXOverrideSkins
+	16	[-]	NEWTABLE 	0 2 0
+	17	[-]	LOADK    	1 -7	; "NewYearDragonSmolder"
+	18	[-]	LOADK    	2 -8	; "SmolderSkin08"
+	19	[-]	SETLIST  	0 2 1	; 1
+	20	[-]	SETGLOBAL	0 -9	; SpellVOOverrideSkins
+	21	[-]	LOADBOOL 	0 1 0
+	22	[-]	SETGLOBAL	0 -10	; IsDamagingSpell
+	23	[-]	RETURN   	0 1
+constants (10) for 0000022C1CEF35C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"PersistsThroughDeath"
+	6	"SpellFXOverrideSkins"
+	7	"NewYearDragonSmolder"
+	8	"SmolderSkin08"
+	9	"SpellVOOverrideSkins"
+	10	"IsDamagingSpell"
+locals (0) for 0000022C1CEF35C0:
+upvalues (0) for 0000022C1CEF35C0:

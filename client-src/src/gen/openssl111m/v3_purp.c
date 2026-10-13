@@ -25,4 +25,6 @@
 // match: dd5780 _x509_likely_issued
 // match: dd5810 _x509_signing_allowed
 // match: dd5860 _x509v3_cache_extensions
+#define OPENSSL_FILE "crypto\\x509v3\\v3_purp.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/x509v3/v3_purp.c"

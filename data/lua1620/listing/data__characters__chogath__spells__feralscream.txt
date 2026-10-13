@@ -1,0 +1,34 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 00000257D45135D0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "game_floatingtext_Silenced"
+	8	[-]	SETGLOBAL	0 -4	; PopupMessage1
+	9	[-]	NEWTABLE 	0 2 0
+	10	[-]	LOADK    	1 -7	; "DandyChogath"
+	11	[-]	LOADK    	2 -8	; "BattlecastChogath"
+	12	[-]	SETLIST  	0 2 1	; 1
+	13	[-]	SETGLOBAL	0 -6	; SpellFXOverrideSkins
+	14	[-]	NEWTABLE 	0 2 0
+	15	[-]	LOADK    	1 -7	; "DandyChogath"
+	16	[-]	LOADK    	2 -8	; "BattlecastChogath"
+	17	[-]	SETLIST  	0 2 1	; 1
+	18	[-]	SETGLOBAL	0 -9	; SpellVOOverrideSkins
+	19	[-]	RETURN   	0 1
+constants (9) for 00000257D45135D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"PopupMessage1"
+	5	"game_floatingtext_Silenced"
+	6	"SpellFXOverrideSkins"
+	7	"DandyChogath"
+	8	"BattlecastChogath"
+	9	"SpellVOOverrideSkins"
+locals (0) for 00000257D45135D0:
+upvalues (0) for 00000257D45135D0:

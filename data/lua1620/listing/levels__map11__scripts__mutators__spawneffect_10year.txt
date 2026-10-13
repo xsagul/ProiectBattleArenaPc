@@ -1,0 +1,23 @@
+
+main <?:0,0> (3 instructions, 12 bytes at 000002506E2D34C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 1 constant, 1 function
+	1	[-]	CLOSURE  	0 0	; 000002506E2D3540
+	2	[-]	SETGLOBAL	0 -1	; OnInitServer
+	3	[-]	RETURN   	0 1
+constants (1) for 000002506E2D34C0:
+	1	"OnInitServer"
+locals (0) for 000002506E2D34C0:
+upvalues (0) for 000002506E2D34C0:
+
+function <?:1,3> (5 instructions, 20 bytes at 000002506E2D3540)
+0 params, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SetWorldVar
+	2	[-]	LOADK    	1 -2	; "SpawnEffect_10Year"
+	3	[-]	LOADBOOL 	2 1 0
+	4	[-]	CALL     	0 3 1
+	5	[-]	RETURN   	0 1
+constants (2) for 000002506E2D3540:
+	1	"SetWorldVar"
+	2	"SpawnEffect_10Year"
+locals (0) for 000002506E2D3540:
+upvalues (0) for 000002506E2D3540:

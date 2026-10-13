@@ -10,6 +10,7 @@ disassemblies side by side from the first difference.
   match_func.py <source.cpp> <symbol text> <rva hex> [cl flags ...]     default flags: -O2 -std:c++17 (in Git Bash write flags with -, /O2 becomes a path)
 """
 import os
+from functools import lru_cache
 import struct
 import subprocess
 import sys
@@ -54,6 +55,7 @@ def compile_obj(src, flags):
     tag = hashlib.sha1((os.path.abspath(src) + ' '.join(flags)).encode()).hexdigest()[:8]
     obj = os.path.join(OUT, os.path.splitext(os.path.basename(src))[0] + '_' + tag + '.obj')
     cl, vc_include = compiler_of(src)
+    mount_tree(src)
     include = [vc_include] + [os.path.join(SDK, d) for d in ('ucrt', 'shared', 'um')]
     env = dict(os.environ, INCLUDE=';'.join(os.path.abspath(d) for d in include if os.path.isdir(d)))
     r = subprocess.run([cl, '/nologo', '/c', *flags, '/Fo' + obj, src], capture_output=True, text=True, env=env,
@@ -63,9 +65,127 @@ def compile_obj(src, flags):
     return obj
 
 
-def function_of(obj, text):
-    """(code bytes, set of relocated byte offsets) of the function whose symbol contains text."""
-    d = open(obj, 'rb').read()
+_INCLUDES = {}  # file -> (its sha1, the names it includes as (text, quoted))
+
+
+def _includes(path):
+    import hashlib
+    import re
+    if path not in _INCLUDES:
+        with open(path, 'rb') as f:
+            raw = f.read()
+        found = re.findall(rb'^[ \t]*#[ \t]*include[ \t]*(["<])([^">\r\n]+)[">]', raw, re.M)
+        _INCLUDES[path] = hashlib.sha1(raw).hexdigest(), [(n.decode('latin-1'), q == b'"') for q, n in found]
+    return _INCLUDES[path]
+
+
+def dependency_hash(src, flags):
+    """A hash of everything of ours that compiling src reads: the source, every header of the project it includes
+    (quoted includes from the including file's directory, any include from the -I directories; conditional
+    compilation is not evaluated, so the set can only be too large), the options and the compiler. Headers of the
+    toolchain are left out: a toolchain directory never changes."""
+    import hashlib
+    dirs, it = [], iter(flags)
+    for f in it:
+        if f[:2] in ('-I', '/I'):
+            dirs.append(os.path.abspath(os.path.join(ROOT, f[2:] or next(it, ''))))
+    seen, todo = {}, [os.path.abspath(src)]
+    while todo:
+        path = todo.pop()
+        if path in seen:
+            continue
+        digest, names = _includes(path)
+        seen[path] = digest
+        for name, quoted in names:
+            for d in ([os.path.dirname(path)] if quoted else []) + dirs:
+                hit = os.path.abspath(os.path.join(d, name))
+                if os.path.isfile(hit):
+                    todo.append(hit)
+                    break
+    h = hashlib.sha1((compiler_of(src)[0] + chr(0) + ' '.join(flags)).encode())
+    root = os.path.abspath(ROOT) + os.sep
+    for path in sorted(seen):
+        name = path[len(root):] if path.startswith(root) else path
+        h.update((name + chr(0) + seen[path] + chr(10)).encode())
+    return h.hexdigest()
+
+
+def compile_cached(src, flags):
+    """compile_obj, skipped when the object of an earlier run was made from the very same inputs (the hash is kept
+    next to the object as <object>.dep). MATCH_NO_CACHE=1 in the environment always compiles."""
+    import hashlib
+    tag = hashlib.sha1((os.path.abspath(src) + ' '.join(flags)).encode()).hexdigest()[:8]
+    obj = os.path.join(OUT, os.path.splitext(os.path.basename(src))[0] + '_' + tag + '.obj')
+    want = dependency_hash(src, flags)
+    dep = obj + '.dep'
+    if not os.environ.get('MATCH_NO_CACHE') and os.path.exists(obj) and os.path.exists(dep) \
+            and open(dep).read() == want:
+        return obj
+    if os.path.exists(dep):
+        os.remove(dep)
+    obj = compile_obj(src, flags)
+    with open(dep, 'w') as f:
+        f.write(want)
+    return obj
+
+
+def compile_many(pairs, workers=None):
+    """{(src, tuple of flags): object} for many compilations, run side by side and through the cache. A source
+    that needs its tree mounted at another path is compiled alone first and always (the mount is shared state, and
+    what such a source includes can only be found once the tree is mounted)."""
+    from concurrent.futures import ThreadPoolExecutor
+    import re
+    pairs = list(dict.fromkeys((src, tuple(flags)) for src, flags in pairs))
+    out, alone, rest = {}, [], []
+    for src, flags in pairs:
+        head = open(src, encoding='utf-8', errors='replace').read(4000)
+        (alone if re.search(r'^// tree: ', head, re.M) else rest).append((src, flags))
+    for src, flags in alone:
+        out[src, flags] = compile_obj(src, list(flags))
+    with ThreadPoolExecutor(workers or os.cpu_count() or 4) as pool:
+        for key, obj in zip(rest, pool.map(lambda p: compile_cached(p[0], list(p[1])), rest)):
+            out[key] = obj
+    return out
+
+
+def mount_tree(src):
+    """A source line `// tree: <drive>:<path> = <directory of ours>` says where the library's source tree stood when
+    it was built for the client (file names inside log messages, __FILE__, carry that path): our copy is put at that
+    very path for the compilation - a directory junction under client-src/obj/mount_<drive>, shown as the drive with
+    `subst` - and the drive is released when the program ends."""
+    import atexit
+    import re
+    m = re.search(r'^// tree: ([A-Za-z]):(\S+) = (\S+)', open(src, encoding='utf-8', errors='replace').read(4000), re.M)
+    if not m or (m[1], m[2]) in mount_tree.done:
+        return
+    drive, path, ours = m[1].upper() + ':', m[2].strip(chr(92)), os.path.abspath(os.path.join(ROOT, m[3]))
+    root = os.path.abspath(os.path.join(OUT, 'mount_' + drive[0]))
+    link = os.path.join(root, path)
+    os.makedirs(os.path.dirname(link), exist_ok=True)
+    if not os.path.isdir(link):
+        subprocess.run(['cmd', '/c', 'mklink', '/J', link, ours], capture_output=True, check=True)
+    if not mount_tree.done:
+        if os.path.isdir(drive + chr(92)):
+            raise SystemExit(f'drive {drive} is in use: cannot put the source tree at {drive}{chr(92)}{path}')
+        subprocess.run(['subst', drive, root], check=True)
+        atexit.register(lambda: subprocess.run(['subst', drive, '/D'], capture_output=True))
+    mount_tree.done.add((m[1], m[2]))
+
+
+mount_tree.done = set()
+
+def tagless(name):
+    """A symbol without the tags the compiler derives from the compiled file's name."""
+    import re
+    return re.sub(r'\?A0x[0-9a-f]{8}|<lambda_[0-9a-f]{32}>', lambda m: '?A0x' if m[0][0] == '?' else '<lambda>', name)
+
+
+@lru_cache(maxsize=32)
+def _coff_object(obj, modified, length):
+    """Parse one version of a COFF object once. File metadata is part of the key: compile_obj may overwrite the
+    same path between candidate passes. Bound the cache because a complete score visits many large objects."""
+    with open(obj, 'rb') as f:
+        d = f.read()
     nsec, symptr, nsym = struct.unpack_from('<H', d, 2)[0], *struct.unpack_from('<II', d, 8)
     strtab = symptr + 18 * nsym
 
@@ -80,17 +200,41 @@ def function_of(obj, text):
         value, sec, typ, cls, aux = struct.unpack_from('<IhHBB', s, 8)
         syms.append((name(s), value, sec, typ, cls))
         k += 1 + aux
-    hits = [s for s in syms if text in s[0] and s[3] == 0x20 and s[2] > 0
-            and not (s[0].startswith('__') and '$' in s[0])]       # not EH funclets (__unwindfunclet$..., __ehhandler$...)
-    exact = [s for s in hits if s[0] == text]
-    hits = exact or hits
+    # the tag of an anonymous namespace (?A0x<8 hex>) and of a lambda (<lambda_<32 hex>>) come from the name of the
+    # file being compiled: any tag is taken
+    syms = [(tagless(s[0]),) + s[1:] for s in syms]
+    functions = [s for s in syms if s[3] == 0x20 and s[2] > 0
+                 and not (s[0].startswith('__') and '$' in s[0])]
+    exact, values = {}, {}
+    for s in functions:
+        exact.setdefault(s[0], []).append(s)
+    # EH funclets still delimit functions in a shared section, even though they cannot be selected above.
+    for s in syms:
+        if s[3] == 0x20 and s[2] > 0:
+            values.setdefault(s[2], set()).add(s[1])
+    ends = {}
+    for sec, offsets in values.items():
+        offsets = sorted(offsets)
+        ends.update(((sec, a), b) for a, b in zip(offsets, offsets[1:]))
+    return d, symptr, name, functions, exact, ends, {}
+
+
+def function_of(obj, text):
+    """(name, code bytes, set of relocated byte offsets) of the function whose symbol contains text. Only the
+    immutable COFF metadata is cached; relocation targets and constants are populated afresh for every call."""
+    stat = os.stat(obj)
+    d, symptr, name, functions, exact, ends, queries = _coff_object(os.path.abspath(obj), stat.st_mtime_ns, stat.st_size)
+    text = tagless(text)
+    if text not in queries:
+        queries[text] = exact.get(text) or [s for s in functions if text in s[0]]
+    hits = queries[text]
     if len(hits) != 1:
         raise SystemExit(f'{len(hits)} functions contain "{text}": {[h[0] for h in hits]}')
     fname, value, sec, _, _ = hits[0]
     h = 20 + struct.unpack_from('<H', d, 16)[0] + 40 * (sec - 1)
     size, raw, relptr = struct.unpack_from('<III', d, h + 16)
     nrel = struct.unpack_from('<H', d, h + 32)[0]
-    end = min([s[1] for s in syms if s[2] == sec and s[3] == 0x20 and s[1] > value] + [size])
+    end = min(ends.get((sec, value), size), size)
     rel = set()
     TARGETS.clear()
     CONSTANTS.clear()
@@ -162,10 +306,60 @@ def same_thing(ours, theirs):
     for t in theirs:
         if plain(t) == core:
             return True
+        # Packet tables were named from the packet id in names.tsv, before their C++ classes existed.
+        # Require that exact class name: a table of any other packet remains a different target.
+        import re
+        table = re.fullmatch(r'\?\?_7([A-Za-z_][A-Za-z_0-9]*)@@6B@', core)
+        if table and t == table[1] + '_vtable':
+            return True
         # an import slot is named imp_<module>_<function>; kernel32's critical section calls are ntdll's Rtl ones
         if t.startswith('imp_') and (t.endswith('_' + core) or t.endswith('_Rtl' + core)):
             return True
     return False
+
+
+SOURCE = [None]  # the source file compare() is working on
+
+
+def folded(sym, target):
+    """True when the linker gave sym the address of another, identical function (identical code folding): the object
+    of the same library that defines sym (client-src/obj/<label>/*.obj from tools/match_objs.py, label = the directory
+    of the generated source) has for it the very bytes the client has at target, relocated bytes left out, ending
+    where the client's function ends. What sym itself calls is not looked at here."""
+    import glob
+    import packet_emu as P
+    src = SOURCE[0]
+    label = os.path.basename(os.path.dirname(os.path.abspath(src))) if src else ''
+    key = (label, sym, target)
+    if key in folded.v:
+        return folded.v[key]
+    saved = dict(TARGETS), dict(CONSTANTS)
+    ok = False
+    for obj in sorted(glob.glob(os.path.join(ROOT, 'client-src', 'obj', label, '*.obj'))) if label else ():
+        if sym.encode() not in open(obj, 'rb').read():
+            continue
+        try:
+            fname, code, rel = function_of(obj, sym)
+        except SystemExit:                          # named there, not defined there
+            continue
+        if tagless(fname) != tagless(sym):
+            continue
+        while code and code[-1] in (0xcc, 0x90) and len(code) - 1 not in rel:
+            code = code[:-1]
+        theirs = bytes(P.IMG[target:target + len(code) + 1])
+        if code and all(i in rel or code[i] == theirs[i] for i in range(len(code))) and (
+                theirs[len(code)] in (0xcc, 0x90) or target + len(code) in starts()):
+            ok = True
+            break
+    TARGETS.clear()
+    TARGETS.update(saved[0])
+    CONSTANTS.clear()
+    CONSTANTS.update(saved[1])
+    folded.v[key] = ok
+    return ok
+
+
+folded.v = {}
 
 
 def wrong_targets(rva, ours):
@@ -179,7 +373,8 @@ def wrong_targets(rva, ours):
         target = rva + off + 4 + v if typ == 0x14 else (v & 0xffffffff) - P.BASE if typ == 6 else None
         rebuilt = rebuilt_symbols().get(target)
         if rebuilt:                                 # a function we have rebuilt: ours must call that very symbol
-            if not any(text in sym for text in rebuilt):
+            # tags that come from the compiled file's name (anonymous namespace, lambda) do not tell symbols apart
+            if not any(tagless(text) in tagless(sym) for text in rebuilt) and not folded(sym, target):
                 out.append((off, sym, 'the rebuilt ' + rebuilt[0]))
             theirs = None
         else:
@@ -209,17 +404,34 @@ def symbol_addresses(rva, ours):
     return out
 
 
+def straight_return(code):
+    """A complete, straight-line leaf body ending at its only return.
+
+    With no branch or call before the matching ret, code physically following
+    that return cannot be a continuation reachable from this entry point.
+    Keep the accepted operations narrow; more complex bodies still need the
+    original padding/index boundary check.
+    """
+    from capstone import Cs, CS_ARCH_X86, CS_MODE_32
+    instructions = list(Cs(CS_ARCH_X86, CS_MODE_32).disasm(code, 0))
+    return bool(instructions) and instructions[-1].address + instructions[-1].size == len(code) and \
+        instructions[-1].mnemonic == 'ret' and all(i.mnemonic in (
+            'mov', 'movzx', 'movsx', 'xor', 'xorps', 'movq', 'movups') for i in instructions[:-1])
+
+
 def compare(src, text, rva, flags, obj=None):
     """(symbol, size, identical bytes, first difference or None, side-by-side text) for one function."""
     import packet_emu as P
     from capstone import Cs, CS_ARCH_X86, CS_MODE_32
+    SOURCE[0] = src
     fname, ours, rel = function_of(obj or compile_obj(src, flags), text)
     while ours and ours[-1] in (0xcc, 0x90) and len(ours) - 1 not in rel:   # padding after the function
         ours = ours[:-1]
     theirs = bytes(P.IMG[rva:rva + len(ours) + 64])
     same = sum(1 for i in range(len(ours)) if i in rel or ours[i] == theirs[i])
     first = next((i for i in range(len(ours)) if i not in rel and ours[i] != theirs[i]), None)
-    if first is None and theirs[len(ours)] not in (0xcc, 0x90) and rva + len(ours) not in starts():
+    if first is None and theirs[len(ours)] not in (0xcc, 0x90) and rva + len(ours) not in starts() \
+            and not straight_return(ours):
         first = len(ours)                                   # ours ends before Riot's function does
     if first is None:
         bad = wrong_targets(rva, ours)

@@ -7,12 +7,18 @@
 // match: d84d20 _SSL_COMP_get_compression_methods
 // match: d84d40 _SSL_CTX_set_ciphersuites
 // match: d84db0 _SSL_set_ciphersuites
+// match: d84e60 _ciphersuite_cb
+// match: d84f30 _cmeth_free
+// match: d84f50 _do_load_builtin_compressions_ossl_
 // match: d85010 _ssl3_comp_find
 // match: d85050 _ssl_cert_is_disabled
 // match: d85080 _ssl_cipher_apply_rule
 // match: d85360 _ssl_cipher_collect_ciphers
 // match: d855f0 _ssl_cipher_get_evp
+// match: d85860 _ssl_cipher_process_rulestr
+// match: d85c90 _ssl_cipher_strength_sort
 // match: d85df0 _ssl_comp_free_compression_methods_int
+// match: d85e10 _ssl_create_cipher_list
 // match: d86970 _ssl_get_cipher_by_char
 // match: d869a0 _ssl_handshake_md
 // match: d869c0 _ssl_load_ciphers
@@ -20,4 +26,6 @@
 // match: d86d20 _ssl_prf_md
 // match: d86d50 _update_cipher_list
 // match: d86e30 _update_cipher_list_by_id
+#define OPENSSL_FILE "ssl\\ssl_ciph.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/ssl/ssl_ciph.c"

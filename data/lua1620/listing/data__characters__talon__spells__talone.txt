@@ -1,0 +1,36 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 000002252D5835C0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 0 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	NEWTABLE 	0 5 0
+	10	[-]	LOADK    	1 -6	; 22
+	11	[-]	LOADK    	2 -7	; 18
+	12	[-]	LOADK    	3 -8	; 14
+	13	[-]	LOADK    	4 -9	; 10
+	14	[-]	LOADK    	5 -10	; 6
+	15	[-]	SETLIST  	0 5 1	; 1
+	16	[-]	SETGLOBAL	0 -5	; AutoCooldownByLevel
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -11	; PersistsThroughDeath
+	19	[-]	RETURN   	0 1
+constants (11) for 000002252D5835C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"AutoCooldownByLevel"
+	6	22
+	7	18
+	8	14
+	9	10
+	10	6
+	11	"PersistsThroughDeath"
+locals (0) for 000002252D5835C0:
+upvalues (0) for 000002252D5835C0:

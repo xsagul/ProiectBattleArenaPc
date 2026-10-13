@@ -1,0 +1,23 @@
+local L0_1, L1_1, L2_1
+L0_1 = true
+DoesntTriggerSpellCasts = L0_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBSpellBuffRemove
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.TargetVar = "Owner"
+L2_1.AttackerVar = "Owner"
+L2_1.BuffName = "LuxLightstrikeKugel"
+L1_1.Params = L2_1
+L0_1[1] = L1_1
+SelfExecuteBuildingBlocks = L0_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBPreloadSpell
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.Name = "luxlightstrikekugel"
+L1_1.Params = L2_1
+L0_1[1] = L1_1
+PreLoadBuildingBlocks = L0_1

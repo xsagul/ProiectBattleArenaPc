@@ -1670,3 +1670,1598 @@ versiunea exactă și compilatorul ei.
 - Harta codului (cine apelează alocatorul lui Riot vs. `malloc`/`free`): codul Riot e cam rva 0x60000-0xbc0000,
   bibliotecile străine și CRT-ul restul până la 0xf40000 (~3,5 MB, ~22% din cod; OpenSSL ~0xd7d000+, curl ~0xb6e000,
   yaml ~0xb29000 / 0xb3d000, Lua 0xc16000+).
+
+**Continuare (2026-10-07, bibliotecile precompilate).** Scor (`tools/progress.py`, toate sursele recompilate): 15.242 de funcții identice, 2.440.176 de octeți = 15,32% din cod (de la 12.086 / 7,85%); 38 de funcții scrise, dar încă neidentice (de la 135); cu bibliotecile de runtime recunoscute (1,82%) rămâne necercetat 81,93% (de la 90,26%).
+- **Cheia găsită:** bibliotecile pe care clientul le-a primit gata compilate păstrează registrul de cadru (`-Oy-`); cu
+  `-O2` simplu aproape nimic din ele nu ieșea identic. Măsurat pe sentry-native: 78 de funcții cu `-O2`, 247 cu
+  `-O2 -Oy-`. Bibliotecile compilate de Riot odată cu jocul (zlib, zstd, yaml, curl, FreeType, LodePNG) rămân pe `-O2`
+  fără `-Oy-` (curl cu `-Oy-` scade de la 256 la 17).
+- Zonele rămase au fost identificate după șirurile și constantele din cod (rva 0xbb4000-0xc16500 și 0xc91c00-0xf40000).
+
+| Bibliotecă | Dovada versiunii | Compilator și opțiuni | Funcții identice verificate |
+|---|---|---|---|
+| FreeType 2.10.1 | `FT_New_Library` scrie 2, 10, 1 (rva 0xbb7993) | al lui Riot, C, `-O2`, configurarea implicită, un fișier pe modul | 864 |
+| LodePNG 20180611 | șirul `20180611` (singurul commit cu această versiune) | al lui Riot, C++17, `-O2` | 72 din 75 |
+| sentry-native 0.4.17 (partea C) | `sentry.native/0.4.17` | MSVC 14.31.31106, `-O2 -Oy-` | 239 |
+| libvpx 1.8.0 (fișierele C) | `v1.8.0`, configurare x86-win32-vs15 | Visual Studio 2017 (al nostru: 14.16.27048), `-O2 -Oy-` | 710 |
+| libvorbis 1.3.6 | `20180316` | Visual Studio 2017, `-O2 -Oy-` | 100 |
+| libogg 1.3.3 | fără șir; 1.3.3 și 1.3.4 dau aceleași funcții | Visual Studio 2017, `-O2 -Oy-` | 9 |
+| libwebm (copia din libvpx 1.8.0) | `GetVersion` = 0.2.1.0 (rva 0xf3c940) | Visual Studio 2017, `-O2 -Oy- -EHsc` | 100 |
+| OpenSSL 1.1.1m | (știut) | MSVC 14.30.30709 | 2.731 (de la 1.766) |
+
+- **OpenSSL:** 1.372 de funcții aveau octeții identici, dar erau respinse la verificare: înregistrările de eroare poartă
+  numele fișierului sursă (`OPENSSL_FILE = __FILE__`), iar build-ul OpenSSL compilează fiecare fișier după calea lui de
+  la rădăcină, cu `\` (`ssl\statem\extensions_srvr.c`). Fișierele generate definesc acum `OPENSSL_FILE` cu acea cale
+  (`gen_sources.py`, `file_prelude`).
+- `gen_sources.py`: `library_files(..., within=(rva, rva))` ține o bibliotecă C++ în zona ei (obiectul ei aduce și
+  funcții ale bibliotecii standard, pe care clientul le are în altă parte). `match_func.py`: eticheta unui spațiu de
+  nume anonim (`?A0x<8 hex>`) vine din numele fișierului compilat și nu mai contează la căutarea simbolului.
+- `tools/get_libsrc.py` aduce acum și FreeType 2.10.1, LodePNG (commit 9426bf43) și sentry-native 0.4.17 (arhiva de
+  release, cu crashpad). `tools/third_party/libvpx-1.8.0-build/vpx_version.h` e fișierul pe care îl scrie build-ul
+  libvpx pentru v1.8.0.
+
+Rămas deschis la biblioteci:
+- FreeType: 30 de funcții (45 KB) au octeții identici, dar apelează o funcție pe care editorul de legături a contopit-o
+  cu una identică din altă bibliotecă (`FT_Stream_Pos` = `ZSTD_DDict_dictSize`, `ft_hash_num_lookup` = `hash_lookup`);
+  le trebuie linii `// same:` scrise automat și verificate.
+- libvorbis: funcțiile cu mult calcul în virgulă mobilă (smallft, mdct, codebook, floor1) nu ies încă identice
+  (`-fp:fast`, `-GS-`, `-arch` încercate: mai rău). libvpx: partea scrisă în asamblare (~100 KB) cere nasm / yasm.
+- libcurl: 228 din ~1.266 de funcții - configurarea lui Riot (ce protocoale sunt dezactivate) nu e încă aflată.
+- crashpad (C++, rva 0xc9d970-0xcc0000, ~140 KB, sursa e în arhiva sentry-native), restul Lua. zstd 1.4.9 e practic
+  complet (220 din 228 de funcții în zona lui, rva 0xc4c000-0xc91c00). Wwise 2019.1.10 (rva 0xcc0000-0xd60000,
+  ~640 KB) nu are sursă publică.
+
+**Continuare (2026-10-07, a doua parte a rundei pe biblioteci).** Scor (`tools/progress.py`): 15.981 de funcții
+identice, 2.767.244 de octeți = 17,38% din cod (de la 15.242 / 15,32%); 16 funcții scrise și încă neidentice;
+necercetat 79,92%.
+- **Lua 5.1.5 e compilat cu `-arch:SSE`** (numerele `double` trec prin stiva x87: `lua_pushnumber` din client face
+  `fld` / `fstp`, al nostru făcea `movsd`). 372 de funcții verificate (de la 276). Restul codului lui Riot măsurat până
+  acum e `-arch:SSE2`; curl cu `-arch:SSE` scade (300 -> 224), deci opțiunea e a lui Lua, nu a tuturor bibliotecilor.
+- **Funcții contopite de editorul de legături** (`match_func.folded`): când clientul apelează o adresă pe care o altă
+  sursă a refăcut-o sub alt nume, verificatorul caută simbolul nostru în obiectele aceleiași biblioteci
+  (`client-src/obj/<etichetă>/`) și îl acceptă dacă are exact octeții clientului de la acea adresă. FreeType 893 (de la
+  864), OpenSSL 3.096 (de la 2.731), zlib 37 din 37, zstd 202.
+- **crashpad + mini_chromium** (din arhiva sentry-native 0.4.17; MSVC 14.31.31106, C++17, `-O2 -Oy- -EHsc`,
+  `_HAS_EXCEPTIONS=0`): 182 de funcții verificate. Alte ~90 au octeții identici, dar mesajele lor de log poartă calea
+  completă a fișierului din build-ul Riot (`T:\p4\depot\LoL\__MAIN__\code\External\sentry\tmp\sentry-native\...`).
+  `__FILE__` nu se poate redefini, iar `/pathmap` nu schimbă `__FILE__` la aceste compilatoare (`/FC /d1trimfile:` doar
+  taie un prefix); ar trebui ca arborele de surse să stea chiar la acea cale (un disc T: montat). Nefăcut.
+- **libcurl**: 265 de funcții (de la 228) cu `CURL_DISABLE_*` pentru toate protocoalele în afară de HTTP(S) și FILE
+  (`file_done` există în client), plus zlib și zstd. Restul nu iese pentru că în client funcții din fișiere diferite
+  sunt topite una în alta (`Curl_multi_handle` conține `Curl_hash_init` din `hash.c`): Riot compilează mai multe fișiere
+  curl într-o unitate. Toată biblioteca într-o singură unitate nu compilează (`base64`, `protocols` definite de două
+  ori), iar loturile de 8 în ordinea listei nu explică perechea multi.c + hash.c - gruparea rămâne de aflat.
+- Etichetele care vin din numele fișierului compilat (`?A0x<8 hex>` la spații de nume anonime, `<lambda_<32 hex>>`)
+  nu mai contează nici la căutarea simbolului, nici la compararea țintelor (`match_func.tagless`).
+- Lecție: la prima generare a unei biblioteci, o funcție „geamănă" (aceiași octeți, altă țintă de apel, ex.
+  `sentry_options_set_database_path` / `..._pathw`) poate trece, fiindcă ținta ei încă nu e refăcută; a doua trecere a
+  generatorului o respinge (sentry 239 -> 236). După o bibliotecă nouă, `gen_sources.py` se rulează de două ori.
+- Cele mai mari grupuri de cod repetat din partea lui Riot (`shapes.tsv`: 1,0 MB încă deschis în 1.843 de grupuri) sunt
+  funcții de legătură pentru API-ul REST (41 de funcții a câte 1.165 de octeți la rva 0x435310...), cu multe tipuri
+  încă necunoscute - nu se pot scrie mecanic deocamdată.
+
+**Continuare (2026-10-07, codificarea câmpurilor din pachete - primul cod al lui Riot scris de un generator din zona
+pachetelor).** Scor măsurat (`tools/progress.py`): 16.700 de funcții identice,
+2.872.035 de octeți = 18,03% din cod, necercetat 79,27% (cu 323 + 249 + 98 funcții de câmp); după regulile adăugate
+apoi (mai jos) generatorul verifică 366 + 287 + 106.
+- **Ce s-a măsurat:** idiomul de inversare a biților unui octet
+  (`((b * 0x0802 & 0x22110) | (b * 0x8020 & 0x88440)) * 0x10101 >> 16`) apare în 2.648 de funcții, 2,13 MB = 13% din
+  cod. E codificarea câmpurilor: fiecare octet citit de pe fir trece printr-un lanț propriu câmpului, din pași de un
+  octet - adună / scade o constantă, sau-exclusiv cu o constantă, rotire, inversarea biților, scădere dintr-o constantă,
+  căutare într-o tabelă de 256 de octeți (ex. va 0x1b3d460), schimbarea între ei a biților vecini sau a perechilor de
+  biți. Scris ca pași simpli în C++ (`client-src/src/FieldCodec.h`: `Rev`, `Rol`, `Ror`, `Swap1`, `Swap2`), lanțul dă
+  exact codul clientului (prima funcție identică: rva 0x347220, apoi rva 0x778ec0).
+- **`tools/gen_fields.py`** citește lanțul din codul fiecărei funcții: o rulează pentru toți cei 256 de octeți de
+  intrare și, de câte ori o instrucțiune lasă în registrul ei o valoare nouă unu-la-unu, numește pasul care duce la ea.
+  Trei forme de funcții sunt scrise și verificate (`gen_sources.py FieldBytes.cpp FieldVarints.cpp FieldWrappers.cpp`):
+
+| Fișier | Forma sursei | Funcții identice |
+|---|---|---|
+| FieldBytes.cpp | `if (p < end) { u8 x = *p; *cursor = p + 1; <lanț> *out = x; return true; } return false;` | 366 din 403 |
+| FieldVarints.cpp | `*out = 0; for (int i = 0; *cursor < end; ++i) { u8 x = *(*cursor)++; <lanț> *out \|= (T)((x & 0x7f) << (i * 7)); if (!(x & 0x80)) return true; } return false;` (T = u16, u32) | 287 din 302 |
+| FieldWrappers.cpp | `bool ok = <alt cititor>(out, cursor, end); for (u8* b = (u8*)out; b != (u8*)out + sizeof(*out); ++b) { u8 x = *b; <lanț> *b = x; } return ok;` (forma din memorie a câmpului) | 106 |
+
+- Ce a contat la formă: ramura de succes scrisă prima (`if (p < end) {...} return false;`), deplasarea varint-ului ca
+  `i * 7` cu contor (cu `shift += 7` inițializarea iese înaintea primei verificări), schimbul de biți în forma clasică
+  `((x >> 1) & 0x55) | ((x & 0x55) << 1)`.
+- **Complementul are două codări în client**: `not cl` vine dintr-un singur pas (`x = ~x`), iar `xor cl, 0xff` din doi
+  pași sau-exclusiv la rând ale căror constante dau împreună 0xff (compilatorul îi unește târziu și nu mai face `not`);
+  care două constante are sursa lui Riot nu se poate ști - orice pereche dă același cod (generatorul scrie 0x0f și 0xf0).
+- **Locul scrierii cursorului** (`*cursor = p + 1`) printre pașii lanțului se vede în cod; generatorul compilează toate
+  pozițiile într-un singur fișier și o păstrează pe cea identică (`gen_fields.pick`).
+- Deschis: restul de ~1.500 de funcții mici au peste 1.000 de forme diferite (constructori de pachete care scriu valorile
+  implicite deja codificate, cititori de câmpuri compuse), iar grosul celor 2,13 MB stă în cititoarele mari de pachete,
+  unde lanțurile sunt puse direct în corpul funcției - pentru ele trebuie descrisă structura fiecărui pachet
+  (`server/pkt_schema.py` o știe pentru pachetele învățate).
+- **crashpad**: 231 de funcții (de la 182). Sursele lui stau, pe durata compilării, chiar la calea din build-ul Riot:
+  linia `// tree: T:\p4\...\sentry-native = tools/third_party/sentry-native-0.4.17` dintr-o sursă generată face ca
+  `match_func.mount_tree` să lege directorul nostru acolo (joncțiune sub `client-src/obj/mount_T`, arătată ca discul
+  T: cu `subst`) și să elibereze discul la sfârșit. Utilizatorul a fost de acord cu montarea (2026-10-07).
+
+**Continuare (2026-10-07, primele cititoare de pachete scrise din structura lor).** Trei funcții, verificate identic
+(`match_func.py`), în `client-src/src/`:
+- `Packet.h` + `PacketBase.cpp` - cititorul antetului, rva 0x83fee0 (46 de octeți; 46 de id-uri de pachet îl au drept
+  cititor întreg): `const u8* p = *cursor; if ((u32)(end - p) < 6) return false; header4 = *(const u16*)p;
+  header6 = *(const u32*)(p + 2); *cursor += 6; return true;`. Obiectul: tabelă virtuală, u16 la +4, u32 la +6
+  (împachetare la 1 octet).
+- `Packet182.cpp` - id 182, rva 0x88d110 (105 octeți): antetul (inline), un octet de biți, apoi
+  `if (!(*p & 1)) { field10 = 0; return true; } return Read_805e00(&field0c, cursor, end) != 0;`.
+- `Packet72.cpp` - id 72, rva 0x884270 (154 de octeți): la fel, dar valoarea implicită vine dintr-un octet global și e
+  trecută prin lanțul din memorie al câmpului, printr-o funcție inline care primește **prin referință** câmpul și
+  valoarea (`SetField(u8& field, const u8& value)`); cu pointer sau cu codul scris direct în cititor ies alte registre.
+- Măsurat pe drum: cititoarele de câmp întorc ceva ce nu e `bool` (cititorul de pachet face `test al, al; setne al`),
+  deci `FieldWrappers.cpp` le declară acum `char`.
+
+Structura generală a unui cititor de pachet (417 cititoare distincte, ~1,2 MB): antet, unul sau mai mulți octeți de
+biți, apoi pentru fiecare câmp „pe fir" (apelul cititorului de câmp) sau „implicit" (o valoare pusă direct, un apel de
+inițializare, sau o valoare trecută prin lanț). **Limita metodei:** aproape fiecare cititor are altă schemă de control
+(417 cititoare, 385 de scheme) - nu se pot scrie pe tipare de formă, ca funcțiile de câmp. Pentru a le genera trebuie
+refăcută întâi „biblioteca de câmpuri" a lui Riot: tipurile de câmp (octet / număr codificat, șir, vector de
+sub-obiecte cu cititor virtual la slotul 1, valori implicite ținute în statice locale) cu funcțiile lor inline, astfel
+încât cititorul unui pachet să fie o sursă scurtă care se desface în codul clientului. Asta e munca următoare, câmp cu
+câmp, pornind de la cititoarele cele mai mici (lista lor: `server/packet_emu.table()`, câmpul `des`).
+
+**Continuare (2026-10-07, generator pentru cititoarele de pachet cu un singur câmp).** `gen_sources.py PacketReaders.cpp`
+(`gen_fields.packet_readers`) recunoaște două feluri de cititor cu un câmp după antet - (a) un bit spune dacă câmpul e
+pe fir (apel de cititor de câmp), altfel ia valoarea unei globale, trecută prin lanțul din memorie; (b) bitul e chiar
+valoarea câmpului - scrie câteva variante de sursă pentru fiecare și o păstrează pe cea identică. Stare: 1 cititor
+identic din 7 (rva 0x840340), plus cele scrise de mână (0x884270, 0x88d110).
+- **Problemă deschisă, măsurată pe rva 0x868c40 (id 179):** structura iese corectă, dar clientul ține adresa câmpului
+  în `eax` (`lea eax, [edi + 0xa]`), păstrează `this` în `edi` și salvează `ebx` abia în ramura valorii implicite;
+  compilatorul nostru adună deplasarea în registrul lui `this` (`add esi, 0xa`) și ia `end` în alt registru. ~45 de
+  forme încercate fără rezultat (ordinea ramurilor, valoarea prin referință / valoare / pointer, câmp ca obiect cu
+  metode, biții citiți printr-o funcție ajutătoare, forme de buclă). La id 72 aceeași formă iese identică - diferența
+  dintre cele două e sensul bitului și un pas de lanț care cere un registru în plus.
+- Capcană de metodă regăsită: într-un fișier de probă, o funcție ajutătoare `inline` folosită de multe variante nu mai
+  e desfăcută în toate (rezultate false de 114 octeți); fiecare variantă își primește propria copie.
+- Clasificarea cititoarelor mici (95 de cititoare între 60 și 420 de octeți) după ingrediente: 17 au o valoare implicită
+  ținută într-o statică locală și un sub-obiect cu cititor virtual (187 de octeți fiecare), 9 sunt de felul (b), 8 de
+  felul (a), 12 citesc un vector de sub-obiecte prin slotul 1 al tabelei lor virtuale.
+
+**Continuare (2026-10-07, cititoare de pachet cu valoare implicită într-o statică locală).** `gen_sources.py
+PacketVectors.cpp` (`gen_fields.packet_vector_readers`): 11 cititoare de pachet identice (din 24 de acest fel; restul
+au mai multe câmpuri) și 2 funcții de distrugere a staticii. Prima potrivire de mână: rva 0x8b7c80 (187 de octeți).
+- **Forma:** câmpul e un obiect cu tabelă virtuală proprie (cititorul lui e slotul 1), iar valoarea implicită vine
+  dintr-o funcție inline care întoarce o referință la o statică locală -
+  `__forceinline const T& Default() { static const T def; return def; }` - deci o statică pe tip, împărțită de toate
+  pachetele cu acel tip de câmp. Scrisă direct în cititor (`static const T def;` în ramură) nu dă codul clientului.
+  `__forceinline` e necesar: cu mulți utilizatori într-un fișier, `inline` simplu nu mai e desfăcut.
+- **Trei feluri de valoare implicită**, după ce face codul clientului:
+  1. `field.value = Default();` - valoarea (la +4 în obiectul-câmp) e un vector propriu al lui Riot
+     `{date, număr, capacitate}` cu atribuire prin copiere (parcurge elementele) și destructor; statica n-are
+     constructor (se înregistrează doar destructorul);
+  2. `field = Default();` - tot obiectul-câmp atribuit dintr-un obiect static construit la prima folosire;
+  3. `field.value = Default().value;` - valoarea sunt 3 cuvinte de 32 de biți copiate unul câte unul: tipul valorii
+     are propria atribuire, cuvânt cu cuvânt (un struct simplu ar fi copiat 8 + 4 octeți).
+- Funcția înregistrată la `atexit` pentru statică e, la cele mai multe tipuri, chiar destructorul vectorului pus
+  inline (parcurge elementele prin slotul 3 al tabelei lor virtuale, apoi eliberează memoria dacă bitul de sus al
+  capacității e 0); tipurile generate îl declară doar, deci numai cele două care sunt un simplu salt sunt revendicate.
+
+Scor măsurat după aceste runde (`tools/progress.py`, 2026-10-07): 16.806 funcții identice, 2.884.131 de octeți =
+18,11% din cod; 16 scrise și încă neidentice; necercetat 79,19%.
+
+**Continuare (2026-10-07, compunerea tipurilor de câmp și destructorii vectorilor).**
+- `gen_sources.py VectorDestructors.cpp`: **73 de funcții identice**. `PacketVector.h` descrie elementul prin
+  mărimea lui și destructorul virtual la slotul 3, plus stocarea `{date, număr, capacitate}`. Destructorul parcurge
+  `for (auto p = data, end = data + count; p < end; ++p) p->~Element();`, apoi eliberează datele dacă
+  `(int)capacity >= 0`. Se generează și `Clear()` (aceeași distrugere, urmată de zeroarea celor trei membri).
+- Destructorii obiectelor care conțin vectori sunt **destructori virtuali `= default`**, emiși de compilator;
+  cu un corp gol `{}` compilatorul scrie în plus tabela virtuală a clasei. Sunt descrise și combinațiile cu
+  vectori de valori triviale, șiruri `RString`, vectori cu destructor separat și baza `BinObject` (a cărei tabelă
+  se scrie la sfârșitul distrugerii). `Make_<tip>()` obligă compilatorul să emită tabela și destructorul;
+  aceste funcții auxiliare nu sunt revendicate în scor.
+- `PacketVectors.cpp`: **22 din cele 24 de cititoare recunoscute**, plus **4 destructori de statice** (fa6c00,
+  fa6c10, fa6c40, fa6c90), față de 11 + 2. Valoarea unui câmp poate avea membri de 1, 2, 4 sau 8 octeți,
+  goluri între membri, un bloc de 128 de octeți, șir și alți vectori. Atribuirea valorii e scrisă membru cu membru;
+  blocul are atribuirea implicită a unui agregat (compilatorul emite `rep movsd`). Două încărcări de dword înainte
+  de cele două scrieri indică un membru de 64 de biți. Atribuirea mare trebuie `__forceinline`, altfel devine apel.
+  Spațiul staticii până la gardă păstrează și partea tipului încă nedescrisă; constructorii / destructorii
+  câmpurilor care nu au fost refăcuți rămân declarații, nu funcții revendicate.
+- `FieldValidated.cpp`: **2 funcții identice**, rva 0x79c490 și 0x79c730. Un enum de un octet este citit,
+  verificat (`0 < valoare < 0x34`), înlocuit cu globala 0x36f73cc dacă citirea / verificarea eșuează, apoi trecut
+  prin lanțul din memorie în ambele cazuri. Sursa: `bool ok = Read(...) && *out != 0 && *out < 0x34;
+  if (!ok) *out = default; <codificare>; return ok;` (funcția întoarce `char`).
+- `PacketBits.h/.cpp`: funcția de extragere a biților, rva 0x91cae0, **101 octeți identici**. Argumentele sunt
+  adresa octeților de biți, poziția de început (`u8`), numărul de biți (`u8`); sunt tratate și intervalele care
+  trec în octetul următor. Numele `GetBits_91cae0` e al nostru.
+- `match_func.py`: metadatele COFF se citesc o singură dată pe versiune de obiect, într-un cache limitat la 32
+  de obiecte, cu cheia (cale, data modificării în nanosecunde, mărime). Indicii de simboluri și limitele funcțiilor
+  sunt păstrați; țintele relocărilor și constantele se refac la fiecare apel. Verificat față de parserul anterior
+  pe **199 de comparații** (inclusiv MetaFunctions, crashpad cu etichete anonime și OpenSSL cu constante), cu
+  aceiași octeți, relocări, ținte, constante și erori de simbol ambiguu / absent; recompilarea aceluiași obiect
+  invalidează cache-ul. Trei teste permanente (`python -m unittest discover -s tools -p test_match_func.py`)
+  verifică delimitarea prin funclete EH, selecția exactă / ambiguă, țintele și constantele la schimbarea funcției,
+  precum și rescrierea unui obiect de aceeași mărime. Regulile de acceptare a unei potriviri nu s-au schimbat.
+
+**Rămas deschis în această rundă:** cele două cititoare rva 0x898110 și 0x8afc50 (363 de octeți), cu un enum
+la +0xa urmat de un obiect-câmp la +0xb. Primul câmp și extragerea bitului celui de-al doilea sunt refăcute;
+forma cea mai apropiată are 362 de octeți. Clientul încheie apelul virtual cu `test al, al; je <eșec>; ... mov al, 1`,
+compilatorul nostru comprimă ultimul rezultat în `setne al`. Ramura implicită trebuie scrisă prima și aici.
+Variantele `switch`, bucle cu o singură iterație, rezultat local, `goto`, lambda și întoarcere `char` nu au
+rezolvat această diferență. Niciuna dintre aceste două funcții nu este trecută în scor.
+
+**Scor final al rundei (2026-10-07, toate sursele recompilate cu `tools/progress.py`):** **16.895 funcții
+identice, 2.892.642 de octeți = 18,16% din cod**, față de 16.806 / 2.884.131 / 18,11%: **+89 de funcții,
++8.511 octeți**. Cele 16 funcții scrise și neidentice au rămas 16; necercetat 79,14%. Verificarea separată a celor
+102 funcții din cele patru fișiere ale rundei confirmă toate potrivirile și niciun simbol plasat la adrese diferite.
+Au fost verificate și celelalte funcții revendicate: niciuna nu apelează direct funcțiile nou revendicate, deci
+nu există un apel vechi rămas sub alt nume. Logul complet: `client-src/progress-2026-10-07-final.log`.
+Rularea finală, cu parserul COFF optimizat, a durat aproximativ **5 minute** pe această mașină; compilarea tuturor
+surselor și verificarea tuturor țintelor au rămas active. Paritatea integrală de sursă nu este încă atinsă.
+
+**Continuare (2026-10-07, tipuri de câmp comune și constructori de pachete).**
+- `tools/gen_field_classes.py`, apelat prin `gen_sources.py FieldClasses.h FieldConstructors.cpp`: schema
+  constructorului vine din adresele membrilor, scrierile valorilor inițiale și limitele buclelor de codificare.
+  Toate scrierile din afara buclelor trebuie explicate. Un membru codificat are propriul constructor inline,
+  care inițializează valoarea, apoi îi codifică octeții. Sunt recunoscute și stocarea șirului gol `RString`,
+  vectorul de valori triviale de la +0x14 în tipul construit la 0x7b8280 și antetul de pachet.
+- **146 de constructori identici** (din 434 de scheme recunoscute), în clase comune definite de `FieldClasses.h`.
+  Cinci sunt obiecte-câmp: 0x312be0, 0x7b8280, 0x7ba160, 0x7bb840, 0x7e91a0. Celelalte **141 sunt pachete**.
+  Constructorii pachetelor folosesc baza `C2S_Base`, împachetată la un octet: tabelă virtuală, u16 la +4,
+  u32 la +6; constructorul primește id-ul și valoarea implicită a net-id-ului prin referință. Membrii codificați
+  se construiesc după bază. Exemplu: id 782, rva 0x13ca80, **323 de octeți identici**.
+- **Cauza respingerii primelor probe de pachete era numele tabelei, nu codul.** `names.tsv` folosește etichete
+  `C2S_782_vtable`, iar compilatorul scrie simbolul `??_7C2S_782@@6B@`. Clasele de pachet folosesc acum exact
+  numele din hartă; `match_func.same_thing` traduce doar această formă exactă. O clasă cu alt id, alt sens C2S/S2C
+  sau un nume de probă rămâne o țintă diferită. Test permanent pentru aceste cazuri negative.
+- Slotul 0 al tabelei virtuale este scrierea în buffer (un argument, `ret 4` la implementările goale); slotul 1
+  este citirea; slotul 2 întoarce mărimea obiectului, care stabilește și coada încă nedescrisă a clasei; slotul 3
+  este destructorul de ștergere scalară, emis de compilator din `virtual ~T() = default`.
+  **FieldConstructors.cpp revendică 178 de funcții distincte, 33.425 de octeți**, incluzând constructorii,
+  getterii de mărime, destructorii și scrierea goală. Alte **380 de nume contopite** sunt înregistrate ca
+  `// same:`: fiecare a fost compilat și verificat separat, nu numărat ca funcție nouă.
+- Tipurile construite de mână în cititoarele de pachete sunt înlocuite, unde există constructorul verificat,
+  cu tipul comun din `FieldClasses.h`. Cele **22 de cititoare** au rămas identice. Atribuirea clasei copiază
+  membrii stocați, fără să copieze tabela virtuală; trebuie folosită sintaxa `field = Default()`.
+  `field.AssignValue(Default())` calcula receptorul înaintea staticii, păstra încă un registru și nu ieșea
+  identic. În C++17, atribuirea evaluează întâi operandul din dreapta.
+- Destructorii impliciți ai tipurilor comune au refăcut încă **3 callbacks de statice**: 0xfa6f50 (`ret 0`),
+  0xfa6e50 (salt la destructorul șirului de la +4), 0xfa6b40 (eliberează vectorul, apoi distruge șirul).
+  `PacketVectors.cpp` are acum **29 de funcții revendicate** (22 cititoare + 7 callbacks), 4.840 de octeți.
+- `RString`: constructor implicit inline din pointerul comun la șirul gol, lungime 0, capacitate 0;
+  `Clear`, rva 0x9c01f0, **20 de octeți identici**, și `Resize`, rva 0x9da2a0, **45 de octeți identici**.
+  `Clear` nu schimbă nici lungimea dacă datele sunt chiar literalul gol; `Resize` schimbă lungimea în toate
+  cazurile, dar nu scrie terminatorul în literal. `Reserve` trebuie să fie într-o unitate separată: definit în
+  același fișier, compilatorul îl desfăcea în `Resize`, care devenea 130 de octeți în loc de 45.
+
+**Încă deschis:** constructorii cu primul membru u32 (ex. 0x7e5970): 185 de octeți, dar două scrieri inversate
+(tabela virtuală și valoarea zero). Formele cu bază, un membru compus, constructori definiți în afara clasei,
+argumente prin valoare / referință, destructori, alte numere de sloturi și opțiuni de inlining nu au rezolvat
+ordinea. `RString::Reserve` a fost rezolvat ulterior în aceeași rundă (mai jos). Cititoarele obiectelor-câmp noi sunt de 651–2.192 de octeți și combină șiruri în mai multe
+ordini de citire cu formate de 3 biți pentru scalari (constante speciale și cititoare de pe fir); urmează refacerea
+acestei biblioteci. Cele două cititoare 0x898110 / 0x8afc50 rămân de asemenea deschise.
+
+**Continuare în aceeași rundă: șiruri și alocare.** `RStringReserve.cpp`, rva 0x9cd2a0, **108 octeți identici**:
+`proposal = available + available / 2; grown = length > proposal ? length : proposal;
+grown = (grown + 1) & ~1u;`. Se alocă `grown + 1`, se copiază manual intervalul `[data, data + size)`, se scrie
+terminatorul, se eliberează vechiul buffer doar dacă bitul 0 al capacității este 1 și se păstrează `grown | 1`.
+Forma `if` și `std::max` aleg alte registre; expresia ternară produce exact codul clientului. Păstrat în altă
+unitate decât `Resize`, care trebuie să conțină apelul.
+
+`RStringAssign.cpp`, rva 0x9be7d0, **135 de octeți identici**: atribuirea copiază caracterele în stocarea proprie,
+rotunjește capacitatea cerută la un număr par și inițializează pool-ul la prima alocare. **Operatorul de atribuire
+întoarce `void`**, nu referință: forma care întorcea `*this` avea 137 de octeți, dintre care primii 129 identici,
+și adăuga `mov eax, esi` la sfârșit. Dacă nu trebuie crescut bufferul și datele sunt literalul gol, operatorul
+întoarce imediat, fără să modifice nici lungimea. `StringPool::Allocate`, starea pool-ului și inițializatorul său
+sunt încă declarații / globale externe; nu sunt revendicate ca implementări refăcute.
+
+**Scor complet final (2026-10-07, `tools/progress.py`, toate sursele recompilate): 17.080 de funcții identice,
+2.926.421 de octeți = 18,38% din cod**, față de 16.895 / 2.892.642 / 18,16% la începutul rundei:
+**+185 de funcții, +33.779 octeți**. Cele 16 funcții scrise și încă neidentice au rămas 16; necercetat 78,92%.
+Log: `client-src/progress-2026-10-07-classes-strings-final.log`.
+
+Verificarea separată a tuturor liniilor `// match:` și `// same:` din noile clase, cititoarele care le folosesc
+și șiruri a trecut; nu există simboluri de relocare plasate la adrese diferite. Cele patru teste COFF / identitate
+ale tabelelor au trecut. Generatorul nu acceptă inițializări numerice care sunt de fapt o tabelă virtuală a unui
+sub-obiect: pentru ele trebuie descris propriul tip. Aliasurile de destructori / getteri sunt verificate în obiectul
+complet înainte de a fi emise; o funcție respinsă nu poate fi strecurată ca `// same:` într-o trecere ulterioară.
+Obiectivul parității integrale rămâne activ; acest scor dovedește doar partea refăcută până aici.
+
+**Continuare (2026-10-07, cititoare scalare, booleene și enum-uri).**
+
+`tools/gen_packet_scalars.py`, apelat prin `gen_sources.py`, folosește clasele complete din `FieldClasses.h`:
+schema constructorului dă offsetul, mărimea și codificarea membrului, iar slotul 1 al tabelei virtuale dă cititorul.
+Ordinea testelor formatului și constantele sunt extrase din controlul de flux. Sunt recunoscute formatele de
+1 / 2 / 3 biți, două ramuri booleene și cazul enum cu valoare implicită globală. Funcțiile emise sunt metode
+ale acelorași clase care au constructorii verificați.
+
+| Fișier | Funcții distincte identice | Octeți de cod |
+| --- | ---: | ---: |
+| `FieldBytes.cpp` | 415 | 40.280 |
+| `FieldWrappers.cpp` | 161 | 18.711 |
+| `FieldInlineEnums.cpp` | 3 | 410 |
+| `PacketScalars.cpp` | 12 | 4.776 |
+
+- Filtrul pentru cititoarele de octeți acceptă acum și cursorul ținut în `ecx`, pe lângă `edx`.
+  Recunoașterea acestei forme aduce **42 de funcții noi**. Ordini echivalente ale XOR-ului și permutărilor
+  de biți aduc încă **3**: de exemplu `x ^= 4; x = Swap1(x);` și `x = Swap1(x); x ^= 8;` au aceeași valoare,
+  dar instrucțiunile se programează diferit. `equivalent_bit_chains` încearcă ambele ordini; fiecare rezultat
+  acceptat trece comparația completă. `test_gen_fields.py` verifică toate cele 256 de valori, toate măștile
+  XOR, ambele sensuri de mutare și permutările relevante, inclusiv lanțuri compuse și complemente.
+  O valoare temporară `u32` la citire aduce încă **4 potriviri** prin încărcarea `movzx`; indexarea tabelelor
+  este trunchiată explicit la `u8`, iar helperii de permutare și scrierea rezultatului păstrează semantica de octet.
+  Totalul crește de la 366 la 415, adică **49 de cititoare noi**.
+- Filtrul buclelor din cititoarele de câmp acceptă și `movzx`, pe lângă `mov` într-un registru de 8 biți.
+  `FieldWrappers.cpp` trece de la 106 la **158 de funcții**, adică **52 noi**. Cinci probe rămân respinse la
+  comparație. Cititoarele dependente au fost regenerate cu numele cititoarelor nou reconstruite.
+  Sunt recunoscute ulterior și formele care păstrează rezultatul în `ah`, încep prin `push esi` și salvează
+  `ebx` doar când intră în bucla de codificare: încă **3 funcții**, total **161**, inclusiv 0x79c410 (114 octeți).
+- `FieldInlineEnums.cpp`: **0x79c530, 127 de octeți**, și **0x79c870, 135 de octeți**, identici. Citirea de pe
+  fir este într-un helper `__forceinline bool`, urmată de `*out != 0 && *out < 0x34`; la eșec se atribuie
+  `g_36f73cc`, apoi se codifică valoarea în memorie în toate cazurile. Funcția exterioară întoarce `char`.
+  Poziția atribuirii cursorului în lanțul helperului contează și se verifică prin variante de sursă.
+  **0x79c7d0, 148 de octeți**, este rezolvat tot cu helperul inline, dar temporara citită trebuie să fie
+  `u32`: clientul începe prin `movzx edx, byte ptr [ecx]`. Cu `u8`, proba avea aceeași mărime datorită alinierii
+  buclei, dar începea prin `mov dl, byte ptr [ecx]` și deplasa instrucțiunile dinaintea buclei cu un octet.
+  Apelul din `Packet72.cpp` folosește acum corpul verificat `ReadValidated8_79c530`; pachetul păstrează
+  **154/154 de octeți identici**, inclusiv ținta apelului.
+- Antetul care iese identic în cititoarele scalare este un **helper liber inline care întoarce `bool`** și
+  primește `C2S_Base&`: verifică șase octeți, scrie `header4` / `header6`, apoi face `*cursor += 6`.
+  Metoda de pachet întoarce `char`. Forma de membru care întorcea `char` producea altă actualizare a cursorului.
+- Valorile implicite folosesc un setter inline cu câmpul și valoarea prin referință, urmat de bucla de codificare.
+  Sunt necesare două forme pentru limita buclei: `&field + sizeof(field)` și un pointer final primit separat,
+  calculat din `this + offset + size`. **S2C_305, 0x851af0, 419 octeți**, cere limita separată la constantele
+  nenule și limita din câmp la zero. Cu o singură formă pentru toate constantele ieșeau 413 sau 417 octeți.
+  Constantele sale reprezintă biții float pentru 1, 0, -1 și 2.
+- Formatele care citesc de pe fir păstrează apeluri distincte în lanțul ordonat `if / else if`. Dacă sursa
+  folosește același nume de funcție pentru toate formatele, compilatorul unește ramurile: de exemplu S2C_614
+  devenea 347 de octeți, în loc de **412 identici**. `FieldFormatAliases.h/.cpp` definește **50 de corpuri
+  obișnuite C++**, numite pe format, fiecare compilat și verificat separat la adresa comună din client.
+  Acest comportament este compatibil cu funcții contopite de linker; numele și specializările originale nu
+  sunt cunoscute. Aliasurile sunt marcate `// same:` și nu adaugă funcții distincte la scor.
+- `PacketScalars.cpp` include cele șapte cititoare numerice S2C_213 / 614 / 305 / 150 / 665 / 779 / 158,
+  enum-ul **S2C_183, 0x8b1d00, 208 octeți**, și booleenele **S2C_20, 0x8c8000, 285 octeți**, respectiv
+  **C2S_319, 0x8d6d70, 249 octeți**. Extinderea cititoarelor de câmp aduce și **S2C_731, 0x841350,
+  414 octeți identici**.
+- **S2C_783, 0x8edb40, 420 de octeți identici**: pentru constante, setterul trebuie să primească
+  `short& field, const short& value`. Stocarea comună păstrează biții în `u16`; setterul o accesează prin
+  tipul signed corespunzător, `(short&)fielda.value`. La -1, această formă dă `or eax, 0xffffffff`, apoi
+  scrierea cuvântului. Setterul unsigned avea 422 de octeți și folosea `mov eax, 0xffff`. Schimbarea doar a
+  tipului argumentului valorii la u32 / int nu ajungea; contează și tipul referinței câmpului. Extractorul
+  constantelor recunoaște acum și `or <reg>, 0xffffffff`. Total: **12 potriviri din 18 scheme**.
+- Ordinea implicită a generatorului pune cititoarele de câmp și clasele înaintea aliasurilor și metodelor
+  scalare. Regenerarea familiei: `python tools/gen_sources.py FieldBytes.cpp FieldWrappers.cpp
+  FieldInlineEnums.cpp FieldFormatAliases.h FieldFormatAliases.cpp PacketScalars.cpp`.
+
+**Verificare:** toate cele **1.239 linii `// match:` / `// same:`** din cititoarele de câmp, aliasuri, pachete,
+constructori și șiruri auditate au trecut comparația; niciun simbol de relocare nu este plasat la adrese diferite.
+Auditul include `Packet72` după actualizarea numelui enum-ului. Cele patru teste COFF și cele trei teste pentru
+lanțuri echivalente au trecut.
+
+**Încă deschis în familia nouă:** S2C_444 / 0x842b80, S2C_334 / 0x8b1810 și C2S_553 / 0x8db700 au dimensiunea
+corectă, dar ordinea celor două produse din inversarea biților diferă. Schimbarea ordinii termenilor în expresia
+  C++ a fost normalizată de compilator și nu a rezolvat diferența. S2C_605 / 0x8bc6f0 și S2C_581 / 0x8e1220
+mai diferă în registrele buclelor; S2C_179 / 0x868c40 are 161 octeți în proba cea mai apropiată, față de 164 în
+client, și alte registre. Cititoarele cu mai mulți membri și formate de citire în ordini diferite rămân următoarea
+familie de extins.
+
+**Limită identificată în indexul funcțiilor:** `functions.txt` include 0x89fde0 ca început separat în interiorul
+`S2C_240_Read`, 0x89fcb0. Instrucțiunea de la 0x89fde0 este un salt la 0x89fdf5, unde se curăță argumentele
+apelului deja pregătit în prefix; este o continuare a controlului de flux. Indexul dă astfel un prefix de
+304 octeți și un segment de 352, până la următorul cititor numit, S2C_188 / 0x89ff40. Corpul contiguu are
+656 de octeți și două câmpuri scalare. Generatorul actual citește numai prefixul. Extinderea trebuie să descrie
+corpul complet și să verifice limitele / acoperirea înainte de a revendica această funcție.
+
+Auditul separat al intervalelor prefixelor egale la nivel de octet nu găsește suprapuneri între revendicări.
+El găsește însă **94 de adrese revendicate absente din index** și **139 de limite diferite** la adrese deja
+indexate: 19 corpuri compilate depășesc limita dată de index, iar 120 se termină mai devreme. Exemple:
+Crashpad `DeleteReport`, 0xc9f670, corp de 461 octeți / interval indexat de 74; FreeType `TT_Get_MM_Var`,
+0xbc6ad0, 1.597 / 1.082; `Read@C2SPacket`, 0x146910, 5 / 230. Acesta este un diagnostic al limitelor;
+scorul de mai jos include separat verificarea țintelor de relocare. Datele auditului sunt păstrate în
+`client-src/obj/source-range-audit.json`. Corectarea indexului și evidența acoperirii intervalelor rămân deschise.
+
+**Scor complet final (2026-10-07, `tools/progress.py`, toate sursele recompilate): 17.199 de funcții identice,
+2.942.725 de octeți = 18,48% din cod**, față de 17.080 / 2.926.421 / 18,38% la începutul acestei continuări:
+**+119 funcții, +16.304 octeți**. Cele 16 funcții scrise și încă neidentice au rămas 16; necercetat 78,82%.
+Față de scorul inițial comunicat, 16.806 / 2.884.131 / 18,11%, progresul cumulat este **+393 de funcții,
++58.594 de octeți**. Log: `client-src/progress-2026-10-07-scalars-signed-final.log`.
+Paritatea integrală de sursă rămâne obiectiv activ.
+
+**Continuare (2026-10-07, corpuri complete de cititoare și acoperire pe intervale).**
+
+- `FieldInline.cpp`, generat prin `gen_sources.py FieldInline.cpp`, aduce **17 cititoare de câmp distincte,
+  2.252 de octeți identici**. Citirea unui octet de pe fir este într-un helper `__forceinline bool`; funcția
+  exterioară păstrează rezultatul, codifică octetul din memorie în toate cazurile și întoarce `char`.
+  Sunt extrase separat codificarea de pe fir și codificarea din memorie; poziția actualizării cursorului și
+  tipul u8 / u32 al temporarei de pe fir sunt încercate la compilare. Exemplu: **0x7971e0, 82 octeți**.
+- Emulatorul din `gen_fields.py` tratează acum și **ah / ch / dh / bh**, cu deplasarea de opt biți și
+  păstrarea celorlalți biți ai registrului. În 0x795fb0 și 0x796fc0, `mov dh, 1` salvează rezultatul boolean,
+  iar `dl` continuă să conțină octetul citit. Această instrucțiune bloca anterior extragerea lanțului.
+  Testul verifică separat păstrarea octetului jos și a adresei de ieșire.
+- `tools/gen_packet_multi.py` extrage formatele în ordinea citirii și urmărește adresele de ieșire până la
+  membrii clasei. Toate valorile formatului trebuie explicate și toți membrii trebuie acoperiți o singură dată.
+  `packet_instructions` urmărește ramurile locale și permite intrări fără nume ale indexului în interiorul
+  corpului. Nu intră în funcțiile apelate; funcția numită următoare și limita de 16 KiB delimitează căutarea.
+  Salturile indirecte și ramurile condiționale în afara acestei regiuni rămân nesuportate. Patru teste verifică
+  continuarea peste o limită falsă, apelurile, limitele numite și terminarea buclelor.
+- **S2C_240_Read, 0x89fcb0, 656/656 octeți identici**, în `PacketMultiScalars.cpp`. Corpul include continuarea
+  de la 0x89fde0. Primul format folosește biții 3–5 și membrul de un octet de la +0xa; al doilea folosește
+  biții 0–2 și membrul u32 de la +0xc. Constantele și ordinea ramurilor sunt cele extrase din client.
+  Cititoarele de pe fir sunt 0x7971e0 și 0x79bfd0, cu nume separate pe format și corpuri verificate.
+- Extragerea formatului trebuie să folosească forma helperului `GetBits_91cae0`, desfăcută inline.
+  Expresia directă `(*presence >> 3) & 7` producea `and al, 0x38` și comparații cu valori deplasate;
+  helperul produce `shr al, 3; and al, 7`, identic cu clientul. Pentru membrul u32, `RevPromoted(u32 b)`
+  cu constante unsigned U rezolvă ordinea celor două produse după XOR-ul 0x89. Apelul primește explicit
+  `(u8)x`; operațiile unsigned și byte-ul rezultat păstrează exact permutarea. Toate cele 256 de valori
+  sunt verificate față de definiția inversării biților.
+- **S2C_334_Read, 0x8b1810, 563 de octeți identici**, este rezolvat prin temporara `u32 x` în bucla
+  setterului, cu indexarea tabelei trunchiată explicit la u8. `PacketScalars.cpp` are acum **13 cititoare,
+  5.339 de octeți**. Tipul temporarei contează separat de tipul parametrului helperului de inversare.
+- `FieldFormatAliases.h/.cpp` include și cititoarele cu helper de fir inline; copia pe format cuprinde
+  ambele funcții de sursă, cu numele helperului schimbat consecvent. Sunt **72 de aliasuri**, fiecare cu
+  corpul compilat verificat; rămân marcate `// same:`. Ele nu adaugă funcții distincte la scor.
+- `tools/code_coverage.py` și `progress.py` atribuie acum **intervale de octeți**, în ordinea categoriilor.
+  O continuare complet acoperită nu reapare la codul rămas; un prefix scurt păstrează restul intervalului
+  ca neacoperit. Intervale suprapuse sunt numărate o singură dată și se exclude padding-ul deja exclus de
+  inventarul vechi. Șase teste acoperă corpul 304 + 352, prefixul 5 / 230, funcția absentă din index,
+  suprapunerile și padding-ul. Verificarea binară a funcțiilor și a țintelor rămâne aceeași.
+  Rândurile finale sunt `uncovered (function index entries)` și `all (index + verified code)`; numărul de intrări
+  în index nu este numărul de funcții reale și nu trebuie însumat cu numele reconstruite.
+
+**Verificare:** **1.567 de revendicări și aliasuri** din cititoare, constructori, pachete și șiruri au trecut,
+fără simboluri plasate la adrese diferite. Toate cele **19 teste** au trecut. Cele 22 de cititoare de vectori
+și cele șapte callbacks au rămas identice.
+
+**Încă deschis:** în familia numerică multiplă sunt recunoscute și S2C_192 / 0x88b2a0 (1.045 octeți) și
+S2C_418 / 0x8f4090 (1.071), dar probele diferă în încărcările din stivă, registre și codificare.
+S2C_444 / 0x842b80 și C2S_553 / 0x8db700 păstrează problema ordinii produselor. Variantele cu parametri
+u8 / u32 / unsigned long / int / u64 / referință, valori întoarse u8 / u32 / int, ordine inversată a termenilor
+și temporare mai largi nu au produs potriviri pentru aceste două cititoare. Booleenele S2C_605 / S2C_581,
+enum-ul S2C_179 și formatele cu enum-uri inline, șiruri sau mai mulți octeți de prezență rămân de extins.
+Indexul original nu a fost rescris; acoperirea în octeți este acum raportată separat de limitele sale imperfecte.
+
+**Corecție suplimentară a inventarului de cod:** auditul a găsit un octet verificat exclus de vechea regulă
+pentru padding: **0xcae022**, instrucțiunea `int3` din `logging::LogMessage::~LogMessage`, 0xcade60,
+înaintea instrucțiunii `ud2`. Corpul compilat are 541 octeți și include acest `int3`; nu este padding.
+Inventarul este acum reuniunea intervalelor din index și a corpurilor compilate **complet verificate**, limitată
+la regiunea text cunoscută. Candidații neidentici și formele de bibliotecă nesigure nu extind inventarul.
+Totalul se corectează de la **15.925.651 la 15.925.652 de octeți**. Test separat pentru acest caz.
+
+**Scor complet final (2026-10-07, toate sursele recompilate): 17.218 funcții identice, 2.946.196 de octeți,
+18,50% din inventarul de cod corectat.** Față de începutul acestei continuări: **+19 funcții, +3.471 octeți**.
+Cele 16 implementări încă neidentice au rămas 16 / 2.471 octeți. Restul neacoperit este **12.687.690 octeți,
+79,67%**, în 47.932 de intrări de index care mai au octeți neacoperiți. Acest rest include acum și cozile omise
+de vechiul calcul pe etichete, deci nu se compară direct cu vechiul rând `not looked at` / 78,82%.
+Log: `client-src/progress-2026-10-07-multi-coverage-trap-final.log`. Paritatea integrală de sursă rămâne activă.
+
+**Continuare (2026-10-07, forme de sursă pentru transport și auditul relocărilor).**
+
+- `PacketMultiScalars.cpp` are acum trei cititoare. **S2C_192 / 0x88b2a0: 1.045/1.045 octeți** și
+  **S2C_418 / 0x8f4090: 1.071/1.071** sunt identice. Forma care elimină salvarea și reîncărcarea pointerului
+  de prezență este verificarea spațiului urmată de `const u8* presence = (*cursor)++;`. Copierea pointerului
+  înaintea verificării și avansarea ulterioară prin `*cursor = presence + 1` rămân forma corectă pentru
+  S2C_240. Variantele const, uintptr, void*, signed char*, accesul direct și referința la header nu rezolvau
+  diferența. Generatorul încearcă ambele forme de avansare și verifică rezultatul compilat.
+- `Object2e30e0::IsValid`, **0x2e30e0: 24/24**, compară un singur membru `u64` cu
+  `0x00000000ffffffffULL`. Două comparații C++ între membri u32 produceau 23 de octeți și alte salturi.
+- `Wrapper2df320::Forward`, **0x2df320: 18/18**, primește un `long long` și întoarce referința la datele
+  asociate cheii. Callee-ul 0x2df220 compară cheia pe 64 de biți și întoarce datele nodului de hartă la +0x18.
+  Doi parametri u32, chiar reuniți în corp într-un u64, produceau alt cod; parametrul scalar pe 64 de biți
+  reproduce secvența de apel. Variantele void, int, pointer și referință ale rezultatului au trecut proba;
+  referința este forma păstrată, compatibilă cu datele nodului.
+- `DatagramHandler2e1d70::HandleDatagram`, **0x2e1d70: 42/42**, este metodă de instanță.
+  `HandleAck` / 0x2ed360 și `HandleSeq` / 0x2ee8a0 consumă ECX-ul instanței. Vechea funcție liberă
+  `__stdcall` și helperii liberi produceau alte registre. Metoda citește numărul semnat de 16 biți și
+  întoarce 4 pentru ACK, 0 pentru SEQ și 1 pentru zero.
+- Aliasul **`_ZSTD_isError`, 0xc4c6c0: 14/14**, este verificat în `zstd_common.c`, cu `-O2`.
+  Adresa era revendicată sub numele helperului static `_ERR_isError` din altă unitate. Aliasul funcției
+  publice este susținut acum de corpul ei compilat, iar regenerarea `Zstd.txt` îl verifică și îl păstrează.
+  Astfel `LnpCompression::Compress`, **0x2e2a70: 147/147**, și `Decompress`, **0x2e2020: 99/99**,
+  trec și verificarea țintelor. Aliasul nu numără încă o funcție distinctă.
+- `progress.py --audit <fișier.json>` salvează din aceeași rulare completă sursa, simbolul, RVA-ul,
+  opțiunile de compilare și diferența fiecărei revendicări nereușite. Comanda fără argumente păstrează
+  comparația și scorul obișnuite. Raport: `client-src/progress-2026-10-07-transport-audit.json`.
+
+**Scor complet intermediar (2026-10-07): 17.225 funcții identice, 2.948.642 octeți, 18,52%.**
+Față de 17.218 / 2.946.196: **+7 funcții, +2.446 octeți**, dintre care cinci diferențe vechi închise și
+două cititoare noi. Rămâneau 11 implementări neidentice / 2.153 octeți; neacoperit 12.685.562 / 79,65%.
+Log: `client-src/progress-2026-10-07-transport-final.log`. Auditul local al celor 46 de revendicări relevante
+a trecut pentru 45; `Clone` / 0x2f2780 era singura diferență preexistentă din acest grup.
+
+**Probe nereușite care rămân utile:** `Clone` / 0x2f2780 a fost încercat cu câmpuri u32, pointer, bool,
+pointer de funcție și de membru, variante const și copiere implicită / placement new. Clientul păstrează
+sursa în ESI și byte-ul în CL; probele nu reproduc ambele. `LnpWorker::Post` / 0x2dd220 și 0x2dd2d0 nu
+s-au potrivit prin preîncărcarea proprietarului / ceasului sau schimbarea standardului C++14 / latest.
+Aceste probe nu au înlocuit sursele revendicate.
+
+**Continuare (2026-10-07, constructori reflectați și verificarea corpurilor aliasurilor).**
+
+- Patru inițializări de metadate aveau octeții corecți, dar nu și ținta simbolului `MetaConstruct`:
+  `SkinSummonerEmoteLoadout` / 0x950f0, `RegaliaRankedCrestEntry` / 0x96910,
+  `SpellEffectAmount` / 0xb2d40 și `InputControlSet` / 0xd9100. Adresele constructorilor erau deja
+  revendicate sub nume de bibliotecă; tipurile opace produceau doar un corp de cinci octeți fără inițializare.
+- `SkinSummonerEmoteLoadout`, **0x223dd0: 20/20**, inițializează **primii 40 din cei 80 de octeți**.
+  Constructorul inline cu `std::memset(unknown00, 0, 40)` reproduce două stocări de 16 și una de 8 octeți.
+  Ceilalți 40 nu sunt inițializați. Inițializarea valorică a întregului tip producea un apel memset de 80.
+- `SpellEffectAmount`, **0x509b10: 23/23**, folosește blocul de 28 de octeți; `InputControlSet` și
+  `RegaliaRankedCrestEntry`, **0x24dc80: 53/53**, folosesc șapte membri u32 cu inițializatori zero.
+  Un memset de 28 sau șapte apeluri memset de câte patru erau reunite în instrucțiuni SSE și nu se potriveau.
+- `zero_construct` din `gen_meta.py` acceptă numai încărcarea argumentului în EAX, stocări zero într-un
+  prefix contiguu și un return necondiționat. Respinge goluri, suprapuneri, stocări nenule, apeluri și depășirea
+  mărimii obiectului. Păstrează separat formele cu membri scalari și cu blocuri SSE. Un index care lipește
+  cod după primul `ret` nu extinde acest constructor fără ramuri. Patru teste verifică aceste condiții.
+- Generatorul instanțiază acum **și șabloanele aliasurilor**, apoi compară fiecare corp. Auditul inițial al
+  celor 3.905 aliasuri de șabloane din `MetaFunctions.cpp` a găsit **22 de corpuri neidentice**, ascunse
+  anterior de simpla egalitate a adreselor. Raportul este `client-src/obj/meta-all-alias-audit.json`.
+  Aliasurile care nu trec comparația sunt eliminate; nu sunt declarate identice numai pentru că indexul
+  plasează alt simbol la aceeași adresă. Revendicările `// match:` se verifică în continuare separat.
+- Eliminarea lor a expus 19 inițializări de metadate care depindeau de formele incorecte. Formele de sursă
+  investigate sunt constructorii cu membri scalari, atribuirea separată a valorilor `HashValue` și destructorii
+  care resetează un prefix al obiectului. Atribuirea `member.value = 0` reproduce stocările separate;
+  inițializarea agregată `{0}` producea grupări SSE în `ExtraJointChainData`,
+  `ItemRecommendationOverrideContext` și `ParticleEventDataPair`.
+
+**Rezultatul corecției aliasurilor:** toate cele **3.876 de inițializări revendicate în `MetaClasses.cpp`**
+trec comparația. În `MetaFunctions.cpp`, toate cele **5.770 de revendicări și aliasuri de șabloane** trec
+cu corpuri efectiv instanțiate și compilate. Cele 22 de aliasuri vechi neidentice au fost reparate prin definițiile
+claselor; aliasurile suplimentare încercate și nereușite nu sunt păstrate. Exemple: destructorul care șterge
+primii patru octeți produce **0x127aa0: 11/11**, iar constructorul cu atribuiri separate ale celor trei membri
+produce **0xf1250: 25/25**. Constructorul `DefaultStatModPerkSet` de la 0x1dba10 se termină înaintea
+următorului `push 0x98`, lipit de index; cei patru membri u32 inițializați sunt descriși separat.
+
+O măsurare intermediară după eliminarea aliasurilor greșite, înaintea acestor corecții, a dat
+**17.219 / 2.947.502 / 18,51%**, cu 26 de implementări neidentice. Această scădere a expus revendicările
+dependente și nu a fost ascunsă prin aliasuri noi fără corp. Log: `client-src/progress-2026-10-07-meta-final.log`;
+raport: `client-src/progress-2026-10-07-meta-audit.json`.
+
+**Verificare suplimentară:** toate cele **23 de teste** ale emulatorului de câmp, cititorului COFF,
+fluxului pachetelor, acoperirii și extragerii constructorilor au trecut. Scripturile modificate trec `py_compile`.
+Probe cu `__restrict`, parametru pointer, referință volatile și ipoteze de nealiasare pentru `LnpMessage::Read`
+nu au rezolvat registrele; primele trei rămân la 282/360, iar ipotezele produc un corp mai lung.
+Sursele revendicate nu au fost înlocuite cu aceste probe.
+
+**Scor complet final (2026-10-07, toate sursele recompilate): 17.238 funcții identice,
+2.949.462 octeți, 18,52% din 15.925.652.** Față de începutul acestei continuări,
+17.218 / 2.946.196: **+20 funcții, +3.266 octeți**. Extinderea metadatelor aduce nouă funcții distincte
+de creare / construire, 394 de octeți, și repară cele patru inițializări vechi, 426 de octeți.
+Față de scorul inițial comunicat, 16.806 / 2.884.131 / 18,11%, progresul cumulat este
+**+432 funcții, +65.331 octeți**. Log: `client-src/progress-2026-10-07-meta-verified-final.log`;
+diferențele exacte: `client-src/progress-2026-10-07-meta-verified-audit.json`.
+
+**Cele șapte implementări scrise și încă neidentice, 1.727 octeți:**
+
+- `LnpAppObserver::Update`, 0x2ec600: 509 octeți; cadrul stivei și pozițiile temporarelor diferă.
+- `LnpDatagram::Write`, 0x2efe50: 437; registrele și ordinea actualizării dimensiunii diferă.
+- `LnpMessage::Read`, 0x2dcd40: 360; păstrarea argumentului `previous` ocupă registrul folosit de client
+  pentru dimensiunea bufferului.
+- `LnpWorker::Post1`, 0x2dd220: 172, și `Post2`, 0x2dd2d0: 183; registrele și programarea încărcărilor.
+- `Object2e4990::ReplayApiEnabled` din `Transport_Small.cpp`, 0x2e4990: 35;
+  încărcările argumentelor / registrelor diferă.
+- `ZoneD_Small.cpp`, `Clone`, 0x2f2780: 31 în sursă, față de 35 în client; ESI / CL și ordinea copiei.
+
+Acestea sunt numai diferențele dintre implementările deja revendicate, nu totalul muncii rămase.
+Rândul neacoperit al inventarului este **12.685.168 octeți, 79,65%**, în 47.919 intrări de index;
+acesta se raportează după categoriile de sursă, implementări neidentice și biblioteci. Familiile de pachete
+și formatele încă deschise din secțiunea precedentă rămân de extins. Paritatea integrală de sursă este activă.
+
+**Continuare (2026-10-08, inițializatori scalari, limite după return și constructori implicați).**
+
+- `constant_construct` din `gen_meta.py` extrage stocările de **1, 2 și 4 octeți**, valorile constante
+  și registrele ECX / EDX inițializate explicit la zero. Ordinea, intervalele neinițializate și padding-ul
+  sunt păstrate. Stocările suprapuse, depășirea mărimii, registrele necunoscute, valorile care nu încap
+  și instrucțiunile cu alte efecte sunt respinse. Valorile aflate în intervalul adreselor imaginii sunt
+  excluse: nu sunt tratate ca inițializatori numerici fără obiectul de sursă referit.
+- Pentru tipurile opace fără bază sau metode virtuale, `constant_members` produce membri de mărime
+  și aliniere compatibile cu descrierea. Golurile rămân tablouri de octeți fără inițializatori. Pentru
+  obiecte de trei octeți cu aliniere unu, o stocare de cuvânt este reprezentată prin doi membri u8;
+  un membru u16 ar mări greșit tipul prin padding. Mai întâi se păstrează layout-urile deja cunoscute.
+  Exemple identice: `StealthCharacterFadeInstance` / **0x127e80**, stocări u32 + u16 și doi octeți
+  neinițializați; `SkinEmblem` / **0x223d80**, două valori u32, 0 și 5;
+  `VfxAnimatedFloatVariableData` / **0xa58e90**, valori de lățimi diferite și goluri neinițializate.
+- Prima extindere a adus **51 de funcții distincte noi**, fără eliminarea vreunei revendicări existente.
+  Inițializările și aliasurile sunt instanțiate și comparate, iar probele care diferă sunt eliminate.
+  Enumerarea formelor cu membri implicit inițializați, atribuiri în corpul constructorului sau listă
+  explicită de inițializare este păstrată în `client-src/obj/meta-constant-style-audit.json`.
+- Auditul a găsit corpuri complet identice până la `ret`, respinse fiindcă funcția următoare începea
+  imediat, fără padding și fără intrare în index. Exemple: **0x1dba10, 0x24e1d0, 0x6d0910**.
+  `straight_return` din `match_func.py` dovedește limita numai pentru instrucțiuni de date / stocări
+  acceptate explicit, fără salturi sau apeluri, cu **un singur return la sfârșitul corpului** și cu toate
+  instrucțiunile decodate complet. Codul următor nu poate fi atins din această intrare. Corpurile mai
+  complexe păstrează verificarea veche a limitei. Nu sunt tolerate diferențe de octeți sau de ținte.
+  Trei teste verifică funcții consecutive neindexate, respingerea ramurilor / apelurilor / celui de-al
+  doilea return / instrucțiunilor trunchiate și păstrarea controlului octeților și relocărilor.
+- Această dovadă a permis **încă 13 funcții** în `MetaFunctions.cpp`, inclusiv corpurile de 32 de
+  octeți ale constructorilor reflectați. Indexul nu a fost rescris; acoperirea rămâne calculată pe octeți,
+  deci codul funcției următoare nu este revendicat împreună cu constructorul.
+- **`PersistentEffectConditionData`, `ItemGroup`, `LoLSpellPreloadData`:** forma corectă are membri
+  cu inițializatori, fără constructor declarat separat în header. Compilatorul generează singur
+  constructorul: îl apelează din `MetaCreate`, dar îl desfășoară în `MetaConstruct`. Stocările din
+  constructorul membru și cel de placement trebuie să fie aceleași înainte ca generatorul să aleagă
+  această formă. Încărcarea în EAX a lui `this` este urmărită; modificarea pointerului ECX este respinsă.
+  Corpurile constructorilor separați sunt **0x278c60: 83/83**, **0x2b1c20: 83/83** și
+  **0x510370: 86/86**. Cititoarele de placement sunt **0x26fd80: 85/85**, **0x2a8b40: 85/85** și
+  **0x509700: 88/88**. Toate cele trei `MetaCreate` au rămas **24/24**. Aceste șase corpuri noi aduc
+  totalul acestei extinderi la **70 de funcții, 3.324 octeți**, fără eliminări.
+- **S2C_605_Read / 0x8bc6f0: 265/265** este rezolvat prin extragerea formatului cu helperul inline
+  `Bits`, aceeași formă ca `GetBits_91cae0`. Expresia directă pentru bitul de prezență schimba registrele.
+  Cititorul păstrează copierea pointerului înaintea verificării; setterul folosește limita câmpului și
+  temporara u8. Lanț: ROR 1, inversarea biților, ROR 4, adunare 0x3f, NOT, schimbarea biților vecini.
+  `PacketScalars.cpp` are **14 cititoare**; cele 13 vechi au rămas identice. Generatorul încearcă atât
+  copierea / post-incrementarea cursorului, cât și extragerea directă / helper a formatului.
+  Helperul `Bits` este comun cu generatorul pachetelor cu mai mulți membri.
+
+**Verificare locală:** toate cele **3.876 de inițializări de metadate**, **5.852 de revendicări și aliasuri
+de șabloane / constructori** și **14 cititoare scalare** au trecut: **9.742 în total**.
+Toate cele **30 de teste** ale câmpurilor, COFF / limitelor, fluxului pachetelor, acoperirii și extragerii
+constructorilor au trecut. Scripturile modificate trec și `py_compile`.
+
+**Încă deschis:** S2C_444 / 0x842b80, C2S_553 / 0x8db700 și S2C_581 / 0x8e1220 păstrează ordinea
+inversă a celor două produse ale inversării de biți. Au fost încercate forme cu tipuri de parametri diferite,
+constante signed / unsigned / unsigned long, ordinea inversată a termenilor, inline / forceinline și tipuri
+independente pe cele două produse, inclusiv 64 de biți cu multiplicarea finală unsigned. Aceste probe nu au
+produs potriviri și nu au intrat în sursele revendicate. S2C_581 are acum aceeași mărime, 326, și
+**316/326 de octeți identici** în proba cu helperul de format; diferența începe la +0x10d.
+S2C_179 / 0x868c40 și cititoarele cu enum-uri, șiruri sau mai mulți octeți de prezență rămân de extins.
+Cele șapte diferențe de transport / copiere din secțiunea precedentă sunt încă deschise.
+
+**Scor complet al acestei etape (2026-10-08): 17.309 funcții identice, 2.953.051 octeți,
+18,54% din cod.** Față de 17.238 / 2.949.462: **+71 funcții, +3.589 octeți**. Cele șapte implementări
+scrise încă neidentice au rămas șapte / 1.727 octeți. Inventarul neacoperit are 12.681.579 octeți,
+79,63%, în 47.855 intrări. Log: `client-src/progress-2026-10-08-constants-final.log`;
+raport: `client-src/progress-2026-10-08-constants-audit.json`. Față de scorul inițial 16.806,
+progresul cumulat este **+503 funcții și +68.920 octeți**. Paritatea integrală rămâne activă.
+
+**Continuare în paralel (2026-10-08, contribuția Claude și agenți pe familii separate).**
+
+Utilizatorul a autorizat explicit subagenții și a semnalat modificările făcute cu Claude între timp.
+Auditul a identificat `tools/gen_small.py` și integrarea lui în `gen_sources.py`; sursele Small nu fuseseră
+încă generate. Un agent a executat și verificat generatorul, unul a extins pachetele și unul transportul.
+Fișierele, probele și obiectele de compilare au fost separate; `field_candidates.cpp` nu a fost folosit
+concurent. Scorul complet este rulat separat după stabilizarea surselor.
+
+- Lifterul Claude execută simbolic funcții fără ramuri și scrie C++ pentru încărcări, stocări, apeluri și
+  rezultat. Numele și tipurile originale nu sunt cunoscute: `K<rva>` / `k<rva>` / `T<rva>` / `t<rva>`
+  și globale `g_<va>`. Nu încorporează octeți de mașină sau assembly. Formele neacoperite de model și
+  corpurile care nu ies identic sunt excluse. Scannerul este executat o singură dată pentru 23 de shard-uri.
+- Auditul local inițial al `Small_*.cpp` găsește **4.181 funcții / 119.377 octeți**, recompilate și
+  comparate. În plus față de verificatorul comun, `lifted_targets_match` verifică explicit RVA/VA din
+  numele generate, inclusiv țintele fără nume și cele absente din index. O probă negativă respinge o
+  țintă deplasată cu un octet. Nu există conflicte între țintele relocărilor din shard-uri. Aceste numere
+  sunt locale, înaintea deduplicării și verificării integrării globale. Zona 0x2d0000–0x2f3000 a fost
+  rezervată agentului transport; 26 de candidați au fost excluși din shard-uri pentru a nu suprapune munca.
+- Integrarea a expus identități ABI care nu trebuie tratate ca simple etichete: `operator new`,
+  0x9bb8d0, fusese ridicat ca `k9bb8d0`; apelurile C++ existente `??2@YAPAXI@Z` au rămas identice
+  în octeți, dar au fost respinse la verificarea țintei. Definițiile reale new/delete sunt reconstruite
+  cu ABI-ul standard și corpuri compilate identice, înainte de regenerarea metadatelor. Verificarea
+  țintelor nu este slăbită și un alias nu este acceptat fără corp verificat.
+- Transportul aduce **7 funcții / 581 octeți**: CRC `Add(const u32&)`, **0x2d2cf0: 108**;
+  notificarea observatorului, **0x2ea530: 41**; temporizarea peer-ului, **0x2edca0: 93**;
+  jurnalul de canal, **0x2ec560: 151**; `_Find_lower_bound<u8>`, **0x2d3e20: 73**;
+  `std::set<u8>::clear`, **0x2d02b0: 67**; invocarea delegate-ului, **0x2f27d0: 48**.
+  Toate sunt verificate inclusiv la ținte. `template class std::set<u8>;` în aceeași unitate păstrează
+  helperul separat și reproduce forma jurnalului; `find` / `count` fără instanțiere desfășurau prea mult
+  cod. Jurnalul alege textele ` reliable` / ` unreliable` și ` ordered` / ` unordered`.
+  La temporizare, pointerul `inner` este păstrat local, cu ordinea state=2, time=now+timeout, byte=value.
+  Delegate-ul primește trei referințe de 64 de biți și una de 32; callback-ul primește valorile copiate.
+- Două apeluri vechi din 0x2ee180 și 0x2ee2f0 au fost corectate să folosească funcția liberă reală
+  `k353670`, identificată de noile surse, în locul unui `GetTarget` presupus membru. Ambele rămân
+  **21/21**. Thunk-urile 0x2edc90 / 0x2efcb0 sunt identice în octeți în probe, dar țintele contrazic
+  etichetele existente ale thread-urilor; nu sunt revendicate.
+- **S2C_734 / 0x8bf6c0: 545/545**. Cazul format=1 stochează valoarea din AL, păstrată de la
+  comparație; `constant_store` urmărește acum această valoare și respinge operațiile care o modifică.
+  Cititorul păstrează patru nume separate de format, cu corpuri verificate la 0x796de0; reutilizarea
+  unui singur nume producea 506 octeți. Aliasurile au crescut de la 72 la **80**, iar cititoarele de
+  la 14 la **15**, cu toate cele vechi păstrate. Audit local **95/95**; patru teste noi trec.
+  **S2C_732 / 0x88f070** este clasificat, dar încă neidentic: 605/615 octeți, prima diferență +0x7f,
+  ordinea produselor din inversare numai în prima ramură. Celelalte trei ramuri se potrivesc.
+- Constructorii cu blocuri SSE și membri scalari / padding păstrat sunt extinși separat. Probele cu
+  agregatele `Vector4`, `Vector2`, `Vector3` reproduc **VfxAnimatedColorVariableData / 0xa577f0: 76/76**,
+  **VfxAnimatedVector2fVariableData / 0xa59100: 77/77** și
+  **VfxAnimatedVector3fVariableData / 0xa59470: 84/84**. `Vector3` grupează stocările zero 8+4 și
+  schimbă ordinea XORPS / XOR ECX față de Vector2 + u32. Alegerea se verifică prin compilare.
+
+Dovezi locale ale agenților: `client-src/obj/agent_small_audit.json`,
+`agent_transport_audit.json`, `agent_packet_final_audit.json`. Rezultatele locale nu înlocuiesc scorul global.
+
+**Integrare ABI (2026-10-08).** `gen/OperatorAllocation.cpp` definește 14 operatori reali,
+verificați separat, la șase adrese: new/new[] **0x9bb8d0: 5**, nothrow new **0x9bb8e0: 13**,
+aligned new **0x9bb8f0: 54**, delete **0x9bb930: 5**, sized delete **0x9bb940: 11**,
+aligned / sized+aligned delete **0x9bb950: 18**. Sunt verificate și variantele array / sized+aligned,
+inclusiv ABI-ul folosit de `LnpQueue`. Țintele sunt `Pool_Alloc` / `Pool_Free`. Alegerea ternară a
+alinierii minime produce corpul corect; forma cu if producea 54 de octeți, dar numai 40 identici.
+Lifterul exclude permanent aceste adrese de operatori din numele sintetice și păstrează ABI-ul real
+pentru apeluri. EAX după delete este invalidat; două destructoare aveau un retur int fictiv provenit
+din registrul rezidual și au fost corectate la void, cu aceiași octeți. Patru apeluri afectate se regenerează
+identic. Totalul local actual este **4.180 Small +6 operatori, 119.478 octeți**.
+
+**Constructori cu ABI real (2026-10-08).** `tools/gen_meta_ctors.py` și `gen/MetaConstructors.cpp`
+reconstruiesc constructorii declarați în `BinClasses.h` din corpurile Small deja verificate, cu numele
+C++ `Class::Class()`. Return-ul sintetic al lui this este înlocuit de semantica constructorului C++;
+se verifică toate instrucțiunile și țintele produse de compilator. O apelare Small spre constructorul
+bazei este eliminată numai dacă receiverul și RVA-ul sunt exact constructorul declarat al bazei,
+deoarece C++ efectuează acel apel implicit. **99 de ABI-uri la 98 de adrese, 14.710 octeți**, trec
+compilarea și comparația finală, inclusiv **StatStoneSet::StatStoneSet(), 0x255f60: 117/117**.
+Aceste corpuri susțin efectiv aliasurile constructorilor și repară apelurile metadatelor către ei;
+adresele sunt deja acoperite de Small și nu se numără de două ori.
+
+**27 de constructori încă respinși:** de regulă baza are un constructor implicit în header, iar
+compilatorul emite o stocare de vptr înaintea apelului Small explicit, care o face observabilă.
+Ordonarea topologică a definițiilor nu elimină problema. `MapSpotlight` poate reproduce 82/82 octeți
+prin apelul implicit spre ancestor, dar constructorul `MapProjectedTexture` nu are încă un corp C++
+verificat la 0xac8330, astfel ținta rămâne respinsă. Aceste cazuri nu sunt mascate prin aliasuri.
+Raport: `client-src/obj/agent_ctor_audit.json`. Constructorii bazelor abstracte, ai căror callbacks de
+creare / placement sunt null, trebuie identificați și definiți din apelurile descendenților.
+
+**Verificare:** toate cele **36 de teste** locale au trecut după integrarea pachetelor și constructorilor
+mixt scalar / SSE; scripturile modificate trec `py_compile`.
+
+### 2026-10-08 — integrarea finală a lucrului în paralel
+
+Auditul complet intermediar `client-src/progress-2026-10-08-parallel-audit.json` a măsurat
+**20.678 funcții identice / 2.969.087 octeți / 18,64%**. A expus **782 funcții neidentice**,
+deși majoritatea au aceiași octeți: noile corpuri Small au făcut verificabile ținte care înainte
+nu aveau nume reconstruit. **740** erau inițializatori de metadate. Acest scor este intermediar;
+rezultatele de mai jos se verifică din nou împreună, fără relaxarea comparației de ținte.
+
+- Constructorii bazelor abstracte sunt identificați și declarați: **BaseLoadoutData / 0x22f580:
+  140/140**, **TftCutsceneClip / 0x557440: 30/30**, **MapPlaceable / 0xa22bb0: 54/54**.
+  `gen_meta_ctors.py` păstrează toate cele 99 de ABI-uri anterioare și publică acum **111 ABI-uri
+  la 110 adrese, 16.118 octeți**. Cele 12 noi sunt cele trei baze și nouă descendenți:
+  MapDynamicPointLight, MapProjectedTexture, MapSpotlight, TFTDamageSkin, TftCutsceneCamLerpClip,
+  TftCutscenePostFxClip, TftCutsceneUiToggleClip, TrophyData și TrophyPedestalData.
+  `MapSpotlight` este rezolvat: **82/82**, inclusiv constructorul bazei.
+  Nu este necesar `noinline`: 105 corpuri sunt compilate împreună, iar șase în module
+  `MetaCtorCalls_*.cpp` separate, când clientul păstrează apelul spre bază. Mai sunt **17**
+  constructori candidați respinși. Dovezi: `agent_ctor_audit.json`, `agent_ctor_parent_probe_audit.json`.
+- `gen_meta_small.py` reconstruiește **188 specializări** reale ale callback-urilor:
+  69 destructori care invocă `T::~T`, 12 callbacks goale dovedite și 107 callbacks care invocă
+  `ViewController::PostLoad`. Metoda comună **0xaefdb0: 39/39** este compilată separat, fără
+  `noinline`; sunt dovedite globalul **0x36f6118** și apelurile **0xab1550 / 0xaf37c0**.
+  Cele două servicii apelate au ABI declarat, dar corpuri încă nereconstruite.
+  Auditul izolat recuperează **152/740 inițializatori, 28.998 octeți**. Restul de 588 necesită
+  constructori/destructori autentici; scrierea manuală a unui vptr în obiecte polimorfe opace nu
+  este acceptată ca reconstrucție de lifetime C++. `gen_meta.py` exclude instanțierile explicite
+  deținute de alte module, iar generatorul păstrează și reverifică specializările deja publicate.
+- `ZoneB_Small.cpp` și `ZoneD_Small.cpp`: **48/49** trec. Sized delete și cele trei aligned delete
+  folosesc suprasarcinile C++ reale, iar Clone / 0x2dbff0 folosește `::operator new(8)`.
+  Destructorul / 0x2dad60 apelează corpul reconstruit `K9baf90::f`. Problema veche
+  Clone / **0x2f2780** rămâne. Dovadă: `agent_transport_delete_audit.json`.
+- Cele două pachete **0x834580 / 0x8348b0: 197/197 fiecare**, inclusiv țintele. Headerul comun
+  `FieldObjectAliases.h` definește obiectul de 48 de octeți, vectorul de 12 și elementul de 208.
+  Asignarea reală C++ a obiectului este **0x7ec350: 77/77**, cea a vectorului **0x7eadb0: 161/161**.
+  Vectorul distruge prin slotul virtual 3, respectă flagul de memorie externă și reconstruiește
+  elementele prin constructorul de copiere de la **0x7b89e0**, încă fără corp reconstruit.
+  Corpul typed al obiectului înlocuiește proprietatea Small la 0x7ec350; vectorul adaugă o adresă
+  verificată nouă. `gen_fields.py` include declarația comună la regenerarea PacketVectors.
+  Audit local: **31/31** (`agent_transport_fieldobjects_audit.json`).
+- API-urile bibliotecilor sunt păstrate prin compilarea surselor originale și verificarea propriilor
+  corpuri, inclusiv când adresa nu apare în inventarul de adrese unice. **ENGINE_get_id,
+  EVP_PKEY_id și CTLOG_get0_name: 0x129c80, 7/7 fiecare**; **PKCS12_PBE_add: 0xecb40, 3/3**;
+  transportul Sentry dezactivat **sentry__transport_new_default: 0xe8b80, 3/3**.
+  Acestea repară apelurile din curl, SCT_LIST_print și sentry_options_new.
+  Constructorii de bibliotecă care depind de `OPENSSLDIR` nu sunt revendicați prin aliasul getterului;
+  compilarea fișierului CT folosește valoarea din Makefile-ul original VC-WIN32.
+- Aliasul C **free / 0x9bb930: 5/5** are corp real care delegă la Pool_Free, la fel ca ordinary
+  operator delete; repară destructorul unique_ptr din crashpad / **0xca2140: 14/14**.
+  Thunk-ul **_stricmp / 0x9ae430: 5/5** transmite ambii pointeri către CRT / 0xf72224.
+  Corpul CRT citește bytes, convertește A–Z cu +0x20 și delegă la _stricmp_l când locale-ul este
+  activ; eticheta ambiguă `wcsicoll` din inventar nu descrie acest corp. Thunk-ul typed înlocuiește
+  forma Small fără parametri și repară **ReplicationTable::Register / 0x19ccc0: 149/149**.
+  Dovadă: `root_parallel_integration_audit.json`.
+
+**Verificare:** toate cele **40 de teste** locale trec; `py_compile` trece pentru generatoarele și
+verificatoarele modificate. Scorul complet după integrare se păstrează separat în
+`client-src/progress-2026-10-08-parallel-integrated.log`, cu eșecurile exacte în JSON-ul omonim
+`-audit.json`. Paritatea integrală nu este atinsă; scorul se raportează numai după terminarea acelui proces.
+
+### 2026-10-08 — ABI placement void, șiruri și referințe UI cu lifetime real
+
+**Descoperire ABI:** `MetaClass::ConstructFn` și `MetaConstruct<T>(void*)` returnează **void**.
+La **0x188980**, construirea unui obiect cu șir de 12 octeți și scalar de 4 produce **33/33**
+cu `new (p) T;`. Forma `return new (p) T;` produce 34 de octeți și numai 16 identici: forțează
+pointerul obiectului în EAX, în timp ce clientul lasă pointerul șirului gol în EAX și folosește ECX
+pentru obiect. Valoarea reziduală din EAX nu este rezultatul callback-ului.
+Auditul izolat al tuturor formelor placement deja publicate păstrează **1.010/1.010** corpuri cu
+semnătura void (`client-src/obj/root_meta_void/audit.json`). Headerul, generatoarele, instanțierile
+și simbolurile sunt actualizate împreună. Rapoartele istorice cu vechiul simbol sunt convertite
+la ABI-ul actual de `gen_meta_small.py`, fără a relaxa verificarea codului.
+
+**Șiruri reale:** `MetaString` păstrează tagul de reflecție și folosește reprezentarea / lifetime-ul
+deja verificat al `RString`, de 12 octeți. `simple_layout` recunoaște acum code=0x10.
+`create_stores` urmărește încărcarea pointerului gol de la **0x1b467f0** prin ECX/EDX;
+pointerul runtime nu este înlocuit cu o constantă. Alte globale sunt respinse.
+În clasele complet descrise cu primul membru string, destructorul implicit distruge membrul real,
+în locul declarației externe presupuse a unui destructor al clasei la adresa lui RString.
+În probe, **CompanionSpeciesData, EsportsBannerData, HudOptionalBinData, OptionItemDropdownItem,
+ShaderLogicalParameter, SkinCharacterMetaDataProperties_SpawningSkinOffset, TftMapGroupData**
+au fiecare placement **0x188980: 33/33** și destruct **0xf1700: 9/9**.
+`gen_meta_ctors.py` elimină din candidat numai grupul exact de trei stocări de default string
+deja efectuate de un membru MetaString declarat, inclusiv moștenit. Corpul final se recompilează
+integral înainte de alias. Toate cele **111 ABI-uri / 110 adrese / 16.118 octeți** sunt păstrate;
+TftCutsceneArenaIntroInitializer, TftCutsceneCamVfxClip și TftCutsceneObjVfxClip rămân identice
+după introducerea membrilor string reali. Numele reflectate care sunt cuvinte-cheie C++, de exemplu
+`register`, sunt escapate numai în identificatorul membrului; hash-ul metadatelor rămâne cel original.
+
+**Referințe UI:** `gen_ui_refs.py` și manifestul `tools/ui_ref_layouts.json` reconstruiesc
+**52 layout-uri**: 51 tipuri cu callbacks comune și baza necesară RadialMenuButtonDefinitionBase.
+La fiecare regenerare se verifică mărimea, alinierea, părintele, numele/hash-urile/offseturile
+membrilor și forma integrală a callback-ului. Moștenirile RadialMenuHoverButtonDefinition și
+SpellSlotSimpleUiDefinition sunt păstrate; link-ul runtime nereflexat al celui din urmă, la +0x60,
+nu este inventat ca membru în metadate. Padding-ul și cozile încă neidentificate rămân opace.
+
+`UiHashLink` are 24 de octeți: prefix de 12 și referință polimorfă de 12.
+Starea referinței este o bază nepolimorfă de 8 octeți, astfel C++ inițializează control/active
+înainte de vptr, conform clientului; două membre directe pe clasa virtuală dau altă ordine.
+**UiResourceReference::~UiResourceReference / 0xae14d0: 79/79**; destructorul deleting
+**0x31e950: 32/32**; **UiHashKey::UiHashKey / 0x9ba240: 23/23**.
+Vtable-ul de **4 octeți / un slot**, la **0x1afb9bc**, este verificat explicit în COFF și client;
+weak extern vector-deleting `_E` are fallback către scalar-deleting `_G`, nu către alt corp.
+TU-ul nativ folosește **-O2 -std:c++17 -Ob1 -GR-**, păstrând apelul destructorului de 79 de octeți
+din wrapperul deleting. Sunt verificate explicit globalul **0x37252f0**, metoda registrului
+**0xafd340**, apelul virtual slot 27 și sized delete **0x9bb940**.
+Corpul metodei registrului și celelalte metode ale resursei rămân nereconstruite.
+
+**52/52 MetaDestruct** compilează prin distrugerea subobiectelor reale, cu cinci RVA-uri primare:
+**0x5b7660: 12**, **0x576830: 22**, **0x576390: 30**, **0x5766e0: 38**, **0x576510: 46**.
+`UiResourceRefCallbacks.cpp` deține aceste corpuri; variantele folded au fiecare propriul corp
+compilat și verificat. Nu există specializări duplicate în MetaFunctions / MetaSmallTemplates.
+Constructorii reali ai **AbilityPrompt / 0x710d60: 82/82** și
+**CooldownEffectUiData / 0x586c00: 122/122** folosesc inițializarea implicită a membrilor.
+Primul scrie numai byte-ul +0x30 și DWORD-urile +0x34/+0x38, prin operații legale pe bytes;
+padding-ul +0x31..+0x33 este păstrat neinițializat. Nu se scrie manual niciun vptr.
+
+**Lifterul consumă ABI-ul real:** destructorul 0xae14d0 este thiscall, fără argumente pe stivă,
+cu rezultat void. EAX este invalidat după apel; vechile return-uri int din registrul rezidual
+sunt eliminate. Apelul este calificat `p->UiResourceReference::~UiResourceReference()`, necesar
+pentru apel direct: forma necalificată face dispatch virtual și nu reproduce clientul.
+Patru sharde Small sunt regenerate; **780/780** corpuri trec inclusiv țintele. Cele patru vechi
+revendicări Small ale callback-urilor comune sunt înlocuite de cele C++ typed; nu se dublează
+acoperirea. Sunt recuperate separat **11 wrapperuri / 186 octeți**:
+0x5763d0, 0x5b79c0, 0x612cb0, 0x612f50, 0x6131f0, 0x64ba90, 0x697170, 0x697e90,
+0x6db300, 0x70b7d0 și 0x74bd70.
+
+După toate aceste integrări: **MetaFunctions are 1.933 revendicări template verificate**, iar
+**MetaSmallTemplates 196 specializări verificate, la opt RVA-uri**. Generatorul MetaClasses
+păstrează toate cele **3.876 funcții de inițializare/teardown** ale obiectelor de metadate,
+inclusiv candidații cu bindings încă nerezolvate. Eliminarea unui initializer nevalidat elimina
+și teardown-ul deja identic și definiția globalului; această reducere a sursei nu rezolvă callback-ul.
+Auditul local păstrează și raportează explicit **496 inițializatori încă neidentici**.
+
+Dovezi: `root_strings_layout_probe.json`, `agent_ctor_audit.json`,
+`agent_meta_small_ui_native_final_audit.json`, `agent_meta_small_ui_callbacks_final_audit.json`,
+`agent_meta_small_ui_constructors_final_audit.json`, `agent_transport_ui_small_audit.json`, în
+`client-src/obj/`. **53 de teste trec**, inclusiv cazurile negative pentru proveniența pointerului
+gol, inițializările string complete și ABI-ul destructorului; `py_compile` trece.
+Scorul complet al acestei stări este în `client-src/progress-2026-10-08-native-lifetimes.log`,
+cu lista exactă a eșecurilor în `progress-2026-10-08-native-lifetimes-audit.json`.
+
+**Scor complet verificat, după integrare (2026-10-08):**
+
+| Categorie | Funcții / intrări | Octeți | Din cod |
+|---|---:|---:|---:|
+| Sursă recompilată identică | **21.038** | **3.017.660** | **18,95%** |
+| Sursă încă neidentică | 503 | 60.018 | 0,38% |
+| Biblioteci, adresă unică | 1.240 | 215.817 | 1,36% |
+| Forme de bibliotecă la mai multe adrese | 450 | 73.466 | 0,46% |
+| Neacoperit, intrări de index | 43.636 | 12.558.691 | 78,86% |
+| Inventar complet | 66.825 | 15.925.652 | 100% |
+
+Față de punctul transmis în chat, **16.806 funcții / 2.884.131 octeți / 18,11%**, creșterea
+verificată este de **4.232 funcții, 133.529 octeți și 0,84 puncte procentuale**.
+Față de auditul complet intermediar de integrare, 20.881 funcții / 3.004.490 octeți,
+starea finală adaugă **157 funcții / 13.170 octeți**. Acest scor este cel efectiv din procesul
+complet, nu suma probelor și nu numărul de aliasuri.
+
+Cele **503** eșecuri sunt **496 inițializatori MetaClasses** cu callbacks încă nereconstruite
+și cele **șapte probleme preexistente**: LnpAppObserver / 0x2ec600, LnpDatagram / 0x2efe50,
+LnpMessage_Read / 0x2dcd40, LnpWorker_Post / 0x2dd220 și 0x2dd2d0,
+Transport_Small / 0x2e4990, ZoneD_Small / 0x2f2780. Niciun modul Small, PacketVectors,
+operator de alocare sau wrapper de bibliotecă verificat nu mai eșuează în acest audit.
+Paritatea 100% rămâne obiectivul; cei 12.558.691 de octeți neacoperiți și bindings-urile rămase
+nu sunt declarați finalizați. Procesul scorului s-a terminat cu exit code 0.
+
+### 2026-10-08 — instrumente externe instalate și probate pe client
+
+La cererea de a căuta instrumente și skill-uri mai puternice, s-au verificat
+sursele upstream și s-au instalat **Ghidra CLI 0.2.2**, skill-ul său,
+**objdiff 3.8.2**, **PyGhidra 3.1.0** și **Z3 4.15.4**. Ghidra 12.1.4,
+JDK 21 și proiectul BA13 existau deja și sunt reutilizate. Hash-urile release-urilor,
+sursele, comenzile și limitele sunt în [RECONSTRUCTIE_TOOLING.md](RECONSTRUCTIE_TOOLING.md).
+
+`tools/ghidra_cli.py` oferă acces JSON la decompilerul persistent.
+`tools/ghidra_inspect.py` exportă în lot decompilări, instrucțiuni, apeluri și P-code,
+verificând fiecare instrucțiune față de imaginea clientului.
+`tools/re_tooling_probe.py` verifică **36/36 bytes** Replay / 0x2e4990 și apelul
+0x996470, apoi reconstruiește temporar funcția placement / 0x188980 și structura
+de 16 bytes. Tiparea produce câmpurile data/size/capacity/value și ABI-ul void cdecl;
+funcția și tipul temporare sunt eliminate și rollback-ul este verificat.
+Z3 trece cazul pozitiv și găsește contraexemplul signed division vs arithmetic shift.
+
+objdiff citește efectiv obiecte **MSVC COFF x86**; diferența dintre profilele Replay
+de 36 și 35 bytes apare explicit în instrucțiuni, cu similaritate 87,69231%.
+Comanda `function calls` din Ghidra CLI 0.2.2 întoarce incoming în proba reală;
+wrapperul o respinge, iar exportatorul extrage outgoing direct din referințele CALL.
+Comparația objdiff nu înlocuiește dovada candidat-vs-client din `match_func.py`.
+Nu s-a rulat un nou scor complet pentru această adăugare de infrastructură.
+
+### 2026-10-08 — constructori UI, perechi de chei și containere cu lifetime real
+
+Generatorul `gen_ui_refs.py --constructors` reconstruiește **33 de constructori
+reflected UI / opt RVA-uri / 985 bytes**, verificând fiecare corp și țintele lui.
+Față de cele două entry points anterioare, cele șase corpuri native suplimentare
+au **781 bytes**. Tail-urile opaque folosesc numai stocările observate; padding-ul
+dintre byte-ul AbilityPrompt +0x30 și DWORD-ul +0x34 rămâne neinițializat.
+Membrul **HudItemShopItemDetailsDefinition.ClickData / +0x78** are lifetime-ul
+UiHashKey real și este verificat prin metadate și apelul constructorului 0x9ba240.
+`UiHashKey.hash` este HashValue, fără schimbarea corpului nativ de **23 bytes**.
+
+**JunglePathRecommendations, PerkReplacement, RecSpellRecommendations,
+SummonerSpellPerkReplacement** au două chei de 12 bytes la +0 și +0xc.
+`hash_pair_layout` cere cele două câmpuri reflectate HashValue, mărimea/alinierea,
+lipsa părintelui și forma integrală a placement-ului și a constructorului cheii.
+Cb-urile C++ sunt **MetaConstruct / 0xf1200: 21**, **MetaCreate / 0xf11d0: 40**,
+**MetaDestruct / 0xecb40: 3**; aliasurile folded au corpuri proprii compilate.
+
+Primul audit complet al acestui lot (`progress-2026-10-08-ui-hash.log` și auditul
+omonim) are **21.049 funcții / 3.018.916 bytes / 18,96%**. Cele **3.871** de
+amprente SHA256 ale intrărilor urmărite sunt neschimbate pe durata măsurării.
+Față de auditul native-lifetimes: **+11 funcții / +1.256 bytes**, cinci eșecuri
+vechi dispar. Un apel Small la constructorul recuperat 0x5894b0 devine însă
+explicit nevalidat: 0x64c470 numea un `K5894b0::f` int fără implementare proprie.
+
+Acest apel este corectat prin **UiHashLinkTriple**, cu trei subobiecte UiHashLink.
+Constructorul său de **93 bytes / 0x5894b0** este verificat ca alias real, în TU-ul
+constructorilor UI. Lifterul produce două placement new pentru callback-ul
+**0x64c470: 21/21**, cu rezultat void; EAX rezidual nu devine contract C++.
+Sunt astfel **34 de definiții native de constructor**, incluzând helperul, la
+aceleași opt adrese. `Small_5e0000.cpp` păstrează **166 de corpuri verificate**.
+
+`gen_reflected_buffers.py` și manifestul `reflected_buffer_layouts.json` introduc
+**ReflectedBuffer<E>**: pointer, count u32, capacity signed, în total 12 bytes.
+Destructorul încheie lifetime-urile elementelor înaintea deallocării; bitul de
+semn din capacity suprimă numai deallocarea. Tipul runtime este separat de tag-ul
+serializat existent. Variantele respinse nu primesc un layout nou.
+
+Sunt publicate **25 de layout-uri / 100 de callback-uri C++ verificate** în
+`ReflectedBufferCallbacks.cpp`, inclusiv liste cu MetaString, UiHashKey, UiHashLink,
+elemente embedded deja definite și trei perechi de scalari pentru map-uri.
+Tail-urile scalare sunt inițializate din stocările complete observate, iar cele
+neidentificate rămân opaque. Toate relocările directe sunt verificate explicit.
+Nu se revendică încă implementarea constructorului extern **0x6582d0** pentru
+LoadingScreenSummonerNameData și LoadingScreenSummonerTitleData: cele două wrappers
+stabilesc exact acest target și ABI-ul thiscall, iar corpul său cu conversii
+`cvtss2si` ale culorilor rămâne de reconstruit. Nu se publică un alias de corp
+pentru această declarație externă. Cele patru callback-uri ale fiecărui owner
+sunt recompilate și verificate separat.
+
+Auditul intermediar cu primele 13 containere (`progress-2026-10-08-reflected-buffers`)
+are **21.048 funcții / 3.018.422 bytes / 18,95%**, cu **506 eșecuri**.
+Publicarea celor șase corpuri native făcea explicit nevalidate opt inițializări
+care numeau alte instanțieri la aceleași adrese; nu s-a relaxat matcherul și nu
+s-au adăugat aliasuri fără corp. Layout-urile și lifetime-urile celor opt owners
+au fost reconstruite în extensia de 25 de clase, iar verificarea completă a
+închiderii dependențelor se păstrează în `progress-2026-10-08-buffer-closure`.
+
+Probele celor 25 de clase sunt în `root_reflected_buffer_audit.json`; **32 de
+candidați** cu alte forme rămân respinși. **111 constructori reali / 110 RVA-uri /
+16.118 bytes** ai generatorului MetaConstructors rămân verificați după integrare.
+**61 de teste trec**, inclusiv respingerea extinderilor de obiect, a metadatelor
+schimbate și a callback-urilor lipsă. Proba celor șase funcții de rețea cu patru
+profile de compilare, în `root_network_profiles_audit.json`, dă **0/24** potriviri
+integrale; schimbarea profilelor nu rezolvă acele surse.
+
+Noua opțiune PyGhidra `--verified-abis` corectează temporar ABI-uri native și
+override-uri CALL_RETURN greșite, păstrând tail calls JMP. Destructorul de listă
+UI **0x613110** era decompilat ca o ramură cu ieșire imediată, din cauza adnotării
+noreturn a lui 0xae14d0. După corecție, bucla și ownership guard-ul sunt prezente;
+**57 bytes** sunt verificați față de imagine, iar wrapperul 0x64c470 rămâne de
+**21 bytes**. Schimbările în BA13 sunt eliminate prin rollback.
+
+**Audit complet după închiderea dependențelor, 2026-10-08:**
+
+| Categorie | Funcții / intrări | Bytes | Din cod |
+|---|---:|---:|---:|
+| Sursă recompilată identică | **21.067** | **3.019.945** | **18,96%** |
+| Sursă încă neidentică | 498 | 59.563 | 0,37% |
+| Biblioteci, adresă unică | 1.240 | 215.817 | 1,36% |
+| Forme de bibliotecă la mai multe adrese | 450 | 73.466 | 0,46% |
+| Neacoperit, intrări de index | 43.611 | 12.556.861 | 78,85% |
+| Inventar complet | 66.825 | 15.925.652 | 100% |
+
+Procesul `progress-2026-10-08-buffer-closure` s-a terminat cu **exit code 0**.
+Cele **3.873 amprente** ale intrărilor urmărite sunt neschimbate pe durata acestui
+audit. Față de native-lifetimes, rezultatul este **+29 funcții / +2.285 bytes**;
+nu există eșecuri noi. Dispar Replay / 0x2e4990 și patru inițializări de metadate
+la 0x894e0, 0x94a80, 0xa9940, 0xa9c20. Toate cele opt bindings puse în evidență
+de auditul intermediar sunt recuperate, inclusiv cele două clase de culori.
+Rămân **492 inițializări MetaClasses** și cele **șase probleme de rețea preexistente**.
+Constructorul 0x6582d0, containerele respinse și corpul complet al executabilului
+rămân deschise; acest audit nu dovedește paritatea integrală a fișierului .exe.
+
+
+## 2026-10-08 — constructori de culori și lifetime-uri Font/Jungle/TFT/Cursor
+
+Constructorul comun **RVA 0x6582d0** este acum o implementare C++ reală pentru
+LoadingScreenSummonerNameData și LoadingScreenSummonerTitleData: **111/111 bytes**,
+cu toate cele șapte relocări float la adresele native. `gen_reflected_colors.py`
+publică `ReflectedColorConstructors.cpp` numai după proba ambelor corpuri.
+Argumentul blue al constructorului delegat se evaluează înaintea inițializării
+bufferului. `_mm_cvtss_si32` păstrează conversia rotunjită după MXCSR; un cast
+obișnuit ar produce conversie cu trunchiere. Profilul măsurat este
+`-O2 -std:c++17 -d2SSAOptimizer-`: profilul SSA implicit dă 109 bytes și alte registre.
+Alpha este convertit de două ori, conform clientului.
+
+`gen_reflected_buffers.py` verifică acum și destructorii reali defaulted într-un
+TU separat, înainte să permită binding-ul callback-urilor la ei. Rezultatul este
+**29 owners / 116 callback-uri**, plus trei corpuri în `ReflectedBufferNative.cpp`:
+
+| Metodă | RVA | Bytes identici |
+|---|---:|---:|
+| FontType::~FontType | 0x2338b0 | 70/70 |
+| HeroFloatingInfoIconsData::~HeroFloatingInfoIconsData | 0x58ac50 | 71/71 |
+| TftMapItemList::~TftMapItemList | 0x558de0 | 70/70 |
+
+FontLocaleType are trei MetaString la 0, 12 și 24; TftMapItemData are strings
+la 0, 12 și 28, cu itemID la 24. JungleLocationMapInformation are MetaString
+name la 0, Vector3 la 12 și două u8 la 24/25. CursorData are Vector2 la 0 și
+patru MetaString la 8/20/32/44. `gen_reflected_lifetimes.py` și manifestul
+`reflected_lifetime_layouts.json` păstrează metadatele și corpurile native complete;
+`ReflectedElementLifetimes.cpp` verifică opt callback-uri de distrugere și cele
+ două de creare/placement Jungle. Destructorul Jungle este implicit și distruge
+stringul real; nu mai este un alias artificial al unei clase la RString.
+
+Constructorii Jungle folosesc obiectul Vector3 global de 12 bytes zero la
+**VA 0x3715f70**, nu o inițializare scalară substituită. Această formă dă
+**MetaCreate 0xf1650: 71/71** și **MetaConstruct 0xf16c0: 53/53**, inclusiv ambele
+referințe la global. Index și Location sunt zero; padding-ul final nu este scris.
+
+Cele două contexte Cursor sunt **tablouri fixe CursorData[7] și CursorData[3]**,
+cu sizeof 392 și 168. Tag-ul de listă din reflecție nu dovedește reprezentarea
+runtime cu pointer/count/capacity: proba tuturor callback-urilor respinge acea formă.
+`gen_cursor_arrays.py`, `cursor_array_layouts.json`, `CursorArrayNative.cpp` și
+`CursorArrayCallbacks.cpp` publică cinci metode și opt callback-uri verificate:
+
+| Metodă | RVA | Bytes identici |
+|---|---:|---:|
+| CursorData::CursorData defaulted, Vector2 zero înaintea stringurilor | 0x61b990 | 104/104 |
+| CursorDataCaptureCooldownContext ctor defaulted | 0x61ba00 | 130/130 |
+| CursorDataTeamContext ctor defaulted | 0x61ba90 | 130/130 |
+| CursorDataCaptureCooldownContext dtor defaulted | 0x622440 | 58/58 |
+| CursorDataTeamContext dtor defaulted | 0x622480 | 58/58 |
+
+Corpurile constructorilor stau împreună, permițând inlining-ul CursorData în
+bucla tabloului; callback-urile stau separat, ca în client. Generatorul
+MetaConstructors exclude acum definițiile de constructor deținute de alte TU-uri:
+**110 constructori / 109 RVA-uri / 16.014 bytes** rămân în generatorul vechi;
+constructorul CursorData de 104 bytes este verificat acum ca `= default` în TU-ul
+nou. Parserul câmpurilor MetaString acceptă și numele fără prefix `::`.
+Small_560000 are **180 corpuri verificate**, cu apelul la destructorul real al
+bufferului de iconițe. ABI-ul său void nu transformă EAX rezidual în valoare returnată.
+
+Indexul `functions.txt` primește două intrări dovedite de pointerii callback din
+metadate și de cele două wrappers thiscall de 9 bytes: **0x6135c0 și 0x6135f0**.
+Anterior, funcția de delete de 32 bytes era concatenată cu wrapperul următor în
+inventar. Nu s-a relaxat matcherul: limitele celor două funcții sunt acum intrări
+explicite. Inventarul are două intrări în plus; octeții imaginii nu se modifică.
+
+**66 teste trec**, inclusiv respingerea metadatelor suprapuse, a numărului greșit
+de elemente, a modificării buclelor native și a conversiei cvttss2si sau a
+referințelor float substituite în constructorul de culori. Probele izolate din
+`root_more_lifetime_callbacks_audit.json` găsesc **56/59 tipuri** cu distrugere
+identică; **27** aveau încă storage opaque în headerul de producție. Acest lot
+este doar o probă pentru următoarea extindere; nu este publicat în surse.
+
+Rămân deschise constructorul owned-string **0x9b78e0** folosit de localeName
+implicit "en_us" în FontLocaleType, inițializările celorlalte elemente cu valori
+implicite, **28 candidați buffer respinși** (inclusiv cele două tablouri fixe,
+reconstruite separat), restul inițializărilor MetaClasses și cele șase funcții de
+rețea. Constructorul borrowed existent al RString nu poate substitui copierea
+în memorie deținută a lui 0x9b78e0.
+
+Auditul complet `progress-2026-10-08-colors-arrays` rulează separat după această
+integrare. Cele **3.982 amprente** sunt în
+`obj/root_colors_arrays_progress_inputs.json`; sursele și intrările urmărite sunt
+înghețate până la încheiere. Ultimul scor complet confirmat înaintea acestui audit
+rămâne **21.067 funcții / 3.019.945 bytes / 18,96%**. Nu se extrapolează un termen
+pentru 100% și nu se confundă acest scor cu paritatea întregului executabil.
+
+
+**Primul audit colors-arrays încheiat, 2026-10-08:** 21.082 funcții identice /
+3.020.328 bytes / 18,97%, 503 eșecuri; inventar 66.827 intrări și 15.925.652 bytes.
+Procesul a terminat cu exit code 0, iar cele 3.982 amprente sunt neschimbate.
+Față de buffer-closure: +15 funcții / +383 bytes. Diferența mică în acoperirea netă
+include eliminarea din potrivirile confirmate a cinci inițializări de metadate
+al căror alias vechi nu avea încă un corp real. Cele cinci bindings sunt la
+0x8b7f0 (StealthVfx), 0x91df0 (AudioStatusEvents), 0x93d30 (ESportTeamEntry),
+0x94790 (MasteryData), 0xa0f70 (NeutralMinionSpawnConfig); toate folosesc aceeași
+formă de distrugere a trei strings ca FontLocaleType.
+
+Extensia de închidere publică exact aceste cinci layout-uri și recompilă ambii
+callback-uri pentru fiecare. `ReflectedElementLifetimes.cpp` are acum9 tipuri /
+20 callback-uri de lifecycle, fiecare corp și fiecare callee verificate. Nu se
+adaugă un alias fiindcă octeții par similari: aliasul folded are propria instanțiere
+C++ verificată. Inițializările scalare/valorile default ale acestor cinci tipuri
+rămân de stabilit separat. Generatorul verifică și că fiecare offset reflectat
+este exact offsetul dat de alinierea naturală C++, fără gap-uri neexplicate.
+**67 teste trec** după această verificare suplimentară.
+
+Auditul `progress-2026-10-08-colors-arrays-closure` este pornit separat pentru
+această extensie; amprentele sunt în
+`obj/root_colors_arrays_closure_progress_inputs.json`. Probele owned-string și
+lotul mai larg de 27 layout-uri rămân izolate până la încheierea auditului.
+
+
+**Audit colors-arrays-closure încheiat, 2026-10-08:**
+
+| Categorie | Funcții / intrări | Bytes | Din cod |
+|---|---:|---:|---:|
+| Sursă recompilată identică | **21.088** | **3.021.259** | **18,97%** |
+| Sursă încă neidentică | 498 | 59.563 | 0,37% |
+| Biblioteci, adresă unică | 1.240 | 215.817 | 1,36% |
+| Forme de bibliotecă la mai multe adrese | 450 | 73.466 | 0,46% |
+| Neacoperit, intrări de index | 43.590 | 12.555.547 | 78,84% |
+| Inventar complet | 66.827 | 15.925.652 | 100% |
+
+Procesul a terminat cu exit code 0 și toate cele **3.982 amprente** sunt
+neschimbate. Față de buffer-closure: **+21 funcții / +1.314 bytes**. Nu există
+eșecuri noi față de acel audit. Cele cinci bindings expuse de auditul intermediar
+sunt recuperate prin layout-uri și corpuri C++ reale, recompilate separat.
+Rămân aceleași **492 inițializări MetaClasses și șase funcții de rețea**.
+
+Paritatea întregului executabil rămâne deschisă. Următoarea țintă este
+constructorul owned-string 0x9b78e0 și extinderea verificată a elementelor cu
+strings; probele lor nu intră încă în scor. Instrumentele Ghidra/PyGhidra,
+objdiff COFF și solverul Z3 rămân disponibile; identitatea față de client se
+acceptă numai prin matcherul integral și verificarea adreselor referite.
+
+
+## 2026-10-09 — owned-string, baze Map și experiment separat de căutare
+
+MetaString are acum constructorul de copiere a textului **0x9b78e0: 88/88**,
+folosind baza RString(UninitializedTag{}) și lambda cu captură prin valoare.
+Apelul unic Pool_Alloc este la **0x9d4570**. Constructorul de copiere din alt
+MetaString este **0x9b7840: 79/79** și folosește aceeași alocare reală, capacitate
+cu bitul de ownership și bucla de copiere plus terminatorul. Destructorul comun
+RString rămâne activ prin moștenire. FontLocaleType cu localeName{"en_us"} are
+MetaCreate **0xa35610: 82/82**, MetaConstruct **0xa35760: 63/63**, și ambii
+callback-uri de distrugere identici. Literalul "en_us" este verificat la
+VA 0x1ae5498; pointerul empty la VA 0x1b467f0.
+
+ABI-ul constructorilor din lifter este corectat: expresia placement-new produce
+pointerul obiectului, pe care apelanții îl pot folosi în EAX. Destructorii au
+în continuare rezultat void. Argumentele constructorilor sunt const char* sau
+const MetaString& real (dereferențierea pointerului, nu cast integer la reference).
+Proba celor cinci apelanți păstrează 23/30/30/63/40 bytes integral identici.
+
+GenericMapPlaceable are constructorul **0xa21380: 60/60**, cu MapPlaceable
+**0xa22bb0: 54/54** vizibil în același TU. MapBehavior are constructorul
+**0x349ce0: 139/139** în TU separat și MetaConstruct **0x3427f0: 9/9**.
+Prefixul de inițializare al unui ancestor poate fi eliminat din corpul candidat
+numai dacă baza intermediară nu face decât apelul ancestorului și store-ul vptr.
+O inițializare suplimentară de membru este respinsă. Acest guard păstrează
+MapAudio **0xa22520: 110/110**. Generatorul are acum **112 constructori /
+111 RVA-uri / 16.233 bytes**, cu toate corpurile acceptate verificate.
+`gen_lifecycle_aliases.py` publică șapte instanțieri reale pentru cele patru
+forme triviale și callbackul MapBehavior, fără aliasuri lipsite de corp.
+**70 de teste tools trec**.
+
+Auditul owned-font intermediar are **21.104 funcții / 3.021.285 bytes / 18,97%**,
+503 eșecuri; toate cele 3.983 amprente sunt neschimbate. Recuperarea FontLocaleType
+0xdbbe0 este reală. Regenerarea shard-urilor Small cu ambele ABI-uri de constructor
+și cu modele mai precise face însă explicite și alte bindings de metadate înainte
+necunoscute matcherului. Lotul normal înaintea experimentului este astfel:
+**21.105 funcții / 3.017.924 bytes / 18,95%, 536 eșecuri**. Din acestea530 sunt
+MetaClasses și 6 rețea; față de colors-arrays-closure, sunt 39 bindings noi și
+FontLocaleType recuperat. Acest lot încă necesită închiderea dependențelor.
+Nu se ascunde scăderea de acoperire prin eliminarea corpurilor Small identice.
+
+**Experimentul solicitat de utilizator este exclusiv în
+experiments/reconstruction_search/**. Motorul de căutare are maximum 16 încercări
+per caz, păstrează eșecurile într-o bază SQLite, clasifică diferențele și ordonează
+regulile cunoscute după rezultate. Nu modifică matcherul, generatoarele, header-ele
+sau lista M.sources; nu publică surse, layout-uri ori aliasuri. Obiectele sunt
+scrise în directorul experimental. Seed-urile semantice și constrângerile de tip/
+ownership sunt furnizate; acesta nu este un decompiler autonom general.
+
+Măsurarea curată din runs/measured-v1.sqlite3:
+
+| Caz | Origine | Compilări inițiale | Rezultat |
+|---|---|---:|---|
+| Owned-string 0x9b78e0 | Control deja reconstruit |2|72/88→88/88 prin lambda-value|
+| Probability owners 0xa64c90 | Neacoperit în producție |3|ipoteze1/2/3 pointeri, ultima79/79|
+| Clock Now 0xa2c930 | Holdout neacoperit |5|rămâne38/46, nu este acceptat|
+
+Holdout-ul nu antrenează prioritățile. Repetarea celor trei cazuri folosește
+**zero recompilări**; căutarea tabloului trece direct de la ipoteza 1 la 3,
+reducând trei încercări la două. **Șase teste de guard** trec, inclusiv targets
+greșite, extent incomplet, captură de reference, separarea holdout și refuzul
+scrierii în producție. Această evidență demonstrează reutilizarea căutării pe
+un domeniu delimitat, nu automatizarea unei proporții din întregul executabil.
+
+Auditurile COMPLETE înainte și după experiment, search-isolation și
+search-isolation-after, sunt **identice integral**: 21.105 funcții, 18,95% și
+aceeași listă de 536 eșecuri. Cele **3.986 amprente** și lista surselor sunt
+neschimbate; raportul este experiments/reconstruction_search/runs/isolation_audit.json.
+Regresiile de bindings aparțin lotului normal anterior înghețării, nu experimentului.
+Probele izolate au deja 31 MetaDestroy triviale 15/15, opt alte callback-uri și
+closure-urile lor reale; acestea nu sunt publicate încă în lotul auditat.
+
+Bundle-ul vfx_candidate rămâne experimental: **12/12 corpuri / 808 bytes**,
+cu 5 layout-uri tipizate, destructori/pointer ownership naturale și două TU-uri
+separate. Constructorii nu sunt revendicați. Contorul QPC **0x9cbbc0: 33/33**,
+precum și ceasul Now 38/46, rămân în probe. Paritatea integrală a executabilului
+și un termen credibil până la 100% rămân neîndeplinite.
+
+
+### 2026-10-09 — închiderea normală a bindings, separată de experiment
+
+După cele două audituri identice ale experimentului, reconstrucția normală
+publică 31 de instanțieri MetaDestroy triviale, cu corpuri reale de 15 bytes.
+LifecycleAliases are acum 38 corpuri verificate. Acestea închid dependențe
+expuse de regenerarea Small, nu sunt rezultate publicate de motorul experimental.
+
+Noul generator normal tools/gen_meta_placements.py verifică 13 corpuri complete:
+
+| Corp | RVA | Bytes identici |
+|---|---:|---:|
+| ILogicBoolDriver constructor separat | 0xa21cf0 | 9/9 |
+| std::map Find_lower_bound pentru registry | 0xf95b0 | 73/73 |
+| std::map Insert_node | 0x124b60 | 489/489 |
+| std::Throw_tree_length_error | 0x125680 | 10/10 |
+| SummonerRegistry::Register | 0x63c7c0 | 133/133 |
+| Class_bafabcc8 placement | 0x26f0c0 | 72/72 |
+| CollectiblesEsportsTeamData placement | 0x2d0b90 | 77/77 |
+| GDSMapObjectBannerInfo placement | 0x2d09e0 | 18/18 |
+| HasReceivedAnimEmoteEventBoolDriver placement | 0x2d0a90 | 20/20 |
+| IsLocalPlayerBoolDriver placement | 0x2d0ae0 | 20/20 |
+| IsMovingBoolDriver placement | 0x2d0b30 | 20/20 |
+| SummonerIconData placement | 0x2d0c40 | 66/66 |
+| SummonerIconData post-load registry | 0x2d0d00 | 19/19 |
+
+MetaPlacementSupport.h păstrează globalele ca pointeri reali: singletonul la
+VA 0x36ed6c0 și registry-ul la VA 0x2aa7460. Baza goală LevelSingleton înregistrează
+obiectul înaintea inițializării BinObject și a membrilor; Class_bafabcc8 are
+ReflectedBuffer<u32> la +4 și std::list<u32> la +16. Link-urile serializate din
+SummonerIconData și BannerInfo au storage nativ de patru bytes, fără ownership.
+Registry-ul are std::map la +0x1c; Register și Find stau în același TU pentru
+forma de inlining dovedită. Nu se adaugă atribute pentru a forța codul.
+
+Generatorul probează înaintea publicării, păstrează metadatele, descriptorii,
+corpurile tuturor callback-urilor și verifică lungimea completă și fiecare țintă.
+Rerularea este verificată: headerul temporar folosește o singură definiție a
+suportului. Generatorul vechi de constructori omite declarațiile scalar extern
+int ale celor două globale tipizate, păstrând 112 corpuri / 111 RVA-uri /
+16.233 bytes. MetaFunctions este regenerat cu instanțierile deținute de noile TU-uri.
+Cele 70 teste existente și două teste noi trec; acestea resping drift-ul de
+size/offset/corp, un prefix scurt identic și un target greșit.
+
+Auditul complet progress-2026-10-09-placements-closure rulează cu 3.993 intrări
+înghețate în obj/root_placements_closure_progress_inputs.json. Rezultatul net al
+acestui lot trebuie luat din auditul încheiat, nu din suma probelor (mai multe
+corpuri împart adrese deja acoperite). Bundle-ul experimental VFX și clock-ul
+rămân nepublicate; constructorii VFX și ceasul 38/46 sunt încă deschise.
+
+
+**Audit placements-closure încheiat:** 21.143 funcții / 3.022.732 bytes /
+18,98%, 499 eșecuri. Toate cele 3.993 amprente și lista surselor sunt
+neschimbate. Față de search-isolation: 38 bindings închise și un eșec nou Small
+la 0x2d0d00. Acesta are 19/19 bytes, dar callee-ul generic T63c7c0 nu este ABI-ul
+void SummonerRegistry::Register verificat. Corpul este transferat către
+MetaVirtual2<SummonerIconData> real, cu verificare integrală de 19 bytes și două
+ținte exacte. NATIVE_OWNERS previne regenerarea vechiului corp generic; callback-ul
+primește revendicarea primară, fără pierdere sau substituire a funcției din scor.
+
+Review-ul independent a verificat identitatea fișierelor regenerate. Lacuna de
+fingerprint a helperilor nativi este reparată: manifestul fixează acum și
+ILogicBoolDriver, Find_lower_bound, Insert_node, Throw_tree_length_error și
+Register. Cele 20 probe de drift pe cele patru layout-uri sunt respinse, inclusiv
+schimbarea numai a corpului Register; toate cele 72 teste tools trec.
+Auditul final placements-closure-final rulează cu același set de 3.993 intrări,
+actualizat după acest transfer și gardurile noi.
+
+Investigație izolată în timpul auditului: două callback-uri VFX de placement
+ies integral din layout-urile candidate: AnimatedVector3fVariableData 0xa59470
+84/84 și FlexShapeDefinitionData 0x24e3b0 67/67, fără relocări. Restul constructorilor
+candidate încă diferă sau au limită de index neconfirmată; aceste probe nu sunt
+publicate și nu intră în scor. Raport: obj/root_vfx_creation_probe_audit.json.
+Default-ul FlexValueVector3 copiază vectorul global zero de la VA 0x3715f70,
+pe când ValueVector3 implicit scrie trei scalari zero. Cele două forme nu se
+substituie doar fiindcă valoarea finală este aceeași.
+
+Inventarul metadatelor indică 301 callback-uri / 259 adrese unice absente din
+functions.txt; raportul obj/root_metadata_missing_boundaries.json păstrează
+proveniența clasei și a initializerului. De exemplu, 0x24e3b0 este adresa
+construct a FlexShapeDefinitionData și limita imediat următoare corpului create
+0x24e360 de 80 bytes. Limitele încă nu sunt adăugate; următoarea etapă este
+validarea lor independentă și verificarea efectului asupra inventarului complet.
+Nu se relaxează matcherul ca să accepte un corp cu ramuri la o limită ambiguă.
+
+
+**Audit placements-closure-final încheiat:** **21.144 funcții identice /
+3.022.751 bytes / 18,98%**, 498 eșecuri (492 MetaClasses și șase rețea).
+Procesul a încheiat cu exit code 0; cele **3.993 amprente** și lista surselor sunt
+neschimbate. Față de search-isolation: **+39 funcții / +4.827 bytes**, 38 bindings
+închise și **zero eșecuri noi**. Transferul primar al lui 0x2d0d00 păstrează
+corpul și adresele exacte, eliminând incompatibilitatea vechiului callee generic.
+Față de colors-arrays-closure: +56 funcții / +1.492 bytes; FontLocaleType este
+recuperat, dar bindingul VfxFlexShapeDefinitionData 0xddc90 rămâne nou expus și
+nerezolvat. Nu se pretinde lipsa tuturor regresiilor față de acel reper mai vechi.
+
+Ultimul inventar rămâne 66.827 intrări / 15.925.652 bytes, dintre care
+43.535 intrări / 12.553.953 bytes sunt neacoperite. Raportul de închidere este
+obj/root_placements_closure_final_audit_summary.json. Prototipul și VFX candidate
+rămân separate, cu șase teste experimentale trecute; câștigul de mai sus aparține
+reconstrucției normale, nu publicării automate a vreunui candidat experimental.
+Paritatea întregului executabil rămâne obiectiv activ; următoarele probe sunt
+limitele de funcții dovedite de metadate și constructorii VFX încă neidentici.
+
+
+### 2026-10-09 — VFX complet și ipoteza pachetului istoric
+
+Generatorul normal gen_vfx_runtime.py și vfx_runtime_layouts.json validează acum
+nouă layout-uri și dependența FlexTypeFloat. Fiecare create/construct/destroy/
+destruct are propriul corp verificat, inclusiv specializările folded. Trei
+helperi reali sunt în TU-uri separate: ProbabilityOwners destructor 79,
+FlexValueVector3 owned-pointer destructor 92, allocator fastcall 97.
+MetaCreate<AnimatedVector3fVariableData> este thunk-ul de 7 bytes care trece null
+în ECX și sare la allocator, nu new inline de 97 bytes. Probabilitatea are două
+bool-uri la +0x1c/+0x1d; inițializarea u16 dădea alte instrucțiuni. ValueVector3
+implicit construiește un vector scalar zero înaintea pointerului; Flex copiază
+vectorul global măsurat. Alinierea și toate dimensiunile sunt probate.
+
+Intrarea functions.txt 0x24e3b0 este adăugată numai după validarea independentă a
+PUSH-ului callback în initializerul 0xddc90, octeții imaginii țintă fiind
+neschimbați. Este limita create 0x24e360 de 80 bytes și începutul construct de 67 bytes.
+Batch-ul de 259 adrese a fost validat read-only: intrări reale, CFG complet,
+fără reachability din intrarea precedentă. Preview-ul celorlalte 258 păstrează
+discovery/facts 1944; numai ItemRecOverrideRange și CollectiblesEsportsTeamData
+au fingerprints normale scurtate care cer revalidare. Lista întreagă încă nu
+este adăugată în inventar.
+
+Auditul intermediar vfx-runtime: **21.132 / 3.021.896 bytes / 18,98%, 529 eșecuri**,
+66.828 intrări de inventar. Toate cele 4.003 amprente sunt neschimbate. Acesta expune
+33 eșecuri noi și închide 2: 20 apelanți Small ai ILogicBoolDriver folosesc încă
+Ka21cf0, opt destructori triviali de 16 bytes și MapAudio construct, plus patru
+layout-uri VFX care împart destructorii nou verificați. Regresia netă este
+raportată; nu se ascunde prin eliminarea numelor din matcher.
+
+Închiderea normală folosește NATIVE_CALLS pentru constructorul ILogicBoolDriver,
+transferă callback-urile placement către TU-ul tipizat verificat și regenerează
+cinci shard-uri Small. Constructorul MapAudio 110 este păstrat de extensia strictă
+thin_base_inline_prefix: parentul trebuie să fie exact prefixul ancestorului plus
+un singur store vptr; un membru suplimentar este respins. Constructorii reali:
+113 constructori / 112 RVA-uri / 16.343 bytes. LifecycleAliases are 47 corpuri verificate, inclusiv cei
+opt destructori 15/15 și callback MapAudio 9/9. Patru noi layout-uri VFX au toate
+16 callback-uri integrale: Acceleration 49/36/94/77, Orbital 49/36/94/77,
+ParentInheritance 50/36/94/77, Trail 65/52/94/77.
+
+**Ipoteza utilizatorului privind pachetul istoric este investigată efectiv.**
+RiotLOL_Client_AB.pdb corespunde EXE AB prin GUID/age; clienții publici sunt
+1.0.0.131/1.0.0.132, nu patch 13.1/13.2. Readerul read-only historical_pdb.py
+extrage 68.122 publics, 40.627 function publics, 17.994 tag records complete și 3.592 căi
+sursă. Refuză PDB-ul AB la EXE 132. Nu sunt schimbări de registry sau execuții de
+binare istorice. Există 20 nume scurte nominal comune; familia ValueVector3 este
+verificată prin câmpuri PDB și 13 funcții disasamblate, dar ABI/layout-urile diferă.
+Detaliile și limitele se află în docs/PROBE_ISTORICE_LOL.md.
+
+Primul callback modern ghidat de aceste ancore este Probability post-load
+**0xa581b0: 93/93**, cu patru targeturi float exacte: zero în jur de +/-1e-6 și
+unu între 0.9999989867210388 și 1.0000009536743164. Vector2 local al celor două chei
+reproduce ordinea SSE; variantele scalarilor separați rămâneau 79/93. Generatorul
+normal VFX verifică acum **40 corpuri / 2.593 bytes**. Cele **78 teste tools trec**.
+Aceste probe și un audit global încheiat sunt evidențe distincte; paritatea
+întregului executabil rămâne obiectiv activ.
+
+
+**Audit vfx-runtime-closure încheiat:** **21.169 funcții / 3.022.665 bytes /
+18,98%, 510 eșecuri**, cu inventar 66.828 intrări. Toate cele **4.003 amprente**
+și lista surselor sunt neschimbate. Față de auditul intermediar: +37 funcții și
++769 bytes; cele 33 eșecuri expuse acolo sunt închise, dar regenerarea a expus
+13 bindings UI noi. Față de placements-closure-final: +25 funcții, -86 bytes,
+VfxFlexShapeDefinitionData recuperat și cele 13 bindings UI noi. Nu se declară
+absența tuturor regresiilor față de acel reper. Rămân 504 MetaClasses și șase
+funcții de rețea. Raport: obj/root_vfx_runtime_closure_audit_summary.json.
+
+Cele 13 callback-uri UI sunt probate separat: fiecare are 9/9 bytes, dar
+callee-ul real de constructor nu are încă numele C++ verificat. Două baze
+abstracte nu au construct în metadate și le lipsește declarația de constructor:
+UiElementData → 0xadfd20, UiElementAsset → 0xadfc40. La cei 12 derivați
+Class_a34b6ba4 este o bază intermediară: după apelul UiElementData,
+constructorul copilului inițializează prefixul intermediar și suprascrie vptr. Constructorii derivați apelează
+aceste baze, în locul inițializării implicite care dă primul mismatch la +3.
+Probele sunt în obj/root_ui_effect_placements_audit.json. Următoarea închidere
+este reconstrucția acestor două baze și revalidarea celor 13 constructori reali;
+nu se publică aliasuri numai pentru cei 9 bytes similari ai wrapperelor.
+
+Raportul istoric este în docs/PROBE_ISTORICE_LOL.md; pachetul și experimentul
+rămân neatinse. Callback-ul Probability post-load 93/93 este primul câștig modern
+concret ghidat de noile ancore, fără a presupune același layout sau ABI între ani.
+
+
+**Clarificarea scorului, 2026-10-09:** procentul are două zecimale, dar
+placements-closure-final are 18,98039088%, iar vfx-runtime-closure 18,97985087%.
+Ambele sunt afișate 18,98%. Față de reperul anterior: +25 funcții, -86 bytes
+confirmați, cu 13 bindings UI noi și VfxFlexShapeDefinitionData recuperat.
+Rezultatul local Probability post-load 93/93 este real; încă nu justifică un
+câștig net de acoperire față de acel reper. Constructorul 0xadfd20 alocă un obiect
+runtime de 32 bytes și apelează helperul 0xae0ac0; trebuie reconstruit și verificat
+acest callee pentru închiderea sigură a familiei UI. UiElementAsset 0xadfc40
+apelează constructorul UIElement 0xadfb60 și folosește constantele/vectorii
+măsurați din imagine. Aceste corpuri rămân următoarea țintă normală.
+
+### 2026-10-09 — constructorii și proprietarii UI integrați normal
+
+Identificarea prin vtable → GetClass → descriptor corectează eticheta inițială:
+`0xadfd20` este **UiElementData**, nu UiElementAssetData. UiElementAssetData
+este intermediarul abstract de 36 bytes, fără câmpuri reflectate proprii.
+
+`tools/gen_ui_elements.py`, manifestul `tools/ui_element_layouts.json` și
+`UiElementOwners.h` reproduc proprietarii nativi. Manifestul verifică baza,
+dimensiunea, alinierea, toate câmpurile reflectate și wrapper-ele lor, corpurile
+callback-urilor/constructorilor, constantele și corpul extern Release folosit.
+Înainte și după publicare se verifică lungimea independentă a fiecărui corp
+și toate țintele relocărilor; un prefix identic nu este suficient.
+
+Auditul local `obj/root_ui_elements_audit.json` confirmă **26 de corpuri / 1.205
+bytes** (suma include callback-uri pliate și nu reprezintă câștigul global):
+
+- UiElementData ctor `adfd20`: **107/107**; UiPositionRect ctor `ae0ac0`: **111/111**.
+- UIElement ctor `adfb60`: **220/220**; UiElementAsset ctor `adfc40`: **153/153**.
+- Deleting destructors: UiElementIData **48/48**, UiElementData **61/61**,
+  UiPositionRect **46/46**, AnchorSingle **33/33**, UIElementI **49/49**,
+  UIElement **71/71**, UiElementAsset **92/92**.
+- AnchorSingle placement **37/37**, create **50/50**; UiPositionRect create
+  **24/24**, placement **9/9**; șapte GetClass de **6/6** și wrappers virtuali
+  **15/15** și **11/11** pentru cele două clase concrete de poziționare.
+
+Forme de sursă importante: AnchorSingle are constructor implicit, placement
+`new(p) AnchorSingle`, dar în UiPositionRect alocarea este **`new AnchorSingle()`**;
+value-init produce cele două zero-stores înaintea copiei din constante.
+UiElementIData are MetaString și link cu destructor care resetează scalarul.
+UiElementData deține UiPositionRect, iar acesta deține AnchorBase prin delete
+virtual. UIElement deține la +0x30 o alocare trivială de 12 bytes, eliberată cu
+standard sized delete necondiționat. UiElementAsset deține la +0x80 o referință
+nullable cu Release. UIElementI destructor trebuie defaultat în prima
+declarație; constructorii UIElement/Asset sunt în TU-uri separate, iar
+destructorii derivați sunt defaultați într-un TU comun. Flags standard, fără
+atribute artificiale. Flag-ul Asset +0x84 și vectorul +0x98 sunt inițializate
+în corp după inițializările scalare ale membrilor.
+
+Generatorul constructorilor reali confirmă acum **126 corpuri / 125 RVA-uri /
+17.544 bytes**, cu 4 candidați respinși; cele **13 placements UI de 9 bytes**
+care blocau bindings sunt acum integral exacte, inclusiv țintele către
+constructorii reali. `obj/root_ui_effect_placements_closed_audit.json` păstrează
+verificarea. Regenerarea MetaFunctions păstrează 1.924 claims și 3.934 aliases
+pliate verificate din 3.978 candidați. **80 de teste trecute**.
+
+Auditul complet `progress-2026-10-09-ui-elements` pornește cu **4.013 amprente /
+901 surse** înghețate. Scorul anterior rămâne reperul până la terminarea auditului.
+
+Probleme deschise: Release `aaa4c0` are ABI ECX/no stack args/EAX demonstrat,
+dar corpul de 231 bytes nu este reconstruit sau revendicat. Modelul virtual
+generic BinObject este incomplet: slotul 2 UiElementIData/UiElementData și
+Class_a34b6ba4 este `_purecall`, în timp ce UIElement/Asset folosesc la slotul 2
+o metodă cu parametru vector și `ret 4`. Potrivirea corpurilor și adreselor
+vptr nu dovedește încă toate sloturile/data vtable sau executabilul complet.
+Aceste diferențe rămân explicit parte a obiectivului de paritate bit cu bit.
+
+**Închiderea legăturilor UI și binder, aceeași zi:** auditul complet intermediar
+`progress-2026-10-09-ui-elements` a terminat cu **21.175 / 3.022.424 bytes /
+18,98%, 528 eșecuri**. Cele 4.013 amprente și setul de surse au rămas stabile.
+Cele 18 eșecuri noi sunt apeluri Small care încă declarau constructorii UI sub
+ABI generic `T<rva>::f`; cele 13 bindings metadata nu erau încă recuperate,
+fiindcă wrapper-ele exacte existau numai în probe, fără claims normale.
+
+Corecția normală adaugă cele patru ABI-uri constructor în NATIVE_CALLS și
+regenerarea Small_a60000 cu placement-new tipat. `gen_meta_ctors.py` elimină
+apelul bazei numai pe receiverul exact `this`, tipul corect și ABI-ul demonstrat
+fără argumente; țintele și corpurile ctor rămân verificate după transformare.
+`UiElementPlacements.cpp` publică acum cele 13 wrapper-e numai după verificare.
+NATIVE_OWNERS le exclude din liftarea generică, iar claims sunt promovate
+`same`→`match` după eliminarea vechiului proprietar Small. Auditul UI local
+final are **39 corpuri / 1.322 bytes** (sumă cu folding), iar verificarea directă
+`obj/root_ui_elements_bindings_closed.json` confirmă **13/13 inițializări metadata**.
+Generatorul păstrează cele 126 ctor-uri exacte și **81 de teste trecute**.
+
+Investigația rezidualului ZoneD Clone `2f2780` găsește la `2dc743` construcția
+reală a unui callable MSVC `std::bind(&Context::Method, context,
+std::placeholders::_1)`: octetul de la +8 este placeholder-ul gol copiat, nu un
+bool de stare. `client-src/src/LnpBoundCallback.cpp` instanțiază explicit
+`std::_Func_impl_no_alloc`, fără funcție auxiliară artificială. Flags
+`-O2 -std:c++17 -GR-`, `_HAS_STATIC_RTTI=0`. Copy și Move sunt ambele **35/35**
+la `2f2780`, Invoke **10/10** la `2f2a00`, TargetType **5/5** la `125630`
+cu abort `f5e535`, Delete **21/21** la `2f27b0` cu sized delete `9bb940`, Get
+**4/4** la `10aa40`. **75 bytes unici de funcții și 24 bytes vtable / șase
+ținte COFF** sunt controlați de `python tools/verify_bound_callback.py` și
+`tools/bound_callback_layouts.json`, inclusiv amprenta locului de construcție.
+Vechile blocuri manuale Clone/Invoke/Delete au fost înlocuite cu familia
+standard. Tipul canonic/cv al argumentului rămâne opac; proba demonstrează
+ABI prin referință, fără a revendica metoda sau funcția originală de construcție.
+
+Probele virtuale suplimentare identifică `fb3474` ca root de **două sloturi /
+8 bytes**; tabelul de trei sloturi începe la `fb347c`. Getterul de bounds
+`aedc20` este **16/16**, cu Vector4 real la +0x54; ctor220 și dtors49/71/92
+rămân exacte. Rădăcina UIData de două sloturi și tabelele sale pure de trei
+sloturi sunt probate separat. Tabelele runtime au 28/40/40 intrări, dar ABI-ul
+sloturilor rezervate nu este demonstrat; scheletele de probă rămân în obj.
+Class_a34 deține la +0x44 un AtlasData de 44 bytes; destructorul și layout-ul
+Atlas sunt următoarele probe. PDB-ul AB nu oferă corespondență nominală/ABI
+directă pentru ierarhia modernă; `obj/historical-lol/ui_concordance_report.md`
+consemnează respingerea getterelor GFx/HudRect cu struct-return/alte argumente.
+
+Auditul complet final al lotului `progress-2026-10-09-ui-bound-closure` pornește
+cu **4.017 amprente / 903 surse** înghețate. Acoperirea netă rămâne de stabilit
+prin acel audit, fără a însuma probele locale sau datele vtable în procentul
+de cod.
+
+## 2026-10-10 — UI Atlas complet, layout-uri din callback-uri, căutător de variante, audit în 1–3 minute
+
+**Familia UI Atlas (surse de mână, `client-src/src/UiAtlas*.cpp`).** Cele patru clase care furnizează
+texturi sunt identice cu clientul: AtlasData, AtlasData3SliceH, AtlasData3SliceV, AtlasData9Slice —
+constructori (`aded90` 114, `adee10` 114, `adee90` 142, `adef20` 86), destructori, callback-urile de metadate,
+`GetTexture` (`ae6850` 318, `ae6700` 104, `ae6770` 90, `ae67d0` 120) și calculele `CalculateThreeSliceH`
+`ae63e0` 300/300, `CalculateThreeSliceV` `ae6510` 288/288, `CalculateNineSlice` `ae4e40` 347/347,
+`CropAtlasUV` `aecd80` 192/192. Moduri: 0 / 1 / 2 / 3. Lecții de formă: codul vectorial al lui Riot este scris pe
+componente (bucle `for i < n: c[i] *= s`), forma cu `.x` / `.y` separate dă altă ordine a instrucțiunilor;
+constructorii la care callback-urile sar (în loc să-i aibă inline) sunt declarați în clasă și `= default`
+în alt fișier; `TextureBorders` are doi `Vector2` (`first`, `second`): 9Slice le scrie pe amândouă, 3Slice
+doar pe primul. Intrarea `0xadc5a0` a fost adăugată în `functions.txt` (callback împins în inițializatorul
+`0xe1ab0`; fără ea funcția `adc570` părea mai lungă). Opt revendicări generice din `Small_a60000.cpp` au
+fost cedate surselor tipizate prin `NATIVE_OWNERS`.
+
+Deschis: destructorul clasei intermediare `Class_a34b6ba4` (`ae1160`) este 85/85 într-o probă cu destructor
+implicit și `UiDataOwner<ui_native::AtlasData>` la +0x44; nu este publicat, fiindcă layout-ul clasei stă în
+`BinClasses.h` generat (cinci destructori derivați îl apelează: `ae26d0`, `ae2720`, `ae27e0`, `ae2810`,
+`ae2850`). Regulă măsurată: destructorul implicit sau defaultat la prima declarație nu scrie vptr;
+cel definit de utilizator îl scrie.
+
+**Layout-uri din callback-urile de plasare (`tools/gen_poly_placements.py`).** 487 din cele 492 de eșecuri
+erau inițializatori de metadate al căror callback era ridicat generic (`?k<rva>@@`). Pentru clasele polimorfe al
+căror `MetaConstruct` doar stochează constante, stocările + membrii reflectați dau direct membrii clasei.
+Manifest: **114 clase** (frunze, fără constructor propriu), `gen/PolyPlacementCallbacks.cpp`: **216 callback-uri
+identice** (114 `MetaConstruct` + 102 `MetaCreate`; 12 `MetaCreate` neidentice lăsate afară). Corectat în
+același timp un defect vechi din `gen_meta.create_stores`: testul „pointer de vtable” era `v > BASE`, deci
+lua și un float (1.0f) drept vtable și pierdea inițializatorul primului membru la clasele nepolimorfe.
+Rămase pe categorii (proba de după integrare): 257 de callback-uri care apelează constructori de membri,
+67 care scriu în baza fără layout, 80 nepolimorfe, 10 care iau un vector dintr-o variabilă.
+
+**Căutătorul de variante (`tools/permute.py`)** și **cache-ul de compilare** sunt descrise în
+`docs/RECONSTRUCTIE_TOOLING.md`. Măsurat: `CalculateNineSlice` de la 332/347 la identic în 26 de variante /
+3 secunde; `LnpWorker::Post1` negăsit în 1.584 de variante / 5 minute.
+
+**Audit `progress-2026-10-10-poly-placements`: 21.468 funcții / 3.043.754 bytes / 19,11 %, 424 eșecuri**
+(de la 21.208 / 18,98 % / 496 la începutul zilei; auditul intermediar `ui-atlas`: 21.234 / 19,02 % / 492).
+68 de eșecuri închise, niciunul nou. Durata auditului: ~35 de minute înainte, **2 min 32 s** cu compilare
+în paralel și **59 s** cu obiectele din cache; cele două rulări dau același raport JSON. 92 de teste trec.
+
+### 2026-10-10, seara — ramificații în lifter, pilotul de ciorne cu agenți, căutătorul lăsat pe rețea
+
+**Lifter-ul generic (`tools/gen_small.py`) reface acum funcții cu ramificații simple.** Până azi orice salt
+condiționat oprea liftarea (616 funcții respinse cu „branch” numai în regiunea 0x100000–0x180000). Forma
+adăugată: un salt condiționat înainte sare peste un bloc → `if (condiția inversă) { bloc }`; blocul fie cade
+în ținta saltului (registrele pe care le-a schimbat devin necunoscute de acolo), fie se termină cu propriul
+`ret` (`if (..) { ..; return x; }`). Blocurile se pot îmbrica. Rezultat pe cele 23 de shard-uri:
+**4.156 → 4.964 funcții Small identice**. Două corecții cerute de rulare: (1) un candidat care nu compilează
+(un global declarat cu tip real în alt header) nu mai anulează tot shard-ul — `compilable()` citește liniile
+de eroare ale compilatorului și lasă afară doar vinovații; (2) callback-urile descrierilor de clase și
+constructorii/destructorii pe care ele îi apelează NU sunt ridicați generic când au ramificații
+(`gen_poly_placements.callbacks()`): sub nume generic ar lua numele de care are nevoie inițializatorul
+descrierii (prima rulare a produs astfel 112 eșecuri noi de legare; după regulă: zero).
+Forma `if/else` (blocul se termină cu `jmp` peste ce urmează) este și ea liftată, dar pe shard-ul de probă
+nu a dat nicio funcție identică în plus: compilatorul așază altfel cele două ramuri. Rămâne în cod, fără câștig.
+
+**Audit `progress-2026-10-10-branches`: 22.279 funcții / 3.080.873 bytes / 19,35 %, 421 eșecuri**, niciun
+eșec nou față de auditul `poly-placements` (21.468 / 19,11 % / 424). Față de dimineață (21.208 / 18,98 % / 496):
++1.071 funcții, +0,37 puncte procentuale.
+
+**Căutătorul pe cele 5 funcții de rețea (20 de minute fiecare):** `LnpMessage::Read` `2dcd40` — IDENTIC după
+39 de variante / 6 secunde (rescrierea „valoare ținută într-un local”), aplicat în `LnpMessage_Read.cpp`;
+era deschisă din runda a șaptea, după 16 forme încercate de mână. `LnpDatagram::Write` a coborât de la 36 la
+18 instrucțiuni diferite în 10.117 variante, fără identitate; `Post1` (6.067 variante) și `Post2` (4.441)
+negăsite.
+
+**Pilot de ciorne scrise de agenți (măsurat și oprit).** `tools/draft_batch.py` pregătește pentru fiecare
+funcție deschisă un pachet (dezasamblare, pseudo-C Ghidra, numele obligatorii ale țintelor) și verifică
+ciorna cu matcherul. 6 agenți Sonnet pe 48 de funcții alese la întâmplare: până la oprire 29 încercate,
+19 identice = 1.210 bytes = 0,0076 % din cod (33–64 bytes: 12 din 15; 65–128: 7 din 13; 129–256: 0 din 1),
+pentru aproximativ 10 % din cota de 5 ore a utilizatorului. Concluzie: tehnic merge, dar ca metodă de masă
+este de ordinul a o mie de asemenea rulări pentru 10 % din cod; nu se mai pornesc loturi de agenți fără
+cerere explicită. Cele 19 ciorne identice sunt în `client-src/obj/draft/<rva>/f.cpp`, nepublicate.
+
+**Ce ar putea prinde o unealtă mecanică, măsurat pe funcțiile deschise din codul lui Riot:** funcții cu bucle
+5,89 MB (37,0 % din cod), peste 4096 bytes 1,28 MB (8,0 %), virgulă mobilă + cadru de stivă 0,98 MB (6,2 %),
+cadru de stivă cu ramificații 0,80 MB (5,0 %), fără ramificații 0,32 MB (2,0 %), o ramificație 0,29 MB
+(1,8 %), două 0,13 MB, trei 0,10 MB, patru sau mai multe 0,32 MB. Obiectivul „+10 % într-o zi” nu este
+atins și nu poate fi atins cu uneltele existente: pârghiile mecanice rămase sunt de ordinul 1–3 %.
+
+Proba `tools/permute_small.py` (căutătorul peste funcțiile ridicate de lifter care nu ies identice): 30 de funcții la întâmplare din shard-ul e0000, 20 de secunde fiecare — **0 găsite**. Diferențele acolo țin de tipuri, lățimi și convenții, pe care rescrierile de formă nu le ating; nu merită rulat așa.

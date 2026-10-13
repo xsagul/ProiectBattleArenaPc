@@ -1,0 +1,27 @@
+local L0_1, L1_1, L2_1, L3_1
+L0_1 = "Sion_SpiritFeast.dds"
+BuffTextureName = L0_1
+L0_1 = "CannibalismMaxHPGained"
+BuffName = L0_1
+L0_1 = true
+PersistsThroughDeath = L0_1
+L0_1 = true
+NonDispellable = L0_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBMath
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.Src1Var = "DamageBonus"
+L2_1.Src1VarTable = "CharVars"
+L2_1.Src2Var = "DamageBonus"
+L2_1.Src2VarTable = "InstanceVars"
+L2_1.Src1Value = 0
+L2_1.Src2Value = 0
+L2_1.DestVar = "DamageBonus"
+L2_1.DestVarTable = "CharVars"
+L3_1 = MO_ADD
+L2_1.MathOp = L3_1
+L1_1.Params = L2_1
+L0_1[1] = L1_1
+OnBuffActivateBuildingBlocks = L0_1

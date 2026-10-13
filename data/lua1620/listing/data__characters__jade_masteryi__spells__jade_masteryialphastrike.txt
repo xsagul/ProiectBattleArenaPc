@@ -1,0 +1,48 @@
+
+main <?:0,0> (26 instructions, 104 bytes at 000001A309D03630)
+0+ params, 7 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "Jade_MasterYi_Q.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Jade_MasterYiAlphaStrike"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -7	; IsDamagingSpell
+	11	[-]	NEWTABLE 	0 0 6
+	12	[-]	NEWTABLE 	1 5 0
+	13	[-]	LOADK    	2 -10	; 1
+	14	[-]	LOADK    	3 -10	; 1
+	15	[-]	LOADK    	4 -10	; 1
+	16	[-]	LOADK    	5 -10	; 1
+	17	[-]	LOADK    	6 -10	; 1
+	18	[-]	SETLIST  	1 5 1	; 1
+	19	[-]	SETTABLE 	0 -9 1	; "MaximumHits" -
+	20	[-]	SETTABLE 	0 -11 -12	; "CanHitCaster" 0
+	21	[-]	SETTABLE 	0 -13 -12	; "CanHitSameTarget" 0
+	22	[-]	SETTABLE 	0 -14 -12	; "CanHitSameTargetConsecutively" 0
+	23	[-]	SETTABLE 	0 -15 -10	; "CanHitEnemies" 1
+	24	[-]	SETTABLE 	0 -16 -12	; "CanHitFriends" 0
+	25	[-]	SETGLOBAL	0 -8	; ChainMissileParameters
+	26	[-]	RETURN   	0 1
+constants (16) for 000001A309D03630:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"Jade_MasterYi_Q.dds"
+	5	"BuffName"
+	6	"Jade_MasterYiAlphaStrike"
+	7	"IsDamagingSpell"
+	8	"ChainMissileParameters"
+	9	"MaximumHits"
+	10	1
+	11	"CanHitCaster"
+	12	0
+	13	"CanHitSameTarget"
+	14	"CanHitSameTargetConsecutively"
+	15	"CanHitEnemies"
+	16	"CanHitFriends"
+locals (0) for 000001A309D03630:
+upvalues (0) for 000001A309D03630:

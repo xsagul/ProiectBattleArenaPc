@@ -1,0 +1,28 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 000001D4DF0735D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 7 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	NEWTABLE 	0 1 0
+	10	[-]	LOADK    	1 -6	; "BroOlaf"
+	11	[-]	SETLIST  	0 1 1	; 1
+	12	[-]	SETGLOBAL	0 -5	; SpellVOOverrideSkins
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -7	; IsDamagingSpell
+	15	[-]	RETURN   	0 1
+constants (7) for 000001D4DF0735D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"SpellVOOverrideSkins"
+	6	"BroOlaf"
+	7	"IsDamagingSpell"
+locals (0) for 000001D4DF0735D0:
+upvalues (0) for 000001D4DF0735D0:

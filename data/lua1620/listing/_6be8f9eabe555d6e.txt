@@ -1,0 +1,867 @@
+
+main <?:0,0> (131 instructions, 524 bytes at 000001E1ED0F34C0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 41 constants, 5 functions
+	1	[-]	LOADK    	0 -2	; 0
+	2	[-]	SETGLOBAL	0 -1	; TEAM_UNKNOWN
+	3	[-]	LOADK    	0 -4	; 100
+	4	[-]	SETGLOBAL	0 -3	; TEAM_ORDER
+	5	[-]	LOADK    	0 -6	; 200
+	6	[-]	SETGLOBAL	0 -5	; TEAM_CHAOS
+	7	[-]	LOADK    	0 -8	; 300
+	8	[-]	SETGLOBAL	0 -7	; TEAM_NEUTRAL
+	9	[-]	LOADK    	0 -10	; 1
+	10	[-]	SETGLOBAL	0 -9	; HOSTILE
+	11	[-]	LOADK    	0 -2	; 0
+	12	[-]	SETGLOBAL	0 -11	; INACTIVE
+	13	[-]	NEWTABLE 	0 2 0
+	14	[-]	LOADK    	1 -13	; "HA_AP_HealthRelic"
+	15	[-]	LOADK    	2 -14	; "HA_FB_HealthRelic"
+	16	[-]	SETLIST  	0 2 1	; 1
+	17	[-]	SETGLOBAL	0 -12	; NeutralMinionNames
+	18	[-]	LOADK    	0 -16	; 1000
+	19	[-]	SETGLOBAL	0 -15	; HERO_EXP_RADIUS
+	20	[-]	NEWTABLE 	0 0 2
+	21	[-]	NEWTABLE 	1 0 3
+	22	[-]	SETTABLE 	1 -18 -2	; "GoldGiven" 0
+	23	[-]	SETTABLE 	1 -19 -2	; "ExpGiven" 0
+	24	[-]	SETTABLE 	1 -20 -2	; "SoulGiven" 0
+	25	[-]	SETTABLE 	0 -13 1	; "HA_AP_HealthRelic" -
+	26	[-]	NEWTABLE 	1 0 3
+	27	[-]	SETTABLE 	1 -18 -2	; "GoldGiven" 0
+	28	[-]	SETTABLE 	1 -19 -2	; "ExpGiven" 0
+	29	[-]	SETTABLE 	1 -20 -2	; "SoulGiven" 0
+	30	[-]	SETTABLE 	0 -14 1	; "HA_FB_HealthRelic" -
+	31	[-]	SETGLOBAL	0 -17	; DefaultNeutralMinionValues
+	32	[-]	NEWTABLE 	0 0 0
+	33	[-]	SETGLOBAL	0 -21	; NeutralTimers
+	34	[-]	NEWTABLE 	0 4 0
+	35	[-]	NEWTABLE 	1 0 0
+	36	[-]	GETGLOBAL	2 -23	; Get3DPointPosition
+	37	[-]	LOADK    	3 -24	; "HA_AP_HealthRelic_Chaos_Outer"
+	38	[-]	CALL     	2 2 0
+	39	[-]	SETLIST  	1 0 1	; 1
+	40	[-]	NEWTABLE 	2 0 0
+	41	[-]	GETGLOBAL	3 -23	; Get3DPointPosition
+	42	[-]	LOADK    	4 -25	; "HA_AP_HealthRelic_Order_Outer"
+	43	[-]	CALL     	3 2 0
+	44	[-]	SETLIST  	2 0 1	; 1
+	45	[-]	NEWTABLE 	3 0 0
+	46	[-]	GETGLOBAL	4 -23	; Get3DPointPosition
+	47	[-]	LOADK    	5 -26	; "HA_AP_HealthRelic_Chaos_Inner"
+	48	[-]	CALL     	4 2 0
+	49	[-]	SETLIST  	3 0 1	; 1
+	50	[-]	NEWTABLE 	4 0 0
+	51	[-]	GETGLOBAL	5 -23	; Get3DPointPosition
+	52	[-]	LOADK    	6 -27	; "HA_AP_HealthRelic_Order_Inner"
+	53	[-]	CALL     	5 2 0
+	54	[-]	SETLIST  	4 0 1	; 1
+	55	[-]	SETLIST  	0 4 1	; 1
+	56	[-]	SETGLOBAL	0 -22	; CampSpawnPoints
+	57	[-]	NEWTABLE 	0 4 0
+	58	[-]	NEWTABLE 	1 0 0
+	59	[-]	GETGLOBAL	2 -29	; Get3DPointFacingPosition
+	60	[-]	LOADK    	3 -24	; "HA_AP_HealthRelic_Chaos_Outer"
+	61	[-]	CALL     	2 2 0
+	62	[-]	SETLIST  	1 0 1	; 1
+	63	[-]	NEWTABLE 	2 0 0
+	64	[-]	GETGLOBAL	3 -29	; Get3DPointFacingPosition
+	65	[-]	LOADK    	4 -25	; "HA_AP_HealthRelic_Order_Outer"
+	66	[-]	CALL     	3 2 0
+	67	[-]	SETLIST  	2 0 1	; 1
+	68	[-]	NEWTABLE 	3 0 0
+	69	[-]	GETGLOBAL	4 -29	; Get3DPointFacingPosition
+	70	[-]	LOADK    	5 -26	; "HA_AP_HealthRelic_Chaos_Inner"
+	71	[-]	CALL     	4 2 0
+	72	[-]	SETLIST  	3 0 1	; 1
+	73	[-]	NEWTABLE 	4 0 0
+	74	[-]	GETGLOBAL	5 -29	; Get3DPointFacingPosition
+	75	[-]	LOADK    	6 -27	; "HA_AP_HealthRelic_Order_Inner"
+	76	[-]	CALL     	5 2 0
+	77	[-]	SETLIST  	4 0 1	; 1
+	78	[-]	SETLIST  	0 4 1	; 1
+	79	[-]	SETGLOBAL	0 -28	; CampFacePoints
+	80	[-]	NEWTABLE 	0 0 4
+	81	[-]	NEWTABLE 	1 1 0
+	82	[-]	LOADK    	2 -13	; "HA_AP_HealthRelic"
+	83	[-]	SETLIST  	1 1 1	; 1
+	84	[-]	SETTABLE 	0 -10 1	; 1 -
+	85	[-]	NEWTABLE 	1 1 0
+	86	[-]	LOADK    	2 -13	; "HA_AP_HealthRelic"
+	87	[-]	SETLIST  	1 1 1	; 1
+	88	[-]	SETTABLE 	0 -31 1	; 2 -
+	89	[-]	NEWTABLE 	1 1 0
+	90	[-]	LOADK    	2 -13	; "HA_AP_HealthRelic"
+	91	[-]	SETLIST  	1 1 1	; 1
+	92	[-]	SETTABLE 	0 -32 1	; 3 -
+	93	[-]	NEWTABLE 	1 1 0
+	94	[-]	LOADK    	2 -13	; "HA_AP_HealthRelic"
+	95	[-]	SETLIST  	1 1 1	; 1
+	96	[-]	SETTABLE 	0 -33 1	; 4 -
+	97	[-]	SETGLOBAL	0 -30	; PredefinedCamps
+	98	[-]	NEWTABLE 	0 0 2
+	99	[-]	NEWTABLE 	1 1 0
+	100	[-]	LOADK    	2 -14	; "HA_FB_HealthRelic"
+	101	[-]	SETLIST  	1 1 1	; 1
+	102	[-]	SETTABLE 	0 -10 1	; 1 -
+	103	[-]	NEWTABLE 	1 1 0
+	104	[-]	LOADK    	2 -14	; "HA_FB_HealthRelic"
+	105	[-]	SETLIST  	1 1 1	; 1
+	106	[-]	SETTABLE 	0 -31 1	; 2 -
+	107	[-]	SETGLOBAL	0 -34	; PredefinedCampsFB
+	108	[-]	NEWTABLE 	0 0 4
+	109	[-]	NEWTABLE 	1 0 0
+	110	[-]	SETTABLE 	0 -10 1	; 1 -
+	111	[-]	NEWTABLE 	1 0 0
+	112	[-]	SETTABLE 	0 -31 1	; 2 -
+	113	[-]	NEWTABLE 	1 0 0
+	114	[-]	SETTABLE 	0 -32 1	; 3 -
+	115	[-]	NEWTABLE 	1 0 0
+	116	[-]	SETTABLE 	0 -33 1	; 4 -
+	117	[-]	SETGLOBAL	0 -35	; NeutralMinionCamps
+	118	[-]	GETGLOBAL	0 -35	; NeutralMinionCamps
+	119	[-]	LEN      	0 0
+	120	[-]	SETGLOBAL	0 -36	; NUMBER_OF_CAMPS
+	121	[-]	CLOSURE  	0 0	; 000001E1ED0F1990
+	122	[-]	SETGLOBAL	0 -37	; NeutralMinionInit
+	123	[-]	CLOSURE  	0 1	; 000001E1ED0F1A10
+	124	[-]	SETGLOBAL	0 -38	; CreateRespawnNeutralTimer
+	125	[-]	CLOSURE  	0 2	; 000001E1ED0F1B30
+	126	[-]	SETGLOBAL	0 -39	; InitializeNeutralMinionInfo
+	127	[-]	CLOSURE  	0 3	; 000001E1ED0F5160
+	128	[-]	SETGLOBAL	0 -40	; SpawnInitialNeutralMinions
+	129	[-]	CLOSURE  	0 4	; 000001E1ED0F53E0
+	130	[-]	SETGLOBAL	0 -41	; NeutralMinionDeath
+	131	[-]	RETURN   	0 1
+constants (41) for 000001E1ED0F34C0:
+	1	"TEAM_UNKNOWN"
+	2	0
+	3	"TEAM_ORDER"
+	4	100
+	5	"TEAM_CHAOS"
+	6	200
+	7	"TEAM_NEUTRAL"
+	8	300
+	9	"HOSTILE"
+	10	1
+	11	"INACTIVE"
+	12	"NeutralMinionNames"
+	13	"HA_AP_HealthRelic"
+	14	"HA_FB_HealthRelic"
+	15	"HERO_EXP_RADIUS"
+	16	1000
+	17	"DefaultNeutralMinionValues"
+	18	"GoldGiven"
+	19	"ExpGiven"
+	20	"SoulGiven"
+	21	"NeutralTimers"
+	22	"CampSpawnPoints"
+	23	"Get3DPointPosition"
+	24	"HA_AP_HealthRelic_Chaos_Outer"
+	25	"HA_AP_HealthRelic_Order_Outer"
+	26	"HA_AP_HealthRelic_Chaos_Inner"
+	27	"HA_AP_HealthRelic_Order_Inner"
+	28	"CampFacePoints"
+	29	"Get3DPointFacingPosition"
+	30	"PredefinedCamps"
+	31	2
+	32	3
+	33	4
+	34	"PredefinedCampsFB"
+	35	"NeutralMinionCamps"
+	36	"NUMBER_OF_CAMPS"
+	37	"NeutralMinionInit"
+	38	"CreateRespawnNeutralTimer"
+	39	"InitializeNeutralMinionInfo"
+	40	"SpawnInitialNeutralMinions"
+	41	"NeutralMinionDeath"
+locals (0) for 000001E1ED0F34C0:
+upvalues (0) for 000001E1ED0F34C0:
+
+function <?:47,123> (261 instructions, 1044 bytes at 000001E1ED0F1990)
+0 params, 8 slots, 0 upvalues, 0 locals, 52 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetGameMode
+	2	[-]	CALL     	0 1 2
+	3	[-]	GETGLOBAL	1 -2	; pairs
+	4	[-]	GETGLOBAL	2 -3	; NeutralMinionNames
+	5	[-]	CALL     	1 2 4
+	6	[-]	JMP      	3	; to 10
+	7	[-]	GETGLOBAL	6 -4	; PreloadCharacter
+	8	[-]	MOVE     	7 5
+	9	[-]	CALL     	6 2 1
+	10	[-]	TFORLOOP 	1 2
+	11	[-]	JMP      	-5	; to 7
+	12	[-]	EQ       	0 0 -5	; - "FIRSTBLOOD"
+	13	[-]	JMP      	9	; to 23
+	14	[-]	NEWTABLE 	1 0 2
+	15	[-]	NEWTABLE 	2 0 0
+	16	[-]	SETTABLE 	1 -7 2	; 1 -
+	17	[-]	NEWTABLE 	2 0 0
+	18	[-]	SETTABLE 	1 -8 2	; 2 -
+	19	[-]	SETGLOBAL	1 -6	; NeutralMinionCamps
+	20	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	21	[-]	LEN      	1 1
+	22	[-]	SETGLOBAL	1 -9	; NUMBER_OF_CAMPS
+	23	[-]	LOADK    	1 -7	; 1
+	24	[-]	GETGLOBAL	2 -9	; NUMBER_OF_CAMPS
+	25	[-]	LOADK    	3 -7	; 1
+	26	[-]	FORPREP  	1 74	; to 101
+	27	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	28	[-]	GETTABLE 	5 5 4
+	29	[-]	GETGLOBAL	6 -11	; CampSpawnPoints
+	30	[-]	GETTABLE 	6 6 4
+	31	[-]	SETTABLE 	5 -10 6	; "Positions" -
+	32	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	33	[-]	GETTABLE 	5 5 4
+	34	[-]	GETGLOBAL	6 -13	; CampFacePoints
+	35	[-]	GETTABLE 	6 6 4
+	36	[-]	SETTABLE 	5 -12 6	; "FacePositions" -
+	37	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	38	[-]	GETTABLE 	5 5 4
+	39	[-]	NEWTABLE 	6 0 0
+	40	[-]	SETTABLE 	5 -14 6	; "UniqueNames" -
+	41	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	42	[-]	GETTABLE 	5 5 4
+	43	[-]	NEWTABLE 	6 0 0
+	44	[-]	SETTABLE 	5 -15 6	; "AliveTracker" -
+	45	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	46	[-]	GETTABLE 	5 5 4
+	47	[-]	GETGLOBAL	6 -17	; TEAM_NEUTRAL
+	48	[-]	SETTABLE 	5 -16 6	; "Team" -
+	49	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	50	[-]	GETTABLE 	5 5 4
+	51	[-]	SETTABLE 	5 -18 -19	; "DamageBonus" 0
+	52	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	53	[-]	GETTABLE 	5 5 4
+	54	[-]	SETTABLE 	5 -20 -19	; "HealthBonus" 0
+	55	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	56	[-]	GETTABLE 	5 5 4
+	57	[-]	GETGLOBAL	6 -22	; INACTIVE
+	58	[-]	SETTABLE 	5 -21 6	; "AIState" -
+	59	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	60	[-]	GETTABLE 	5 5 4
+	61	[-]	SETTABLE 	5 -23 -24	; "GroupsRespawnTime" 60
+	62	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	63	[-]	GETTABLE 	5 5 4
+	64	[-]	SETTABLE 	5 -25 -7	; "CampLevel" 1
+	65	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	66	[-]	GETTABLE 	5 5 4
+	67	[-]	SETTABLE 	5 -26 -27	; "TimerType" ""
+	68	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	69	[-]	GETTABLE 	5 5 4
+	70	[-]	SETTABLE 	5 -28 -27	; "MinimapIcon" ""
+	71	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	72	[-]	GETTABLE 	5 5 4
+	73	[-]	SETTABLE 	5 -29 -30	; "LeashRadius" 800
+	74	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	75	[-]	GETTABLE 	5 5 4
+	76	[-]	SETTABLE 	5 -31 -32	; "StopSpawnTime" 25000
+	77	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	78	[-]	GETTABLE 	5 5 4
+	79	[-]	GETGLOBAL	6 -11	; CampSpawnPoints
+	80	[-]	GETTABLE 	6 6 4
+	81	[-]	GETTABLE 	6 6 -7	; 1
+	82	[-]	SETTABLE 	5 -33 6	; "LeashCenter" -
+	83	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	84	[-]	GETTABLE 	5 5 4
+	85	[-]	GETGLOBAL	6 -11	; CampSpawnPoints
+	86	[-]	GETTABLE 	6 6 4
+	87	[-]	GETTABLE 	6 6 -7	; 1
+	88	[-]	SETTABLE 	5 -34 6	; "VisualCenter" -
+	89	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	90	[-]	GETTABLE 	5 5 4
+	91	[-]	GETGLOBAL	6 -6	; NeutralMinionCamps
+	92	[-]	GETTABLE 	6 6 4
+	93	[-]	GETTABLE 	6 6 -34	; "VisualCenter"
+	94	[-]	SETTABLE 	5 -35 6	; "MinimapPosition" -
+	95	[-]	GETGLOBAL	5 -6	; NeutralMinionCamps
+	96	[-]	GETTABLE 	5 5 4
+	97	[-]	GETGLOBAL	6 -13	; CampFacePoints
+	98	[-]	GETTABLE 	6 6 4
+	99	[-]	GETTABLE 	6 6 -7	; 1
+	100	[-]	SETTABLE 	5 -36 6	; "VisualFacing" -
+	101	[-]	FORLOOP  	1 -75	; to 27
+	102	[-]	EQ       	1 0 -37	; - "ARAM"
+	103	[-]	JMP      	4	; to 108
+	104	[-]	EQ       	1 0 -38	; - "KINGPORO"
+	105	[-]	JMP      	2	; to 108
+	106	[-]	EQ       	0 0 -39	; - "KIWI"
+	107	[-]	JMP      	89	; to 197
+	108	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	109	[-]	GETTABLE 	1 1 -7	; 1
+	110	[-]	NEWTABLE 	2 1 0
+	111	[-]	GETGLOBAL	3 -41	; PredefinedCamps
+	112	[-]	GETTABLE 	3 3 -7	; 1
+	113	[-]	SETLIST  	2 1 1	; 1
+	114	[-]	SETTABLE 	1 -40 2	; "Groups" -
+	115	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	116	[-]	GETTABLE 	1 1 -7	; 1
+	117	[-]	NEWTABLE 	2 1 0
+	118	[-]	LOADK    	3 -43	; 100
+	119	[-]	SETLIST  	2 1 1	; 1
+	120	[-]	SETTABLE 	1 -42 2	; "GroupsChance" -
+	121	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	122	[-]	GETTABLE 	1 1 -7	; 1
+	123	[-]	SETTABLE 	1 -23 -24	; "GroupsRespawnTime" 60
+	124	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	125	[-]	GETTABLE 	1 1 -7	; 1
+	126	[-]	SETTABLE 	1 -44 -45	; "GroupDelaySpawnTime" 75
+	127	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	128	[-]	GETTABLE 	1 1 -7	; 1
+	129	[-]	SETTABLE 	1 -25 -46	; "CampLevel" 3
+	130	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	131	[-]	GETTABLE 	1 1 -8	; 2
+	132	[-]	NEWTABLE 	2 1 0
+	133	[-]	GETGLOBAL	3 -41	; PredefinedCamps
+	134	[-]	GETTABLE 	3 3 -8	; 2
+	135	[-]	SETLIST  	2 1 1	; 1
+	136	[-]	SETTABLE 	1 -40 2	; "Groups" -
+	137	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	138	[-]	GETTABLE 	1 1 -8	; 2
+	139	[-]	NEWTABLE 	2 1 0
+	140	[-]	LOADK    	3 -43	; 100
+	141	[-]	SETLIST  	2 1 1	; 1
+	142	[-]	SETTABLE 	1 -42 2	; "GroupsChance" -
+	143	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	144	[-]	GETTABLE 	1 1 -8	; 2
+	145	[-]	SETTABLE 	1 -23 -24	; "GroupsRespawnTime" 60
+	146	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	147	[-]	GETTABLE 	1 1 -8	; 2
+	148	[-]	SETTABLE 	1 -44 -45	; "GroupDelaySpawnTime" 75
+	149	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	150	[-]	GETTABLE 	1 1 -8	; 2
+	151	[-]	SETTABLE 	1 -25 -46	; "CampLevel" 3
+	152	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	153	[-]	GETTABLE 	1 1 -46	; 3
+	154	[-]	NEWTABLE 	2 1 0
+	155	[-]	GETGLOBAL	3 -41	; PredefinedCamps
+	156	[-]	GETTABLE 	3 3 -46	; 3
+	157	[-]	SETLIST  	2 1 1	; 1
+	158	[-]	SETTABLE 	1 -40 2	; "Groups" -
+	159	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	160	[-]	GETTABLE 	1 1 -46	; 3
+	161	[-]	NEWTABLE 	2 1 0
+	162	[-]	LOADK    	3 -43	; 100
+	163	[-]	SETLIST  	2 1 1	; 1
+	164	[-]	SETTABLE 	1 -42 2	; "GroupsChance" -
+	165	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	166	[-]	GETTABLE 	1 1 -46	; 3
+	167	[-]	SETTABLE 	1 -23 -24	; "GroupsRespawnTime" 60
+	168	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	169	[-]	GETTABLE 	1 1 -46	; 3
+	170	[-]	SETTABLE 	1 -44 -45	; "GroupDelaySpawnTime" 75
+	171	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	172	[-]	GETTABLE 	1 1 -46	; 3
+	173	[-]	SETTABLE 	1 -25 -46	; "CampLevel" 3
+	174	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	175	[-]	GETTABLE 	1 1 -47	; 4
+	176	[-]	NEWTABLE 	2 1 0
+	177	[-]	GETGLOBAL	3 -41	; PredefinedCamps
+	178	[-]	GETTABLE 	3 3 -47	; 4
+	179	[-]	SETLIST  	2 1 1	; 1
+	180	[-]	SETTABLE 	1 -40 2	; "Groups" -
+	181	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	182	[-]	GETTABLE 	1 1 -47	; 4
+	183	[-]	NEWTABLE 	2 1 0
+	184	[-]	LOADK    	3 -43	; 100
+	185	[-]	SETLIST  	2 1 1	; 1
+	186	[-]	SETTABLE 	1 -42 2	; "GroupsChance" -
+	187	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	188	[-]	GETTABLE 	1 1 -47	; 4
+	189	[-]	SETTABLE 	1 -23 -24	; "GroupsRespawnTime" 60
+	190	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	191	[-]	GETTABLE 	1 1 -47	; 4
+	192	[-]	SETTABLE 	1 -44 -45	; "GroupDelaySpawnTime" 75
+	193	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	194	[-]	GETTABLE 	1 1 -47	; 4
+	195	[-]	SETTABLE 	1 -25 -46	; "CampLevel" 3
+	196	[-]	JMP      	64	; to 261
+	197	[-]	EQ       	0 0 -5	; - "FIRSTBLOOD"
+	198	[-]	JMP      	62	; to 261
+	199	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	200	[-]	GETTABLE 	1 1 -7	; 1
+	201	[-]	SETTABLE 	1 -48 -49	; "Name" "Chaos Outer Relic"
+	202	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	203	[-]	GETTABLE 	1 1 -7	; 1
+	204	[-]	GETGLOBAL	2 -6	; NeutralMinionCamps
+	205	[-]	GETTABLE 	2 2 -7	; 1
+	206	[-]	GETTABLE 	2 2 -48	; "Name"
+	207	[-]	SETTABLE 	1 -26 2	; "TimerType" -
+	208	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	209	[-]	GETTABLE 	1 1 -7	; 1
+	210	[-]	NEWTABLE 	2 1 0
+	211	[-]	GETGLOBAL	3 -50	; PredefinedCampsFB
+	212	[-]	GETTABLE 	3 3 -7	; 1
+	213	[-]	SETLIST  	2 1 1	; 1
+	214	[-]	SETTABLE 	1 -40 2	; "Groups" -
+	215	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	216	[-]	GETTABLE 	1 1 -7	; 1
+	217	[-]	NEWTABLE 	2 1 0
+	218	[-]	LOADK    	3 -43	; 100
+	219	[-]	SETLIST  	2 1 1	; 1
+	220	[-]	SETTABLE 	1 -42 2	; "GroupsChance" -
+	221	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	222	[-]	GETTABLE 	1 1 -7	; 1
+	223	[-]	SETTABLE 	1 -23 -51	; "GroupsRespawnTime" 90
+	224	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	225	[-]	GETTABLE 	1 1 -7	; 1
+	226	[-]	SETTABLE 	1 -44 -51	; "GroupDelaySpawnTime" 90
+	227	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	228	[-]	GETTABLE 	1 1 -7	; 1
+	229	[-]	SETTABLE 	1 -25 -46	; "CampLevel" 3
+	230	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	231	[-]	GETTABLE 	1 1 -8	; 2
+	232	[-]	SETTABLE 	1 -48 -52	; "Name" "Order Outer Relic"
+	233	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	234	[-]	GETTABLE 	1 1 -8	; 2
+	235	[-]	GETGLOBAL	2 -6	; NeutralMinionCamps
+	236	[-]	GETTABLE 	2 2 -8	; 2
+	237	[-]	GETTABLE 	2 2 -48	; "Name"
+	238	[-]	SETTABLE 	1 -26 2	; "TimerType" -
+	239	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	240	[-]	GETTABLE 	1 1 -8	; 2
+	241	[-]	NEWTABLE 	2 1 0
+	242	[-]	GETGLOBAL	3 -50	; PredefinedCampsFB
+	243	[-]	GETTABLE 	3 3 -8	; 2
+	244	[-]	SETLIST  	2 1 1	; 1
+	245	[-]	SETTABLE 	1 -40 2	; "Groups" -
+	246	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	247	[-]	GETTABLE 	1 1 -8	; 2
+	248	[-]	NEWTABLE 	2 1 0
+	249	[-]	LOADK    	3 -43	; 100
+	250	[-]	SETLIST  	2 1 1	; 1
+	251	[-]	SETTABLE 	1 -42 2	; "GroupsChance" -
+	252	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	253	[-]	GETTABLE 	1 1 -8	; 2
+	254	[-]	SETTABLE 	1 -23 -51	; "GroupsRespawnTime" 90
+	255	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	256	[-]	GETTABLE 	1 1 -8	; 2
+	257	[-]	SETTABLE 	1 -44 -51	; "GroupDelaySpawnTime" 90
+	258	[-]	GETGLOBAL	1 -6	; NeutralMinionCamps
+	259	[-]	GETTABLE 	1 1 -8	; 2
+	260	[-]	SETTABLE 	1 -25 -46	; "CampLevel" 3
+	261	[-]	RETURN   	0 1
+constants (52) for 000001E1ED0F1990:
+	1	"GetGameMode"
+	2	"pairs"
+	3	"NeutralMinionNames"
+	4	"PreloadCharacter"
+	5	"FIRSTBLOOD"
+	6	"NeutralMinionCamps"
+	7	1
+	8	2
+	9	"NUMBER_OF_CAMPS"
+	10	"Positions"
+	11	"CampSpawnPoints"
+	12	"FacePositions"
+	13	"CampFacePoints"
+	14	"UniqueNames"
+	15	"AliveTracker"
+	16	"Team"
+	17	"TEAM_NEUTRAL"
+	18	"DamageBonus"
+	19	0
+	20	"HealthBonus"
+	21	"AIState"
+	22	"INACTIVE"
+	23	"GroupsRespawnTime"
+	24	60
+	25	"CampLevel"
+	26	"TimerType"
+	27	""
+	28	"MinimapIcon"
+	29	"LeashRadius"
+	30	800
+	31	"StopSpawnTime"
+	32	25000
+	33	"LeashCenter"
+	34	"VisualCenter"
+	35	"MinimapPosition"
+	36	"VisualFacing"
+	37	"ARAM"
+	38	"KINGPORO"
+	39	"KIWI"
+	40	"Groups"
+	41	"PredefinedCamps"
+	42	"GroupsChance"
+	43	100
+	44	"GroupDelaySpawnTime"
+	45	75
+	46	3
+	47	4
+	48	"Name"
+	49	"Chaos Outer Relic"
+	50	"PredefinedCampsFB"
+	51	90
+	52	"Order Outer Relic"
+locals (0) for 000001E1ED0F1990:
+upvalues (0) for 000001E1ED0F1990:
+
+function <?:125,147> (4 instructions, 16 bytes at 000001E1ED0F1A10)
+1 param, 2 slots, 0 upvalues, 0 locals, 0 constants, 1 function
+	1	[-]	CLOSURE  	1 0	; 000001E1ED0F1AB0
+	2	[-]	MOVE     	0 0
+	3	[-]	RETURN   	1 2
+	4	[-]	RETURN   	0 1
+constants (0) for 000001E1ED0F1A10:
+locals (0) for 000001E1ED0F1A10:
+upvalues (0) for 000001E1ED0F1A10:
+
+function <?:126,146> (78 instructions, 312 bytes at 000001E1ED0F1AB0)
+0 params, 16 slots, 1 upvalue, 0 locals, 13 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; GetRandomIntLua
+	2	[-]	LOADK    	1 -2	; 100
+	3	[-]	CALL     	0 2 2
+	4	[-]	LOADK    	1 -3	; 0
+	5	[-]	LOADBOOL 	2 0 0
+	6	[-]	GETGLOBAL	3 -4	; NeutralMinionCamps
+	7	[-]	GETUPVAL 	4 0	; -
+	8	[-]	GETTABLE 	3 3 4
+	9	[-]	GETGLOBAL	4 -4	; NeutralMinionCamps
+	10	[-]	GETUPVAL 	5 0	; -
+	11	[-]	GETTABLE 	4 4 5
+	12	[-]	GETTABLE 	4 4 -5	; "DamageBonus"
+	13	[-]	ADD      	4 4 -3	; - 0
+	14	[-]	SETTABLE 	3 -5 4	; "DamageBonus" -
+	15	[-]	GETGLOBAL	3 -4	; NeutralMinionCamps
+	16	[-]	GETUPVAL 	4 0	; -
+	17	[-]	GETTABLE 	3 3 4
+	18	[-]	GETGLOBAL	4 -4	; NeutralMinionCamps
+	19	[-]	GETUPVAL 	5 0	; -
+	20	[-]	GETTABLE 	4 4 5
+	21	[-]	GETTABLE 	4 4 -6	; "HealthBonus"
+	22	[-]	ADD      	4 4 -3	; - 0
+	23	[-]	SETTABLE 	3 -6 4	; "HealthBonus" -
+	24	[-]	LOADK    	3 -7	; 1
+	25	[-]	GETGLOBAL	4 -4	; NeutralMinionCamps
+	26	[-]	GETUPVAL 	5 0	; -
+	27	[-]	GETTABLE 	4 4 5
+	28	[-]	GETTABLE 	4 4 -8	; "Groups"
+	29	[-]	LEN      	4 4
+	30	[-]	LOADK    	5 -7	; 1
+	31	[-]	FORPREP  	3 45	; to 77
+	32	[-]	GETGLOBAL	7 -4	; NeutralMinionCamps
+	33	[-]	GETUPVAL 	8 0	; -
+	34	[-]	GETTABLE 	7 7 8
+	35	[-]	GETTABLE 	7 7 -9	; "GroupsChance"
+	36	[-]	GETTABLE 	7 7 6
+	37	[-]	ADD      	7 7 1
+	38	[-]	LE       	0 0 7
+	39	[-]	JMP      	31	; to 71
+	40	[-]	EQ       	0 2 -10	; - false
+	41	[-]	JMP      	29	; to 71
+	42	[-]	LOADBOOL 	2 1 0
+	43	[-]	GETGLOBAL	7 -4	; NeutralMinionCamps
+	44	[-]	GETUPVAL 	8 0	; -
+	45	[-]	GETTABLE 	7 7 8
+	46	[-]	NEWTABLE 	8 0 0
+	47	[-]	SETTABLE 	7 -11 8	; "AliveTracker" -
+	48	[-]	LOADK    	7 -7	; 1
+	49	[-]	GETGLOBAL	8 -4	; NeutralMinionCamps
+	50	[-]	GETUPVAL 	9 0	; -
+	51	[-]	GETTABLE 	8 8 9
+	52	[-]	GETTABLE 	8 8 -8	; "Groups"
+	53	[-]	GETTABLE 	8 8 6
+	54	[-]	LEN      	8 8
+	55	[-]	LOADK    	9 -7	; 1
+	56	[-]	FORPREP  	7 13	; to 70
+	57	[-]	GETGLOBAL	11 -12	; SpawnNeutralMinion
+	58	[-]	GETGLOBAL	12 -4	; NeutralMinionCamps
+	59	[-]	GETUPVAL 	13 0	; -
+	60	[-]	GETTABLE 	12 12 13
+	61	[-]	GETUPVAL 	13 0	; -
+	62	[-]	MOVE     	14 6
+	63	[-]	MOVE     	15 10
+	64	[-]	CALL     	11 5 1
+	65	[-]	GETGLOBAL	11 -4	; NeutralMinionCamps
+	66	[-]	GETUPVAL 	12 0	; -
+	67	[-]	GETTABLE 	11 11 12
+	68	[-]	GETTABLE 	11 11 -11	; "AliveTracker"
+	69	[-]	SETTABLE 	11 10 -13	; - true
+	70	[-]	FORLOOP  	7 -14	; to 57
+	71	[-]	GETGLOBAL	7 -4	; NeutralMinionCamps
+	72	[-]	GETUPVAL 	8 0	; -
+	73	[-]	GETTABLE 	7 7 8
+	74	[-]	GETTABLE 	7 7 -9	; "GroupsChance"
+	75	[-]	GETTABLE 	7 7 6
+	76	[-]	ADD      	1 1 7
+	77	[-]	FORLOOP  	3 -46	; to 32
+	78	[-]	RETURN   	0 1
+constants (13) for 000001E1ED0F1AB0:
+	1	"GetRandomIntLua"
+	2	100
+	3	0
+	4	"NeutralMinionCamps"
+	5	"DamageBonus"
+	6	"HealthBonus"
+	7	1
+	8	"Groups"
+	9	"GroupsChance"
+	10	false
+	11	"AliveTracker"
+	12	"SpawnNeutralMinion"
+	13	true
+locals (0) for 000001E1ED0F1AB0:
+upvalues (0) for 000001E1ED0F1AB0:
+
+function <?:150,166> (64 instructions, 256 bytes at 000001E1ED0F1B30)
+0 params, 19 slots, 0 upvalues, 0 locals, 9 constants, 0 functions
+	1	[-]	LOADK    	0 -1	; 1
+	2	[-]	GETGLOBAL	1 -2	; NeutralMinionCamps
+	3	[-]	LEN      	1 1
+	4	[-]	LOADK    	2 -1	; 1
+	5	[-]	FORPREP  	0 57	; to 63
+	6	[-]	LOADK    	4 -1	; 1
+	7	[-]	GETGLOBAL	5 -2	; NeutralMinionCamps
+	8	[-]	GETTABLE 	5 5 3
+	9	[-]	GETTABLE 	5 5 -3	; "Groups"
+	10	[-]	LEN      	5 5
+	11	[-]	LOADK    	6 -1	; 1
+	12	[-]	FORPREP  	4 30	; to 43
+	13	[-]	GETGLOBAL	8 -2	; NeutralMinionCamps
+	14	[-]	GETTABLE 	8 8 3
+	15	[-]	GETTABLE 	8 8 -4	; "UniqueNames"
+	16	[-]	NEWTABLE 	9 0 0
+	17	[-]	SETTABLE 	8 7 9
+	18	[-]	LOADK    	8 -1	; 1
+	19	[-]	GETGLOBAL	9 -2	; NeutralMinionCamps
+	20	[-]	GETTABLE 	9 9 3
+	21	[-]	GETTABLE 	9 9 -3	; "Groups"
+	22	[-]	GETTABLE 	9 9 7
+	23	[-]	LEN      	9 9
+	24	[-]	LOADK    	10 -1	; 1
+	25	[-]	FORPREP  	8 16	; to 42
+	26	[-]	GETGLOBAL	12 -2	; NeutralMinionCamps
+	27	[-]	GETTABLE 	12 12 3
+	28	[-]	GETTABLE 	12 12 -4	; "UniqueNames"
+	29	[-]	GETTABLE 	12 12 7
+	30	[-]	GETGLOBAL	13 -2	; NeutralMinionCamps
+	31	[-]	GETTABLE 	13 13 3
+	32	[-]	GETTABLE 	13 13 -3	; "Groups"
+	33	[-]	GETTABLE 	13 13 7
+	34	[-]	GETTABLE 	13 13 11
+	35	[-]	MOVE     	14 3
+	36	[-]	LOADK    	15 -5	; "."
+	37	[-]	MOVE     	16 7
+	38	[-]	LOADK    	17 -5	; "."
+	39	[-]	MOVE     	18 11
+	40	[-]	CONCAT   	13 13 18
+	41	[-]	SETTABLE 	12 11 13
+	42	[-]	FORLOOP  	8 -17	; to 26
+	43	[-]	FORLOOP  	4 -31	; to 13
+	44	[-]	GETGLOBAL	4 -6	; NeutralTimers
+	45	[-]	LEN      	4 4
+	46	[-]	GETGLOBAL	5 -6	; NeutralTimers
+	47	[-]	ADD      	6 4 -1	; - 1
+	48	[-]	GETGLOBAL	7 -7	; CreateRespawnNeutralTimer
+	49	[-]	MOVE     	8 3
+	50	[-]	CALL     	7 2 2
+	51	[-]	SETTABLE 	5 6 7
+	52	[-]	GETGLOBAL	5 -2	; NeutralMinionCamps
+	53	[-]	GETTABLE 	5 5 3
+	54	[-]	GETGLOBAL	6 -6	; NeutralTimers
+	55	[-]	ADD      	7 4 -1	; - 1
+	56	[-]	GETTABLE 	6 6 7
+	57	[-]	SETTABLE 	5 -8 6	; "Timer" -
+	58	[-]	GETGLOBAL	5 -9	; CreateNeutralCamp
+	59	[-]	GETGLOBAL	6 -2	; NeutralMinionCamps
+	60	[-]	GETTABLE 	6 6 3
+	61	[-]	MOVE     	7 3
+	62	[-]	CALL     	5 3 1
+	63	[-]	FORLOOP  	0 -58	; to 6
+	64	[-]	RETURN   	0 1
+constants (9) for 000001E1ED0F1B30:
+	1	1
+	2	"NeutralMinionCamps"
+	3	"Groups"
+	4	"UniqueNames"
+	5	"."
+	6	"NeutralTimers"
+	7	"CreateRespawnNeutralTimer"
+	8	"Timer"
+	9	"CreateNeutralCamp"
+locals (0) for 000001E1ED0F1B30:
+upvalues (0) for 000001E1ED0F1B30:
+
+function <?:168,197> (76 instructions, 304 bytes at 000001E1ED0F5160)
+1 param, 13 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; NeutralMinionCamps
+	2	[-]	LEN      	1 1
+	3	[-]	LE       	0 0 1
+	4	[-]	JMP      	71	; to 76
+	5	[-]	GETGLOBAL	1 -2	; GetRandomIntLua
+	6	[-]	LOADK    	2 -3	; 100
+	7	[-]	CALL     	1 2 2
+	8	[-]	LOADK    	2 -4	; 0
+	9	[-]	LOADBOOL 	3 0 0
+	10	[-]	LOADK    	4 -5	; 1
+	11	[-]	GETGLOBAL	5 -1	; NeutralMinionCamps
+	12	[-]	GETTABLE 	5 5 0
+	13	[-]	GETTABLE 	5 5 -6	; "Groups"
+	14	[-]	LEN      	5 5
+	15	[-]	LOADK    	6 -5	; 1
+	16	[-]	FORPREP  	4 58	; to 75
+	17	[-]	GETGLOBAL	8 -1	; NeutralMinionCamps
+	18	[-]	GETTABLE 	8 8 0
+	19	[-]	GETTABLE 	8 8 -7	; "GroupDelaySpawnTime"
+	20	[-]	LT       	0 -4 8	; 0 -
+	21	[-]	JMP      	21	; to 43
+	22	[-]	EQ       	0 3 -8	; - false
+	23	[-]	JMP      	19	; to 43
+	24	[-]	LOADBOOL 	3 1 0
+	25	[-]	GETGLOBAL	8 -1	; NeutralMinionCamps
+	26	[-]	GETTABLE 	8 8 0
+	27	[-]	NEWTABLE 	9 0 0
+	28	[-]	SETTABLE 	8 -9 9	; "AliveTracker" -
+	29	[-]	LOADK    	8 -5	; 1
+	30	[-]	GETGLOBAL	9 -1	; NeutralMinionCamps
+	31	[-]	GETTABLE 	9 9 0
+	32	[-]	GETTABLE 	9 9 -6	; "Groups"
+	33	[-]	GETTABLE 	9 9 7
+	34	[-]	LEN      	9 9
+	35	[-]	LOADK    	10 -5	; 1
+	36	[-]	FORPREP  	8 4	; to 41
+	37	[-]	GETGLOBAL	12 -1	; NeutralMinionCamps
+	38	[-]	GETTABLE 	12 12 0
+	39	[-]	GETTABLE 	12 12 -9	; "AliveTracker"
+	40	[-]	SETTABLE 	12 11 -10	; - true
+	41	[-]	FORLOOP  	8 -5	; to 37
+	42	[-]	JMP      	32	; to 75
+	43	[-]	GETGLOBAL	8 -1	; NeutralMinionCamps
+	44	[-]	GETTABLE 	8 8 0
+	45	[-]	GETTABLE 	8 8 -11	; "GroupsChance"
+	46	[-]	GETTABLE 	8 8 7
+	47	[-]	ADD      	8 8 2
+	48	[-]	LE       	0 1 8
+	49	[-]	JMP      	20	; to 70
+	50	[-]	EQ       	0 3 -8	; - false
+	51	[-]	JMP      	18	; to 70
+	52	[-]	LOADBOOL 	3 1 0
+	53	[-]	GETGLOBAL	8 -1	; NeutralMinionCamps
+	54	[-]	GETTABLE 	8 8 0
+	55	[-]	NEWTABLE 	9 0 0
+	56	[-]	SETTABLE 	8 -9 9	; "AliveTracker" -
+	57	[-]	LOADK    	8 -5	; 1
+	58	[-]	GETGLOBAL	9 -1	; NeutralMinionCamps
+	59	[-]	GETTABLE 	9 9 0
+	60	[-]	GETTABLE 	9 9 -6	; "Groups"
+	61	[-]	GETTABLE 	9 9 7
+	62	[-]	LEN      	9 9
+	63	[-]	LOADK    	10 -5	; 1
+	64	[-]	FORPREP  	8 4	; to 69
+	65	[-]	GETGLOBAL	12 -1	; NeutralMinionCamps
+	66	[-]	GETTABLE 	12 12 0
+	67	[-]	GETTABLE 	12 12 -9	; "AliveTracker"
+	68	[-]	SETTABLE 	12 11 -10	; - true
+	69	[-]	FORLOOP  	8 -5	; to 65
+	70	[-]	GETGLOBAL	8 -1	; NeutralMinionCamps
+	71	[-]	GETTABLE 	8 8 0
+	72	[-]	GETTABLE 	8 8 -11	; "GroupsChance"
+	73	[-]	GETTABLE 	8 8 7
+	74	[-]	ADD      	2 2 8
+	75	[-]	FORLOOP  	4 -59	; to 17
+	76	[-]	RETURN   	0 1
+constants (11) for 000001E1ED0F5160:
+	1	"NeutralMinionCamps"
+	2	"GetRandomIntLua"
+	3	100
+	4	0
+	5	1
+	6	"Groups"
+	7	"GroupDelaySpawnTime"
+	8	false
+	9	"AliveTracker"
+	10	true
+	11	"GroupsChance"
+locals (0) for 000001E1ED0F5160:
+upvalues (0) for 000001E1ED0F5160:
+
+function <?:199,228> (73 instructions, 292 bytes at 000001E1ED0F53E0)
+4 params, 19 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	4 1 0
+	2	[-]	LOADK    	5 -1	; 0
+	3	[-]	LOADK    	6 -2	; 1
+	4	[-]	GETGLOBAL	7 -3	; NeutralMinionCamps
+	5	[-]	LEN      	7 7
+	6	[-]	LOADK    	8 -2	; 1
+	7	[-]	FORPREP  	6 29	; to 37
+	8	[-]	LOADK    	10 -2	; 1
+	9	[-]	GETGLOBAL	11 -3	; NeutralMinionCamps
+	10	[-]	GETTABLE 	11 11 9
+	11	[-]	GETTABLE 	11 11 -4	; "UniqueNames"
+	12	[-]	LEN      	11 11
+	13	[-]	LOADK    	12 -2	; 1
+	14	[-]	FORPREP  	10 21	; to 36
+	15	[-]	LOADK    	14 -2	; 1
+	16	[-]	GETGLOBAL	15 -3	; NeutralMinionCamps
+	17	[-]	GETTABLE 	15 15 9
+	18	[-]	GETTABLE 	15 15 -4	; "UniqueNames"
+	19	[-]	GETTABLE 	15 15 13
+	20	[-]	LEN      	15 15
+	21	[-]	LOADK    	16 -2	; 1
+	22	[-]	FORPREP  	14 12	; to 35
+	23	[-]	GETGLOBAL	18 -3	; NeutralMinionCamps
+	24	[-]	GETTABLE 	18 18 9
+	25	[-]	GETTABLE 	18 18 -4	; "UniqueNames"
+	26	[-]	GETTABLE 	18 18 13
+	27	[-]	GETTABLE 	18 18 17
+	28	[-]	EQ       	0 18 0
+	29	[-]	JMP      	5	; to 35
+	30	[-]	MOVE     	5 9
+	31	[-]	GETGLOBAL	18 -3	; NeutralMinionCamps
+	32	[-]	GETTABLE 	18 18 9
+	33	[-]	GETTABLE 	18 18 -5	; "AliveTracker"
+	34	[-]	SETTABLE 	18 17 -6	; - false
+	35	[-]	FORLOOP  	14 -13	; to 23
+	36	[-]	FORLOOP  	10 -22	; to 15
+	37	[-]	FORLOOP  	6 -30	; to 8
+	38	[-]	LT       	0 -1 5	; 0 -
+	39	[-]	JMP      	33	; to 73
+	40	[-]	LOADK    	6 -2	; 1
+	41	[-]	GETGLOBAL	7 -3	; NeutralMinionCamps
+	42	[-]	GETTABLE 	7 7 5
+	43	[-]	GETTABLE 	7 7 -5	; "AliveTracker"
+	44	[-]	LEN      	7 7
+	45	[-]	LOADK    	8 -2	; 1
+	46	[-]	FORPREP  	6 7	; to 54
+	47	[-]	GETGLOBAL	10 -3	; NeutralMinionCamps
+	48	[-]	GETTABLE 	10 10 5
+	49	[-]	GETTABLE 	10 10 -5	; "AliveTracker"
+	50	[-]	GETTABLE 	10 10 9
+	51	[-]	EQ       	0 10 -7	; - true
+	52	[-]	JMP      	1	; to 54
+	53	[-]	LOADBOOL 	4 0 0
+	54	[-]	FORLOOP  	6 -8	; to 47
+	55	[-]	EQ       	0 4 -7	; - true
+	56	[-]	JMP      	16	; to 73
+	57	[-]	GETGLOBAL	6 -8	; InitNeutralMinionTimer
+	58	[-]	GETGLOBAL	7 -3	; NeutralMinionCamps
+	59	[-]	GETTABLE 	7 7 5
+	60	[-]	GETTABLE 	7 7 -9	; "Timer"
+	61	[-]	GETGLOBAL	8 -3	; NeutralMinionCamps
+	62	[-]	GETTABLE 	8 8 5
+	63	[-]	GETTABLE 	8 8 -10	; "TimerType"
+	64	[-]	GETGLOBAL	9 -3	; NeutralMinionCamps
+	65	[-]	GETTABLE 	9 9 5
+	66	[-]	GETTABLE 	9 9 -11	; "GroupsRespawnTime"
+	67	[-]	LOADK    	10 -1	; 0
+	68	[-]	LOADBOOL 	11 0 0
+	69	[-]	GETGLOBAL	12 -3	; NeutralMinionCamps
+	70	[-]	GETTABLE 	12 12 5
+	71	[-]	GETTABLE 	12 12 -12	; "StopSpawnTime"
+	72	[-]	CALL     	6 7 1
+	73	[-]	RETURN   	0 1
+constants (12) for 000001E1ED0F53E0:
+	1	0
+	2	1
+	3	"NeutralMinionCamps"
+	4	"UniqueNames"
+	5	"AliveTracker"
+	6	false
+	7	true
+	8	"InitNeutralMinionTimer"
+	9	"Timer"
+	10	"TimerType"
+	11	"GroupsRespawnTime"
+	12	"StopSpawnTime"
+locals (0) for 000001E1ED0F53E0:
+upvalues (0) for 000001E1ED0F53E0:

@@ -1,0 +1,61 @@
+
+main <?:0,0> (3 instructions, 12 bytes at 00000119476734C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 1 constant, 1 function
+	1	[-]	CLOSURE  	0 0	; 0000011947673540
+	2	[-]	SETGLOBAL	0 -1	; SpawnCampSpawnMarkers
+	3	[-]	RETURN   	0 1
+constants (1) for 00000119476734C0:
+	1	"SpawnCampSpawnMarkers"
+locals (0) for 00000119476734C0:
+upvalues (0) for 00000119476734C0:
+
+function <?:2,8> (32 instructions, 128 bytes at 0000011947673540)
+1 param, 18 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	GETGLOBAL	1 -1	; ipairs
+	2	[-]	MOVE     	2 0
+	3	[-]	CALL     	1 2 4
+	4	[-]	JMP      	25	; to 30
+	5	[-]	GETGLOBAL	6 -3	; SpawnMinion
+	6	[-]	LOADK    	7 -4	; "CampRespawn"
+	7	[-]	LOADK    	8 -5	; "SRU_CampRespawnMarker"
+	8	[-]	LOADK    	9 -6	; "Idle.lua"
+	9	[-]	GETGLOBAL	10 -7	; Make3DPoint
+	10	[-]	LOADK    	11 -8	; 2000
+	11	[-]	LOADK    	12 -9	; 70
+	12	[-]	LOADK    	13 -8	; 2000
+	13	[-]	CALL     	10 4 2
+	14	[-]	GETGLOBAL	11 -10	; TEAM_NEUTRAL
+	15	[-]	LOADBOOL 	12 0 0
+	16	[-]	LOADBOOL 	13 1 0
+	17	[-]	LOADBOOL 	14 1 0
+	18	[-]	LOADBOOL 	15 1 0
+	19	[-]	LOADBOOL 	16 1 0
+	20	[-]	LOADBOOL 	17 1 0
+	21	[-]	CALL     	6 12 2
+	22	[-]	SETGLOBAL	6 -2	; Marker
+	23	[-]	GETGLOBAL	6 -11	; ApplyPersistentBuff
+	24	[-]	GETGLOBAL	7 -2	; Marker
+	25	[-]	LOADK    	8 -12	; "CampRespawnInitial"
+	26	[-]	LOADBOOL 	9 0 0
+	27	[-]	LOADK    	10 -13	; 1
+	28	[-]	LOADK    	11 -13	; 1
+	29	[-]	CALL     	6 6 1
+	30	[-]	TFORLOOP 	1 2
+	31	[-]	JMP      	-27	; to 5
+	32	[-]	RETURN   	0 1
+constants (13) for 0000011947673540:
+	1	"ipairs"
+	2	"Marker"
+	3	"SpawnMinion"
+	4	"CampRespawn"
+	5	"SRU_CampRespawnMarker"
+	6	"Idle.lua"
+	7	"Make3DPoint"
+	8	2000
+	9	70
+	10	"TEAM_NEUTRAL"
+	11	"ApplyPersistentBuff"
+	12	"CampRespawnInitial"
+	13	1
+locals (0) for 0000011947673540:
+upvalues (0) for 0000011947673540:

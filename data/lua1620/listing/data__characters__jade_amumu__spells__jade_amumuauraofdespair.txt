@@ -1,0 +1,42 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 000001C1B3883600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "SadMummy_Jade_Amumu_AuraofDespair.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Jade_AmumuAuraofDespair"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "doesnotexist.troy"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -10	; "head"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName
+	13	[-]	LOADK    	0 -8	; "doesnotexist.troy"
+	14	[-]	SETGLOBAL	0 -11	; AutoBuffActivateEffect2
+	15	[-]	LOADK    	0 -13	; 2
+	16	[-]	SETGLOBAL	0 -12	; SpellToggleSlot
+	17	[-]	NEWTABLE 	0 1 0
+	18	[-]	LOADK    	1 -15	; "BadrobotJade_Amumu"
+	19	[-]	SETLIST  	0 1 1	; 1
+	20	[-]	SETGLOBAL	0 -14	; SpellFXOverrideSkins
+	21	[-]	RETURN   	0 1
+constants (15) for 000001C1B3883600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"SadMummy_Jade_Amumu_AuraofDespair.dds"
+	5	"BuffName"
+	6	"Jade_AmumuAuraofDespair"
+	7	"AutoBuffActivateEffect"
+	8	"doesnotexist.troy"
+	9	"AutoBuffActivateAttachBoneName"
+	10	"head"
+	11	"AutoBuffActivateEffect2"
+	12	"SpellToggleSlot"
+	13	2
+	14	"SpellFXOverrideSkins"
+	15	"BadrobotJade_Amumu"
+locals (0) for 000001C1B3883600:
+upvalues (0) for 000001C1B3883600:

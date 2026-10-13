@@ -1,0 +1,31 @@
+
+main <?:0,0> (15 instructions, 60 bytes at 00000212AA9734C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; CastingBreaksStealth
+	7	[-]	LOADK    	0 -5	; "Evelynn_Ravage.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "Ravage"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; "DATA/Particles/RendingShot_buf.troy"
+	12	[-]	SETGLOBAL	0 -8	; AutoBuffActivateEffect
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -10	; IsDamagingSpell
+	15	[-]	RETURN   	0 1
+constants (10) for 00000212AA9734C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"CastingBreaksStealth"
+	4	"BuffTextureName"
+	5	"Evelynn_Ravage.dds"
+	6	"BuffName"
+	7	"Ravage"
+	8	"AutoBuffActivateEffect"
+	9	"DATA/Particles/RendingShot_buf.troy"
+	10	"IsDamagingSpell"
+locals (0) for 00000212AA9734C0:
+upvalues (0) for 00000212AA9734C0:

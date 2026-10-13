@@ -9,11 +9,27 @@
 // match: d95240 _PACKET_get_length_prefixed_1
 // match: d95290 _PACKET_get_length_prefixed_2
 // match: d952f0 _PACKET_get_sub_packet
+// match: d95330 _construct_stateless_ticket
+// match: d95890 _create_ticket_prequel
 // match: d95de0 _ossl_statem_server_post_work
+// match: d96100 _ossl_statem_server_pre_work
 // match: d96c90 _send_certificate_request
 // match: d96d00 _send_server_key_exchange
+// match: d96d40 _tls_construct_cert_status_body
+// match: d97e70 _tls_early_post_process_client_hello
+// match: d98a50 _tls_handle_alpn
+// match: d98ce0 _tls_post_process_client_hello
+// match: d99030 _tls_process_cke_dhe
+// match: d99200 _tls_process_cke_ecdhe
+// match: d99370 _tls_process_cke_gost
+// match: d997d0 _tls_process_cke_rsa
+// match: d99ae0 _tls_process_client_certificate
+// match: d9a0c0 _tls_process_client_hello
+// match: d9a640 _tls_process_client_key_exchange
 // match: da0f70 _PACKET_buf_init
 // match: da0fa0 _PACKET_get_length_prefixed_3
 // match: da3ee0 _PACKET_get_1
 // match: da3f10 _PACKET_get_net_3
+#define OPENSSL_FILE "ssl\\statem\\statem_srvr.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/ssl/statem/statem_srvr.c"

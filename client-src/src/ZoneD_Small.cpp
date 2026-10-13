@@ -2,6 +2,7 @@
 // Each class here holds only what its one function needs; the names are ours.
 #include <bitset>
 #include "types.h"
+#include <new>
 
 // rva 0x2e4940: true when the object the pointer at rva 0x25272b8 leads to has 2 at +8.
 // match: 2e4940 ?Object25272b8_Is2@@YA_NXZ
@@ -66,23 +67,6 @@ void CallA162c0Unless317613c()
 bool ZoneD_UseBitsetTest(const std::bitset<64>& bits, u32 position)
 {
     return bits.test(position);
-}
-
-// rva 0x2f2a00: calls function pointer at +4 on context at +0xc.
-// match: 2f2a00 ?Invoke@Delegate2f2a00
-struct Delegate2f2a00
-{
-    void* unknown00;
-    void (__thiscall *fn)(void*);
-    void* unknown08;
-    void* context;
-
-    void Invoke();
-};
-
-void Delegate2f2a00::Invoke()
-{
-    fn(context);
 }
 
 // rva 0x2f2800: calls method at rva 0x40d070 on the sub-object at +0x10 of global 0x316d658.
@@ -203,46 +187,6 @@ void* Object2f2720::Clone(void* dst) const
 
 
 
-// rva 0x2f27b0: deletes a 16-byte object if freeMemory is set.
-// match: 2f27b0 ?Free@Object2f27b0@@QAEX_N@Z
-void operator_delete_sized(void* p, u32 size); // rva 0x9bb940
-
-struct Object2f27b0
-{
-    void Free(bool freeMemory);
-};
-
-void Object2f27b0::Free(bool freeMemory)
-{
-    if (freeMemory)
-        operator_delete_sized(this, 0x10);
-}
-
-// rva 0x2f2780: copies a 16-byte object with vtable 0x157adfc into dst.
-// match: 2f2780 ?Clone@Object2f2780@@QBEPAXPAX@Z
-extern const void* g_vtable157adfc; // rva 0x157adfc
-
-struct Object2f2780
-{
-    const void* vtable;
-    u32 val4;
-    u8 val8;
-    u32 val0c;
-
-    void* Clone(void* dst) const;
-};
-
-void* Object2f2780::Clone(void* dst) const
-{
-    *(const void**)dst = &g_vtable157adfc;
-    *(u32*)((char*)dst + 4) = this->val4;
-    u8 b = this->val8;
-    u32 c = this->val0c;
-    *(u8*)((char*)dst + 8) = b;
-    *(u32*)((char*)dst + 0xc) = c;
-    return dst;
-}
-
 // rva 0x2f08b0: sets u32 at +0x1630 of the inner object.
 // match: 2f08b0 ?SetVal1630@Wrapper2f08b0@@QAEXI@Z
 struct Target2f08b0
@@ -273,12 +217,12 @@ struct Target34f000
     void Method36eba0(void* arg); // rva 0x36eba0
 };
 
+int k353670(); // rva 0x353670, reconstructed in gen/Small_2e0000.cpp
+
 struct Object2ee180
 {
     u8 pad[0x38];
     u8 sub38[4];
-
-    Target34f000* GetTarget(); // rva 0x353670
 
     void Method2ee180();
     void Method2ee2f0();
@@ -286,12 +230,12 @@ struct Object2ee180
 
 void Object2ee180::Method2ee180()
 {
-    GetTarget()->Method34f000(&sub38);
+    ((Target34f000*)k353670())->Method34f000(&sub38);
 }
 
 void Object2ee180::Method2ee2f0()
 {
-    GetTarget()->Method36eba0(&sub38);
+    ((Target34f000*)k353670())->Method36eba0(&sub38);
 }
 
 // rva 0x2e30e0: returns true unless the 64-bit field at +0x88 is 0x00000000ffffffff.
@@ -299,21 +243,14 @@ void Object2ee180::Method2ee2f0()
 struct Object2e30e0
 {
     u8 pad[0x88];
-    u32 low88;
-    u32 high8c;
+    u64 value88;
 
     bool IsValid() const;
 };
 
 bool Object2e30e0::IsValid() const
 {
-    if (low88 != (u32)-1)
-        goto valid;
-    if (high8c != 0)
-        goto valid;
-    return false;
-valid:
-    return true;
+    return value88 != 0x00000000ffffffffULL;
 }
 
 
@@ -375,3 +312,17 @@ void Wrapper2f0930::SetTime(double time)
 
 
 
+
+// rva 0x2f27d0: invokes the callback with three 64-bit values and two 32-bit values.
+// match: 2f27d0 ?Invoke@Delegate2f27d0
+struct Delegate2f27d0
+{
+    void* vtable;
+    void (*fn)(u32, u64, u64, u64, u32);
+    void Invoke(u32 a, const u64& b, const u64& c, const u64& d, const u32& e);
+};
+
+void Delegate2f27d0::Invoke(u32 a, const u64& b, const u64& c, const u64& d, const u32& e)
+{
+    fn(a, b, c, d, e);
+}

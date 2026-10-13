@@ -5,4 +5,6 @@
 // match: db6be0 _X509_get0_signature
 // match: db6c60 _d2i_X509_AUX
 // match: db6d40 _i2d_re_X509_tbs
+#define OPENSSL_FILE "crypto\\x509\\x_x509.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/x509/x_x509.c"

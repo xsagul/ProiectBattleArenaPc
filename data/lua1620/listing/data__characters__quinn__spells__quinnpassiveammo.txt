@@ -1,0 +1,43 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 000001B984F035F0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_W.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "QuinnPassiveAmmo"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "r:Quinn_P_Buff"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -10	; "Weapon_Top"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName
+	13	[-]	LOADK    	0 -12	; "DATA/Shared/Particles/Global_Haste.troy"
+	14	[-]	SETGLOBAL	0 -11	; AutoBuffActivateEffect2
+	15	[-]	LOADK    	0 -14	; 3
+	16	[-]	SETGLOBAL	0 -13	; OnPreDamagePriority
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -16	; DoOnPreDamageInExpirationOrder
+	21	[-]	RETURN   	0 1
+constants (16) for 000001B984F035F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_W.dds"
+	5	"BuffName"
+	6	"QuinnPassiveAmmo"
+	7	"AutoBuffActivateEffect"
+	8	"r:Quinn_P_Buff"
+	9	"AutoBuffActivateAttachBoneName"
+	10	"Weapon_Top"
+	11	"AutoBuffActivateEffect2"
+	12	"DATA/Shared/Particles/Global_Haste.troy"
+	13	"OnPreDamagePriority"
+	14	3
+	15	"IsDamagingSpell"
+	16	"DoOnPreDamageInExpirationOrder"
+locals (0) for 000001B984F035F0:
+upvalues (0) for 000001B984F035F0:

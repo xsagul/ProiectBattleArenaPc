@@ -1,0 +1,31 @@
+
+main <?:0,0> (17 instructions, 68 bytes at 000001A0F3D935C0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Items/Icons2D/Jade/3056_Ohmwrecker.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "ItemFaithShaker"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	NEWTABLE 	0 5 0
+	10	[-]	LOADK    	1 -8	; 50
+	11	[-]	LOADK    	2 -8	; 50
+	12	[-]	LOADK    	3 -8	; 50
+	13	[-]	LOADK    	4 -8	; 50
+	14	[-]	LOADK    	5 -8	; 50
+	15	[-]	SETLIST  	0 5 1	; 1
+	16	[-]	SETGLOBAL	0 -7	; AutoCooldownByLevel
+	17	[-]	RETURN   	0 1
+constants (8) for 000001A0F3D935C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Items/Icons2D/Jade/3056_Ohmwrecker.dds"
+	5	"BuffName"
+	6	"ItemFaithShaker"
+	7	"AutoCooldownByLevel"
+	8	50
+locals (0) for 000001A0F3D935C0:
+upvalues (0) for 000001A0F3D935C0:

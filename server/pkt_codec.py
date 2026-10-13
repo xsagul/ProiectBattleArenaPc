@@ -31,14 +31,14 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-import packet_emu as P  # noqa: E402
+from emu_backend import P  # noqa: E402
 import pkt_modes as PM  # noqa: E402
 
 OUT = os.path.join(P.RES, 'codec')
 PAD = 400
 # header bits a reader tests inline, without the getbits helper: (bit, width, object offset, size). Found by reading
 # the reader's code (79: rva 0x8759de, `shr al, 6; and al, 1` on header byte 5 -> the bool at +0x0a).
-INLINE = {79: [(46, 1, 0x0a, 1)]}
+INLINE = {79: [(46, 1, 0x0a, 1)]} if P.PATCH == '13.3' else {}
 STRING_SIZE = 12   # Riot's string in a packet object: data pointer, size, capacity (no inline buffer)
 
 

@@ -1,0 +1,37 @@
+
+main <?:0,0> (20 instructions, 80 bytes at 0000027995753600)
+0+ params, 3 slots, 0 upvalues, 0 locals, 11 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "XerathArcaneBarrage2"
+	10	[-]	SETGLOBAL	0 -5	; BuffName
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -7	; IsDeathRecapSource
+	13	[-]	NEWTABLE 	0 2 0
+	14	[-]	LOADK    	1 -9	; "IronForgeXerath"
+	15	[-]	LOADK    	2 -10	; "XerathSkin04"
+	16	[-]	SETLIST  	0 2 1	; 1
+	17	[-]	SETGLOBAL	0 -8	; SpellFXOverrideSkins
+	18	[-]	LOADBOOL 	0 1 0
+	19	[-]	SETGLOBAL	0 -11	; IsDamagingSpell
+	20	[-]	RETURN   	0 1
+constants (11) for 0000027995753600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffName"
+	6	"XerathArcaneBarrage2"
+	7	"IsDeathRecapSource"
+	8	"SpellFXOverrideSkins"
+	9	"IronForgeXerath"
+	10	"XerathSkin04"
+	11	"IsDamagingSpell"
+locals (0) for 0000027995753600:
+upvalues (0) for 0000027995753600:

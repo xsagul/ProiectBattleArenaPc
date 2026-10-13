@@ -1,0 +1,53 @@
+
+main <?:0,0> (27 instructions, 108 bytes at 00000244F9C235C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 20 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Lucian/HUD/Icons2D/Lucian_W_buff.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "LucianWBuff"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "r:Lucian_W_Buf_Self"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -10	; "Buffbone_Glb_Ground_Loc"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName
+	13	[-]	LOADK    	0 -12	; "r:Lucian_W_Buf"
+	14	[-]	SETGLOBAL	0 -11	; AutoBuffActivateEffect2
+	15	[-]	LOADK    	0 -14	; "L_Hand"
+	16	[-]	SETGLOBAL	0 -13	; AutoBuffActivateAttachBoneName2
+	17	[-]	LOADK    	0 -12	; "r:Lucian_W_Buf"
+	18	[-]	SETGLOBAL	0 -15	; AutoBuffActivateEffect3
+	19	[-]	LOADK    	0 -17	; "R_Hand"
+	20	[-]	SETGLOBAL	0 -16	; AutoBuffActivateAttachBoneName3
+	21	[-]	NEWTABLE 	0 1 0
+	22	[-]	LOADK    	1 -19	; "CyberEzreal"
+	23	[-]	SETLIST  	0 1 1	; 1
+	24	[-]	SETGLOBAL	0 -18	; SpellFXOverrideSkins
+	25	[-]	LOADBOOL 	0 1 0
+	26	[-]	SETGLOBAL	0 -20	; IsDamagingSpell
+	27	[-]	RETURN   	0 1
+constants (20) for 00000244F9C235C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Lucian/HUD/Icons2D/Lucian_W_buff.dds"
+	5	"BuffName"
+	6	"LucianWBuff"
+	7	"AutoBuffActivateEffect"
+	8	"r:Lucian_W_Buf_Self"
+	9	"AutoBuffActivateAttachBoneName"
+	10	"Buffbone_Glb_Ground_Loc"
+	11	"AutoBuffActivateEffect2"
+	12	"r:Lucian_W_Buf"
+	13	"AutoBuffActivateAttachBoneName2"
+	14	"L_Hand"
+	15	"AutoBuffActivateEffect3"
+	16	"AutoBuffActivateAttachBoneName3"
+	17	"R_Hand"
+	18	"SpellFXOverrideSkins"
+	19	"CyberEzreal"
+	20	"IsDamagingSpell"
+locals (0) for 00000244F9C235C0:
+upvalues (0) for 00000244F9C235C0:

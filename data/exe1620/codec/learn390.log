@@ -1,0 +1,29 @@
+struct 0x1021310
+  0x1021310 field 0: bits 1..1 +0x10 52 B 0:const 1:struct(0x1019860)
+  0x1021310 field 1: bits 0..0 +0x50 24 B 0:fixed 1:const
+struct 0x1019860
+  0x1019860 field 0: bits 6..8 +0x8 4 B 0:varint 1:varint 2:varint 3:const 4:const 5:const 6:varint 7:const
+  0x1019860 field 1: bits 12..14 +0xc 1 B 0:fixed 1:const 2:fixed 3:const 4:fixed 5:fixed 6:const 7:const
+  0x1019860 field 2: bits 3..5 +0xd 1 B 0:const 1:const 2:fixed 3:fixed 4:fixed 5:fixed 6:const 7:const
+  0x1019860 field 3: bits 15..15 +0x10 12 B 0:fixed 1:const
+  0x1019860 field 4: bits 0..2 +0x1c 4 B 0:varint 1:const 2:varint 3:varint 4:varint 5:varint 6:varint 7:const
+  0x1019860 field 5: bits 9..11 +0x20 4 B 0:varint 1:const 2:varint 3:varint 4:varint 5:const 6:varint 7:varint
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1517, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1188, in learn
+    sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc).learn()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 366, in learn
+    fl = self.learn_field(k)
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 410, in learn_field
+    mode = self.learn_mode(k, m, r, seg, res, d)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 486, in learn_mode
+    return self.learn_seq(k, m, res, ('struct', kids))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 861, in learn_seq
+    assert len(left) == 1 and missing == [0], f'{self.fn:#x} field {k} mode {m}: count table, {len(left)} unknown {missing[:4]}'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0x1019860 field 6 mode 0: count table, 2 unknown [0, 10]

@@ -11,4 +11,6 @@
 // match: dfbb40 _CRYPTO_gcm128_setiv
 // match: dfbd00 _CRYPTO_gcm128_tag
 // match: dfbe40 _gcm_init_4bit
+#define OPENSSL_FILE "crypto\\modes\\gcm128.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/modes/gcm128.c"

@@ -16,24 +16,14 @@ import bisect
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-import packet_emu as P  # noqa: E402
+from emu_backend import P  # noqa: E402
 from unicorn import UC_HOOK_MEM_READ, UC_HOOK_CODE, UC_HOOK_MEM_WRITE  # noqa: E402
-from unicorn.x86_const import UC_X86_REG_EIP, UC_X86_REG_ESP, UC_X86_REG_EAX  # noqa: E402
 
-GETBITS = 0x91cae0
 PAD = 32   # bytes added after the body while trying modes, so a mode that reads more than the replay's still reads
 _fs = []
 
 
-def fn_of(r):
-    if not _fs:
-        for line in open(os.path.join(P.RES, '..', '..', 'client-src', 'functions.txt')):
-            try:
-                _fs.append(int(line.split()[0], 16))
-            except ValueError:
-                pass
-        _fs.sort()
-    return _fs[bisect.bisect_right(_fs, r) - 1]
+fn_of = P.fn_of
 
 
 def packets(pid):
@@ -62,32 +52,31 @@ def run(emu, info, pid, body, hdr_len=None):
     obj_box = {}
 
     def on_code(u, addr, size, data):
-        esp = u.reg_read(UC_X86_REG_ESP)
-        ret, buf, pos, width = struct.unpack('<IIII', bytes(u.mem_read(esp, 16)))
-        pend['bits'] = (pos & 0xff, width & 0xff, ret - P.BASE)
-        ev.append(['bits', pos & 0xff, width & 0xff, None, ret - P.BASE])
+        pos, width, ret = P.getbits_call(u)
+        pend['bits'] = (pos, width, ret)
+        ev.append(['bits', pos, width, None, ret])
 
     def on_ret(u, addr, size, data):
         if ev and ev[-1][0] == 'bits' and ev[-1][3] is None:
-            ev[-1][3] = u.reg_read(UC_X86_REG_EAX) & 0xff
+            ev[-1][3] = P.retval(u) & 0xff
         else:  # reads happened in between (none expected inside getbits besides the header)
             for e in reversed(ev):
                 if e[0] == 'bits' and e[3] is None:
-                    e[3] = u.reg_read(UC_X86_REG_EAX) & 0xff
+                    e[3] = P.retval(u) & 0xff
                     break
 
     def on_read(u, access, addr, size, value, data):
-        off = addr - P.BUF - 6
-        eip = u.reg_read(UC_X86_REG_EIP) - P.BASE
-        if eip in (0x91cb10, 0x91cb30):
+        off = addr - P.BUF - P.WIRE_SKIP
+        eip = P.ip(u)
+        if eip in P.GETBITS_READS:
             return
         for k in range(size):
             ev.append(['read', off + k, eip])
 
     u = emu.u
-    h1 = u.hook_add(UC_HOOK_CODE, on_code, begin=P.BASE + GETBITS, end=P.BASE + GETBITS)
+    h1 = u.hook_add(UC_HOOK_CODE, on_code, begin=P.BASE + P.GETBITS, end=P.BASE + P.GETBITS)
     # getbits returns at 0x91cb44 (ret)
-    h2 = u.hook_add(UC_HOOK_CODE, on_ret, begin=P.BASE + 0x91cb44, end=P.BASE + 0x91cb44)
+    h2 = u.hook_add(UC_HOOK_CODE, on_ret, begin=P.BASE + P.GETBITS_RET, end=P.BASE + P.GETBITS_RET)
     h3 = u.hook_add(UC_HOOK_MEM_READ, on_read, begin=P.BUF, end=P.BUF + 0x10000)
     tr = {}
     try:
@@ -157,31 +146,30 @@ def timeline(emu, info, pid, body):
         box.setdefault('obj', p)
 
     def on_code(u, addr, size, data):
-        esp = u.reg_read(UC_X86_REG_ESP)
-        ret, buf, pos, width = struct.unpack('<IIII', bytes(u.mem_read(esp, 16)))
-        ev.append(['bits', pos & 0xff, width & 0xff, None, ret - P.BASE])
+        pos, width, ret = P.getbits_call(u)
+        ev.append(['bits', pos, width, None, ret])
 
     def on_ret(u, addr, size, data):
         for e in reversed(ev):
             if e[0] == 'bits':
                 if e[3] is None:
-                    e[3] = u.reg_read(UC_X86_REG_EAX) & 0xff
+                    e[3] = P.retval(u) & 0xff
                 break
 
     def on_read(u, access, addr, size, value, data):
-        eip = u.reg_read(UC_X86_REG_EIP) - P.BASE
-        if eip in (0x91cb10, 0x91cb30):
+        eip = P.ip(u)
+        if eip in P.GETBITS_READS:
             return
-        off = addr - P.BUF - 6
+        off = addr - P.BUF - P.WIRE_SKIP
         for k in range(size):
             ev.append(['read', off + k, eip])
 
     def on_write(u, access, addr, size, value, data):
-        eip = u.reg_read(UC_X86_REG_EIP) - P.BASE
+        eip = P.ip(u)
         ev.append(['write', addr, size, eip])
 
-    hs = [u.hook_add(UC_HOOK_CODE, on_code, begin=P.BASE + GETBITS, end=P.BASE + GETBITS),
-          u.hook_add(UC_HOOK_CODE, on_ret, begin=P.BASE + 0x91cb44, end=P.BASE + 0x91cb44),
+    hs = [u.hook_add(UC_HOOK_CODE, on_code, begin=P.BASE + P.GETBITS, end=P.BASE + P.GETBITS),
+          u.hook_add(UC_HOOK_CODE, on_ret, begin=P.BASE + P.GETBITS_RET, end=P.BASE + P.GETBITS_RET),
           u.hook_add(UC_HOOK_MEM_READ, on_read, begin=P.BUF, end=P.BUF + 0x10000),
           u.hook_add(UC_HOOK_MEM_WRITE, on_write, begin=P.HEAP, end=P.HEAP + P.HEAP_SIZE - 1)]
     heap0 = emu.heap

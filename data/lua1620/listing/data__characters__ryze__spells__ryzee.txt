@@ -1,0 +1,58 @@
+
+main <?:0,0> (32 instructions, 128 bytes at 000001E118D135A0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 20 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Ryze/HUD/Icons2D/Ryze_E.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "RyzeE"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; 1
+	14	[-]	SETGLOBAL	0 -9	; SpellDamageRatio
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -11	; IsDamagingSpell
+	17	[-]	NEWTABLE 	0 0 6
+	18	[-]	NEWTABLE 	1 5 0
+	19	[-]	LOADK    	2 -14	; 5
+	20	[-]	LOADK    	3 -14	; 5
+	21	[-]	LOADK    	4 -14	; 5
+	22	[-]	LOADK    	5 -14	; 5
+	23	[-]	LOADK    	6 -14	; 5
+	24	[-]	SETLIST  	1 5 1	; 1
+	25	[-]	SETTABLE 	0 -13 1	; "MaximumHits" -
+	26	[-]	SETTABLE 	0 -15 -10	; "CanHitCaster" 1
+	27	[-]	SETTABLE 	0 -16 -10	; "CanHitSameTarget" 1
+	28	[-]	SETTABLE 	0 -17 -18	; "CanHitSameTargetConsecutively" 0
+	29	[-]	SETTABLE 	0 -19 -10	; "CanHitEnemies" 1
+	30	[-]	SETTABLE 	0 -20 -18	; "CanHitFriends" 0
+	31	[-]	SETGLOBAL	0 -12	; ChainMissileParameters
+	32	[-]	RETURN   	0 1
+constants (20) for 000001E118D135A0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Ryze/HUD/Icons2D/Ryze_E.dds"
+	7	"BuffName"
+	8	"RyzeE"
+	9	"SpellDamageRatio"
+	10	1
+	11	"IsDamagingSpell"
+	12	"ChainMissileParameters"
+	13	"MaximumHits"
+	14	5
+	15	"CanHitCaster"
+	16	"CanHitSameTarget"
+	17	"CanHitSameTargetConsecutively"
+	18	0
+	19	"CanHitEnemies"
+	20	"CanHitFriends"
+locals (0) for 000001E118D135A0:
+upvalues (0) for 000001E118D135A0:

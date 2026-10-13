@@ -1,0 +1,39 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 00000261AF4A34C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; 0.5
+	6	[-]	SETGLOBAL	0 -3	; SpellDamageRatio
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -5	; IsDeathRecapSource
+	9	[-]	LOADK    	0 -7	; "game_floatingtext_Snared"
+	10	[-]	SETGLOBAL	0 -6	; PopupMessage1
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -8	; PersistsThroughDeath
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -9	; NonDispellable
+	15	[-]	NEWTABLE 	0 1 0
+	16	[-]	LOADK    	1 -11	; "lissandraSkin02"
+	17	[-]	SETLIST  	0 1 1	; 1
+	18	[-]	SETGLOBAL	0 -10	; SpellFXOverrideSkins
+	19	[-]	LOADBOOL 	0 0 0
+	20	[-]	SETGLOBAL	0 -12	; TriggersSpellCasts
+	21	[-]	RETURN   	0 1
+constants (12) for 00000261AF4A34C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"SpellDamageRatio"
+	4	0.5
+	5	"IsDeathRecapSource"
+	6	"PopupMessage1"
+	7	"game_floatingtext_Snared"
+	8	"PersistsThroughDeath"
+	9	"NonDispellable"
+	10	"SpellFXOverrideSkins"
+	11	"lissandraSkin02"
+	12	"TriggersSpellCasts"
+locals (0) for 00000261AF4A34C0:
+upvalues (0) for 00000261AF4A34C0:

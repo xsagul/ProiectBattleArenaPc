@@ -5,4 +5,6 @@
 // match: e60f10 _BLAKE2b_Init
 // match: e61040 _BLAKE2b_Update
 // match: e610f0 _blake2b_compress
+#define OPENSSL_FILE "crypto\\blake2\\blake2b.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/blake2/blake2b.c"

@@ -1,0 +1,26 @@
+struct 0x10770b0
+  0x10770b0 field 0: bits 0..0 +0x10 16 B 0:const 1:seq(struct)
+struct 0x101ed10
+  0x101ed10 field 0: bits 0..0 +0x8 4 B 0:const 1:varint
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1493, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1164, in learn
+    sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc).learn()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 366, in learn
+    fl = self.learn_field(k)
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 409, in learn_field
+    mode = self.learn_mode(k, m, r, seg, res, d)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 486, in learn_mode
+    return self.learn_bytes(k, m, res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 559, in learn_bytes
+    return self.learn_varint(k, m, res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 610, in learn_varint
+    assert sorted(S) == list(range(256)), f'{self.fn:#x} field {k} mode {m}: varint table'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0x101ed10 field 1 mode 0: varint table

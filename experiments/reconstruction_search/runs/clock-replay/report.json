@@ -1,0 +1,189 @@
+{
+  "case_id": "worker_clock_now",
+  "rva": "0xa2c930",
+  "origin": "uncovered",
+  "role": "holdout",
+  "learning_use": "evaluation_only",
+  "semantic_seed": "provided",
+  "exact": false,
+  "trials": 5,
+  "compilations": 0,
+  "best_quality": 0.8260869565217391,
+  "production_unchanged": true,
+  "bindings_unchanged": true,
+  "published": false,
+  "records": [
+    {
+      "proposal": "baseline",
+      "family": "baseline",
+      "assumptions": [
+        "Provided semantic seed."
+      ],
+      "cached": true,
+      "exact": false,
+      "bytes": 46,
+      "identical_bytes": 38,
+      "first_difference": 12,
+      "targets": [
+        [
+          "?WorkerCounterNow@@YA_JXZ",
+          10271680
+        ],
+        [
+          "__ltod3",
+          15995808
+        ],
+        [
+          "?g_workerSecondsPerTick@@3NA",
+          52006496
+        ]
+      ],
+      "targets_ok": true,
+      "failure_class": "register_or_operand_schedule",
+      "detail": "ours                                            Riot\n   0x3 push esi                                    0x3 push esi\n   0x4 mov esi, ecx                                0x4 mov esi, ecx\n   0x6 call 0xb                                    0x6 call 0xfff9f290\n   0xb mov ecx, dword ptr [esi]                    0xb mov ecx, eax   <<\n   0xd sub eax, dword ptr [ecx]                    0xd mov eax, dword ptr [esi]   <<\n   0xf sbb edx, dword ptr [ecx + 4]                0xf sub ecx, dword ptr [eax]\n  0x12 mov ecx, eax                               0x11 sbb edx, dword ptr [eax + 4]\n  0x14 call 0x19                                  0x14 call 0x514a70\n  0x19 mulsd xmm0, qword ptr [0]                  0x19 mulsd xmm0, qword ptr [0x3718e60]\n  0x21 pop esi                                    0x21 pop esi\n  0x22 movsd qword ptr [esp], xmm0                0x22 movsd qword ptr [esp], xmm0\n  0x27 fld qword ptr [esp]                        0x27 fld qword ptr [esp]\n  0x2a add esp, 8                                 0x2a add esp, 8\n  0x2d ret                                        0x2d ret ",
+      "quality": 0.8260869565217391,
+      "elapsed_ms": 146,
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\experiments\\reconstruction_search\\runs\\clock-holdout\\c8b3770f1138220f987e.cpp",
+      "code_fingerprint": "691528db04889a1ae8acc7ea1cf3f6a6dead976826f8c26dd8a889a7213bbad6",
+      "repeated_output": false
+    },
+    {
+      "proposal": "lambda_value",
+      "family": "lambda_capture",
+      "assumptions": [
+        "Captures copy only pointer/value parameters or preserve reference parameters.",
+        "Original operations remain in their original order."
+      ],
+      "cached": true,
+      "exact": false,
+      "bytes": 46,
+      "identical_bytes": 38,
+      "first_difference": 12,
+      "targets": [
+        [
+          "?WorkerCounterNow@@YA_JXZ",
+          10271680
+        ],
+        [
+          "__ltod3",
+          15995808
+        ],
+        [
+          "?g_workerSecondsPerTick@@3NA",
+          52006496
+        ]
+      ],
+      "targets_ok": true,
+      "failure_class": "register_or_operand_schedule",
+      "detail": "ours                                            Riot\n   0x3 push esi                                    0x3 push esi\n   0x4 mov esi, ecx                                0x4 mov esi, ecx\n   0x6 call 0xb                                    0x6 call 0xfff9f290\n   0xb mov ecx, dword ptr [esi]                    0xb mov ecx, eax   <<\n   0xd sub eax, dword ptr [ecx]                    0xd mov eax, dword ptr [esi]   <<\n   0xf sbb edx, dword ptr [ecx + 4]                0xf sub ecx, dword ptr [eax]\n  0x12 mov ecx, eax                               0x11 sbb edx, dword ptr [eax + 4]\n  0x14 call 0x19                                  0x14 call 0x514a70\n  0x19 mulsd xmm0, qword ptr [0]                  0x19 mulsd xmm0, qword ptr [0x3718e60]\n  0x21 pop esi                                    0x21 pop esi\n  0x22 movsd qword ptr [esp], xmm0                0x22 movsd qword ptr [esp], xmm0\n  0x27 fld qword ptr [esp]                        0x27 fld qword ptr [esp]\n  0x2a add esp, 8                                 0x2a add esp, 8\n  0x2d ret                                        0x2d ret ",
+      "quality": 0.8260869565217391,
+      "elapsed_ms": 49,
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\experiments\\reconstruction_search\\runs\\clock-holdout\\c902fd26aa41afd30c4d.cpp",
+      "code_fingerprint": "691528db04889a1ae8acc7ea1cf3f6a6dead976826f8c26dd8a889a7213bbad6",
+      "repeated_output": true
+    },
+    {
+      "proposal": "lambda_self_value",
+      "family": "lambda_capture",
+      "assumptions": [
+        "Captures copy only pointer/value parameters or preserve reference parameters.",
+        "Original operations remain in their original order."
+      ],
+      "cached": true,
+      "exact": false,
+      "bytes": 46,
+      "identical_bytes": 38,
+      "first_difference": 12,
+      "targets": [
+        [
+          "?WorkerCounterNow@@YA_JXZ",
+          10271680
+        ],
+        [
+          "__ltod3",
+          15995808
+        ],
+        [
+          "?g_workerSecondsPerTick@@3NA",
+          52006496
+        ]
+      ],
+      "targets_ok": true,
+      "failure_class": "register_or_operand_schedule",
+      "detail": "ours                                            Riot\n   0x3 push esi                                    0x3 push esi\n   0x4 mov esi, ecx                                0x4 mov esi, ecx\n   0x6 call 0xb                                    0x6 call 0xfff9f290\n   0xb mov ecx, dword ptr [esi]                    0xb mov ecx, eax   <<\n   0xd sub eax, dword ptr [ecx]                    0xd mov eax, dword ptr [esi]   <<\n   0xf sbb edx, dword ptr [ecx + 4]                0xf sub ecx, dword ptr [eax]\n  0x12 mov ecx, eax                               0x11 sbb edx, dword ptr [eax + 4]\n  0x14 call 0x19                                  0x14 call 0x514a70\n  0x19 mulsd xmm0, qword ptr [0]                  0x19 mulsd xmm0, qword ptr [0x3718e60]\n  0x21 pop esi                                    0x21 pop esi\n  0x22 movsd qword ptr [esp], xmm0                0x22 movsd qword ptr [esp], xmm0\n  0x27 fld qword ptr [esp]                        0x27 fld qword ptr [esp]\n  0x2a add esp, 8                                 0x2a add esp, 8\n  0x2d ret                                        0x2d ret ",
+      "quality": 0.8260869565217391,
+      "elapsed_ms": 45,
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\experiments\\reconstruction_search\\runs\\clock-holdout\\3bf9fa0e3b8bf02fab9f.cpp",
+      "code_fingerprint": "691528db04889a1ae8acc7ea1cf3f6a6dead976826f8c26dd8a889a7213bbad6",
+      "repeated_output": true
+    },
+    {
+      "proposal": "hoist_counter",
+      "family": "expression_temporaries",
+      "assumptions": [
+        "Counter evaluates before the origin load, as required by the case ABI constraints."
+      ],
+      "cached": true,
+      "exact": false,
+      "bytes": 46,
+      "identical_bytes": 38,
+      "first_difference": 12,
+      "targets": [
+        [
+          "?WorkerCounterNow@@YA_JXZ",
+          10271680
+        ],
+        [
+          "__ltod3",
+          15995808
+        ],
+        [
+          "?g_workerSecondsPerTick@@3NA",
+          52006496
+        ]
+      ],
+      "targets_ok": true,
+      "failure_class": "register_or_operand_schedule",
+      "detail": "ours                                            Riot\n   0x3 push esi                                    0x3 push esi\n   0x4 mov esi, ecx                                0x4 mov esi, ecx\n   0x6 call 0xb                                    0x6 call 0xfff9f290\n   0xb mov ecx, dword ptr [esi]                    0xb mov ecx, eax   <<\n   0xd sub eax, dword ptr [ecx]                    0xd mov eax, dword ptr [esi]   <<\n   0xf sbb edx, dword ptr [ecx + 4]                0xf sub ecx, dword ptr [eax]\n  0x12 mov ecx, eax                               0x11 sbb edx, dword ptr [eax + 4]\n  0x14 call 0x19                                  0x14 call 0x514a70\n  0x19 mulsd xmm0, qword ptr [0]                  0x19 mulsd xmm0, qword ptr [0x3718e60]\n  0x21 pop esi                                    0x21 pop esi\n  0x22 movsd qword ptr [esp], xmm0                0x22 movsd qword ptr [esp], xmm0\n  0x27 fld qword ptr [esp]                        0x27 fld qword ptr [esp]\n  0x2a add esp, 8                                 0x2a add esp, 8\n  0x2d ret                                        0x2d ret ",
+      "quality": 0.8260869565217391,
+      "elapsed_ms": 43,
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\experiments\\reconstruction_search\\runs\\clock-holdout\\772101808844920b8b3d.cpp",
+      "code_fingerprint": "691528db04889a1ae8acc7ea1cf3f6a6dead976826f8c26dd8a889a7213bbad6",
+      "repeated_output": true
+    },
+    {
+      "proposal": "hoist_operands",
+      "family": "expression_temporaries",
+      "assumptions": [
+        "Counter evaluates before the origin load, as required by the case ABI constraints."
+      ],
+      "cached": true,
+      "exact": false,
+      "bytes": 46,
+      "identical_bytes": 38,
+      "first_difference": 12,
+      "targets": [
+        [
+          "?WorkerCounterNow@@YA_JXZ",
+          10271680
+        ],
+        [
+          "__ltod3",
+          15995808
+        ],
+        [
+          "?g_workerSecondsPerTick@@3NA",
+          52006496
+        ]
+      ],
+      "targets_ok": true,
+      "failure_class": "register_or_operand_schedule",
+      "detail": "ours                                            Riot\n   0x3 push esi                                    0x3 push esi\n   0x4 mov esi, ecx                                0x4 mov esi, ecx\n   0x6 call 0xb                                    0x6 call 0xfff9f290\n   0xb mov ecx, dword ptr [esi]                    0xb mov ecx, eax   <<\n   0xd sub eax, dword ptr [ecx]                    0xd mov eax, dword ptr [esi]   <<\n   0xf sbb edx, dword ptr [ecx + 4]                0xf sub ecx, dword ptr [eax]\n  0x12 mov ecx, eax                               0x11 sbb edx, dword ptr [eax + 4]\n  0x14 call 0x19                                  0x14 call 0x514a70\n  0x19 mulsd xmm0, qword ptr [0]                  0x19 mulsd xmm0, qword ptr [0x3718e60]\n  0x21 pop esi                                    0x21 pop esi\n  0x22 movsd qword ptr [esp], xmm0                0x22 movsd qword ptr [esp], xmm0\n  0x27 fld qword ptr [esp]                        0x27 fld qword ptr [esp]\n  0x2a add esp, 8                                 0x2a add esp, 8\n  0x2d ret                                        0x2d ret ",
+      "quality": 0.8260869565217391,
+      "elapsed_ms": 44,
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\experiments\\reconstruction_search\\runs\\clock-holdout\\dd6cdd9cc23c446d06c6.cpp",
+      "code_fingerprint": "691528db04889a1ae8acc7ea1cf3f6a6dead976826f8c26dd8a889a7213bbad6",
+      "repeated_output": true
+    }
+  ]
+}

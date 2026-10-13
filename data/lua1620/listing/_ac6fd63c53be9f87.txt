@@ -1,0 +1,63 @@
+
+main <?:0,0> (35 instructions, 140 bytes at 0000029254B734C0)
+0+ params, 7 slots, 0 upvalues, 0 locals, 22 constants, 0 functions
+	1	[-]	LOADK    	0 -2	; "ASSETS/Characters/Varus/HUD/Icons2D/VarusQCharging.dds"
+	2	[-]	SETGLOBAL	0 -1	; BuffTextureName
+	3	[-]	LOADK    	0 -4	; "VarusQ"
+	4	[-]	SETGLOBAL	0 -3	; BuffName
+	5	[-]	LOADK    	0 -6	; 1
+	6	[-]	SETGLOBAL	0 -5	; SpellToggleSlot
+	7	[-]	LOADK    	0 -8	; 3
+	8	[-]	SETGLOBAL	0 -7	; OnPreDamagePriority
+	9	[-]	NEWTABLE 	0 3 0
+	10	[-]	LOADK    	1 -10	; "VarusAscended"
+	11	[-]	LOADK    	2 -11	; "VarusSkin04"
+	12	[-]	LOADK    	3 -12	; "VarusSkin03"
+	13	[-]	SETLIST  	0 3 1	; 1
+	14	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	15	[-]	NEWTABLE 	0 2 0
+	16	[-]	LOADK    	1 -10	; "VarusAscended"
+	17	[-]	LOADK    	2 -11	; "VarusSkin04"
+	18	[-]	SETLIST  	0 2 1	; 1
+	19	[-]	SETGLOBAL	0 -13	; SpellVOOverrideSkins
+	20	[-]	NEWTABLE 	0 0 6
+	21	[-]	NEWTABLE 	1 5 0
+	22	[-]	LOADK    	2 -16	; 4
+	23	[-]	LOADK    	3 -16	; 4
+	24	[-]	LOADK    	4 -16	; 4
+	25	[-]	LOADK    	5 -16	; 4
+	26	[-]	LOADK    	6 -16	; 4
+	27	[-]	SETLIST  	1 5 1	; 1
+	28	[-]	SETTABLE 	0 -15 1	; "MaximumHits" -
+	29	[-]	SETTABLE 	0 -17 -18	; "CanHitCaster" 0
+	30	[-]	SETTABLE 	0 -19 -18	; "CanHitSameTarget" 0
+	31	[-]	SETTABLE 	0 -20 -18	; "CanHitSameTargetConsecutively" 0
+	32	[-]	SETTABLE 	0 -21 -6	; "CanHitEnemies" 1
+	33	[-]	SETTABLE 	0 -22 -18	; "CanHitFriends" 0
+	34	[-]	SETGLOBAL	0 -14	; ChainMissileParameters
+	35	[-]	RETURN   	0 1
+constants (22) for 0000029254B734C0:
+	1	"BuffTextureName"
+	2	"ASSETS/Characters/Varus/HUD/Icons2D/VarusQCharging.dds"
+	3	"BuffName"
+	4	"VarusQ"
+	5	"SpellToggleSlot"
+	6	1
+	7	"OnPreDamagePriority"
+	8	3
+	9	"SpellFXOverrideSkins"
+	10	"VarusAscended"
+	11	"VarusSkin04"
+	12	"VarusSkin03"
+	13	"SpellVOOverrideSkins"
+	14	"ChainMissileParameters"
+	15	"MaximumHits"
+	16	4
+	17	"CanHitCaster"
+	18	0
+	19	"CanHitSameTarget"
+	20	"CanHitSameTargetConsecutively"
+	21	"CanHitEnemies"
+	22	"CanHitFriends"
+locals (0) for 0000029254B734C0:
+upvalues (0) for 0000029254B734C0:

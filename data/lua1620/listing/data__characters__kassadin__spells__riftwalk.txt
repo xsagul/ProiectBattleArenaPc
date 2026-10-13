@@ -1,0 +1,40 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 000001E8C49835C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Kassadin/HUD/Icons2D/Kassadin_R.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "RiftWalk"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	NEWTABLE 	0 1 0
+	14	[-]	LOADK    	1 -10	; "KassadinSkin05"
+	15	[-]	SETLIST  	0 1 1	; 1
+	16	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -11	; IsDamagingSpell
+	19	[-]	LOADK    	0 -13	; ""
+	20	[-]	SETGLOBAL	0 -12	; AutoBuffActivateEvent
+	21	[-]	RETURN   	0 1
+constants (13) for 000001E8C49835C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Kassadin/HUD/Icons2D/Kassadin_R.dds"
+	7	"BuffName"
+	8	"RiftWalk"
+	9	"SpellFXOverrideSkins"
+	10	"KassadinSkin05"
+	11	"IsDamagingSpell"
+	12	"AutoBuffActivateEvent"
+	13	""
+locals (0) for 000001E8C49835C0:
+upvalues (0) for 000001E8C49835C0:

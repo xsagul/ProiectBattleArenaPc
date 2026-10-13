@@ -4,4 +4,6 @@
 // match: e26c20 _aria_encrypt
 // match: e27320 _aria_set_decrypt_key
 // match: e275d0 _aria_set_encrypt_key
+#define OPENSSL_FILE "crypto\\aria\\aria.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/aria/aria.c"

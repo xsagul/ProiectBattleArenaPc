@@ -1,0 +1,42 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 0000027CB39735C0)
+0+ params, 10 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "SR_InfernalRift_FireMeepBuff"
+	6	[-]	SETGLOBAL	0 -3	; BuffName
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -5	; PersistsThroughDeath
+	9	[-]	NEWTABLE 	0 9 0
+	10	[-]	LOADK    	1 -7	; "SightWardBat"
+	11	[-]	LOADK    	2 -8	; "SightWardStone"
+	12	[-]	LOADK    	3 -9	; "SightWardSpider"
+	13	[-]	LOADK    	4 -10	; "SightWardTree"
+	14	[-]	LOADK    	5 -11	; "SightWardGhost"
+	15	[-]	LOADK    	6 -12	; "SightWardSnowMan"
+	16	[-]	LOADK    	7 -13	; "SightWardGingerBread"
+	17	[-]	LOADK    	8 -14	; "SightWardLantern"
+	18	[-]	LOADK    	9 -15	; "SightWardBanner"
+	19	[-]	SETLIST  	0 9 1	; 1
+	20	[-]	SETGLOBAL	0 -6	; SpellFXOverrideSkins
+	21	[-]	RETURN   	0 1
+constants (15) for 0000027CB39735C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffName"
+	4	"SR_InfernalRift_FireMeepBuff"
+	5	"PersistsThroughDeath"
+	6	"SpellFXOverrideSkins"
+	7	"SightWardBat"
+	8	"SightWardStone"
+	9	"SightWardSpider"
+	10	"SightWardTree"
+	11	"SightWardGhost"
+	12	"SightWardSnowMan"
+	13	"SightWardGingerBread"
+	14	"SightWardLantern"
+	15	"SightWardBanner"
+locals (0) for 0000027CB39735C0:
+upvalues (0) for 0000027CB39735C0:

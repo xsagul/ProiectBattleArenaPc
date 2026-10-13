@@ -1,0 +1,41 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 000002C1161435D0)
+0+ params, 4 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/TwistedFate/HUD/Icons2D/Destiny_temp.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Destiny"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; 0.75
+	10	[-]	SETGLOBAL	0 -7	; SpellDamageRatio
+	11	[-]	NEWTABLE 	0 3 0
+	12	[-]	LOADK    	1 -10	; 150
+	13	[-]	LOADK    	2 -11	; 135
+	14	[-]	LOADK    	3 -12	; 120
+	15	[-]	SETLIST  	0 3 1	; 1
+	16	[-]	SETGLOBAL	0 -9	; AutoCooldownByLevel
+	17	[-]	NEWTABLE 	0 1 0
+	18	[-]	LOADK    	1 -14	; "UnderworldTwistedFate"
+	19	[-]	SETLIST  	0 1 1	; 1
+	20	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	21	[-]	RETURN   	0 1
+constants (14) for 000002C1161435D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/TwistedFate/HUD/Icons2D/Destiny_temp.dds"
+	5	"BuffName"
+	6	"Destiny"
+	7	"SpellDamageRatio"
+	8	0.75
+	9	"AutoCooldownByLevel"
+	10	150
+	11	135
+	12	120
+	13	"SpellFXOverrideSkins"
+	14	"UnderworldTwistedFate"
+locals (0) for 000002C1161435D0:
+upvalues (0) for 000002C1161435D0:

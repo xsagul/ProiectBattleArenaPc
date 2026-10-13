@@ -1,0 +1,66 @@
+
+main <?:0,0> (35 instructions, 140 bytes at 000002BC6BA335D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 25 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "Nidalee_JavelinThrow.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "JavelinToss"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "r:Nidalee_Q_Buf"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect
+	15	[-]	LOADK    	0 -12	; "C_BUFFBONE_GLB_Overhead_LOC"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateAttachBoneName
+	17	[-]	LOADK    	0 -14	; "r:Volibear_maxStack_indicator_cast_BV2"
+	18	[-]	SETGLOBAL	0 -13	; AutoBuffActivateEffect2
+	19	[-]	LOADK    	0 -16	; "L_BUFFBONE_GLB_HAND_LOC"
+	20	[-]	SETGLOBAL	0 -15	; AutoBuffActivateAttachBoneName2
+	21	[-]	LOADK    	0 -14	; "r:Volibear_maxStack_indicator_cast_BV2"
+	22	[-]	SETGLOBAL	0 -17	; AutoBuffActivateEffect3
+	23	[-]	LOADK    	0 -19	; "R_BUFFBONE_GLB_HAND_LOC"
+	24	[-]	SETGLOBAL	0 -18	; AutoBuffActivateAttachBoneName3
+	25	[-]	LOADK    	0 -21	; 1
+	26	[-]	SETGLOBAL	0 -20	; SpellDamageRatio
+	27	[-]	NEWTABLE 	0 1 0
+	28	[-]	LOADK    	1 -23	; "HeadhunterNidalee"
+	29	[-]	SETLIST  	0 1 1	; 1
+	30	[-]	SETGLOBAL	0 -22	; SpellFXOverrideSkins
+	31	[-]	LOADBOOL 	0 1 0
+	32	[-]	SETGLOBAL	0 -24	; IsDamagingSpell
+	33	[-]	LOADBOOL 	0 0 0
+	34	[-]	SETGLOBAL	0 -25	; TriggersSpellCasts
+	35	[-]	RETURN   	0 1
+constants (25) for 000002BC6BA335D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"Nidalee_JavelinThrow.dds"
+	7	"BuffName"
+	8	"JavelinToss"
+	9	"AutoBuffActivateEffect"
+	10	"r:Nidalee_Q_Buf"
+	11	"AutoBuffActivateAttachBoneName"
+	12	"C_BUFFBONE_GLB_Overhead_LOC"
+	13	"AutoBuffActivateEffect2"
+	14	"r:Volibear_maxStack_indicator_cast_BV2"
+	15	"AutoBuffActivateAttachBoneName2"
+	16	"L_BUFFBONE_GLB_HAND_LOC"
+	17	"AutoBuffActivateEffect3"
+	18	"AutoBuffActivateAttachBoneName3"
+	19	"R_BUFFBONE_GLB_HAND_LOC"
+	20	"SpellDamageRatio"
+	21	1
+	22	"SpellFXOverrideSkins"
+	23	"HeadhunterNidalee"
+	24	"IsDamagingSpell"
+	25	"TriggersSpellCasts"
+locals (0) for 000002BC6BA335D0:
+upvalues (0) for 000002BC6BA335D0:

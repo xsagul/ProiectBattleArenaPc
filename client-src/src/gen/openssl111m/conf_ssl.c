@@ -4,4 +4,8 @@
 // match: dee510 _conf_ssl_get
 // match: dee540 _conf_ssl_get_cmd
 // match: dee560 _conf_ssl_name_find
+// match: dee5d0 _ssl_module_free
+// match: dee690 _ssl_module_init
+#define OPENSSL_FILE "crypto\\conf\\conf_ssl.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/conf/conf_ssl.c"

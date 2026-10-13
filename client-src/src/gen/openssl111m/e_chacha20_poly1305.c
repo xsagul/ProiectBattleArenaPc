@@ -6,5 +6,8 @@
 // match: de7750 _chacha20_poly1305_init_key
 // match: de7880 _chacha20_poly1305_cipher
 // match: de7c60 _chacha20_poly1305_cleanup
+// match: de7c90 _chacha20_poly1305_ctrl
 // match: de8040 _chacha20_poly1305_tls_cipher
+#define OPENSSL_FILE "crypto\\evp\\e_chacha20_poly1305.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/evp/e_chacha20_poly1305.c"

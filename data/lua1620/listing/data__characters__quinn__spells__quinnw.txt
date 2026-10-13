@@ -1,0 +1,50 @@
+
+main <?:0,0> (26 instructions, 104 bytes at 00000185A9E335C0)
+0+ params, 5 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "QuinnW"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; 3
+	12	[-]	SETGLOBAL	0 -8	; OnPreDamagePriority
+	13	[-]	NEWTABLE 	0 4 0
+	14	[-]	LOADK    	1 -11	; "PhoenixQuinn"
+	15	[-]	LOADK    	2 -12	; "QuinnValor_Phoenix"
+	16	[-]	LOADK    	3 -13	; "QuinnSkin02"
+	17	[-]	LOADK    	4 -14	; "QuinnValorSkin02"
+	18	[-]	SETLIST  	0 4 1	; 1
+	19	[-]	SETGLOBAL	0 -10	; SpellFXOverrideSkins
+	20	[-]	LOADBOOL 	0 1 0
+	21	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	22	[-]	LOADBOOL 	0 1 0
+	23	[-]	SETGLOBAL	0 -16	; DoOnPreDamageInExpirationOrder
+	24	[-]	LOADK    	0 -18	; "DATA/Shared/Particles/deathscaress_buf.troy"
+	25	[-]	SETGLOBAL	0 -17	; AutoBuffActivateEvent
+	26	[-]	RETURN   	0 1
+constants (18) for 00000185A9E335C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Passive.dds"
+	6	"BuffName"
+	7	"QuinnW"
+	8	"OnPreDamagePriority"
+	9	3
+	10	"SpellFXOverrideSkins"
+	11	"PhoenixQuinn"
+	12	"QuinnValor_Phoenix"
+	13	"QuinnSkin02"
+	14	"QuinnValorSkin02"
+	15	"IsDamagingSpell"
+	16	"DoOnPreDamageInExpirationOrder"
+	17	"AutoBuffActivateEvent"
+	18	"DATA/Shared/Particles/deathscaress_buf.troy"
+locals (0) for 00000185A9E335C0:
+upvalues (0) for 00000185A9E335C0:

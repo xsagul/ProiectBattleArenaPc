@@ -6,4 +6,6 @@
 // match: dbe540 _X509_CRL_get0_extensions
 // match: dbe550 _X509_REVOKED_get0_extensions
 // match: dc1af0 _X509_CRL_up_ref
+#define OPENSSL_FILE "crypto\\x509\\x509cset.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/x509/x509cset.c"

@@ -1,0 +1,61 @@
+
+main <?:0,0> (32 instructions, 128 bytes at 000001B70AC63600)
+0+ params, 3 slots, 0 upvalues, 0 locals, 23 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Renekton/HUD/Icons2D/Renekton_R.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "RenekthonTyrantForm"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "r:Renekton_R_weapon"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect
+	15	[-]	LOADK    	0 -12	; "weapon"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateAttachBoneName
+	17	[-]	LOADK    	0 -14	; "r:Renekton_R_buf"
+	18	[-]	SETGLOBAL	0 -13	; AutoBuffActivateEffect2
+	19	[-]	LOADK    	0 -16	; "r_uparm"
+	20	[-]	SETGLOBAL	0 -15	; AutoBuffActivateAttachBoneName3
+	21	[-]	LOADK    	0 -18	; "l_uparm"
+	22	[-]	SETGLOBAL	0 -17	; AutoBuffActivateAttachBoneName4
+	23	[-]	LOADBOOL 	0 1 0
+	24	[-]	SETGLOBAL	0 -19	; NonDispellable
+	25	[-]	NEWTABLE 	0 2 0
+	26	[-]	LOADK    	1 -21	; "Renekton_VolcanoGod"
+	27	[-]	LOADK    	2 -22	; "RenektonSkin06"
+	28	[-]	SETLIST  	0 2 1	; 1
+	29	[-]	SETGLOBAL	0 -20	; SpellFXOverrideSkins
+	30	[-]	LOADBOOL 	0 1 0
+	31	[-]	SETGLOBAL	0 -23	; IsDamagingSpell
+	32	[-]	RETURN   	0 1
+constants (23) for 000001B70AC63600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Renekton/HUD/Icons2D/Renekton_R.dds"
+	7	"BuffName"
+	8	"RenekthonTyrantForm"
+	9	"AutoBuffActivateEffect"
+	10	"r:Renekton_R_weapon"
+	11	"AutoBuffActivateAttachBoneName"
+	12	"weapon"
+	13	"AutoBuffActivateEffect2"
+	14	"r:Renekton_R_buf"
+	15	"AutoBuffActivateAttachBoneName3"
+	16	"r_uparm"
+	17	"AutoBuffActivateAttachBoneName4"
+	18	"l_uparm"
+	19	"NonDispellable"
+	20	"SpellFXOverrideSkins"
+	21	"Renekton_VolcanoGod"
+	22	"RenektonSkin06"
+	23	"IsDamagingSpell"
+locals (0) for 000001B70AC63600:
+upvalues (0) for 000001B70AC63600:

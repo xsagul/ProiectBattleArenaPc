@@ -1,0 +1,70 @@
+{
+  "case_id": "owned-string-control",
+  "rva": "0x9b78e0",
+  "origin": "claimed",
+  "role": "training-control",
+  "learning_use": "training",
+  "semantic_seed": "Algorithm, three-word layout, and ABI supplied from prior analysis; register solution withheld from seed.",
+  "exact": true,
+  "trials": 2,
+  "compilations": 2,
+  "best_quality": 1.0,
+  "production_unchanged": true,
+  "bindings_unchanged": true,
+  "published": false,
+  "records": [
+    {
+      "proposal": "baseline",
+      "family": "baseline",
+      "assumptions": [
+        "Provided semantic seed."
+      ],
+      "cached": false,
+      "exact": false,
+      "bytes": 88,
+      "identical_bytes": 72,
+      "first_difference": 1,
+      "targets": [
+        [
+          "?Pool_Alloc@@YAPAXI@Z",
+          10306928
+        ]
+      ],
+      "targets_ok": true,
+      "failure_class": "register_or_operand_schedule",
+      "detail": "ours                                            Riot\n   0x0 push ebx                                    0x0 push ebx\n   0x1 mov ebx, dword ptr [esp + 8]                0x1 push ebp   <<\n   0x5 push ebp                                    0x2 push esi   <<\n   0x6 push esi                                    0x3 mov esi, dword ptr [esp + 0x10]   <<\n   0x7 mov ebp, ecx                                0x7 mov ebp, ecx\n   0x9 mov esi, ebx                                0x9 mov ebx, esi   <<\n   0xb cmp byte ptr [ebx], 0                       0xb cmp byte ptr [esi], 0   <<\n   0xe je 0x16                                     0xe je 0x16\n  0x10 inc esi                                    0x10 inc ebx   <<\n  0x11 cmp byte ptr [esi], 0                      0x11 cmp byte ptr [ebx], 0   <<\n  0x14 jne 0x10                                   0x14 jne 0x10\n  0x16 mov eax, esi                               0x16 mov eax, ebx   <<\n  0x18 sub eax, ebx                               0x18 sub eax, esi   <<\n  0x1a push edi                                   0x1a push edi\n  0x1b mov dword ptr [ebp + 4], eax               0x1b mov dword ptr [ebp + 4], eax\n  0x1e lea edi, [eax + 1]                         0x1e lea edi, [eax + 1]\n  0x21 and edi, 0xfffffffe                        0x21 and edi, 0xfffffffe\n  0x24 lea eax, [edi + 1]                         0x24 lea eax, [edi + 1]\n  0x27 push eax                                   0x27 push eax\n  0x28 call 0x2d                                  0x28 call 0x1cc90\n  0x2d add esp, 4                                 0x2d add esp, 4\n  0x30 or edi, 1                                  0x30 or edi, 1\n  0x33 mov dword ptr [ebp + 8], edi               0x33 mov dword ptr [ebp + 8], edi\n  0x36 mov ecx, eax                               0x36 mov ecx, eax\n  0x38 mov dword ptr [ebp], ecx                   0x38 mov dword ptr [ebp], ecx\n  0x3b pop edi                                    0x3b pop edi\n  0x3c cmp ebx, esi                               0x3c cmp esi, ebx   <<\n  0x3e jae 0x4d                                   0x3e jae 0x4d\n  0x40 mov al, byte ptr [ebx]                     0x40 mov al, byte ptr [esi]   <<\n  0x42 lea ecx, [ecx + 1]                         0x42 lea ecx, [ecx + 1]\n  0x45 inc ebx                                    0x45 inc esi   <<\n  0x46 mov byte ptr [ecx - 1], al                 0x46 mov byte ptr [ecx - 1], al\n  0x49 cmp ebx, esi                               0x49 cmp esi, ebx   <<\n  0x4b jb 0x40                                    0x4b jb 0x40\n  0x4d pop esi                                    0x4d pop esi\n  0x4e mov eax, ebp                               0x4e mov eax, ebp\n  0x50 mov byte ptr [ecx], 0                      0x50 mov byte ptr [ecx], 0\n  0x53 pop ebp                                    0x53 pop ebp\n  0x54 pop ebx                                    0x54 pop ebx\n  0x55 ret 4                                      0x55 ret 4",
+      "quality": 0.8181818181818182,
+      "elapsed_ms": 331,
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\experiments\\reconstruction_search\\runs\\owned-first\\71d81d52c95b391bb123.cpp",
+      "code_fingerprint": "2e554cc7294dde9361a2f8108aee1f61c65c448fbd4d8a892252acfe908aff7f",
+      "repeated_output": false
+    },
+    {
+      "proposal": "lambda_value",
+      "family": "lambda_capture",
+      "assumptions": [
+        "Captures copy only pointer/value parameters or preserve reference parameters.",
+        "Original operations remain in their original order."
+      ],
+      "cached": false,
+      "exact": true,
+      "bytes": 88,
+      "identical_bytes": 88,
+      "first_difference": null,
+      "targets": [
+        [
+          "?Pool_Alloc@@YAPAXI@Z",
+          10306928
+        ]
+      ],
+      "targets_ok": true,
+      "failure_class": "exact",
+      "detail": "",
+      "quality": 1.0,
+      "elapsed_ms": 90,
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\experiments\\reconstruction_search\\runs\\owned-first\\edb1ee19a8199176680d.cpp",
+      "code_fingerprint": "cb032257809e5081355223e6025caec7cad5fc7d360ec1935b1bbc0388df7452",
+      "repeated_output": false
+    }
+  ]
+}

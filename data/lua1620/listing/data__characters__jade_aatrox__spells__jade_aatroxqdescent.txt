@@ -1,0 +1,47 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 0000011EBA593600)
+0+ params, 6 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "Aatrox_Q.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "Jade_AatroxQ"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	NEWTABLE 	0 5 0
+	12	[-]	LOADK    	1 -9	; 20
+	13	[-]	LOADK    	2 -10	; 18
+	14	[-]	LOADK    	3 -11	; 16
+	15	[-]	LOADK    	4 -12	; 14
+	16	[-]	LOADK    	5 -13	; 12
+	17	[-]	SETLIST  	0 5 1	; 1
+	18	[-]	SETGLOBAL	0 -8	; AutoCooldownByLevel
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -14	; IsDeathRecapSource
+	21	[-]	NEWTABLE 	0 1 0
+	22	[-]	LOADK    	1 -16	; "RocketTristana"
+	23	[-]	SETLIST  	0 1 1	; 1
+	24	[-]	SETGLOBAL	0 -15	; SpellFXOverrideSkins
+	25	[-]	RETURN   	0 1
+constants (16) for 0000011EBA593600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffTextureName"
+	5	"Aatrox_Q.dds"
+	6	"BuffName"
+	7	"Jade_AatroxQ"
+	8	"AutoCooldownByLevel"
+	9	20
+	10	18
+	11	16
+	12	14
+	13	12
+	14	"IsDeathRecapSource"
+	15	"SpellFXOverrideSkins"
+	16	"RocketTristana"
+locals (0) for 0000011EBA593600:
+upvalues (0) for 0000011EBA593600:

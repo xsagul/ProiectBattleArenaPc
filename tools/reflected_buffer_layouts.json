@@ -1,0 +1,1333 @@
+[
+  {
+    "name": "BaseItemAdviceSet",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "mAdvices",
+      "hash": 1822917069,
+      "wrapper": 2791120,
+      "element": "BaseItemAdvice",
+      "stride": 12,
+      "descriptor": {
+        "code": 128,
+        "of": [
+          "imm",
+          57630712
+        ],
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            131
+          ],
+          "8": [
+            4,
+            12
+          ]
+        },
+        "vtable": 22237708
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 1947728,
+      "destruct": 1947776
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1db874\ncmp dword ptr [esi + 8], 0\njl 0x1db869\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov eax, dword ptr [esp + 4]\ncmp dword ptr [eax + 8], 0\njl 0x1db892\npush dword ptr [eax]\ncall 0x9bb930\npop ecx\nret"
+    }
+  },
+  {
+    "name": "EsportsData",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "leagues",
+      "hash": 2165301273,
+      "wrapper": 993472,
+      "element": "MetaString",
+      "stride": 12,
+      "descriptor": {
+        "code": 128,
+        "of": null,
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            16
+          ],
+          "8": [
+            4,
+            12
+          ]
+        },
+        "vtable": 22237788
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 2241760,
+      "destruct": 2241840
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push edi\nmov edi, dword ptr [esp + 8]\ntest edi, edi\nje 0x22352b\nmov eax, dword ptr [edi + 4]\npush ebx\npush esi\nmov esi, dword ptr [edi]\nlea eax, [eax + eax*2]\nlea ebx, [esi + eax*4]\ncmp esi, ebx\njae 0x22350e\nnop word ptr [eax + eax]\nmov ecx, esi\ncall 0x9bab90\nadd esi, 0xc\ncmp esi, ebx\njb 0x223500\ncmp dword ptr [edi + 8], 0\npop esi\npop ebx\njl 0x223520\npush dword ptr [edi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush edi\ncall 0x9bb940\nadd esp, 8\npop edi\nret",
+      "destruct": "push ebx\nmov ebx, dword ptr [esp + 8]\npush esi\npush edi\nmov eax, dword ptr [ebx + 4]\nmov esi, dword ptr [ebx]\nlea eax, [eax + eax*2]\nlea edi, [esi + eax*4]\ncmp esi, edi\njae 0x223554\nmov ecx, esi\ncall 0x9bab90\nadd esi, 0xc\ncmp esi, edi\njb 0x223546\ncmp dword ptr [ebx + 8], 0\njl 0x223564\npush dword ptr [ebx]\ncall 0x9bb930\nadd esp, 4\npop edi\npop esi\npop ebx\nret"
+    }
+  },
+  {
+    "name": "ExperienceModData",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "mPlayerMinionSplitXp",
+      "hash": 3242371953,
+      "wrapper": 1216336,
+      "element": "float",
+      "stride": 4,
+      "descriptor": {
+        "code": 128,
+        "of": null,
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            10
+          ],
+          "8": [
+            4,
+            4
+          ]
+        },
+        "vtable": 22252148
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 1947728,
+      "destruct": 1947776
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1db874\ncmp dword ptr [esi + 8], 0\njl 0x1db869\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov eax, dword ptr [esp + 4]\ncmp dword ptr [eax + 8], 0\njl 0x1db892\npush dword ptr [eax]\ncall 0x9bb930\npop ecx\nret"
+    }
+  },
+  {
+    "name": "FloatingTextOverride",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "OverriddenFloatingTextTypes",
+      "hash": 1397360953,
+      "wrapper": 6374816,
+      "element": "ReflectedPair<u32, bool>",
+      "stride": null,
+      "descriptor": {
+        "code": 134,
+        "of": null,
+        "slot": 6,
+        "size": 8,
+        "stores": {
+          "4": [
+            2,
+            263
+          ]
+        },
+        "vtable": 28483148
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 1947728,
+      "destruct": 1947776
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1db874\ncmp dword ptr [esi + 8], 0\njl 0x1db869\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov eax, dword ptr [esp + 4]\ncmp dword ptr [eax + 8], 0\njl 0x1db892\npush dword ptr [eax]\ncall 0x9bb930\npop ecx\nret"
+    }
+  },
+  {
+    "name": "FontType",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "localeTypes",
+      "hash": 2359137012,
+      "wrapper": 10705792,
+      "element": "FontLocaleType",
+      "stride": 36,
+      "descriptor": {
+        "code": 128,
+        "of": [
+          "imm",
+          57784040
+        ],
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            131
+          ],
+          "8": [
+            4,
+            36
+          ]
+        },
+        "vtable": 28622824
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": 2308272,
+    "native_dtor_body": "push ebx\npush esi\npush edi\nmov edi, ecx\nmov eax, dword ptr [edi + 4]\nmov esi, dword ptr [edi]\nlea eax, [eax + eax*8]\nlea ebx, [esi + eax*4]\ncmp esi, ebx\njae 0x2338e2\nlea ecx, [esi + 0x18]\ncall 0x9bab90\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\ncall 0x9bab90\nadd esi, 0x24\ncmp esi, ebx\njb 0x2338c4\ncmp dword ptr [edi + 8], 0\njl 0x2338f2\npush dword ptr [edi]\ncall 0x9bb930\nadd esp, 4\npop edi\npop esi\npop ebx\nret",
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 10705360,
+      "destruct": 10705392
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0xa359eb\nmov ecx, esi\ncall 0x2338b0\npush 0xc\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov ecx, dword ptr [esp + 4]\njmp 0x2338b0"
+    }
+  },
+  {
+    "name": "GameModeChampionList",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "mChampions",
+      "hash": 3401416180,
+      "wrapper": 2419344,
+      "element": "UiHashKey",
+      "stride": 12,
+      "descriptor": {
+        "code": 129,
+        "of": null,
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            17
+          ],
+          "8": [
+            4,
+            12
+          ]
+        },
+        "vtable": 22237708
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 1947728,
+      "destruct": 1947776
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1db874\ncmp dword ptr [esi + 8], 0\njl 0x1db869\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov eax, dword ptr [esp + 4]\ncmp dword ptr [eax + 8], 0\njl 0x1db892\npush dword ptr [eax]\ncall 0x9bb930\npop ecx\nret"
+    }
+  },
+  {
+    "name": "GameModeItemList",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "mItems",
+      "hash": 2972511644,
+      "wrapper": 2419344,
+      "element": "UiHashKey",
+      "stride": 12,
+      "descriptor": {
+        "code": 129,
+        "of": null,
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            17
+          ],
+          "8": [
+            4,
+            12
+          ]
+        },
+        "vtable": 22237708
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 1947728,
+      "destruct": 1947776
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1db874\ncmp dword ptr [esi + 8], 0\njl 0x1db869\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov eax, dword ptr [esp + 4]\ncmp dword ptr [eax + 8], 0\njl 0x1db892\npush dword ptr [eax]\ncall 0x9bb930\npop ecx\nret"
+    }
+  },
+  {
+    "name": "GameModeSpellList",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "spells",
+      "hash": 1962268366,
+      "wrapper": 2419344,
+      "element": "UiHashKey",
+      "stride": 12,
+      "descriptor": {
+        "code": 129,
+        "of": null,
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            17
+          ],
+          "8": [
+            4,
+            12
+          ]
+        },
+        "vtable": 22237708
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 1947728,
+      "destruct": 1947776
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1db874\ncmp dword ptr [esi + 8], 0\njl 0x1db869\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov eax, dword ptr [esp + 4]\ncmp dword ptr [eax + 8], 0\njl 0x1db892\npush dword ptr [eax]\ncall 0x9bb930\npop ecx\nret"
+    }
+  },
+  {
+    "name": "HeroFloatingInfoCharacterStateIndicatorList",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "StateIndicatorList",
+      "hash": 4253111915,
+      "wrapper": 5734608,
+      "element": "UiHashLink",
+      "stride": 24,
+      "descriptor": {
+        "code": 128,
+        "of": null,
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            17
+          ],
+          "8": [
+            4,
+            24
+          ]
+        },
+        "vtable": 28458792
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 6369472,
+      "destruct": 6369552
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push edi\nmov edi, dword ptr [esp + 8]\ntest edi, edi\nje 0x61310c\nmov eax, dword ptr [edi + 4]\npush ebx\npush esi\nmov esi, dword ptr [edi]\nlea eax, [eax + eax*2]\nlea ebx, [esi + eax*8]\ncmp esi, ebx\njae 0x6130ef\nnop word ptr [eax + eax]\nlea ecx, [esi + 0xc]\ncall 0xae14d0\nadd esi, 0x18\ncmp esi, ebx\njb 0x6130e0\ncmp dword ptr [edi + 8], 0\npop esi\npop ebx\njl 0x613101\npush dword ptr [edi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush edi\ncall 0x9bb940\nadd esp, 8\npop edi\nret",
+      "destruct": "push ebx\nmov ebx, dword ptr [esp + 8]\npush esi\npush edi\nmov eax, dword ptr [ebx + 4]\nmov esi, dword ptr [ebx]\nlea eax, [eax + eax*2]\nlea edi, [esi + eax*8]\ncmp esi, edi\njae 0x613135\nlea ecx, [esi + 0xc]\ncall 0xae14d0\nadd esi, 0x18\ncmp esi, edi\njb 0x613126\ncmp dword ptr [ebx + 8], 0\njl 0x613145\npush dword ptr [ebx]\ncall 0x9bb930\nadd esp, 4\npop edi\npop esi\npop ebx\nret"
+    }
+  },
+  {
+    "name": "HeroFloatingInfoIconsData",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "icons",
+      "hash": 4192329017,
+      "wrapper": 6373664,
+      "element": "HeroFloatingInfoIconData",
+      "stride": 72,
+      "descriptor": {
+        "code": 128,
+        "of": [
+          "imm",
+          57708792
+        ],
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            131
+          ],
+          "8": [
+            4,
+            72
+          ]
+        },
+        "vtable": 28459200
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": 5811280,
+    "native_dtor_body": "push ebx\npush esi\npush edi\nmov edi, ecx\nmov eax, dword ptr [edi + 4]\nmov esi, dword ptr [edi]\nlea eax, [eax + eax*8]\nlea ebx, [esi + eax*8]\ncmp esi, ebx\njae 0x58ac83\nlea ecx, [esi + 0x3c]\ncall 0xae14d0\nlea ecx, [esi + 0x24]\ncall 0xae14d0\nlea ecx, [esi + 0xc]\ncall 0xae14d0\nadd esi, 0x48\ncmp esi, ebx\njb 0x58ac64\ncmp dword ptr [edi + 8], 0\njl 0x58ac93\npush dword ptr [edi]\ncall 0x9bb930\nadd esp, 4\npop edi\npop esi\npop ebx\nret",
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 6369360,
+      "destruct": 6369392
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x61306b\nmov ecx, esi\ncall 0x58ac50\npush 0xc\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov ecx, dword ptr [esp + 4]\njmp 0x58ac50"
+    }
+  },
+  {
+    "name": "HudItemShopQuickBuyData",
+    "size": 24,
+    "align": 4,
+    "member": {
+      "name": "items",
+      "hash": 981021583,
+      "wrapper": 993392,
+      "element": "UiHashKey",
+      "stride": 12,
+      "descriptor": {
+        "code": 128,
+        "of": null,
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            17
+          ],
+          "8": [
+            4,
+            12
+          ]
+        },
+        "vtable": 22237708
+      }
+    },
+    "tail": [
+      "    u32 unknown0c = 0x1;",
+      "    u8 unknown10 = 0x0;",
+      "    u8 unknown11[0x3];",
+      "    u32 unknown14 = 0xffffffff;"
+    ],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 7388672,
+      "construct": 7388736,
+      "destroy": 7385920,
+      "destruct": 1947776
+    },
+    "bodies": {
+      "create": "push 0x18\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0x70be35\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nmov dword ptr [eax + 0xc], 1\nmov byte ptr [eax + 0x10], 0\nmov dword ptr [eax + 0x14], 0xffffffff\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nmov dword ptr [eax + 0xc], 1\nmov byte ptr [eax + 0x10], 0\nmov dword ptr [eax + 0x14], 0xffffffff\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x70b364\ncmp dword ptr [esi + 8], 0\njl 0x70b359\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0x18\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov eax, dword ptr [esp + 4]\ncmp dword ptr [eax + 8], 0\njl 0x1db892\npush dword ptr [eax]\ncall 0x9bb930\npop ecx\nret"
+    }
+  },
+  {
+    "name": "ItemDataValues",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "DataValues",
+      "hash": 112193307,
+      "wrapper": 2791216,
+      "element": "ItemDataValue",
+      "stride": 24,
+      "descriptor": {
+        "code": 128,
+        "of": [
+          "imm",
+          57628808
+        ],
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            131
+          ],
+          "8": [
+            4,
+            24
+          ]
+        },
+        "vtable": 28279772
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 2787456,
+      "destruct": 2787536
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push edi\nmov edi, dword ptr [esp + 8]\ntest edi, edi\nje 0x2a88cc\nmov eax, dword ptr [edi + 4]\npush ebx\npush esi\nmov esi, dword ptr [edi]\nlea eax, [eax + eax*2]\nlea ebx, [esi + eax*8]\ncmp esi, ebx\njae 0x2a88af\nnop word ptr [eax + eax]\nmov eax, dword ptr [esi]\nmov ecx, esi\npush 0\ncall dword ptr [eax]\nadd esi, 0x18\ncmp esi, ebx\njb 0x2a88a0\ncmp dword ptr [edi + 8], 0\npop esi\npop ebx\njl 0x2a88c1\npush dword ptr [edi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush edi\ncall 0x9bb940\nadd esp, 8\npop edi\nret",
+      "destruct": "push ebx\nmov ebx, dword ptr [esp + 8]\npush esi\npush edi\nmov eax, dword ptr [ebx + 4]\nmov esi, dword ptr [ebx]\nlea eax, [eax + eax*2]\nlea edi, [esi + eax*8]\ncmp esi, edi\njae 0x2a88f5\nmov eax, dword ptr [esi]\nmov ecx, esi\npush 0\ncall dword ptr [eax]\nadd esi, 0x18\ncmp esi, edi\njb 0x2a88e6\ncmp dword ptr [ebx + 8], 0\njl 0x2a8905\npush dword ptr [ebx]\ncall 0x9bb930\nadd esp, 4\npop edi\npop esi\npop ebx\nret"
+    }
+  },
+  {
+    "name": "ItemRecOverrideRange",
+    "size": 16,
+    "align": 4,
+    "member": {
+      "name": "items",
+      "hash": 981021583,
+      "wrapper": 993392,
+      "element": "UiHashKey",
+      "stride": 12,
+      "descriptor": {
+        "code": 128,
+        "of": null,
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            17
+          ],
+          "8": [
+            4,
+            12
+          ]
+        },
+        "vtable": 22237708
+      }
+    },
+    "tail": [
+      "    u32 unknown0c = 0x6;"
+    ],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 2788544,
+      "construct": 2788592,
+      "destroy": 2789520,
+      "destruct": 1947776
+    },
+    "bodies": {
+      "create": "push 0x10\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0x2a8cea\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nmov dword ptr [eax + 0xc], 6\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nmov dword ptr [eax + 0xc], 6\nret\nmov ecx, dword ptr [esp + 4]\njmp 0x2b1f40",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x2a90b4\ncmp dword ptr [esi + 8], 0\njl 0x2a90a9\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0x10\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov eax, dword ptr [esp + 4]\ncmp dword ptr [eax + 8], 0\njl 0x1db892\npush dword ptr [eax]\ncall 0x9bb930\npop ecx\nret"
+    }
+  },
+  {
+    "name": "ItemRecommendationChoices",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "mChoices",
+      "hash": 766608976,
+      "wrapper": 993024,
+      "element": "u32",
+      "stride": 4,
+      "descriptor": {
+        "code": 128,
+        "of": null,
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            7
+          ],
+          "8": [
+            4,
+            4
+          ]
+        },
+        "vtable": 22237748
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 1947728,
+      "destruct": 1947776
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1db874\ncmp dword ptr [esi + 8], 0\njl 0x1db869\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov eax, dword ptr [esp + 4]\ncmp dword ptr [eax + 8], 0\njl 0x1db892\npush dword ptr [eax]\ncall 0x9bb930\npop ecx\nret"
+    }
+  },
+  {
+    "name": "ItemRecommendationItemList",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "mItemList",
+      "hash": 2861724943,
+      "wrapper": 993024,
+      "element": "u32",
+      "stride": 4,
+      "descriptor": {
+        "code": 128,
+        "of": null,
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            7
+          ],
+          "8": [
+            4,
+            4
+          ]
+        },
+        "vtable": 22237748
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 1947728,
+      "destruct": 1947776
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1db874\ncmp dword ptr [esi + 8], 0\njl 0x1db869\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov eax, dword ptr [esp + 4]\ncmp dword ptr [eax + 8], 0\njl 0x1db892\npush dword ptr [eax]\ncall 0x9bb930\npop ecx\nret"
+    }
+  },
+  {
+    "name": "ItemRecommendationOverrideStartingItemBundle",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "items",
+      "hash": 981021583,
+      "wrapper": 993392,
+      "element": "UiHashKey",
+      "stride": 12,
+      "descriptor": {
+        "code": 128,
+        "of": null,
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            17
+          ],
+          "8": [
+            4,
+            12
+          ]
+        },
+        "vtable": 22237708
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 1947728,
+      "destruct": 1947776
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1db874\ncmp dword ptr [esi + 8], 0\njl 0x1db869\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov eax, dword ptr [esp + 4]\ncmp dword ptr [eax + 8], 0\njl 0x1db892\npush dword ptr [eax]\ncall 0x9bb930\npop ecx\nret"
+    }
+  },
+  {
+    "name": "ItemRecommendationOverrideStartingItemSet",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "mStartingItems",
+      "hash": 43002728,
+      "wrapper": 993392,
+      "element": "UiHashKey",
+      "stride": 12,
+      "descriptor": {
+        "code": 128,
+        "of": null,
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            17
+          ],
+          "8": [
+            4,
+            12
+          ]
+        },
+        "vtable": 22237708
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 1947728,
+      "destruct": 1947776
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1db874\ncmp dword ptr [esi + 8], 0\njl 0x1db869\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov eax, dword ptr [esp + 4]\ncmp dword ptr [eax + 8], 0\njl 0x1db892\npush dword ptr [eax]\ncall 0x9bb930\npop ecx\nret"
+    }
+  },
+  {
+    "name": "JungleRecommendationMapInformation",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "JungleLocationInformation",
+      "hash": 3824596855,
+      "wrapper": 993744,
+      "element": "JungleLocationMapInformation",
+      "stride": 28,
+      "descriptor": {
+        "code": 129,
+        "of": [
+          "imm",
+          31818152
+        ],
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            131
+          ],
+          "8": [
+            4,
+            28
+          ]
+        },
+        "vtable": 22237884
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 988592,
+      "destruct": 988672
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push edi\nmov edi, dword ptr [esp + 8]\ntest edi, edi\nje 0xf15fb\nmov eax, dword ptr [edi + 4]\npush ebx\npush esi\nmov esi, dword ptr [edi]\nlea ecx, [eax*8]\nsub ecx, eax\nlea ebx, [esi + ecx*4]\ncmp esi, ebx\njae 0xf15de\nmov ecx, esi\ncall 0x9bab90\nadd esi, 0x1c\ncmp esi, ebx\njb 0xf15d0\ncmp dword ptr [edi + 8], 0\npop esi\npop ebx\njl 0xf15f0\npush dword ptr [edi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush edi\ncall 0x9bb940\nadd esp, 8\npop edi\nret",
+      "destruct": "push ebx\nmov ebx, dword ptr [esp + 8]\npush esi\npush edi\nmov eax, dword ptr [ebx + 4]\nmov esi, dword ptr [ebx]\nlea ecx, [eax*8]\nsub ecx, eax\nlea edi, [esi + ecx*4]\ncmp esi, edi\njae 0xf162e\nnop dword ptr [eax]\nmov ecx, esi\ncall 0x9bab90\nadd esi, 0x1c\ncmp esi, edi\njb 0xf1620\ncmp dword ptr [ebx + 8], 0\njl 0xf163e\npush dword ptr [ebx]\ncall 0x9bb930\nadd esp, 4\npop edi\npop esi\npop ebx\nret"
+    }
+  },
+  {
+    "name": "LoadingScreenSummonerNameData",
+    "size": 20,
+    "align": 4,
+    "member": {
+      "name": "SummonerName",
+      "hash": 3873681358,
+      "wrapper": 5734608,
+      "element": "UiHashLink",
+      "stride": 24,
+      "descriptor": {
+        "code": 128,
+        "of": null,
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            17
+          ],
+          "8": [
+            4,
+            24
+          ]
+        },
+        "vtable": 28458792
+      }
+    },
+    "tail": [
+      "    u8 unknown0c[0x8];"
+    ],
+    "native_ctor": 6652624,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 6604176,
+      "construct": 6604208,
+      "destroy": 6601776,
+      "destruct": 6369552
+    },
+    "bodies": {
+      "create": "push 0x14\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0x64c5a5\nmov ecx, eax\njmp 0x6582d0\nxor eax, eax\nret",
+      "construct": "mov ecx, dword ptr [esp + 4]\njmp 0x6582d0",
+      "destroy": "push edi\nmov edi, dword ptr [esp + 8]\ntest edi, edi\nje 0x64bc7c\nmov eax, dword ptr [edi + 4]\npush ebx\npush esi\nmov esi, dword ptr [edi]\nlea eax, [eax + eax*2]\nlea ebx, [esi + eax*8]\ncmp esi, ebx\njae 0x64bc5f\nnop word ptr [eax + eax]\nlea ecx, [esi + 0xc]\ncall 0xae14d0\nadd esi, 0x18\ncmp esi, ebx\njb 0x64bc50\ncmp dword ptr [edi + 8], 0\npop esi\npop ebx\njl 0x64bc71\npush dword ptr [edi]\ncall 0x9bb930\nadd esp, 4\npush 0x14\npush edi\ncall 0x9bb940\nadd esp, 8\npop edi\nret",
+      "destruct": "push ebx\nmov ebx, dword ptr [esp + 8]\npush esi\npush edi\nmov eax, dword ptr [ebx + 4]\nmov esi, dword ptr [ebx]\nlea eax, [eax + eax*2]\nlea edi, [esi + eax*8]\ncmp esi, edi\njae 0x613135\nlea ecx, [esi + 0xc]\ncall 0xae14d0\nadd esi, 0x18\ncmp esi, edi\njb 0x613126\ncmp dword ptr [ebx + 8], 0\njl 0x613145\npush dword ptr [ebx]\ncall 0x9bb930\nadd esp, 4\npop edi\npop esi\npop ebx\nret"
+    }
+  },
+  {
+    "name": "LoadingScreenSummonerTitleData",
+    "size": 20,
+    "align": 4,
+    "member": {
+      "name": "SummonerTitle",
+      "hash": 2133303201,
+      "wrapper": 5734608,
+      "element": "UiHashLink",
+      "stride": 24,
+      "descriptor": {
+        "code": 128,
+        "of": null,
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            17
+          ],
+          "8": [
+            4,
+            24
+          ]
+        },
+        "vtable": 28458792
+      }
+    },
+    "tail": [
+      "    u8 unknown0c[0x8];"
+    ],
+    "native_ctor": 6652624,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 6604176,
+      "construct": 6604208,
+      "destroy": 6601776,
+      "destruct": 6369552
+    },
+    "bodies": {
+      "create": "push 0x14\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0x64c5a5\nmov ecx, eax\njmp 0x6582d0\nxor eax, eax\nret",
+      "construct": "mov ecx, dword ptr [esp + 4]\njmp 0x6582d0",
+      "destroy": "push edi\nmov edi, dword ptr [esp + 8]\ntest edi, edi\nje 0x64bc7c\nmov eax, dword ptr [edi + 4]\npush ebx\npush esi\nmov esi, dword ptr [edi]\nlea eax, [eax + eax*2]\nlea ebx, [esi + eax*8]\ncmp esi, ebx\njae 0x64bc5f\nnop word ptr [eax + eax]\nlea ecx, [esi + 0xc]\ncall 0xae14d0\nadd esi, 0x18\ncmp esi, ebx\njb 0x64bc50\ncmp dword ptr [edi + 8], 0\npop esi\npop ebx\njl 0x64bc71\npush dword ptr [edi]\ncall 0x9bb930\nadd esp, 4\npush 0x14\npush edi\ncall 0x9bb940\nadd esp, 8\npop edi\nret",
+      "destruct": "push ebx\nmov ebx, dword ptr [esp + 8]\npush esi\npush edi\nmov eax, dword ptr [ebx + 4]\nmov esi, dword ptr [ebx]\nlea eax, [eax + eax*2]\nlea edi, [esi + eax*8]\ncmp esi, edi\njae 0x613135\nlea ecx, [esi + 0xc]\ncall 0xae14d0\nadd esi, 0x18\ncmp esi, edi\njb 0x613126\ncmp dword ptr [ebx + 8], 0\njl 0x613145\npush dword ptr [ebx]\ncall 0x9bb930\nadd esp, 4\npop edi\npop esi\npop ebx\nret"
+    }
+  },
+  {
+    "name": "MapLocatorArray",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "locators",
+      "hash": 3027360810,
+      "wrapper": 3422352,
+      "element": "MapLocator",
+      "stride": 88,
+      "descriptor": {
+        "code": 128,
+        "of": [
+          "get",
+          10669984
+        ],
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            131
+          ],
+          "8": [
+            4,
+            88
+          ]
+        },
+        "vtable": 28318568
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 3417472,
+      "destruct": 3417552
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push edi\nmov edi, dword ptr [esp + 8]\ntest edi, edi\nje 0x3425c3\npush ebx\nimul ebx, dword ptr [edi + 4], 0x58\npush esi\nmov esi, dword ptr [edi]\nadd ebx, esi\ncmp esi, ebx\njae 0x3425a6\nmov eax, dword ptr [esi]\nmov ecx, esi\npush 0\ncall dword ptr [eax]\nadd esi, 0x58\ncmp esi, ebx\njb 0x342597\ncmp dword ptr [edi + 8], 0\npop esi\npop ebx\njl 0x3425b8\npush dword ptr [edi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush edi\ncall 0x9bb940\nadd esp, 8\npop edi\nret",
+      "destruct": "push ebx\nmov ebx, dword ptr [esp + 8]\npush esi\npush edi\nimul edi, dword ptr [ebx + 4], 0x58\nmov esi, dword ptr [ebx]\nadd edi, esi\ncmp esi, edi\njae 0x3425f2\nmov eax, dword ptr [esi]\nmov ecx, esi\npush 0\ncall dword ptr [eax]\nadd esi, 0x58\ncmp esi, edi\njb 0x3425e3\ncmp dword ptr [ebx + 8], 0\njl 0x342602\npush dword ptr [ebx]\ncall 0x9bb930\nadd esp, 4\npop edi\npop esi\npop ebx\nret"
+    }
+  },
+  {
+    "name": "MapParticleGroups",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "groups",
+      "hash": 2943077229,
+      "wrapper": 993472,
+      "element": "MetaString",
+      "stride": 12,
+      "descriptor": {
+        "code": 128,
+        "of": null,
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            16
+          ],
+          "8": [
+            4,
+            12
+          ]
+        },
+        "vtable": 22237788
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 2241760,
+      "destruct": 2241840
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push edi\nmov edi, dword ptr [esp + 8]\ntest edi, edi\nje 0x22352b\nmov eax, dword ptr [edi + 4]\npush ebx\npush esi\nmov esi, dword ptr [edi]\nlea eax, [eax + eax*2]\nlea ebx, [esi + eax*4]\ncmp esi, ebx\njae 0x22350e\nnop word ptr [eax + eax]\nmov ecx, esi\ncall 0x9bab90\nadd esi, 0xc\ncmp esi, ebx\njb 0x223500\ncmp dword ptr [edi + 8], 0\npop esi\npop ebx\njl 0x223520\npush dword ptr [edi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush edi\ncall 0x9bb940\nadd esp, 8\npop edi\nret",
+      "destruct": "push ebx\nmov ebx, dword ptr [esp + 8]\npush esi\npush edi\nmov eax, dword ptr [ebx + 4]\nmov esi, dword ptr [ebx]\nlea eax, [eax + eax*2]\nlea edi, [esi + eax*4]\ncmp esi, edi\njae 0x223554\nmov ecx, esi\ncall 0x9bab90\nadd esi, 0xc\ncmp esi, edi\njb 0x223546\ncmp dword ptr [ebx + 8], 0\njl 0x223564\npush dword ptr [ebx]\ncall 0x9bb930\nadd esp, 4\npop edi\npop esi\npop ebx\nret"
+    }
+  },
+  {
+    "name": "MasteryBadgeConfig",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "mBadges",
+      "hash": 1829395376,
+      "wrapper": 2248640,
+      "element": "MasteryBadgeData",
+      "stride": 32,
+      "descriptor": {
+        "code": 128,
+        "of": [
+          "imm",
+          57611600
+        ],
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            131
+          ],
+          "8": [
+            4,
+            32
+          ]
+        },
+        "vtable": 28213796
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 2241008,
+      "destruct": 2241088
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push edi\nmov edi, dword ptr [esp + 8]\ntest edi, edi\nje 0x22323c\npush ebx\nmov ebx, dword ptr [edi + 4]\nshl ebx, 5\npush esi\nmov esi, dword ptr [edi]\nadd ebx, esi\ncmp esi, ebx\njae 0x22321f\nnop dword ptr [eax]\nlea ecx, [esi + 4]\ncall 0x9bab90\nadd esi, 0x20\ncmp esi, ebx\njb 0x223210\ncmp dword ptr [edi + 8], 0\npop esi\npop ebx\njl 0x223231\npush dword ptr [edi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush edi\ncall 0x9bb940\nadd esp, 8\npop edi\nret",
+      "destruct": "push ebx\nmov ebx, dword ptr [esp + 8]\npush esi\npush edi\nmov edi, dword ptr [ebx + 4]\nmov esi, dword ptr [ebx]\nshl edi, 5\nadd edi, esi\ncmp esi, edi\njae 0x223264\nlea ecx, [esi + 4]\ncall 0x9bab90\nadd esi, 0x20\ncmp esi, edi\njb 0x223255\ncmp dword ptr [ebx + 8], 0\njl 0x223274\npush dword ptr [ebx]\ncall 0x9bb930\nadd esp, 4\npop edi\npop esi\npop ebx\nret"
+    }
+  },
+  {
+    "name": "PerkEffectAmountPerMode",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "mEffectAmountPerMode",
+      "hash": 2562594311,
+      "wrapper": 3649184,
+      "element": "ReflectedPair<HashValue, float>",
+      "stride": null,
+      "descriptor": {
+        "code": 134,
+        "of": null,
+        "slot": 6,
+        "size": 8,
+        "stores": {
+          "4": [
+            2,
+            2577
+          ]
+        },
+        "vtable": 28337192
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 1947728,
+      "destruct": 1947776
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1db874\ncmp dword ptr [esi + 8], 0\njl 0x1db869\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov eax, dword ptr [esp + 4]\ncmp dword ptr [eax + 8], 0\njl 0x1db892\npush dword ptr [eax]\ncall 0x9bb930\npop ecx\nret"
+    }
+  },
+  {
+    "name": "RegionsThatAllowContent",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "mRegionList",
+      "hash": 314052692,
+      "wrapper": 2249504,
+      "element": "HashValue",
+      "stride": 4,
+      "descriptor": {
+        "code": 128,
+        "of": null,
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            17
+          ],
+          "8": [
+            4,
+            4
+          ]
+        },
+        "vtable": 28214252
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 1947728,
+      "destruct": 1947776
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1db874\ncmp dword ptr [esi + 8], 0\njl 0x1db869\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov eax, dword ptr [esp + 4]\ncmp dword ptr [eax + 8], 0\njl 0x1db892\npush dword ptr [eax]\ncall 0x9bb930\npop ecx\nret"
+    }
+  },
+  {
+    "name": "SpellDataValueVector",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "SpellDataValues",
+      "hash": 1392371535,
+      "wrapper": 5290048,
+      "element": "SpellDataValue",
+      "stride": 48,
+      "descriptor": {
+        "code": 128,
+        "of": [
+          "imm",
+          57681104
+        ],
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            131
+          ],
+          "8": [
+            4,
+            48
+          ]
+        },
+        "vtable": 28442316
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 5283840,
+      "destruct": 5283920
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push edi\nmov edi, dword ptr [esp + 8]\ntest edi, edi\nje 0x50a04c\nmov eax, dword ptr [edi + 4]\npush ebx\npush esi\nmov esi, dword ptr [edi]\nlea ebx, [eax + eax*2]\nshl ebx, 4\nadd ebx, esi\ncmp esi, ebx\njae 0x50a02f\nnop dword ptr [eax]\nmov eax, dword ptr [esi]\nmov ecx, esi\npush 0\ncall dword ptr [eax]\nadd esi, 0x30\ncmp esi, ebx\njb 0x50a020\ncmp dword ptr [edi + 8], 0\npop esi\npop ebx\njl 0x50a041\npush dword ptr [edi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush edi\ncall 0x9bb940\nadd esp, 8\npop edi\nret",
+      "destruct": "push ebx\nmov ebx, dword ptr [esp + 8]\npush esi\npush edi\nmov eax, dword ptr [ebx + 4]\nmov esi, dword ptr [ebx]\nlea edi, [eax + eax*2]\nshl edi, 4\nadd edi, esi\ncmp esi, edi\njae 0x50a077\nmov eax, dword ptr [esi]\nmov ecx, esi\npush 0\ncall dword ptr [eax]\nadd esi, 0x30\ncmp esi, edi\njb 0x50a068\ncmp dword ptr [ebx + 8], 0\njl 0x50a087\npush dword ptr [ebx]\ncall 0x9bb930\nadd esp, 4\npop edi\npop esi\npop ebx\nret"
+    }
+  },
+  {
+    "name": "StatFormulaData",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "StatComponents",
+      "hash": 3897551059,
+      "wrapper": 5446176,
+      "element": "ReflectedPair<u8, float>",
+      "stride": null,
+      "descriptor": {
+        "code": 134,
+        "of": null,
+        "slot": 6,
+        "size": 8,
+        "stores": {
+          "4": [
+            2,
+            2563
+          ]
+        },
+        "vtable": 28447316
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 1947728,
+      "destruct": 1947776
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1db874\ncmp dword ptr [esi + 8], 0\njl 0x1db869\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov eax, dword ptr [esp + 4]\ncmp dword ptr [eax + 8], 0\njl 0x1db892\npush dword ptr [eax]\ncall 0x9bb930\npop ecx\nret"
+    }
+  },
+  {
+    "name": "TFTCompanionBucket",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "Companions",
+      "hash": 1458363922,
+      "wrapper": 993392,
+      "element": "UiHashKey",
+      "stride": 12,
+      "descriptor": {
+        "code": 128,
+        "of": null,
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            17
+          ],
+          "8": [
+            4,
+            12
+          ]
+        },
+        "vtable": 22237708
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": null,
+    "native_dtor_body": null,
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 1947728,
+      "destruct": 1947776
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x1db874\ncmp dword ptr [esi + 8], 0\njl 0x1db869\npush dword ptr [esi]\ncall 0x9bb930\nadd esp, 4\npush 0xc\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov eax, dword ptr [esp + 4]\ncmp dword ptr [eax + 8], 0\njl 0x1db892\npush dword ptr [eax]\ncall 0x9bb930\npop ecx\nret"
+    }
+  },
+  {
+    "name": "TftMapItemList",
+    "size": 12,
+    "align": 4,
+    "member": {
+      "name": "items",
+      "hash": 981021583,
+      "wrapper": 5572528,
+      "element": "TftMapItemData",
+      "stride": 40,
+      "descriptor": {
+        "code": 129,
+        "of": [
+          "imm",
+          57687768
+        ],
+        "slot": 5,
+        "size": 12,
+        "stores": {
+          "4": [
+            1,
+            131
+          ],
+          "8": [
+            4,
+            40
+          ]
+        },
+        "vtable": 28450976
+      }
+    },
+    "tail": [],
+    "native_ctor": null,
+    "native_dtor": 5606880,
+    "native_dtor_body": "push ebx\npush esi\npush edi\nmov edi, ecx\nmov eax, dword ptr [edi + 4]\nmov esi, dword ptr [edi]\nlea eax, [eax + eax*4]\nlea ebx, [esi + eax*8]\ncmp esi, ebx\njae 0x558e12\nlea ecx, [esi + 0x1c]\ncall 0x9bab90\nlea ecx, [esi + 0xc]\ncall 0x9bab90\nmov ecx, esi\ncall 0x9bab90\nadd esi, 0x28\ncmp esi, ebx\njb 0x558df4\ncmp dword ptr [edi + 8], 0\njl 0x558e22\npush dword ptr [edi]\ncall 0x9bb930\nadd esp, 4\npop edi\npop esi\npop ebx\nret",
+    "callbacks": {
+      "create": 987680,
+      "construct": 987728,
+      "destroy": 5568160,
+      "destruct": 5568192
+    },
+    "bodies": {
+      "create": "push 0xc\ncall 0x9bb8d0\nadd esp, 4\ntest eax, eax\nje 0xf1243\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret\nxor eax, eax\nret",
+      "construct": "mov eax, dword ptr [esp + 4]\nmov dword ptr [eax], 0\nmov dword ptr [eax + 4], 0\nmov dword ptr [eax + 8], 0\nret",
+      "destroy": "push esi\nmov esi, dword ptr [esp + 8]\ntest esi, esi\nje 0x54f6bb\nmov ecx, esi\ncall 0x558de0\npush 0xc\npush esi\ncall 0x9bb940\nadd esp, 8\npop esi\nret",
+      "destruct": "mov ecx, dword ptr [esp + 4]\njmp 0x558de0"
+    }
+  }
+]

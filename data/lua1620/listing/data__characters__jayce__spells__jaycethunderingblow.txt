@@ -1,0 +1,32 @@
+
+main <?:0,0> (18 instructions, 72 bytes at 000001CD6E8835F0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 8 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	NEWTABLE 	0 1 0
+	6	[-]	LOADK    	1 -4	; "JayceSkin03"
+	7	[-]	SETLIST  	0 1 1	; 1
+	8	[-]	SETGLOBAL	0 -3	; SpellFXOverrideSkins
+	9	[-]	NEWTABLE 	0 2 0
+	10	[-]	LOADK    	1 -6	; "Jayce_Sentinel"
+	11	[-]	LOADK    	2 -4	; "JayceSkin03"
+	12	[-]	SETLIST  	0 2 1	; 1
+	13	[-]	SETGLOBAL	0 -5	; SpellVOOverrideSkins
+	14	[-]	LOADBOOL 	0 1 0
+	15	[-]	SETGLOBAL	0 -7	; IsDamagingSpell
+	16	[-]	LOADBOOL 	0 1 0
+	17	[-]	SETGLOBAL	0 -8	; TriggersSpellCasts
+	18	[-]	RETURN   	0 1
+constants (8) for 000001CD6E8835F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"SpellFXOverrideSkins"
+	4	"JayceSkin03"
+	5	"SpellVOOverrideSkins"
+	6	"Jayce_Sentinel"
+	7	"IsDamagingSpell"
+	8	"TriggersSpellCasts"
+locals (0) for 000001CD6E8835F0:
+upvalues (0) for 000001CD6E8835F0:

@@ -1,0 +1,43 @@
+
+main <?:0,0> (24 instructions, 96 bytes at 000002870D9E35C0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 13 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	NEWTABLE 	0 5 0
+	8	[-]	LOADK    	1 -5	; 20
+	9	[-]	LOADK    	2 -6	; 18
+	10	[-]	LOADK    	3 -7	; 16
+	11	[-]	LOADK    	4 -8	; 14
+	12	[-]	LOADK    	5 -9	; 12
+	13	[-]	SETLIST  	0 5 1	; 1
+	14	[-]	SETGLOBAL	0 -4	; AutoCooldownByLevel
+	15	[-]	NEWTABLE 	0 2 0
+	16	[-]	LOADK    	1 -11	; "KhazixDroid"
+	17	[-]	LOADK    	2 -12	; "KhazixSkin02"
+	18	[-]	SETLIST  	0 2 1	; 1
+	19	[-]	SETGLOBAL	0 -10	; SpellFXOverrideSkins
+	20	[-]	NEWTABLE 	0 1 0
+	21	[-]	LOADK    	1 -11	; "KhazixDroid"
+	22	[-]	SETLIST  	0 1 1	; 1
+	23	[-]	SETGLOBAL	0 -13	; SpellVOOverrideSkins
+	24	[-]	RETURN   	0 1
+constants (13) for 000002870D9E35C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"AutoCooldownByLevel"
+	5	20
+	6	18
+	7	16
+	8	14
+	9	12
+	10	"SpellFXOverrideSkins"
+	11	"KhazixDroid"
+	12	"KhazixSkin02"
+	13	"SpellVOOverrideSkins"
+locals (0) for 000002870D9E35C0:
+upvalues (0) for 000002870D9E35C0:

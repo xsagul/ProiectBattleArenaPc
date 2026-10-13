@@ -1,0 +1,21 @@
+
+main <?:0,0> (10 instructions, 40 bytes at 0000015BE7FE35F0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 5 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; DoesntBreakShields
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; NonDispellable
+	5	[-]	NEWTABLE 	0 2 0
+	6	[-]	LOADK    	1 -4	; "SteelLegionLux"
+	7	[-]	LOADK    	2 -5	; "LuxSkin06"
+	8	[-]	SETLIST  	0 2 1	; 1
+	9	[-]	SETGLOBAL	0 -3	; SpellFXOverrideSkins
+	10	[-]	RETURN   	0 1
+constants (5) for 0000015BE7FE35F0:
+	1	"DoesntBreakShields"
+	2	"NonDispellable"
+	3	"SpellFXOverrideSkins"
+	4	"SteelLegionLux"
+	5	"LuxSkin06"
+locals (0) for 0000015BE7FE35F0:
+upvalues (0) for 0000015BE7FE35F0:

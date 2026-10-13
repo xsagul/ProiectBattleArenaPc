@@ -1,0 +1,46 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 000002583C3B35D0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Varus/HUD/Icons2D/VarusW.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "VarusW"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; 2
+	14	[-]	SETGLOBAL	0 -9	; SpellToggleSlot
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -11	; IsDeathRecapSource
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -12	; PersistsThroughDeath
+	19	[-]	NEWTABLE 	0 1 0
+	20	[-]	LOADK    	1 -14	; ""
+	21	[-]	SETLIST  	0 1 1	; 1
+	22	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	23	[-]	LOADBOOL 	0 1 0
+	24	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	25	[-]	RETURN   	0 1
+constants (15) for 000002583C3B35D0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Varus/HUD/Icons2D/VarusW.dds"
+	7	"BuffName"
+	8	"VarusW"
+	9	"SpellToggleSlot"
+	10	2
+	11	"IsDeathRecapSource"
+	12	"PersistsThroughDeath"
+	13	"SpellFXOverrideSkins"
+	14	""
+	15	"IsDamagingSpell"
+locals (0) for 000002583C3B35D0:
+upvalues (0) for 000002583C3B35D0:

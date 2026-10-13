@@ -1,0 +1,49 @@
+
+main <?:0,0> (29 instructions, 116 bytes at 0000025B6B6B35C0)
+0+ params, 6 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Rengar/HUD/Icons2D/Rengar_E_Emp.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "RengarEEmp"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	NEWTABLE 	0 5 0
+	14	[-]	LOADK    	1 -10	; 0
+	15	[-]	LOADK    	2 -10	; 0
+	16	[-]	LOADK    	3 -10	; 0
+	17	[-]	LOADK    	4 -10	; 0
+	18	[-]	LOADK    	5 -10	; 0
+	19	[-]	SETLIST  	0 5 1	; 1
+	20	[-]	SETGLOBAL	0 -9	; AutoCooldownByLevel
+	21	[-]	LOADBOOL 	0 1 0
+	22	[-]	SETGLOBAL	0 -11	; IsDeathRecapSource
+	23	[-]	NEWTABLE 	0 1 0
+	24	[-]	LOADK    	1 -13	; "HunterRengar"
+	25	[-]	SETLIST  	0 1 1	; 1
+	26	[-]	SETGLOBAL	0 -12	; SpellFXOverrideSkins
+	27	[-]	LOADBOOL 	0 1 0
+	28	[-]	SETGLOBAL	0 -14	; IsDamagingSpell
+	29	[-]	RETURN   	0 1
+constants (14) for 0000025B6B6B35C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Rengar/HUD/Icons2D/Rengar_E_Emp.dds"
+	7	"BuffName"
+	8	"RengarEEmp"
+	9	"AutoCooldownByLevel"
+	10	0
+	11	"IsDeathRecapSource"
+	12	"SpellFXOverrideSkins"
+	13	"HunterRengar"
+	14	"IsDamagingSpell"
+locals (0) for 0000025B6B6B35C0:
+upvalues (0) for 0000025B6B6B35C0:

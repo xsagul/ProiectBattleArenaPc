@@ -4,4 +4,6 @@
 // match: e5ebd0 _SM4_decrypt
 // match: e5f7a0 _SM4_encrypt
 // match: e60370 _SM4_set_key
+#define OPENSSL_FILE "crypto\\sm4\\sm4.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/sm4/sm4.c"

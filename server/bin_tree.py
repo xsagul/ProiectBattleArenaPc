@@ -19,7 +19,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, '..')
 BAINFO = os.path.join(ROOT, 'tools', 'bin', 'bainfo.exe')
-GAME = r'C:\Users\Sorin\Desktop\ProiectBattleArenaPc\game\DATA\FINAL\Champions'
+GAME = os.path.join(ROOT, 'game16' if os.environ.get('BA_PATCH') == '1620' else 'game', 'DATA', 'FINAL', 'Champions')
 _cache = {}
 
 
@@ -66,6 +66,8 @@ def _value(head_rest, kids):
         return out
     if re.fullmatch(r'[A-Za-z_]\w*', head_rest) and kids:
         return _struct(head_rest, kids)
+    if re.fullmatch(r'\{[0-9a-f]{8}\}', head_rest) and kids:       # a struct whose class name is not in the hash list
+        return _struct(head_rest, kids)
     if re.fullmatch(r'[A-Za-z_]\w*', head_rest) and not kids and head_rest[0].isupper():
         return {'_type': head_rest}
     return scalar(head_rest)
@@ -73,6 +75,8 @@ def _value(head_rest, kids):
 
 def _item(head, kids):
     if re.fullmatch(r'[A-Za-z_]\w*', head) and head[0].isupper():
+        return _struct(head, kids)
+    if kids and re.fullmatch(r'\{[0-9a-f]{8}\}', head):
         return _struct(head, kids)
     return scalar(head)
 
@@ -90,13 +94,26 @@ def _struct(typ, kids):
     return out
 
 
+CACHE = os.path.join(ROOT, 'data', 'exe1620' if os.environ.get('BA_PATCH') == '1620' else 'exe133', 'bincache')
+
+
 def entries(wad, binpath):
-    """every entry of a bin: [(hash text, class, value)]"""
+    """every entry of a bin: [(hash text, class, value)]. The dump (a bainfo run) and its parse are paid once per
+    bin: the result is kept as a pickle in CACHE, valid while the wad file is not newer."""
+    import pickle
     key = (wad, binpath)
     if key in _cache:
         return _cache[key]
+    tag = re.sub(r'[^A-Za-z0-9_.]+', '_', os.path.basename(wad).split('.')[0] + '__' + binpath.strip('{}'))
+    cache = os.path.join(CACHE, tag + '.pkl')
+    if os.path.exists(cache) and os.path.exists(wad) and os.path.getmtime(cache) >= os.path.getmtime(wad):
+        try:
+            _cache[key] = pickle.load(open(cache, 'rb'))
+            return _cache[key]
+        except Exception:
+            pass
     out = subprocess.run([BAINFO, 'bin', wad, binpath, '', os.path.join(ROOT, 'data', 'hashes')],
-                         capture_output=True, text=True).stdout.splitlines()
+                         capture_output=True, text=True, encoding='utf-8', errors='replace').stdout.splitlines()
     res = []
     i = 0
     while i < len(out):
@@ -107,7 +124,23 @@ def entries(wad, binpath):
         else:
             i += 1
     _cache[key] = res
+    if res:
+        os.makedirs(CACHE, exist_ok=True)
+        pickle.dump(res, open(cache + '.tmp', 'wb'), protocol=4)
+        os.replace(cache + '.tmp', cache)
     return res
+
+
+def fnv(s):
+    """the 32-bit FNV-1a of a lower-cased name: how bins name entries and fields ('{xxxxxxxx}')"""
+    h = 0x811c9dc5
+    for c in s.lower().encode():
+        h = ((h ^ c) * 0x01000193) & 0xffffffff
+    return h
+
+
+def key_of(path):
+    return '{%08x}' % fnv(path)
 
 
 def champion_spells(champion):

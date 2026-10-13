@@ -1,0 +1,26 @@
+local L0_1, L1_1, L2_1, L3_1, L4_1
+L0_1 = {}
+L1_1 = {}
+L2_1 = BBMath
+L1_1.Function = L2_1
+L2_1 = {}
+L2_1.Src2Var = "TalentLevel"
+L2_1.Src1Value = 0.005
+L2_1.Src2Value = 0
+L2_1.DestVar = "DodgeMod"
+L3_1 = MO_MULTIPLY
+L2_1.MathOp = L3_1
+L1_1.Params = L2_1
+L2_1 = {}
+L3_1 = BBIncStat
+L2_1.Function = L3_1
+L3_1 = {}
+L4_1 = IncFlatDodgeMod
+L3_1.Stat = L4_1
+L3_1.TargetVar = "Owner"
+L3_1.DeltaVar = "DodgeMod"
+L3_1.Delta = 0
+L2_1.Params = L3_1
+L0_1[1] = L1_1
+L0_1[2] = L2_1
+UpdateSelfBuffStatsBuildingBlocks = L0_1

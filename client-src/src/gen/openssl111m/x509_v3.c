@@ -5,4 +5,6 @@
 // match: dd3da0 _X509_EXTENSION_get_data
 // match: dd3db0 _X509_EXTENSION_set_data
 // match: dd3e40 _X509v3_get_ext_by_NID
+#define OPENSSL_FILE "crypto\\x509\\x509_v3.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/x509/x509_v3.c"

@@ -1,0 +1,52 @@
+
+main <?:0,0> (28 instructions, 112 bytes at 0000028754703590)
+0+ params, 6 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "ZedQ"
+	8	[-]	SETGLOBAL	0 -4	; BuffName
+	9	[-]	LOADK    	0 -7	; 2
+	10	[-]	SETGLOBAL	0 -6	; SpellToggleSlot
+	11	[-]	NEWTABLE 	0 5 0
+	12	[-]	LOADK    	1 -9	; 20
+	13	[-]	LOADK    	2 -10	; 16
+	14	[-]	LOADK    	3 -11	; 12
+	15	[-]	LOADK    	4 -12	; 8
+	16	[-]	LOADK    	5 -13	; 4
+	17	[-]	SETLIST  	0 5 1	; 1
+	18	[-]	SETGLOBAL	0 -8	; AutoCooldownByLevel
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -14	; IsDeathRecapSource
+	21	[-]	NEWTABLE 	0 2 0
+	22	[-]	LOADK    	1 -16	; "ZedStormNinja"
+	23	[-]	LOADK    	2 -17	; "ZedSkin03"
+	24	[-]	SETLIST  	0 2 1	; 1
+	25	[-]	SETGLOBAL	0 -15	; SpellFXOverrideSkins
+	26	[-]	LOADBOOL 	0 1 0
+	27	[-]	SETGLOBAL	0 -18	; TriggersSpellCasts
+	28	[-]	RETURN   	0 1
+constants (18) for 0000028754703590:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffName"
+	5	"ZedQ"
+	6	"SpellToggleSlot"
+	7	2
+	8	"AutoCooldownByLevel"
+	9	20
+	10	16
+	11	12
+	12	8
+	13	4
+	14	"IsDeathRecapSource"
+	15	"SpellFXOverrideSkins"
+	16	"ZedStormNinja"
+	17	"ZedSkin03"
+	18	"TriggersSpellCasts"
+locals (0) for 0000028754703590:
+upvalues (0) for 0000028754703590:

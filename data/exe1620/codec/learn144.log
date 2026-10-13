@@ -1,0 +1,14 @@
+struct 0xef39e0
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1507, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1178, in learn
+    sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc).learn()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 165, in __init__
+    self.fields = self.split(r)
+                  ^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 213, in split
+    assert p == cursor, f'{self.fn:#x}: field {k} starts at {p}, expected {cursor}'
+           ^^^^^^^^^^^
+AssertionError: 0xef39e0: field 0 starts at 4, expected 2

@@ -1,0 +1,42 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 0000027D3DFF3600)
+0+ params, 2 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; CastingBreaksStealth
+	7	[-]	LOADK    	0 -5	; "Jade_Evelynn_Ravage.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADK    	0 -7	; "Ravage"
+	10	[-]	SETGLOBAL	0 -6	; BuffName
+	11	[-]	LOADK    	0 -9	; "doesnotexist.troy"
+	12	[-]	SETGLOBAL	0 -8	; AutoBuffActivateEffect
+	13	[-]	LOADK    	0 -11	; "L_hand"
+	14	[-]	SETGLOBAL	0 -10	; AutoBuffActivateAttachBoneName
+	15	[-]	LOADK    	0 -9	; "doesnotexist.troy"
+	16	[-]	SETGLOBAL	0 -12	; AutoBuffActivateEffect2
+	17	[-]	LOADK    	0 -14	; "R_hand"
+	18	[-]	SETGLOBAL	0 -13	; AutoBuffActivateAttachBoneName2
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	21	[-]	RETURN   	0 1
+constants (15) for 0000027D3DFF3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"CastingBreaksStealth"
+	4	"BuffTextureName"
+	5	"Jade_Evelynn_Ravage.dds"
+	6	"BuffName"
+	7	"Ravage"
+	8	"AutoBuffActivateEffect"
+	9	"doesnotexist.troy"
+	10	"AutoBuffActivateAttachBoneName"
+	11	"L_hand"
+	12	"AutoBuffActivateEffect2"
+	13	"AutoBuffActivateAttachBoneName2"
+	14	"R_hand"
+	15	"IsDamagingSpell"
+locals (0) for 0000027D3DFF3600:
+upvalues (0) for 0000027D3DFF3600:

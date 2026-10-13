@@ -1,0 +1,43 @@
+
+main <?:0,0> (23 instructions, 92 bytes at 0000024BD80D3600)
+0+ params, 6 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "Wolfman_Jade_Warwick_BloodScent.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	NEWTABLE 	0 5 0
+	8	[-]	LOADK    	1 -6	; 45
+	9	[-]	LOADK    	2 -7	; 40
+	10	[-]	LOADK    	3 -8	; 35
+	11	[-]	LOADK    	4 -9	; 30
+	12	[-]	LOADK    	5 -10	; 25
+	13	[-]	SETLIST  	0 5 1	; 1
+	14	[-]	SETGLOBAL	0 -5	; AutoCooldownByLevel
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -11	; PersistsThroughDeath
+	17	[-]	NEWTABLE 	0 1 0
+	18	[-]	LOADK    	1 -13	; "HyenaJade_Warwick"
+	19	[-]	SETLIST  	0 1 1	; 1
+	20	[-]	SETGLOBAL	0 -12	; SpellVOOverrideSkins
+	21	[-]	LOADBOOL 	0 1 0
+	22	[-]	SETGLOBAL	0 -14	; TriggersSpellCasts
+	23	[-]	RETURN   	0 1
+constants (14) for 0000024BD80D3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"Wolfman_Jade_Warwick_BloodScent.dds"
+	5	"AutoCooldownByLevel"
+	6	45
+	7	40
+	8	35
+	9	30
+	10	25
+	11	"PersistsThroughDeath"
+	12	"SpellVOOverrideSkins"
+	13	"HyenaJade_Warwick"
+	14	"TriggersSpellCasts"
+locals (0) for 0000024BD80D3600:
+upvalues (0) for 0000024BD80D3600:

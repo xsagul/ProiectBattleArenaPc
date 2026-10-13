@@ -1,0 +1,33 @@
+
+main <?:0,0> (5 instructions, 20 bytes at 00000259C98934C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 2 constants, 2 functions
+	1	[-]	CLOSURE  	0 0	; 00000259C9893540
+	2	[-]	SETGLOBAL	0 -1	; OnInitClient
+	3	[-]	CLOSURE  	0 1	; 00000259C98935C0
+	4	[-]	SETGLOBAL	0 -2	; OnInitServer
+	5	[-]	RETURN   	0 1
+constants (2) for 00000259C98934C0:
+	1	"OnInitClient"
+	2	"OnInitServer"
+locals (0) for 00000259C98934C0:
+upvalues (0) for 00000259C98934C0:
+
+function <?:1,2> (1 instruction, 4 bytes at 00000259C9893540)
+0 params, 2 slots, 0 upvalues, 0 locals, 0 constants, 0 functions
+	1	[-]	RETURN   	0 1
+constants (0) for 00000259C9893540:
+locals (0) for 00000259C9893540:
+upvalues (0) for 00000259C9893540:
+
+function <?:4,6> (5 instructions, 20 bytes at 00000259C98935C0)
+0 params, 3 slots, 0 upvalues, 0 locals, 2 constants, 0 functions
+	1	[-]	GETGLOBAL	0 -1	; SetWorldVar
+	2	[-]	LOADK    	1 -2	; "SpawnEffect_Rainbow"
+	3	[-]	LOADBOOL 	2 1 0
+	4	[-]	CALL     	0 3 1
+	5	[-]	RETURN   	0 1
+constants (2) for 00000259C98935C0:
+	1	"SetWorldVar"
+	2	"SpawnEffect_Rainbow"
+locals (0) for 00000259C98935C0:
+upvalues (0) for 00000259C98935C0:

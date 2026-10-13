@@ -8,9 +8,18 @@
 // match: dc8510 _EVP_CIPHER_CTX_iv_noconst
 // match: dc8530 _EVP_CIPHER_CTX_original_iv
 // match: dc8540 _EVP_CIPHER_CTX_test_flags
+// match: dc8550 _EVP_CIPHER_asn1_to_param
+// match: dc8670 _EVP_CIPHER_get_asn1_iv
+// match: dc8710 _EVP_CIPHER_param_to_asn1
+// match: dc8830 _EVP_CIPHER_set_asn1_iv
 // match: dc88b0 _EVP_CIPHER_type
 // match: dc8b00 _EVP_Cipher
 // match: dc8b10 _EVP_MD_CTX_clear_flags
 // match: dc8b30 _EVP_MD_CTX_set_flags
 // match: dc8b40 _EVP_MD_CTX_test_flags
+// match: dc8b50 _EVP_MD_meth_free
+// match: dc8b70 _EVP_MD_meth_new
+// match: dc8c80 _EVP_MD_size
+#define OPENSSL_FILE "crypto\\evp\\evp_lib.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/evp/evp_lib.c"

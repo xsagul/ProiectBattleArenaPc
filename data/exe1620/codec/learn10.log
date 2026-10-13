@@ -1,0 +1,24 @@
+struct 0xef36c0
+  0xef36c0 field 0: bits 0..0 +0x10 16 B 0:seq(struct) 1:const
+struct 0xeebe50
+  0xeebe50 field 0: bits 0..2 +0x8 4 B 0:const 1:const 2:varint 3:const 4:varint 5:const 6:varint 7:varint
+  0xeebe50 field 1: bits 11..13 +0xc 4 B 0:const 1:varint 2:const 3:varint 4:const 5:varint 6:varint 7:const
+Traceback (most recent call last):
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1493, in <module>
+    learn(pid)
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 1164, in learn
+    sc.structs[f'{fn:#x}'] = StructLearner(T, fn, sc).learn()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 366, in learn
+    fl = self.learn_field(k)
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 409, in learn_field
+    mode = self.learn_mode(k, m, r, seg, res, d)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 482, in learn_mode
+    return self.learn_text(k, m, res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sorin\Desktop\ProiectBattleArenaPc\server\pkt_schema.py", line 648, in learn_text
+    one = L.index(1)
+          ^^^^^^^^^^
+ValueError: 1 is not in list

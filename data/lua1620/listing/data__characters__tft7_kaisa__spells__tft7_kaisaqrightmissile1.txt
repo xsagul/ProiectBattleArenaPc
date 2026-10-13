@@ -1,0 +1,42 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 00000168719E3610)
+0+ params, 2 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "Heimerdinger_E1.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "Slow"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "DATA/Shared/Particles/Global_Slow.troy"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect
+	15	[-]	LOADK    	0 -12	; "Buffbone_Glb_Ground_Loc"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateAttachBoneName
+	17	[-]	LOADK    	0 -14	; "game_floatingtext_Slowed"
+	18	[-]	SETGLOBAL	0 -13	; PopupMessage1
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	21	[-]	RETURN   	0 1
+constants (15) for 00000168719E3610:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"Heimerdinger_E1.dds"
+	7	"BuffName"
+	8	"Slow"
+	9	"AutoBuffActivateEffect"
+	10	"DATA/Shared/Particles/Global_Slow.troy"
+	11	"AutoBuffActivateAttachBoneName"
+	12	"Buffbone_Glb_Ground_Loc"
+	13	"PopupMessage1"
+	14	"game_floatingtext_Slowed"
+	15	"IsDamagingSpell"
+locals (0) for 00000168719E3610:
+upvalues (0) for 00000168719E3610:

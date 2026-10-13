@@ -5,4 +5,6 @@
 // match: df9060 _AES_encrypt
 // match: df95e0 _AES_set_decrypt_key
 // match: df97f0 _AES_set_encrypt_key
+#define OPENSSL_FILE "crypto\\aes\\aes_core.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/aes/aes_core.c"

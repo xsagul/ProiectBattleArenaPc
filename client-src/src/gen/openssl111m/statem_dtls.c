@@ -4,6 +4,16 @@
 // match: da2580 _dtls1_close_construct_packet
 // match: da2790 _dtls1_do_write
 // match: da2bb0 _dtls1_get_message_header
+// match: da2c30 _dtls1_hm_fragment_free
+// match: da2c90 _dtls1_hm_fragment_new
+// match: da2d80 _dtls1_preprocess_fragment
+// match: da2e80 _dtls1_process_out_of_seq_message
+// match: da30a0 _dtls1_read_failed
+// match: da3120 _dtls1_reassemble_fragment
+// match: da3430 _dtls1_retransmit_buffered_messages
 // match: da3670 _dtls1_set_handshake_header
 // match: da37d0 _dtls_get_message
+// match: da3980 _dtls_get_reassembled_message
+#define OPENSSL_FILE "ssl\\statem\\statem_dtls.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/ssl/statem/statem_dtls.c"

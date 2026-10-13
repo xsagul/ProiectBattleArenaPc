@@ -1,0 +1,8 @@
++0x10 1 B bits 8..15: 0:const, 1:const, 2:const, 10:const, 33:const, 47:const, 63:const, 68:const, 73:const, 87:const, 108:const, 117:const, 138:const, 151:const, 164:const, 165:const, 167:const, 185:const, 186:const, 196:const, 213:const, 224:const, 234:const, 236:const, 254:const, 255:const
++0x14 4 B bits 0..2: 0:const, 1:varint, 2:varint, 3:varint, 4:const, 5:varint, 6:varint, 7:varint
++0x18 8 B bits 6..6: 0:fixed, 1:const
+header 2 B; wire order: ['0x14', '0x18', '0x10']
+differs: 1f204adbdbdb232013b3614e55de61 {'0x10': ('20', None), '0x14': ('3c000000', None), '0x18': ('6e5ddd45d4f1b145', None)}
+differs: 2f6efb5738981fb8cc275aa7dc61 {'0x10': ('6e', None), '0x14': ('a0bcd345', None), '0x18': ('662659469815c345', None)}
+differs: 192c7aad118a6d78ce27e880ec61 {'0x10': ('2c', None), '0x14': ('e0859945', None), '0x18': ('8f7236469c30f445', None)}
+92 of 300 packets written by the client from random values read back identical

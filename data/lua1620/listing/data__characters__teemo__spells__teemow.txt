@@ -1,0 +1,38 @@
+
+main <?:0,0> (20 instructions, 80 bytes at 00000231D48C35C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 12 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Teemo/HUD/Icons2D/Teemo_W.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "TeemoW"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; 2
+	10	[-]	SETGLOBAL	0 -7	; SpellToggleSlot
+	11	[-]	NEWTABLE 	0 2 0
+	12	[-]	LOADK    	1 -10	; "SuperTeemo"
+	13	[-]	LOADK    	2 -11	; "TeemoSkin08"
+	14	[-]	SETLIST  	0 2 1	; 1
+	15	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	16	[-]	NEWTABLE 	0 1 0
+	17	[-]	LOADK    	1 -11	; "TeemoSkin08"
+	18	[-]	SETLIST  	0 1 1	; 1
+	19	[-]	SETGLOBAL	0 -12	; SpellVOOverrideSkins
+	20	[-]	RETURN   	0 1
+constants (12) for 00000231D48C35C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Teemo/HUD/Icons2D/Teemo_W.dds"
+	5	"BuffName"
+	6	"TeemoW"
+	7	"SpellToggleSlot"
+	8	2
+	9	"SpellFXOverrideSkins"
+	10	"SuperTeemo"
+	11	"TeemoSkin08"
+	12	"SpellVOOverrideSkins"
+locals (0) for 00000231D48C35C0:
+upvalues (0) for 00000231D48C35C0:

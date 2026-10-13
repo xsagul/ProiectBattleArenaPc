@@ -6,4 +6,6 @@
 // match: e36fd0 _sha3_update
 // match: e370a0 _sha3_final
 // match: e37110 _shake_ctrl
+#define OPENSSL_FILE "crypto\\evp\\m_sha3.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/evp/m_sha3.c"

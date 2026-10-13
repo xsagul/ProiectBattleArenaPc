@@ -1,0 +1,40 @@
+
+main <?:0,0> (20 instructions, 80 bytes at 00000294874435C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Tristana/HUD/Icons2D/Tristana_Q.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "TristanaQ"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "r:Tristana_Q_Buf"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -10	; "Buffbone_Glb_Weapon_1"
+	12	[-]	SETGLOBAL	0 -9	; AutoBuffActivateAttachBoneName
+	13	[-]	NEWTABLE 	0 2 0
+	14	[-]	LOADK    	1 -12	; "Tristana_Skin03"
+	15	[-]	LOADK    	2 -13	; "Tristana_Skin06"
+	16	[-]	SETLIST  	0 2 1	; 1
+	17	[-]	SETGLOBAL	0 -11	; SpellFXOverrideSkins
+	18	[-]	LOADBOOL 	0 1 0
+	19	[-]	SETGLOBAL	0 -14	; TriggersSpellCasts
+	20	[-]	RETURN   	0 1
+constants (14) for 00000294874435C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Tristana/HUD/Icons2D/Tristana_Q.dds"
+	5	"BuffName"
+	6	"TristanaQ"
+	7	"AutoBuffActivateEffect"
+	8	"r:Tristana_Q_Buf"
+	9	"AutoBuffActivateAttachBoneName"
+	10	"Buffbone_Glb_Weapon_1"
+	11	"SpellFXOverrideSkins"
+	12	"Tristana_Skin03"
+	13	"Tristana_Skin06"
+	14	"TriggersSpellCasts"
+locals (0) for 00000294874435C0:
+upvalues (0) for 00000294874435C0:

@@ -1,0 +1,48 @@
+
+main <?:0,0> (26 instructions, 104 bytes at 000001FE51093600)
+0+ params, 6 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADK    	0 -5	; "BlindMonkSafeguard"
+	8	[-]	SETGLOBAL	0 -4	; BuffName
+	9	[-]	NEWTABLE 	0 5 0
+	10	[-]	LOADK    	1 -7	; 22
+	11	[-]	LOADK    	2 -8	; 18
+	12	[-]	LOADK    	3 -9	; 14
+	13	[-]	LOADK    	4 -10	; 10
+	14	[-]	LOADK    	5 -11	; 6
+	15	[-]	SETLIST  	0 5 1	; 1
+	16	[-]	SETGLOBAL	0 -6	; AutoCooldownByLevel
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -12	; IsDeathRecapSource
+	19	[-]	NEWTABLE 	0 2 0
+	20	[-]	LOADK    	1 -14	; "RivenSkin05"
+	21	[-]	LOADK    	2 -15	; "RivenSkin06"
+	22	[-]	SETLIST  	0 2 1	; 1
+	23	[-]	SETGLOBAL	0 -13	; SpellFXOverrideSkins
+	24	[-]	LOADBOOL 	0 0 0
+	25	[-]	SETGLOBAL	0 -16	; IsDamagingSpell
+	26	[-]	RETURN   	0 1
+constants (16) for 000001FE51093600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"BuffName"
+	5	"BlindMonkSafeguard"
+	6	"AutoCooldownByLevel"
+	7	22
+	8	18
+	9	14
+	10	10
+	11	6
+	12	"IsDeathRecapSource"
+	13	"SpellFXOverrideSkins"
+	14	"RivenSkin05"
+	15	"RivenSkin06"
+	16	"IsDamagingSpell"
+locals (0) for 000001FE51093600:
+upvalues (0) for 000001FE51093600:

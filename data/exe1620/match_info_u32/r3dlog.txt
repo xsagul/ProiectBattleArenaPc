@@ -1,0 +1,39 @@
+000000.000| ALWAYS| Logging started at 2026-10-11T07:39:24.505
+000000.002| ALWAYS|   CFG| Command Line:  "127.0.0.1 5119 17BLOhi6KZsTtldTsizvHg== 1" "-Product=LoL" "-PlayerID=1" "-GameID=1" "-GameBaseDir=C:\Users\Sorin\Desktop\ProiectBattleArenaPc\game16" "-Region=EUW" "-PlatformID=EUW1" "-Locale=en_US" "-SkipBuild" "-UseNewX3D=1" "-UseNewX3DFramebuffers=1" 
+000000.028| ALWAYS| Live Profiling enabled. Will overwrite old RPD.
+000000.029| ALWAYS|   CFG| Build Version: Version 16.20.824.8524 (Oct 02 2026/13:49:05) [PUBLIC] <Releases/16.20> ChangeList: 8248524
+000000.029| ALWAYS|   CFG| Content Version: 16.20.8248524+branch.releases-16-20.content.release
+000000.035| ALWAYS|  FLOW| Initializing Renderer
+000000.035| ALWAYS| r3dRenderLayer::Init enter
+000000.035| ALWAYS| r3dRenderLayer::Init() exit successfully
+000000.035| ALWAYS| rr3dRenderLayer::InitDevice(XRes = 1920, YRes = 1080, BPP = 32) PresentMode: FullscreenExclusive enter
+000000.035| ALWAYS| rr3dRenderLayer::InitDevice: Creating X3D device
+000000.039| ALWAYS| DXGI version: 1.6
+000000.039| ALWAYS| Detected Adapter 'Intel(R) UHD Graphics 620'
+000000.045| ALWAYS| DXGI: Tearing support enabled.
+000000.184| ALWAYS| DX11 feature level: 11.1
+000000.288| ALWAYS| Using X3D Platform: DX11
+000000.291| ALWAYS| X3D: Focus Gained
+000000.305| ALWAYS| r3dRenderLayer::RecreateOwnedResources
+000000.305| ALWAYS| r3dRenderLayer::InitResources exit successfully
+000000.438| ALWAYS|  STRT| GameClientApplicationSessionID: STRT
+000000.499| ALWAYS| AudioManagerWwise: Wwise Version v2022.1.13 initialized.
+000000.512| ALWAYS|  FLOW| Requesting State Transition: Pushing LoLCommon State Stack Empty
+000000.512| ALWAYS|  FLOW| Completed  State Transition: Pushing Bootstrap Current Topmost State: Bootstrap
+000000.512| ALWAYS|  FLOW| Starting   State Transition: Pushing LoLCommon Current Topmost State: Bootstrap
+000000.576| ALWAYS| LCURemotingClient: Initializing on port 0
+000000.577|   WARN| RemotingClientTransport: Couldn't connect to host, connect() returned: -1 with errno: 10049: The requested address is not valid in its context.
+000000.577|  ERROR| LCURemotingClient: Unable to connect to app process.
+000000.577|  ERROR| LCUVoiceChatClient: Unable to connect to LCU.
+000000.586| ALWAYS|  FLOW| Completed  State Transition: Pushing LoLCommon Current Topmost State: LoLCommon
+000000.586| ALWAYS|  FLOW| Requesting State Transition: Pushing GameSession Current Topmost State: LoLCommon
+000000.586| ALWAYS|  FLOW| Starting   State Transition: Pushing GameSession Current Topmost State: LoLCommon
+000000.586| ALWAYS| GameStartData::GameID=1
+000000.590| ALWAYS| Client Clock Synchronization Started
+000000.590| ALWAYS|  CONN| Starting Multiplayer Session: PlayerClient GameID(1) ServerAddress(127.0.0.1:5119) SummonerID(1)
+000000.590| ALWAYS|  CONN| Connecting to address (127.0.0.1) port (5119)
+000000.590| ALWAYS| LCURemotingClient: Initializing on port 0
+000000.591|   WARN| RemotingClientTransport: Couldn't connect to host, connect() returned: -1 with errno: 10049: The requested address is not valid in its context.
+000000.591|  ERROR| LCURemotingClient: Unable to connect to app process.
+000000.593| ALWAYS|  FLOW| Completed  State Transition: Pushing GameSession Current Topmost State: GameSession
+000000.605| ALWAYS|  CONN| Hard Connect at LocalSimTime(0.000)

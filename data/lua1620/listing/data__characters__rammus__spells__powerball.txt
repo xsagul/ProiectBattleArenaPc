@@ -1,0 +1,50 @@
+
+main <?:0,0> (26 instructions, 104 bytes at 0000021AE85235C0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 18 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Rammus/HUD/Icons2D/Armordillo_Powerball.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "PowerBall"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; "r:Rammus_Q_PB_buff_0"
+	14	[-]	SETGLOBAL	0 -9	; AutoBuffActivateEffect
+	15	[-]	LOADK    	0 -12	; "r:Rammus_PB_buff"
+	16	[-]	SETGLOBAL	0 -11	; AutoBuffActivateEffect2
+	17	[-]	LOADK    	0 -14	; 1
+	18	[-]	SETGLOBAL	0 -13	; SpellToggleSlot
+	19	[-]	NEWTABLE 	0 2 0
+	20	[-]	LOADK    	1 -16	; "MetalRammus"
+	21	[-]	LOADK    	2 -17	; "RoboRammus"
+	22	[-]	SETLIST  	0 2 1	; 1
+	23	[-]	SETGLOBAL	0 -15	; SpellFXOverrideSkins
+	24	[-]	LOADBOOL 	0 1 0
+	25	[-]	SETGLOBAL	0 -18	; IsDamagingSpell
+	26	[-]	RETURN   	0 1
+constants (18) for 0000021AE85235C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Rammus/HUD/Icons2D/Armordillo_Powerball.dds"
+	7	"BuffName"
+	8	"PowerBall"
+	9	"AutoBuffActivateEffect"
+	10	"r:Rammus_Q_PB_buff_0"
+	11	"AutoBuffActivateEffect2"
+	12	"r:Rammus_PB_buff"
+	13	"SpellToggleSlot"
+	14	1
+	15	"SpellFXOverrideSkins"
+	16	"MetalRammus"
+	17	"RoboRammus"
+	18	"IsDamagingSpell"
+locals (0) for 0000021AE85235C0:
+upvalues (0) for 0000021AE85235C0:

@@ -1,0 +1,85 @@
+{
+  "case_id": "uncovered-probability-array",
+  "rva": "0xa64c90",
+  "origin": "uncovered",
+  "role": "layout-discovery",
+  "learning_use": "training",
+  "semantic_seed": "Pointed object layout and ownership hypothesis supplied by metadata analysis; array extent is searched.",
+  "exact": true,
+  "trials": 2,
+  "compilations": 0,
+  "best_quality": 1.0,
+  "production_unchanged": true,
+  "bindings_unchanged": true,
+  "published": false,
+  "records": [
+    {
+      "proposal": "owned_array_count=1",
+      "family": "layout_extent",
+      "assumptions": [
+        "Bounded layout hypothesis; full native body and targets must match."
+      ],
+      "cached": true,
+      "exact": false,
+      "bytes": 53,
+      "identical_bytes": 12,
+      "first_difference": 0,
+      "targets": [
+        [
+          "??3@YAXPAX@Z",
+          1546930456
+        ],
+        [
+          "??3@YAXPAX@Z",
+          -390937676
+        ],
+        [
+          "??3@YAXPAXI@Z",
+          11455299
+        ]
+      ],
+      "targets_ok": false,
+      "failure_class": "layout_or_large_shape",
+      "detail": "ours                                            Riot\n   0x0 push esi                                    0x0 push ebx   <<\n   0x1 mov esi, dword ptr [ecx]                    0x1 push esi   <<\n   0x3 test esi, esi                               0x2 push edi   <<\n   0x5 je 0x33                                     0x3 mov edi, 3   <<\n   0x7 cmp dword ptr [esi + 0x14], 0               0x8 lea ebx, [ecx + 0xc]   <<\n   0xb jl 0x18                                     0xb nop dword ptr [eax + eax]\n   0xd push dword ptr [esi + 0xc]                 0x10 mov esi, dword ptr [ebx - 4]\n  0x10 call 0x15                                  0x13 lea ebx, [ebx - 4]\n  0x15 add esp, 4                                 0x16 dec edi   <<\n  0x18 cmp dword ptr [esi + 8], 0                 0x17 test esi, esi   <<\n  0x1c jl 0x28                                    0x19 je 0x47\n  0x1e push dword ptr [esi]                       0x1b cmp dword ptr [esi + 0x14], 0\n  0x20 call 0x25                                  0x1f jl 0x2c\n  0x25 add esp, 4                                 0x21 push dword ptr [esi + 0xc]   <<\n  0x28 push 0x20                                  0x24 call 0xfff56ca0\n  0x2a push esi                                   0x29 add esp, 4\n  0x2b call 0x30                                  0x2c cmp dword ptr [esi + 8], 0\n  0x30 add esp, 8                                 0x30 jl 0x3c   <<\n  0x33 pop esi                                    0x32 push dword ptr [esi]   <<\n  0x34 ret                                        0x34 call 0xfff56ca0   <<",
+      "quality": 0.1518987341772152,
+      "elapsed_ms": 212,
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\experiments\\reconstruction_search\\runs\\probability-first\\9a3e7a47481f9ea577b3.cpp",
+      "code_fingerprint": "10f0316b05f5090b44eb2f3253b89f16f353d48f880e8196cb88ab029fd310c8",
+      "repeated_output": false
+    },
+    {
+      "proposal": "owned_array_count=3",
+      "family": "layout_extent",
+      "assumptions": [
+        "Bounded layout hypothesis; full native body and targets must match."
+      ],
+      "cached": true,
+      "exact": true,
+      "bytes": 79,
+      "identical_bytes": 79,
+      "first_difference": null,
+      "targets": [
+        [
+          "??3@YAXPAX@Z",
+          10205488
+        ],
+        [
+          "??3@YAXPAX@Z",
+          10205488
+        ],
+        [
+          "??3@YAXPAXI@Z",
+          10205504
+        ]
+      ],
+      "targets_ok": true,
+      "failure_class": "exact",
+      "detail": "",
+      "quality": 1.0,
+      "elapsed_ms": 112,
+      "source": "C:\\Users\\Sorin\\Desktop\\ProiectBattleArenaPc\\experiments\\reconstruction_search\\runs\\probability-first\\5e969808ef3a3cd0a101.cpp",
+      "code_fingerprint": "c88ae20b4008033c790172cb2b6e81851a93bd10340d09893946154f9c23e3c2",
+      "repeated_output": false
+    }
+  ]
+}

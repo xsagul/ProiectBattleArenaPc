@@ -4,4 +4,6 @@
 // match: df6410 _ascii_isdigit
 // match: df6420 _ossl_ctype_check
 // match: df6440 _ossl_tolower
+#define OPENSSL_FILE "crypto\\ctype.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/ctype.c"

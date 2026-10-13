@@ -8,4 +8,6 @@
 // match: e53650 _c448_ed448_verify
 // match: e53840 _hash_init_with_dom
 // match: e53930 _oneshot_hash
+#define OPENSSL_FILE "crypto\\ec\\curve448\\eddsa.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/ec/curve448/eddsa.c"

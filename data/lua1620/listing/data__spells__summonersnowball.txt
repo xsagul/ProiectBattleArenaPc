@@ -1,0 +1,35 @@
+
+main <?:0,0> (19 instructions, 76 bytes at 0000021349423530)
+0+ params, 2 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; DoesntBreakShields
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADBOOL 	0 1 0
+	6	[-]	SETGLOBAL	0 -3	; CastingBreaksStealth
+	7	[-]	LOADK    	0 -5	; "Summoner_Mark.dds"
+	8	[-]	SETGLOBAL	0 -4	; BuffTextureName
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -6	; IsDeathRecapSource
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -7	; PersistsThroughDeath
+	13	[-]	LOADBOOL 	0 1 0
+	14	[-]	SETGLOBAL	0 -8	; NonDispellable
+	15	[-]	NEWTABLE 	0 1 0
+	16	[-]	LOADK    	1 -10	; "ProjectPoro"
+	17	[-]	SETLIST  	0 1 1	; 1
+	18	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	19	[-]	RETURN   	0 1
+constants (10) for 0000021349423530:
+	1	"DoesntBreakShields"
+	2	"DoesntTriggerSpellCasts"
+	3	"CastingBreaksStealth"
+	4	"BuffTextureName"
+	5	"Summoner_Mark.dds"
+	6	"IsDeathRecapSource"
+	7	"PersistsThroughDeath"
+	8	"NonDispellable"
+	9	"SpellFXOverrideSkins"
+	10	"ProjectPoro"
+locals (0) for 0000021349423530:
+upvalues (0) for 0000021349423530:

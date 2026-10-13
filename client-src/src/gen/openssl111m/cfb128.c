@@ -4,4 +4,6 @@
 // match: dfa5e0 _CRYPTO_cfb128_1_encrypt
 // match: dfa780 _CRYPTO_cfb128_8_encrypt
 // match: dfa820 _CRYPTO_cfb128_encrypt
+#define OPENSSL_FILE "crypto\\modes\\cfb128.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/modes/cfb128.c"

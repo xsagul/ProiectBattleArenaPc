@@ -1,0 +1,47 @@
+
+main <?:0,0> (25 instructions, 100 bytes at 000001FEC35C35C0)
+0+ params, 2 slots, 0 upvalues, 0 locals, 16 constants, 0 functions
+	1	[-]	LOADBOOL 	0 1 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 0 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Illaoi/HUD/Icons2D/Illaoi_W.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "IllaoiW"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; 3
+	14	[-]	SETGLOBAL	0 -9	; OnPreDamagePriority
+	15	[-]	NEWTABLE 	0 1 0
+	16	[-]	LOADK    	1 -12	; "IllaoiSkin01"
+	17	[-]	SETLIST  	0 1 1	; 1
+	18	[-]	SETGLOBAL	0 -11	; SpellFXOverrideSkins
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -13	; IsDamagingSpell
+	21	[-]	LOADBOOL 	0 1 0
+	22	[-]	SETGLOBAL	0 -14	; DoOnPreDamageInExpirationOrder
+	23	[-]	LOADK    	0 -16	; "DATA/Shared/Particles/deathscaress_buf.troy"
+	24	[-]	SETGLOBAL	0 -15	; AutoBuffActivateEvent
+	25	[-]	RETURN   	0 1
+constants (16) for 000001FEC35C35C0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Illaoi/HUD/Icons2D/Illaoi_W.dds"
+	7	"BuffName"
+	8	"IllaoiW"
+	9	"OnPreDamagePriority"
+	10	3
+	11	"SpellFXOverrideSkins"
+	12	"IllaoiSkin01"
+	13	"IsDamagingSpell"
+	14	"DoOnPreDamageInExpirationOrder"
+	15	"AutoBuffActivateEvent"
+	16	"DATA/Shared/Particles/deathscaress_buf.troy"
+locals (0) for 000001FEC35C35C0:
+upvalues (0) for 000001FEC35C35C0:

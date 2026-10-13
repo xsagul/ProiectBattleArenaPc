@@ -1,0 +1,42 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 000002308A103600)
+0+ params, 4 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 1 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Spells/Icons2D/Chronokeeper_Timestop.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "Slow"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; "DATA/Shared/Particles/Global_Slow.troy"
+	10	[-]	SETGLOBAL	0 -7	; AutoBuffActivateEffect
+	11	[-]	LOADK    	0 -10	; "game_floatingtext_Slowed"
+	12	[-]	SETGLOBAL	0 -9	; PopupMessage1
+	13	[-]	NEWTABLE 	0 3 0
+	14	[-]	LOADK    	1 -12	; "Draven_Gladiator"
+	15	[-]	LOADK    	2 -13	; "DravenSkin03"
+	16	[-]	LOADK    	3 -14	; "DravenSkin04"
+	17	[-]	SETLIST  	0 3 1	; 1
+	18	[-]	SETGLOBAL	0 -11	; SpellFXOverrideSkins
+	19	[-]	LOADBOOL 	0 1 0
+	20	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	21	[-]	RETURN   	0 1
+constants (15) for 000002308A103600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Spells/Icons2D/Chronokeeper_Timestop.dds"
+	5	"BuffName"
+	6	"Slow"
+	7	"AutoBuffActivateEffect"
+	8	"DATA/Shared/Particles/Global_Slow.troy"
+	9	"PopupMessage1"
+	10	"game_floatingtext_Slowed"
+	11	"SpellFXOverrideSkins"
+	12	"Draven_Gladiator"
+	13	"DravenSkin03"
+	14	"DravenSkin04"
+	15	"IsDamagingSpell"
+locals (0) for 000002308A103600:
+upvalues (0) for 000002308A103600:

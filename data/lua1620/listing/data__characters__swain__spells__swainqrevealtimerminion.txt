@@ -1,0 +1,45 @@
+
+main <?:0,0> (24 instructions, 96 bytes at 000002BEBA9C3600)
+0+ params, 3 slots, 0 upvalues, 0 locals, 15 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntBreakShields
+	5	[-]	LOADBOOL 	0 0 0
+	6	[-]	SETGLOBAL	0 -3	; DoesntTriggerSpellCasts
+	7	[-]	LOADBOOL 	0 1 0
+	8	[-]	SETGLOBAL	0 -4	; CastingBreaksStealth
+	9	[-]	LOADK    	0 -6	; "ASSETS/Characters/Swain/HUD/Icons2D/Swain_W.dds"
+	10	[-]	SETGLOBAL	0 -5	; BuffTextureName
+	11	[-]	LOADK    	0 -8	; "SwainW"
+	12	[-]	SETGLOBAL	0 -7	; BuffName
+	13	[-]	LOADK    	0 -10	; 2
+	14	[-]	SETGLOBAL	0 -9	; SpellToggleSlot
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -11	; PersistsThroughDeath
+	17	[-]	NEWTABLE 	0 2 0
+	18	[-]	LOADK    	1 -13	; "SyndraJusticar"
+	19	[-]	LOADK    	2 -14	; "SyndraSkin02"
+	20	[-]	SETLIST  	0 2 1	; 1
+	21	[-]	SETGLOBAL	0 -12	; SpellFXOverrideSkins
+	22	[-]	LOADBOOL 	0 1 0
+	23	[-]	SETGLOBAL	0 -15	; IsDamagingSpell
+	24	[-]	RETURN   	0 1
+constants (15) for 000002BEBA9C3600:
+	1	"NotSingleTargetSpell"
+	2	"DoesntBreakShields"
+	3	"DoesntTriggerSpellCasts"
+	4	"CastingBreaksStealth"
+	5	"BuffTextureName"
+	6	"ASSETS/Characters/Swain/HUD/Icons2D/Swain_W.dds"
+	7	"BuffName"
+	8	"SwainW"
+	9	"SpellToggleSlot"
+	10	2
+	11	"PersistsThroughDeath"
+	12	"SpellFXOverrideSkins"
+	13	"SyndraJusticar"
+	14	"SyndraSkin02"
+	15	"IsDamagingSpell"
+locals (0) for 000002BEBA9C3600:
+upvalues (0) for 000002BEBA9C3600:

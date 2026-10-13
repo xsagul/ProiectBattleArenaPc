@@ -4,5 +4,13 @@
 // match: de3de0 _des_ede_init_key
 // match: de3e30 _des_ede3_init_key
 // match: de3e80 _des3_ctrl
+// match: de3ef0 _des_ede_ecb_cipher
 // match: de3f80 _des_ede_ofb_cipher
+// match: de4090 _des_ede_cbc_cipher
+// match: de41a0 _des_ede_cfb64_cipher
+// match: de42c0 _des_ede3_cfb1_cipher
+// match: de43d0 _des_ede3_cfb8_cipher
+// match: de44b0 _des_ede3_wrap_cipher
+#define OPENSSL_FILE "crypto\\evp\\e_des3.c"
+#define OPENSSL_LINE __LINE__
 #include "../../../../tools/third_party/openssl-1.1.1m/crypto/evp/e_des3.c"

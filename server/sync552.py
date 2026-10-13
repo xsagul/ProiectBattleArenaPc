@@ -53,17 +53,78 @@ def build():
     return heads
 
 
-def next_head(at_least=0):
-    """the next header of the sequence (bytes), its value >= at_least and > every one given before"""
-    global _heads
-    if _heads is None:
-        _heads = json.load(open(OUT))
+PARTS = os.path.join(HERE, '..', 'data', 'exe133', 's2c_552_head_parts.json')
+MAX_ENTRIES = 18          # the largest movement group of the replay; we never write a larger one
+_parts = None
+_last = [None]
+
+
+def build_parts():
+    """The header in parts (2026-10-11). Its first byte: the low nibble is 8 plus two bits that vary freely, the high
+    nibble says how many units the packet moves: 0 = one, 5 = two, 1 / 2 / 4 / 7 = a count byte follows (3 .. 18 in
+    the replay, one byte per count, the same for the four nibbles). Then the sequence value, 2 to 4 bytes by its size
+    (one coding for every count). The client moves ONLY as many units as the header says: our packets used to borrow
+    a replay header whole, whatever its count -- of nine champions sent off in one packet two walked, of a wave's
+    minions the first one or two got their next path and the rest stood until a later packet named them first.
+    Built headers were read back through Riot's reader for counts 1, 2, 3, 4, 5, 9, 17: value and count as meant."""
+    import collections
+    sys.path.insert(0, HERE)
+    import lol_packets as LP
+    import rofl_packets as R
+    import waypoints as Wp
+    val = {h: v for v, h in json.load(open(OUT))}
+    count_byte, tails = collections.defaultdict(collections.Counter), {}
+    for e, (t, ch, pid, obj, body) in R.stream(R.Rofl(os.path.join(HERE, '..', 'data', 'rofl', 'KR-6363178603_13.3.rofl'))):
+        if pid != 552:
+            continue
+        s = LP.split_552(body)
+        if not s:
+            continue
+        try:
+            n = len(Wp.parse(s[1]))
+        except Exception:
+            continue
+        h = s[0]
+        if n >= 3:
+            count_byte[n][h[1]] += 1
+        v = val.get(h.hex())
+        if v is not None:
+            tails.setdefault(v, (h[2:] if n >= 3 else h[1:]).hex())
+    json.dump(dict(count_byte={n: c.most_common(1)[0][0] for n, c in count_byte.items()}, tails=sorted(tails.items())),
+              open(PARTS, 'w'))
+    print(len(tails), 'values, counts', sorted(count_byte))
+
+
+def next_head(at_least=0, count=1):
+    """the header of our next movement packet (bytes) for `count` units, its value >= at_least and >= every one
+    given before (the client takes a unit's path when the value is not below the unit's last one)"""
+    global _parts
+    if _parts is None:
+        d = json.load(open(PARTS))
+        _parts = ({int(k): v for k, v in d['count_byte'].items()}, d['tails'])
+    count_byte, tails = _parts
     i = _next[0]
-    while i < len(_heads) - 1 and _heads[i][0] < at_least:
+    while i < len(tails) - 1 and tails[i][0] < at_least:
         i += 1
-    _next[0] = min(i + 1, len(_heads) - 1)
-    return bytes.fromhex(_heads[i][1]), _heads[i][0]
+    _next[0] = min(i + 1, len(tails) - 1)
+    _last[0] = tails[i][0]
+    tail = bytes.fromhex(tails[i][1])
+    if count == 1:
+        return bytes([0x08]) + tail, tails[i][0]
+    if count == 2:
+        return bytes([0x58]) + tail, tails[i][0]
+    if count not in count_byte:
+        raise ValueError(f'no movement header for {count} units (1 .. {MAX_ENTRIES})')
+    return bytes([0x28, count_byte[count]]) + tail, tails[i][0]
+
+
+def last_value(default=0):
+    """the value of the header given out last (what the client has seen as the newest movement), or default"""
+    return default if _last[0] is None else _last[0]
 
 
 if __name__ == '__main__':
-    build()
+    if sys.argv[1:] == ['parts']:
+        build_parts()
+    else:
+        build()

@@ -1,0 +1,41 @@
+
+main <?:0,0> (21 instructions, 84 bytes at 000002561FEB3630)
+0+ params, 2 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "DragonSoulIconCloud_Grey.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "SRX_DragonSoulBuffCloud_MovementSpeedCooldown"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADBOOL 	0 1 0
+	10	[-]	SETGLOBAL	0 -7	; PersistsThroughDeath
+	11	[-]	LOADBOOL 	0 1 0
+	12	[-]	SETGLOBAL	0 -8	; NonDispellable
+	13	[-]	LOADK    	0 -10	; -2
+	14	[-]	SETGLOBAL	0 -9	; OnPreDamagePriority
+	15	[-]	LOADBOOL 	0 1 0
+	16	[-]	SETGLOBAL	0 -11	; IsDamagingSpell
+	17	[-]	LOADBOOL 	0 1 0
+	18	[-]	SETGLOBAL	0 -12	; DoOnPreDamageInExpirationOrder
+	19	[-]	LOADK    	0 -14	; "DATA/Shared/Particles/deathscaress_buf.troy"
+	20	[-]	SETGLOBAL	0 -13	; AutoBuffActivateEvent
+	21	[-]	RETURN   	0 1
+constants (14) for 000002561FEB3630:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"DragonSoulIconCloud_Grey.dds"
+	5	"BuffName"
+	6	"SRX_DragonSoulBuffCloud_MovementSpeedCooldown"
+	7	"PersistsThroughDeath"
+	8	"NonDispellable"
+	9	"OnPreDamagePriority"
+	10	-2
+	11	"IsDamagingSpell"
+	12	"DoOnPreDamageInExpirationOrder"
+	13	"AutoBuffActivateEvent"
+	14	"DATA/Shared/Particles/deathscaress_buf.troy"
+locals (0) for 000002561FEB3630:
+upvalues (0) for 000002561FEB3630:

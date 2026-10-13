@@ -1,0 +1,42 @@
+
+main <?:0,0> (22 instructions, 88 bytes at 00000278B78C35F0)
+0+ params, 3 slots, 0 upvalues, 0 locals, 14 constants, 0 functions
+	1	[-]	LOADBOOL 	0 0 0
+	2	[-]	SETGLOBAL	0 -1	; NotSingleTargetSpell
+	3	[-]	LOADBOOL 	0 0 0
+	4	[-]	SETGLOBAL	0 -2	; DoesntTriggerSpellCasts
+	5	[-]	LOADK    	0 -4	; "ASSETS/Characters/Lissandra/HUD/Icons2D/Lissandra_R.dds"
+	6	[-]	SETGLOBAL	0 -3	; BuffTextureName
+	7	[-]	LOADK    	0 -6	; "LissandraRSelf"
+	8	[-]	SETGLOBAL	0 -5	; BuffName
+	9	[-]	LOADK    	0 -8	; 1
+	10	[-]	SETGLOBAL	0 -7	; SpellDamageRatio
+	11	[-]	NEWTABLE 	0 2 0
+	12	[-]	LOADK    	1 -10	; "Lissandra_skin01"
+	13	[-]	LOADK    	2 -11	; "lissandraSkin02"
+	14	[-]	SETLIST  	0 2 1	; 1
+	15	[-]	SETGLOBAL	0 -9	; SpellFXOverrideSkins
+	16	[-]	NEWTABLE 	0 1 0
+	17	[-]	LOADK    	1 -13	; "ZombieBrand"
+	18	[-]	SETLIST  	0 1 1	; 1
+	19	[-]	SETGLOBAL	0 -12	; SpellVOOverrideSkins
+	20	[-]	LOADBOOL 	0 1 0
+	21	[-]	SETGLOBAL	0 -14	; IsDamagingSpell
+	22	[-]	RETURN   	0 1
+constants (14) for 00000278B78C35F0:
+	1	"NotSingleTargetSpell"
+	2	"DoesntTriggerSpellCasts"
+	3	"BuffTextureName"
+	4	"ASSETS/Characters/Lissandra/HUD/Icons2D/Lissandra_R.dds"
+	5	"BuffName"
+	6	"LissandraRSelf"
+	7	"SpellDamageRatio"
+	8	1
+	9	"SpellFXOverrideSkins"
+	10	"Lissandra_skin01"
+	11	"lissandraSkin02"
+	12	"SpellVOOverrideSkins"
+	13	"ZombieBrand"
+	14	"IsDamagingSpell"
+locals (0) for 00000278B78C35F0:
+upvalues (0) for 00000278B78C35F0:
