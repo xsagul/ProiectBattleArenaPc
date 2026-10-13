@@ -269,17 +269,28 @@ class BBEngine:
         # damage) carries PhysicalDamageRatio 1 and no AD in its damage] Damage x PercentOfAttack, + SpellDamageRatio
         # x AP; PhysicalDamageRatio x bonus AD for physical damage only [a]
         dtype = DAMAGE_TYPE.get(v.get('DamageType'), P.MAGIC)
-        amount = float(v.get('Damage') or 0.0) * float(v.get('PercentOfAttack', 1) or 0.0)
+        amount = self.get_num(v, 'Damage', 0.0) * self.get_num(v, 'PercentOfAttack', 1.0)
+        bd = self.get_num(v, 'BaseDamage', 0.0)
+        if bd > 0:
+            amount = max(amount, bd)
         if v.get('DamageFromData') and getattr(src, 'champ', None) is not None:
             from .spells import info
             inf = info(src.champ, v.get('SpellName') or self.current_name(v))
             if inf is not None:
                 amt, dt2 = self.g.spells.damage_of(src, inf, max(1, max(src.spell_levels)))
-                amount, dtype = amt or 0.0, dt2 or dtype
-        if v.get('SpellDamageRatio'):
-            amount += float(v['SpellDamageRatio']) * getattr(src, 'ap', 0.0)
-        if v.get('PhysicalDamageRatio') and dtype == P.PHYSICAL and v.get('SourceDamageType') != 'DAMAGESOURCE_ATTACK':
-            amount += float(v['PhysicalDamageRatio']) * (getattr(src, 'ad', 0.0) - getattr(src, 'base_ad', 0.0))
+                amount, dtype = max(amount, amt or 0.0), dt2 or dtype
+        ap_ratio = self.get_num(v, 'APRatio', self.get_num(v, 'SpellDamageRatio', 0.0))
+        if ap_ratio > 0:
+            amount += ap_ratio * getattr(src, 'ap', 0.0)
+        bad_ratio = self.get_num(v, 'BonusADRatio', self.get_num(v, 'PhysicalDamageRatio', 0.0) if dtype == P.PHYSICAL else 0.0)
+        if bad_ratio > 0:
+            amount += bad_ratio * max(0.0, getattr(src, 'ad', 0.0) - getattr(src, 'base_ad', 0.0))
+        ad_ratio = self.get_num(v, 'ADRatio', 0.0)
+        if ad_ratio > 0:
+            amount += ad_ratio * getattr(src, 'ad', 0.0)
+        hp_ratio = self.get_num(v, 'BonusHPRatio', 0.0)
+        if hp_ratio > 0:
+            amount += hp_ratio * max(0.0, getattr(src, 'max_hp', 0.0) - getattr(src, 'base_hp', 0.0))
         source = SOURCE.get(v.get('SourceDamageType'), P.SRC_DIRECT)
         self.g.deal(src, tgt, amount, dtype, basic=v.get('SourceDamageType') == 'DAMAGESOURCE_ATTACK', source=source,
                     spell_hash=P.elf(v.get('SpellName') or self.current_name(v)))
@@ -296,9 +307,27 @@ class BBEngine:
         import os
         return os.path.splitext(os.path.basename(p))[0] if p else key
 
+    def get_num(self, v, key, default=0.0):
+        val = v.get(key)
+        if val is None:
+            return default
+        if isinstance(val, (list, tuple)):
+            src = v.get('Attacker') or v.get('Owner') or v.get('Caster')
+            lvl = v.get('Level') or (max(1, max(getattr(src, 'spell_levels', [1]))) if src else 1)
+            idx = max(0, min(len(val) - 1, int(lvl) - 1))
+            return float(val[idx])
+        if isinstance(val, dict):
+            src = v.get('Attacker') or v.get('Owner') or v.get('Caster')
+            lvl = v.get('Level') or (max(1, max(getattr(src, 'spell_levels', [1]))) if src else 1)
+            return float(val.get(lvl, val.get(1, default)))
+        try:
+            return float(val)
+        except (ValueError, TypeError):
+            return default
+
     def inc_health(self, v, n):
         tgt, healer = v.get('Target'), v.get('Healer') or v.get('Target')
-        d = float(v.get('Delta') or 0.0)
+        d = self.get_num(v, 'Delta', 0.0)
         if tgt is None or d == 0.0:
             return None
         got = tgt.heal(d) if d > 0 else 0.0
@@ -310,7 +339,7 @@ class BBEngine:
         src, tgt = v.get('Attacker') or v.get('Owner'), v.get('Target')
         if src is None or tgt is None or not getattr(tgt, 'alive', False):
             return None
-        dur = float(v.get('Duration') or 0.0)
+        dur = self.get_num(v, 'Duration', 0.0)
         if dur > 0 and self.g.spells is not None:
             self.g.spells.cc(src, tgt, _Named(self.current_name(v) or 'Stun'), BUFF_TYPE.get('BUFF_Stun', 5), dur, stun=True)
         return None
@@ -319,7 +348,7 @@ class BBEngine:
         src, tgt = v.get('Attacker') or v.get('Owner'), v.get('Target')
         if src is None or tgt is None or not getattr(tgt, 'alive', False):
             return None
-        dur = float(v.get('Duration') or 0.0)
+        dur = self.get_num(v, 'Duration', 0.0)
         if dur > 0 and self.g.spells is not None:
             self.g.spells.cc(src, tgt, _Named(self.current_name(v) or 'Silence'), BUFF_TYPE.get('BUFF_Silence', 7), dur, silence=True)
         return None
@@ -328,7 +357,7 @@ class BBEngine:
         src, tgt = v.get('Attacker') or v.get('Owner'), v.get('Target')
         if src is None or tgt is None or not getattr(tgt, 'alive', False):
             return None
-        dur = float(v.get('Duration') or 0.0)
+        dur = self.get_num(v, 'Duration', 0.0)
         if dur > 0 and self.g.spells is not None:
             self.g.spells.cc(src, tgt, _Named(self.current_name(v) or 'Snare'), BUFF_TYPE.get('BUFF_Snare', 12), dur, root=True)
         return None
@@ -337,7 +366,7 @@ class BBEngine:
         src, tgt = v.get('Attacker') or v.get('Owner'), v.get('Target')
         if src is None or tgt is None or not getattr(tgt, 'alive', False):
             return None
-        dur = float(v.get('Duration') or 0.0)
+        dur = self.get_num(v, 'Duration', 0.0)
         if dur > 0 and self.g.spells is not None:
             self.g.spells.cc(src, tgt, _Named(self.current_name(v) or 'Fear'), BUFF_TYPE.get('BUFF_Fear', 22), dur, stun=True)
         return None
@@ -346,7 +375,7 @@ class BBEngine:
         src, tgt = v.get('Attacker') or v.get('Owner'), v.get('Target')
         if src is None or tgt is None or not getattr(tgt, 'alive', False):
             return None
-        dur = float(v.get('Duration') or 0.0)
+        dur = self.get_num(v, 'Duration', 0.0)
         if dur > 0 and self.g.spells is not None:
             self.g.spells.cc(src, tgt, _Named(self.current_name(v) or 'Taunt'), BUFF_TYPE.get('BUFF_Taunt', 8), dur, stun=True)
         return None
@@ -355,8 +384,8 @@ class BBEngine:
         src, tgt = v.get('Attacker') or v.get('Owner'), v.get('Target')
         if src is None or tgt is None or not getattr(tgt, 'alive', False):
             return None
-        dur = float(v.get('Duration') or 0.0)
-        pct = float(v.get('SlowPercent') or v.get('Multiplier') or 0.3)
+        dur = self.get_num(v, 'Duration', 0.0)
+        pct = self.get_num(v, 'SlowPercent', self.get_num(v, 'Multiplier', 0.3))
         if dur > 0 and self.g.spells is not None:
             self.g.spells.slow(src, tgt, _Named(self.current_name(v) or 'Slow'), pct, dur)
         return None
